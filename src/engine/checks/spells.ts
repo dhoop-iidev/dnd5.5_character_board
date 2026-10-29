@@ -6,10 +6,26 @@ import { esOf, w } from './common'
 
 export function checkSpells(ctx: CheckContext) {
   const { rules, now, out, char } = ctx
+  const slotCasters = now.spellcasting.filter((s) => s.kind !== 'pact').length
   for (const sc of now.spellcasting) {
+    // A custom subclass caster with other Spellcasting classes: its share of the Multiclass Spellcaster table must come
+    // from the player's book (SRD p. 25 lists only full and half casters; house rule #5).
+    if (sc.kind === 'subclass' && slotCasters > 1 && !now.subclasses.get(sc.classId)?.spellcasting?.multiclass)
+      out.push(
+        w(
+          `subclass-multiclass-${sc.classId}`,
+          'warning',
+          'spells',
+          `${sc.className.en}: enter how its subclass levels count toward the Multiclass Spellcaster table (custom subclass, Spellcasting).`,
+          `${sc.className.fr} : indiquez comment les niveaux de sa sous-classe comptent dans la table du lanceur de sorts multiclassé (sous-classe personnalisée, Incantation).`,
+          `${esOf(sc.className)}: indica cómo cuentan los niveles de su subclase en la tabla de lanzador de conjuros multiclase (subclase personalizada, Lanzamiento de conjuros).`,
+          { source: { page: 25, frPage: 27, houseRule: 5 }, actionable: true },
+        ),
+      )
     const def = rules.classes.get(sc.classId)
     const list = new Map<string, number>()
-    for (const lv of def?.spellList ?? []) for (const id of lv.spells) list.set(id, lv.level)
+    // The class's list, or the one its subclass casts from (custom subclass, house rule #5).
+    for (const lv of rules.classes.get(sc.list)?.spellList ?? []) for (const id of lv.spells) list.set(id, lv.level)
     for (const sub of def?.subclasses ?? [])
       for (const lv of sub.spells ?? [])
         for (const id of lv.spells) if (!list.has(id)) list.set(id, rules.spells.get(id)?.level ?? 1)

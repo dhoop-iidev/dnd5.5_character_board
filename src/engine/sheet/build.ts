@@ -150,7 +150,8 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
     }
   }
   const species = rules.species.get(char.speciesId)
-  const traits: SpeciesTraitDef[] = species?.traits ?? []
+  // A custom species trait may start at a later character level (house rule #6).
+  const traits: SpeciesTraitDef[] = (species?.traits ?? []).filter((t) => !t.level || t.level <= level)
   for (const t of traits) owner(t.id, 'trait', t.name, t.text, { source: t.source })
   const background = backgroundDef(char.background, rules)
   addFeat(char.background?.feat, 'background')
@@ -209,6 +210,35 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
         weapons.push({ item, def: w })
       }
     }
+  }
+  // Weapons created by a feature (custom subclass features, house rule #5): always at hand while the feature is gained,
+  // never carried. Its own id, so proficiency with it doesn't extend to the base weapon.
+  for (const o of owners) {
+    const fw = o.eff.weapon
+    const base = fw ? rules.weapons.get(fw.base) : undefined
+    if (!fw || !base) continue
+    const id = `feature:${o.id}`
+    const item: ItemInstance = {
+      uid: id,
+      kind: 'weapon',
+      refId: base.id,
+      quantity: 1,
+      location: 'worn',
+      equipped: true,
+      feature: { ownerId: o.id, mastery: fw.mastery },
+    }
+    weapons.push({
+      item,
+      def: {
+        ...base,
+        id,
+        name: fw.name,
+        damage: fw.damage?.trim() || base.damage,
+        damageType: fw.damageType ?? base.damageType,
+        range: fw.range ?? base.range,
+      },
+    })
+    if (fw.proficient) o.grants.push({ kind: 'proficiency', on: `weapon.${id}` })
   }
   // Item effects: SRD magic items (custom/effects/magic-items.json, `item:<magic item id>`, with the chosen options and
   // the item's variant) and the modifiers of a custom item (or of an SRD item the player gave some), while the item is

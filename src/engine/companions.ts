@@ -6,6 +6,7 @@ import type { Character, Companion } from '../model/character'
 import { grantTempHp } from './hitPoints'
 import type { Sheet } from './sheet/types'
 import { esOf } from './stacking'
+import { evalFormula, formulaContext } from '../model/formula'
 
 export const SRC_WILD_SHAPE: Source = { page: 42, frPage: 44, section: 'Classes > Druid > Level 2: Wild Shape' }
 export const SRC_WILD_COMPANION: Source = { page: 42, frPage: 44, section: 'Classes > Druid > Level 2: Wild Companion' }
@@ -36,6 +37,10 @@ export interface WildShapeLimits {
   hours: number
   /** Temporary Hit Points gained when assuming a form: the Druid level (p. 42). */
   tempHp: number
+  /** Lowest Armor Class of a form, from a feature (custom subclass, house rule #5). */
+  acMin?: { value: number; by: I18n }
+  /** Features that changed these limits. */
+  changedBy?: I18n[]
 }
 
 /** Wild Shape limits at this Druid level; undefined below level 2. */
@@ -84,11 +89,41 @@ export function eligibleForms(rules: Rules, lim: WildShapeLimits): CreatureDef[]
   return [...rules.creatures.values()].filter((c) => !wildShapeIneligible(c, lim))
 }
 
+/** Wild Shape limits of a computed sheet: the Beast Shapes table, raised by features that change Wild Shape (custom
+ * subclass features, `EffectDef.wildShape`, house rule #5): the highest value applies. */
+export function wildShapeLimitsFor(sheet: Sheet): WildShapeLimits | undefined {
+  const lim = wildShapeLimits(sheet.classLevels.druid ?? 0)
+  if (!lim) return undefined
+  const ctx = formulaContext(sheet)
+  for (const o of sheet.owners) {
+    const ws = o.eff.wildShape
+    if (!ws) continue
+    let changed = false
+    const cr = evalFormula(ws.maxCr, ctx)
+    if (cr !== undefined && cr > lim.maxCr) {
+      lim.maxCr = cr
+      changed = true
+    }
+    const hp = evalFormula(ws.tempHp, ctx)
+    if (hp !== undefined && hp > lim.tempHp) {
+      lim.tempHp = hp
+      changed = true
+    }
+    const ac = evalFormula(ws.acMin, ctx)
+    if (ac !== undefined && ac > (lim.acMin?.value ?? 0)) {
+      lim.acMin = { value: ac, by: o.name }
+      changed = true
+    }
+    if (changed) (lim.changedBy ??= []).push(o.name)
+  }
+  return lim
+}
+
 /** Assume a known form: spends one use of Wild Shape and grants Temporary Hit Points equal to the Druid level (p. 42).
  * Returns false when no use is left. */
 export function assumeForm(char: Character, sheet: Sheet, creatureId: string): boolean {
   const res = sheet.resources.find((r) => r.id === WILD_SHAPE_ID)
-  const lim = wildShapeLimits(sheet.classLevels.druid ?? 0)
+  const lim = wildShapeLimitsFor(sheet)
   if (!res || !lim || res.spent >= res.max) return false
   char.resources[WILD_SHAPE_ID] = res.spent + 1
   grantTempHp(char.hp, lim.tempHp)

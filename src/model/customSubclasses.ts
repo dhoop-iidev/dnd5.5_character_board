@@ -62,6 +62,14 @@ export function customSubclassDef(sub: CustomSubclass): SubclassDef {
         subclass: sub.id,
       })),
     ...(sub.spells?.length ? { spells: sub.spells.map((l) => ({ level: l.level, spells: [...l.spells] })) } : {}),
+    ...(sub.spellcasting
+      ? {
+          spellcasting: {
+            ...(JSON.parse(JSON.stringify(sub.spellcasting)) as NonNullable<CustomSubclass['spellcasting']>),
+            source: { ...source(sub), section: 'Spellcasting' },
+          },
+        }
+      : {}),
     source: source(sub),
   }
 }
@@ -98,7 +106,30 @@ export function customFeatureEffect(sub: CustomSubclass, f: CustomSubclassFeatur
       },
     ]
   }
-  if (!eff.modifiers && !eff.uses && !eff.activation && !eff.choices)
+  if (f.weapon?.base) {
+    const w = f.weapon
+    // French SRD: 1,5 m per 5 ft ("as printed", 30 ft = 9 m).
+    const dist = (ft: number) => ({ ft, m: Math.round((ft / 5) * 1.5 * 10) / 10 })
+    eff.weapon = {
+      name: same(w.name.trim() || name),
+      base: w.base,
+      ...(w.damage?.trim() ? { damage: w.damage.trim() } : {}),
+      ...(w.damageType ? { damageType: w.damageType } : {}),
+      ...(w.rangeFt?.normal
+        ? { range: { normal: dist(w.rangeFt.normal), long: dist(w.rangeFt.long || w.rangeFt.normal) } }
+        : {}),
+      ...(w.proficient ? { proficient: true } : {}),
+      ...(w.mastery ? { mastery: true } : {}),
+    }
+  }
+  const ws = f.wildShape
+  if (ws && (ws.maxCr?.trim() || ws.tempHp?.trim() || ws.acMin?.trim()))
+    eff.wildShape = {
+      ...(ws.maxCr?.trim() ? { maxCr: ws.maxCr.trim() } : {}),
+      ...(ws.tempHp?.trim() ? { tempHp: ws.tempHp.trim() } : {}),
+      ...(ws.acMin?.trim() ? { acMin: ws.acMin.trim() } : {}),
+    }
+  if (!eff.modifiers && !eff.uses && !eff.activation && !eff.choices && !eff.weapon && !eff.wildShape)
     eff.textOnly = {
       en: 'Custom subclass feature: its text is shown; apply its effects by hand or add numbers to it.',
       fr: 'Aptitude de sous-classe personnalisée : son texte est affiché ; appliquez ses effets à la main ou ajoutez-lui des valeurs.',

@@ -37,7 +37,8 @@
   function listOf(classId: string): SpellDef[] {
     const def = view.rules.classes.get(classId)
     const ids = new Set<string>()
-    for (const lv of def?.spellList ?? []) for (const id of lv.spells) ids.add(id)
+    const list = view.sheet.spellcasting.find((s) => s.classId === classId)?.list ?? classId
+    for (const lv of view.rules.classes.get(list)?.spellList ?? []) for (const id of lv.spells) ids.add(id)
     for (const sub of def?.subclasses ?? []) for (const lv of sub.spells ?? []) for (const id of lv.spells) ids.add(id)
     return [...ids].map((id) => rules.spells.get(id)!).filter(Boolean)
   }

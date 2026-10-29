@@ -227,7 +227,8 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
       mastery: {
         id: w.mastery,
         name: mdef?.name ?? { en: w.mastery, fr: w.mastery, es: w.mastery },
-        usable: masteryMax > 0 && mastery.has(w.id) && proficient,
+        // A feature's weapon may use its mastery without a Weapon Mastery pick (FeatureWeaponDef.mastery).
+        usable: proficient && (!!item?.feature?.mastery || (masteryMax > 0 && mastery.has(w.id))),
       },
       range: w.range
         ? {

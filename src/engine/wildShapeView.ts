@@ -9,6 +9,7 @@ import { ABILITIES } from '../data/types'
 import type { Character } from '../model/character'
 import type { Sheet } from './sheet/types'
 import { abilityMod } from './sheet/common'
+import { type WildShapeLimits, wildShapeLimitsFor } from './companions'
 
 export type From = 'beast' | 'you' | 'merged'
 
@@ -35,6 +36,22 @@ export interface WildShapeView {
 }
 
 const REPLACED: AbilityId[] = ['str', 'dex', 'con']
+
+/** The form's Armor Class, or the minimum a feature sets when higher (custom subclass, Circle Forms…; house rule #5). */
+function acOf(def: CreatureDef, lim: WildShapeLimits | undefined): WsValue {
+  const ac = def.ac ?? 10
+  const min = lim?.acMin
+  if (!min || min.value <= ac) return { value: ac, from: 'beast' }
+  return {
+    value: min.value,
+    from: 'you',
+    note: {
+      en: `${min.by.en}: at least ${min.value} (the form has ${ac})`,
+      fr: `${min.by.fr} : au moins ${min.value} (la forme a ${ac})`,
+      es: `${min.by.es ?? min.by.en}: al menos ${min.value} (la forma tiene ${ac})`,
+    },
+  }
+}
 
 /** Parse "Perception +5, Stealth +4" into skill id → modifier. */
 export function parseCreatureSkills(def: CreatureDef, rules: Rules): Partial<Record<SkillId, number>> {
@@ -123,7 +140,7 @@ export function wildShapeView(char: Character, sheet: Sheet, def: CreatureDef, r
   return {
     form: def,
     hp: { current: char.hp.current, temp: char.hp.temp, max: sheet.hpMax.total },
-    ac: { value: def.ac ?? 10, from: 'beast' },
+    ac: acOf(def, wildShapeLimitsFor(sheet)),
     speed: def.speed.text,
     initiative,
     pb,

@@ -23,6 +23,9 @@
   import { norm } from '../items'
   import { openPopup } from '../popupState.svelte'
   import WarningList from '../WarningList.svelte'
+  import CustomCreatureForm from '../CustomCreatureForm.svelte'
+  import { CUSTOM_CREATURE_ID, customCreatureDef, newCustomCreature } from '../../model/customCreature'
+  import { formulaContext } from '../../model/formula'
 
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
@@ -90,6 +93,36 @@
     otherQuery = ''
   }
   const remove = (uid: string) => (c.companions = c.companions.filter((x) => x.uid !== uid))
+
+  // Creatures from another book (house rule #5): their stat block follows the character (formulas).
+  const ctx = $derived(formulaContext(sheet))
+  const defOf = (o: Companion): CreatureDef =>
+    o.custom
+      ? customCreatureDef(o.custom, ctx, `custom:${o.uid}`)
+      : (rules.creatures.get(o.creatureId) ?? rules.creatures.get('rat')!)
+  let editing = $state<string | null>(null)
+  function addCustom() {
+    const uid = Math.random().toString(36).slice(2, 10)
+    c.companions.push({
+      uid,
+      kind: 'other',
+      creatureId: CUSTOM_CREATURE_ID,
+      custom: newCustomCreature(),
+      hp: { current: 0, temp: 0, max: 0 },
+    })
+    editing = uid
+  }
+  // Their maximum Hit Points follow the formula (a level gained raises it; current Hit Points never exceed it).
+  $effect(() => {
+    for (const o of c.companions) {
+      if (!o.custom) continue
+      const max = customCreatureDef(o.custom, ctx).hp?.average
+      if (max === undefined || max === o.hp.max) continue
+      const fresh = o.hp.max === 0
+      o.hp.max = max
+      o.hp.current = fresh ? max : Math.min(o.hp.current, max)
+    }
+  })
 </script>
 
 <WarningList areas={['companions']} filter={(w) => !w.id.startsWith('wild-shape')} />
@@ -218,12 +251,26 @@
 <section class="box">
   <h3>{tr(UI.companions)}</h3>
   {#each others as o (o.uid)}
-    <CreatureBlock
-      def={rules.creatures.get(o.creatureId) ?? rules.creatures.get('rat')!}
-      companion={o}
-      onremove={() => remove(o.uid)}
-    />
+    <CreatureBlock def={defOf(o)} companion={o} open={editing === o.uid} onremove={() => remove(o.uid)} />
+    {#if o.custom}
+      <details class="edit" open={editing === o.uid}>
+        <summary
+          >{tr({ en: 'Edit its stat block', fr: 'Modifier son profil', es: 'Editar su perfil' })} ·
+          {o.custom.name || '—'}</summary
+        >
+        <CustomCreatureForm cc={o.custom} />
+      </details>
+    {/if}
   {/each}
+  <p class="row">
+    <button onclick={addCustom}
+      >＋ {tr({
+        en: 'A creature from your book (subclass companion…)',
+        fr: 'Une créature de votre livre (compagnon de sous-classe…)',
+        es: 'Una criatura de tu libro (compañero de subclase…)',
+      })}</button
+    >
+  </p>
   <input
     type="search"
     bind:value={otherQuery}
@@ -256,6 +303,17 @@
 </section>
 
 <style>
+  .edit {
+    margin: -0.3rem 0 0.6rem;
+    padding: 0.2rem 0.6rem;
+    border-left: 2px solid var(--rule-strong);
+  }
+  .edit summary {
+    cursor: pointer;
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
   .box,
   .summons-wrap :global(.box) {
     margin-bottom: 1.25rem;

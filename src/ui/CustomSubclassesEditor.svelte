@@ -5,7 +5,7 @@
   // class level. A subclass can be exported to a file and imported into another character. It then appears in the
   // subclass menu of the progression at class level 3.
   import { rules } from '../data/rules'
-  import type { AbilityId, RestKind } from '../data/types'
+  import type { AbilityId, DamageType, I18n, RestKind } from '../data/types'
   import { ABILITIES } from '../data/types'
   import { ABILITY_NAMES } from '../engine/sheet/common'
   import type { CustomSubclass, CustomSubclassFeature } from '../model/character'
@@ -19,6 +19,7 @@
   } from '../model/customSubclasses'
   import { app, tr } from '../state.svelte'
   import ModifierEditor from './ModifierEditor.svelte'
+  import { formulaOk } from '../model/formula'
 
   const c = $derived(app.character)
   let open = $state<string | null>(null)
@@ -117,6 +118,60 @@
   }
 
   const RESTS: RestKind[] = ['short', 'long']
+  /** Wild Shape changes (Druid subclasses), as formulas: "druidLevel/3", "druidLevel*3", "13 + wis". */
+  const WILD_FIELDS: { key: 'maxCr' | 'tempHp' | 'acMin'; name: I18n; example: string }[] = [
+    {
+      key: 'maxCr',
+      name: { en: 'Wild Shape: max CR', fr: 'Forme sauvage : FP max', es: 'Forma salvaje: VD máx.' },
+      example: 'druidLevel/3',
+    },
+    {
+      key: 'tempHp',
+      name: {
+        en: 'Wild Shape: Temporary HP',
+        fr: 'Forme sauvage : PV temporaires',
+        es: 'Forma salvaje: PG temporales',
+      },
+      example: 'druidLevel*3',
+    },
+    {
+      key: 'acMin',
+      name: { en: 'Wild Shape: AC at least', fr: 'Forme sauvage : CA au moins', es: 'Forma salvaje: CA al menos' },
+      example: '13 + wis',
+    },
+  ]
+  const baseWeapons = $derived([...rules.weapons.values()].sort((a, b) => tr(a.name).localeCompare(tr(b.name))))
+  const DAMAGE_TYPES = Object.entries(rules.damageTypeNames) as [DamageType, I18n][]
+
+  // --- Spellcasting given by the subclass (Eldritch Knight, Arcane Trickster…): every number from the player's book ---
+  const spellLists = $derived(
+    [...rules.classes.values()]
+      .filter((cl) => cl.spellList?.length)
+      .sort((a, b) => tr(a.name).localeCompare(tr(b.name))),
+  )
+  function toggleSpellcasting(sub: CustomSubclass, on: boolean) {
+    if (!on) delete sub.spellcasting
+    else sub.spellcasting = { ability: 'int', list: 'wizard', change: 'level', cantrips: {}, prepared: {}, slots: {} }
+  }
+  /** "3: 2 / 7: 4 2" ⇄ { "3": [2], "7": [4, 2] }: one line per class level, the slots of each spell level. */
+  const slotsText = (t: Record<string, number[]>) =>
+    Object.entries(t)
+      .sort((a, b) => +a[0] - +b[0])
+      .map(([k, v]) => `${k}: ${v.join(' ')}`)
+      .join('\n')
+  function parseSlots(s: string): Record<string, number[]> {
+    const out: Record<string, number[]> = {}
+    for (const line of s.split('\n')) {
+      const m = line.match(/^\s*(\d+)\s*:\s*([\d\s]+)$/)
+      if (m) out[m[1]] = m[2].trim().split(/\s+/).map(Number)
+    }
+    return out
+  }
+  function setMulticlass(sub: CustomSubclass, v: string) {
+    const sc = sub.spellcasting!
+    if (!v) delete sc.multiclass
+    else sc.multiclass = { divisor: sc.multiclass?.divisor ?? 3, round: v as 'up' | 'down' }
+  }
   const KINDS = [
     { id: 'action', name: { en: 'Action', fr: 'Action', es: 'Acción' } },
     { id: 'bonus-action', name: { en: 'Bonus Action', fr: 'Action bonus', es: 'Acción adicional' } },
@@ -326,6 +381,110 @@
                 >
               {/if}
             </div>
+            {#if sub.classId === 'druid'}
+              <div class="row">
+                {#each WILD_FIELDS as wf (wf.key)}
+                  {@const v = f.wildShape?.[wf.key] ?? ''}
+                  <label
+                    >{tr(wf.name)}<input
+                      type="text"
+                      class:bad={!formulaOk(v)}
+                      value={v}
+                      placeholder={wf.example}
+                      onchange={(e) => (
+                        (f.wildShape ??= {}),
+                        (f.wildShape[wf.key] = e.currentTarget.value.trim() || undefined)
+                      )}
+                    /></label
+                  >
+                {/each}
+              </div>
+            {/if}
+            <label class="chip"
+              ><input
+                type="checkbox"
+                checked={!!f.weapon}
+                onchange={(e) =>
+                  e.currentTarget.checked
+                    ? (f.weapon = { name: f.name, base: 'dagger', proficient: true })
+                    : delete f.weapon}
+              />{tr({
+                en: 'It creates a weapon (listed with your attacks)',
+                fr: 'Elle crée une arme (listée avec vos attaques)',
+                es: 'Crea un arma (aparece con tus ataques)',
+              })}</label
+            >
+            {#if f.weapon}
+              {@const fw = f.weapon}
+              <div class="row">
+                <label class="grow"
+                  >{tr({ en: 'Weapon name', fr: 'Nom de l’arme', es: 'Nombre del arma' })}<input
+                    type="text"
+                    bind:value={fw.name}
+                  /></label
+                >
+                <label
+                  >{tr({
+                    en: 'Like (kind, properties)',
+                    fr: 'Comme (type, propriétés)',
+                    es: 'Como (tipo, propiedades)',
+                  })}
+                  <select bind:value={fw.base}>
+                    {#each baseWeapons as w (w.id)}<option value={w.id}>{tr(w.name)}</option>{/each}
+                  </select>
+                </label>
+                <label class="lv"
+                  >{tr({ en: 'Damage', fr: 'Dégâts', es: 'Daño' })}<input
+                    type="text"
+                    bind:value={fw.damage}
+                    placeholder={rules.weapons.get(fw.base)?.damage ?? ''}
+                  /></label
+                >
+                <label
+                  >{tr({ en: 'Damage type', fr: 'Type de dégâts', es: 'Tipo de daño' })}
+                  <select bind:value={fw.damageType}>
+                    <option value={undefined}>—</option>
+                    {#each DAMAGE_TYPES as [id, n] (id)}<option value={id}>{tr(n)}</option>{/each}
+                  </select>
+                </label>
+                <label class="lv"
+                  >{tr({ en: 'Range (ft)', fr: 'Portée (pieds)', es: 'Alcance (pies)' })}<input
+                    type="number"
+                    min="0"
+                    value={fw.rangeFt?.normal ?? ''}
+                    onchange={(e) =>
+                      (fw.rangeFt = +e.currentTarget.value
+                        ? { normal: +e.currentTarget.value, long: fw.rangeFt?.long ?? +e.currentTarget.value }
+                        : undefined)}
+                  /></label
+                >
+                {#if fw.rangeFt}
+                  <label class="lv"
+                    >{tr({ en: 'Long (ft)', fr: 'Longue (pieds)', es: 'Largo (pies)' })}<input
+                      type="number"
+                      min="0"
+                      bind:value={fw.rangeFt.long}
+                    /></label
+                  >
+                {/if}
+              </div>
+              <div class="row">
+                <label class="chip"
+                  ><input type="checkbox" bind:checked={fw.proficient} />{tr({
+                    en: 'You are proficient with it',
+                    fr: 'Vous la maîtrisez',
+                    es: 'Tienes competencia con ella',
+                  })}</label
+                >
+                <label class="chip"
+                  ><input type="checkbox" bind:checked={fw.mastery} />{tr({
+                    en: 'You can use its mastery property',
+                    fr: 'Vous pouvez utiliser sa botte d’arme',
+                    es: 'Puedes usar su propiedad de maestría',
+                  })}</label
+                >
+              </div>
+            {/if}
             <span class="lab"
               >{tr({
                 en: 'Numbers the sheet applies (optional)',
@@ -341,6 +500,116 @@
             >＋ {tr({ en: 'Add a feature', fr: 'Ajouter une aptitude', es: 'Añadir un rasgo' })}</button
           >
         </div>
+
+        <h5 class="wide">{tr({ en: 'Spellcasting', fr: 'Incantation', es: 'Lanzamiento de conjuros' })}</h5>
+        <label class="chip wide"
+          ><input
+            type="checkbox"
+            checked={!!sub.spellcasting}
+            onchange={(e) => toggleSpellcasting(sub, e.currentTarget.checked)}
+          />{tr({
+            en: 'This subclass gives its class spellcasting (fill in the numbers from your book)',
+            fr: 'Cette sous-classe donne l’incantation à sa classe (reportez les valeurs de votre livre)',
+            es: 'Esta subclase da lanzamiento de conjuros a su clase (copia los valores de tu libro)',
+          })}</label
+        >
+        {#if sub.spellcasting}
+          {@const sc = sub.spellcasting}
+          <div class="row wide">
+            <label
+              >{tr({ en: 'Ability', fr: 'Caractéristique', es: 'Característica' })}
+              <select bind:value={sc.ability}>
+                {#each ABILITIES as a (a)}<option value={a}>{tr(ABILITY_NAMES[a])}</option>{/each}
+              </select>
+            </label>
+            <label
+              >{tr({ en: 'Spell list', fr: 'Liste de sorts', es: 'Lista de conjuros' })}
+              <select bind:value={sc.list}>
+                {#each spellLists as cl (cl.id)}<option value={cl.id}>{tr(cl.name)}</option>{/each}
+              </select>
+            </label>
+            <label
+              >{tr({
+                en: 'Change a prepared spell',
+                fr: 'Changer un sort préparé',
+                es: 'Cambiar un conjuro preparado',
+              })}
+              <select bind:value={sc.change}>
+                <option value="level"
+                  >{tr({ en: 'One per level gained', fr: 'Un par niveau gagné', es: 'Uno por nivel ganado' })}</option
+                >
+                <option value="long-rest"
+                  >{tr({ en: 'After a Long Rest', fr: 'Après un repos long', es: 'Tras un descanso largo' })}</option
+                >
+              </select>
+            </label>
+          </div>
+          <div class="row wide">
+            <label
+              >{tr({
+                en: 'Cantrips by class level (3:2, 10:3)',
+                fr: 'Sorts mineurs par niveau de classe (3:2, 10:3)',
+                es: 'Trucos por nivel de clase (3:2, 10:3)',
+              })}<input
+                type="text"
+                value={stepsText(sc.cantrips)}
+                onchange={(e) => (sc.cantrips = parseSteps(e.currentTarget.value) ?? {})}
+              /></label
+            >
+            <label class="grow"
+              >{tr({
+                en: 'Prepared spells by class level (3:3, 4:4…)',
+                fr: 'Sorts préparés par niveau de classe (3:3, 4:4…)',
+                es: 'Conjuros preparados por nivel de clase (3:3, 4:4…)',
+              })}<input
+                type="text"
+                value={stepsText(sc.prepared)}
+                onchange={(e) => (sc.prepared = parseSteps(e.currentTarget.value) ?? {})}
+              /></label
+            >
+          </div>
+          <div class="row wide">
+            <label class="grow"
+              >{tr({
+                en: 'Spell slots: one line per class level where they change, the slots of level 1, 2, 3… (e.g. “7: 4 2”)',
+                fr: 'Emplacements de sorts : une ligne par niveau de classe où ils changent, les emplacements de niveau 1, 2, 3… (ex. « 7: 4 2 »)',
+                es: 'Espacios de conjuro: una línea por nivel de clase en que cambian, los espacios de nivel 1, 2, 3… (p. ej. «7: 4 2»)',
+              })}<textarea
+                rows="4"
+                value={slotsText(sc.slots)}
+                onchange={(e) => (sc.slots = parseSlots(e.currentTarget.value))}></textarea></label
+            >
+          </div>
+          <div class="row wide">
+            <label
+              >{tr({
+                en: 'With other spellcasting classes, its levels count as',
+                fr: 'Avec d’autres classes d’incantation, ses niveaux comptent pour',
+                es: 'Con otras clases lanzadoras, sus niveles cuentan como',
+              })}
+              <select value={sc.multiclass?.round ?? ''} onchange={(e) => setMulticlass(sub, e.currentTarget.value)}>
+                <option value="">— {tr({ en: 'not entered', fr: 'non renseigné', es: 'sin indicar' })}</option>
+                <option value="down"
+                  >{tr({
+                    en: 'class level ÷ N, rounded down',
+                    fr: 'niveau de classe ÷ N, arrondi à l’inférieur',
+                    es: 'nivel de clase ÷ N, redondeado hacia abajo',
+                  })}</option
+                >
+                <option value="up"
+                  >{tr({
+                    en: 'class level ÷ N, rounded up',
+                    fr: 'niveau de classe ÷ N, arrondi au supérieur',
+                    es: 'nivel de clase ÷ N, redondeado hacia arriba',
+                  })}</option
+                >
+              </select>
+            </label>
+            {#if sc.multiclass}
+              <label class="lv">N<input type="number" min="1" max="4" bind:value={sc.multiclass.divisor} /></label>
+            {/if}
+          </div>
+        {/if}
 
         <h5 class="wide">
           {tr({
@@ -501,6 +770,10 @@
     flex-wrap: wrap;
     gap: 0.3rem;
     align-items: center;
+  }
+  input.bad {
+    border-color: var(--accent);
+    outline: 1px solid var(--accent);
   }
   .chip {
     display: inline-flex;

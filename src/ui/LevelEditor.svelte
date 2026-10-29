@@ -19,6 +19,7 @@
   import OriginEditor from './OriginEditor.svelte'
   import CustomFeatsEditor from './CustomFeatsEditor.svelte'
   import CustomSubclassesEditor from './CustomSubclassesEditor.svelte'
+  import CustomSpeciesEditor from './CustomSpeciesEditor.svelte'
   import { progressionPlaces, type Place } from './progression'
   import WarningList from './WarningList.svelte'
   import XpBar from './XpBar.svelte'
@@ -127,7 +128,7 @@
     const out: string[] = []
     if (i === 0)
       out.push(
-        tr(rules.species.get(c.speciesId)?.name) || c.speciesId,
+        tr(view.rules.species.get(c.speciesId)?.name) || c.speciesId,
         tr(backgroundDef(c.background, rules)?.name) || c.background.backgroundId,
       )
     if (l.subclassId) out.push(tr(def?.subclasses.find((s) => s.id === l.subclassId)?.name) || l.subclassId)
@@ -332,6 +333,7 @@
 
 <CustomFeatsEditor />
 <CustomSubclassesEditor />
+<CustomSpeciesEditor />
 
 {#if view.warnings.some(unplaced) || ownersAt(undefined).length}
   <h4>{tr({ en: 'Other choices', fr: 'Autres choix', es: 'Otras elecciones' })}</h4>

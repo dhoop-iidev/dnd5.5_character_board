@@ -9,6 +9,7 @@ import type {
   MasteryProperty,
   ModifierSpec,
   RestKind,
+  Size,
   SkillId,
   WeaponProperty,
 } from '../data/types'
@@ -108,6 +109,20 @@ export interface CustomSubclass {
   features: CustomSubclassFeature[]
   /** Always-prepared spells by class level (Domain Spells, Oath Spells…), from the SRD spells. */
   spells?: { level: number; spells: string[] }[]
+  /** Spellcasting the subclass gives its class (Eldritch Knight, Arcane Trickster…), every number from the player's book. */
+  spellcasting?: {
+    ability: AbilityId
+    /** Class spell list id ('wizard'). */
+    list: string
+    change: 'long-rest' | 'level'
+    /** Class level → cantrips / prepared spells, from that level on. */
+    cantrips: Record<string, number>
+    prepared: Record<string, number>
+    /** Class level → spell slots per spell level (index 0 = level 1), from that level on. */
+    slots: Record<string, number[]>
+    /** Share of the Multiclass Spellcaster table: class level ÷ divisor, rounded. */
+    multiclass?: { divisor: number; round: 'up' | 'down' }
+  }
 }
 
 export interface CustomSubclassFeature {
@@ -126,6 +141,62 @@ export interface CustomSubclassFeature {
   activation?: { kind: 'action' | 'bonus-action' | 'reaction' | 'free'; trigger?: string }
   /** Named options to choose from (maneuvers…): how many, with `byLevel` steps. */
   choice?: { name: string; count: number; byLevel?: Record<string, number>; options: string[] }
+  /** Changes to Wild Shape (Druid subclasses), as formulas (model/formula.ts): highest CR, Temporary Hit Points
+   * gained, lowest Armor Class of a form. */
+  wildShape?: { maxCr?: string; tempHp?: string; acMin?: string }
+  /** A weapon the feature creates (Psychic Blades…): a catalog weapon with these overrides; range in feet. */
+  weapon?: {
+    name: string
+    base: string
+    damage?: string
+    damageType?: DamageType
+    rangeFt?: { normal: number; long: number }
+    proficient?: boolean
+    mastery?: boolean
+  }
+}
+
+/** A species from another book entered by the player (house rule #6, `model/customSpecies.ts`), in their own words.
+ * Under the 2024 rules an older species gets no ability score increases: those come from the background. */
+export interface CustomSpecies {
+  /** 'custom-species-<n>'. */
+  id: string
+  name: string
+  /** Book and page ("Volo's Guide to Monsters p. 115"). */
+  book: string
+  /** The player's description. */
+  text: string
+  /** Creature type as printed ("Humanoid"). */
+  creatureType: string
+  /** One size, or two to choose from (Small or Medium). */
+  size: Size[]
+  /** Walking Speed in feet. */
+  speedFt: number
+  traits: CustomSpeciesTrait[]
+}
+
+export interface CustomSpeciesTrait {
+  /** 't<n>', unique in the species; the owner id is `<species>:<trait>`. */
+  id: string
+  /** Character level from which it applies (1 for most traits). */
+  level: number
+  name: string
+  /** The player's summary. */
+  text: string
+  /** Darkvision range in feet. */
+  darkvisionFt?: number
+  /** Other speeds in feet, or 'speed' (equal to your Speed). */
+  speeds?: { climb?: number | 'speed'; swim?: number | 'speed'; fly?: number | 'speed' }
+  /** Skill proficiencies it gives. */
+  skills?: SkillId[]
+  /** Damage resistances it gives. */
+  resistances?: DamageType[]
+  /** Numbers the engine applies (docs/effects.md vocabulary), as for custom items. */
+  modifiers?: ModifierSpec[]
+  /** Uses: a number, 'pb' or an ability id (its modifier, min 1). */
+  uses?: { count: number | string; per: RestKind }
+  /** The part of the turn it takes: a card in the Combat pane's turn box. */
+  activation?: { kind: 'action' | 'bonus-action' | 'reaction' | 'free'; trigger?: string }
 }
 
 export interface CustomBackground {
@@ -155,6 +226,8 @@ export interface ItemInstance {
   twoHanded?: boolean
   /** Charges left (wands, staffs…). */
   charges?: number
+  /** Computed, never saved: a weapon created by a feature (`EffectDef.weapon`), not an inventory item. */
+  feature?: { ownerId: string; mastery?: boolean }
   /** An SRD magic weapon or armor on its base item: `kind` 'weapon' / 'armor', `refId` the base (longsword, chain mail,
    * quarterstaff for the staffs wielded as one), and this field the magic item id ('flame-tongue', 'armor-1-2-or-3'). Its
    * effects are `item:<id>` in custom/effects/magic-items.json. Optional, no schema change. */
@@ -328,6 +401,43 @@ export interface Companion {
   /** Dismissed to its pocket dimension, or otherwise not present. */
   away?: boolean
   note?: string
+  /** A creature from another book entered by the player (a subclass's beast companion…; house rule #5,
+   * `model/customCreature.ts`): `creatureId` is then 'custom'. */
+  custom?: CustomCreature
+}
+
+/** A stat block entered by the player, whose numbers may follow the character (formulas, `model/formula.ts`). */
+export interface CustomCreature {
+  name: string
+  /** Creature type as the book prints it ("Beast"). */
+  type: string
+  size: Size
+  /** Book and page. */
+  book: string
+  /** Formulas: "13 + wis", "5 + rangerLevel*5". */
+  ac: string
+  hp: string
+  /** Its Proficiency Bonus (default: yours, 'pb'), for the saves marked proficient. */
+  pb?: string
+  speed: string
+  abilities: Record<AbilityId, number>
+  saves?: AbilityId[]
+  senses?: string
+  languages?: string
+  /** Traits, actions, Bonus Actions and Reactions in the player's own words; an attack may carry formulas. */
+  entries: CustomCreatureEntry[]
+}
+
+export interface CustomCreatureEntry {
+  kind: 'trait' | 'action' | 'bonus-action' | 'reaction'
+  name: string
+  text: string
+  /** Attack roll bonus formula ("pb + wis"). */
+  attack?: string
+  /** Damage dice ("1d8") and bonus formula ("2 + wis"), and its type as printed. */
+  damageDice?: string
+  damageBonus?: string
+  damageType?: string
 }
 
 /** A creature summoned or created by a spell with a stat block (Summon Dragon, Giant Insect, Animate Dead…; the list and
@@ -368,6 +478,8 @@ export interface Character {
   customFeats?: CustomFeat[]
   /** Subclasses from other books entered by the player (house rule #5). */
   customSubclasses?: CustomSubclass[]
+  /** Species from other books entered by the player (house rule #6). */
+  customSpecies?: CustomSpecies[]
   /** Ability scores before the background's increases and feats (Standard Array, Point Cost or rolled; SRD p. 20). */
   baseAbilities: Record<AbilityId, number>
   levels: LevelEntry[]

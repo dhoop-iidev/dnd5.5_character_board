@@ -3,7 +3,8 @@
 // character has the Spellcasting feature from several classes (full levels + half the Paladin/Ranger levels rounded up,
 // SRD p. 25); Pact Magic slots stay separate (p. 26). Each class prepares as if single-classed (p. 25): its own table row
 // gives its highest spell level; subclass spell lists and features' always-prepared spells don't count (each subclass
-// "… Spells" feature, Favored Enemy p. 58, Faithful Steed p. 54…).
+// "… Spells" feature, Favored Enemy p. 58, Faithful Steed p. 54…). A custom subclass that gives spellcasting (house rule
+// #5) brings its own tables, entered by the player, and its share of the Multiclass Spellcaster table.
 import type { AbilityId } from '../../data/types'
 import { type Part, esOf, resolve, i18n } from '../stacking'
 import { spellbookContents } from '../spellbook'
@@ -34,20 +35,50 @@ function byLevelSpells(
   return out
 }
 
+/** The count of a steps table (class level → count) at this class level: the highest step ≤ the level. */
+export function stepCount(t: Record<string, number> | undefined, level: number): number | undefined {
+  let out: number | undefined
+  let at = 0
+  for (const [k, v] of Object.entries(t ?? {})) {
+    const lv = parseInt(k, 10)
+    if (lv <= level && lv >= at) {
+      at = lv
+      out = v
+    }
+  }
+  return out
+}
+function stepRow(t: Record<string, number[]>, level: number): number[] | undefined {
+  let out: number[] | undefined
+  let at = 0
+  for (const [k, v] of Object.entries(t)) {
+    const lv = parseInt(k, 10)
+    if (lv <= level && lv >= at) {
+      at = lv
+      out = v
+    }
+  }
+  return out
+}
+
 export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
   const { pool, abilities, pb, char } = b
   const blocks: SpellcastingBlock[] = []
   let fullLevels = 0
   let halfLevels = 0
+  /** Levels a subclass spellcaster adds to the Multiclass Spellcaster table, as the player entered it (house rule #5). */
+  let otherLevels = 0
   let singleSlots: number[] | undefined
   let casters = 0
   let pact: SpellsResult['pact']
   for (const cid of b.classOrder) {
     const def = b.classes.get(cid)
-    const sc = def?.spellcasting
+    const subSc = b.subclasses.get(cid)?.spellcasting
+    const sc = def?.spellcasting ?? (subSc ? { ...subSc, kind: 'subclass' as const, spellbook: false } : undefined)
     if (!def || !sc) continue
     const cl = b.classLevels[cid]
-    const row = def.table[cl - 1]
+    const row = def.spellcasting ? def.table[cl - 1] : undefined
+    const ownSlots = subSc && !def.spellcasting ? stepRow(subSc.slots, cl) : row?.slots
     const mod = abilities[sc.ability].mod
     const state = char.spellcasting?.[cid]
     const dcParts: Part[] = [
@@ -94,16 +125,24 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
       ...pool.parts('d20'),
     ]
     const sum = (target: string) => pool.parts(target).reduce((s, p) => s + p.value, 0)
-    const cantripsMax =
-      (typeof row?.resources.cantrips === 'number' ? row.resources.cantrips : 0) + sum(`cantrips.${cid}`)
+    const cantripsBase = row
+      ? typeof row.resources.cantrips === 'number'
+        ? row.resources.cantrips
+        : 0
+      : (stepCount(subSc?.cantrips, cl) ?? 0)
+    const cantripsMax = cantripsBase + sum(`cantrips.${cid}`)
     // Blessed Warrior (Paladin) / Druidic Warrior (Ranger): two cantrips in place of a Fighting Style feat (p. 54, p. 58).
     const warriorStyle = b.levels.some(
       (l) =>
         (l.choices ?? {})[`${cid}:fighting-style`] === 'blessed-warrior' ||
         (l.choices ?? {})[`${cid}:fighting-style`] === 'druidic-warrior',
     )
-    const preparedMax =
-      (typeof row?.resources.preparedSpells === 'number' ? row.resources.preparedSpells : 0) + sum(`prepared.${cid}`)
+    const preparedBase = row
+      ? typeof row.resources.preparedSpells === 'number'
+        ? row.resources.preparedSpells
+        : 0
+      : (stepCount(subSc?.prepared, cl) ?? 0)
+    const preparedMax = preparedBase + sum(`prepared.${cid}`)
     // Always-prepared spells: the subclass list (by class level), a chosen list (Circle of the Land), features' `spells.always`.
     const always: string[] = []
     const sub = b.subclasses.get(cid)
@@ -130,7 +169,7 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
       for (const c of o.eff.spells.fromChoices ?? []) always.push(...(o.choiceValues[c] ?? []))
       extraLists.push(...(o.eff.spells.lists ?? []))
     }
-    const maxSpellLevel = sc.kind === 'pact' ? (row?.pact?.level ?? 0) : (row?.slots ?? []).filter((n) => n > 0).length
+    const maxSpellLevel = sc.kind === 'pact' ? (row?.pact?.level ?? 0) : (ownSlots ?? []).filter((n) => n > 0).length
     blocks.push({
       classId: cid,
       className: def.name,
@@ -139,6 +178,7 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
       dc: resolve(dcParts),
       attack: resolve(atkParts),
       kind: sc.kind,
+      list: sc.list,
       cantripsMax: cantripsMax + (warriorStyle ? 2 : 0),
       preparedMax,
       prepared: state?.prepared ?? [],
@@ -156,17 +196,21 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
     } else {
       casters++
       if (sc.kind === 'full') fullLevels += cl
-      else halfLevels += cl
-      singleSlots = row?.slots
+      else if (sc.kind === 'half') halfLevels += cl
+      else if (subSc?.multiclass) {
+        const q = cl / Math.max(1, subSc.multiclass.divisor)
+        otherLevels += subSc.multiclass.round === 'up' ? Math.ceil(q) : Math.floor(q)
+      }
+      singleSlots = ownSlots
     }
   }
   let slots: number[] = []
   let casterLevel = 0
   if (casters === 1 && singleSlots) {
     slots = [...singleSlots]
-    casterLevel = fullLevels + halfLevels
+    casterLevel = fullLevels + halfLevels + otherLevels
   } else if (casters > 1) {
-    casterLevel = fullLevels + Math.ceil(halfLevels / 2)
+    casterLevel = fullLevels + Math.ceil(halfLevels / 2) + otherLevels
     slots = [...(b.rules.tables.multiclassSlots[Math.min(20, casterLevel) - 1] ?? [])]
   }
   while (slots.length && slots[slots.length - 1] === 0) slots.pop()

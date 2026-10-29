@@ -7,7 +7,7 @@ import {
   SRC_FIND_STEED,
   SRC_WILD_SHAPE,
   wildShapeIneligible,
-  wildShapeLimits,
+  wildShapeLimitsFor,
 } from '../companions'
 import type { CheckContext } from './common'
 import { esOf, w } from './common'
@@ -15,7 +15,7 @@ import { esOf, w } from './common'
 export function checkCompanions(ctx: CheckContext) {
   const { char, rules, now, out } = ctx
   const known = char.wildShape?.known ?? []
-  const lim = wildShapeLimits(now.classLevels.druid ?? 0)
+  const lim = wildShapeLimitsFor(now)
   if (known.length && !lim)
     out.push(
       w(
@@ -160,7 +160,7 @@ export function checkCompanions(ctx: CheckContext) {
       )
   }
   for (const c of char.companions ?? []) {
-    if (c.kind !== 'familiar' && !rules.creatures.has(c.creatureId))
+    if (c.kind !== 'familiar' && !c.custom && !rules.creatures.has(c.creatureId))
       out.push(
         w(
           `companion-unknown-${c.uid}`,

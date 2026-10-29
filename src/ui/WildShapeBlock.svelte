@@ -12,7 +12,7 @@
     revertForm,
     SRC_WILD_SHAPE,
     WILD_SHAPE_ID,
-    wildShapeLimits,
+    wildShapeLimitsFor,
   } from '../engine/companions'
   import { UI } from '../i18n/ui'
   import { app, tr, view } from '../state.svelte'
@@ -25,7 +25,7 @@
 
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
-  const lim = $derived(wildShapeLimits(sheet.classLevels.druid ?? 0))
+  const lim = $derived(wildShapeLimitsFor(sheet))
   const wildUses = $derived(sheet.resources.find((r) => r.id === WILD_SHAPE_ID))
   const knownDefs = $derived(
     c.wildShape.known.map((id) => rules.creatures.get(id)).filter((x): x is CreatureDef => !!x),
@@ -127,7 +127,9 @@
         >{c.wildShape.known.length} / {lim.known} · {tr({ en: 'max CR', fr: 'FP max', es: 'VD máx.' })}
         {crText(lim.maxCr)}{lim.fly
           ? ''
-          : tr({ en: ', no Fly Speed', fr: ', sans vol', es: ', sin velocidad volando' })}</span
+          : tr({ en: ', no Fly Speed', fr: ', sans vol', es: ', sin velocidad volando' })}{lim.changedBy
+          ? ` · ${lim.changedBy.map((n) => tr(n)).join(', ')}`
+          : ''}</span
       >
     </h4>
     <ul class="list">

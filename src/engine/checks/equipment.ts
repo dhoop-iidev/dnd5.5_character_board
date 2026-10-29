@@ -100,10 +100,12 @@ export function checkEquipment(ctx: CheckContext) {
   }
   // Hands (SRD p. 90 "Two-Handed" and "Versatile", p. 92 "Shield"): the weapons and the Shield in hand, a Versatile
   // weapon counting two when the player holds it in two hands (engine/hands.ts), may not need more than two hands.
-  const hands = handsUsed(char, now.weapons, now.shield)
+  // A weapon created by a feature is made when you attack (its text says which hand): not counted here.
+  const inHand = now.weapons.filter((x) => !x.item.feature)
+  const hands = handsUsed(char, inHand, now.shield)
   if (hands > 2) {
     const held = [
-      ...now.weapons.map((x) => ({ name: x.def.name, n: weaponHands(x.def, char, x.item.uid) })),
+      ...inHand.map((x) => ({ name: x.def.name, n: weaponHands(x.def, char, x.item.uid) })),
       ...(now.shield ? [{ name: now.shield.def.name, n: 1 }] : []),
     ]
     out.push(

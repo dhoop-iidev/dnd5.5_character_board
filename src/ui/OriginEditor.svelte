@@ -15,24 +15,24 @@
   import { featListOf } from '../model/newCharacter'
   import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
   import CustomBackgroundEditor from './CustomBackgroundEditor.svelte'
-  import { app, tr } from '../state.svelte'
+  import { app, tr, view } from '../state.svelte'
   import ChoiceEditor from './ChoiceEditor.svelte'
   import WarningList from './WarningList.svelte'
 
   let { owners, warnings }: { owners: Owner[]; warnings: (w: RuleWarning) => boolean } = $props()
 
   const c = $derived(app.character)
-  const sp = $derived(rules.species.get(c.speciesId))
+  const sp = $derived(view.rules.species.get(c.speciesId))
   const bg = $derived(backgroundDef(c.background, rules))
   const byName = <T extends { name: { en: string } }>(list: T[]) =>
     [...list].sort((a, b) => tr(a.name as never).localeCompare(tr(b.name as never)))
-  const speciesList = $derived(byName([...rules.species.values()]))
+  const speciesList = $derived(byName([...view.rules.species.values()]))
   const backgroundList = $derived(byName([...rules.backgrounds.values()]))
 
   function setSpecies(id: string) {
     const old = c.speciesId
     c.speciesId = id
-    const def = rules.species.get(id)
+    const def = view.rules.species.get(id)
     c.speciesChoices = def && def.size.length > 1 ? { size: def.size.includes('medium') ? 'medium' : def.size[0] } : {}
     // The old species' trait choices and trait feats (Human Versatile) no longer apply.
     for (const k of Object.keys(c.featureChoices)) if (k.startsWith(`${old}:`)) delete c.featureChoices[k]

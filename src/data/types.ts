@@ -219,11 +219,31 @@ export interface EffectDef {
   activeWhen?: 'attuned' | 'on-person'
   /** Magic items only: the spells it casts and its charges (wands, staffs, rods, scrolls, potions…). */
   spellItem?: SpellItemDef
+  /** A weapon the feature creates (custom subclass features, house rule #5: Psychic Blades…): listed with the weapons in
+   * hand, not carried. */
+  weapon?: FeatureWeaponDef
+  /** Changes to Wild Shape (custom subclass features, house rule #5: Circle Forms…), as formulas (model/formula.ts):
+   * the highest of the table's value and these applies; `acMin` is the lowest Armor Class of a form. */
+  wildShape?: { maxCr?: string; tempHp?: string; acMin?: string }
   source?: Source
 }
 
 /** One way to use a feature, trait, feat or item during a turn (SRD 5.2.1 p. 9–10 "Actions", "Bonus Actions",
  * "Reactions"; p. 13 "Your Turn"). */
+/** A weapon created by a feature: a catalog weapon for its kind, category and properties, with these overrides. */
+export interface FeatureWeaponDef {
+  name: I18n
+  /** Catalog weapon id it is built on ('dagger'). */
+  base: string
+  damage?: string
+  damageType?: DamageType
+  range?: { normal: Distance; long: Distance }
+  /** The feature makes you proficient with it. */
+  proficient?: boolean
+  /** Its mastery property can be used without picking it with Weapon Mastery. */
+  mastery?: boolean
+}
+
 export interface ActivationDef {
   /** The part of the turn it takes: 'action', 'bonus-action', 'reaction'; 'free' takes none (Action Surge, Reckless
    * Attack); 'attack' replaces one attack of the Attack action (Dragonborn Breath Weapon). */
@@ -369,6 +389,26 @@ export interface SubclassDef {
   /** Subclass spell lists that depend on a choice (Circle of the Land: one land type chosen on each Long Rest). The
    * choice value is stored in `Character.featureChoices[<subclass id>:spells]`. */
   spellChoices?: { name: I18n; options: Record<string, { name: I18n; spells: { level: number; spells: string[] }[] }> }
+  /** A subclass that gives its class spellcasting (none in the SRD; custom subclasses, house rule #5): every number is
+   * the player's, from their book. */
+  spellcasting?: SubclassSpellcastingDef
+  source: Source
+}
+
+/** Spellcasting given by a subclass (house rule #5). Steps tables: class level → count, the highest level ≤ the class
+ * level applies. */
+export interface SubclassSpellcastingDef {
+  ability: AbilityId
+  /** Class spell list id ('wizard'). */
+  list: string
+  change: 'long-rest' | 'level'
+  cantrips: Record<string, number>
+  prepared: Record<string, number>
+  /** Spell slots (index 0 = level 1) from a class level on. */
+  slots: Record<string, number[]>
+  /** How the class levels count toward the Multiclass Spellcaster table (SRD p. 25 lists only full and half casters):
+   * class level ÷ `divisor`, rounded. Absent = not entered yet (counts 0, a rule check asks for it). */
+  multiclass?: { divisor: number; round: 'up' | 'down' }
   source: Source
 }
 
@@ -440,6 +480,8 @@ export interface SpeciesTraitDef {
   grants?: GrantSpec[]
   choices?: ChoiceSpec[]
   uses?: { count: number | string; per: RestKind }
+  /** Character level from which it applies (custom species, house rule #6); absent = from level 1. */
+  level?: number
   source: Source
 }
 

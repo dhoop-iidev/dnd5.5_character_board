@@ -189,7 +189,10 @@ export interface SpellcastingBlock {
   mod: number
   dc: Stat
   attack: Stat
-  kind: 'full' | 'half' | 'pact'
+  /** 'subclass': spellcasting given by a custom subclass (house rule #5). */
+  kind: 'full' | 'half' | 'pact' | 'subclass'
+  /** Class spell list the spells come from (the class id, or the list a subclass names). */
+  list: string
   /** Highest slot level and the slots (shared between Spellcasting classes, SRD p. 25). */
   cantripsMax: number
   preparedMax: number

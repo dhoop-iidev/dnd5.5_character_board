@@ -13,6 +13,7 @@ import type { Rules } from '../data/rules'
 import type { ActivationDef, I18n, SpellDef, Source } from '../data/types'
 import type { ActiveEffect, Character, ItemInstance, TurnState, TurnUndo } from '../model/character'
 import type { AttackLine, Sheet } from './sheet/types'
+import { heldAsPair } from './hands'
 import { magicItemOf } from './items'
 
 export const SRC_YOUR_TURN: Source = { page: 13, frPage: 14, esPage: 14, section: 'Playing the Game > Your Turn' }
@@ -312,14 +313,29 @@ export function potions(char: Character, rules: Rules): ItemInstance[] {
 
 const isLight = (a: AttackLine) => a.weapon.properties.includes('light')
 
+/** The Light weapons that could make the extra attack after an attack with `first`: a different Light weapon in hand,
+ * or the other one of a pair held one in each hand (two Daggers). */
+const otherLight = (char: Character, sheet: Sheet, first: string) =>
+  sheet.attacks.filter((a) => isLight(a) && (a.uid !== first || heldAsPair(char, a.uid)))
+
 /** The Light extra attack's weapons: a different Light weapon in hand, once an Attack-action attack was made with a
- * Light weapon. `nick`: it is part of the Attack action (Nick mastery of that weapon), not a Bonus Action. */
+ * Light weapon. `nick`: it is part of the Attack action (Nick mastery of the weapon making the extra attack, our
+ * reading of p. 90), not a Bonus Action. */
 export function lightExtraAttacks(char: Character, sheet: Sheet): { line: AttackLine; nick: boolean }[] {
   const turn = peekTurn(char)
   if (!turn.lightAttack || turn.lightExtraDone) return []
-  return sheet.attacks
-    .filter((a) => isLight(a) && a.uid !== turn.lightAttack)
-    .map((line) => ({ line, nick: line.mastery.id === 'nick' && line.mastery.usable }))
+  return otherLight(char, sheet, turn.lightAttack).map((line) => ({
+    line,
+    nick: line.mastery.id === 'nick' && line.mastery.usable,
+  }))
+}
+
+/** Whether the Light extra attack is possible this turn but waits for an Attack-action attack with a Light weapon (the
+ * turn box shows it greyed out): two Light weapons in hand, or a pair. */
+export function lightExtraWaiting(char: Character, sheet: Sheet): boolean {
+  const turn = peekTurn(char)
+  if (turn.lightAttack || turn.lightExtraDone) return false
+  return sheet.attacks.some((a) => isLight(a) && otherLight(char, sheet, a.uid).length > 0)
 }
 
 /** Damage bonus of the Light extra attack: the ability modifier is left out unless negative (p. 89); the Two-Weapon

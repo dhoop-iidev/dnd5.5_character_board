@@ -19,6 +19,7 @@ import {
   lightDamageBonus,
   lightExtra,
   lightExtraAttacks,
+  lightExtraWaiting,
   move,
   movement,
   newTurn,
@@ -204,6 +205,36 @@ describe('Light weapons', () => {
     lightExtra(c, extra[0].nick, L)
     expect(lightExtraAttacks(c, sheet)).toEqual([])
     expect(turnOf(c).bonus).toBe(extra[0].nick ? undefined : 'light-attack')
+  })
+
+  it('before the first Light attack, the extra attack waits (shown greyed out)', () => {
+    const c = example('voleuse-niveau-10.json')
+    const sheet = compute(c, rules)
+    expect(lightExtraWaiting(c, sheet)).toBe(true)
+    attackWith(
+      c,
+      sheet,
+      rules,
+      sheet.attacks.find((a) => a.weapon.properties.includes('light')),
+      L,
+    )
+    expect(lightExtraWaiting(c, sheet)).toBe(false)
+  })
+
+  it('two Daggers of one stack held one in each hand: the other Dagger makes the extra attack (Nick)', () => {
+    const c = example('voleuse-niveau-10.json')
+    for (const i of c.inventory) if (i.kind === 'weapon') i.equipped = false
+    c.inventory.push({ uid: 'pair', kind: 'weapon', refId: 'dagger', quantity: 2, location: 'worn', equipped: true })
+    if (!c.weaponMastery.includes('dagger')) c.weaponMastery.push('dagger')
+    let sheet = compute(c, rules)
+    const dagger = sheet.attacks.find((a) => a.uid === 'pair')!
+    // One in hand only: no other Light weapon.
+    expect(lightExtraWaiting(c, sheet)).toBe(false)
+    c.inventory.find((i) => i.uid === 'pair')!.pair = true
+    sheet = compute(c, rules)
+    expect(lightExtraWaiting(c, sheet)).toBe(true)
+    attackWith(c, sheet, rules, dagger, L)
+    expect(lightExtraAttacks(c, sheet)).toEqual([{ line: expect.objectContaining({ uid: 'pair' }), nick: true }])
   })
 })
 

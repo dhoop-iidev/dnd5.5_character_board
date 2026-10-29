@@ -6,7 +6,7 @@
   // engine/checks/equipment.ts ("hands"), the count in engine/hands.ts.
   import { rules } from '../data/rules'
   import type { I18n, WeaponProperty } from '../data/types'
-  import { twoHandedGrip, weaponHands } from '../engine/hands'
+  import { heldAsPair, twoHandedGrip, weaponHands } from '../engine/hands'
   import type { ItemInstance } from '../model/character'
   import { app, tr, view } from '../state.svelte'
   import { isShield, isWeapon, itemDef, itemName, openItem } from './items'
@@ -36,7 +36,10 @@
 
   function toggle(i: ItemInstance) {
     i.equipped = !i.equipped
-    if (!i.equipped) delete i.twoHanded
+    if (!i.equipped) {
+      delete i.twoHanded
+      delete i.pair
+    }
   }
   function setGrip(i: ItemInstance, two: boolean) {
     if (two) i.twoHanded = true
@@ -106,6 +109,16 @@
           {/if}
           {#if w && has(i, 'light')}
             <button class="prop" onclick={() => propPopup('light')}>{tr(prop('light')?.name)}</button>
+            {#if i.equipped && i.quantity >= 2}
+              <!-- Two of the stack, one in each hand (two Daggers): the Light extra attack with the other one. -->
+              <span class="grip" role="group" aria-label={tr(prop('light')?.name)}>
+                <button class:sel={!i.pair} onclick={() => delete i.pair}
+                  >{tr({ en: 'one in hand', fr: 'une en main', es: 'una en la mano' })}</button
+                ><button class:sel={!!i.pair} onclick={() => (i.pair = true)}
+                  >{tr({ en: 'one in each hand', fr: 'une dans chaque main', es: 'una en cada mano' })}</button
+                >
+              </span>
+            {/if}
           {/if}
           {#if w && has(i, 'versatile')}
             {#if i.equipped}
@@ -132,7 +145,7 @@
       })}
     </p>
   {/if}
-  {#if lightInHand.length >= 2}
+  {#if lightInHand.length + lightInHand.filter((i) => heldAsPair(c, i.uid)).length >= 2}
     <p class="hint">
       <button class="prop" onclick={() => propPopup('light')}>{tr(prop('light')?.name)}</button>
       {nick

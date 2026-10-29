@@ -224,6 +224,8 @@ export interface ItemInstance {
   equipped?: boolean
   /** A Versatile weapon held in two hands (its bracketed damage, SRD p. 90 "Versatile"; schema 4). */
   twoHanded?: boolean
+  /** Two of a stack of Light weapons in hand, one in each (two Daggers), for the Light extra attack (SRD p. 89). */
+  pair?: boolean
   /** Charges left (wands, staffs…). */
   charges?: number
   /** Computed, never saved: a weapon created by a feature (`EffectDef.weapon`), not an inventory item. */

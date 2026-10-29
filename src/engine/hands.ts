@@ -11,9 +11,17 @@ import type { Character } from '../model/character'
 export const twoHandedGrip = (char: Pick<Character, 'inventory'>, uid: string) =>
   !!char.inventory?.find((i) => i.uid === uid)?.twoHanded
 
-/** Hands a weapon needs: 2 for Two-Handed, 2 for a Versatile weapon held in two hands, 1 otherwise. */
+/** Two of a stack of Light weapons in hand, one in each (`ItemInstance.pair`, quantity 2 or more). */
+export const heldAsPair = (char: Pick<Character, 'inventory'>, uid: string) => {
+  const i = char.inventory?.find((x) => x.uid === uid)
+  return !!i?.pair && i.quantity >= 2
+}
+
+/** Hands a weapon needs: 2 for Two-Handed, 2 for a Versatile weapon held in two hands, 2 for a pair of Light weapons,
+ * 1 otherwise. */
 export function weaponHands(def: WeaponDef, char: Pick<Character, 'inventory'>, uid: string): number {
   if (def.properties.includes('two-handed')) return 2
+  if (def.properties.includes('light') && heldAsPair(char, uid)) return 2
   if (def.properties.includes('versatile') && twoHandedGrip(char, uid)) return 2
   return 1
 }

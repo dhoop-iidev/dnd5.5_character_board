@@ -68,4 +68,11 @@ describe('hands check', () => {
     c.inventory[1].equipped = true
     expect(compute(c, rules).ac.parts.some((p) => p.sourceId === 's')).toBe(true)
   })
+  it('a pair of Light weapons from one stack, one in each hand, counts two', () => {
+    const pair = { ...item('d', 'weapon', 'dagger'), quantity: 2, pair: true }
+    expect(handsWarning(fighter([pair]))).toBeUndefined()
+    expect(handsWarning(fighter([pair, item('s', 'armor', 'shield')]))?.message.en).toContain('3 hands')
+    // A single Dagger can't be a pair.
+    expect(handsWarning(fighter([{ ...pair, quantity: 1 }, item('s', 'armor', 'shield')]))).toBeUndefined()
+  })
 })

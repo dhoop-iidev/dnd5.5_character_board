@@ -8,6 +8,7 @@
   // A card is greyed with its reason as soon as its part of the turn is spent, and so is a spell's Cast button in the
   // open panel; undoing a cast from its row ("Cast ✓") also gives the part of the turn back (2026-10-29 fixes).
   import { rules } from '../data/rules'
+  import type { AttackLine } from '../engine/sheet/types'
   import type { I18n, Source } from '../data/types'
   import { spellRounds, undoCast } from '../engine/casting'
   import { castFromItem, spellItemInfo } from '../engine/spellItems'
@@ -22,6 +23,7 @@
     lightDamageBonus,
     lightExtra,
     lightExtraAttacks,
+    lightExtraWaiting,
     MAIN_ACTIONS,
     move,
     movement,
@@ -75,6 +77,7 @@
   /** Weapons an Opportunity Attack can use: melee ones (a Thrown melee weapon too), and the Unarmed Strike. */
   const meleeLines = $derived(attackLines.filter((a) => a.weapon.kind === 'melee'))
   const light = $derived(lightExtraAttacks(c, sheet))
+  const lightWaiting = $derived(lightExtraWaiting(c, sheet))
   const spellsBy = $derived({
     action: castableSpells(sheet, rules, 'action'),
     'bonus-action': castableSpells(sheet, rules, 'bonus-action'),
@@ -168,6 +171,27 @@
     const line = attackLines.find((a) => a.uid === uid)
     attackWith(c, sheet, rules, line, lineName)
     say(did(lineName))
+  }
+  /** The Light extra attack with this weapon (Bonus Action, or inside the Attack action with Nick). */
+  function lightAttack(l: { line: AttackLine; nick: boolean }) {
+    lightExtra(c, l.nick, {
+      en: `${l.line.name.en} (Light)`,
+      fr: `${l.line.name.fr} (légère)`,
+      es: `${l.line.name.es ?? l.line.name.en} (ligera)`,
+    })
+    say(did(l.line.name))
+  }
+  const lightLine = (l: { line: AttackLine; nick: boolean }) =>
+    `${tr(l.line.name)} ${fmt(l.line.attack.total)} · ${l.line.damage.dice}${lightDamageBonus(l.line, sheet) ? fmt(lightDamageBonus(l.line, sheet)) : ''}`
+  const NICK_NOTE = {
+    en: 'Nick: inside the Attack action',
+    fr: 'Coup double : dans l’action Attaque',
+    es: 'Mella: dentro de la acción de Atacar',
+  }
+  const LIGHT_WAIT = {
+    en: 'after an Attack-action attack with a Light weapon',
+    fr: 'après une attaque de l’action Attaque avec une arme Légère',
+    es: 'tras un ataque de la acción de Atacar con un arma Ligera',
   }
   function use(o: TurnOption, sub?: string) {
     const label = sub
@@ -471,19 +495,15 @@
             {/each}
           </details>
         {:else if col.id === 'bonus-action'}
+          {#if lightWaiting}
+            {@render card('light-attack', () => {}, tr(LIGHT_WAIT))}
+          {/if}
           {#each light as l (l.line.uid)}
             {@render card(
               'light-attack',
-              () => {
-                lightExtra(c, l.nick, {
-                  en: `${l.line.name.en} (Light)`,
-                  fr: `${l.line.name.fr} (légère)`,
-                  es: `${l.line.name.es ?? l.line.name.en} (ligera)`,
-                })
-                say(did(l.line.name))
-              },
+              () => lightAttack(l),
               !l.nick && !bonusFree ? tr(SPENT.bonus) : '',
-              `${tr(l.line.name)} ${fmt(l.line.attack.total)} · ${l.line.damage.dice}${lightDamageBonus(l.line, sheet) ? fmt(lightDamageBonus(l.line, sheet)) : ''}${l.nick ? ` · ${tr({ en: 'Nick: inside the Attack action', fr: 'Coup double : dans l’action Attaque', es: 'Mella: dentro de la acción de Atacar' })}` : ''}`,
+              `${lightLine(l)}${l.nick ? ` · ${tr(NICK_NOTE)}` : ''}`,
             )}
           {/each}
           {#if spellsBy['bonus-action'].length}
@@ -657,6 +677,14 @@
               })}
             </li>
           {/each}
+          {#each light.filter((l) => l.nick) as l (l.line.uid)}
+            <!-- Nick (p. 90): the Light extra attack inside the Attack action, once per turn. -->
+            <li>
+              <strong>{tr(l.line.name)}</strong>
+              <span class="meta">{tr(NICK_NOTE)} · {lightLine(l)}</span>
+              <button onclick={() => lightAttack(l)}>{tr(UI.attack)}</button>
+            </li>
+          {/each}
           {#each byKind('attack') as o (o.key)}
             {@const b = optBlocked(o)}
             <li>
@@ -680,7 +708,7 @@
             fr: 'au lieu de dégâts, une Attaque à mains nues peut agripper ou pousser la cible.',
             es: 'en lugar de daño, un ataque sin armas puede agarrar o empujar al objetivo.',
           })}
-          {#if light.length || turn.lightAttack}
+          {#if light.length || lightWaiting}
             ·
             <button
               class="link"
@@ -692,9 +720,9 @@
                 })}>{tr({ en: 'Light', fr: 'Légère', es: 'Ligera' })}</button
             >
             {tr({
-              en: ': the extra attack is in the Bonus Action column.',
-              fr: ' : l’attaque en plus est dans la colonne Action Bonus.',
-              es: ': el ataque extra está en la columna de acción adicional.',
+              en: ': after an attack with a Light weapon, the extra attack with the other one appears here with Nick, else in the Bonus Action column.',
+              fr: ' : après une attaque avec une arme Légère, l’attaque en plus avec l’autre apparaît ici avec Coup double, sinon dans la colonne Action Bonus.',
+              es: ': tras un ataque con un arma Ligera, el ataque extra con la otra aparece aquí con Mellar, si no en la columna de acción adicional.',
             })}
           {/if}
         </p>

@@ -5,6 +5,7 @@
   // rolled, p. 21), then the choices of the species traits and origin feats (lineage, Skillful, Magic Initiate…). Changing
   // the background resets its increases and gives its own Origin feat; changing the species clears its trait choices.
   // The custom background (house rule #3) shows its picks under the select.
+  import { LANGUAGES, languageOf, STARTING_LANGUAGES } from '../model/languages'
   import { rules } from '../data/rules'
   import type { AbilityId } from '../data/types'
   import { ABILITIES } from '../data/types'
@@ -59,6 +60,12 @@
   function setIncrease(a: AbilityId, v: number) {
     if (v) c.background.abilities[a] = v
     else delete c.background.abilities[a]
+  }
+  /** Known languages as stored: table ids ('elvish'), or text for a language from another book. */
+  const langs = $derived((c.identity.languages ?? []).map((l) => languageOf(l)?.id ?? l))
+  function toggleLanguage(id: string) {
+    const cur = langs
+    c.identity.languages = cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id]
   }
   function setBase(a: AbilityId, v: number) {
     if (Number.isFinite(v)) c.baseAbilities[a] = Math.round(v)
@@ -148,6 +155,40 @@
     {/each}
   </div>
 
+  <!-- Languages (p. 20): Common plus two from the Standard Languages table; rare ones on the DM's say-so. -->
+  <p class="sub">
+    {tr({
+      en: `Languages (${langs.length} / ${STARTING_LANGUAGES}): Common plus two of your choice; your class or species may add more.`,
+      fr: `Langues (${langs.length} / ${STARTING_LANGUAGES}) : le commun et deux langues de votre choix ; classe ou espèce peuvent en ajouter.`,
+      es: `Idiomas (${langs.length} / ${STARTING_LANGUAGES}): común y dos a tu elección; tu clase o especie pueden añadir más.`,
+    })}
+  </p>
+  <div class="chips">
+    {#each LANGUAGES.filter((l) => !l.rare || langs.includes(l.id)) as l (l.id)}
+      <label class="chip" class:on={langs.includes(l.id)}
+        ><input type="checkbox" checked={langs.includes(l.id)} onchange={() => toggleLanguage(l.id)} />{tr(
+          l.name,
+        )}</label
+      >
+    {/each}
+    {#each (c.identity.languages ?? []).filter((l) => !languageOf(l)) as l (l)}
+      <label class="chip on"><input type="checkbox" checked onchange={() => toggleLanguage(l)} />{l}</label>
+    {/each}
+    <select
+      value=""
+      onchange={(e) => {
+        if (e.currentTarget.value) toggleLanguage(e.currentTarget.value)
+        e.currentTarget.value = ''
+      }}
+      aria-label={tr({ en: 'Rare language', fr: 'Langue rare', es: 'Idioma inusual' })}
+    >
+      <option value="">＋ {tr({ en: 'rare language', fr: 'langue rare', es: 'idioma inusual' })}</option>
+      {#each LANGUAGES.filter((l) => l.rare && !langs.includes(l.id)) as l (l.id)}<option value={l.id}
+          >{tr(l.name)}</option
+        >{/each}
+    </select>
+  </div>
+
   {#each owners as o (o.id)}
     <div class="owner"><span class="meta">{tr(o.name)}</span><ChoiceEditor owner={o} /></div>
   {/each}
@@ -197,6 +238,33 @@
   }
   .owner {
     margin-top: 0.5rem;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border: 1px solid var(--rule-strong);
+    border-radius: 1em;
+    padding: 0.2em 0.7em;
+    min-height: 2.4rem;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .chip.on {
+    border-color: var(--frame);
+    background: var(--paper-2);
+  }
+  .chips select,
+  .fields select {
+    min-height: 2.4rem;
+    font: inherit;
+    font-size: 1rem;
   }
   .meta {
     display: block;

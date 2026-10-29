@@ -429,9 +429,9 @@
         "count": 1,
         "from": ["insight", "perception", "survival"],
         "name": {
-          "en": "Keen Senses skill",
-          "fr": "Compétence de Sens aiguisés",
-          "es": "Habilidad de Sentidos agudos"
+          "en": "Skill",
+          "fr": "Compétence",
+          "es": "Habilidad"
         }
       }
     ],
@@ -959,9 +959,9 @@
         "kind": "skill",
         "count": 1,
         "name": {
-          "en": "Skillful skill",
-          "fr": "Compétence de Compétent",
-          "es": "Habilidad de Diestro"
+          "en": "Skill",
+          "fr": "Compétence",
+          "es": "Habilidad"
         }
       }
     ],

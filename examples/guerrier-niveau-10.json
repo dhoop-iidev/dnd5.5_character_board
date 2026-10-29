@@ -9,7 +9,7 @@
     "title": "",
     "motto": "",
     "deity": "",
-    "languages": ["Common", "Dwarvish"],
+    "languages": ["Common", "Dwarvish", "Giant"],
     "height": { "m": 1.35 },
     "weight": { "kg": 78 },
     "age": "112"

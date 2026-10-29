@@ -71,7 +71,7 @@ export function newCharacter(input: NewCharacterInput, rules: Rules): Character 
       title: '',
       motto: '',
       deity: '',
-      languages: ['Common'],
+      languages: ['common'],
       height: { m: 0 },
       weight: { kg: 0 },
       age: '',

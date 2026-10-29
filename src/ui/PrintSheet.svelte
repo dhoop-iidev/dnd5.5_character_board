@@ -5,6 +5,7 @@
   // proficiencies); page 2 the spellcasting, equipment, Attunement, coins, character details and ruled notes. Names
   // only, no descriptions. Rendered only while printing (ui/print.svelte.ts); the browser's print dialog saves it as a
   // PDF. A sheet too long for two pages flows onto a third.
+  import { languageName } from '../model/languages'
   import { rules } from '../data/rules'
   import { ABILITIES, type AbilityId, type I18n, type SpellDef } from '../data/types'
   import { ABILITY_NAMES, ABILITY_SHORT } from '../engine/sheet/common'
@@ -92,7 +93,7 @@
       label: L('Tools', 'Outils', 'Herramientas'),
       text: uniq(s.proficiencies.tools.map((t) => tr(toolNames.get(t)) || t)).join(', '),
     },
-    { label: UI.languages, text: uniq(s.proficiencies.languages).join(', ') },
+    { label: UI.languages, text: uniq(s.proficiencies.languages.map((l) => tr(languageName(l)))).join(', ') },
   ])
 
   // --- Weapons and damage cantrips ---

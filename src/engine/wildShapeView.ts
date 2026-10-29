@@ -7,6 +7,7 @@ import type { Rules } from '../data/rules'
 import type { AbilityId, CreatureDef, I18n, SkillId } from '../data/types'
 import { ABILITIES } from '../data/types'
 import type { Character } from '../model/character'
+import { languageName } from '../model/languages'
 import type { Sheet } from './sheet/types'
 import { abilityMod } from './sheet/common'
 import { type WildShapeLimits, wildShapeLimitsFor } from './companions'
@@ -150,9 +151,9 @@ export function wildShapeView(char: Character, sheet: Sheet, def: CreatureDef, r
     senses: def.senses,
     languages: sheet.proficiencies.languages.length
       ? {
-          en: sheet.proficiencies.languages.join(', '),
-          fr: sheet.proficiencies.languages.join(', '),
-          es: sheet.proficiencies.languages.join(', '),
+          en: sheet.proficiencies.languages.map((l) => languageName(l).en).join(', '),
+          fr: sheet.proficiencies.languages.map((l) => languageName(l).fr).join(', '),
+          es: sheet.proficiencies.languages.map((l) => languageName(l).es).join(', '),
         }
       : { en: '—', fr: '—', es: '—' },
     retained: [

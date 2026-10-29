@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { spellChoiceOwners, tabOfWarning } from './ui/spellChoices'
   import { rules } from './data/rules'
   import { UI } from './i18n/ui'
   import { app, tr, view } from './state.svelte'
@@ -59,12 +60,26 @@
   const nextTheme: Record<Theme, Theme> = { auto: 'light', light: 'dark', dark: 'auto' }
   const themeIcon: Record<Theme, string> = { auto: '◐', light: '☀', dark: '☾' }
 
-  const errors = $derived(
-    view.warnings.filter((w) => w.actionable && w.area !== 'spells' && w.area !== 'companions').length,
+  /** Warnings to fix, counted on the tab where they are fixed (ui/spellChoices.ts `tabOfWarning`). */
+  const toFix = $derived.by(() => {
+    const n: Record<string, number> = {}
+    for (const w of view.warnings)
+      if (w.actionable) {
+        const t = tabOfWarning(w, view.sheet)
+        n[t] = (n[t] ?? 0) + 1
+      }
+    return n
+  })
+  // The Spells tab: a Spellcasting class, or spells from a feat, trait or feature (Magic Initiate…).
+  const tabs = $derived(
+    TABS.filter(
+      (t) =>
+        t.id !== 'spells' ||
+        view.sheet.spellcasting.length ||
+        view.sheet.extraSpells.length ||
+        spellChoiceOwners(view.sheet).length,
+    ),
   )
-  const spellErrors = $derived(view.warnings.filter((w) => w.actionable && w.area === 'spells').length)
-  const companionErrors = $derived(view.warnings.filter((w) => w.actionable && w.area === 'companions').length)
-  const tabs = $derived(TABS.filter((t) => t.id !== 'spells' || view.sheet.spellcasting.length))
 </script>
 
 <svelte:window onhashchange={() => (tab = fromHash())} />
@@ -95,18 +110,9 @@
     {#each tabs as t (t.id)}
       <button class:active={tab === t.id} onclick={() => (tab = t.id)}>
         {tr(t.label)}
-        {#if t.id === 'general' && errors}<span
+        {#if toFix[t.id]}<span
             class="count"
-            title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}>{errors}</span
-          >{/if}
-        {#if t.id === 'spells' && spellErrors}<span
-            class="count"
-            title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}>{spellErrors}</span
-          >{/if}
-        {#if t.id === 'companions' && companionErrors}<span
-            class="count"
-            title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}
-            >{companionErrors}</span
+            title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}>{toFix[t.id]}</span
           >{/if}
       </button>
     {/each}

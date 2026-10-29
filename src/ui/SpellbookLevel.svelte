@@ -1,12 +1,13 @@
 <script lang="ts">
   // One Wizard level of the spellbook (SRD 5.2.1 p. 78 "Spellbook", FR p. 59): the spells added at that level, the
   // count the rules give (6 at Wizard level 1, then 2), the highest spell level allowed, and a menu to add one
-  // (like the 3.5 playboard's SpellLearningLevel).
+  // (the shared spell picker).
   import { rules } from '../data/rules'
   import type { SpellDef } from '../data/types'
   import { type SpellbookLevel, spellbookProblems } from '../engine/spellbook'
   import { app, tr } from '../state.svelte'
   import { openPopup } from './popupState.svelte'
+  import SpellPicker from './SpellPicker.svelte'
   import { summaryOf } from './summary'
 
   let { lv, book, list }: { lv: SpellbookLevel; book: string[]; list: Map<string, number> } = $props()
@@ -76,22 +77,16 @@
     {/each}
     {#if options.length && lv.learned.length < lv.expected}
       <li class="add">
-        <select
-          value=""
-          onchange={(e) => add(e.currentTarget.value)}
-          aria-label={tr({
+        <SpellPicker
+          options={options.flatMap((g) => g.spells)}
+          onpick={(sp) => add(sp.id)}
+          keepOpen
+          label={tr({
             en: 'Add a spell to the spellbook',
             fr: 'Ajouter un sort au grimoire',
-            es: 'Añadir un conjuro al libro de conjuros',
+            es: 'Añadir un conjuro al libro',
           })}
-        >
-          <option value="">＋ {tr({ en: 'add a spell', fr: 'ajouter un sort', es: 'añadir un conjuro' })}</option>
-          {#each options as g (g.level)}
-            <optgroup label={`${tr({ en: 'Level', fr: 'Niveau', es: 'Nivel' })} ${g.level}`}>
-              {#each g.spells as sp (sp.id)}<option value={sp.id}>{tr(sp.name)}</option>{/each}
-            </optgroup>
-          {/each}
-        </select>
+        />
       </li>
     {/if}
   </ul>
@@ -145,9 +140,8 @@
     gap: 0.3rem;
     align-items: center;
   }
-  select {
-    min-height: 2.2rem;
-    max-width: 100%;
+  .add {
+    flex-basis: 100%;
   }
   .link {
     background: none;

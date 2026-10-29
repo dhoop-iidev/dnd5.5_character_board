@@ -12,6 +12,8 @@ import { resolveCount } from '../sheet/modifiers'
 import { grantedSkills } from '../sheet/skills'
 import type { CheckContext } from './common'
 import { esOf, w } from './common'
+import { FEAT_CATEGORY_NAMES } from '../../model/customFeats'
+import { languageOf, SRC_LANGUAGES, STARTING_LANGUAGES } from '../../model/languages'
 
 /** Feat categories as the Spanish SRD names them ("Dote de origen", "Dote general"…). */
 const FEAT_CATEGORY_ES: Record<string, string> = {
@@ -129,6 +131,20 @@ export function checkBuild(ctx: CheckContext) {
           `${bg.name.fr} : augmentez une des caractéristiques ${bg.abilities.map((a) => ABILITY_NAMES[a].fr).join(', ')} de 2 et une autre de 1, ou les trois de 1.`,
           `${esOf(bg.name)}: aumenta una de estas características en 2 y otra en 1, o las tres en 1: ${bg.abilities.map((a) => esOf(ABILITY_NAMES[a])).join(', ')}.`,
           { source: bg.source, actionable: true },
+        ),
+      )
+    // Languages (p. 20): Common plus two languages; class features may add more.
+    const known = new Set((char.identity?.languages ?? []).map((l) => languageOf(l)?.id ?? l.trim().toLowerCase()))
+    if (!known.has('common') || known.size < STARTING_LANGUAGES)
+      out.push(
+        w(
+          'background-languages',
+          'warning',
+          'abilities',
+          `Languages: Common plus two languages of your choice (${known.size} known).`,
+          `Langues : le commun et deux langues de votre choix (${known.size} connue${known.size > 1 ? 's' : ''}).`,
+          `Idiomas: común y dos idiomas a tu elección (${known.size} conocido${known.size > 1 ? 's' : ''}).`,
+          { source: SRC_LANGUAGES, actionable: true },
         ),
       )
     if (char.background.feat?.featId !== bg.feat)
@@ -551,7 +567,7 @@ export function checkBuild(ctx: CheckContext) {
               'error',
               'skills',
               `${rules.skills.get(s)?.name.en ?? s} is not on the ${first.name.en} skill list.`,
-              `${rules.skills.get(s)?.name.fr ?? s} n’est pas dans la liste de compétences du ${first.name.fr}.`,
+              `${rules.skills.get(s)?.name.fr ?? s} n’est pas dans la liste de compétences ${/^[aeiouyéèh]/i.test(first.name.fr) ? 'de l’' : 'du '}${first.name.fr}.`,
               `${esOf(rules.skills.get(s)?.name) || s} no está en la lista de habilidades de ${esOf(first.name)}.`,
               { source: first.source, actionable: true },
             ),
@@ -667,9 +683,11 @@ export function checkBuild(ctx: CheckContext) {
   for (const o of now.owners) {
     for (const c of o.eff.choices ?? []) {
       const key = o.pick ? `${o.id}>${c.id ?? 'choice'}` : choiceKey(o.id, c)
-      const label = c.name ? ` (${c.name.en})` : ''
-      const labelFr = c.name ? ` (${c.name.fr})` : ''
-      const labelEs = c.name ? ` (${esOf(c.name)})` : ''
+      // The choice's own name when it adds something to the owner's ("Divine Order (Divine Order)" reads badly).
+      const named = c.name && c.name.en !== o.name.en
+      const label = named ? ` (${c.name!.en})` : ''
+      const labelFr = named ? ` (${c.name!.fr})` : ''
+      const labelEs = named ? ` (${esOf(c.name!)})` : ''
       // Character level at which the feature was gained (its own `level` is a class level).
       const charLevel =
         o.classId && o.level
@@ -688,9 +706,9 @@ export function checkBuild(ctx: CheckContext) {
               `choice-${key}`,
               'warning',
               'feats',
-              `${o.name.en}: choose ${c.category ? `an ${c.category} ` : 'a '}feat.`,
-              `${o.name.fr} : choisissez un don${c.category ? ` (catégorie ${c.category})` : ''}.`,
-              `${esOf(o.name)}: elige una dote${c.category ? ` (${FEAT_CATEGORY_ES[c.category] ?? c.category})` : ''}.`,
+              `${o.name.en}: choose ${c.category ? `an ${FEAT_CATEGORY_NAMES[c.category].en}` : 'a feat'}.`,
+              `${o.name.fr} : choisissez ${c.category ? `un ${FEAT_CATEGORY_NAMES[c.category].fr.toLowerCase()}` : 'un don'}.`,
+              `${esOf(o.name)}: elige una ${c.category ? FEAT_CATEGORY_NAMES[c.category].es!.toLowerCase() : 'dote'}.`,
               { ...where, source: o.source, actionable: true },
             ),
           )
@@ -716,7 +734,7 @@ export function checkBuild(ctx: CheckContext) {
               'error',
               'feats',
               `${o.name.en} grants ${c.category === 'origin' ? 'an Origin' : `a ${c.category}`} feat; ${f.name.en} is a ${f.category} feat.`,
-              `${o.name.fr} accorde un don de catégorie ${c.category} ; ${f.name.fr} est un don ${f.category}.`,
+              `${o.name.fr} accorde un ${FEAT_CATEGORY_NAMES[c.category!].fr.toLowerCase()} ; ${f.name.fr} est un ${FEAT_CATEGORY_NAMES[f.category].fr.toLowerCase()}.`,
               `${esOf(o.name)} otorga una dote ${FEAT_CATEGORY_ES[c.category!] ?? c.category}; ${esOf(f.name)} es una dote ${FEAT_CATEGORY_ES[f.category] ?? f.category}.`,
               { ...where, source: o.source, actionable: true },
             ),

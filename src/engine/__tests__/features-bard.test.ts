@@ -10,7 +10,7 @@ import { newCharacter } from '../../model/newCharacter'
 import { compute } from '../compute'
 import { validate } from '../validate'
 // Spells still to choose (fewer cantrips, prepared or spellbook spells than allowed) are not what these tests check.
-const toChoose = (w: { id: string }) => /^(prepared|cantrips|spellbook)-missing/.test(w.id)
+const toChoose = (w: { id: string }) => /^((prepared|cantrips|spellbook)-missing|background-languages)/.test(w.id)
 
 type Abilities = Record<'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha', number>
 const ABIL: Abilities = { str: 8, dex: 14, con: 14, int: 10, wis: 12, cha: 16 }

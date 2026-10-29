@@ -7,6 +7,7 @@
   // progression last. Build warnings are fixed in the progression (the level row or Origin block that sets the value):
   // the boxes above only link there. Lists are in English alphabetical order in every language (ui/order.ts), so nothing moves when
   // the language changes.
+  import { tabOfWarning } from '../spellChoices'
   import { rules } from '../../data/rules'
   import { ABILITIES, type AbilityId, type I18n, type Source } from '../../data/types'
   import { UI } from '../../i18n/ui'
@@ -26,7 +27,11 @@
   const sheet = $derived(view.sheet)
   const c = $derived(app.character)
   /** Build warnings of these areas, fixed in the progression (2026-10-28). */
-  const toFix = (areas: string[]) => view.warnings.filter((w) => areas.includes(w.area) && w.severity !== 'info').length
+  // Spell picks of feats and traits are made in the Spells tab, not in the progression.
+  const toFix = (areas: string[]) =>
+    view.warnings.filter(
+      (w) => areas.includes(w.area) && w.severity !== 'info' && tabOfWarning(w, view.sheet) === 'general',
+    ).length
   const goToProgression = () => document.getElementById('progression')?.scrollIntoView({ behavior: 'smooth' })
   const profMark = { none: '○', half: '◐', proficient: '●', expertise: '◉' } as const
 

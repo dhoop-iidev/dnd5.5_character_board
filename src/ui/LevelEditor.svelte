@@ -6,6 +6,7 @@
   // level-1 row starts with the Origin (species, background, ability scores). Every build warning is listed in the row
   // that fixes it (user request 2026-10-28), the rest under the levels; Weapon Mastery is in the Combat pane.
   // Never blocks: illegal choices stay possible and show up as warnings.
+  import { choicesFor, isSpellChoiceWarning } from './spellChoices'
   import { rules } from '../data/rules'
   import type { AbilityId } from '../data/types'
   import { ABILITIES } from '../data/types'
@@ -95,15 +96,26 @@
   }
   /** Owners that ask for a choice (the Fighting Style is picked in its row's own field). */
   const choiceOwners = $derived(
-    sheet.owners.filter((o) => (o.effect?.choices ?? []).length && !o.id.endsWith(':fighting-style')),
+    sheet.owners.filter((o) => choicesFor(o, 'rest').length && !o.id.endsWith(':fighting-style')),
   )
   // Where each choice and warning goes (ui/progression.ts): a row, the Origin block of row 1, or under the levels.
   const places = $derived(progressionPlaces(c, sheet, rules))
   const ownersAt = (p: Place) => choiceOwners.filter((o) => places.placeOf(o) === p)
-  const isChoice = (w: RuleWarning) => w.id.startsWith('choice-')
+  /** Spell picks (Magic Initiate…) are made in the Spells tab: the row only links there. */
+  const inSpells = (w: RuleWarning) => isSpellChoiceWarning(w, sheet)
+  const isChoice = (w: RuleWarning) => w.id.startsWith('choice-') && !inSpells(w)
+  const spellsAt = (i: number) =>
+    view.warnings.filter((w) => inSpells(w) && (placed(i)(w) || (i === 0 && placed('origin')(w))))
+  /** Weapon Mastery picks are made in the Combat tab (they can change after a Long Rest, SRD p. 47): shown in the
+   * level-1 row as a link. */
+  const masteryTodo = $derived(view.warnings.filter((w) => w.id.startsWith('mastery-')))
+  const goTo = (tab: string) => {
+    location.hash = `#/${tab}`
+    window.scrollTo(0, 0)
+  }
   const placed = (p: Place) => (w: RuleWarning) => places.placeOfWarning(w) === p
   const choicesAt = (p: Place) => (w: RuleWarning) => isChoice(w) && placed(p)(w)
-  const warningsAt = (p: Place) => (w: RuleWarning) => !isChoice(w) && placed(p)(w)
+  const warningsAt = (p: Place) => (w: RuleWarning) => !isChoice(w) && !inSpells(w) && placed(p)(w)
   /** Build warnings no row can fix (a stored choice of a feature the character no longer has…). */
   const unplaced = (w: RuleWarning) =>
     ['abilities', 'skills', 'feats'].includes(w.area) && places.placeOfWarning(w) === undefined
@@ -152,7 +164,8 @@
     {@const def = view.rules.classes.get(l.classId)}
     {@const cl = classLevelAt(i)}
     {@const warns = rowWarnings(i)}
-    {@const todo = rowChoices(i).length + (i === 0 ? (skillsLeft ? 1 : 0) : 0)}
+    {@const toSpells = spellsAt(i)}
+    {@const todo = rowChoices(i).length + toSpells.length + (i === 0 ? (skillsLeft ? 1 : 0) + masteryTodo.length : 0)}
     <li class:open={open === i} class:flagged={warns.length > 0}>
       <button class="row" onclick={() => (open = open === i ? null : i)} aria-expanded={open === i}>
         <span class="lvl">{i + 1}</span>
@@ -182,7 +195,10 @@
 
       {#if open === i}
         <div class="editor">
-          {#if i === 0}<OriginEditor owners={ownersAt('origin')} warnings={placed('origin')} />{/if}
+          {#if i === 0}<OriginEditor
+              owners={ownersAt('origin')}
+              warnings={(w) => !inSpells(w) && placed('origin')(w)}
+            />{/if}
           <div class="fields">
             <label>
               {tr(UI.class)}
@@ -278,16 +294,28 @@
             <h4>
               {tr({
                 en: `Skill proficiencies of the ${first.name.en} (${c.skillProficiencies.length} / ${first.skillChoices.count})`,
-                fr: `Maîtrises de compétence du ${first.name.fr} (${c.skillProficiencies.length} / ${first.skillChoices.count})`,
+                fr: `Maîtrises de compétence ${/^[aeiouyéèh]/i.test(first.name.fr) ? 'de l’' : 'du '}${first.name.fr} (${c.skillProficiencies.length} / ${first.skillChoices.count})`,
                 es: `Competencias en habilidades de ${first.name.es ?? first.name.en} (${c.skillProficiencies.length} / ${first.skillChoices.count})`,
               })}
             </h4>
             <div class="chips">
               {#each skillList as id (id)}
-                <label class="chip" class:on={c.skillProficiencies.includes(id as never)}
+                {@const mine = c.skillProficiencies.includes(id as never)}
+                <!-- Already proficient from the background, a species trait or a feat: a wasted pick. -->
+                {@const taken =
+                  !mine &&
+                  ['proficient', 'expertise'].includes(sheet.skills.find((s) => s.id === id)?.proficiency ?? '')}
+                <label
+                  class="chip"
+                  class:on={mine}
+                  class:taken
+                  title={taken
+                    ? tr({ en: 'Already proficient', fr: 'Déjà maîtrisée', es: 'Ya tienes competencia' })
+                    : ''}
                   ><input
                     type="checkbox"
-                    checked={c.skillProficiencies.includes(id as never)}
+                    checked={mine || taken}
+                    disabled={taken}
                     onchange={() => toggleSkill(id)}
                   />{tr(rules.skills.get(id)?.name)}</label
                 >
@@ -313,6 +341,24 @@
             </div>
           {/if}
 
+          {#if toSpells.length}
+            <button class="goto" onclick={() => goTo('spells')}
+              >✦ {tr({
+                en: `Spells to choose (${toSpells.length}): Spells tab →`,
+                fr: `Sorts à choisir (${toSpells.length}) : onglet Sorts →`,
+                es: `Conjuros por elegir (${toSpells.length}): pestaña Conjuros →`,
+              })}</button
+            >
+          {/if}
+          {#if i === 0 && masteryTodo.length}
+            <button class="goto" onclick={() => goTo('combat')}
+              >⚔ {tr({
+                en: 'Weapon Mastery to choose: Combat tab →',
+                fr: 'Bottes d’arme à choisir : onglet Combat →',
+                es: 'Maestría con armas por elegir: pestaña Combate →',
+              })}</button
+            >
+          {/if}
           <WarningList filter={choicesAt(i)} compact />
           <WarningList filter={warningsAt(i)} compact />
         </div>
@@ -481,6 +527,13 @@
     flex-wrap: wrap;
     gap: 0.4rem 0.8rem;
     align-items: center;
+  }
+  .goto {
+    display: block;
+    margin: 0.4rem 0;
+    min-height: 2.4rem;
+    text-align: left;
+    border-left: 3px solid var(--accent);
   }
   .bar {
     display: flex;

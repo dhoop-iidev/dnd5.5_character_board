@@ -2,6 +2,7 @@
   // Identity block of the character sheet, editable in place (same drawing as the 3.5 playboard's card: small-caps
   // labels over underlined fields). Species, background and classes are shown, not edited here (they are build choices:
   // welcome screen and Progression); their names open the SRD text in the popup.
+  import { languageName, languageOf } from '../model/languages'
   import { rules } from '../data/rules'
   import type { I18n, Source } from '../data/types'
   import { SIZE_NAMES } from '../i18n/ui'
@@ -26,11 +27,13 @@
   function open(name: I18n | undefined, text: I18n | undefined, source: Source | undefined, noteKey: string) {
     if (name) openPopup({ title: name, html: text, source, noteKey })
   }
+  /** Languages typed as text: table languages are stored by id (shown in the reader's language), others as typed. */
   function setLanguages(text: string) {
     c.identity.languages = text
       .split(',')
       .map((s) => s.trim())
       .filter(Boolean)
+      .map((s) => languageOf(s)?.id ?? s)
   }
   // Height and weight are stored in m and kg; English shows ft and lb with the French SRD's printed ratios
   // (5 ft = 1,5 m, 1 lb = 0,5 kg).
@@ -156,7 +159,7 @@
         fr: 'Langues (séparées par des virgules)',
         es: 'Idiomas (separados por comas)',
       })}<input
-        value={c.identity.languages?.join(', ') ?? ''}
+        value={(c.identity.languages ?? []).map((l) => tr(languageName(l))).join(', ')}
         onchange={(e) => setLanguages(e.currentTarget.value)}
       /></label
     >

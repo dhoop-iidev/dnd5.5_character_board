@@ -7,10 +7,14 @@
   import type { SpellDef } from '../../data/types'
   import { spellbookLevels, wizardList } from '../../engine/spellbook'
   import { UI } from '../../i18n/ui'
+  import { ABILITY_NAMES } from '../../engine/sheet/common'
   import type { SpellcastingState } from '../../model/character'
+  import type { ExtraSpells, Owner } from '../../engine/sheet/types'
   import { app, tr, view } from '../../state.svelte'
   import { castLog } from '../castLog.svelte'
-  import { norm } from '../items'
+  import ChoiceEditor from '../ChoiceEditor.svelte'
+  import { isSpellChoiceWarning, spellChoiceOwners } from '../spellChoices'
+  import SpellPicker from '../SpellPicker.svelte'
   import { byEnglishName } from '../order'
   import RuleText from '../RuleText.svelte'
   import SpellbookLevel from '../SpellbookLevel.svelte'
@@ -23,11 +27,26 @@
   const sheet = $derived(view.sheet)
   // Spells granted by feats and traits are prepared whatever the class: they don't count (SRD Magic Initiate p. 87, lineages p. 84–86).
   const free = $derived(new Set(sheet.extraSpells.flatMap((x) => x.spells)))
-  let query = $state<Record<string, string>>({})
+  /** Spells from feats, traits and features, with the owner whose spell picks are made here (Magic Initiate…). */
+  const otherSpells = $derived.by(() => {
+    const out: (ExtraSpells & { owner?: Owner })[] = sheet.extraSpells.map((x) => ({ ...x }))
+    for (const o of spellChoiceOwners(sheet)) {
+      const x = out.find((e) => e.ownerId === o.id)
+      // The spellcasting ability the player picked (Magic Initiate: Intelligence, Wisdom or Charisma).
+      const ability = o.choiceValues.ability?.[0] as ExtraSpells['ability']
+      if (x) Object.assign(x, { owner: o, ...(ability && !x.ability ? { ability } : {}) })
+      else out.push({ ownerId: o.id, name: o.name, spells: [], source: o.source, owner: o, ability })
+    }
+    return out
+  })
 
+  /** A class's chosen spells, created on the first change (event handlers only: writing state while rendering throws). */
   function castState(classId: string): SpellcastingState {
     return (c.spellcasting[classId] ??= { prepared: [], cantrips: [] })
   }
+  const NONE: SpellcastingState = { prepared: [], cantrips: [] }
+  /** A class's chosen spells for display (a new character has none yet). */
+  const readState = (classId: string): SpellcastingState => c.spellcasting[classId] ?? NONE
   /** Spell definitions sorted by level then English name (same order in every language, ui/order.ts). */
   const defs = (ids: string[]): SpellDef[] =>
     ids
@@ -43,17 +62,12 @@
     return [...ids].map((id) => rules.spells.get(id)!).filter(Boolean)
   }
   function candidates(classId: string, cantrip: boolean, book?: string[]): SpellDef[] {
-    const q = norm(query[classId] ?? '')
-    const st = castState(classId)
+    const st = readState(classId)
     const taken = new Set([...st.prepared, ...st.cantrips])
     // A Wizard prepares level 1+ spells from the spellbook (p. 78 "Prepared Spells of Level 1+").
     return listOf(classId)
       .filter(
-        (s) =>
-          (cantrip ? s.level === 0 : s.level > 0) &&
-          !taken.has(s.id) &&
-          (cantrip || !book || book.includes(s.id)) &&
-          (!q || norm(tr(s.name)).includes(q)),
+        (s) => (cantrip ? s.level === 0 : s.level > 0) && !taken.has(s.id) && (cantrip || !book || book.includes(s.id)),
       )
       .sort((a, b) => a.level - b.level || tr(a.name).localeCompare(tr(b.name)))
   }
@@ -61,7 +75,6 @@
     const st = castState(classId)
     if (s.level === 0) st.cantrips.push(s.id)
     else st.prepared.push(s.id)
-    query[classId] = ''
   }
   function removeSpell(classId: string, id: string) {
     const st = castState(classId)
@@ -158,33 +171,8 @@
   </section>
 {/if}
 
-{#if sheet.extraSpells.length}
-  <section class="box">
-    <h3>
-      {tr({
-        en: 'Spells from feats and traits',
-        fr: 'Sorts de dons et de traits',
-        es: 'Conjuros de dotes y atributos',
-      })}
-    </h3>
-    {#each sheet.extraSpells as x (x.ownerId)}
-      <h4>
-        <!-- The source is shown in the popup opened by the name (no SRD links in the main UI). -->
-        <RuleText name={x.name} source={x.source} noteKey="spells:{x.ownerId}" />{x.ability
-          ? ` · ${tr({ en: 'ability', fr: 'caractéristique', es: 'característica' })} ${x.ability.toUpperCase()}`
-          : ''}
-      </h4>
-      <ul class="spells">
-        {#each defs(x.spells) as s (s.id)}
-          <SpellRow {s} />
-        {/each}
-      </ul>
-    {/each}
-  </section>
-{/if}
-
 {#each sheet.spellcasting as sc (sc.classId)}
-  {@const st = castState(sc.classId)}
+  {@const st = readState(sc.classId)}
   {@const pactFirst = sc.kind === 'pact'}
   {@const counted = st.prepared.filter((id) => !sc.alwaysPrepared.includes(id) && !free.has(id)).length}
   <section class="box">
@@ -264,37 +252,33 @@
         <SpellRow {s} classId={sc.classId} onremove={() => removeSpell(sc.classId, s.id)} />
       {/each}
     </ul>
+    {#if st.cantrips.length < sc.cantripsMax}
+      <SpellPicker
+        options={candidates(sc.classId, true)}
+        onpick={(x) => add(sc.classId, x)}
+        keepOpen={sc.cantripsMax - st.cantrips.length > 1}
+        label={tr({ en: 'Add a cantrip', fr: 'Ajouter un sort mineur', es: 'Añadir un truco' })}
+      />
+    {/if}
     <h4>{tr(UI.prepared)} <span class="meta">{counted} / {sc.preparedMax}</span></h4>
     <ul class="spells">
       {#each defs(st.prepared) as s (s.id)}
         <SpellRow {s} classId={sc.classId} {pactFirst} onremove={() => removeSpell(sc.classId, s.id)} />
       {/each}
     </ul>
-    <input
-      type="search"
-      bind:value={query[sc.classId]}
-      placeholder={sc.spellbook
-        ? tr({
-            en: 'Add a cantrip, or prepare a spell from the spellbook…',
-            fr: 'Ajouter un sort mineur, ou préparer un sort du grimoire…',
-            es: 'Añadir un truco, o preparar un conjuro del libro de conjuros…',
-          })
-        : tr({
-            en: `Add a ${sc.className.en} spell…`,
-            fr: `Ajouter un sort de ${sc.className.fr}…`,
-            es: `Añadir un conjuro de ${sc.className.es ?? sc.className.en}…`,
-          })}
-    />
-    {#if (query[sc.classId] ?? '').length >= 2}
-      <ul class="results">
-        {#each [...candidates(sc.classId, true), ...candidates(sc.classId, false, sc.spellbook)].slice(0, 25) as s (s.id)}
-          <li>
-            <button onclick={() => add(sc.classId, s)}
-              >＋ {s.level ? s.level : 'C'} · {tr(s.name)} <span class="meta">{s.school}</span></button
-            >
-          </li>
-        {/each}
-      </ul>
+    {#if counted < sc.preparedMax}
+      <SpellPicker
+        options={candidates(sc.classId, false, sc.spellbook).filter((x) => x.level <= sc.maxSpellLevel)}
+        onpick={(x) => add(sc.classId, x)}
+        keepOpen={sc.preparedMax - counted > 1}
+        label={sc.spellbook
+          ? tr({
+              en: 'Prepare a spell from the spellbook',
+              fr: 'Préparer un sort du grimoire',
+              es: 'Preparar un conjuro del libro de conjuros',
+            })
+          : tr({ en: 'Prepare a spell', fr: 'Préparer un sort', es: 'Preparar un conjuro' })}
+      />
     {/if}
     {#if sc.spellbook}
       {@const copied = defs(st.spellbook ?? []).filter((s) => !bookLevels.some((l) => l.learned.includes(s.id)))}
@@ -362,6 +346,49 @@
   </section>
 {/each}
 
+{#if otherSpells.length}
+  <section class="box">
+    <h3>
+      {tr({
+        en: 'Spells from feats, traits and features',
+        fr: 'Sorts de dons, de traits et d’aptitudes',
+        es: 'Conjuros de dotes, atributos y rasgos',
+      })}
+    </h3>
+    {#each otherSpells as x (x.ownerId)}
+      {@const missing = view.warnings.some(
+        (w) => isSpellChoiceWarning(w, sheet) && w.id.startsWith(`choice-${x.ownerId}`),
+      )}
+      <h4>
+        <!-- The source is shown in the popup opened by the name (no SRD links in the main UI). -->
+        <RuleText name={x.name} source={x.source} noteKey="spells:{x.ownerId}" />{x.ability
+          ? ` · ${tr({ en: 'ability', fr: 'caractéristique', es: 'característica' })} ${tr(ABILITY_NAMES[x.ability])}`
+          : ''}
+      </h4>
+      <ul class="spells">
+        {#each defs(x.spells) as s (s.id)}
+          <SpellRow {s} />
+        {/each}
+      </ul>
+      {#if x.owner}
+        <!-- Setting up the spells (Magic Initiate: list, ability, cantrips, level 1 spell): open while incomplete. -->
+        <details class="setup" open={missing}>
+          <summary
+            >{missing
+              ? tr({ en: 'Choose the spells', fr: 'Choisir les sorts', es: 'Elegir los conjuros' })
+              : tr({ en: 'Change the spells', fr: 'Changer les sorts', es: 'Cambiar los conjuros' })}</summary
+          >
+          <ChoiceEditor owner={x.owner} where="spells" />
+          <WarningList
+            filter={(w) => isSpellChoiceWarning(w, sheet) && w.id.startsWith(`choice-${x.ownerId}`)}
+            compact
+          />
+        </details>
+      {/if}
+    {/each}
+  </section>
+{/if}
+
 <style>
   .box {
     margin-bottom: 1.25rem;
@@ -421,8 +448,7 @@
     font-weight: 400;
     margin: 1rem 0 0.4rem;
   }
-  .spells,
-  .results {
+  .spells {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -431,21 +457,6 @@
     color: var(--ink-soft);
     font-size: 0.85em;
     font-family: var(--font-title);
-  }
-  input[type='search'] {
-    width: 100%;
-    min-height: 2.75rem;
-    padding: 0 0.7rem;
-    font: inherit;
-    margin-top: 0.75rem;
-  }
-  .results button {
-    width: 100%;
-    text-align: left;
-    min-height: 2.5rem;
-    font: inherit;
-    border-color: transparent;
-    background: none;
   }
   .hint {
     font-size: 0.9em;

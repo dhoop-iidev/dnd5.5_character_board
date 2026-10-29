@@ -187,9 +187,9 @@
         "count": 1,
         "from": ["animal-handling", "athletics", "intimidation", "nature", "perception", "survival"],
         "name": {
-          "en": "Primal Knowledge skill",
-          "fr": "Compétence de Savoir primal",
-          "es": "Habilidad de Conocimiento primigenio"
+          "en": "Skill",
+          "fr": "Compétence",
+          "es": "Habilidad"
         }
       }
     ],

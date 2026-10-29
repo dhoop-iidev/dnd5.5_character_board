@@ -9,7 +9,7 @@ import { newCharacter } from '../../model/newCharacter'
 import { compute } from '../compute'
 import { validate } from '../validate'
 // Spells still to choose (fewer cantrips, prepared or spellbook spells than allowed) are not what these tests check.
-const toChoose = (w: { id: string }) => /^(prepared|cantrips|spellbook)-missing/.test(w.id)
+const toChoose = (w: { id: string }) => /^((prepared|cantrips|spellbook)-missing|background-languages)/.test(w.id)
 
 const wizard = (
   level: number,

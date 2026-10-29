@@ -10,14 +10,31 @@
   import { resolveCount } from '../engine/sheet/modifiers'
   import type { Owner } from '../engine/sheet/types'
   import { app, tr, view } from '../state.svelte'
-  import { norm } from './items'
+  import SpellPicker from './SpellPicker.svelte'
+  import { choicesFor } from './spellChoices'
+  import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
+  import { featListOf } from '../model/newCharacter'
 
-  let { owner }: { owner: Owner } = $props()
+  let {
+    owner,
+    where = 'rest',
+  }: {
+    owner: Owner
+    /** 'spells': the spell picks made in the Spells pane; 'rest': the others, made in the progression. */
+    where?: 'spells' | 'rest'
+  } = $props()
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
   // Open Expertise picks (no list) are made with the Expertise chips of the level editor (character.expertise).
-  const choices = $derived((owner.effect?.choices ?? []).filter((ch) => !(ch.kind === 'expertise' && !ch.from)))
-  let spellQuery = $state<Record<string, string>>({})
+  const choices = $derived(choicesFor(owner, where).filter((ch) => !(ch.kind === 'expertise' && !ch.from)))
+  /** The spell list an SRD background already names for its feat ("Magic Initiate (Wizard)", SRD p. 83). */
+  const fixedList = $derived(
+    owner.kind === 'feat' &&
+      owner.id === `feat:${c.background.feat?.featId}` &&
+      c.background.backgroundId !== CUSTOM_BACKGROUND
+      ? featListOf(backgroundDef(c.background, rules)?.featText?.en, rules)
+      : undefined,
+  )
 
   const count = (ch: ChoiceDef) => resolveCount(ch.count, ch.byLevel, { ...sheet, char: c, rules }, owner) ?? 1
   const asList = (v: string | string[] | undefined): string[] => (Array.isArray(v) ? v : v ? [v] : [])
@@ -54,6 +71,8 @@
       .flatMap((k) => cls?.options?.[k] ?? [])
       .map((o) => ({ id: o.id, name: o.name, prereq: o.prereq }))
   }
+  const proficientIn = (id: string) =>
+    ['proficient', 'expertise'].includes(sheet.skills.find((s) => s.id === id)?.proficiency ?? '')
   function skillList(ch: ChoiceDef): string[] {
     if (ch.from) return asList(ch.from)
     if (ch.kind === 'expertise')
@@ -63,7 +82,6 @@
     return [...rules.skills.keys()]
   }
   function spellCandidates(ch: ChoiceDef) {
-    const q = norm(spellQuery[ch.id ?? 'choice'] ?? '')
     const lists = ch.list ?? (owner.choiceValues.list?.length ? owner.choiceValues.list : undefined)
     const allowed = lists
       ? new Set(lists.flatMap((cid) => rules.classes.get(cid)?.spellList?.flatMap((lv) => lv.spells) ?? []))
@@ -75,9 +93,7 @@
           (ch.maxLevel === undefined || s.level <= ch.maxLevel) &&
           (!allowed || allowed.has(s.id)),
       )
-      .filter((s) => q.length >= 2 && norm(tr(s.name)).includes(q))
       .sort((a, b) => a.level - b.level || tr(a.name).localeCompare(tr(b.name)))
-      .slice(0, 20)
   }
   const DAMAGE = [
     'acid',
@@ -110,10 +126,15 @@
 {#each choices as ch (ch.id ?? 'choice')}
   {@const n = count(ch)}
   {@const vals = values(ch)}
+  <!-- The owner's name is shown above it; the choice's own name only when it says more. -->
+  {@const own = ch.name && ch.name.en !== owner.name.en ? tr(ch.name) : ''}
   <div class="choice">
-    <span class="label">{tr(ch.name ?? owner.name)}{n > 1 ? ` (${vals.length} / ${n})` : ''}</span>
+    {#if own || n > 1}<span class="label">{own}{n > 1 ? `${own ? ' ' : ''}(${vals.length} / ${n})` : ''}</span>{/if}
     {#if ch.kind === 'option'}
-      {#if n === 1}
+      {#if ch.id === 'list' && fixedList && vals[0] === fixedList}
+        <!-- Set by the background (e.g. Sage: Magic Initiate (Wizard)): shown, not changed here. -->
+        <span class="fixed">{tr(optionList(ch).find((o) => o.id === fixedList)?.name) || fixedList}</span>
+      {:else if n === 1}
         <select
           value={vals[0] ?? ''}
           onchange={(e) => setValues(ch, e.currentTarget.value ? [e.currentTarget.value] : [])}
@@ -137,10 +158,19 @@
     {:else if ch.kind === 'skill' || ch.kind === 'expertise'}
       <div class="chips">
         {#each skillList(ch) as id (id)}
-          <label class="chip" class:on={vals.includes(id)}
-            ><input type="checkbox" checked={vals.includes(id)} onchange={() => toggle(ch, id)} />{tr(
-              rules.skills.get(id)?.name,
-            ) || id}</label
+          <!-- A skill already proficient from elsewhere (background, class) would be a wasted pick. -->
+          {@const taken = ch.kind === 'skill' && !vals.includes(id) && proficientIn(id)}
+          <label
+            class="chip"
+            class:on={vals.includes(id)}
+            class:taken
+            title={taken ? tr({ en: 'Already proficient', fr: 'Déjà maîtrisée', es: 'Ya tienes competencia' }) : ''}
+            ><input
+              type="checkbox"
+              checked={vals.includes(id) || taken}
+              disabled={taken}
+              onchange={() => toggle(ch, id)}
+            />{tr(rules.skills.get(id)?.name) || id}</label
           >
         {/each}
       </div>
@@ -154,25 +184,12 @@
         {/each}
       </div>
       {#if vals.length < n}
-        <input
-          type="search"
-          bind:value={spellQuery[ch.id ?? 'choice']}
-          placeholder={tr({ en: 'Search a spell…', fr: 'Chercher un sort…', es: 'Buscar un conjuro…' })}
+        <SpellPicker
+          options={spellCandidates(ch).filter((s) => !vals.includes(s.id))}
+          onpick={(s) => toggle(ch, s.id)}
+          keepOpen={n - vals.length > 1}
+          label={tr({ en: 'Choose a spell', fr: 'Choisir un sort', es: 'Elegir un conjuro' })}
         />
-        {#if spellCandidates(ch).length}
-          <ul class="results">
-            {#each spellCandidates(ch) as s (s.id)}
-              <li>
-                <button
-                  onclick={() => {
-                    toggle(ch, s.id)
-                    spellQuery[ch.id ?? 'choice'] = ''
-                  }}>＋ {s.level || 'C'} · {tr(s.name)}</button
-                >
-              </li>
-            {/each}
-          </ul>
-        {/if}
       {/if}
     {:else if ch.kind === 'damage-type'}
       <select
@@ -225,6 +242,9 @@
     gap: 0.4rem 0.6rem;
     margin: 0.3rem 0;
   }
+  .fixed {
+    font-weight: 600;
+  }
   .label {
     font-family: var(--font-title);
     color: var(--ink-soft);
@@ -259,19 +279,9 @@
   .chip input {
     min-height: 0;
   }
-  .results {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .results button {
-    width: 100%;
-    text-align: left;
-    min-height: 2.4rem;
-    font: inherit;
-    border-color: transparent;
-    background: none;
+  .chip.taken {
+    opacity: 0.55;
+    cursor: default;
   }
   .inline {
     display: inline-flex;

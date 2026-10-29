@@ -1,7 +1,7 @@
 <script lang="ts">
   // General pane, laid out like the 3.5 playboard: portrait and identity card on top; then two columns of the same height
   // (user request 2026-10-29): "In play", a little wider, with its blocks stacked (abilities with a red saving-throw
-  // badge; AC, initiative, speed, Proficiency Bonus and hit points; passive scores, senses, spellcasting,
+  // badge; AC (shield) and maximum Hit Points (heart), initiative, speed, Proficiency Bonus; passive scores, senses, spellcasting,
   // Heroic Inspiration), and the skills in one column beside it (one under the other on a narrow screen); page-wide
   // lists of species traits, class features and feats with a one-line summary; the story text beside the coat of arms, the personality notes; the
   // progression last. Build warnings are fixed in the progression (the level row or Origin block that sets the value):
@@ -80,7 +80,6 @@
       ...sheet.pool.grants.filter((g) => g.grant.kind === 'darkvision').map((g) => Number(g.grant.value) || 0),
     ),
   )
-  const hpLow = $derived(c.hp.current <= sheet.hpMax.total / 4)
 
   function rule(name: I18n, text: I18n | undefined, source: Source | undefined, noteKey: string, lines: I18n[] = []) {
     openPopup({ title: name, html: text, source, noteKey, lines })
@@ -166,9 +165,16 @@
       </div>
 
       <div class="block col defense">
-        <Medallion label={tr(UI.acShort)} size="lg">
-          <StatValue stat={() => view.sheet.ac} title={UI.ac} signed={false} />
-        </Medallion>
+        <!-- Armor Class in a shield and maximum Hit Points in a heart (user request 2026-10-29); current Hit Points,
+             damage, healing and rests are in the Combat pane. -->
+        <div class="row">
+          <Medallion label={tr(UI.acShort)} size="lg" shape="shield">
+            <StatValue stat={() => view.sheet.ac} title={UI.ac} signed={false} />
+          </Medallion>
+          <Medallion label={tr({ en: 'Max HP', fr: 'PV max', es: 'PG máx.' })} size="lg" shape="heart">
+            <StatValue stat={() => view.sheet.hpMax} title={UI.hp} signed={false} />
+          </Medallion>
+        </div>
         <div class="row">
           <Medallion label={tr(UI.initiative)} size="sm">
             <StatValue stat={() => view.sheet.initiative} title={UI.initiative} />
@@ -184,23 +190,6 @@
           <Medallion label={tr({ en: 'Prof.', fr: 'Maîtrise', es: 'Comp.' })} size="sm">
             <span class="plain" title={tr(UI.pb)}>+{sheet.pb}</span>
           </Medallion>
-        </div>
-        <!-- Hit points at a glance; damage, healing and rests are in the Combat pane. -->
-        <div
-          class="hp"
-          title={tr({
-            en: 'Damage, healing and rests: Combat pane',
-            fr: 'Dégâts, soins et repos : onglet Combat',
-            es: 'Daño, curación y descansos: pestaña Combate',
-          })}
-        >
-          <span class="tag">{tr(UI.hp)}</span>
-          <span class="hp-line">
-            <span class="hp-now" class:low={hpLow}>{c.hp.current}</span>
-            <span class="hp-sep">/</span>
-            <StatValue stat={() => view.sheet.hpMax} title={UI.hp} signed={false} />
-            {#if c.hp.temp}<span class="hp-temp" title={tr(UI.tempHp)}>+{c.hp.temp}</span>{/if}
-          </span>
         </div>
       </div>
 
@@ -528,37 +517,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-  }
-  .hp {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    padding: 0.35rem 0.8rem 0.45rem;
-    border: 1.5px solid var(--frame);
-    border-radius: 4px;
-  }
-  .hp-line {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-family: var(--font-num);
-    font-size: 1.35rem;
-  }
-  .hp-now {
-    font-weight: 700;
-    font-size: 2rem;
-    font-variant-numeric: tabular-nums;
-  }
-  .hp-now.low {
-    color: var(--danger);
-  }
-  .hp-sep {
-    color: var(--ink-soft);
-  }
-  .hp-temp {
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 1.1rem;
   }
   .tag {
     font-family: var(--font-title);

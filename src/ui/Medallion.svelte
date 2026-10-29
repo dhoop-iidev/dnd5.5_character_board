@@ -1,5 +1,6 @@
 <script lang="ts">
-  // Round medallion (ability scores, AC, saves…): a ringed value with a small-caps label.
+  // Medallion (ability scores, AC, saves…): a ringed value with a small-caps label; `shape` draws a shield (Armor Class)
+  // or a heart (Hit Points) instead of the ring.
   import type { Snippet } from 'svelte'
 
   let {
@@ -8,11 +9,34 @@
     size = 'md',
     children,
     badge,
-  }: { label: string; sub?: string; size?: 'sm' | 'md' | 'lg'; children: Snippet; badge?: Snippet } = $props()
+    shape = 'ring',
+  }: {
+    label: string
+    sub?: string
+    size?: 'sm' | 'md' | 'lg'
+    children: Snippet
+    badge?: Snippet
+    shape?: 'ring' | 'shield' | 'heart'
+  } = $props()
+
+  // Outlines in a 100 × 100 box; the inner hairline is the same path scaled down, like the ring's inner ring.
+  const PATHS = {
+    shield: 'M50 4 L92 15 V45 C92 71 75 87 50 96 C25 87 8 71 8 45 V15 Z',
+    heart:
+      'M50 93 C22 72 4 55 4 33 C4 17 16 6 30 6 C40 6 46 12 50 20 C54 12 60 6 70 6 C84 6 96 17 96 33 C96 55 78 72 50 93 Z',
+  }
 </script>
 
 <div class="medallion {size}">
-  <div class="ring">{@render children()}</div>
+  <div class="ring" class:shape={shape !== 'ring'} class:heart={shape === 'heart'}>
+    {#if shape !== 'ring'}
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <path class="outer" d={PATHS[shape]} />
+        <path class="inner" d={PATHS[shape]} transform="translate(50 50) scale(0.88) translate(-50 -50)" />
+      </svg>
+    {/if}
+    {@render children()}
+  </div>
   {#if badge}<div class="badge">{@render badge()}</div>{/if}
   <div class="label">{label}</div>
   {#if sub !== undefined}<div class="sub">{sub}</div>{/if}
@@ -57,6 +81,44 @@
   }
   .lg .ring {
     border-width: 2.5px;
+  }
+  /* Shield or heart: the outline is an SVG behind the value. */
+  .ring.shape {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+  .ring.shape svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+  .ring.shape .outer {
+    fill: var(--box);
+    stroke: var(--frame);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+  }
+  .ring.shape .inner {
+    fill: none;
+    stroke: var(--rule-strong);
+    stroke-width: 1;
+  }
+  .ring.shape > :global(*:not(svg)) {
+    position: relative;
+  }
+  /* The value's hover disc stays inside the outline. */
+  .ring.shape :global(.stat) {
+    width: calc(var(--d) * 0.62);
+    height: calc(var(--d) * 0.62);
+  }
+  /* The heart's body is above its middle. */
+  .ring.heart > :global(*:not(svg)) {
+    margin-top: -0.6rem;
   }
   /* Values inside the ring: StatValue buttons fill the disc. */
   .ring :global(.stat) {

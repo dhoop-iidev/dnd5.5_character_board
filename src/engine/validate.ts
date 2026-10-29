@@ -8,6 +8,7 @@ import { checkBuild } from './checks/build'
 import { checkEquipment, checkWornKinds } from './checks/equipment'
 import { checkSpells } from './checks/spells'
 import { checkCompanions } from './checks/companions'
+import { withCustomFeats } from '../model/customFeats'
 
 export type { RuleWarning, Severity, WarningArea } from './checks/common'
 
@@ -16,7 +17,8 @@ function permanent(char: Character): Character {
   return { ...char, activeEffects: [], conditions: [], exhaustion: 0, toggles: {} }
 }
 
-export function validate(char: Character, rules: Rules): RuleWarning[] {
+export function validate(char: Character, baseRules: Rules): RuleWarning[] {
+  const rules = withCustomFeats(baseRules, char)
   const out: RuleWarning[] = []
   const perm = permanent(char)
   const sheets = new Map<number, ReturnType<typeof compute>>()

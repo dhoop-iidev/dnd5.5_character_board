@@ -5,6 +5,7 @@
 // Ability Score Improvement: "the Ability Score Improvement feat or another feat of your choice for which you qualify").
 import type { AbilityId } from '../../data/types'
 import { ABILITIES } from '../../data/types'
+import { backgroundDef, CUSTOM_BACKGROUND } from '../../model/customBackground'
 import { choiceKey } from '../sheet/build'
 import { ABILITY_NAMES } from '../sheet/common'
 import { resolveCount } from '../sheet/modifiers'
@@ -41,7 +42,7 @@ export function checkBuild(ctx: CheckContext) {
       )
   }
   // Background: +2/+1 or +1/+1/+1 among its three abilities; its feat; two skills (SRD p. 20, p. 82).
-  const bg = rules.backgrounds.get(char.background?.backgroundId)
+  const bg = backgroundDef(char.background, rules)
   if (!bg) {
     out.push(
       w(
@@ -58,6 +59,61 @@ export function checkBuild(ctx: CheckContext) {
       ),
     )
   } else {
+    // Custom background (house rule #3): three different abilities, two different skills, one tool, one Origin feat.
+    if (bg.id === CUSTOM_BACKGROUND) {
+      const src = { source: bg.source, actionable: true }
+      const custom = char.background.custom
+      const abilities = new Set(custom?.abilities ?? [])
+      if (abilities.size !== 3 || custom!.abilities.length !== 3)
+        out.push(
+          w(
+            'background-custom-abilities',
+            'error',
+            'abilities',
+            'Custom background: choose three different abilities.',
+            'Historique personnalisé : choisissez trois caractéristiques différentes.',
+            'Trasfondo personalizado: elige tres características diferentes.',
+            src,
+          ),
+        )
+      const skills = new Set(custom?.skills ?? [])
+      if (skills.size !== 2 || custom!.skills.length !== 2)
+        out.push(
+          w(
+            'background-custom-skills',
+            'error',
+            'skills',
+            'Custom background: choose two different skills.',
+            'Historique personnalisé : choisissez deux compétences différentes.',
+            'Trasfondo personalizado: elige dos habilidades diferentes.',
+            src,
+          ),
+        )
+      if (rules.gear.get(custom?.tool ?? '')?.kind !== 'tool')
+        out.push(
+          w(
+            'background-custom-tool',
+            'error',
+            'abilities',
+            'Custom background: choose a tool.',
+            'Historique personnalisé : choisissez un outil.',
+            'Trasfondo personalizado: elige una herramienta.',
+            src,
+          ),
+        )
+      if (rules.feats.get(bg.feat)?.category !== 'origin')
+        out.push(
+          w(
+            'background-custom-feat',
+            'error',
+            'feats',
+            'Custom background: choose an Origin feat.',
+            'Historique personnalisé : choisissez un don d’origine.',
+            'Trasfondo personalizado: elige una dote de origen.',
+            src,
+          ),
+        )
+    }
     const inc = char.background.abilities ?? {}
     const vals = Object.values(inc).sort((a, b) => b - a)
     const ok =

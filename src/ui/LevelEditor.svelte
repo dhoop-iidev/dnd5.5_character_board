@@ -14,8 +14,10 @@
   import type { RuleWarning } from '../engine/checks/common'
   import { app, tr, view } from '../state.svelte'
   import type { LevelEntry } from '../model/character'
+  import { backgroundDef } from '../model/customBackground'
   import ChoiceEditor from './ChoiceEditor.svelte'
   import OriginEditor from './OriginEditor.svelte'
+  import CustomFeatsEditor from './CustomFeatsEditor.svelte'
   import { progressionPlaces, type Place } from './progression'
   import WarningList from './WarningList.svelte'
   import XpBar from './XpBar.svelte'
@@ -63,7 +65,7 @@
   function featChoices(i: number) {
     const cl = classLevelAt(i)
     // Any feat you qualify for (SRD p. 87; each class's Ability Score Improvement); Epic Boons from level 19.
-    return [...rules.feats.values()]
+    return [...view.rules.feats.values()]
       .filter((f) => f.category !== 'epic-boon' || cl === 19)
       .sort((a, b) => a.category.localeCompare(b.category) || tr(a.name).localeCompare(tr(b.name)))
   }
@@ -125,7 +127,7 @@
     if (i === 0)
       out.push(
         tr(rules.species.get(c.speciesId)?.name) || c.speciesId,
-        tr(rules.backgrounds.get(c.background.backgroundId)?.name) || c.background.backgroundId,
+        tr(backgroundDef(c.background, rules)?.name) || c.background.backgroundId,
       )
     if (l.subclassId) out.push(tr(def?.subclasses.find((s) => s.id === l.subclassId)?.name) || l.subclassId)
     if (l.feat) {
@@ -133,10 +135,10 @@
         .filter(([, v]) => v)
         .map(([a, v]) => `+${v} ${tr(ABILITY_SHORT[a as AbilityId])}`)
         .join(' ')
-      out.push((tr(rules.feats.get(l.feat.featId)?.name) || l.feat.featId) + (inc ? ` (${inc})` : ''))
+      out.push((tr(view.rules.feats.get(l.feat.featId)?.name) || l.feat.featId) + (inc ? ` (${inc})` : ''))
     }
     const style = def ? l.choices[`${def.id}:fighting-style`] : undefined
-    if (typeof style === 'string' && style) out.push(tr(rules.feats.get(style)?.name) || style)
+    if (typeof style === 'string' && style) out.push(tr(view.rules.feats.get(style)?.name) || style)
     return out.join(', ')
   }
 </script>
@@ -230,7 +232,7 @@
                   onchange={(e) => (l.choices[`${def.id}:fighting-style`] = e.currentTarget.value)}
                 >
                   <option value="">— {tr({ en: 'choose', fr: 'choisir', es: 'elegir' })} —</option>
-                  {#each [...rules.feats.values()].filter((f) => f.category === 'fighting-style') as f (f.id)}<option
+                  {#each [...view.rules.feats.values()].filter((f) => f.category === 'fighting-style') as f (f.id)}<option
                       value={f.id}>{tr(f.name)}</option
                     >{/each}
                 </select>
@@ -326,6 +328,8 @@
   {/if}
 </div>
 <WarningList areas={['levels']} withoutLevel />
+
+<CustomFeatsEditor />
 
 {#if view.warnings.some(unplaced) || ownersAt(undefined).length}
   <h4>{tr({ en: 'Other choices', fr: 'Autres choix', es: 'Otras elecciones' })}</h4>

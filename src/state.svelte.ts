@@ -5,6 +5,7 @@ import type { Character } from './model/character'
 import { migrate } from './model/migrate'
 import { compute } from './engine/compute'
 import { validate } from './engine/validate'
+import { withCustomFeats } from './model/customFeats'
 
 const STORAGE_KEY = 'dnd55-playboard:character'
 
@@ -32,11 +33,16 @@ export const app = $state<{ character: Character; loaded: boolean }>({
   loaded: !!stored,
 })
 
+/** The rules with the character's custom feats (house rule #4): use it wherever feats are listed. */
+const rulesState = $derived(withCustomFeats(rules, app.character))
 const sheetState = $derived(compute(app.character, rules))
 const warningState = $derived(validate(app.character, rules))
 
 /** Computed sheet and warnings (modules can't export derived state directly). */
 export const view = {
+  get rules() {
+    return rulesState
+  },
   get sheet() {
     return sheetState
   },

@@ -17,6 +17,7 @@ import type {
 } from '../../data/types'
 import type { Character, FeatPick, ItemInstance } from '../../model/character'
 import type { BuildResult, ComputeOptions, Owner } from './types'
+import { backgroundDef } from '../../model/customBackground'
 import { esOf } from '../stacking'
 import { customWeapon, itemActive, magicItemOf, variantOf, variantValue } from '../items'
 
@@ -151,7 +152,7 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
   const species = rules.species.get(char.speciesId)
   const traits: SpeciesTraitDef[] = species?.traits ?? []
   for (const t of traits) owner(t.id, 'trait', t.name, t.text, { source: t.source })
-  const background = rules.backgrounds.get(char.background?.backgroundId)
+  const background = backgroundDef(char.background, rules)
   addFeat(char.background?.feat, 'background')
   levels.forEach((l, i) => {
     addFeat(l.feat, 'level', i + 1)

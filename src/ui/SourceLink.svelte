@@ -23,6 +23,7 @@
           ></span
         >{/if}
     {/if}
+    {#if source.book}<span>{source.book}</span>{/if}
     {#if source.houseRule}
       <span class="house">{tr(UI.houseRule)} #{source.houseRule}</span>
     {/if}

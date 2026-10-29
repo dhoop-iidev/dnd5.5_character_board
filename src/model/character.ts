@@ -3,6 +3,7 @@
 import type {
   AbilityId,
   DamageType,
+  FeatCategory,
   I18n,
   Lang,
   MasteryProperty,
@@ -68,8 +69,39 @@ export interface Background {
   backgroundId: string
   /** +2 / +1, or +1 / +1 / +1, among the background's three abilities (SRD p. 20). */
   abilities: Partial<Record<AbilityId, number>>
-  /** The Origin feat granted by the background (fixed by the background; choices inside it, e.g. Magic Initiate's list). */
+  /** The Origin feat granted by the background (fixed by the background; choices inside it, e.g. Magic Initiate's list).
+   * For the custom background, any Origin feat. */
   feat: FeatPick
+  /** `backgroundId: 'custom'` (house rule #3): the player's picks, with the parts of an SRD background (p. 83). */
+  custom?: CustomBackground
+}
+
+/** A feat from another book entered by the player (house rule #4, `model/customFeats.ts`), in their own words. */
+export interface CustomFeat {
+  /** 'custom-feat-<n>'. */
+  id: string
+  name: string
+  category: FeatCategory
+  /** Book and page ("Player's Handbook 2024 p. 201"). */
+  book: string
+  /** The player's summary of the feat (blank lines separate paragraphs). */
+  text: string
+  prereq?: { level?: number; abilities?: AbilityId[]; min?: number; text?: string }
+  /** +1 to one of these abilities (the Ability Score Increase of General feats). */
+  abilityIncrease?: AbilityId[]
+  repeatable?: boolean
+  /** Numbers the engine applies, in the effects vocabulary (docs/effects.md), as for custom items. */
+  modifiers?: ModifierSpec[]
+}
+
+export interface CustomBackground {
+  /** The player's own name for it; empty = "Custom background". */
+  name?: string
+  /** The three abilities for the +2/+1 or +1/+1/+1. */
+  abilities: AbilityId[]
+  skills: SkillId[]
+  /** Gear id of the tool (kind 'tool'). */
+  tool: string
 }
 
 export type ItemLocation = 'worn' | 'carried' | 'stored'
@@ -298,6 +330,8 @@ export interface Character {
   /** Species choices (Elven Lineage, Gnomish Lineage, Draconic Ancestry, Giant Ancestry, Fiendish Legacy, size…). */
   speciesChoices: Record<string, string>
   background: Background
+  /** Feats from other books entered by the player (house rule #4). */
+  customFeats?: CustomFeat[]
   /** Ability scores before the background's increases and feats (Standard Array, Point Cost or rolled; SRD p. 20). */
   baseAbilities: Record<AbilityId, number>
   levels: LevelEntry[]

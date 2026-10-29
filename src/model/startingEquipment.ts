@@ -291,6 +291,8 @@ export const CLASS_KITS: Record<string, KitOption[]> = {
 }
 
 export const BACKGROUND_KITS: Record<string, KitOption[]> = {
+  // Custom background (house rule #3): 50 GP, option B of every SRD background.
+  custom: [gpOnly('B', 50)],
   acolyte: [
     {
       letter: 'A',

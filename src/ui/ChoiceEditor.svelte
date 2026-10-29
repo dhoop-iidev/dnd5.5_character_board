@@ -188,11 +188,11 @@
       {@const pick = c.extraFeats[owner.id]}
       <select value={pick?.featId ?? ''} onchange={(e) => setExtraFeat(e.currentTarget.value)}>
         <option value="">—</option>
-        {#each [...rules.feats.values()].filter((f) => !ch.category || f.category === ch.category) as f (f.id)}<option
+        {#each [...view.rules.feats.values()].filter((f) => !ch.category || f.category === ch.category) as f (f.id)}<option
             value={f.id}>{tr(f.name)}</option
           >{/each}
       </select>
-      {#if pick && rules.feats.get(pick.featId)?.abilityIncrease}
+      {#if pick && view.rules.feats.get(pick.featId)?.abilityIncrease}
         <span class="inc">
           {#each ABILITIES as a (a)}
             <label class="inline"

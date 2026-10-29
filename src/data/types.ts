@@ -21,6 +21,8 @@ export interface Source {
   esPage?: number
   section?: string
   houseRule?: number
+  /** A book outside the SRD and its page, as the player typed it (custom feats, house rule #4). */
+  book?: string
 }
 
 /** Both units as printed in the two PDFs (English: lb / ft; French: kg / m). */

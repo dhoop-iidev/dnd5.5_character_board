@@ -4,6 +4,7 @@
   // +1 / +1 / +1 among its three abilities, SRD 5.2.1 p. 20–21), base ability scores (Standard Array, Point Cost or
   // rolled, p. 21), then the choices of the species traits and origin feats (lineage, Skillful, Magic Initiate…). Changing
   // the background resets its increases and gives its own Origin feat; changing the species clears its trait choices.
+  // The custom background (house rule #3) shows its picks under the select.
   import { rules } from '../data/rules'
   import type { AbilityId } from '../data/types'
   import { ABILITIES } from '../data/types'
@@ -12,6 +13,8 @@
   import type { Owner } from '../engine/sheet/types'
   import { SIZE_NAMES, UI } from '../i18n/ui'
   import { featListOf } from '../model/newCharacter'
+  import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
+  import CustomBackgroundEditor from './CustomBackgroundEditor.svelte'
   import { app, tr } from '../state.svelte'
   import ChoiceEditor from './ChoiceEditor.svelte'
   import WarningList from './WarningList.svelte'
@@ -20,7 +23,7 @@
 
   const c = $derived(app.character)
   const sp = $derived(rules.species.get(c.speciesId))
-  const bg = $derived(rules.backgrounds.get(c.background.backgroundId))
+  const bg = $derived(backgroundDef(c.background, rules))
   const byName = <T extends { name: { en: string } }>(list: T[]) =>
     [...list].sort((a, b) => tr(a.name as never).localeCompare(tr(b.name as never)))
   const speciesList = $derived(byName([...rules.species.values()]))
@@ -36,6 +39,15 @@
     for (const k of Object.keys(c.extraFeats)) if (k.startsWith(`${old}:`)) delete c.extraFeats[k]
   }
   function setBackground(id: string) {
+    if (id === CUSTOM_BACKGROUND) {
+      c.background = {
+        backgroundId: id,
+        abilities: {},
+        feat: { featId: '' },
+        custom: { abilities: [], skills: [], tool: '' },
+      }
+      return
+    }
     const def = rules.backgrounds.get(id)
     const list = featListOf(def?.featText?.en, rules)
     c.background = {
@@ -74,11 +86,21 @@
       {tr(UI.background)}
       <select value={c.background.backgroundId} onchange={(e) => setBackground(e.currentTarget.value)}>
         {#each backgroundList as b (b.id)}<option value={b.id}>{tr(b.name)}</option>{/each}
+        <option value={CUSTOM_BACKGROUND}
+          >{tr({ en: 'Custom background', fr: 'Historique personnalisé', es: 'Trasfondo personalizado' })}</option
+        >
       </select>
     </label>
   </div>
+  {#if c.background.backgroundId === CUSTOM_BACKGROUND && c.background.custom}
+    <CustomBackgroundEditor
+      custom={c.background.custom}
+      featId={c.background.feat.featId}
+      onfeat={(id) => (c.background.feat = { featId: id })}
+    />
+  {/if}
 
-  {#if bg}
+  {#if bg && bg.abilities.length}
     <p class="sub">
       {tr({
         en: 'Background increases: +2 to one and +1 to another, or +1 to all three (no score above 20).',

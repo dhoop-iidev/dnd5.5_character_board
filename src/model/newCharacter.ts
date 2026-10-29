@@ -5,8 +5,9 @@
 // the character starts with all of them.
 import type { AbilityId, Lang } from '../data/types'
 import type { Rules } from '../data/rules'
-import { EDITION, SCHEMA_VERSION, type Character } from './character'
+import { EDITION, SCHEMA_VERSION, type Character, type CustomBackground } from './character'
 import { kitInventory } from './startingEquipment'
+import { backgroundDef, CUSTOM_BACKGROUND } from './customBackground'
 import { compute } from '../engine/compute'
 
 export interface NewCharacterInput {
@@ -19,6 +20,9 @@ export interface NewCharacterInput {
   abilities: Record<AbilityId, number>
   /** The background's increases: +2/+1 or +1/+1/+1 among its three abilities (SRD p. 21 "Adjust Ability Scores"). */
   backgroundAbilities?: Partial<Record<AbilityId, number>>
+  /** `backgroundId: 'custom'` (house rule #3): the player's abilities, skills and tool, and the Origin feat. */
+  customBackground?: CustomBackground
+  customFeat?: string
   /** Species choices made at creation: `size` for a species that is Small or Medium. */
   speciesChoices?: Record<string, string>
   /** Trait choices made at creation (a lineage or ancestry), keyed like `Character.featureChoices`. */
@@ -39,7 +43,15 @@ export function featListOf(featText: string | undefined, rules: Rules): string |
 
 export function newCharacter(input: NewCharacterInput, rules: Rules): Character {
   const cls = rules.classes.get(input.classId)
-  const bg = rules.backgrounds.get(input.backgroundId)
+  const bg = backgroundDef(
+    {
+      backgroundId: input.backgroundId,
+      abilities: {},
+      feat: { featId: input.customFeat ?? '' },
+      custom: input.customBackground,
+    },
+    rules,
+  )
   const kit = kitInventory({
     classId: input.classId,
     classOption: input.classKit ?? '',
@@ -70,6 +82,15 @@ export function newCharacter(input: NewCharacterInput, rules: Rules): Character 
       backgroundId: input.backgroundId,
       abilities: { ...(input.backgroundAbilities ?? {}) },
       feat: { featId: bg?.feat ?? '', ...(list ? { choices: { list } } : {}) },
+      ...(input.backgroundId === CUSTOM_BACKGROUND && input.customBackground
+        ? {
+            custom: {
+              ...input.customBackground,
+              abilities: [...input.customBackground.abilities],
+              skills: [...input.customBackground.skills],
+            },
+          }
+        : {}),
     },
     baseAbilities: { ...input.abilities },
     levels: [{ classId: input.classId, hpRoll: cls?.hitDie ?? 8, hpFixed: false, choices: {} }],

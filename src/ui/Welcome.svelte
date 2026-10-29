@@ -15,6 +15,9 @@
   import { ABILITY_NAMES, ABILITY_SHORT } from '../engine/sheet/common'
   import { compute } from '../engine/compute'
   import { fmtDistance } from './format'
+  import type { CustomBackground } from '../model/character'
+  import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
+  import CustomBackgroundEditor from './CustomBackgroundEditor.svelte'
 
   let fileInput: HTMLInputElement | undefined = $state()
   let message = $state('')
@@ -50,7 +53,12 @@
   // --- 3. Origin: background and species (p. 19–20) ---
   let backgroundId = $state('soldier')
   let speciesId = $state('human')
-  const bg = $derived(rules.backgrounds.get(backgroundId))
+  /** Custom background (house rule #3): the player's abilities, skills, tool and Origin feat. */
+  let customBg = $state<CustomBackground>({ name: '', abilities: [], skills: [], tool: '' })
+  let customFeat = $state('')
+  const bg = $derived(
+    backgroundDef({ backgroundId, abilities: {}, feat: { featId: customFeat }, custom: customBg }, rules),
+  )
   const sp = $derived(rules.species.get(speciesId))
   let size = $state('medium')
   /** The species trait asking for a lineage or ancestry (an option choice without its own id: Elven Lineage, Draconic
@@ -171,9 +179,21 @@
     defaultIncreases()
   }
   function onBackground() {
-    bgKit = 'A'
+    bgKit = (BACKGROUND_KITS[backgroundId] ?? [])[0]?.letter ?? ''
+    // Custom background: the three best base scores to start with (the class's primary ability first).
+    if (backgroundId === CUSTOM_BACKGROUND && !customBg.abilities.length) {
+      const prim = new Set(cls?.primaryAbility ?? [])
+      customBg.abilities = [...ABILITIES]
+        .sort((x, y) => Number(prim.has(y)) - Number(prim.has(x)) || base[y] - base[x])
+        .slice(0, 3)
+    }
     defaultIncreases()
   }
+  // The custom background's abilities changed: the increases must stay among them.
+  $effect(() => {
+    const list = bg?.abilities ?? []
+    if (list.length >= 2 && (!list.includes(plus2) || !list.includes(plus1))) defaultIncreases()
+  })
   function onSpecies() {
     size = sp?.size.includes('medium') ? 'medium' : (sp?.size[0] ?? '')
     lineageValue = ''
@@ -188,6 +208,7 @@
       classId,
       abilities: { ...base },
       backgroundAbilities: { ...increases },
+      ...(backgroundId === CUSTOM_BACKGROUND ? { customBackground: $state.snapshot(customBg), customFeat } : {}),
       speciesChoices: sp && sp.size.length > 1 && size ? { size } : {},
       featureChoices: lineage && lineageValue ? { [lineage.ownerId]: lineageValue } : {},
       classKit,
@@ -305,9 +326,14 @@
             >{tr(UI.background)}
             <select bind:value={backgroundId} onchange={onBackground}>
               {#each sorted(rules.backgrounds) as b (b.id)}<option value={b.id}>{tr(b.name)}</option>{/each}
+              <option value={CUSTOM_BACKGROUND}
+                >{tr({ en: 'Custom background', fr: 'Historique personnalisé', es: 'Trasfondo personalizado' })}</option
+              >
             </select>
           </label>
-          {#if bg}
+          {#if backgroundId === CUSTOM_BACKGROUND}
+            <CustomBackgroundEditor custom={customBg} featId={customFeat} onfeat={(id) => (customFeat = id)} />
+          {:else if bg}
             <dl class="facts">
               <div>
                 <dt>{tr(UI.abilities)}</dt>
@@ -432,7 +458,7 @@
           </div>
         {/each}
       </div>
-      {#if bg}
+      {#if bg && bg.abilities.length >= 3}
         <div class="incs">
           <span class="lab"
             >{tr({ en: 'Background increases', fr: 'Augmentations de l’historique', es: 'Aumentos del trasfondo' })} · {tr(

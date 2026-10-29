@@ -13,7 +13,7 @@ import { attacksStage } from './sheet/attacks'
 import { spellsStage } from './sheet/spells'
 import { classesStage } from './sheet/classes'
 import { assembleStage } from './sheet/assemble'
-import { withCustomFeats } from '../model/customFeats'
+import { withCustom } from '../model/custom'
 
 export type {
   AbilityBlock,
@@ -28,8 +28,8 @@ export { abilityMod, pbForLevel, lbToWeight } from './sheet/common'
 export { fmt } from './stacking'
 
 export function compute(char: Character, baseRules: Rules, opts: ComputeOptions = {}): Sheet {
-  // The character's custom feats (house rule #4) join the SRD feats.
-  const rules = withCustomFeats(baseRules, char)
+  // The character's custom feats and subclasses (house rules #4, #5) join the SRD ones.
+  const rules = withCustom(baseRules, char)
   const c1 = buildStage(char, rules, opts)
   const c2 = { ...c1, ...modifiersStage(c1, opts) }
   const c3 = { ...c2, ...coreStage(c2, opts) }

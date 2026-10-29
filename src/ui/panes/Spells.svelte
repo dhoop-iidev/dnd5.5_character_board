@@ -35,7 +35,7 @@
       .filter((x): x is SpellDef => !!x)
       .sort((a, b) => a.level - b.level || byEnglishName(a, b))
   function listOf(classId: string): SpellDef[] {
-    const def = rules.classes.get(classId)
+    const def = view.rules.classes.get(classId)
     const ids = new Set<string>()
     for (const lv of def?.spellList ?? []) for (const id of lv.spells) ids.add(id)
     for (const sub of def?.subclasses ?? []) for (const lv of sub.spells ?? []) for (const id of lv.spells) ids.add(id)

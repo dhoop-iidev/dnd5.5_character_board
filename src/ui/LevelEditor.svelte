@@ -18,13 +18,14 @@
   import ChoiceEditor from './ChoiceEditor.svelte'
   import OriginEditor from './OriginEditor.svelte'
   import CustomFeatsEditor from './CustomFeatsEditor.svelte'
+  import CustomSubclassesEditor from './CustomSubclassesEditor.svelte'
   import { progressionPlaces, type Place } from './progression'
   import WarningList from './WarningList.svelte'
   import XpBar from './XpBar.svelte'
 
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
-  const classes = $derived([...rules.classes.values()].sort((a, b) => tr(a.name).localeCompare(tr(b.name))))
+  const classes = $derived([...view.rules.classes.values()].sort((a, b) => tr(a.name).localeCompare(tr(b.name))))
 
   /** Index of the level open for editing (one at a time). */
   let open = $state<number | null>(null)
@@ -35,7 +36,7 @@
   }
   function addLevel() {
     const last = c.levels[c.levels.length - 1]
-    const def = rules.classes.get(last?.classId ?? 'fighter')
+    const def = view.rules.classes.get(last?.classId ?? 'fighter')
     const entry: LevelEntry = {
       classId: last?.classId ?? 'fighter',
       hpRoll: def ? def.hitDie / 2 + 1 : 5,
@@ -58,7 +59,7 @@
     }
   }
   function needsFeat(i: number) {
-    const def = rules.classes.get(c.levels[i].classId)
+    const def = view.rules.classes.get(c.levels[i].classId)
     const cl = classLevelAt(i)
     return !!def && (def.asiLevels.includes(cl) || cl === 19)
   }
@@ -82,7 +83,7 @@
     if (v) l.feat.abilities[a] = v
     else delete l.feat.abilities[a]
   }
-  const first = $derived(rules.classes.get(c.levels[0]?.classId))
+  const first = $derived(view.rules.classes.get(c.levels[0]?.classId))
   const skillList = $derived(
     first ? (first.skillChoices.from === 'any' ? [...rules.skills.keys()] : first.skillChoices.from) : [],
   )
@@ -122,7 +123,7 @@
   /** One-line summary of what was picked at a level: subclass, feat (with its increases), fighting style. */
   function picked(i: number): string {
     const l = c.levels[i]
-    const def = rules.classes.get(l.classId)
+    const def = view.rules.classes.get(l.classId)
     const out: string[] = []
     if (i === 0)
       out.push(
@@ -147,7 +148,7 @@
 
 <ol class="levels">
   {#each c.levels as l, i (i)}
-    {@const def = rules.classes.get(l.classId)}
+    {@const def = view.rules.classes.get(l.classId)}
     {@const cl = classLevelAt(i)}
     {@const warns = rowWarnings(i)}
     {@const todo = rowChoices(i).length + (i === 0 ? (skillsLeft ? 1 : 0) : 0)}
@@ -330,6 +331,7 @@
 <WarningList areas={['levels']} withoutLevel />
 
 <CustomFeatsEditor />
+<CustomSubclassesEditor />
 
 {#if view.warnings.some(unplaced) || ownersAt(undefined).length}
   <h4>{tr({ en: 'Other choices', fr: 'Autres choix', es: 'Otras elecciones' })}</h4>

@@ -8,6 +8,7 @@ import type {
   Lang,
   MasteryProperty,
   ModifierSpec,
+  RestKind,
   SkillId,
   WeaponProperty,
 } from '../data/types'
@@ -92,6 +93,39 @@ export interface CustomFeat {
   repeatable?: boolean
   /** Numbers the engine applies, in the effects vocabulary (docs/effects.md), as for custom items. */
   modifiers?: ModifierSpec[]
+}
+
+/** A subclass from another book entered by the player (house rule #5, `model/customSubclasses.ts`). */
+export interface CustomSubclass {
+  /** 'custom-subclass-<n>'. */
+  id: string
+  classId: string
+  name: string
+  /** Book and page ("Player's Handbook 2024 p. 52"). */
+  book: string
+  /** The player's description of the subclass. */
+  text: string
+  features: CustomSubclassFeature[]
+  /** Always-prepared spells by class level (Domain Spells, Oath Spells…), from the SRD spells. */
+  spells?: { level: number; spells: string[] }[]
+}
+
+export interface CustomSubclassFeature {
+  /** 'f<n>', unique in the subclass; the owner id is `<class>:<subclass>:<feature>`. */
+  id: string
+  /** Class level at which it is gained. */
+  level: number
+  name: string
+  /** The player's summary. */
+  text: string
+  /** Numbers the engine applies (docs/effects.md vocabulary), as for custom items. */
+  modifiers?: ModifierSpec[]
+  /** Uses: a number, 'pb', an ability id (its modifier, min 1) or '<class>Level'; `byLevel` steps by class level. */
+  uses?: { count: number | string; per: RestKind; byLevel?: Record<string, number> }
+  /** The part of the turn it takes: a card in the Combat pane's turn box. */
+  activation?: { kind: 'action' | 'bonus-action' | 'reaction' | 'free'; trigger?: string }
+  /** Named options to choose from (maneuvers…): how many, with `byLevel` steps. */
+  choice?: { name: string; count: number; byLevel?: Record<string, number>; options: string[] }
 }
 
 export interface CustomBackground {
@@ -332,6 +366,8 @@ export interface Character {
   background: Background
   /** Feats from other books entered by the player (house rule #4). */
   customFeats?: CustomFeat[]
+  /** Subclasses from other books entered by the player (house rule #5). */
+  customSubclasses?: CustomSubclass[]
   /** Ability scores before the background's increases and feats (Standard Array, Point Cost or rolled; SRD p. 20). */
   baseAbilities: Record<AbilityId, number>
   levels: LevelEntry[]

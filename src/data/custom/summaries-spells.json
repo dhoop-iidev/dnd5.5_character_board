@@ -1,0 +1,1697 @@
+{
+  "spell:acid-arrow": {
+    "en": "Ranged spell attack: 4d4 Acid, then 2d4 Acid next turn; miss halves.",
+    "fr": "Attaque de sort à distance : 4d4 dégâts d’acide, puis 2d4 ; moitié si ratée.",
+    "es": "Ataque de conjuro a distancia: 4d4 de ácido y 2d4 de ácido el turno siguiente; mitad si falla."
+  },
+  "spell:acid-splash": {
+    "en": "1d6 Acid in a 5-ft-radius sphere, Dex save negates.",
+    "fr": "1d6 dégâts d’acide dans une sphère de 1,50 m de rayon, JS de Dextérité annule.",
+    "es": "1d6 de ácido en una esfera de 1,5 m de radio, la salvación de Destreza lo anula."
+  },
+  "spell:aid": {
+    "en": "Up to three creatures gain 5 maximum and current Hit Points.",
+    "fr": "Jusqu’à trois créatures gagnent 5 points de vie maximum et actuels.",
+    "es": "Hasta tres criaturas ganan 5 puntos de golpe máximos y actuales."
+  },
+  "spell:alarm": {
+    "en": "Wards a door, window or 20-ft cube; audible or mental alarm on intrusion.",
+    "fr": "Protège une porte, une fenêtre ou un cube de 6 m ; alarme sonore ou mentale.",
+    "es": "Protege una puerta, una ventana o un cubo de 6 m; alarma audible o mental ante intrusos."
+  },
+  "spell:alter-self": {
+    "en": "Choose aquatic adaptation, changed appearance, or 1d6 natural weapons using spellcasting ability.",
+    "fr": "Au choix : adaptation aquatique, changement d’aspect ou armes naturelles à 1d6.",
+    "es": "Elige adaptación acuática, cambio de aspecto o armas naturales de 1d6 con tu aptitud mágica."
+  },
+  "spell:animal-friendship": {
+    "en": "A Beast must succeed on a Wis save or be Charmed.",
+    "fr": "Une Bête doit réussir un JS de Sagesse ou subir l’état Charmé.",
+    "es": "Una bestia debe superar una salvación de Sabiduría o queda hechizada."
+  },
+  "spell:animal-messenger": {
+    "en": "A Tiny Beast carries a 25-word message to a described recipient.",
+    "fr": "Une Bête de taille TP porte un message de vingt-cinq mots à un destinataire décrit.",
+    "es": "Una bestia Diminuta lleva un mensaje de 25 palabras a un destinatario descrito."
+  },
+  "spell:animal-shapes": {
+    "en": "Willing creatures become Large or smaller Beasts of CR 4 or lower.",
+    "fr": "Des créatures consentantes deviennent des Bêtes de taille G ou moins, FP 4 maximum.",
+    "es": "Criaturas voluntarias se convierten en bestias Grandes o menores de VD 4 o inferior."
+  },
+  "spell:animate-dead": {
+    "en": "Raises a Skeleton or Zombie you command with a Bonus Action for 24 hours.",
+    "fr": "Crée un squelette ou un zombi, commandé par action Bonus, pendant 24 heures.",
+    "es": "Alza un esqueleto o zombi que diriges con una acción adicional durante 24 horas."
+  },
+  "spell:animate-objects": {
+    "en": "Animates nonmagical objects (up to spellcasting modifier) as Constructs you command.",
+    "fr": "Anime des objets non magiques (jusqu’au modificateur d’incantation) en Artificiels à vos ordres.",
+    "es": "Anima objetos no mágicos (hasta tu modificador por aptitud mágica) como constructos a tus órdenes."
+  },
+  "spell:antilife-shell": {
+    "en": "10-ft emanation that creatures other than Constructs and Undead can’t pass.",
+    "fr": "Émanation de 3 m infranchissable sauf pour les Artificiels et les Morts-vivants.",
+    "es": "Emanación de 3 m que no pueden atravesar criaturas salvo constructos y muertos vivientes."
+  },
+  "spell:antimagic-field": {
+    "en": "10-ft emanation where spells and magic items don’t work and are suppressed.",
+    "fr": "Émanation de 3 m où sorts et objets magiques ne fonctionnent pas, réprimés.",
+    "es": "Emanación de 3 m donde los conjuros y objetos mágicos no funcionan y quedan suprimidos."
+  },
+  "spell:antipathy-sympathy": {
+    "en": "Chosen creature kind within 120 ft: Wis save or Frightened or Charmed.",
+    "fr": "Créatures d’une catégorie à 36 m : JS de Sagesse ou Effrayées ou Charmées.",
+    "es": "Un tipo de criatura elegido a 36 m: salvación de Sabiduría o asustado o hechizado."
+  },
+  "spell:arcane-eye": {
+    "en": "Invisible scrying eye with 30-ft Darkvision, moved 30 ft as a Bonus Action.",
+    "fr": "Œil Invisible transmettant la vue, Vision dans le noir sur 9 m.",
+    "es": "Ojo invisible de escudriñamiento con visión en la oscuridad de 9 m; se mueve 9 m con una acción adicional."
+  },
+  "spell:arcane-hand": {
+    "en": "Large force hand: 5d8 Force punch, push, grapple (4d6 crush) or Half Cover.",
+    "fr": "Main de taille G : poing 5d8 dégâts de force, pousse, agrippe (4d6) ou Abri partiel.",
+    "es": "Mano de fuerza Grande: puñetazo de 5d8 de fuerza, empuja, agarra (aplasta 4d6) o da cobertura media."
+  },
+  "spell:arcane-lock": {
+    "en": "Magically locks a closed door or container; optional password opens it briefly.",
+    "fr": "Verrouille magiquement un accès fermé ; un mot de passe l’ouvre pendant 1 minute.",
+    "es": "Cierra mágicamente una puerta o recipiente cerrados; una contraseña opcional lo abre un momento."
+  },
+  "spell:arcane-sword": {
+    "en": "Spectral sword: melee spell attack for 4d12 + modifier Force, Bonus Action repeats.",
+    "fr": "Épée spectrale : attaque de sort au corps à corps, 4d12 + modificateur dégâts de force.",
+    "es": "Espada espectral: ataque de conjuro cuerpo a cuerpo de 4d12 + modificador de fuerza; repite con acción adicional."
+  },
+  "spell:arcanists-magic-aura": {
+    "en": "Masks a creature’s type or gives an object a false magical aura.",
+    "fr": "Masque le type d’une créature ou donne une aura magique factice à un objet.",
+    "es": "Oculta el tipo de una criatura o da a un objeto un aura mágica falsa."
+  },
+  "spell:astral-projection": {
+    "en": "You and up to eight willing creatures travel to the Astral Plane.",
+    "fr": "Vous et jusqu’à huit créatures consentantes projetez vos corps astraux dans le Plan Astral.",
+    "es": "Tú y hasta ocho criaturas voluntarias viajáis al Plano Astral."
+  },
+  "spell:augury": {
+    "en": "Omen of weal or woe about an action within 30 minutes.",
+    "fr": "Présage favorable ou défavorable sur une opération prévue dans les 30 minutes.",
+    "es": "Presagio de bien o de mal sobre una acción en los próximos 30 minutos."
+  },
+  "spell:aura-of-life": {
+    "en": "30-ft emanation: allies resist Necrotic, allies at 0 HP regain 1.",
+    "fr": "Émanation de 9 m : Résistance aux dégâts nécrotiques ; alliés à 0 récupèrent 1.",
+    "es": "Emanación de 9 m: aliados con resistencia necrótica; los aliados a 0 pg recuperan 1."
+  },
+  "spell:awaken": {
+    "en": "Gives a Beast or plant Intelligence 10 and speech; Charmed for 30 days.",
+    "fr": "Donne à une Bête ou une plante Intelligence 10 et la parole ; Charmée 30 jours.",
+    "es": "Da a una bestia o planta Inteligencia 10 y habla; hechizada durante 30 días."
+  },
+  "spell:bane": {
+    "en": "Up to three creatures, Cha save or subtract 1d4 from attacks and saves.",
+    "fr": "Jusqu’à trois créatures, JS de Charisme ou −1d4 aux jets d’attaque et de sauvegarde.",
+    "es": "Hasta tres criaturas, salvación de Carisma o restan 1d4 a ataques y salvaciones."
+  },
+  "spell:banishment": {
+    "en": "Cha save or the target is sent to a demiplane, Incapacitated.",
+    "fr": "JS de Charisme ou la cible est bannie dans un demi-plan, Neutralisée.",
+    "es": "Salvación de Carisma o el objetivo es enviado a un semiplano, incapacitado."
+  },
+  "spell:barkskin": {
+    "en": "A willing creature’s AC becomes 17 if lower.",
+    "fr": "La CA d’une créature consentante passe à 17 si elle est inférieure.",
+    "es": "La CA de una criatura voluntaria pasa a ser 17 si es inferior."
+  },
+  "spell:beacon-of-hope": {
+    "en": "Targets gain Advantage on Wis and Death Saving Throws, maximum healing.",
+    "fr": "Avantage aux JS de Sagesse et contre la mort, soins toujours maximaux.",
+    "es": "Los objetivos tienen ventaja en salvaciones de Sabiduría y contra muerte, curación máxima."
+  },
+  "spell:befuddlement": {
+    "en": "10d12 Psychic, Int save halves; on a fail, no spellcasting.",
+    "fr": "10d12 dégâts psychiques, JS d’Intelligence pour moitié ; en cas d’échec, aucun sort.",
+    "es": "10d12 psíquico, la salvación de Inteligencia lo reduce a la mitad; si falla, no puede lanzar conjuros."
+  },
+  "spell:bestow-curse": {
+    "en": "Wis save or cursed: Disadvantage, forced Dodge, or extra 1d8 Necrotic.",
+    "fr": "JS de Sagesse ou maudit : Désavantage, Esquive forcée ou 1d8 dégâts nécrotiques en plus.",
+    "es": "Salvación de Sabiduría o maldito: desventaja, esquivar forzado o 1d8 necrótico adicional."
+  },
+  "spell:black-tentacles": {
+    "en": "20-ft square: Str save or 3d6 Bludgeoning and Restrained.",
+    "fr": "Carré de 6 m de côté : JS de Force ou 3d6 dégâts contondants et Entravé.",
+    "es": "Cuadrado de 6 m: salvación de Fuerza o 3d6 contundente y apresado."
+  },
+  "spell:blade-barrier": {
+    "en": "Wall of blades: 6d10 Force, Dex save halves; Three-Quarters Cover.",
+    "fr": "Mur de lames : 6d10 dégâts de force, JS de Dextérité pour moitié ; Abri supérieur.",
+    "es": "Muro de cuchillas: 6d10 de fuerza, salvación de Destreza mitad; cobertura tres cuartos."
+  },
+  "spell:bless": {
+    "en": "Up to three creatures add 1d4 to attack rolls and saving throws.",
+    "fr": "Jusqu’à trois créatures ajoutent 1d4 aux jets d’attaque et de sauvegarde.",
+    "es": "Hasta tres criaturas suman 1d4 a sus tiradas de ataque y de salvación."
+  },
+  "spell:blight": {
+    "en": "8d8 Necrotic to one creature, Con save halves; Plants fail automatically.",
+    "fr": "8d8 dégâts nécrotiques à une créature, JS de Constitution pour moitié ; Plantes ratent.",
+    "es": "8d8 necrótico a una criatura, salvación de Constitución mitad; las plantas fallan automáticamente."
+  },
+  "spell:blindness-deafness": {
+    "en": "Con save or Blinded or Deafened; repeats save each turn.",
+    "fr": "JS de Constitution ou Aveuglé ou Assourdi ; nouveau JS à chaque tour.",
+    "es": "Salvación de Constitución o cegado o ensordecido; repite la salvación cada turno."
+  },
+  "spell:blink": {
+    "en": "Each turn end, roll 1d6: on 4–6 you vanish to the Ethereal Plane.",
+    "fr": "En fin de tour, 1d6 : sur 4 à 6, vous passez sur le Plan Éthéré.",
+    "es": "Al final de cada turno, tira 1d6: con 4–6 desapareces al Plano Etéreo."
+  },
+  "spell:blur": {
+    "en": "Attackers have Disadvantage against you unless they have Blindsight or Truesight.",
+    "fr": "Désavantage aux attaques contre vous, sauf Vision aveugle ou Vision lucide.",
+    "es": "Los atacantes tienen desventaja contra ti salvo que tengan visión ciega o visión verdadera."
+  },
+  "spell:burning-hands": {
+    "en": "3d6 Fire in a 15-ft cone, Dex save halves.",
+    "fr": "3d6 dégâts de feu dans un cône de 4,50 m, JS de Dextérité pour moitié.",
+    "es": "3d6 de fuego en un cono de 4,5 m, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:call-lightning": {
+    "en": "Storm cloud: 3d10 Lightning within 5 ft of a point, Dex save halves; repeatable.",
+    "fr": "Éclair : 3d10 dégâts de foudre à 1,50 m d’un point, JS de Dextérité pour moitié.",
+    "es": "Nube de tormenta: 3d10 de relámpago a 1,5 m de un punto, la salvación de Destreza lo reduce a la mitad; repetible."
+  },
+  "spell:calm-emotions": {
+    "en": "Humanoids in a 20-ft-radius sphere, Cha save: suppress Charmed/Frightened or become Indifferent.",
+    "fr": "Humanoïdes dans une sphère de 6 m de rayon, JS de Charisme : apaisés ou indifférents.",
+    "es": "Humanoides en una esfera de 6 m de radio, salvación de Carisma: suprime hechizado/asustado o se vuelven indiferentes."
+  },
+  "spell:chain-lightning": {
+    "en": "10d8 Lightning to one target and up to three others, Dex save halves.",
+    "fr": "10d8 dégâts de foudre à une cible et trois autres, JS de Dextérité pour moitié.",
+    "es": "10d8 de relámpago a un objetivo y hasta tres más, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:charm-monster": {
+    "en": "One creature, Wis save or Charmed and Friendly to you.",
+    "fr": "Une créature, JS de Sagesse ou Charmée et Amicale envers vous.",
+    "es": "Una criatura, salvación de Sabiduría o queda hechizada y amistosa contigo."
+  },
+  "spell:charm-person": {
+    "en": "One Humanoid, Wis save or Charmed and Friendly to you.",
+    "fr": "Un Humanoïde, JS de Sagesse ou Charmé et Amical envers vous.",
+    "es": "Un humanoide, salvación de Sabiduría o queda hechizado y amistoso contigo."
+  },
+  "spell:chill-touch": {
+    "en": "Melee spell attack: 1d10 Necrotic, target can’t regain Hit Points.",
+    "fr": "Attaque de sort au corps à corps : 1d10 dégâts nécrotiques, aucun soin possible.",
+    "es": "Ataque de conjuro cuerpo a cuerpo: 1d10 necrótico, el objetivo no puede recuperar puntos de golpe."
+  },
+  "spell:chromatic-orb": {
+    "en": "Ranged spell attack: 3d8 of a chosen energy type; doubles make it leap.",
+    "fr": "Attaque de sort à distance : 3d8 dégâts du type choisi ; un double rebondit.",
+    "es": "Ataque de conjuro a distancia: 3d8 del tipo de energía elegido; con dados dobles salta a otro objetivo."
+  },
+  "spell:circle-of-death": {
+    "en": "8d8 Necrotic in a 60-ft-radius sphere, Con save halves.",
+    "fr": "8d8 dégâts nécrotiques, sphère de 18 m de rayon, JS de Constitution pour moitié.",
+    "es": "8d8 necrótico en una esfera de 18 m de radio, la salvación de Constitución lo reduce a la mitad."
+  },
+  "spell:clairvoyance": {
+    "en": "Invisible sensor lets you see or hear a familiar or obvious location.",
+    "fr": "Capteur Invisible qui vous permet de voir ou d’entendre un lieu connu ou évident.",
+    "es": "Un sensor invisible te deja ver u oír un lugar conocido o evidente."
+  },
+  "spell:clone": {
+    "en": "Grows an inert clone in 120 days; the soul transfers to it on death.",
+    "fr": "Fait croître un clone inerte en 120 jours ; l’âme y passe à la mort.",
+    "es": "Hace crecer un clon inerte en 120 días; el alma pasa a él al morir."
+  },
+  "spell:cloudkill": {
+    "en": "20-ft-radius poison fog: 5d8 Poison, Con save halves; Heavily Obscured, drifts 10 ft.",
+    "fr": "Brume de 6 m de rayon : 5d8 dégâts de poison, JS de Constitution pour moitié.",
+    "es": "Niebla venenosa de 6 m de radio: 5d8 de veneno, salvación de Constitución mitad; muy oscuro, se desplaza 3 m."
+  },
+  "spell:color-spray": {
+    "en": "15-ft cone, Con save or Blinded until the end of your next turn.",
+    "fr": "Cône de 4,50 m, JS de Constitution ou Aveuglé jusqu’à votre tour suivant.",
+    "es": "Cono de 4,5 m, salvación de Constitución o cegado hasta el final de tu siguiente turno."
+  },
+  "spell:command": {
+    "en": "Wis save or obey a one-word command: approach, drop, flee, grovel, halt.",
+    "fr": "JS de Sagesse ou obéit à un ordre : approche, fuis, halte, lâche, rampe.",
+    "es": "Salvación de Sabiduría u obedece una orden de una palabra: acércate, detente, huye, póstrate, suelta."
+  },
+  "spell:commune": {
+    "en": "Ask a deity up to three yes-or-no questions.",
+    "fr": "Posez trois questions fermées à une divinité ou à son intermédiaire.",
+    "es": "Haz hasta tres preguntas de sí o no a una deidad."
+  },
+  "spell:commune-with-nature": {
+    "en": "Learn three facts about terrain within 3 miles (300 ft underground).",
+    "fr": "Trois informations sur la zone dans un rayon de 4,5 km (90 m sous terre).",
+    "es": "Averigua tres datos sobre el terreno a 4,5 km (90 m bajo tierra)."
+  },
+  "spell:comprehend-languages": {
+    "en": "You understand the literal meaning of any spoken, signed or written language.",
+    "fr": "Vous comprenez le sens littéral de toute langue parlée ou écrite.",
+    "es": "Entiendes el significado literal de cualquier idioma hablado, signado o escrito."
+  },
+  "spell:compulsion": {
+    "en": "Wis save or Charmed; Bonus Action forces targets to move in a direction.",
+    "fr": "JS de Sagesse ou Charmé ; par action Bonus, les cibles se déplacent dans une direction.",
+    "es": "Salvación de Sabiduría o hechizado; con una acción adicional obligas a los objetivos a moverse en una dirección."
+  },
+  "spell:cone-of-cold": {
+    "en": "8d8 Cold in a 60-ft cone, Con save halves.",
+    "fr": "8d8 dégâts de froid dans un cône de 18 m, JS de Constitution pour moitié.",
+    "es": "8d8 de frío en un cono de 18 m, la salvación de Constitución lo reduce a la mitad."
+  },
+  "spell:confusion": {
+    "en": "10-ft-radius sphere, Wis save or act randomly by 1d10, no Reactions.",
+    "fr": "Sphère de 3 m de rayon, JS de Sagesse ou comportement aléatoire (1d10), sans Réaction.",
+    "es": "Esfera de 3 m de radio, salvación de Sabiduría o actúa al azar según 1d10, sin reacciones."
+  },
+  "spell:conjure-animals": {
+    "en": "Spectral pack: Dex save or 3d10 Slashing to creatures within 10 ft.",
+    "fr": "Meute spectrale : JS de Dextérité ou 3d10 dégâts tranchants aux créatures à 3 m.",
+    "es": "Manada espectral: salvación de Destreza o 3d10 cortante a las criaturas a 3 m."
+  },
+  "spell:conjure-celestial": {
+    "en": "10-ft-radius light pillar: heal 4d12 + modifier or 6d12 Radiant, Dex halves.",
+    "fr": "Colonne de 3 m de rayon : soins 4d12 + modificateur ou 6d12 dégâts radiants.",
+    "es": "Pilar de luz de 3 m de radio: cura 4d12 + modificador o 6d12 radiante, Destreza mitad."
+  },
+  "spell:conjure-elemental": {
+    "en": "Elemental spirit: Dex save or 8d8 damage and Restrained, then 4d8 per turn.",
+    "fr": "Esprit élémentaire : JS de Dextérité ou 8d8 dégâts et Entravé, puis 4d8 par tour.",
+    "es": "Espíritu elemental: salvación de Destreza o 8d8 de daño y apresado, luego 4d8 por turno."
+  },
+  "spell:conjure-fey": {
+    "en": "Fey spirit makes a melee spell attack: 3d12 + modifier Psychic and Frightened.",
+    "fr": "Esprit féerique, attaque de sort au corps à corps : 3d12 + modificateur psychiques, Effrayé.",
+    "es": "Un espíritu feérico hace un ataque de conjuro cuerpo a cuerpo: 3d12 + modificador psíquico y asustado."
+  },
+  "spell:conjure-minor-elementals": {
+    "en": "Your hits on creatures in a 15-ft Emanation deal an extra 2d8 elemental damage.",
+    "fr": "Vos attaques touchant une créature dans l’Émanation de 4,50 m infligent 2d8 dégâts de plus.",
+    "es": "Tus aciertos contra criaturas en una emanación de 4,5 m causan 2d8 de daño elemental adicional."
+  },
+  "spell:conjure-woodland-beings": {
+    "en": "10-ft Emanation: Wis save or 5d8 Force, half on success; Bonus Action Disengage.",
+    "fr": "Émanation de 3 m : JS de Sagesse, 5d8 dégâts de force (moitié si réussi) ; Désengagement Bonus.",
+    "es": "Emanación de 3 m: salvación de Sabiduría o 5d8 de fuerza, mitad si la supera; destrabarse como acción adicional."
+  },
+  "spell:contact-other-plane": {
+    "en": "DC 15 Int save to ask five questions; failure: 6d6 Psychic and Incapacitated.",
+    "fr": "JS d’Intelligence DD 15 pour poser cinq questions ; échec : 6d6 dégâts psychiques et Neutralisé.",
+    "es": "Salvación de Inteligencia CD 15 para hacer cinco preguntas; si falla: 6d6 psíquico e incapacitado."
+  },
+  "spell:contagion": {
+    "en": "Con save or 11d8 Necrotic and Poisoned, Disadvantage on saves of one chosen ability.",
+    "fr": "JS de Constitution ou 11d8 dégâts nécrotiques et Empoisonné, Désavantage aux JS d’une caractéristique.",
+    "es": "Salvación de Constitución o 11d8 necrótico y envenenado, desventaja en salvaciones de una característica elegida."
+  },
+  "spell:contingency": {
+    "en": "Stores a level 5 or lower spell on yourself, released by a chosen trigger.",
+    "fr": "Stocke sur vous un sort du 5e niveau ou inférieur, libéré par un déclencheur choisi.",
+    "es": "Almacena en ti un conjuro de nivel 5 o inferior, liberado por un desencadenante elegido."
+  },
+  "spell:continual-flame": {
+    "en": "Heatless flame on an object: Bright Light 20-ft radius, Dim Light 20 ft more.",
+    "fr": "Flamme sans chaleur : Lumière vive sur 6 m de rayon, Lumière faible 6 m de plus.",
+    "es": "Llama sin calor sobre un objeto: luz brillante en 6 m de radio y luz tenue 6 m más allá."
+  },
+  "spell:control-water": {
+    "en": "Control water in a 100-ft Cube: flood, part, redirect, or whirlpool (2d8 Bludgeoning).",
+    "fr": "Contrôle l’eau d’un Cube de 30 m : crue, séparation, courant ou tourbillon (2d8 contondants).",
+    "es": "Controla el agua en un cubo de 30 m: inundar, separar, redirigir o remolino (2d8 contundente)."
+  },
+  "spell:control-weather": {
+    "en": "Shift precipitation, temperature and wind within 5 miles by one stage at a time.",
+    "fr": "Modifie précipitations, température et vent d’un stade à la fois, dans un rayon de 7,5 km.",
+    "es": "Cambia precipitación, temperatura y viento a 7,5 km, una fase cada vez."
+  },
+  "spell:counterspell": {
+    "en": "Interrupt a creature casting a spell: Con save or the spell fails, action wasted.",
+    "fr": "Interrompt une incantation : JS de Constitution ou le sort se dissipe, action gaspillée.",
+    "es": "Interrumpe a una criatura que lanza un conjuro: salvación de Constitución o el conjuro falla y la acción se pierde."
+  },
+  "spell:create-food-and-water": {
+    "en": "Creates 45 pounds of food and 30 gallons of fresh water.",
+    "fr": "Crée 22,5 kg de nourriture et 120 litres d’eau potable.",
+    "es": "Crea 22,5 kg de comida y 120 l de agua potable."
+  },
+  "spell:create-or-destroy-water": {
+    "en": "Create or destroy 10 gallons of water, or rain/clear fog in a 30-ft Cube.",
+    "fr": "Crée ou détruit 40 litres d’eau, ou pluie/dissipation du brouillard dans un Cube de 9 m.",
+    "es": "Crea o destruye 40 l de agua, o lluvia/disipa la niebla en un cubo de 9 m."
+  },
+  "spell:create-undead": {
+    "en": "At night, up to three Small or Medium Humanoid corpses become Ghouls you command.",
+    "fr": "De nuit, jusqu’à trois cadavres d’Humanoïdes de taille M ou P deviennent vos goules.",
+    "es": "De noche, hasta tres cadáveres de humanoides Pequeños o Medianos se vuelven necrófagos a tus órdenes."
+  },
+  "spell:creation": {
+    "en": "Creates a nonliving object up to a 5-ft Cube; duration depends on material.",
+    "fr": "Crée un objet inanimé tenant dans un Cube de 1,50 m ; durée selon la matière.",
+    "es": "Crea un objeto inerte de hasta un cubo de 1,5 m; la duración depende del material."
+  },
+  "spell:cure-wounds": {
+    "en": "Touched creature regains 2d8 + your spellcasting ability modifier Hit Points.",
+    "fr": "La créature touchée récupère 2d8 + votre modificateur de caractéristique d’incantation points de vie.",
+    "es": "La criatura tocada recupera 2d8 + tu modificador por aptitud mágica puntos de golpe."
+  },
+  "spell:dancing-lights": {
+    "en": "Up to four hovering lights, each Dim Light in a 10-ft radius.",
+    "fr": "Jusqu’à quatre lueurs flottantes, chacune une Lumière faible sur 3 m de rayon.",
+    "es": "Hasta cuatro luces flotantes, cada una da luz tenue en un radio de 3 m."
+  },
+  "spell:darkness": {
+    "en": "Magical Darkness fills a 15-ft-radius Sphere; Darkvision can’t see through it.",
+    "fr": "Ténèbres magiques dans une Sphère de 4,50 m de rayon, impénétrables à la Vision dans le noir.",
+    "es": "Oscuridad mágica en una esfera de 4,5 m de radio; la visión en la oscuridad no la atraviesa."
+  },
+  "spell:darkvision": {
+    "en": "Willing creature gains Darkvision with a range of 150 feet.",
+    "fr": "Une créature consentante acquiert la Vision dans le noir sur 45 m.",
+    "es": "Una criatura voluntaria obtiene visión en la oscuridad hasta 45 m."
+  },
+  "spell:daylight": {
+    "en": "Sunlight fills a 60-ft-radius Sphere as Bright Light, Dim Light 60 ft beyond.",
+    "fr": "Sphère de 18 m de rayon en Lumière vive (soleil), Lumière faible 18 m de plus.",
+    "es": "Luz solar llena una esfera de 18 m de radio como luz brillante, y luz tenue 18 m más allá."
+  },
+  "spell:death-ward": {
+    "en": "First drop to 0 Hit Points leaves the target at 1; negates instant death.",
+    "fr": "La première chute à 0 point de vie laisse la cible à 1 ; annule une mort instantanée.",
+    "es": "La primera vez que baje a 0 puntos de golpe, el objetivo queda a 1; anula la muerte instantánea."
+  },
+  "spell:delayed-blast-fireball": {
+    "en": "Bead explodes in a 20-ft-radius Sphere: 12d6 Fire, +1d6 per turn, Dex save halves.",
+    "fr": "Sphère de 6 m de rayon : 12d6 feu, +1d6 par tour, JS de Dextérité pour moitié.",
+    "es": "Una cuenta estalla en una esfera de 6 m de radio: 12d6 de fuego, +1d6 por turno, salvación de Destreza mitad."
+  },
+  "spell:demiplane": {
+    "en": "Shadowy door leading to an empty 30-ft room, reusable across castings.",
+    "fr": "Porte ombreuse ouvrant sur une salle vide de 9 m de côté, réutilisable.",
+    "es": "Puerta de sombras que lleva a una sala vacía de 9 m, reutilizable entre lanzamientos."
+  },
+  "spell:detect-evil-and-good": {
+    "en": "Sense Aberrations, Celestials, Elementals, Fey, Fiends and Undead within 30 feet.",
+    "fr": "Perçoit Aberrations, Célestes, Élémentaires, Fées, Fiélons et Morts-vivants dans un rayon de 9 m.",
+    "es": "Percibes aberraciones, celestiales, elementales, feéricos, infernales y muertos vivientes a 9 m."
+  },
+  "spell:detect-magic": {
+    "en": "Sense magic within 30 feet; Magic action reveals auras and spell schools.",
+    "fr": "Perçoit la magie dans un rayon de 9 m ; l’action Magie révèle auras et écoles.",
+    "es": "Percibes la magia a 9 m; con una acción de magia ves auras y escuelas de magia."
+  },
+  "spell:detect-poison-and-disease": {
+    "en": "Sense poisons, venomous creatures and magical contagions within 30 feet, and their kind.",
+    "fr": "Perçoit poisons, créatures venimeuses et maladies magiques dans un rayon de 9 m, et leur nature.",
+    "es": "Percibes venenos, criaturas venenosas y enfermedades mágicas a 9 m, y su tipo."
+  },
+  "spell:detect-thoughts": {
+    "en": "Sense thoughts within 30 feet or read a mind; Wis save to probe deeper.",
+    "fr": "Perçoit les pensées dans un rayon de 9 m ou lit un esprit ; JS de Sagesse pour sonder.",
+    "es": "Percibes pensamientos a 9 m o lees una mente; salvación de Sabiduría para indagar más."
+  },
+  "spell:dimension-door": {
+    "en": "Teleport yourself and one willing creature within 5 feet to a chosen spot.",
+    "fr": "Vous téléporte avec une créature consentante située à 1,50 m ou moins vers un lieu choisi.",
+    "es": "Te teletransportas con una criatura voluntaria a 1,5 m o menos a un lugar elegido."
+  },
+  "spell:disguise-self": {
+    "en": "Illusion changes your appearance; Investigation check against your spell save DC sees through it.",
+    "fr": "Illusion qui change votre apparence ; test d’Intelligence (Investigation) contre votre DD pour la percer.",
+    "es": "Una ilusión cambia tu aspecto; una prueba de Investigación contra tu CD de salvación la descubre."
+  },
+  "spell:disintegrate": {
+    "en": "Green ray: Dex save or 10d6 + 40 Force; at 0 Hit Points, dust.",
+    "fr": "Rayon vert : JS de Dextérité ou 10d6 + 40 dégâts de force ; à 0 point de vie, poussière.",
+    "es": "Rayo verde: salvación de Destreza o 10d6 + 40 de fuerza; a 0 puntos de golpe, polvo."
+  },
+  "spell:dispel-evil-and-good": {
+    "en": "Celestials, Elementals, Fey, Fiends, Undead have Disadvantage against you; break enchantment or dismiss.",
+    "fr": "Célestes, Élémentaires, Fées, Fiélons, Morts-vivants ont le Désavantage contre vous ; annulation ou renvoi.",
+    "es": "Celestiales, elementales, feéricos, infernales y muertos vivientes: desventaja contra ti; rompe hechizos o expulsa."
+  },
+  "spell:dispel-magic": {
+    "en": "Ends spells of level 3 or lower; DC 10 + level check for higher.",
+    "fr": "Met fin aux sorts du 3e niveau ou moins ; test DD 10 + niveau au-delà.",
+    "es": "Termina conjuros de nivel 3 o inferior; prueba CD 10 + nivel para los superiores."
+  },
+  "spell:dissonant-whispers": {
+    "en": "Wis save or 3d6 Psychic and flee with its Reaction; half on success.",
+    "fr": "JS de Sagesse ou 3d6 dégâts psychiques et fuite par sa Réaction ; moitié si réussi.",
+    "es": "Salvación de Sabiduría o 3d6 psíquico y huye usando su reacción; mitad si la supera."
+  },
+  "spell:divination": {
+    "en": "Ask a god one question about an event within 7 days; truthful reply.",
+    "fr": "Posez à un dieu une question sur un événement dans les 7 jours ; réponse véridique.",
+    "es": "Haz a un dios una pregunta sobre un suceso de los próximos 7 días; respuesta veraz."
+  },
+  "spell:divine-favor": {
+    "en": "Your weapon attacks deal an extra 1d4 Radiant damage on a hit.",
+    "fr": "Vos attaques avec une arme infligent 1d4 dégâts radiants supplémentaires quand elles touchent.",
+    "es": "Tus ataques con armas causan 1d4 de daño radiante adicional al acertar."
+  },
+  "spell:divine-smite": {
+    "en": "Your hit deals an extra 2d8 Radiant damage, plus 1d8 against Fiends or Undead.",
+    "fr": "Votre attaque inflige 2d8 dégâts radiants de plus, +1d8 contre un Fiélon ou un Mort-vivant.",
+    "es": "Tu acierto causa 2d8 de daño radiante adicional, más 1d8 contra infernales o muertos vivientes."
+  },
+  "spell:divine-word": {
+    "en": "Cha save; failures at 50 Hit Points or fewer: Deafened, Blinded, Stunned or slain.",
+    "fr": "JS de Charisme ; échec à 50 points de vie ou moins : Assourdi, Aveuglé, Étourdi ou mort.",
+    "es": "Salvación de Carisma; si falla con 50 puntos de golpe o menos: ensordecido, cegado, aturdido o muerto."
+  },
+  "spell:dominate-beast": {
+    "en": "Beast: Wis save or Charmed, obeys telepathic commands; repeats save when damaged.",
+    "fr": "Une Bête : JS de Sagesse ou Charmée, obéit à vos ordres télépathiques ; JS si blessée.",
+    "es": "Bestia: salvación de Sabiduría o hechizada, obedece órdenes telepáticas; repite la salvación al recibir daño."
+  },
+  "spell:dominate-monster": {
+    "en": "Creature: Wis save or Charmed, obeys telepathic commands; repeats save when damaged.",
+    "fr": "Une créature : JS de Sagesse ou Charmée, obéit à vos ordres télépathiques ; JS si blessée.",
+    "es": "Criatura: salvación de Sabiduría o hechizada, obedece órdenes telepáticas; repite la salvación al recibir daño."
+  },
+  "spell:dominate-person": {
+    "en": "Humanoid: Wis save or Charmed, obeys telepathic commands; repeats save when damaged.",
+    "fr": "Un Humanoïde : JS de Sagesse ou Charmé, obéit à vos ordres télépathiques ; JS si blessé.",
+    "es": "Humanoide: salvación de Sabiduría o hechizado, obedece órdenes telepáticas; repite la salvación al recibir daño."
+  },
+  "spell:dragons-breath": {
+    "en": "Target can exhale a 15-ft Cone: 3d6 of a chosen type, Dex save halves.",
+    "fr": "La cible exhale un Cône de 4,50 m : 3d6 dégâts au choix, JS de Dextérité pour moitié.",
+    "es": "El objetivo puede exhalar un cono de 4,5 m: 3d6 del tipo elegido, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:dream": {
+    "en": "Message in a sleeping target’s dreams; nightmare: Wis save or no rest, 3d6 Psychic.",
+    "fr": "Message dans les rêves de la cible ; cauchemar : JS de Sagesse ou pas de Repos, 3d6 psychiques.",
+    "es": "Mensaje en los sueños de un objetivo dormido; pesadilla: salvación de Sabiduría o no descansa, 3d6 psíquico."
+  },
+  "spell:druidcraft": {
+    "en": "Minor nature effect: predict weather, bloom a flower, sensory effect, light a flame.",
+    "fr": "Petit effet naturel : prédire le temps, faire fleurir, effet sensoriel, allumer ou éteindre une flamme.",
+    "es": "Efecto natural menor: predice el clima, hace florecer, efecto sensorial, enciende o apaga una llama."
+  },
+  "spell:earthquake": {
+    "en": "100-ft-radius tremor: Dex save or Prone and Concentration broken; fissures, damages structures.",
+    "fr": "Séisme sur 30 m de rayon : JS de Dextérité ou À terre et Concentration rompue ; crevasses.",
+    "es": "Temblor de 30 m de radio: salvación de Destreza o derribado y pierde la concentración; grietas, daña estructuras."
+  },
+  "spell:eldritch-blast": {
+    "en": "Ranged spell attack against one creature or object: 1d10 Force damage.",
+    "fr": "Attaque de sort à distance contre une créature ou un objet : 1d10 dégâts de force.",
+    "es": "Ataque de conjuro a distancia contra una criatura u objeto: 1d10 de daño de fuerza."
+  },
+  "spell:elementalism": {
+    "en": "Minor elemental effect in a 5-ft Cube: breeze, dust, embers, mist, or sculpting.",
+    "fr": "Petit effet élémentaire dans un Cube de 1,50 m : brise, poussière, flammèches, embruns ou façonnage.",
+    "es": "Efecto elemental menor en un cubo de 1,5 m: brisa, polvo, ascuas, niebla o esculpir los elementos."
+  },
+  "spell:enhance-ability": {
+    "en": "Touched creature has Advantage on ability checks with one chosen ability.",
+    "fr": "La créature touchée a l’Avantage aux tests d’une caractéristique choisie.",
+    "es": "La criatura tocada tiene ventaja en las pruebas con una característica elegida."
+  },
+  "spell:enlarge-reduce": {
+    "en": "One size larger, Advantage on Strength, +1d4 damage; or smaller, Disadvantage, −1d4.",
+    "fr": "Taille +1 catégorie, Avantage en Force, +1d4 dégâts ; ou −1 catégorie, Désavantage, −1d4.",
+    "es": "Un tamaño más, ventaja en Fuerza, +1d4 de daño; o un tamaño menos, desventaja, −1d4."
+  },
+  "spell:ensnaring-strike": {
+    "en": "On hit, Str save or Restrained by vines, taking 1d6 Piercing each turn.",
+    "fr": "Quand vous touchez, JS de Force ou Entravé par des plantes, 1d6 dégâts perforants par tour.",
+    "es": "Al acertar, salvación de Fuerza o apresado por enredaderas, sufriendo 1d6 perforante cada turno."
+  },
+  "spell:entangle": {
+    "en": "20-ft square becomes Difficult Terrain; Str save or Restrained.",
+    "fr": "Carré de 6 m de côté en Terrain difficile ; JS de Force ou Entravé.",
+    "es": "Un cuadrado de 6 m se vuelve terreno difícil; salvación de Fuerza o apresado."
+  },
+  "spell:enthrall": {
+    "en": "Wis save or −10 to Wisdom (Perception) checks and Passive Perception.",
+    "fr": "JS de Sagesse ou malus de –10 aux tests de Sagesse (Perception) et en Perception passive.",
+    "es": "Salvación de Sabiduría o −10 a las pruebas de Sabiduría (Percepción) y a la Percepción pasiva."
+  },
+  "spell:etherealness": {
+    "en": "You enter the Border Ethereal, beyond reach of creatures on your plane.",
+    "fr": "Vous passez dans la Frontière éthérée, hors d’atteinte des créatures de votre plan.",
+    "es": "Entras en la Frontera Etérea, fuera del alcance de las criaturas de tu plano."
+  },
+  "spell:expeditious-retreat": {
+    "en": "Take the Dash action now, then as a Bonus Action each turn.",
+    "fr": "Vous entreprenez l’action Pointe, puis par une action Bonus à chaque tour.",
+    "es": "Llevas a cabo la acción de correr ahora y después como acción adicional cada turno."
+  },
+  "spell:eyebite": {
+    "en": "One creature within 60 feet: Wis save or Unconscious, Frightened and fleeing, or Poisoned.",
+    "fr": "Une créature à 18 m : JS de Sagesse ou Inconsciente, Effrayée en fuite, ou Empoisonnée.",
+    "es": "Una criatura a 18 m: salvación de Sabiduría o inconsciente, asustada y huyendo, o envenenada."
+  },
+  "spell:fabricate": {
+    "en": "Turns raw materials into a Large object (10-ft Cube), Medium if mineral.",
+    "fr": "Matières premières changées en objet de taille G (Cube de 3 m), M si minéral.",
+    "es": "Convierte materias primas en un objeto Grande (cubo de 3 m), Mediano si es mineral."
+  },
+  "spell:faerie-fire": {
+    "en": "20-ft Cube: Dex save or outlined; attacks against it have Advantage, no Invisible.",
+    "fr": "Cube de 6 m : JS de Dextérité ou nimbé ; Avantage aux attaques contre lui, pas d’Invisible.",
+    "es": "Cubo de 6 m: salvación de Destreza o perfilado; los ataques contra él tienen ventaja, no puede ser invisible."
+  },
+  "spell:faithful-hound": {
+    "en": "Invisible watchdog barks within 30 feet and bites: Dex save or 4d8 Force.",
+    "fr": "Chien de garde invisible aboyant à 9 m, morsure : JS de Dextérité ou 4d8 dégâts de force.",
+    "es": "Perro guardián invisible que ladra a 9 m y muerde: salvación de Destreza o 4d8 de fuerza."
+  },
+  "spell:false-life": {
+    "en": "You gain 2d4 + 4 Temporary Hit Points.",
+    "fr": "Vous recevez 2d4 + 4 points de vie temporaires.",
+    "es": "Obtienes 2d4 + 4 puntos de golpe temporales."
+  },
+  "spell:fear": {
+    "en": "30-ft Cone, Wis save or drop held items and become Frightened, fleeing.",
+    "fr": "Cône de 9 m, JS de Sagesse ou lâche ce qu’elle tient, Effrayée et fuit.",
+    "es": "Cono de 9 m, salvación de Sabiduría o suelta lo que sostiene y queda asustado, huyendo."
+  },
+  "spell:feather-fall": {
+    "en": "Up to five falling creatures descend 60 ft per round, no fall damage.",
+    "fr": "Jusqu’à cinq créatures chutent à 18 m par round, sans dégâts de chute.",
+    "es": "Hasta cinco criaturas que caen descienden 18 m por asalto, sin daño por caída."
+  },
+  "spell:find-familiar": {
+    "en": "Gain a spirit familiar in a CR 0 animal form, telepathic, delivers touch spells.",
+    "fr": "Familier esprit de forme animale (FP 0), télépathique, applique vos sorts de contact.",
+    "es": "Obtienes un espíritu familiar con forma de animal de VD 0, telepático, transmite tus conjuros de toque."
+  },
+  "spell:find-steed": {
+    "en": "Summon a loyal Large otherworldly steed: Celestial, Fey or Fiend.",
+    "fr": "Convoque une monture d’outre-monde fidèle de taille G : Céleste, Fée ou Fiélon.",
+    "es": "Invoca un corcel sobrenatural Grande y leal: celestial, feérico o infernal."
+  },
+  "spell:find-the-path": {
+    "en": "Sense the most direct route, distance and direction to a familiar location.",
+    "fr": "Vous connaissez l’itinéraire le plus direct, la distance et la direction d’un lieu connu.",
+    "es": "Percibes la ruta más directa, la distancia y la dirección a un lugar conocido."
+  },
+  "spell:find-traps": {
+    "en": "Sense traps in line of sight and their general nature, not location.",
+    "fr": "Perçoit les pièges dans votre champ de vision et leur nature, pas leur emplacement.",
+    "es": "Percibes las trampas en tu línea de visión y su naturaleza general, no su ubicación."
+  },
+  "spell:finger-of-death": {
+    "en": "7d8 + 30 Necrotic to one creature, Con save halves; slain Humanoids rise as Zombies.",
+    "fr": "7d8 + 30 dégâts nécrotiques, JS de Constitution pour moitié ; Humanoïde tué devient zombi.",
+    "es": "7d8 + 30 necrótico a una criatura, salvación de Constitución mitad; los humanoides muertos se alzan como zombis."
+  },
+  "spell:fire-bolt": {
+    "en": "Ranged spell attack, 1d10 Fire damage; ignites unattended flammable objects.",
+    "fr": "Attaque de sort à distance, 1d10 dégâts de feu ; embrase les objets inflammables non portés.",
+    "es": "Ataque de conjuro a distancia, 1d10 de fuego; prende objetos inflamables que nadie lleve."
+  },
+  "spell:fire-shield": {
+    "en": "Resistance to Cold or Fire; adjacent melee attackers take 2d8 Fire or Cold.",
+    "fr": "Résistance au froid ou au feu ; l’assaillant au corps à corps subit 2d8 dégâts.",
+    "es": "Resistencia al frío o al fuego; quien te ataque cuerpo a cuerpo de cerca sufre 2d8 de fuego o frío."
+  },
+  "spell:fire-storm": {
+    "en": "7d10 Fire in up to ten 10-ft Cubes, Dex save halves.",
+    "fr": "7d10 dégâts de feu dans dix Cubes de 3 m, JS de Dextérité pour moitié.",
+    "es": "7d10 de fuego en hasta diez cubos de 3 m, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:fireball": {
+    "en": "8d6 Fire in a 20-ft-radius Sphere, Dex save halves.",
+    "fr": "8d6 dégâts de feu dans une Sphère de 6 m de rayon, JS de Dextérité pour moitié.",
+    "es": "8d6 de fuego en una esfera de 6 m de radio, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:flame-blade": {
+    "en": "Fiery scimitar; Magic action melee spell attack for 3d6 + spellcasting modifier Fire.",
+    "fr": "Lame ardente ; action Magie, attaque de sort, 3d6 + modificateur d’incantation en dégâts de feu.",
+    "es": "Cimitarra de fuego; con una acción de magia, ataque de conjuro cuerpo a cuerpo de 3d6 + modificador de fuego."
+  },
+  "spell:flame-strike": {
+    "en": "5d6 Fire plus 5d6 Radiant in a 10-ft-radius, 40-ft-high Cylinder, Dex save halves.",
+    "fr": "5d6 dégâts de feu et 5d6 radiants (Cylindre de 3 m de rayon), JS de Dextérité pour moitié.",
+    "es": "5d6 de fuego y 5d6 radiante en un cilindro de 3 m de radio y 12 m de alto, salvación de Destreza mitad."
+  },
+  "spell:flaming-sphere": {
+    "en": "5-ft fire sphere, 2d6 Fire to adjacent creatures, Dex save halves; movable.",
+    "fr": "Sphère de feu de 1,50 m, 2d6 dégâts de feu, JS de Dextérité pour moitié.",
+    "es": "Esfera de fuego de 1,5 m, 2d6 de fuego a las criaturas adyacentes, salvación de Destreza mitad; puedes moverla."
+  },
+  "spell:flesh-to-stone": {
+    "en": "Con save or Restrained; three failed saves turn it Petrified.",
+    "fr": "JS de Constitution ou Entravé ; trois échecs et la cible est Pétrifiée.",
+    "es": "Salvación de Constitución o apresado; tres salvaciones fallidas lo dejan petrificado."
+  },
+  "spell:floating-disk": {
+    "en": "3-ft floating disk of force carries up to 500 pounds, follows you.",
+    "fr": "Disque de force de 90 cm qui flotte, supporte 250 kg et vous suit.",
+    "es": "Disco de fuerza flotante de 90 cm que soporta hasta 250 kg y te sigue."
+  },
+  "spell:fly": {
+    "en": "A willing creature gains a Fly Speed of 60 ft and can hover.",
+    "fr": "Une créature consentante acquiert une Vitesse de vol de 18 m et le vol stationnaire.",
+    "es": "Una criatura voluntaria obtiene velocidad volando de 18 m y puede levitar."
+  },
+  "spell:fog-cloud": {
+    "en": "20-ft-radius Sphere of fog, Heavily Obscured, until strong wind disperses it.",
+    "fr": "Sphère de brouillard de 6 m de rayon, Visibilité nulle, dispersée par un vent fort.",
+    "es": "Esfera de niebla de 6 m de radio, muy oscura, hasta que un viento fuerte la disperse."
+  },
+  "spell:forbiddance": {
+    "en": "Blocks teleportation and planar travel; chosen creature types take 5d10 Radiant or Necrotic.",
+    "fr": "Bloque téléportation et voyage planaire ; types désignés subissent 5d10 dégâts nécrotiques ou radiants.",
+    "es": "Bloquea el teletransporte y el viaje planar; los tipos de criatura elegidos sufren 5d10 radiante o necrótico."
+  },
+  "spell:forcecage": {
+    "en": "Invisible force cage (20 ft) or box (10 ft) traps creatures; Cha save to teleport out.",
+    "fr": "Cage (6 m) ou cellule (3 m) de force Invisible ; JS de Charisme pour s’en téléporter.",
+    "es": "Jaula (6 m) o caja (3 m) de fuerza invisible que atrapa criaturas; salvación de Carisma para teletransportarse fuera."
+  },
+  "spell:foresight": {
+    "en": "Target has Advantage on D20 Tests; attacks against it have Disadvantage.",
+    "fr": "La cible a l’Avantage aux Tests d20 ; attaques contre elle avec Désavantage.",
+    "es": "El objetivo tiene ventaja en las pruebas con d20; los ataques contra él tienen desventaja."
+  },
+  "spell:freedom-of-movement": {
+    "en": "Ignores Difficult Terrain, can’t be magically slowed, Paralyzed or Restrained; Swim Speed.",
+    "fr": "Ignore le Terrain difficile, immunisé contre Paralysé et Entravé magiques ; Vitesse de nage.",
+    "es": "Ignora el terreno difícil, la magia no lo ralentiza, paraliza ni apresa; velocidad nadando."
+  },
+  "spell:freezing-sphere": {
+    "en": "10d6 Cold in a 60-ft-radius Sphere, Con save halves; can freeze water.",
+    "fr": "10d6 dégâts de froid dans une Sphère de 18 m de rayon, JS de Constitution pour moitié.",
+    "es": "10d6 de frío en una esfera de 18 m de radio, salvación de Constitución mitad; puede congelar agua."
+  },
+  "spell:gaseous-form": {
+    "en": "Willing creature becomes mist: 10-ft Fly Speed, Resistance to weapon damage, can’t attack.",
+    "fr": "Créature consentante en brume : vol de 3 m, Résistance aux dégâts physiques, n’attaque pas.",
+    "es": "Una criatura voluntaria se vuelve niebla: vuela 3 m, resistencia al daño de armas, no puede atacar."
+  },
+  "spell:gate": {
+    "en": "Open a 5- to 20-ft portal to another plane, or summon a named creature.",
+    "fr": "Portail de 1,50 m à 6 m vers un autre plan, ou appelle une créature nommée.",
+    "es": "Abre un portal de 1,5 a 6 m a otro plano, o convoca a una criatura nombrada."
+  },
+  "spell:geas": {
+    "en": "Wis save or Charmed by your command; 5d10 Psychic when acting against it.",
+    "fr": "JS de Sagesse ou Charmé par votre ordre ; 5d10 dégâts psychiques s’il désobéit.",
+    "es": "Salvación de Sabiduría o hechizado por tu orden; 5d10 psíquico al actuar en su contra."
+  },
+  "spell:gentle-repose": {
+    "en": "Corpse doesn’t decay or become Undead; days don’t count toward raising limits.",
+    "fr": "Le cadavre ne se putréfie pas, ne devient pas Mort-vivant ; délai de résurrection suspendu.",
+    "es": "El cadáver no se descompone ni se vuelve muerto viviente; los días no cuentan para revivirlo."
+  },
+  "spell:giant-insect": {
+    "en": "Summon a giant centipede, spider or wasp ally that obeys your commands.",
+    "fr": "Convoque une araignée, guêpe ou millepattes géant allié qui obéit à vos ordres.",
+    "es": "Invoca un ciempiés, araña o avispa gigante aliado que obedece tus órdenes."
+  },
+  "spell:glibness": {
+    "en": "Replace Charisma check rolls with 15; truth-detecting magic finds you truthful.",
+    "fr": "Remplacez le dé d’un test de Charisme par 15 ; la magie vous juge sincère.",
+    "es": "Sustituye la tirada de tus pruebas de Carisma por 15; la magia que detecta mentiras te cree sincero."
+  },
+  "spell:globe-of-invulnerability": {
+    "en": "10-ft Emanation barrier blocks spells of level 5 or lower cast from outside.",
+    "fr": "Émanation de 3 m bloquant les sorts du 5e niveau ou inférieur lancés de l’extérieur.",
+    "es": "Barrera en una emanación de 3 m que bloquea conjuros de nivel 5 o inferior lanzados desde fuera."
+  },
+  "spell:glyph-of-warding": {
+    "en": "Hidden glyph trap: 5d8 damage in a 20-ft-radius Sphere (Dex halves) or stored spell.",
+    "fr": "Glyphe piégé : 5d8 dégâts, Sphère de 6 m de rayon, JS de Dextérité, ou sort stocké.",
+    "es": "Glifo trampa oculto: 5d8 de daño en una esfera de 6 m de radio (Destreza mitad) o un conjuro almacenado."
+  },
+  "spell:goodberry": {
+    "en": "Ten berries, each restores 1 Hit Point and nourishes for a day.",
+    "fr": "Dix baies, chacune rend 1 point de vie et nourrit une journée.",
+    "es": "Diez bayas, cada una cura 1 punto de golpe y alimenta durante un día."
+  },
+  "spell:grease": {
+    "en": "10-ft square of Difficult Terrain; Dex save or fall Prone.",
+    "fr": "Carré de 3 m en Terrain difficile ; JS de Dextérité ou À terre.",
+    "es": "Cuadrado de 3 m de terreno difícil; salvación de Destreza o derribado."
+  },
+  "spell:greater-invisibility": {
+    "en": "A creature you touch has the Invisible condition, even while attacking.",
+    "fr": "La créature touchée reçoit l’état Invisible jusqu’à la fin du sort, même en attaquant.",
+    "es": "Una criatura que tocas tiene el estado de invisible, incluso al atacar."
+  },
+  "spell:greater-restoration": {
+    "en": "Remove 1 Exhaustion level, Charmed, Petrified, a curse, or ability or Hit Point maximum reduction.",
+    "fr": "Retire 1 niveau d’Épuisement, Charmé, Pétrifié, une malédiction ou une réduction de caractéristique.",
+    "es": "Elimina 1 nivel de cansancio, hechizado, petrificado, una maldición o una reducción de característica o de pg máximos."
+  },
+  "spell:guardian-of-faith": {
+    "en": "Large guardian; enemies within 10 ft take 20 Radiant, Dex save halves; vanishes after 60.",
+    "fr": "Gardien de taille G : 20 dégâts radiants aux ennemis à 3 m, JS de Dextérité pour moitié.",
+    "es": "Guardián Grande; los enemigos a 3 m sufren 20 radiante, salvación de Destreza mitad; desaparece tras causar 60."
+  },
+  "spell:guards-and-wards": {
+    "en": "Wards up to 2,500 sq ft: fog corridors, locked doors, webbed stairs, extra spell effect.",
+    "fr": "Protège 225 mètres carrés : couloirs embrumés, portes verrouillées, escaliers à toiles, autre effet.",
+    "es": "Protege hasta 250 m2: pasillos con niebla, puertas cerradas, escaleras con telarañas, otro efecto de conjuro."
+  },
+  "spell:guidance": {
+    "en": "A willing creature adds 1d4 to ability checks with one chosen skill.",
+    "fr": "Une créature consentante ajoute 1d4 aux tests de caractéristique d’une compétence choisie.",
+    "es": "Una criatura voluntaria suma 1d4 a las pruebas de característica con una habilidad elegida."
+  },
+  "spell:guiding-bolt": {
+    "en": "Ranged spell attack, 4d6 Radiant; next attack roll against the target has Advantage.",
+    "fr": "Attaque de sort à distance, 4d6 dégâts radiants ; prochain jet d’attaque contre elle avec l’Avantage.",
+    "es": "Ataque de conjuro a distancia, 4d6 radiante; la siguiente tirada de ataque contra el objetivo tiene ventaja."
+  },
+  "spell:gust-of-wind": {
+    "en": "60-ft by 10-ft Line, Str save or pushed 15 ft away.",
+    "fr": "Ligne de 18 m sur 3 m, JS de Force ou repoussé de 4,50 m.",
+    "es": "Línea de 18 m por 3 m, salvación de Fuerza o empujado 4,5 m."
+  },
+  "spell:hallow": {
+    "en": "Up to 60-ft radius: chosen creature types can’t enter, plus one extra effect.",
+    "fr": "Rayon jusqu’à 18 m : types choisis ne peuvent entrer, plus un effet supplémentaire.",
+    "es": "Radio de hasta 18 m: los tipos de criatura elegidos no pueden entrar, más un efecto adicional."
+  },
+  "spell:hallucinatory-terrain": {
+    "en": "Natural terrain in a 150-ft Cube looks, sounds and smells like other terrain.",
+    "fr": "Un terrain naturel dans un Cube de 45 m paraît être un autre terrain.",
+    "es": "Un terreno natural en un cubo de 45 m parece, suena y huele como otro terreno."
+  },
+  "spell:harm": {
+    "en": "14d6 Necrotic and Hit Point maximum reduced by it, Con save halves only damage.",
+    "fr": "14d6 dégâts nécrotiques, maximum de points de vie réduit d’autant ; JS de Constitution pour moitié.",
+    "es": "14d6 necrótico y reduce sus pg máximos en esa cantidad, la salvación de Constitución solo reduce a la mitad el daño."
+  },
+  "spell:haste": {
+    "en": "Double Speed, +2 AC, Advantage on Dex saves, extra limited action; lethargy afterward.",
+    "fr": "Vitesse doublée, +2 à la CA, Avantage aux JS de Dextérité, action supplémentaire limitée.",
+    "es": "Velocidad doble, +2 a la CA, ventaja en salvaciones de Destreza, una acción extra limitada; letargo al final."
+  },
+  "spell:heal": {
+    "en": "Restores 70 Hit Points and ends Blinded, Deafened and Poisoned.",
+    "fr": "Rend 70 points de vie et met fin aux états Assourdi, Aveuglé et Empoisonné.",
+    "es": "Recupera 70 puntos de golpe y termina cegado, ensordecido y envenenado."
+  },
+  "spell:healing-word": {
+    "en": "A creature you see regains 2d4 + spellcasting modifier Hit Points.",
+    "fr": "Une créature que vous voyez récupère 2d4 + modificateur d’incantation points de vie.",
+    "es": "Una criatura que veas recupera 2d4 + tu modificador por aptitud mágica puntos de golpe."
+  },
+  "spell:heat-metal": {
+    "en": "Metal object deals 2d8 Fire to touching creatures; Con save or drop it.",
+    "fr": "Objet métallique brûlant : 2d8 dégâts de feu ; JS de Constitution ou le lâcher.",
+    "es": "Un objeto metálico causa 2d8 de fuego a quien lo toca; salvación de Constitución o lo suelta."
+  },
+  "spell:hellish-rebuke": {
+    "en": "Creature that damaged you takes 2d10 Fire, Dex save halves.",
+    "fr": "La créature qui vous a blessé subit 2d10 dégâts de feu, JS de Dextérité pour moitié.",
+    "es": "La criatura que te dañó sufre 2d10 de fuego, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:heroes-feast": {
+    "en": "Up to twelve creatures: Poison Resistance, immune Frightened and Poisoned, +2d10 Hit Point maximum.",
+    "fr": "Douze créatures : Résistance au poison, immunité Effrayé et Empoisonné, +2d10 au maximum de points de vie.",
+    "es": "Hasta doce criaturas: resistencia al veneno, inmunes a asustado y envenenado, +2d10 a los pg máximos."
+  },
+  "spell:heroism": {
+    "en": "Immune to Frightened; Temporary Hit Points equal to your spellcasting modifier each turn.",
+    "fr": "Immunité contre l’état Effrayé ; points de vie temporaires égaux au modificateur d’incantation chaque tour.",
+    "es": "Inmune a asustado; puntos de golpe temporales iguales a tu modificador por aptitud mágica cada turno."
+  },
+  "spell:hex": {
+    "en": "Extra 1d6 Necrotic on your hits; Disadvantage on checks with one chosen ability.",
+    "fr": "1d6 dégâts nécrotiques supplémentaires à chaque touche ; Désavantage aux tests d’une caractéristique.",
+    "es": "1d6 necrótico adicional en tus aciertos; desventaja en las pruebas con una característica elegida."
+  },
+  "spell:hideous-laughter": {
+    "en": "Wis save or Prone and Incapacitated, laughing; repeats save each turn and on damage.",
+    "fr": "JS de Sagesse ou À terre et Neutralisé, pris de fou rire ; JS répété.",
+    "es": "Salvación de Sabiduría o derribado e incapacitado por la risa; repite la salvación cada turno y al recibir daño."
+  },
+  "spell:hold-monster": {
+    "en": "One creature, Wis save or Paralyzed; repeats the save each turn.",
+    "fr": "Une créature, JS de Sagesse ou Paralysé ; JS répété à chaque tour.",
+    "es": "Una criatura, salvación de Sabiduría o paralizada; repite la salvación cada turno."
+  },
+  "spell:hold-person": {
+    "en": "One Humanoid, Wis save or Paralyzed; repeats the save each turn.",
+    "fr": "Un Humanoïde, JS de Sagesse ou Paralysé ; JS répété à chaque tour.",
+    "es": "Un humanoide, salvación de Sabiduría o paralizado; repite la salvación cada turno."
+  },
+  "spell:holy-aura": {
+    "en": "30-ft Emanation: allies have Advantage on saves, attacks against them have Disadvantage.",
+    "fr": "Émanation de 9 m : Avantage aux JS des alliés, Désavantage aux attaques contre eux.",
+    "es": "Emanación de 9 m: los aliados tienen ventaja en salvaciones y los ataques contra ellos tienen desventaja."
+  },
+  "spell:hunters-mark": {
+    "en": "Extra 1d6 Force on your hits against the marked quarry; Advantage to track it.",
+    "fr": "1d6 dégâts de force supplémentaires contre la proie marquée ; Avantage pour la trouver.",
+    "es": "1d6 de fuerza adicional en tus aciertos contra la presa marcada; ventaja para rastrearla."
+  },
+  "spell:hypnotic-pattern": {
+    "en": "30-ft Cube; Wis save or Charmed, Incapacitated and Speed 0.",
+    "fr": "Cube de 9 m ; JS de Sagesse ou Charmé, Neutralisé et Vitesse de 0.",
+    "es": "Cubo de 9 m; salvación de Sabiduría o hechizado, incapacitado y velocidad 0."
+  },
+  "spell:ice-knife": {
+    "en": "Ranged spell attack, 1d10 Piercing; then 2d6 Cold within 5 ft, Dex save negates.",
+    "fr": "Attaque de sort, 1d10 perforants ; puis 2d6 de froid à 1,50 m, JS de Dextérité annule.",
+    "es": "Ataque de conjuro a distancia, 1d10 perforante; luego 2d6 de frío a 1,5 m, la salvación de Destreza lo anula."
+  },
+  "spell:ice-storm": {
+    "en": "2d10 Bludgeoning plus 4d6 Cold in a 20-ft-radius Cylinder, Dex save halves.",
+    "fr": "2d10 contondants et 4d6 de froid, Cylindre de 6 m de rayon, JS de Dextérité moitié.",
+    "es": "2d10 contundente y 4d6 de frío en un cilindro de 6 m de radio, salvación de Destreza mitad."
+  },
+  "spell:identify": {
+    "en": "Learn a magic item's properties, charges, Attunement, and spells affecting it.",
+    "fr": "Révèle propriétés, charges, Harmonisation et sorts affectant un objet magique.",
+    "es": "Averigua las propiedades, cargas, sintonización y conjuros que afectan a un objeto mágico."
+  },
+  "spell:illusory-script": {
+    "en": "Writing readable only by chosen creatures; others see unintelligible script.",
+    "fr": "Texte lisible seulement par les créatures désignées ; incompréhensible pour les autres.",
+    "es": "Escritura legible solo para las criaturas elegidas; las demás ven un texto ininteligible."
+  },
+  "spell:imprisonment": {
+    "en": "Wis save or the target is imprisoned in one of five chosen ways.",
+    "fr": "JS de Sagesse ou la cible est emprisonnée selon l’un de cinq effets.",
+    "es": "Salvación de Sabiduría o el objetivo queda encerrado de una de cinco formas a elegir."
+  },
+  "spell:incendiary-cloud": {
+    "en": "20-ft-radius Heavily Obscured cloud, 10d8 Fire, Dex save halves; moves 10 ft.",
+    "fr": "Nuage de 6 m de rayon à Visibilité nulle, 10d8 de feu, JS de Dextérité pour moitié.",
+    "es": "Nube de 6 m de radio muy oscura, 10d8 de fuego, salvación de Destreza mitad; se mueve 3 m."
+  },
+  "spell:inflict-wounds": {
+    "en": "Touch: 2d10 Necrotic damage, Con save halves.",
+    "fr": "Contact : 2d10 dégâts nécrotiques, JS de Constitution pour moitié.",
+    "es": "Toque: 2d10 de daño necrótico, la salvación de Constitución lo reduce a la mitad."
+  },
+  "spell:insect-plague": {
+    "en": "20-ft-radius locust swarm, 4d10 Piercing, Con save halves; Difficult Terrain.",
+    "fr": "Nuée de 6 m de rayon, 4d10 perforants, JS de Constitution pour moitié ; Terrain difficile.",
+    "es": "Enjambre de langostas de 6 m de radio, 4d10 perforante, salvación de Constitución mitad; terreno difícil."
+  },
+  "spell:instant-summons": {
+    "en": "Mark an object up to 10 lb; crushing the sapphire summons it to your hand.",
+    "fr": "Marque un objet de 5 kg maximum ; broyer le saphir l’amène dans votre main.",
+    "es": "Marca un objeto de hasta 5 kg; al aplastar el zafiro aparece en tu mano."
+  },
+  "spell:invisibility": {
+    "en": "Touched creature is Invisible until it attacks, deals damage, or casts.",
+    "fr": "La créature touchée est Invisible jusqu’à ce qu’elle attaque, inflige des dégâts ou lance un sort.",
+    "es": "La criatura tocada es invisible hasta que ataca, causa daño o lanza un conjuro."
+  },
+  "spell:irresistible-dance": {
+    "en": "Wis save or Charmed dancing: Disadvantage on attacks and Dex saves; attackers have Advantage.",
+    "fr": "JS de Sagesse ou Charmé, danse : Désavantage aux attaques et JS de Dextérité.",
+    "es": "Salvación de Sabiduría o hechizado bailando: desventaja en ataques y salvaciones de Destreza; ventaja contra él."
+  },
+  "spell:jump": {
+    "en": "Willing creature can jump 30 ft once per turn for 10 ft of movement.",
+    "fr": "Une créature consentante peut sauter de 9 m par tour pour 3 m de déplacement.",
+    "es": "Una criatura voluntaria puede saltar 9 m una vez por turno gastando 3 m de movimiento."
+  },
+  "spell:knock": {
+    "en": "Unlocks one lock or bar; suppresses Arcane Lock for 10 minutes; loud knock.",
+    "fr": "Débloque une serrure ou barre ; réprime verrou magique 10 minutes ; cognement sonore.",
+    "es": "Abre una cerradura o tranca; suprime Cerradura arcana 10 minutos; golpe sonoro."
+  },
+  "spell:legend-lore": {
+    "en": "Learn a brief summary of significant lore about a famous person, place, or object.",
+    "fr": "Apprend un fait important sur une personne, un lieu ou un objet notoire.",
+    "es": "Obtienes un breve resumen de lo más relevante sobre una persona, lugar u objeto famosos."
+  },
+  "spell:lesser-restoration": {
+    "en": "Touch ends one condition: Blinded, Deafened, Paralyzed, or Poisoned.",
+    "fr": "Contact : met fin à un état parmi Assourdi, Aveuglé, Empoisonné et Paralysé.",
+    "es": "El toque termina un estado: cegado, ensordecido, paralizado o envenenado."
+  },
+  "spell:levitate": {
+    "en": "Creature or object up to 500 lb rises 20 ft; Con save resists.",
+    "fr": "Créature ou objet de 250 kg maximum s’élève de 6 m ; JS de Constitution résiste.",
+    "es": "Una criatura u objeto de hasta 250 kg se eleva 6 m; la salvación de Constitución lo resiste."
+  },
+  "spell:light": {
+    "en": "Touched object sheds Bright Light 20 ft and Dim Light 20 ft more.",
+    "fr": "L’objet touché émet une Lumière vive sur 6 m, puis faible sur 6 m.",
+    "es": "El objeto tocado emite luz brillante en 6 m y luz tenue 6 m más allá."
+  },
+  "spell:lightning-bolt": {
+    "en": "8d6 Lightning in a 100-ft-long, 5-ft-wide Line, Dex save halves.",
+    "fr": "8d6 dégâts de foudre, Ligne de 30 m sur 1,50 m, JS de Dextérité moitié.",
+    "es": "8d6 de relámpago en una línea de 30 m de largo y 1,5 m de ancho, la salvación de Destreza lo reduce a la mitad."
+  },
+  "spell:locate-animals-or-plants": {
+    "en": "Learn direction and distance to the nearest named Beast or plant within 5 miles.",
+    "fr": "Direction et distance de la Bête ou plante nommée la plus proche, à 7,5 km.",
+    "es": "Sabes la dirección y distancia a la bestia o planta nombrada más cercana a 7,5 km."
+  },
+  "spell:locate-creature": {
+    "en": "Sense the direction to a familiar creature within 1,000 ft; lead blocks it.",
+    "fr": "Perçoit la direction d’une créature familière dans un rayon de 300 m ; le plomb bloque.",
+    "es": "Percibes la dirección de una criatura conocida a 300 m; el plomo lo bloquea."
+  },
+  "spell:locate-object": {
+    "en": "Sense the direction to a familiar object within 1,000 ft; lead blocks it.",
+    "fr": "Perçoit la direction d’un objet familier dans un rayon de 300 m ; le plomb bloque.",
+    "es": "Percibes la dirección de un objeto conocido a 300 m; el plomo lo bloquea."
+  },
+  "spell:longstrider": {
+    "en": "Touched creature's Speed increases by 10 ft.",
+    "fr": "La Vitesse de la créature touchée augmente de 3 m.",
+    "es": "La velocidad de la criatura tocada aumenta en 3 m."
+  },
+  "spell:mage-armor": {
+    "en": "Unarmored willing creature's base AC becomes 13 + its Dex modifier.",
+    "fr": "La CA de base d’une créature consentante sans armure devient 13 + son modificateur de Dextérité.",
+    "es": "La CA base de una criatura voluntaria sin armadura pasa a ser 13 + su modificador por Destreza."
+  },
+  "spell:mage-hand": {
+    "en": "Spectral hand handles objects up to 10 lb; Magic action moves it 30 ft.",
+    "fr": "Main spectrale manipulant jusqu’à 5 kg ; action Magie pour la déplacer de 9 m.",
+    "es": "Una mano espectral manipula objetos de hasta 5 kg; una acción de magia la mueve 9 m."
+  },
+  "spell:magic-circle": {
+    "en": "10-ft-radius Cylinder hinders chosen creature types: no entry, Disadvantage on attacks inside.",
+    "fr": "Cylindre de 3 m de rayon bloquant les types choisis : entrée impossible, Désavantage aux attaques.",
+    "es": "Cilindro de 3 m de radio contra los tipos de criatura elegidos: no pueden entrar, desventaja en ataques dentro."
+  },
+  "spell:magic-jar": {
+    "en": "Soul enters a container; possess a Humanoid within 100 ft, Cha save resists.",
+    "fr": "Votre âme entre dans un récipient ; possédez un Humanoïde à 30 m, JS de Charisme résiste.",
+    "es": "Tu alma entra en un recipiente; posee a un humanoide a 30 m, la salvación de Carisma lo resiste."
+  },
+  "spell:magic-missile": {
+    "en": "Three darts, each auto-hitting for 1d4 + 1 Force damage.",
+    "fr": "Trois traits touchant automatiquement, chacun 1d4 + 1 dégâts de force.",
+    "es": "Tres dardos que aciertan automáticamente, cada uno 1d4 + 1 de daño de fuerza."
+  },
+  "spell:magic-mouth": {
+    "en": "Object speaks a message of up to 25 words when a chosen trigger occurs.",
+    "fr": "Un objet prononce un message de 25 mots maximum quand un déclencheur survient.",
+    "es": "Un objeto pronuncia un mensaje de hasta 25 palabras cuando se cumple una condición elegida."
+  },
+  "spell:magic-weapon": {
+    "en": "Nonmagical weapon becomes magic with +1 to attack and damage rolls.",
+    "fr": "Une arme non magique devient magique, +1 aux jets d’attaque et de dégâts.",
+    "es": "Un arma no mágica se vuelve mágica con +1 a las tiradas de ataque y de daño."
+  },
+  "spell:magnificent-mansion": {
+    "en": "Extradimensional mansion of up to 50 10-ft Cubes with 100 servants and a banquet.",
+    "fr": "Demeure extradimensionnelle de 50 Cubes de 3 m maximum, 100 serviteurs et banquet.",
+    "es": "Mansión extradimensional de hasta 50 cubos de 3 m con 100 sirvientes y un banquete."
+  },
+  "spell:major-image": {
+    "en": "Illusion up to a 20-ft Cube with sound, smell, and temperature; movable.",
+    "fr": "Illusion d’un Cube de 6 m maximum avec sons, odeurs et température ; déplaçable.",
+    "es": "Ilusión de hasta un cubo de 6 m con sonido, olor y temperatura; puedes moverla."
+  },
+  "spell:mass-cure-wounds": {
+    "en": "Up to six creatures in a 30-ft-radius Sphere regain 5d8 + spellcasting modifier HP.",
+    "fr": "Jusqu’à six créatures dans une Sphère de 9 m de rayon récupèrent 5d8 + modificateur d’incantation PV.",
+    "es": "Hasta seis criaturas en una esfera de 9 m de radio recuperan 5d8 + modificador por aptitud mágica pg."
+  },
+  "spell:mass-heal": {
+    "en": "Restore up to 700 HP divided among creatures; removes Blinded, Deafened, Poisoned.",
+    "fr": "Rend jusqu’à 700 points de vie répartis ; retire Assourdi, Aveuglé et Empoisonné.",
+    "es": "Reparte hasta 700 pg entre criaturas; elimina cegado, ensordecido y envenenado."
+  },
+  "spell:mass-healing-word": {
+    "en": "Up to six creatures regain 2d4 + spellcasting ability modifier Hit Points.",
+    "fr": "Jusqu’à six créatures récupèrent 2d4 + modificateur de caractéristique d’incantation points de vie.",
+    "es": "Hasta seis criaturas recuperan 2d4 + tu modificador por aptitud mágica puntos de golpe."
+  },
+  "spell:mass-suggestion": {
+    "en": "Up to twelve creatures, Wis save or Charmed and follow a 25-word suggestion.",
+    "fr": "Jusqu’à douze créatures, JS de Sagesse ou Charmées et suivent une suggestion de 25 mots.",
+    "es": "Hasta doce criaturas, salvación de Sabiduría o hechizadas y siguen una sugerencia de 25 palabras."
+  },
+  "spell:maze": {
+    "en": "Banish a creature into a labyrinth; DC 20 Intelligence (Investigation) check to escape.",
+    "fr": "Bannit une créature dans un labyrinthe ; test d’Intelligence (Investigation) DD 20 pour s’évader.",
+    "es": "Destierra a una criatura a un laberinto; prueba de Inteligencia (Investigación) CD 20 para escapar."
+  },
+  "spell:meld-into-stone": {
+    "en": "Merge with stone, undetectable; expelled for 6d6 or 50 Force and Prone.",
+    "fr": "Fusionnez avec la pierre, indétectable ; éjection : 6d6 ou 50 dégâts de force et À terre.",
+    "es": "Te fundes con la piedra, indetectable; expulsado sufres 6d6 o 50 de fuerza y quedas derribado."
+  },
+  "spell:mending": {
+    "en": "Repairs a single break or tear up to 1 ft in an object.",
+    "fr": "Répare une déchirure ou un bris de 30 cm maximum sur un objet.",
+    "es": "Repara una sola grieta o desgarrón de hasta 30 cm en un objeto."
+  },
+  "spell:message": {
+    "en": "Whisper a message to one creature, which can whisper a reply.",
+    "fr": "Murmurez un message à une créature, qui peut répondre par un murmure.",
+    "es": "Susurras un mensaje a una criatura, que puede responder con otro susurro."
+  },
+  "spell:meteor-swarm": {
+    "en": "Four 40-ft-radius Spheres, 20d6 Fire plus 20d6 Bludgeoning, Dex save halves.",
+    "fr": "Quatre Sphères de 12 m de rayon, 20d6 de feu et 20d6 contondants, JS de Dextérité moitié.",
+    "es": "Cuatro esferas de 12 m de radio, 20d6 de fuego y 20d6 contundente, salvación de Destreza mitad."
+  },
+  "spell:mind-blank": {
+    "en": "Immunity to Psychic damage and Charmed; blocks divination, scrying, and mind control.",
+    "fr": "Immunité contre les dégâts psychiques et l’état Charmé ; bloque divination, scrutation et contrôle mental.",
+    "es": "Inmunidad al daño psíquico y a hechizado; bloquea adivinación, escudriñamiento y control mental."
+  },
+  "spell:mind-spike": {
+    "en": "3d8 Psychic, Wis save halves; on failure you always know its location.",
+    "fr": "3d8 dégâts psychiques, JS de Sagesse pour moitié ; en cas d’échec, vous connaissez sa position.",
+    "es": "3d8 psíquico, la salvación de Sabiduría lo reduce a la mitad; si falla, siempre sabes dónde está."
+  },
+  "spell:minor-illusion": {
+    "en": "Create a sound or an image of an object within a 5-ft Cube.",
+    "fr": "Crée un son ou l’image d’un objet tenant dans un Cube de 1,50 m.",
+    "es": "Crea un sonido o la imagen de un objeto que quepa en un cubo de 1,5 m."
+  },
+  "spell:mirage-arcane": {
+    "en": "Terrain up to 1 mile square looks, sounds, and feels like other terrain.",
+    "fr": "Une zone carrée de 1,5 km de côté prend l’apparence d’un autre environnement.",
+    "es": "Un terreno de hasta 1,5 km de lado parece, suena y se siente como otro terreno."
+  },
+  "spell:mirror-image": {
+    "en": "Three duplicates; when hit, roll d6 per duplicate, 3+ destroys one instead.",
+    "fr": "Trois répliques ; quand vous êtes touché, d6 par réplique, 3 ou plus en détruit une.",
+    "es": "Tres duplicados; al acertarte, tira un d6 por duplicado, con 3+ se destruye uno en tu lugar."
+  },
+  "spell:mislead": {
+    "en": "You become Invisible and control an illusory double moving up to twice your Speed.",
+    "fr": "Vous devenez Invisible et contrôlez un double illusoire se déplaçant du double de votre Vitesse.",
+    "es": "Te vuelves invisible y controlas un doble ilusorio que se mueve hasta el doble de tu velocidad."
+  },
+  "spell:misty-step": {
+    "en": "Teleport up to 30 ft to an unoccupied space you can see.",
+    "fr": "Téléportation de 9 m maximum vers un espace inoccupé visible.",
+    "es": "Te teletransportas hasta 9 m a un espacio sin ocupar que puedas ver."
+  },
+  "spell:modify-memory": {
+    "en": "Wis save or Charmed and Incapacitated; rewrite a memory from the last 24 hours.",
+    "fr": "JS de Sagesse ou Charmé et Neutralisé ; modifiez un souvenir des 24 dernières heures.",
+    "es": "Salvación de Sabiduría o hechizado e incapacitado; reescribe un recuerdo de las últimas 24 horas."
+  },
+  "spell:moonbeam": {
+    "en": "5-ft-radius Cylinder, 2d10 Radiant, Con save halves; reverts shape-shifters; moves 60 ft.",
+    "fr": "Cylindre de 1,50 m de rayon, 2d10 radiants, JS de Constitution moitié ; déplaçable.",
+    "es": "Cilindro de 1,5 m de radio, 2d10 radiante, salvación de Constitución mitad; revierte cambiaformas; se mueve 18 m."
+  },
+  "spell:move-earth": {
+    "en": "Reshape dirt, sand, or clay in an area up to 40 ft square.",
+    "fr": "Remodèle terre, sable ou argile sur une zone de 12 m de côté maximum.",
+    "es": "Remodela tierra, arena o arcilla en una zona de hasta 12 m de lado."
+  },
+  "spell:nondetection": {
+    "en": "Target creature, place, or object can't be targeted by Divination spells or scrying.",
+    "fr": "La cible ne peut être ciblée par les sorts de Divination ni perçue par scrutation.",
+    "es": "La criatura, lugar u objeto no puede ser objetivo de conjuros de adivinación ni de escudriñamiento."
+  },
+  "spell:pass-without-trace": {
+    "en": "30-ft Emanation: chosen creatures get +10 to Dexterity (Stealth) checks, leave no tracks.",
+    "fr": "Émanation de 9 m : +10 aux tests de Dextérité (Discrétion), sans laisser de pistes.",
+    "es": "Emanación de 9 m: las criaturas elegidas tienen +10 a pruebas de Destreza (Sigilo) y no dejan rastro."
+  },
+  "spell:passwall": {
+    "en": "Passage up to 5 ft wide, 8 ft tall, 20 ft deep through wood or stone.",
+    "fr": "Passage de 1,50 m de large, 2,40 m de haut et 6 m de profondeur.",
+    "es": "Pasaje de hasta 1,5 m de ancho, 2,4 m de alto y 6 m de fondo a través de madera, yeso o piedra."
+  },
+  "spell:phantasmal-force": {
+    "en": "Int save or a 10-ft-Cube phantasm only the target perceives; 2d8 Psychic per turn.",
+    "fr": "JS d’Intelligence ou illusion (Cube de 3 m) perçue par la cible ; 2d8 psychiques par tour.",
+    "es": "Salvación de Inteligencia o un fantasma de un cubo de 3 m que solo percibe el objetivo; 2d8 psíquico por turno."
+  },
+  "spell:phantasmal-killer": {
+    "en": "4d10 Psychic, Wis save halves; on failure Disadvantage on checks and attacks, repeats.",
+    "fr": "4d10 dégâts psychiques, JS de Sagesse pour moitié ; en cas d’échec, Désavantage aux tests et attaques.",
+    "es": "4d10 psíquico, salvación de Sabiduría mitad; si falla, desventaja en pruebas y ataques, se repite."
+  },
+  "spell:phantom-steed": {
+    "en": "Large quasi-real horse with Speed 100 ft; ends if it takes damage.",
+    "fr": "Cheval quasi réel de taille G, Vitesse de 30 m ; disparaît s’il subit des dégâts.",
+    "es": "Caballo cuasi real Grande con velocidad de 30 m; termina si recibe daño."
+  },
+  "spell:planar-ally": {
+    "en": "A Celestial, Elemental or Fiend comes to serve you for payment.",
+    "fr": "Un Céleste, un Élémentaire ou un Fiélon vient vous servir contre rétribution.",
+    "es": "Un celestial, elemental o infernal acude a servirte a cambio de un pago."
+  },
+  "spell:planar-binding": {
+    "en": "Celestial, Elemental, Fey or Fiend fails a Charisma save and must serve you.",
+    "fr": "Céleste, Élémentaire, Fée ou Fiélon rate un JS de Charisme et vous sert.",
+    "es": "Un celestial, elemental, feérico o infernal falla una salvación de Carisma y debe servirte."
+  },
+  "spell:plane-shift": {
+    "en": "You and up to eight willing creatures travel to another plane.",
+    "fr": "Vous et jusqu’à huit créatures consentantes partez vers un autre plan.",
+    "es": "Tú y hasta ocho criaturas voluntarias viajáis a otro plano."
+  },
+  "spell:plant-growth": {
+    "en": "Plants in a 100-ft-radius Sphere overgrow (4 ft per foot moved), or enrich crops.",
+    "fr": "Plantes d’une Sphère de 30 m de rayon envahissantes (déplacement quadruple), ou récoltes doublées.",
+    "es": "Las plantas de una esfera de 30 m de radio crecen (4 m de movimiento por metro), o enriquecen los cultivos."
+  },
+  "spell:poison-spray": {
+    "en": "Ranged spell attack dealing 1d12 Poison damage.",
+    "fr": "Attaque de sort à distance infligeant 1d12 dégâts de poison.",
+    "es": "Ataque de conjuro a distancia que causa 1d12 de daño de veneno."
+  },
+  "spell:polymorph": {
+    "en": "Wisdom save or the creature becomes a Beast of equal or lower CR.",
+    "fr": "JS de Sagesse ou la créature devient une Bête de FP inférieur ou égal.",
+    "es": "Salvación de Sabiduría o la criatura se convierte en una bestia de VD igual o inferior."
+  },
+  "spell:power-word-heal": {
+    "en": "One creature regains all its Hit Points; Charmed, Frightened, Paralyzed, Poisoned, Stunned end.",
+    "fr": "Une créature récupère tous ses points de vie ; Charmé, Effrayé, Empoisonné, Étourdi, Paralysé cessent.",
+    "es": "Una criatura recupera todos sus pg; terminan hechizado, asustado, paralizado, envenenado y aturdido."
+  },
+  "spell:power-word-kill": {
+    "en": "Creature with 100 Hit Points or fewer dies; otherwise 12d12 Psychic damage.",
+    "fr": "Créature de 100 points de vie ou moins meurt ; sinon 12d12 dégâts psychiques.",
+    "es": "Una criatura con 100 puntos de golpe o menos muere; si no, 12d12 de daño psíquico."
+  },
+  "spell:power-word-stun": {
+    "en": "Creature with 150 Hit Points or fewer is Stunned; otherwise Speed 0.",
+    "fr": "Créature de 150 points de vie ou moins Étourdie ; sinon Vitesse 0.",
+    "es": "Una criatura con 150 puntos de golpe o menos queda aturdida; si no, velocidad 0."
+  },
+  "spell:prayer-of-healing": {
+    "en": "Up to five creatures gain a Short Rest’s benefits and regain 2d8 Hit Points.",
+    "fr": "Jusqu’à cinq créatures reçoivent un Repos court et récupèrent 2d8 points de vie.",
+    "es": "Hasta cinco criaturas obtienen los beneficios de un descanso corto y recuperan 2d8 puntos de golpe."
+  },
+  "spell:prestidigitation": {
+    "en": "Minor magical tricks: sensory effect, light candle, clean, warm, mark, small trinket.",
+    "fr": "Petits tours magiques : effet sensoriel, allumer une bougie, nettoyer, réchauffer, marquer, babiole.",
+    "es": "Trucos mágicos menores: efecto sensorial, encender una vela, limpiar, calentar, marcar, baratija."
+  },
+  "spell:prismatic-spray": {
+    "en": "Eight rays in a 60-ft Cone: random 12d6 damage, Restrained or Blinded, Dex save.",
+    "fr": "Huit rayons, Cône de 18 m : 12d6 dégâts aléatoires, Entravé ou Aveuglé, JS de Dextérité.",
+    "es": "Ocho rayos en un cono de 18 m: 12d6 de daño aleatorio, apresado o cegado, salvación de Destreza."
+  },
+  "spell:prismatic-wall": {
+    "en": "Seven-layer wall or globe; each layer crossed: 12d6 damage or a condition, Dex save.",
+    "fr": "Mur ou globe à sept couches ; chaque couche : 12d6 dégâts ou état, JS de Dextérité.",
+    "es": "Muro o globo de siete capas; cada capa cruzada: 12d6 de daño o un estado, salvación de Destreza."
+  },
+  "spell:private-sanctum": {
+    "en": "Warded 5- to 100-ft Cube blocks chosen sound, sight, divination, teleportation.",
+    "fr": "Cube de 1,50 m à 30 m bloquant au choix sons, vue, divination, téléportation.",
+    "es": "Cubo protegido de 1,5 a 30 m que bloquea a elección sonido, vista, adivinación y teletransporte."
+  },
+  "spell:produce-flame": {
+    "en": "Flame in hand sheds light; hurl it for 1d8 Fire damage, ranged spell attack.",
+    "fr": "Flamme en main qui éclaire ; lancée, attaque de sort à distance, 1d8 dégâts de feu.",
+    "es": "Una llama en tu mano da luz; lánzala con un ataque de conjuro a distancia por 1d8 de fuego."
+  },
+  "spell:programmed-illusion": {
+    "en": "Illusion up to a 30-ft Cube plays up to 5 minutes when triggered.",
+    "fr": "Illusion tenant dans un Cube de 9 m, jouée jusqu’à 5 minutes au déclenchement.",
+    "es": "Ilusión de hasta un cubo de 9 m que se reproduce hasta 5 minutos al activarse."
+  },
+  "spell:project-image": {
+    "en": "Intangible illusory copy of you; you see, hear and speak through it.",
+    "fr": "Double illusoire intangible de vous ; vous voyez, entendez et parlez à travers lui.",
+    "es": "Copia ilusoria intangible de ti; ves, oyes y hablas a través de ella."
+  },
+  "spell:protection-from-energy": {
+    "en": "Willing creature gains Resistance to Acid, Cold, Fire, Lightning or Thunder (one type).",
+    "fr": "Une créature consentante gagne la Résistance à acide, feu, foudre, froid ou tonnerre (un type).",
+    "es": "Una criatura voluntaria obtiene resistencia al ácido, frío, fuego, relámpago o trueno (un tipo)."
+  },
+  "spell:protection-from-evil-and-good": {
+    "en": "Aberrations, Celestials, Elementals, Fey, Fiends, Undead have Disadvantage attacking target; no charm, fear, possession.",
+    "fr": "Aberrations, Célestes, Élémentaires, Fées, Fiélons, Morts-vivants : Désavantage contre la cible, ni Charmé ni Effrayé.",
+    "es": "Aberraciones, celestiales, elementales, feéricos, infernales y muertos vivientes: desventaja; sin hechizo ni miedo."
+  },
+  "spell:protection-from-poison": {
+    "en": "Ends Poisoned; Advantage on saves against Poisoned and Resistance to Poison damage.",
+    "fr": "Met fin à Empoisonné ; Avantage aux JS contre Empoisonné et Résistance aux dégâts de poison.",
+    "es": "Termina envenenado; ventaja en salvaciones contra envenenado y resistencia al daño de veneno."
+  },
+  "spell:purify-food-and-drink": {
+    "en": "Removes poison and rot from nonmagical food and drink in a 5-ft-radius Sphere.",
+    "fr": "Purge poison et pourriture des aliments non magiques dans une Sphère de 1,50 m de rayon.",
+    "es": "Elimina el veneno y la podredumbre de comida y bebida no mágicas en una esfera de 1,5 m de radio."
+  },
+  "spell:raise-dead": {
+    "en": "Revives a creature dead up to 10 days at 1 Hit Point, −4 penalty.",
+    "fr": "Ramène une créature morte depuis 10 jours au plus, à 1 point de vie, malus de –4.",
+    "es": "Revive con 1 punto de golpe a una criatura muerta hace hasta 10 días, penalizador de −4."
+  },
+  "spell:ray-of-enfeeblement": {
+    "en": "Con save or Disadvantage on Strength-based D20 Tests and −1d8 on damage rolls.",
+    "fr": "JS de Constitution ou Désavantage aux Tests d20 de Force et –1d8 aux jets de dégâts.",
+    "es": "Salvación de Constitución o desventaja en pruebas con d20 de Fuerza y −1d8 a las tiradas de daño."
+  },
+  "spell:ray-of-frost": {
+    "en": "Ranged spell attack: 1d8 Cold damage and Speed reduced by 10 feet.",
+    "fr": "Attaque de sort à distance : 1d8 dégâts de froid et Vitesse réduite de 3 m.",
+    "es": "Ataque de conjuro a distancia: 1d8 de frío y velocidad reducida en 3 m."
+  },
+  "spell:ray-of-sickness": {
+    "en": "Ranged spell attack: 2d8 Poison damage and Poisoned until end of your next turn.",
+    "fr": "Attaque de sort à distance : 2d8 dégâts de poison et Empoisonné.",
+    "es": "Ataque de conjuro a distancia: 2d8 de veneno y envenenado hasta el final de tu siguiente turno."
+  },
+  "spell:regenerate": {
+    "en": "Creature regains 4d8 + 15 Hit Points, then 1 per turn; severed parts regrow.",
+    "fr": "Une créature récupère 4d8 + 15 points de vie, puis 1 par tour ; membres sectionnés repoussent.",
+    "es": "Una criatura recupera 4d8 + 15 pg, luego 1 por turno; las partes cortadas vuelven a crecer."
+  },
+  "spell:reincarnate": {
+    "en": "Humanoid dead up to 10 days returns in a new body of random species.",
+    "fr": "Un Humanoïde mort depuis 10 jours au plus revit dans un corps d’espèce aléatoire.",
+    "es": "Un humanoide muerto hace hasta 10 días vuelve en un cuerpo nuevo de especie aleatoria."
+  },
+  "spell:remove-curse": {
+    "en": "Ends all curses on a creature or object; breaks Attunement to cursed items.",
+    "fr": "Met fin aux malédictions d’une créature ou d’un objet ; rompt l’Harmonisation aux objets maudits.",
+    "es": "Termina todas las maldiciones de una criatura u objeto; rompe la sintonización con objetos malditos."
+  },
+  "spell:resilient-sphere": {
+    "en": "Large or smaller target enclosed in an impenetrable sphere, Dex save negates.",
+    "fr": "Cible de taille G ou inférieure enfermée dans une Sphère impénétrable, JS de Dextérité pour annuler.",
+    "es": "Un objetivo Grande o menor queda encerrado en una esfera impenetrable, la salvación de Destreza lo anula."
+  },
+  "spell:resistance": {
+    "en": "Willing creature reduces damage of one chosen type by 1d4, once per turn.",
+    "fr": "Une créature consentante réduit de 1d4 les dégâts d’un type choisi, une fois par tour.",
+    "es": "Una criatura voluntaria reduce en 1d4 el daño de un tipo elegido, una vez por turno."
+  },
+  "spell:resurrection": {
+    "en": "Revives a creature dead up to a century with all Hit Points.",
+    "fr": "Ramène une créature morte depuis un siècle au plus, avec tous ses points de vie.",
+    "es": "Revive con todos sus puntos de golpe a una criatura muerta hace hasta un siglo."
+  },
+  "spell:reverse-gravity": {
+    "en": "Gravity reverses in a 50-ft-radius, 100-ft-high Cylinder; Dex save to grab hold.",
+    "fr": "Gravité inversée, Cylindre de 15 m de rayon et 30 m de haut, JS de Dextérité.",
+    "es": "La gravedad se invierte en un cilindro de 15 m de radio y 30 m de alto; salvación de Destreza para agarrarse."
+  },
+  "spell:revivify": {
+    "en": "Revives a creature dead within the last minute with 1 Hit Point.",
+    "fr": "Ramène à la vie une créature morte depuis moins d’une minute, à 1 point de vie.",
+    "es": "Revive con 1 punto de golpe a una criatura muerta en el último minuto."
+  },
+  "spell:rope-trick": {
+    "en": "Rope leads to an extradimensional space holding up to eight Medium creatures.",
+    "fr": "Une corde mène à un espace extradimensionnel pour huit créatures de taille M au plus.",
+    "es": "Una cuerda lleva a un espacio extradimensional para hasta ocho criaturas Medianas."
+  },
+  "spell:sacred-flame": {
+    "en": "1d8 Radiant damage, Dex save negates; cover gives no benefit.",
+    "fr": "1d8 dégâts radiants, JS de Dextérité pour annuler ; les Abris n’aident pas.",
+    "es": "1d8 de daño radiante, la salvación de Destreza lo anula; la cobertura no ayuda."
+  },
+  "spell:sanctuary": {
+    "en": "Attackers of the warded creature must succeed on a Wisdom save or change target.",
+    "fr": "Qui cible la créature protégée doit réussir un JS de Sagesse ou changer de cible.",
+    "es": "Quien ataque a la criatura protegida debe superar una salvación de Sabiduría o cambiar de objetivo."
+  },
+  "spell:scorching-ray": {
+    "en": "Three rays, ranged spell attack each, 2d6 Fire damage per hit.",
+    "fr": "Trois rayons, une attaque de sort à distance chacun, 2d6 dégâts de feu par touche.",
+    "es": "Tres rayos, un ataque de conjuro a distancia cada uno, 2d6 de fuego por acierto."
+  },
+  "spell:scrying": {
+    "en": "See and hear a creature on your plane; Wisdom save modified by your knowledge.",
+    "fr": "Voir et entendre une créature de votre plan ; JS de Sagesse modifié selon votre connaissance.",
+    "es": "Ves y oyes a una criatura de tu plano; su salvación de Sabiduría se modifica según cuánto la conoces."
+  },
+  "spell:searing-smite": {
+    "en": "Hit deals extra 1d6 Fire, then 1d6 per turn until a Con save.",
+    "fr": "Attaque : 1d6 dégâts de feu en plus, puis 1d6 par tour jusqu’à un JS de Constitution réussi.",
+    "es": "El acierto causa 1d6 de fuego adicional, luego 1d6 por turno hasta superar una salvación de Constitución."
+  },
+  "spell:secret-chest": {
+    "en": "Hide a chest of up to 12 cubic feet on the Ethereal Plane, recallable.",
+    "fr": "Cache sur le Plan Éthéré un coffre de 0,3 m3 au plus, rappelable à volonté.",
+    "es": "Oculta en el Plano Etéreo un cofre de hasta 0,34 m3, que puedes recuperar."
+  },
+  "spell:see-invisibility": {
+    "en": "You see Invisible creatures and objects and into the Ethereal Plane.",
+    "fr": "Vous voyez les créatures et objets Invisibles ainsi que le Plan Éthéré.",
+    "es": "Ves criaturas y objetos invisibles, y el interior del Plano Etéreo."
+  },
+  "spell:seeming": {
+    "en": "Change the appearance of chosen creatures; unwilling targets resist with a Charisma save.",
+    "fr": "Change l’aspect des créatures choisies ; une cible non consentante résiste par un JS de Charisme.",
+    "es": "Cambia el aspecto de las criaturas elegidas; los objetivos no voluntarios resisten con una salvación de Carisma."
+  },
+  "spell:sending": {
+    "en": "Send a 25-word message to a known creature, which can reply.",
+    "fr": "Envoie un message de 25 mots au plus à une créature connue, qui peut répondre.",
+    "es": "Envía un mensaje de 25 palabras a una criatura conocida, que puede responder."
+  },
+  "spell:sequester": {
+    "en": "Object or willing creature becomes Invisible, undetectable by divination; creatures fall Unconscious.",
+    "fr": "Objet ou créature consentante devient Invisible, indétectable par divination ; une créature est Inconsciente.",
+    "es": "Un objeto o criatura voluntaria se vuelve invisible e indetectable por adivinación; las criaturas quedan inconscientes."
+  },
+  "spell:shapechange": {
+    "en": "Become a creature of CR up to your level; its Hit Points become temporary.",
+    "fr": "Devenez une créature de FP au plus votre niveau ; ses points de vie deviennent temporaires.",
+    "es": "Adopta la forma de una criatura de VD hasta tu nivel; sus puntos de golpe pasan a ser temporales."
+  },
+  "spell:shatter": {
+    "en": "3d8 Thunder in a 10-ft-radius Sphere, Con save halves; Constructs have Disadvantage.",
+    "fr": "3d8 dégâts de tonnerre, Sphère de 3 m de rayon, JS de Constitution pour moitié.",
+    "es": "3d8 de trueno en una esfera de 3 m de radio, salvación de Constitución mitad; los constructos tienen desventaja."
+  },
+  "spell:shield": {
+    "en": "Reaction: +5 to AC until your next turn, immune to Magic Missile.",
+    "fr": "Réaction : +5 à la CA jusqu’à votre tour suivant, immunité à projectile magique.",
+    "es": "Reacción: +5 a la CA hasta tu siguiente turno, inmune a Proyectil mágico."
+  },
+  "spell:shield-of-faith": {
+    "en": "One creature gains +2 to AC for the duration.",
+    "fr": "Une créature gagne +2 à la CA pour toute la durée.",
+    "es": "Una criatura obtiene +2 a la CA mientras dure el conjuro."
+  },
+  "spell:shillelagh": {
+    "en": "Club or Quarterstaff uses your spellcasting ability, d8 damage die, Force damage optional.",
+    "fr": "Gourdin ou bâton de combat : caractéristique d’incantation, dé de dégâts d8, dégâts de force possibles.",
+    "es": "Un garrote o bastón usa tu aptitud mágica, dado de daño d8, daño de fuerza opcional."
+  },
+  "spell:shining-smite": {
+    "en": "Hit deals extra 2d6 Radiant damage; target glows, attacks against it have Advantage.",
+    "fr": "L’attaque inflige 2d6 dégâts radiants en plus ; la cible luit, attaques contre elle avec Avantage.",
+    "es": "El acierto causa 2d6 radiante adicional; el objetivo brilla y los ataques contra él tienen ventaja."
+  },
+  "spell:shocking-grasp": {
+    "en": "Melee spell attack: 1d8 Lightning damage and target can’t make Opportunity Attacks.",
+    "fr": "Attaque de sort au corps à corps : 1d8 dégâts de foudre, plus d’attaque d’opportunité.",
+    "es": "Ataque de conjuro cuerpo a cuerpo: 1d8 de relámpago y el objetivo no puede hacer ataques de oportunidad."
+  },
+  "spell:silence": {
+    "en": "No sound in a 20-ft-radius Sphere: Deafened, Thunder immunity, no Verbal spells.",
+    "fr": "Aucun son dans une Sphère de 6 m de rayon : Assourdi, immunité au tonnerre, sorts verbaux impossibles.",
+    "es": "Sin sonido en una esfera de 6 m de radio: ensordecido, inmune al trueno, sin conjuros verbales."
+  },
+  "spell:silent-image": {
+    "en": "Visual illusion up to a 15-ft Cube that you can move; Investigation reveals it.",
+    "fr": "Illusion visuelle tenant dans un Cube de 4,50 m, déplaçable ; Investigation la perce.",
+    "es": "Ilusión visual de hasta un cubo de 4,5 m que puedes mover; Investigación la descubre."
+  },
+  "spell:simulacrum": {
+    "en": "Snow duplicate of a Beast or Humanoid with half Hit Points obeys you.",
+    "fr": "Un double de neige d’une Bête ou d’un Humanoïde, à moitié de points de vie, vous obéit.",
+    "es": "Un duplicado de nieve de una bestia o humanoide con la mitad de pg te obedece."
+  },
+  "spell:sleep": {
+    "en": "Creatures in a 5-ft-radius Sphere fail Wisdom saves: Incapacitated, then Unconscious.",
+    "fr": "Créatures dans une Sphère de 1,50 m ratant un JS de Sagesse : Neutralisé, puis Inconscient.",
+    "es": "Las criaturas en una esfera de 1,5 m de radio que fallen la salvación de Sabiduría: incapacitadas, luego inconscientes."
+  },
+  "spell:sleet-storm": {
+    "en": "20-ft-radius Cylinder: Heavily Obscured, Difficult Terrain, Dex save or Prone.",
+    "fr": "Cylindre de 6 m de diamètre : Visibilité nulle, Terrain difficile, JS de Dextérité ou À terre.",
+    "es": "Cilindro de 6 m de radio: muy oscuro, terreno difícil, salvación de Destreza o derribado."
+  },
+  "spell:slow": {
+    "en": "Up to six creatures, Wisdom save: half Speed, −2 AC, no Reactions.",
+    "fr": "Jusqu’à six créatures, JS de Sagesse : Vitesse moitié, –2 CA, sans Réactions.",
+    "es": "Hasta seis criaturas, salvación de Sabiduría: mitad de velocidad, −2 a la CA, sin reacciones."
+  },
+  "spell:sorcerous-burst": {
+    "en": "Ranged spell attack, 1d8 damage of a chosen type, 8s explode.",
+    "fr": "Attaque de sort à distance, 1d8 dégâts du type choisi, relance sur un 8.",
+    "es": "Ataque de conjuro a distancia, 1d8 de daño del tipo elegido; los 8 explotan."
+  },
+  "spell:spare-the-dying": {
+    "en": "A creature at 0 Hit Points becomes Stable.",
+    "fr": "Une créature à 0 point de vie devient Stabilisée.",
+    "es": "Una criatura a 0 puntos de golpe pasa a estar estable."
+  },
+  "spell:speak-with-animals": {
+    "en": "Understand and talk with Beasts, and use Influence on them.",
+    "fr": "Vous comprenez les Bêtes, leur parlez et pouvez les influencer.",
+    "es": "Entiendes y hablas con las bestias, y puedes usar la acción de influir con ellas."
+  },
+  "spell:speak-with-dead": {
+    "en": "A corpse answers up to five questions with what it knew.",
+    "fr": "Un cadavre répond à cinq questions maximum selon ce qu’il savait.",
+    "es": "Un cadáver responde hasta cinco preguntas con lo que sabía."
+  },
+  "spell:speak-with-plants": {
+    "en": "Plants in a 30-ft Emanation talk, obey, and alter Difficult Terrain.",
+    "fr": "Les plantes d’une Émanation de 9 m parlent, obéissent et modifient le Terrain difficile.",
+    "es": "Las plantas de una emanación de 9 m hablan, obedecen y alteran el terreno difícil."
+  },
+  "spell:spider-climb": {
+    "en": "Willing creature walks on walls and ceilings, Climb Speed equals Speed.",
+    "fr": "Une créature consentante marche aux murs et plafonds, Vitesse d’escalade égale à sa Vitesse.",
+    "es": "Una criatura voluntaria camina por paredes y techos, velocidad trepando igual a su velocidad."
+  },
+  "spell:spike-growth": {
+    "en": "20-ft-radius Difficult Terrain, 2d4 Piercing per 5 ft moved, camouflaged.",
+    "fr": "Terrain difficile de 6 m de rayon, 2d4 dégâts perforants par 1,50 m parcouru.",
+    "es": "Terreno difícil de 6 m de radio, 2d4 perforante por cada 1,5 m recorrido, camuflado."
+  },
+  "spell:spirit-guardians": {
+    "en": "15-ft Emanation halves foes’ Speed, 3d8 Radiant or Necrotic, Wis save halves.",
+    "fr": "Émanation de 4,50 m, Vitesse réduite de moitié, 3d8 radiants ou nécrotiques, JS de Sagesse pour moitié.",
+    "es": "Emanación de 4,5 m: mitad de velocidad a los enemigos, 3d8 radiante o necrótico, salvación de Sabiduría mitad."
+  },
+  "spell:spiritual-weapon": {
+    "en": "Spectral weapon: melee spell attack for 1d8 + modifier Force, Bonus Action repeats.",
+    "fr": "Arme spectrale : attaque de sort au corps à corps, 1d8 + modificateur dégâts de force.",
+    "es": "Arma espectral: ataque de conjuro cuerpo a cuerpo de 1d8 + modificador de fuerza; repite con acción adicional."
+  },
+  "spell:starry-wisp": {
+    "en": "Ranged spell attack, 1d8 Radiant, target glows and can’t be Invisible.",
+    "fr": "Attaque de sort à distance, 1d8 dégâts radiants, cible lumineuse, jamais Invisible.",
+    "es": "Ataque de conjuro a distancia, 1d8 radiante; el objetivo brilla y no puede ser invisible."
+  },
+  "spell:stinking-cloud": {
+    "en": "20-ft-radius Heavily Obscured gas, Con save or Poisoned, no actions.",
+    "fr": "Sphère de 6 m de rayon, JS de Constitution ou Empoisonné, sans action.",
+    "es": "Gas de 6 m de radio muy oscuro, salvación de Constitución o envenenado, sin acciones."
+  },
+  "spell:stone-shape": {
+    "en": "Reshape a Medium stone object or 5-ft stone section at will.",
+    "fr": "Modelez un objet de pierre de taille M ou une section de 1,50 m.",
+    "es": "Moldea a voluntad un objeto de piedra Mediano o una sección de piedra de 1,5 m."
+  },
+  "spell:stoneskin": {
+    "en": "Willing creature gains Resistance to Bludgeoning, Piercing, and Slashing damage.",
+    "fr": "Une créature consentante a la Résistance aux dégâts contondants, perforants et tranchants.",
+    "es": "Una criatura voluntaria obtiene resistencia al daño contundente, cortante y perforante."
+  },
+  "spell:storm-of-vengeance": {
+    "en": "300-ft-radius storm: Thunder and Deafened, then acid, 10d6 lightning bolts, hail, freezing rain.",
+    "fr": "Tempête de 90 m de rayon : tonnerre, Assourdi, acide, éclairs de 10d6, grêle, froid.",
+    "es": "Tormenta de 90 m de radio: trueno y ensordecido, luego ácido, relámpagos de 10d6, granizo, lluvia helada."
+  },
+  "spell:suggestion": {
+    "en": "Wis save or Charmed, target follows a 25-word suggested course of action.",
+    "fr": "JS de Sagesse ou Charmé, la cible suit une suggestion de 25 mots maximum.",
+    "es": "Salvación de Sabiduría o hechizado, el objetivo sigue un curso de acción sugerido de 25 palabras."
+  },
+  "spell:summon-dragon": {
+    "en": "Summons a Draconic Spirit ally that obeys your verbal commands.",
+    "fr": "Convoque un esprit draconique allié qui obéit à vos instructions verbales.",
+    "es": "Invoca un espíritu dracónico aliado que obedece tus órdenes verbales."
+  },
+  "spell:sunbeam": {
+    "en": "60-ft Line, 6d8 Radiant and Blinded, Con save halves, repeatable each turn.",
+    "fr": "Ligne de 18 m, 6d8 dégâts radiants et Aveuglé, JS de Constitution pour moitié.",
+    "es": "Línea de 18 m, 6d8 radiante y cegado, salvación de Constitución mitad; repetible cada turno."
+  },
+  "spell:sunburst": {
+    "en": "12d6 Radiant in a 60-ft-radius Sphere and Blinded, Con save halves.",
+    "fr": "Sphère de 18 m de rayon, 12d6 dégâts radiants et Aveuglé, JS de Constitution pour moitié.",
+    "es": "12d6 radiante en una esfera de 18 m de radio y cegado, la salvación de Constitución lo reduce a la mitad."
+  },
+  "spell:symbol": {
+    "en": "Hidden glyph triggers a 60-ft effect: death 10d10, discord, fear, pain, sleep, stunning.",
+    "fr": "Glyphe caché, effet sur 18 m : mort 10d10, discorde, terreur, douleur, sommeil, étourdissement.",
+    "es": "Glifo oculto con efecto de 18 m: muerte 10d10, discordia, miedo, dolor, sueño, aturdimiento."
+  },
+  "spell:telekinesis": {
+    "en": "Move a Huge or smaller creature or object 30 ft, Str save resists.",
+    "fr": "Déplacez de 9 m une créature ou un objet de taille TG, JS de Force.",
+    "es": "Mueve 9 m una criatura u objeto Enorme o menor, la salvación de Fuerza lo resiste."
+  },
+  "spell:telepathic-bond": {
+    "en": "Up to eight willing creatures share telepathy at any distance, same plane.",
+    "fr": "Jusqu’à huit créatures consentantes communiquent par télépathie à toute distance, sur le même plan.",
+    "es": "Hasta ocho criaturas voluntarias comparten telepatía a cualquier distancia, en el mismo plano."
+  },
+  "spell:teleport": {
+    "en": "Teleports you and up to eight willing creatures; familiarity decides accuracy.",
+    "fr": "Vous téléporte avec huit créatures consentantes ; la familiarité décide de la précision.",
+    "es": "Te teletransporta con hasta ocho criaturas voluntarias; lo familiar del destino decide la precisión."
+  },
+  "spell:teleportation-circle": {
+    "en": "Opens a portal to a known permanent teleportation circle until your next turn.",
+    "fr": "Ouvre un portail vers un cercle de téléportation permanent connu jusqu’à votre tour suivant.",
+    "es": "Abre un portal a un círculo de teletransportación permanente conocido hasta tu siguiente turno."
+  },
+  "spell:thaumaturgy": {
+    "en": "Minor wonder: booming voice, flames, tremors, sounds, eyes, or doors slam.",
+    "fr": "Prodige mineur : voix retentissante, flammes, secousse, bruit, yeux modifiés ou porte qui claque.",
+    "es": "Pequeño milagro: voz atronadora, llamas, temblores, sonidos, ojos alterados o puertas que se cierran."
+  },
+  "spell:thunderwave": {
+    "en": "15-ft Cube, 2d8 Thunder and pushed 10 ft, Con save halves.",
+    "fr": "Cube de 4,50 m, 2d8 dégâts de tonnerre, repoussé de 3 m, JS de Constitution pour moitié.",
+    "es": "Cubo de 4,5 m, 2d8 de trueno y empujado 3 m, la salvación de Constitución lo reduce a la mitad."
+  },
+  "spell:time-stop": {
+    "en": "You take 1d4 + 1 turns in a row while time stands still.",
+    "fr": "Vous jouez 1d4 + 1 tours d’affilée pendant que le temps s’arrête.",
+    "es": "Haces 1d4 + 1 turnos seguidos mientras el tiempo se detiene."
+  },
+  "spell:tiny-hut": {
+    "en": "10-ft Emanation shelter, blocks outsiders and spells of level 3 or lower.",
+    "fr": "Abri en Émanation de 3 m, bloque intrus et sorts du 3e niveau ou inférieur.",
+    "es": "Refugio en una emanación de 3 m, bloquea a los de fuera y conjuros de nivel 3 o inferior."
+  },
+  "spell:tongues": {
+    "en": "Target understands any language and is understood by any speaker.",
+    "fr": "La cible comprend toute langue et se fait comprendre de tous.",
+    "es": "El objetivo entiende cualquier idioma y cualquier hablante lo entiende."
+  },
+  "spell:transport-via-plants": {
+    "en": "Links a Large plant to a known plant anywhere on the same plane.",
+    "fr": "Relie une plante de taille G à une plante connue du même plan.",
+    "es": "Une una planta Grande con una planta conocida en cualquier lugar del mismo plano."
+  },
+  "spell:tree-stride": {
+    "en": "Step into a tree and exit another of the same kind within 500 ft.",
+    "fr": "Passez d’un arbre à un autre de même essence à 150 m maximum.",
+    "es": "Entra en un árbol y sal por otro del mismo tipo a 150 m o menos."
+  },
+  "spell:true-polymorph": {
+    "en": "Turn a creature or object into another creature or object, Wis save resists.",
+    "fr": "Change une créature ou un objet en autre créature ou objet, JS de Sagesse.",
+    "es": "Transforma una criatura u objeto en otra criatura u objeto, la salvación de Sabiduría lo resiste."
+  },
+  "spell:true-resurrection": {
+    "en": "Revives a creature dead up to 200 years with all Hit Points.",
+    "fr": "Ranime une créature morte depuis 200 ans maximum, avec tous ses points de vie.",
+    "es": "Revive con todos sus puntos de golpe a una criatura muerta hace hasta 200 años."
+  },
+  "spell:true-seeing": {
+    "en": "Willing creature gains Truesight with a range of 120 ft.",
+    "fr": "Une créature consentante acquiert la Vision lucide sur 36 m.",
+    "es": "Una criatura voluntaria obtiene visión verdadera hasta 36 m."
+  },
+  "spell:true-strike": {
+    "en": "One weapon attack using your spellcasting ability, Radiant damage optional.",
+    "fr": "Une attaque d’arme basée sur votre caractéristique d’incantation, dégâts radiants au choix.",
+    "es": "Un ataque con arma usando tu aptitud mágica, daño radiante opcional."
+  },
+  "spell:tsunami": {
+    "en": "300-ft wall of water, 6d10 Bludgeoning, Str save halves, then moves and shrinks.",
+    "fr": "Muraille d’eau de 90 m, 6d10 dégâts contondants, JS de Force pour moitié, puis avance.",
+    "es": "Muro de agua de 90 m, 6d10 contundente, salvación de Fuerza mitad; luego avanza y mengua."
+  },
+  "spell:unseen-servant": {
+    "en": "Invisible force with AC 10, 1 Hit Point performs simple tasks.",
+    "fr": "Force Invisible, CA 10, 1 point de vie, accomplit des tâches rudimentaires.",
+    "es": "Una fuerza invisible con CA 10 y 1 punto de golpe realiza tareas sencillas."
+  },
+  "spell:vampiric-touch": {
+    "en": "Melee spell attack, 3d6 Necrotic, you regain half; repeat with Magic action.",
+    "fr": "Attaque de sort au corps à corps, 3d6 dégâts nécrotiques, vous récupérez la moitié.",
+    "es": "Ataque de conjuro cuerpo a cuerpo, 3d6 necrótico, recuperas la mitad; repite con una acción de magia."
+  },
+  "spell:vicious-mockery": {
+    "en": "Wis save or 1d6 Psychic and Disadvantage on its next attack roll.",
+    "fr": "JS de Sagesse ou 1d6 dégâts psychiques et Désavantage au prochain jet d’attaque.",
+    "es": "Salvación de Sabiduría o 1d6 psíquico y desventaja en su siguiente tirada de ataque."
+  },
+  "spell:vitriolic-sphere": {
+    "en": "10d4 Acid in a 20-ft-radius Sphere plus 5d4 later, Dex save halves initial.",
+    "fr": "Sphère de 6 m de rayon, 10d4 dégâts d’acide puis 5d4, JS de Dextérité pour moitié.",
+    "es": "10d4 de ácido en una esfera de 6 m de radio y 5d4 después, la salvación de Destreza reduce a la mitad el inicial."
+  },
+  "spell:wall-of-fire": {
+    "en": "60-ft fire wall, 5d8 Fire, Dex save halves; one side burns within 10 ft.",
+    "fr": "Mur de feu de 18 m, 5d8 dégâts de feu, JS de Dextérité pour moitié.",
+    "es": "Muro de fuego de 18 m, 5d8 de fuego, salvación de Destreza mitad; un lado quema a 3 m."
+  },
+  "spell:wall-of-force": {
+    "en": "Invisible, indestructible wall, dome, or globe of force; Disintegrate destroys it.",
+    "fr": "Mur, dôme ou globe de force invisible et indestructible ; désintégration le détruit.",
+    "es": "Muro, cúpula o globo de fuerza invisible e indestructible; Desintegrar lo destruye."
+  },
+  "spell:wall-of-ice": {
+    "en": "Ice wall of ten 10-ft panels, 10d6 Cold on appearing, Dex save halves.",
+    "fr": "Mur de glace de dix pans de 3 m, 10d6 dégâts de froid, JS de Dextérité.",
+    "es": "Muro de hielo de diez paneles de 3 m, 10d6 de frío al aparecer, salvación de Destreza mitad."
+  },
+  "spell:wall-of-stone": {
+    "en": "Stone wall of ten 10-ft panels, permanent if Concentration lasts the full duration.",
+    "fr": "Mur de pierre de dix pans de 3 m, permanent si Concentration maintenue jusqu’au bout.",
+    "es": "Muro de piedra de diez paneles de 3 m, permanente si mantienes la concentración toda la duración."
+  },
+  "spell:wall-of-thorns": {
+    "en": "60-ft thorn wall, 7d8 Piercing, Dex save halves; crossing costs 4 ft per foot.",
+    "fr": "Mur d’épines de 18 m, 7d8 dégâts perforants, JS de Dextérité pour moitié.",
+    "es": "Muro de espinas de 18 m, 7d8 perforante, salvación de Destreza mitad; cruzarlo cuesta 4 m por metro."
+  },
+  "spell:warding-bond": {
+    "en": "Ally gains +1 AC and saves, Resistance to all damage; you share it.",
+    "fr": "Allié : +1 à la CA et aux JS, Résistance à tous les dégâts, dégâts partagés.",
+    "es": "Un aliado gana +1 a la CA y salvaciones, resistencia a todo el daño; tú compartes ese daño."
+  },
+  "spell:water-breathing": {
+    "en": "Up to ten willing creatures can breathe underwater.",
+    "fr": "Jusqu’à dix créatures consentantes peuvent respirer sous l’eau.",
+    "es": "Hasta diez criaturas voluntarias pueden respirar bajo el agua."
+  },
+  "spell:water-walk": {
+    "en": "Up to ten willing creatures walk on any liquid surface.",
+    "fr": "Jusqu’à dix créatures consentantes marchent sur toute surface liquide.",
+    "es": "Hasta diez criaturas voluntarias caminan sobre cualquier superficie líquida."
+  },
+  "spell:web": {
+    "en": "20-ft Cube of webs, Difficult Terrain, Dex save or Restrained; flammable.",
+    "fr": "Cube de toile de 6 m, Terrain difficile, JS de Dextérité ou Entravé.",
+    "es": "Cubo de telarañas de 6 m, terreno difícil, salvación de Destreza o apresado; inflamable."
+  },
+  "spell:weird": {
+    "en": "30-ft-radius Sphere, 10d10 Psychic and Frightened, Wis save halves, 5d10 each turn.",
+    "fr": "Sphère de 9 m de rayon, 10d10 dégâts psychiques et Effrayé, JS de Sagesse.",
+    "es": "Esfera de 9 m de radio, 10d10 psíquico y asustado, salvación de Sabiduría mitad, 5d10 cada turno."
+  },
+  "spell:wind-walk": {
+    "en": "You and ten willing creatures become clouds: Fly Speed 300 ft, Resistance.",
+    "fr": "Vous et dix créatures consentantes en nuées : Vitesse de vol de 90 m.",
+    "es": "Tú y diez criaturas voluntarias os volvéis nubes: velocidad volando de 90 m, resistencia."
+  },
+  "spell:wind-wall": {
+    "en": "50-ft wind wall, 4d8 Bludgeoning, Str save halves; deflects ordinary projectiles.",
+    "fr": "Mur de vent de 15 m, 4d8 dégâts contondants, JS de Force pour moitié.",
+    "es": "Muro de viento de 15 m, 4d8 contundente, salvación de Fuerza mitad; desvía proyectiles normales."
+  },
+  "spell:wish": {
+    "en": "Duplicate any spell of level 8 or lower, or alter reality at a risk.",
+    "fr": "Reproduit tout sort du 8e niveau ou inférieur, ou remodèle la réalité, avec risques.",
+    "es": "Duplica cualquier conjuro de nivel 8 o inferior, o altera la realidad con riesgo."
+  },
+  "spell:word-of-recall": {
+    "en": "You and up to five willing creatures teleport to your designated sanctuary.",
+    "fr": "Vous et jusqu’à cinq créatures consentantes vous téléportez à votre sanctuaire.",
+    "es": "Tú y hasta cinco criaturas voluntarias os teletransportáis a tu santuario designado."
+  },
+  "spell:zone-of-truth": {
+    "en": "15-ft-radius Sphere, Cha save or can’t speak a deliberate lie.",
+    "fr": "Sphère de 4,50 m de rayon, JS de Charisme ou impossible de mentir sciemment.",
+    "es": "Esfera de 4,5 m de radio, salvación de Carisma o no puede decir una mentira deliberada."
+  }
+}

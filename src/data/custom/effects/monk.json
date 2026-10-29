@@ -1,0 +1,394 @@
+[
+  {
+    "id": "monk:martial-arts",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "name": {
+          "en": "Bonus Unarmed Strike",
+          "fr": "Attaque à mains nues bonus",
+          "es": "Ataque sin armas adicional"
+        },
+        "trigger": {
+          "en": "One Unarmed Strike with your Martial Arts die.",
+          "fr": "Une Attaque à mains nues avec votre dé d’Arts martiaux.",
+          "es": "Un ataque sin armas con tu dado de Artes marciales."
+        }
+      }
+    ],
+    "flags": ["martial-arts"],
+    "source": { "page": 50, "frPage": 65, "section": "Classes > Monk > Level 1: Martial Arts" }
+  },
+  {
+    "id": "monk:unarmored-defense",
+    "acFormula": { "abilities": ["dex", "wis"], "noArmor": true, "noShield": true },
+    "source": { "page": 50, "frPage": 66, "section": "Classes > Monk > Level 1: Unarmored Defense" }
+  },
+  {
+    "id": "monk:monks-focus",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "name": { "en": "Flurry of Blows", "fr": "Déluge de coups", "es": "Ráfaga de golpes" },
+        "trigger": { "en": "Two Unarmed Strikes.", "fr": "Deux Attaques à mains nues.", "es": "Dos ataques sin armas." }
+      },
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "actions": ["disengage"],
+        "name": { "en": "Patient Defense", "fr": "Patience défensive", "es": "Defensa paciente" },
+        "trigger": { "en": "Disengage for free.", "fr": "Désengagement sans coût.", "es": "Destrabarse sin coste." }
+      },
+      {
+        "kind": "bonus-action",
+        "name": {
+          "en": "Patient Defense (1 Focus Point)",
+          "fr": "Patience défensive (1 point de Credo)",
+          "es": "Defensa paciente (1 punto de concentración)"
+        },
+        "trigger": { "en": "Disengage and Dodge.", "fr": "Désengagement et Esquive.", "es": "Destrabarse y Esquivar." }
+      },
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "actions": ["dash"],
+        "name": { "en": "Step of the Wind", "fr": "Porté par le vent", "es": "Paso del viento" },
+        "trigger": { "en": "Dash for free.", "fr": "Pointe sans coût.", "es": "Correr sin coste." }
+      },
+      {
+        "kind": "bonus-action",
+        "actions": ["dash"],
+        "name": {
+          "en": "Step of the Wind (1 Focus Point)",
+          "fr": "Porté par le vent (1 point de Credo)",
+          "es": "Paso del viento (1 punto de concentración)"
+        },
+        "trigger": {
+          "en": "Disengage and Dash; your jump distance is doubled this turn.",
+          "fr": "Désengagement et Pointe ; la distance de vos sauts est doublée ce tour-ci.",
+          "es": "Destrabarse y Correr; la distancia de tus saltos se duplica este turno."
+        }
+      }
+    ],
+    "uses": { "count": "focusPoints", "per": "short" },
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Monk's Focus save DC",
+          "fr": "DD de sauvegarde du Credo du moine",
+          "es": "CD de salvación de Concentración de monje"
+        },
+        "parts": [8, "wis", "pb"]
+      }
+    ],
+    "source": { "page": 50, "frPage": 66, "section": "Classes > Monk > Level 2: Monk's Focus" }
+  },
+  {
+    "id": "monk:unarmored-movement",
+    "modifiers": [{ "target": "speed", "value": "unarmoredMovement", "when": "no-armor-no-shield" }],
+    "source": { "page": 51, "frPage": 66, "section": "Classes > Monk > Level 2: Unarmored Movement" }
+  },
+  {
+    "id": "monk:uncanny-metabolism",
+    "uses": { "count": 1, "per": "long" },
+    "computed": [
+      {
+        "id": "heal",
+        "label": {
+          "en": "Uncanny Metabolism: Hit Points regained (Martial Arts die + Monk level) when all Focus Points come back on Initiative",
+          "fr": "Métabolisme surnaturel : points de vie récupérés (dé d’arts martiaux + niveau de Moine) quand tous les points de Credo reviennent à l’initiative",
+          "es": "Metabolismo asombroso: puntos de golpe recuperados (dado de Artes marciales + nivel de monje) cuando recuperas todos los puntos de concentración al tirar iniciativa"
+        },
+        "dice": "martialArts",
+        "parts": ["monkLevel"]
+      }
+    ],
+    "source": { "page": 51, "frPage": 66, "section": "Classes > Monk > Level 2: Uncanny Metabolism" }
+  },
+  {
+    "id": "monk:deflect-attacks",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "An attack hits you with Bludgeoning, Piercing or Slashing damage: reduce the damage.",
+          "fr": "Une attaque vous touche avec des dégâts contondants, perforants ou tranchants : réduisez les dégâts.",
+          "es": "Un ataque te impacta con daño contundente, perforante o cortante: reduce el daño."
+        }
+      }
+    ],
+    "computed": [
+      {
+        "id": "reduce",
+        "label": {
+          "en": "Deflect Attacks damage reduction (Reaction)",
+          "fr": "Réduction de dégâts de Déviation d’attaques (Réaction)",
+          "es": "Reducción de daño de Desviar ataques (reacción)"
+        },
+        "dice": "1d10",
+        "parts": ["dex", "monkLevel"]
+      },
+      {
+        "id": "redirect",
+        "label": {
+          "en": "Deflect Attacks redirect damage: two Martial Arts dice + Dex (1 Focus Point, Dex save)",
+          "fr": "Dégâts renvoyés par Déviation d’attaques : deux dés d’arts martiaux + Dex (1 point de Credo, sauvegarde de Dex)",
+          "es": "Daño redirigido con Desviar ataques: dos dados de Artes marciales + Des (1 punto de concentración, salvación de Destreza)"
+        },
+        "dice": "martialArts",
+        "parts": ["dex"]
+      }
+    ],
+    "source": { "page": 51, "frPage": 66, "section": "Classes > Monk > Level 3: Deflect Attacks" }
+  },
+  {
+    "id": "monk:slow-fall",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "You fall: reduce the falling damage by five times your Monk level.",
+          "fr": "Vous tombez : réduisez les dégâts de chute de cinq fois votre niveau de moine.",
+          "es": "Caes: reduce el daño por caída en cinco veces tu nivel de monje."
+        }
+      }
+    ],
+    "computed": [
+      {
+        "id": "reduce",
+        "label": {
+          "en": "Slow Fall damage reduction (Reaction)",
+          "fr": "Réduction des dégâts de chute de Chute ralentie (Réaction)",
+          "es": "Reducción del daño por caída de Caída lenta (reacción)"
+        },
+        "parts": ["monkLevel*5"]
+      }
+    ],
+    "source": { "page": 51, "frPage": 66, "section": "Classes > Monk > Level 4: Slow Fall" }
+  },
+  {
+    "id": "monk:extra-attack",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 5: Extra Attack" }
+  },
+  {
+    "id": "monk:stunning-strike",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "monk:monks-focus" },
+        "trigger": {
+          "en": "Once per turn, on a hit with a Monk weapon or an Unarmed Strike: Constitution save or Stunned.",
+          "fr": "Une fois par tour, quand vous touchez avec une arme de moine ou à mains nues : JS de Constitution ou Étourdi.",
+          "es": "Una vez por turno, al impactar con un arma de monje o un ataque sin armas: salvación de Constitución o Aturdido."
+        }
+      }
+    ],
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Stunning Strike Con save DC (Monk's Focus save DC; 1 Focus Point, once per turn)",
+          "fr": "DD de sauvegarde de Constitution de Frappe étourdissante (DD du Credo du moine ; 1 point de Credo, une fois par tour)",
+          "es": "CD de la tirada de salvación de Constitución de Golpe aturdidor (CD de Concentración de monje; 1 punto de concentración, una vez por turno)"
+        },
+        "parts": [8, "wis", "pb"]
+      }
+    ],
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 5: Stunning Strike" }
+  },
+  {
+    "id": "monk:empowered-strikes",
+    "textOnly": {
+      "en": "Unarmed Strike damage can be Force instead of Bludgeoning: chosen at the damage roll, no sheet number.",
+      "fr": "Les dégâts de l’Attaque à mains nues peuvent être de force au lieu de contondants : choisi au jet de dégâts, aucun nombre de la feuille.",
+      "es": "El daño del ataque sin armas puede ser de fuerza en lugar de contundente: se elige al tirar el daño, ningún número en la hoja."
+    },
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 6: Empowered Strikes" }
+  },
+  {
+    "id": "monk:evasion",
+    "textOnly": {
+      "en": "No damage on a successful Dexterity save for half damage, half on a failure (unless Incapacitated): applied at the dice.",
+      "fr": "Aucun dégât sur un jet de sauvegarde de Dextérité réussi pour moitié de dégâts, moitié sur un échec (sauf si Neutralisé) : appliqué aux dés.",
+      "es": "Ningún daño si superas una tirada de salvación de Destreza para recibir la mitad del daño, la mitad si la fallas (salvo si estás incapacitado): se aplica a los dados."
+    },
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 7: Evasion" }
+  },
+  {
+    "id": "monk:acrobatic-movement",
+    "textOnly": {
+      "en": "Move along vertical surfaces and across liquids without armor or Shield: a movement rule, no sheet number.",
+      "fr": "Se déplacer sur les surfaces verticales et les liquides sans armure ni bouclier : règle de déplacement, aucun nombre de la feuille.",
+      "es": "Te mueves por superficies verticales y sobre líquidos sin armadura ni escudo: regla de movimiento, ningún número en la hoja."
+    },
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 9: Acrobatic Movement" }
+  },
+  {
+    "id": "monk:heightened-focus",
+    "computed": [
+      {
+        "id": "temp",
+        "label": {
+          "en": "Heightened Focus: Temporary Hit Points of Patient Defense (two Martial Arts dice, 1 Focus Point)",
+          "fr": "Credo renforcé : points de vie temporaires de Défense patiente (deux dés d’arts martiaux, 1 point de Credo)",
+          "es": "Concentración agudizada: puntos de golpe temporales de Defensa paciente (dos dados de Artes marciales, 1 punto de concentración)"
+        },
+        "dice": "martialArts"
+      }
+    ],
+    "textOnly": {
+      "en": "Flurry of Blows makes three Unarmed Strikes; Step of the Wind can carry a willing Large or smaller creature: actions, no sheet number.",
+      "fr": "Déluge de coups donne trois Attaques à mains nues ; Pas du vent peut emporter une créature consentante de taille G ou inférieure : actions, aucun nombre de la feuille.",
+      "es": "Ráfaga de golpes realiza tres ataques sin armas; Paso del viento puede llevar a una criatura voluntaria Grande o más pequeña: acciones, ningún número en la hoja."
+    },
+    "source": { "page": 51, "frPage": 67, "section": "Classes > Monk > Level 10: Heightened Focus" }
+  },
+  {
+    "id": "monk:self-restoration",
+    "textOnly": {
+      "en": "End the Charmed, Frightened or Poisoned condition on yourself at the end of your turn; no Exhaustion from going without food or drink: applied at the table.",
+      "fr": "Mettre fin à l’état Charmé, Effrayé ou Empoisonné sur vous à la fin de votre tour ; pas d’Épuisement en se passant de nourriture et d’eau : appliqué à la table.",
+      "es": "Pones fin al estado de hechizado, asustado o envenenado sobre ti al final de tu turno; no sufres cansancio por pasar sin comida ni bebida: se aplica en la mesa."
+    },
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 10: Self-Restoration" }
+  },
+  {
+    "id": "monk:deflect-energy",
+    "textOnly": {
+      "en": "Deflect Attacks now works against any damage type: the reduction above applies to every attack.",
+      "fr": "Déviation d’attaques fonctionne désormais contre tout type de dégâts : la réduction ci-dessus s’applique à toute attaque.",
+      "es": "Desviar ataques funciona ahora contra cualquier tipo de daño: la reducción de arriba se aplica a cualquier ataque."
+    },
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 13: Deflect Energy" }
+  },
+  {
+    "id": "monk:disciplined-survivor",
+    "textOnly": {
+      "en": "Needs engine: proficiency in all six saving throws (the engine takes save proficiencies from the first class only); rerolling a failed save for 1 Focus Point is applied at the dice.",
+      "fr": "Moteur requis : maîtrise des six jets de sauvegarde (le moteur ne lit les maîtrises de sauvegarde que de la première classe) ; relancer un jet raté pour 1 point de Credo s’applique aux dés.",
+      "es": "Requiere el motor: competencia en las seis tiradas de salvación (el motor solo toma las competencias en salvaciones de la primera clase); repetir una salvación fallida por 1 punto de concentración se aplica a los dados."
+    },
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 14: Disciplined Survivor" }
+  },
+  {
+    "id": "monk:perfect-focus",
+    "textOnly": {
+      "en": "Regain Focus Points up to 4 when rolling Initiative without Uncanny Metabolism: adjust the Focus Points counter by hand.",
+      "fr": "Récupérer des points de Credo jusqu’à 4 au jet d’initiative sans Métabolisme surnaturel : ajustez le compteur de points de Credo à la main.",
+      "es": "Recuperas puntos de concentración hasta tener 4 al tirar iniciativa sin Metabolismo asombroso: ajusta a mano el contador de puntos de concentración."
+    },
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 15: Perfect Focus" }
+  },
+  {
+    "id": "monk:superior-defense",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "all",
+        "when": "toggle:superior-defense",
+        "condition": {
+          "en": "Superior Defense (3 Focus Points, 1 minute): Resistance to all damage except Force",
+          "fr": "Défense supérieure (3 points de Credo, 1 minute) : Résistance à tous les dégâts sauf de force",
+          "es": "Defensa superior (3 puntos de concentración, 1 minuto): resistencia a todo el daño salvo de fuerza"
+        }
+      }
+    ],
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 18: Superior Defense" }
+  },
+  {
+    "id": "monk:body-and-mind",
+    "modifiers": [
+      { "target": "ability.dex", "value": 4, "effectName": "Body and Mind" },
+      { "target": "ability.dex.max", "value": 5, "effectName": "Body and Mind" },
+      { "target": "ability.wis", "value": 4, "effectName": "Body and Mind" },
+      { "target": "ability.wis.max", "value": 5, "effectName": "Body and Mind" }
+    ],
+    "source": { "page": 52, "frPage": 67, "section": "Classes > Monk > Level 20: Body and Mind" }
+  },
+  {
+    "id": "monk:warrior-of-the-open-hand:open-hand-technique",
+    "textOnly": {
+      "en": "On a Flurry of Blows hit: Addle (no Opportunity Attacks), Push (Str save or pushed 15 ft) or Topple (Dex save or Prone), against the Monk's Focus save DC shown above.",
+      "fr": "Sur un coup au but de Déluge de coups : Perturbation (pas d’attaque d’opportunité), Bousculade (sauvegarde de For ou repoussé de 4,50 m) ou Croche-pied (sauvegarde de Dex ou À terre), contre le DD du Credo du moine affiché ci-dessus.",
+      "es": "Al impactar con Ráfaga de golpes: Desconcertar (sin ataques de oportunidad), Empujar (salvación de Fuerza o es empujado 4,5 m) o Derribar (salvación de Destreza o derribado), contra la CD de Concentración de monje indicada arriba."
+    },
+    "source": {
+      "page": 52,
+      "frPage": 67,
+      "section": "Classes > Monk > Warrior of the Open Hand > Level 3: Open Hand Technique"
+    }
+  },
+  {
+    "id": "monk:warrior-of-the-open-hand:wholeness-of-body",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": { "count": "wis", "per": "long" },
+    "computed": [
+      {
+        "id": "heal",
+        "label": {
+          "en": "Wholeness of Body healing (Bonus Action; minimum 1)",
+          "fr": "Soins de Plénitude physique (action bonus ; minimum 1)",
+          "es": "Curación de Plenitud de cuerpo (acción adicional; mínimo 1)"
+        },
+        "dice": "martialArts",
+        "parts": ["wis"]
+      }
+    ],
+    "source": {
+      "page": 52,
+      "frPage": 68,
+      "section": "Classes > Monk > Warrior of the Open Hand > Level 6: Wholeness of Body"
+    }
+  },
+  {
+    "id": "monk:warrior-of-the-open-hand:fleet-step",
+    "activation": [],
+    "textOnly": {
+      "en": "Use Step of the Wind right after any other Bonus Action: an action, no sheet number.",
+      "fr": "Utiliser Pas du vent juste après toute autre action bonus : une action, aucun nombre de la feuille.",
+      "es": "Usa Paso del viento justo después de cualquier otra acción adicional: una acción, ningún número en la hoja."
+    },
+    "source": {
+      "page": 52,
+      "frPage": 68,
+      "section": "Classes > Monk > Warrior of the Open Hand > Level 11: Fleet Step"
+    }
+  },
+  {
+    "id": "monk:warrior-of-the-open-hand:quivering-palm",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "monk:monks-focus", "amount": 4 },
+        "trigger": {
+          "en": "On a hit with an Unarmed Strike: set harmful vibrations in the target.",
+          "fr": "Quand vous touchez à mains nues : vous placez des vibrations néfastes dans la cible.",
+          "es": "Al impactar con un ataque sin armas: pones vibraciones dañinas en el objetivo."
+        }
+      },
+      {
+        "kind": "attack",
+        "cost": { "amount": 0 },
+        "name": { "en": "End the vibrations", "fr": "Mettre fin aux vibrations", "es": "Terminar las vibraciones" },
+        "trigger": {
+          "en": "Forgo one attack of the Attack action: the target makes a Constitution save.",
+          "fr": "Renoncez à une attaque de l’action Attaque : la cible fait un JS de Constitution.",
+          "es": "Renuncia a un ataque de la acción de Atacar: el objetivo hace una salvación de Constitución."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "4 Focus Points on an Unarmed Strike hit; ending the vibrations forces a Con save (Monk's Focus save DC) for 10d12 Force damage, half on a success: applied at the table.",
+      "fr": "4 points de Credo sur un coup au but d’Attaque à mains nues ; mettre fin aux vibrations impose une sauvegarde de Con (DD du Credo du moine) pour 10d12 dégâts de force, moitié en cas de réussite : appliqué à la table.",
+      "es": "4 puntos de concentración al impactar con un ataque sin armas; poner fin a las vibraciones obliga a una salvación de Constitución (CD de Concentración de monje) por 10d12 de daño de fuerza, la mitad si la supera: se aplica en la mesa."
+    },
+    "source": {
+      "page": 52,
+      "frPage": 68,
+      "section": "Classes > Monk > Warrior of the Open Hand > Level 17: Quivering Palm"
+    }
+  }
+]

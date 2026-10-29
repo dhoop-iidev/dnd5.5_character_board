@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Lisbeth Mains-de-Soie",
+    "player": "",
+    "alignment": "Chaotic Neutral",
+    "background": "Born in the harbour slums with horns she learned to hide under a hood, she ran with the dock gangs before a burglary gone wrong sent her on the road.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Infernal", "Thieves’ Cant", "Halfling"],
+    "height": {
+      "m": 1.68
+    },
+    "weight": {
+      "kg": 57
+    },
+    "age": "26"
+  },
+  "speciesId": "tiefling",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "criminal",
+    "abilities": {
+      "dex": 2,
+      "int": 1
+    },
+    "feat": {
+      "featId": "alert"
+    }
+  },
+  "baseAbilities": {
+    "str": 8,
+    "dex": 15,
+    "con": 14,
+    "int": 13,
+    "wis": 12,
+    "cha": 10
+  },
+  "levels": [
+    {
+      "classId": "rogue",
+      "hpRoll": 8,
+      "hpFixed": false,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "subclassId": "rogue:thief",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "dex": 2
+        }
+      }
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "dex": 1,
+          "wis": 1
+        }
+      }
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "con": 2
+        }
+      }
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["acrobatics", "deception", "insight", "perception"],
+  "toolProficiencies": [],
+  "expertise": ["stealth", "sleight-of-hand", "perception", "acrobatics"],
+  "weaponMastery": ["shortsword", "dagger"],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "leather-armor",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "shortsword",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 2,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn3",
+      "kind": "weapon",
+      "refId": "shortbow",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "arrows",
+      "quantity": 20,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "quiver",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "thieves-tools",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear4",
+      "kind": "gear",
+      "refId": "burglars-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 14,
+    "sp": 20,
+    "ep": 0,
+    "gp": 68,
+    "pp": 2
+  },
+  "spellcasting": {},
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 83,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "tiefling:fiendish-legacy": "infernal",
+    "tiefling:fiendish-legacy#ability": "cha",
+    "rogue:expertise": ["stealth", "sleight-of-hand", "perception", "acrobatics"],
+    "rogue:thieves-cant": "Halfling"
+  },
+  "extraFeats": {}
+}

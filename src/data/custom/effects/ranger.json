@@ -1,0 +1,394 @@
+[
+  {
+    "id": "ranger:spellcasting",
+    "textOnly": {
+      "en": "Spell slots, the Prepared Spells count, the spell save DC and spell attack bonus (Wisdom) are computed in the Spells pane.",
+      "fr": "Les emplacements de sort, le nombre de sorts préparés, le DD de sauvegarde et le bonus d’attaque des sorts (Sagesse) sont calculés dans le volet Sorts.",
+      "es": "Los espacios de conjuro, el número de conjuros preparados, la CD de salvación y el bonificador de ataque de los conjuros (Sabiduría) se calculan en la pestaña Conjuros."
+    },
+    "source": {
+      "page": 57,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "ranger:favored-enemy",
+    "spells": {
+      "always": ["hunters-mark"]
+    },
+    "uses": {
+      "count": "favoredEnemy",
+      "per": "long"
+    },
+    "source": {
+      "page": 58,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 1: Favored Enemy"
+    }
+  },
+  {
+    "id": "ranger:weapon-mastery",
+    "mastery": 2,
+    "source": {
+      "page": 58,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 1: Weapon Mastery"
+    }
+  },
+  {
+    "id": "ranger:deft-explorer",
+    "choices": [
+      {
+        "id": "expertise",
+        "kind": "expertise",
+        "count": 1,
+        "name": {
+          "en": "Expertise in one skill proficiency",
+          "fr": "Expertise dans une maîtrise de compétence",
+          "es": "Pericia en una habilidad con competencia"
+        }
+      },
+      {
+        "id": "languages",
+        "kind": "text",
+        "count": 2,
+        "name": {
+          "en": "Two languages",
+          "fr": "Deux langues",
+          "es": "Dos idiomas"
+        }
+      }
+    ],
+    "source": {
+      "page": 59,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 2: Deft Explorer"
+    }
+  },
+  {
+    "id": "ranger:fighting-style",
+    "textOnly": {
+      "en": "The chosen Fighting Style feat (level record) carries the effect. Needs engine: the Druidic Warrior option (two Druid cantrips, Wisdom) is not a feat and can't be chosen yet.",
+      "fr": "Le don de style de combat choisi (historique des niveaux) porte l’effet. Moteur manquant : l’option Guerrier druidique (deux sorts mineurs de Druide, Sagesse) n’est pas un don et ne peut pas encore être choisie.",
+      "es": "La dote de estilo de combate elegida (registro de niveles) lleva el efecto. Requiere el motor: la opción Guerrero druídico (dos trucos de druida, Sabiduría) no es una dote y aún no puede elegirse."
+    },
+    "source": {
+      "page": 59,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 2: Fighting Style"
+    }
+  },
+  {
+    "id": "ranger:extra-attack",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "source": {
+      "page": 59,
+      "frPage": 81,
+      "section": "Classes > Ranger Class Features > Level 5: Extra Attack"
+    }
+  },
+  {
+    "id": "ranger:roving",
+    "modifiers": [
+      {
+        "target": "speed",
+        "value": 10,
+        "when": "no-heavy-armor",
+        "effectName": "Roving"
+      },
+      {
+        "target": "speed.climb",
+        "value": "speed",
+        "effectName": "Roving"
+      },
+      {
+        "target": "speed.swim",
+        "value": "speed",
+        "effectName": "Roving"
+      }
+    ],
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 6: Roving"
+    }
+  },
+  {
+    "id": "ranger:expertise",
+    "choices": [
+      {
+        "kind": "expertise",
+        "count": 2,
+        "name": {
+          "en": "Expertise in two skill proficiencies",
+          "fr": "Expertise dans deux maîtrises de compétence",
+          "es": "Pericia en dos habilidades con competencia"
+        }
+      }
+    ],
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 9: Expertise"
+    }
+  },
+  {
+    "id": "ranger:tireless",
+    "activation": [{ "kind": "action", "action": "magic" }],
+    "flags": ["tireless"],
+    "uses": {
+      "count": "wis",
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "temp",
+        "label": {
+          "en": "Tireless Temporary Hit Points (Magic action)",
+          "fr": "Points de vie temporaires d’Infatigable (action Magie)",
+          "es": "Puntos de golpe temporales de Infatigable (acción de magia)"
+        },
+        "dice": "1d8",
+        "parts": ["wis"]
+      }
+    ],
+    "textOnly": {
+      "en": "Uses equal the Wisdom modifier (minimum 1). Decrease Exhaustion: a Short Rest lowers the Exhaustion level by 1 (flag tireless, applied by the rest).",
+      "fr": "Utilisations égales au modificateur de Sagesse (minimum 1). Réduction de l’Épuisement : un repos court abaisse le niveau d’Épuisement de 1 (drapeau tireless, appliqué par le repos).",
+      "es": "Usos iguales al modificador por Sabiduría (mínimo 1). Disminuir cansancio: un descanso corto reduce el nivel de Cansancio en 1 (indicador tireless, aplicado por el descanso)."
+    },
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 10: Tireless"
+    }
+  },
+  {
+    "id": "ranger:relentless-hunter",
+    "textOnly": {
+      "en": "Damage can't break your Concentration on Hunter's Mark: applied at the table.",
+      "fr": "Les dégâts ne peuvent pas rompre votre Concentration sur Marque du chasseur : appliqué à la table.",
+      "es": "El daño no puede romper tu concentración en Marca del cazador: se aplica en la mesa."
+    },
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 13: Relentless Hunter"
+    }
+  },
+  {
+    "id": "ranger:natures-veil",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": {
+      "count": "wis",
+      "per": "long"
+    },
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 14: Nature’s Veil"
+    }
+  },
+  {
+    "id": "ranger:precise-hunter",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "attack",
+        "condition": {
+          "en": "against the creature marked by your Hunter's Mark",
+          "fr": "contre la créature marquée par votre Marque du chasseur",
+          "es": "contra la criatura marcada por tu Marca del cazador"
+        }
+      }
+    ],
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 17: Precise Hunter"
+    }
+  },
+  {
+    "id": "ranger:feral-senses",
+    "textOnly": {
+      "en": "Blindsight 30 feet: a sense, no sheet number.",
+      "fr": "Vision aveugle 9 m : un sens, aucun nombre de la feuille.",
+      "es": "Visión ciega 9 m: un sentido, ningún número en la hoja."
+    },
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 18: Feral Senses"
+    }
+  },
+  {
+    "id": "ranger:foe-slayer",
+    "textOnly": {
+      "en": "Hunter's Mark deals 1d10 instead of 1d6: applied at the dice.",
+      "fr": "Marque du chasseur inflige 1d10 au lieu de 1d6 : appliqué aux dés.",
+      "es": "Marca del cazador causa 1d10 en lugar de 1d6: se aplica a los dados."
+    },
+    "source": {
+      "page": 59,
+      "frPage": 82,
+      "section": "Classes > Ranger Class Features > Level 20: Foe Slayer"
+    }
+  },
+  {
+    "id": "ranger:hunter:hunters-lore",
+    "textOnly": {
+      "en": "You know the Immunities, Resistances and Vulnerabilities of the creature marked by your Hunter's Mark: information from the GM, no sheet number.",
+      "fr": "Vous connaissez les Immunités, Résistances et Vulnérabilités de la créature marquée par votre Marque du chasseur : information du MJ, aucun nombre de la feuille.",
+      "es": "Conoces las inmunidades, resistencias y vulnerabilidades de la criatura marcada por tu Marca del cazador: información del GM, ningún número en la hoja."
+    },
+    "source": {
+      "page": 61,
+      "frPage": 83,
+      "section": "Classes > Ranger Subclass: Hunter > Level 3: Hunter’s Lore"
+    }
+  },
+  {
+    "id": "ranger:hunter:hunters-prey",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Hunter's Prey option (may change on a Short or Long Rest)",
+          "fr": "Option de Proie du chasseur (modifiable à un repos court ou long)",
+          "es": "Opción de El cazador y la presa (puede cambiarse en un descanso corto o largo)"
+        },
+        "options": {
+          "colossus-slayer": {
+            "name": {
+              "en": "Colossus Slayer",
+              "fr": "Tueur de colosses",
+              "es": "Azote de colosos"
+            },
+            "modifiers": [
+              {
+                "target": "extraDamage.all",
+                "value": "1d8",
+                "condition": {
+                  "en": "Colossus Slayer: weapon hit on a creature missing Hit Points, once per turn",
+                  "fr": "Tueur de colosses : coup au but d’arme sur une créature à qui il manque des points de vie, une fois par tour",
+                  "es": "Azote de colosos: impacto con arma contra una criatura a la que le faltan puntos de golpe, una vez por turno"
+                }
+              }
+            ]
+          },
+          "horde-breaker": {
+            "name": {
+              "en": "Horde Breaker",
+              "fr": "Fléau des hordes",
+              "es": "Destructor de hordas"
+            },
+            "text": {
+              "en": "Once per turn, one more weapon attack against a different creature within 5 feet of the first target: an action rule, no sheet number.",
+              "fr": "Une fois par tour, une attaque d’arme de plus contre une autre créature à 1,50 m de la première cible : une règle d’action, aucun nombre de la feuille.",
+              "es": "Una vez por turno, un ataque con arma más contra otra criatura a 1,5 m o menos del primer objetivo: regla de acción, ningún número en la hoja."
+            }
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 61,
+      "frPage": 83,
+      "section": "Classes > Ranger Subclass: Hunter > Level 3: Hunter’s Prey"
+    }
+  },
+  {
+    "id": "ranger:hunter:defensive-tactics",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Defensive Tactics option (may change on a Short or Long Rest)",
+          "fr": "Option de Tactiques défensives (modifiable à un repos court ou long)",
+          "es": "Opción de Tácticas defensivas (puede cambiarse en un descanso corto o largo)"
+        },
+        "options": {
+          "escape-the-horde": {
+            "name": {
+              "en": "Escape the Horde",
+              "fr": "Fuir la horde",
+              "es": "Escapar de la horda"
+            },
+            "grants": [
+              {
+                "kind": "disadvantage",
+                "on": "attacks-against",
+                "condition": {
+                  "en": "Opportunity Attacks against you",
+                  "fr": "attaques de réaction (Opportunité) déclenchées quand vous quittez l’allonge d’une créature",
+                  "es": "ataques de oportunidad contra ti"
+                }
+              }
+            ]
+          },
+          "multiattack-defense": {
+            "name": {
+              "en": "Multiattack Defense",
+              "fr": "Défense contre les attaques multiples",
+              "es": "Defensa contra ataques múltiples"
+            },
+            "grants": [
+              {
+                "kind": "disadvantage",
+                "on": "attacks-against",
+                "condition": {
+                  "en": "a creature that hit you has Disadvantage on its other attack rolls against you this turn",
+                  "fr": "une créature qui vous a touché a le Désavantage à ses autres jets d’attaque contre vous ce tour-ci",
+                  "es": "una criatura que te ha impactado tiene desventaja en sus demás tiradas de ataque contra ti este turno"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 61,
+      "frPage": 83,
+      "section": "Classes > Ranger Subclass: Hunter > Level 7: Defensive Tactics"
+    }
+  },
+  {
+    "id": "ranger:hunter:superior-hunters-prey",
+    "textOnly": {
+      "en": "Once per turn, Hunter's Mark's extra damage also hits a second creature within 30 feet of the marked one: applied at the dice.",
+      "fr": "Une fois par tour, les dégâts supplémentaires de Marque du chasseur touchent aussi une seconde créature à 9 m de la créature marquée : appliqué aux dés.",
+      "es": "Una vez por turno, el daño adicional de Marca del cazador también afecta a una segunda criatura a 9 m o menos de la marcada: se aplica a los dados."
+    },
+    "source": {
+      "page": 61,
+      "frPage": 83,
+      "section": "Classes > Ranger Subclass: Hunter > Level 11: Superior Hunter’s Prey"
+    }
+  },
+  {
+    "id": "ranger:hunter:superior-hunters-defense",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "You take damage: Resistance to that damage type until the end of the turn.",
+          "fr": "Vous subissez des dégâts : Résistance à ce type de dégâts jusqu’à la fin du tour.",
+          "es": "Recibes daño: resistencia a ese tipo de daño hasta el final del turno."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Reaction when you take damage: Resistance to that damage type until the end of the turn: applied at the table.",
+      "fr": "Réaction quand vous subissez des dégâts : Résistance à ce type de dégâts jusqu’à la fin du tour : appliqué à la table.",
+      "es": "Reacción cuando recibes daño: resistencia a ese tipo de daño hasta el final del turno: se aplica en la mesa."
+    },
+    "source": {
+      "page": 61,
+      "frPage": 83,
+      "section": "Classes > Ranger Subclass: Hunter > Level 15: Superior Hunter’s Defense"
+    }
+  }
+]

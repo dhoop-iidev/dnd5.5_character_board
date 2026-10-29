@@ -1,0 +1,6621 @@
+[
+  {
+    "id": "item:adamantine-armor",
+    "textOnly": {
+      "en": "Defensive property with no sheet number (a hit becomes normal, a reaction…): applied at the table.",
+      "fr": "Propriété défensive sans nombre sur la feuille (coup devenu normal, réaction…) : s’applique en jeu.",
+      "es": "Propiedad defensiva sin número en la hoja (un impacto pasa a ser normal, una reacción…): se aplica en la mesa."
+    },
+    "source": {
+      "page": 209,
+      "frPage": 226,
+      "section": "Magic Items > Adamantine Armor"
+    }
+  },
+  {
+    "id": "item:ammunition-1-2-or-3",
+    "modifiers": [
+      {
+        "target": "attack.ranged",
+        "value": 0,
+        "byVariant": [1, 2, 3],
+        "condition": {
+          "en": "firing this ammunition",
+          "fr": "avec ces munitions",
+          "es": "con esta munición"
+        }
+      },
+      {
+        "target": "damage.ranged",
+        "value": 0,
+        "byVariant": [1, 2, 3],
+        "condition": {
+          "en": "firing this ammunition",
+          "fr": "avec ces munitions",
+          "es": "con esta munición"
+        }
+      }
+    ],
+    "source": {
+      "page": 209,
+      "frPage": 255,
+      "section": "Magic Items > Ammunition, +1, +2, or +3"
+    }
+  },
+  {
+    "id": "item:ammunition-of-slaying",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 209,
+      "frPage": 255,
+      "section": "Magic Items > Ammunition of Slaying"
+    }
+  },
+  {
+    "id": "item:amulet-of-health",
+    "modifiers": [
+      {
+        "target": "ability.con.set",
+        "value": 19
+      }
+    ],
+    "source": {
+      "page": 209,
+      "frPage": 220,
+      "section": "Magic Items > Amulet of Health"
+    }
+  },
+  {
+    "id": "item:amulet-of-proof-against-detection-and-location",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 209,
+      "frPage": 220,
+      "section": "Magic Items > Amulet of Proof against Detection and Location"
+    }
+  },
+  {
+    "id": "item:amulet-of-the-planes",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "plane-shift",
+          "atWill": true,
+          "note": {
+            "en": "DC 15 Intelligence (Arcana) check first",
+            "fr": "test d’Intelligence (Arcanes) DD 15 d’abord",
+            "es": "antes, prueba de Inteligencia (Conocimiento Arcano) CD 15"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 209,
+      "frPage": 220,
+      "section": "Magic Items > Amulet of the Planes"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:animated-shield",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 209,
+      "frPage": 233,
+      "section": "Magic Items > Animated Shield"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:apparatus-of-the-crab",
+    "textOnly": {
+      "en": "A vehicle or object with its own statistics: nothing on the sheet.",
+      "fr": "Un véhicule ou objet doté de ses propres statistiques : rien sur la feuille.",
+      "es": "Un vehículo u objeto con sus propias estadísticas: nada en la hoja."
+    },
+    "source": {
+      "page": 210,
+      "frPage": 261,
+      "section": "Magic Items > Apparatus of the Crab"
+    }
+  },
+  {
+    "id": "item:armor-1-2-or-3",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 0,
+        "byVariant": [1, 2, 3]
+      }
+    ],
+    "source": {
+      "page": 210,
+      "frPage": 224,
+      "section": "Magic Items > Armor, +1, +2, or +3"
+    }
+  },
+  {
+    "id": "item:armor-of-invulnerability",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "bludgeoning"
+      },
+      {
+        "kind": "resistance",
+        "on": "piercing"
+      },
+      {
+        "kind": "resistance",
+        "on": "slashing"
+      }
+    ],
+    "source": {
+      "page": 210,
+      "frPage": 225,
+      "section": "Magic Items > Armor of Invulnerability"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:armor-of-resistance",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Damage type",
+          "fr": "Type de dégâts",
+          "es": "Tipo de daño"
+        },
+        "options": {
+          "acid": {
+            "name": {
+              "en": "Acid",
+              "fr": "acide",
+              "es": "ácido"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "cold": {
+            "name": {
+              "en": "Cold",
+              "fr": "froid",
+              "es": "frío"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          },
+          "fire": {
+            "name": {
+              "en": "Fire",
+              "fr": "feu",
+              "es": "fuego"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "force": {
+            "name": {
+              "en": "Force",
+              "fr": "force",
+              "es": "fuerza"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "force"
+              }
+            ]
+          },
+          "lightning": {
+            "name": {
+              "en": "Lightning",
+              "fr": "foudre",
+              "es": "relámpago"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "necrotic": {
+            "name": {
+              "en": "Necrotic",
+              "fr": "nécrotiques",
+              "es": "necrótico"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "necrotic"
+              }
+            ]
+          },
+          "poison": {
+            "name": {
+              "en": "Poison",
+              "fr": "poison",
+              "es": "veneno"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ]
+          },
+          "psychic": {
+            "name": {
+              "en": "Psychic",
+              "fr": "psychiques",
+              "es": "psíquico"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "psychic"
+              }
+            ]
+          },
+          "radiant": {
+            "name": {
+              "en": "Radiant",
+              "fr": "radiants",
+              "es": "radiante"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "radiant"
+              }
+            ]
+          },
+          "thunder": {
+            "name": {
+              "en": "Thunder",
+              "fr": "tonnerre",
+              "es": "trueno"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "thunder"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 210,
+      "frPage": 225,
+      "section": "Magic Items > Armor of Resistance"
+    }
+  },
+  {
+    "id": "item:armor-of-vulnerability",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Damage type",
+          "fr": "Type de dégâts",
+          "es": "Tipo de daño"
+        },
+        "options": {
+          "bludgeoning": {
+            "name": {
+              "en": "Bludgeoning",
+              "fr": "contondants",
+              "es": "contundente"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "bludgeoning"
+              }
+            ]
+          },
+          "piercing": {
+            "name": {
+              "en": "Piercing",
+              "fr": "perforants",
+              "es": "perforante"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "piercing"
+              }
+            ]
+          },
+          "slashing": {
+            "name": {
+              "en": "Slashing",
+              "fr": "tranchants",
+              "es": "cortante"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "slashing"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 211,
+      "frPage": 225,
+      "section": "Magic Items > Armor of Vulnerability"
+    }
+  },
+  {
+    "id": "item:arrow-catching-shield",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 2,
+        "condition": {
+          "en": "against a ranged attack roll",
+          "fr": "contre un jet d’attaque à distance",
+          "es": "contra una tirada de ataque a distancia"
+        }
+      }
+    ],
+    "source": {
+      "page": 211,
+      "frPage": 233,
+      "section": "Magic Items > Arrow-Catching Shield"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:bag-of-beans",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 211,
+      "frPage": 257,
+      "section": "Magic Items > Bag of Beans"
+    }
+  },
+  {
+    "id": "item:bag-of-devouring",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 212,
+      "frPage": 258,
+      "section": "Magic Items > Bag of Devouring"
+    }
+  },
+  {
+    "id": "item:bag-of-holding",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 212,
+      "frPage": 259,
+      "section": "Magic Items > Bag of Holding"
+    }
+  },
+  {
+    "id": "item:bag-of-tricks",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 212,
+      "frPage": 257,
+      "section": "Magic Items > Bag of Tricks"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:bead-of-force",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 212,
+      "frPage": 250,
+      "section": "Magic Items > Bead of Force"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:bead-of-nourishment",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 213,
+      "frPage": 251,
+      "section": "Magic Items > Bead of Nourishment"
+    }
+  },
+  {
+    "id": "item:belt-of-dwarvenkind",
+    "modifiers": [
+      {
+        "target": "ability.con",
+        "value": 2
+      }
+    ],
+    "grants": [
+      {
+        "kind": "language",
+        "value": "Dwarvish"
+      },
+      {
+        "kind": "advantage",
+        "on": "skill.persuasion",
+        "condition": {
+          "en": "interacting with dwarves and duergar",
+          "fr": "avec des nains et des duergars",
+          "es": "al tratar con enanos y duergars"
+        }
+      },
+      {
+        "kind": "darkvision",
+        "value": 60,
+        "condition": {
+          "en": "if you aren’t a dwarf or duergar",
+          "fr": "si vous n’êtes ni nain ni duergar",
+          "es": "si no eres enano ni duergar"
+        }
+      },
+      {
+        "kind": "resistance",
+        "on": "poison",
+        "condition": {
+          "en": "if you aren’t a dwarf or duergar",
+          "fr": "si vous n’êtes ni nain ni duergar",
+          "es": "si no eres enano ni duergar"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "save.poisoned",
+        "condition": {
+          "en": "if you aren’t a dwarf or duergar",
+          "fr": "si vous n’êtes ni nain ni duergar",
+          "es": "si no eres enano ni duergar"
+        }
+      }
+    ],
+    "source": {
+      "page": 213,
+      "frPage": 236,
+      "section": "Magic Items > Belt of Dwarvenkind"
+    }
+  },
+  {
+    "id": "item:belt-of-giant-strength",
+    "modifiers": [
+      {
+        "target": "ability.str.set",
+        "value": 0,
+        "byVariant": [21, 23, 25, 27, 29]
+      }
+    ],
+    "source": {
+      "page": 213,
+      "frPage": 236,
+      "section": "Magic Items > Belt of Giant Strength"
+    }
+  },
+  {
+    "id": "item:berserker-axe",
+    "activeWhen": "attuned",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      },
+      {
+        "target": "hp.max",
+        "value": "level"
+      }
+    ],
+    "source": {
+      "page": 213,
+      "frPage": 244,
+      "section": "Magic Items > Berserker Axe"
+    },
+    "activation": []
+  },
+  {
+    "id": "item:boots-of-elvenkind",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.stealth"
+      }
+    ],
+    "source": {
+      "page": 213,
+      "frPage": 232,
+      "section": "Magic Items > Boots of Elvenkind"
+    }
+  },
+  {
+    "id": "item:boots-of-levitation",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "levitate",
+          "atWill": true,
+          "note": {
+            "en": "yourself only",
+            "fr": "vous seul",
+            "es": "solo sobre ti"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 213,
+      "frPage": 232,
+      "section": "Magic Items > Boots of Levitation"
+    }
+  },
+  {
+    "id": "item:boots-of-speed",
+    "modifiers": [
+      {
+        "target": "speed.double",
+        "value": 1,
+        "when": "toggle:boots-of-speed",
+        "condition": {
+          "en": "heels clicked (Speed doubled)",
+          "fr": "talons claqués (Vitesse doublée)",
+          "es": "talones entrechocados (velocidad duplicada)"
+        }
+      }
+    ],
+    "source": {
+      "page": 214,
+      "frPage": 232,
+      "section": "Magic Items > Boots of Speed"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:boots-of-striding-and-springing",
+    "modifiers": [
+      {
+        "target": "speed.min",
+        "value": 30
+      }
+    ],
+    "flags": ["no-armor-speed-penalty"],
+    "source": {
+      "page": 214,
+      "frPage": 233,
+      "section": "Magic Items > Boots of Striding and Springing"
+    }
+  },
+  {
+    "id": "item:boots-of-the-winterlands",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "cold"
+      }
+    ],
+    "source": {
+      "page": 214,
+      "frPage": 233,
+      "section": "Magic Items > Boots of the Winterlands"
+    }
+  },
+  {
+    "id": "item:bowl-of-commanding-water-elementals",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 214,
+      "frPage": 246,
+      "section": "Magic Items > Bowl of Commanding Water Elementals"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:bracers-of-archery",
+    "modifiers": [
+      {
+        "target": "damage.weapon.longbow",
+        "value": 2
+      },
+      {
+        "target": "damage.weapon.shortbow",
+        "value": 2
+      }
+    ],
+    "grants": [
+      {
+        "kind": "proficiency",
+        "on": "weapon.longbow"
+      },
+      {
+        "kind": "proficiency",
+        "on": "weapon.shortbow"
+      }
+    ],
+    "source": {
+      "page": 214,
+      "frPage": 234,
+      "section": "Magic Items > Bracers of Archery"
+    }
+  },
+  {
+    "id": "item:bracers-of-defense",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 2,
+        "when": "no-armor-no-shield"
+      }
+    ],
+    "source": {
+      "page": 214,
+      "frPage": 234,
+      "section": "Magic Items > Bracers of Defense"
+    }
+  },
+  {
+    "id": "item:brazier-of-commanding-fire-elementals",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 214,
+      "frPage": 234,
+      "section": "Magic Items > Brazier of Commanding Fire Elementals"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:brooch-of-shielding",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "force"
+      }
+    ],
+    "source": {
+      "page": 214,
+      "frPage": 234,
+      "section": "Magic Items > Brooch of Shielding"
+    }
+  },
+  {
+    "id": "item:broom-of-flying",
+    "textOnly": {
+      "en": "A vehicle or object with its own statistics: nothing on the sheet.",
+      "fr": "Un véhicule ou objet doté de ses propres statistiques : rien sur la feuille.",
+      "es": "Un vehículo u objeto con sus propias estadísticas: nada en la hoja."
+    },
+    "source": {
+      "page": 214,
+      "frPage": 228,
+      "section": "Magic Items > Broom of Flying"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:candle-of-invocation",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "gate",
+          "perDay": 1,
+          "note": {
+            "en": "destroys the candle",
+            "fr": "détruit la bougie",
+            "es": "destruye la vela"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 214,
+      "frPage": 237,
+      "section": "Magic Items > Candle of Invocation"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:cape-of-the-mountebank",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "dimension-door",
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 215,
+      "frPage": 235,
+      "section": "Magic Items > Cape of the Mountebank"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:carpet-of-flying",
+    "textOnly": {
+      "en": "A vehicle or object with its own statistics: nothing on the sheet.",
+      "fr": "Un véhicule ou objet doté de ses propres statistiques : rien sur la feuille.",
+      "es": "Un vehículo u objeto con sus propias estadísticas: nada en la hoja."
+    },
+    "source": {
+      "page": 215,
+      "frPage": 263,
+      "section": "Magic Items > Carpet of Flying"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:censer-of-controlling-air-elementals",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 215,
+      "frPage": 240,
+      "section": "Magic Items > Censer of Controlling Air Elementals"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:chime-of-opening",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "knock",
+          "cost": 1
+        }
+      ],
+      "charges": 10
+    },
+    "source": {
+      "page": 215,
+      "frPage": 236,
+      "section": "Magic Items > Chime of Opening"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:circlet-of-blasting",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "scorching-ray",
+          "attack": 5,
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 215,
+      "frPage": 239,
+      "section": "Magic Items > Circlet of Blasting"
+    }
+  },
+  {
+    "id": "item:cloak-of-arachnida",
+    "modifiers": [
+      {
+        "target": "speed.climb",
+        "value": "speed"
+      }
+    ],
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "poison"
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "web",
+          "dc": 13,
+          "perDay": 1,
+          "note": {
+            "en": "twice the normal area",
+            "fr": "zone doublée",
+            "es": "el doble del área normal"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 215,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of Arachnida"
+    }
+  },
+  {
+    "id": "item:cloak-of-displacement",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "not after taking damage this round, nor at Speed 0",
+          "fr": "pas après avoir subi des dégâts ce round, ni à Vitesse 0",
+          "es": "no tras recibir daño este asalto, ni con velocidad 0"
+        }
+      }
+    ],
+    "source": {
+      "page": 215,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of Displacement"
+    }
+  },
+  {
+    "id": "item:cloak-of-elvenkind",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.stealth"
+      }
+    ],
+    "source": {
+      "page": 215,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of Elvenkind"
+    }
+  },
+  {
+    "id": "item:cloak-of-invisibility",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: the Invisible condition for 1 hour",
+        "fr": "1 charge : état Invisible pendant 1 heure",
+        "es": "1 carga: estado Invisible durante 1 hora"
+      }
+    },
+    "source": {
+      "page": 215,
+      "frPage": 234,
+      "section": "Magic Items > Cloak of Invisibility"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:cloak-of-protection",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      },
+      {
+        "target": "save.all",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 216,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of Protection"
+    }
+  },
+  {
+    "id": "item:cloak-of-the-bat",
+    "modifiers": [
+      {
+        "target": "speed.fly",
+        "value": 40,
+        "when": "toggle:cloak-of-the-bat",
+        "condition": {
+          "en": "in Dim Light or Darkness, gripping the cloak",
+          "fr": "en lumière faible ou ténèbres, en tenant la cape",
+          "es": "en luz tenue u oscuridad, sujetando la capa"
+        }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.stealth"
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "polymorph",
+          "perDay": 1,
+          "note": {
+            "en": "yourself, into a Bat",
+            "fr": "vous-même, en chauve-souris",
+            "es": "tú mismo, en murciélago"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 216,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of the Bat"
+    }
+  },
+  {
+    "id": "item:cloak-of-the-manta-ray",
+    "modifiers": [
+      {
+        "target": "speed.swim",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 216,
+      "frPage": 235,
+      "section": "Magic Items > Cloak of the Manta Ray"
+    }
+  },
+  {
+    "id": "item:crystal-ball",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "scrying",
+          "dc": 17,
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 216,
+      "frPage": 234,
+      "section": "Magic Items > Crystal Ball"
+    }
+  },
+  {
+    "id": "item:crystal-ball-of-mind-reading",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "scrying",
+          "dc": 17,
+          "atWill": true
+        },
+        {
+          "spellId": "detect-thoughts",
+          "dc": 17,
+          "atWill": true,
+          "note": {
+            "en": "through the sensor, no Concentration",
+            "fr": "par le capteur, sans Concentration",
+            "es": "a través del sensor, sin Concentración"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 216,
+      "frPage": 234,
+      "section": "Magic Items > Crystal Ball of Mind Reading"
+    }
+  },
+  {
+    "id": "item:crystal-ball-of-telepathy",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "scrying",
+          "dc": 17,
+          "atWill": true
+        },
+        {
+          "spellId": "suggestion",
+          "dc": 17,
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 216,
+      "frPage": 234,
+      "section": "Magic Items > Crystal Ball of Telepathy"
+    }
+  },
+  {
+    "id": "item:crystal-ball-of-true-seeing",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "scrying",
+          "dc": 17,
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 216,
+      "frPage": 234,
+      "section": "Magic Items > Crystal Ball of True Seeing"
+    }
+  },
+  {
+    "id": "item:cube-of-force",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "mage-armor",
+          "cost": 1,
+          "dc": 17
+        },
+        {
+          "spellId": "shield",
+          "cost": 1,
+          "dc": 17
+        },
+        {
+          "spellId": "tiny-hut",
+          "cost": 3,
+          "dc": 17
+        },
+        {
+          "spellId": "private-sanctum",
+          "cost": 4,
+          "dc": 17
+        },
+        {
+          "spellId": "resilient-sphere",
+          "cost": 4,
+          "dc": 17
+        },
+        {
+          "spellId": "wall-of-force",
+          "cost": 5,
+          "dc": 17
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d6"
+    },
+    "source": {
+      "page": 216,
+      "frPage": 239,
+      "section": "Magic Items > Cube of Force"
+    }
+  },
+  {
+    "id": "item:cubic-gate",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "gate",
+          "cost": 1
+        },
+        {
+          "spellId": "plane-shift",
+          "cost": 1
+        }
+      ],
+      "charges": 3,
+      "recharge": "1d3"
+    },
+    "source": {
+      "page": 216,
+      "frPage": 239,
+      "section": "Magic Items > Cubic Gate"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:dagger-of-venom",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 216,
+      "frPage": 239,
+      "section": "Magic Items > Dagger of Venom"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:dancing-sword",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 217,
+      "frPage": 240,
+      "section": "Magic Items > Dancing Sword"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:decanter-of-endless-water",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 217,
+      "frPage": 235,
+      "section": "Magic Items > Decanter of Endless Water"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:deck-of-illusions",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 217,
+      "frPage": 263,
+      "section": "Magic Items > Deck of Illusions"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:defender",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      }
+    ],
+    "source": {
+      "page": 218,
+      "frPage": 244,
+      "section": "Magic Items > Defender"
+    }
+  },
+  {
+    "id": "item:demon-armor",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      },
+      {
+        "target": "attack.unarmed",
+        "value": 1
+      },
+      {
+        "target": "damage.unarmed",
+        "value": 1
+      }
+    ],
+    "grants": [
+      {
+        "kind": "language",
+        "value": "Abyssal"
+      }
+    ],
+    "source": {
+      "page": 218,
+      "frPage": 225,
+      "section": "Magic Items > Demon Armor"
+    }
+  },
+  {
+    "id": "item:dimensional-shackles",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 218,
+      "frPage": 249,
+      "section": "Magic Items > Dimensional Shackles"
+    }
+  },
+  {
+    "id": "item:dragon-orb",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "cure-wounds",
+          "cost": 4,
+          "level": 9
+        },
+        {
+          "spellId": "daylight",
+          "cost": 1
+        },
+        {
+          "spellId": "death-ward",
+          "cost": 2
+        },
+        {
+          "spellId": "detect-magic",
+          "cost": 0
+        },
+        {
+          "spellId": "scrying",
+          "cost": 3,
+          "dc": 18
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d4 + 3",
+      "note": {
+        "en": "only while you control the orb",
+        "fr": "seulement si vous contrôlez l’orbe",
+        "es": "solo mientras controlas el orbe"
+      }
+    },
+    "source": {
+      "page": 218,
+      "frPage": 249,
+      "section": "Magic Items > Dragon Orb"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:dragon-scale-mail",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.all",
+        "condition": {
+          "en": "against a Dragon’s breath weapon",
+          "fr": "contre le souffle d’un dragon",
+          "es": "contra el arma de aliento de un dragón"
+        }
+      }
+    ],
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Dragon",
+          "fr": "Dragon",
+          "es": "Dragón"
+        },
+        "options": {
+          "black": {
+            "name": {
+              "en": "Black",
+              "fr": "Noir",
+              "es": "Negro"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "blue": {
+            "name": {
+              "en": "Blue",
+              "fr": "Bleu",
+              "es": "Azul"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "brass": {
+            "name": {
+              "en": "Brass",
+              "fr": "Airain",
+              "es": "Oropel"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "bronze": {
+            "name": {
+              "en": "Bronze",
+              "fr": "Bronze",
+              "es": "Bronce"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "copper": {
+            "name": {
+              "en": "Copper",
+              "fr": "Cuivre",
+              "es": "Cobre"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "gold": {
+            "name": {
+              "en": "Gold",
+              "fr": "Or",
+              "es": "Oro"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "green": {
+            "name": {
+              "en": "Green",
+              "fr": "Vert",
+              "es": "Verde"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ]
+          },
+          "red": {
+            "name": {
+              "en": "Red",
+              "fr": "Rouge",
+              "es": "Rojo"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "silver": {
+            "name": {
+              "en": "Silver",
+              "fr": "Argent",
+              "es": "Plata"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          },
+          "white": {
+            "name": {
+              "en": "White",
+              "fr": "Blanc",
+              "es": "Blanco"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 218,
+      "frPage": 224,
+      "section": "Magic Items > Dragon Scale Mail"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:dragon-slayer",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "3d6",
+        "condition": {
+          "en": "target is a Dragon (weapon’s type)",
+          "fr": "cible dragon (type de l’arme)",
+          "es": "objetivo dragón (tipo del arma)"
+        }
+      }
+    ],
+    "source": {
+      "page": 219,
+      "frPage": 266,
+      "section": "Magic Items > Dragon Slayer"
+    }
+  },
+  {
+    "id": "item:dust-of-disappearance",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 219,
+      "frPage": 255,
+      "section": "Magic Items > Dust of Disappearance"
+    }
+  },
+  {
+    "id": "item:dust-of-dryness",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 219,
+      "frPage": 255,
+      "section": "Magic Items > Dust of Dryness"
+    }
+  },
+  {
+    "id": "item:dust-of-sneezing-and-choking",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 219,
+      "frPage": 255,
+      "section": "Magic Items > Dust of Sneezing and Choking"
+    }
+  },
+  {
+    "id": "item:dwarven-plate",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 2
+      }
+    ],
+    "source": {
+      "page": 219,
+      "frPage": 245,
+      "section": "Magic Items > Dwarven Plate"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:dwarven-thrower",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "1d8",
+        "condition": {
+          "en": "ranged attack: Force (2d8 vs a Giant)",
+          "fr": "attaque à distance : force (2d8 contre un géant)",
+          "es": "ataque a distancia: fuerza (2d8 contra un gigante)"
+        }
+      }
+    ],
+    "source": {
+      "page": 219,
+      "frPage": 248,
+      "section": "Magic Items > Dwarven Thrower"
+    }
+  },
+  {
+    "id": "item:efficient-quiver",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 219,
+      "frPage": 236,
+      "section": "Magic Items > Efficient Quiver"
+    }
+  },
+  {
+    "id": "item:efreeti-bottle",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 220,
+      "frPage": 234,
+      "section": "Magic Items > Efreeti Bottle"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:elemental-gem",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 220,
+      "frPage": 244,
+      "section": "Magic Items > Elemental Gem"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:elixir-of-health",
+    "spellItem": {
+      "spells": [],
+      "consumable": true,
+      "note": {
+        "en": "ends Blinded, Deafened, Paralyzed and Poisoned",
+        "fr": "met fin à Aveuglé, Assourdi, Paralysé et Empoisonné",
+        "es": "pone fin a Cegado, Ensordecido, Paralizado y Envenenado"
+      }
+    },
+    "source": {
+      "page": 220,
+      "frPage": 240,
+      "section": "Magic Items > Elixir of Health"
+    }
+  },
+  {
+    "id": "item:elven-chain",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      }
+    ],
+    "grants": [
+      {
+        "kind": "proficiency",
+        "on": "armor.medium"
+      },
+      {
+        "kind": "proficiency",
+        "on": "armor.heavy"
+      }
+    ],
+    "source": {
+      "page": 220,
+      "frPage": 225,
+      "section": "Magic Items > Elven Chain"
+    }
+  },
+  {
+    "id": "item:energy-bow",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 220,
+      "frPage": 223,
+      "section": "Magic Items > Energy Bow"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:eversmoking-bottle",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 220,
+      "frPage": 266,
+      "section": "Magic Items > Eversmoking Bottle"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:eyes-of-charming",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "charm-person",
+          "cost": 1,
+          "level": 1,
+          "maxLevel": 3,
+          "dc": 13
+        }
+      ],
+      "charges": 3,
+      "recharge": "all"
+    },
+    "source": {
+      "page": 221,
+      "frPage": 256,
+      "section": "Magic Items > Eyes of Charming"
+    }
+  },
+  {
+    "id": "item:eyes-of-minute-seeing",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.investigation",
+        "condition": {
+          "en": "examining something within 1 foot",
+          "fr": "pour examiner quelque chose à 30 cm",
+          "es": "al examinar algo a 30 cm o menos"
+        }
+      }
+    ],
+    "source": {
+      "page": 221,
+      "frPage": 247,
+      "section": "Magic Items > Eyes of Minute Seeing"
+    }
+  },
+  {
+    "id": "item:eyes-of-the-eagle",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.perception",
+        "condition": {
+          "en": "relying on sight",
+          "fr": "basés sur la vue",
+          "es": "que dependan de la vista"
+        }
+      }
+    ],
+    "source": {
+      "page": 221,
+      "frPage": 266,
+      "section": "Magic Items > Eyes of the Eagle"
+    }
+  },
+  {
+    "id": "item:feather-token",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 221,
+      "frPage": 252,
+      "section": "Magic Items > Feather Token"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:figurine-of-wondrous-power",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 221,
+      "frPage": 241,
+      "section": "Magic Items > Figurine of Wondrous Power"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:flame-tongue",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "2d6",
+        "when": "toggle:flame-tongue",
+        "condition": {
+          "en": "ablaze: Fire",
+          "fr": "embrasée : feu",
+          "es": "en llamas: fuego"
+        }
+      }
+    ],
+    "source": {
+      "page": 223,
+      "frPage": 224,
+      "section": "Magic Items > Flame Tongue"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:folding-boat",
+    "textOnly": {
+      "en": "A vehicle or object with its own statistics: nothing on the sheet.",
+      "fr": "Un véhicule ou objet doté de ses propres statistiques : rien sur la feuille.",
+      "es": "Un vehículo u objeto con sus propias estadísticas: nada en la hoja."
+    },
+    "source": {
+      "page": 223,
+      "frPage": 228,
+      "section": "Magic Items > Folding Boat"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:frost-brand",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "1d6",
+        "condition": {
+          "en": "Cold",
+          "fr": "froid",
+          "es": "frío"
+        }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "fire"
+      }
+    ],
+    "source": {
+      "page": 223,
+      "frPage": 241,
+      "section": "Magic Items > Frost Brand"
+    }
+  },
+  {
+    "id": "item:gauntlets-of-ogre-power",
+    "modifiers": [
+      {
+        "target": "ability.str.set",
+        "value": 19
+      }
+    ],
+    "source": {
+      "page": 223,
+      "frPage": 243,
+      "section": "Magic Items > Gauntlets of Ogre Power"
+    }
+  },
+  {
+    "id": "item:gem-of-brightness",
+    "spellItem": {
+      "spells": [],
+      "charges": 50,
+      "note": {
+        "en": "beam 1 charge, cone 5 charges: DC 15 Con or Blinded 1 minute",
+        "fr": "rayon 1 charge, cône 5 charges : Con DD 15 ou Aveuglé 1 minute",
+        "es": "rayo 1 carga, cono 5 cargas: Con CD 15 o Cegado 1 minuto"
+      }
+    },
+    "source": {
+      "page": 223,
+      "frPage": 244,
+      "section": "Magic Items > Gem of Brightness"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:gem-of-seeing",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: Truesight 120 ft for 10 minutes",
+        "fr": "1 charge : vision véritable 36 m pendant 10 minutes",
+        "es": "1 carga: visión verdadera 36 m durante 10 minutos"
+      }
+    },
+    "source": {
+      "page": 223,
+      "frPage": 244,
+      "section": "Magic Items > Gem of Seeing"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:giant-slayer",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "2d6",
+        "condition": {
+          "en": "target is a Giant (weapon’s type)",
+          "fr": "cible géant (type de l’arme)",
+          "es": "objetivo gigante (tipo del arma)"
+        }
+      }
+    ],
+    "source": {
+      "page": 223,
+      "frPage": 266,
+      "section": "Magic Items > Giant Slayer"
+    }
+  },
+  {
+    "id": "item:glamoured-studded-leather",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 223,
+      "frPage": 225,
+      "section": "Magic Items > Glamoured Studded Leather"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:gloves-of-missile-snaring",
+    "computed": [
+      {
+        "id": "snare",
+        "label": {
+          "en": "Damage reduced",
+          "fr": "Dégâts réduits",
+          "es": "Daño reducido"
+        },
+        "dice": "1d10",
+        "parts": ["dex"]
+      }
+    ],
+    "source": {
+      "page": 224,
+      "frPage": 243,
+      "section": "Magic Items > Gloves of Missile Snaring"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:gloves-of-swimming-and-climbing",
+    "modifiers": [
+      {
+        "target": "speed.climb",
+        "value": "speed"
+      },
+      {
+        "target": "speed.swim",
+        "value": "speed"
+      },
+      {
+        "target": "skill.athletics",
+        "value": 5,
+        "condition": {
+          "en": "to climb or swim",
+          "fr": "pour grimper ou nager",
+          "es": "para trepar o nadar"
+        }
+      }
+    ],
+    "source": {
+      "page": 224,
+      "frPage": 243,
+      "section": "Magic Items > Gloves of Swimming and Climbing"
+    }
+  },
+  {
+    "id": "item:gloves-of-thievery",
+    "modifiers": [
+      {
+        "target": "skill.sleight-of-hand",
+        "value": 5
+      }
+    ],
+    "source": {
+      "page": 224,
+      "frPage": 243,
+      "section": "Magic Items > Gloves of Thievery"
+    }
+  },
+  {
+    "id": "item:goggles-of-night",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 224,
+      "frPage": 247,
+      "section": "Magic Items > Goggles of Night"
+    }
+  },
+  {
+    "id": "item:hammer-of-thunderbolts",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 5,
+      "recharge": "1d4 + 1",
+      "note": {
+        "en": "1 charge: thrown 20/60 ft, DC 17 Con or Stunned",
+        "fr": "1 charge : lancé 6/18 m, Con DD 17 ou Étourdi",
+        "es": "1 carga: arrojado 6/18 m, Con CD 17 o Aturdido"
+      }
+    },
+    "source": {
+      "page": 224,
+      "frPage": 247,
+      "section": "Magic Items > Hammer of Thunderbolts"
+    }
+  },
+  {
+    "id": "item:handy-haversack",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 224,
+      "frPage": 245,
+      "section": "Magic Items > Handy Haversack"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:hat-of-disguise",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "disguise-self",
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 224,
+      "frPage": 236,
+      "section": "Magic Items > Hat of Disguise"
+    }
+  },
+  {
+    "id": "item:hat-of-many-spells",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 224,
+      "frPage": 236,
+      "section": "Magic Items > Hat of Many Spells"
+    }
+  },
+  {
+    "id": "item:headband-of-intellect",
+    "modifiers": [
+      {
+        "target": "ability.int.set",
+        "value": 19
+      }
+    ],
+    "source": {
+      "page": 225,
+      "frPage": 228,
+      "section": "Magic Items > Headband of Intellect"
+    }
+  },
+  {
+    "id": "item:helm-of-brilliance",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "fire",
+        "condition": {
+          "en": "while it has a ruby",
+          "fr": "tant qu’il a un rubis",
+          "es": "mientras tenga un rubí"
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "daylight",
+          "dc": 18,
+          "atWill": true,
+          "note": {
+            "en": "uses an opal",
+            "fr": "consomme une opale",
+            "es": "gasta un ópalo"
+          }
+        },
+        {
+          "spellId": "fireball",
+          "dc": 18,
+          "atWill": true,
+          "note": {
+            "en": "uses a fire opal",
+            "fr": "consomme une opale de feu",
+            "es": "gasta un ópalo de fuego"
+          }
+        },
+        {
+          "spellId": "prismatic-spray",
+          "dc": 18,
+          "atWill": true,
+          "note": {
+            "en": "uses a diamond",
+            "fr": "consomme un diamant",
+            "es": "gasta un diamante"
+          }
+        },
+        {
+          "spellId": "wall-of-fire",
+          "dc": 18,
+          "atWill": true,
+          "note": {
+            "en": "uses a ruby",
+            "fr": "consomme un rubis",
+            "es": "gasta un rubí"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 225,
+      "frPage": 245,
+      "section": "Magic Items > Helm of Brilliance"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:helm-of-comprehending-languages",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "comprehend-languages",
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 226,
+      "frPage": 245,
+      "section": "Magic Items > Helm of Comprehending Languages"
+    }
+  },
+  {
+    "id": "item:helm-of-telepathy",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "detect-thoughts",
+          "dc": 13,
+          "perDay": 1
+        },
+        {
+          "spellId": "suggestion",
+          "dc": 13,
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 226,
+      "frPage": 245,
+      "section": "Magic Items > Helm of Telepathy"
+    }
+  },
+  {
+    "id": "item:helm-of-teleportation",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "teleport",
+          "cost": 1
+        }
+      ],
+      "charges": 3,
+      "recharge": "1d3"
+    },
+    "source": {
+      "page": 226,
+      "frPage": 245,
+      "section": "Magic Items > Helm of Teleportation"
+    }
+  },
+  {
+    "id": "item:holy-avenger",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "2d10",
+        "condition": {
+          "en": "target is a Fiend or an Undead: Radiant",
+          "fr": "cible fiélon ou mort-vivant : radiants",
+          "es": "objetivo infernal o muerto viviente: radiante"
+        }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.magic",
+        "condition": {
+          "en": "against spells and magical effects (10-ft aura while drawn)",
+          "fr": "contre les sorts et effets magiques (aura de 3 m, dégainée)",
+          "es": "contra conjuros y efectos mágicos (aura de 3 m, desenvainada)"
+        }
+      }
+    ],
+    "source": {
+      "page": 226,
+      "frPage": 266,
+      "section": "Magic Items > Holy Avenger"
+    }
+  },
+  {
+    "id": "item:horn-of-blasting",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 226,
+      "frPage": 238,
+      "section": "Magic Items > Horn of Blasting"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:horn-of-valhalla",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 226,
+      "frPage": 238,
+      "section": "Magic Items > Horn of Valhalla"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:horseshoes-of-a-zephyr",
+    "textOnly": {
+      "en": "Works on a mount, not on you: nothing on your sheet.",
+      "fr": "Agit sur une monture, pas sur vous : rien sur votre feuille.",
+      "es": "Actúa sobre una montura, no sobre ti: nada en tu hoja."
+    },
+    "source": {
+      "page": 226,
+      "frPage": 241,
+      "section": "Magic Items > Horseshoes of a Zephyr"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:horseshoes-of-speed",
+    "textOnly": {
+      "en": "Works on a mount, not on you: nothing on your sheet.",
+      "fr": "Agit sur une monture, pas sur vous : rien sur votre feuille.",
+      "es": "Actúa sobre una montura, no sobre ti: nada en tu hoja."
+    },
+    "source": {
+      "page": 227,
+      "frPage": 241,
+      "section": "Magic Items > Horseshoes of Speed"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:immovable-rod",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 227,
+      "frPage": 261,
+      "section": "Magic Items > Immovable Rod"
+    }
+  },
+  {
+    "id": "item:instant-fortress",
+    "textOnly": {
+      "en": "A vehicle or object with its own statistics: nothing on the sheet.",
+      "fr": "Un véhicule ou objet doté de ses propres statistiques : rien sur la feuille.",
+      "es": "Un vehículo u objeto con sus propias estadísticas: nada en la hoja."
+    },
+    "source": {
+      "page": 227,
+      "frPage": 243,
+      "section": "Magic Items > Instant Fortress"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:ioun-stone",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Type",
+          "fr": "Type",
+          "es": "Tipo"
+        },
+        "options": {
+          "absorption": {
+            "name": {
+              "en": "Absorption",
+              "fr": "Absorption",
+              "es": "Absorción"
+            }
+          },
+          "agility": {
+            "name": {
+              "en": "Agility (Dex +2)",
+              "fr": "Agilité (Dex +2)",
+              "es": "Agilidad (Des +2)"
+            },
+            "modifiers": [
+              {
+                "target": "ability.dex",
+                "value": 2
+              }
+            ]
+          },
+          "awareness": {
+            "name": {
+              "en": "Awareness",
+              "fr": "Vigilance",
+              "es": "Consciencia"
+            },
+            "grants": [
+              {
+                "kind": "advantage",
+                "on": "initiative"
+              },
+              {
+                "kind": "advantage",
+                "on": "skill.perception"
+              }
+            ]
+          },
+          "constitution": {
+            "name": {
+              "en": "Constitution +2",
+              "fr": "Constitution +2",
+              "es": "Constitución +2"
+            },
+            "modifiers": [
+              {
+                "target": "ability.con",
+                "value": 2
+              }
+            ]
+          },
+          "greater-absorption": {
+            "name": {
+              "en": "Greater Absorption",
+              "fr": "Absorption suprême",
+              "es": "Absorción mayor"
+            }
+          },
+          "insight": {
+            "name": {
+              "en": "Insight (Wis +2)",
+              "fr": "Intuition (Sag +2)",
+              "es": "Perspicacia (Sab +2)"
+            },
+            "modifiers": [
+              {
+                "target": "ability.wis",
+                "value": 2
+              }
+            ]
+          },
+          "intellect": {
+            "name": {
+              "en": "Intellect (Int +2)",
+              "fr": "Intellect (Int +2)",
+              "es": "Intelecto (Int +2)"
+            },
+            "modifiers": [
+              {
+                "target": "ability.int",
+                "value": 2
+              }
+            ]
+          },
+          "leadership": {
+            "name": {
+              "en": "Leadership (Cha +2)",
+              "fr": "Commandement (Cha +2)",
+              "es": "Liderazgo (Car +2)"
+            },
+            "modifiers": [
+              {
+                "target": "ability.cha",
+                "value": 2
+              }
+            ]
+          },
+          "mastery": {
+            "name": {
+              "en": "Mastery (Proficiency Bonus +1, not computed)",
+              "fr": "Maîtrise (bonus de maîtrise +1, non calculé)",
+              "es": "Maestría (bonificador por competencia +1, no calculado)"
+            }
+          },
+          "protection": {
+            "name": {
+              "en": "Protection (+1 AC)",
+              "fr": "Protection (+1 CA)",
+              "es": "Protección (+1 CA)"
+            },
+            "modifiers": [
+              {
+                "target": "ac",
+                "value": 1
+              }
+            ]
+          },
+          "regeneration": {
+            "name": {
+              "en": "Regeneration",
+              "fr": "Régénération",
+              "es": "Regeneración"
+            }
+          },
+          "reserve": {
+            "name": {
+              "en": "Reserve",
+              "fr": "Réserve",
+              "es": "Reserva"
+            }
+          },
+          "strength": {
+            "name": {
+              "en": "Strength (Str +2)",
+              "fr": "Force (For +2)",
+              "es": "Fuerza (Fue +2)"
+            },
+            "modifiers": [
+              {
+                "target": "ability.str",
+                "value": 2
+              }
+            ]
+          },
+          "sustenance": {
+            "name": {
+              "en": "Sustenance",
+              "fr": "Subsistance",
+              "es": "Sustento"
+            }
+          }
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "stores": true,
+      "note": {
+        "en": "Reserve: stores up to 4 levels of spells, cast with the original caster’s DC",
+        "fr": "Réserve : stocke jusqu’à 4 niveaux de sorts, lancés avec le DD du lanceur d’origine",
+        "es": "Reserva: almacena hasta 4 niveles de conjuros, lanzados con la CD del lanzador original"
+      }
+    },
+    "source": {
+      "page": 227,
+      "frPage": 251,
+      "section": "Magic Items > Ioun Stone"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:iron-bands",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 228,
+      "frPage": 247,
+      "section": "Magic Items > Iron Bands"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:iron-flask",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 228,
+      "frPage": 242,
+      "section": "Magic Items > Iron Flask"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:javelin-of-lightning",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 228,
+      "frPage": 246,
+      "section": "Magic Items > Javelin of Lightning"
+    }
+  },
+  {
+    "id": "item:lantern-of-revealing",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 228,
+      "frPage": 246,
+      "section": "Magic Items > Lantern of Revealing"
+    }
+  },
+  {
+    "id": "item:luck-blade",
+    "activeWhen": "on-person",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      },
+      {
+        "target": "save.all",
+        "value": 1
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "wish",
+          "cost": 1,
+          "note": {
+            "en": "once per dawn",
+            "fr": "une fois par aube",
+            "es": "una vez por amanecer"
+          }
+        }
+      ],
+      "charges": "1d3"
+    },
+    "source": {
+      "page": 229,
+      "frPage": 246,
+      "section": "Magic Items > Luck Blade"
+    }
+  },
+  {
+    "id": "item:mace-of-disruption",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "2d6",
+        "condition": {
+          "en": "target is a Fiend or an Undead: Radiant",
+          "fr": "cible fiélon ou mort-vivant : radiants",
+          "es": "objetivo infernal o muerto viviente: radiante"
+        }
+      }
+    ],
+    "source": {
+      "page": 229,
+      "frPage": 248,
+      "section": "Magic Items > Mace of Disruption"
+    }
+  },
+  {
+    "id": "item:mace-of-smiting",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 1
+      },
+      {
+        "target": "item.damage",
+        "value": 1
+      },
+      {
+        "target": "item.attack",
+        "value": 2,
+        "condition": {
+          "en": "against a Construct",
+          "fr": "contre une créature artificielle",
+          "es": "contra un autómata"
+        }
+      },
+      {
+        "target": "item.damage",
+        "value": 2,
+        "condition": {
+          "en": "against a Construct",
+          "fr": "contre une créature artificielle",
+          "es": "contra un autómata"
+        }
+      }
+    ],
+    "source": {
+      "page": 229,
+      "frPage": 248,
+      "section": "Magic Items > Mace of Smiting"
+    }
+  },
+  {
+    "id": "item:mace-of-terror",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: DC 15 Wis or Frightened 1 minute",
+        "fr": "1 charge : Sag DD 15 ou Effrayé 1 minute",
+        "es": "1 carga: Sab CD 15 o Asustado 1 minuto"
+      }
+    },
+    "source": {
+      "page": 229,
+      "frPage": 248,
+      "section": "Magic Items > Mace of Terror"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:mantle-of-spell-resistance",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.spells",
+        "condition": {
+          "en": "against spells",
+          "fr": "contre les sorts",
+          "es": "contra conjuros"
+        }
+      }
+    ],
+    "source": {
+      "page": 229,
+      "frPage": 247,
+      "section": "Magic Items > Mantle of Spell Resistance"
+    }
+  },
+  {
+    "id": "item:manual-of-bodily-health",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 229,
+      "frPage": 247,
+      "section": "Magic Items > Manual of Bodily Health"
+    }
+  },
+  {
+    "id": "item:manual-of-gainful-exercise",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 229,
+      "frPage": 247,
+      "section": "Magic Items > Manual of Gainful Exercise"
+    }
+  },
+  {
+    "id": "item:manual-of-golems",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 229,
+      "frPage": 247,
+      "section": "Magic Items > Manual of Golems"
+    }
+  },
+  {
+    "id": "item:manual-of-quickness-of-action",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 230,
+      "frPage": 247,
+      "section": "Magic Items > Manual of Quickness of Action"
+    }
+  },
+  {
+    "id": "item:marvelous-pigments",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 230,
+      "frPage": 252,
+      "section": "Magic Items > Marvelous Pigments"
+    }
+  },
+  {
+    "id": "item:medallion-of-thoughts",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "detect-thoughts",
+          "cost": 1,
+          "dc": 13
+        }
+      ],
+      "charges": 5,
+      "recharge": "1d4"
+    },
+    "source": {
+      "page": 230,
+      "frPage": 249,
+      "section": "Magic Items > Medallion of Thoughts"
+    }
+  },
+  {
+    "id": "item:mirror-of-life-trapping",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 230,
+      "frPage": 249,
+      "section": "Magic Items > Mirror of Life Trapping"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:mithral-armor",
+    "flags": ["no-armor-stealth-disadvantage", "no-armor-speed-penalty"],
+    "source": {
+      "page": 231,
+      "frPage": 225,
+      "section": "Magic Items > Mithral Armor"
+    }
+  },
+  {
+    "id": "item:mysterious-deck",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 231,
+      "frPage": 263,
+      "section": "Magic Items > Mysterious Deck"
+    }
+  },
+  {
+    "id": "item:necklace-of-adaptation",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.poisoned"
+      }
+    ],
+    "source": {
+      "page": 232,
+      "frPage": 238,
+      "section": "Magic Items > Necklace of Adaptation"
+    }
+  },
+  {
+    "id": "item:necklace-of-fireballs",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "fireball",
+          "cost": 1,
+          "level": 3,
+          "dc": 15,
+          "note": {
+            "en": "+1d6 per extra bead (max 12d6)",
+            "fr": "+1d6 par perle supplémentaire (max 12d6)",
+            "es": "+1d6 por cuenta adicional (máx. 12d6)"
+          }
+        }
+      ],
+      "charges": "1d6 + 3"
+    },
+    "source": {
+      "page": 233,
+      "frPage": 238,
+      "section": "Magic Items > Necklace of Fireballs"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:necklace-of-prayer-beads",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "bless",
+          "perDay": 1
+        },
+        {
+          "spellId": "cure-wounds",
+          "level": 2,
+          "perDay": 1
+        },
+        {
+          "spellId": "greater-restoration",
+          "perDay": 1
+        },
+        {
+          "spellId": "shining-smite",
+          "perDay": 1
+        },
+        {
+          "spellId": "guardian-of-faith",
+          "perDay": 1
+        },
+        {
+          "spellId": "wind-walk",
+          "perDay": 1
+        }
+      ],
+      "wielderDc": true,
+      "note": {
+        "en": "Bonus Action; only the beads on your necklace (GM)",
+        "fr": "action Bonus ; seulement les perles de votre collier (MJ)",
+        "es": "acción adicional; solo las cuentas de tu collar (GM)"
+      }
+    },
+    "source": {
+      "page": 233,
+      "frPage": 237,
+      "section": "Magic Items > Necklace of Prayer Beads"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:nine-lives-stealer",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": "1d8 + 1",
+      "note": {
+        "en": "1 charge lost when a creature is slain",
+        "fr": "1 charge perdue quand une créature est tuée",
+        "es": "1 carga perdida cuando muere una criatura"
+      }
+    },
+    "source": {
+      "page": 233,
+      "frPage": 266,
+      "section": "Magic Items > Nine Lives Stealer"
+    }
+  },
+  {
+    "id": "item:oathbow",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "3d6",
+        "condition": {
+          "en": "against your sworn enemy: Piercing",
+          "fr": "contre votre ennemi juré : perforants",
+          "es": "contra tu enemigo jurado: perforante"
+        }
+      }
+    ],
+    "source": {
+      "page": 233,
+      "frPage": 224,
+      "section": "Magic Items > Oathbow"
+    }
+  },
+  {
+    "id": "item:oil-of-etherealness",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "etherealness",
+          "note": {
+            "en": "1 hour",
+            "fr": "1 heure",
+            "es": "1 hora"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 233,
+      "frPage": 246,
+      "section": "Magic Items > Oil of Etherealness"
+    }
+  },
+  {
+    "id": "item:oil-of-sharpness",
+    "spellItem": {
+      "spells": [],
+      "consumable": true,
+      "note": {
+        "en": "the coated weapon becomes a +3 Weapon",
+        "fr": "l’arme enduite devient une arme +3",
+        "es": "el arma untada pasa a ser un arma +3"
+      }
+    },
+    "source": {
+      "page": 233,
+      "frPage": 246,
+      "section": "Magic Items > Oil of Sharpness"
+    }
+  },
+  {
+    "id": "item:oil-of-slipperiness",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "freedom-of-movement",
+          "note": {
+            "en": "8 hours",
+            "fr": "8 heures",
+            "es": "8 horas"
+          }
+        },
+        {
+          "spellId": "grease",
+          "note": {
+            "en": "poured: 8 hours",
+            "fr": "versée : 8 heures",
+            "es": "vertido: 8 horas"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 233,
+      "frPage": 246,
+      "section": "Magic Items > Oil of Slipperiness"
+    }
+  },
+  {
+    "id": "item:pearl-of-power",
+    "textOnly": {
+      "en": "Regains a spell slot: mark it back in the Spells pane.",
+      "fr": "Récupère un emplacement : rendez-le dans le volet Sorts.",
+      "es": "Recupera un espacio de conjuro: márcalo de nuevo en el panel Conjuros."
+    },
+    "source": {
+      "page": 234,
+      "frPage": 250,
+      "section": "Magic Items > Pearl of Power"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:periapt-of-health",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.poisoned"
+      }
+    ],
+    "computed": [
+      {
+        "id": "heal",
+        "label": {
+          "en": "Hit Points regained",
+          "fr": "Points de vie récupérés",
+          "es": "Puntos de golpe recuperados"
+        },
+        "dice": "2d4",
+        "parts": [2]
+      }
+    ],
+    "source": {
+      "page": 234,
+      "frPage": 220,
+      "section": "Magic Items > Periapt of Health"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:periapt-of-proof-against-poison",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "poisoned"
+      },
+      {
+        "kind": "immunity",
+        "on": "poison"
+      }
+    ],
+    "source": {
+      "page": 234,
+      "frPage": 220,
+      "section": "Magic Items > Periapt of Proof against Poison"
+    }
+  },
+  {
+    "id": "item:periapt-of-wound-closure",
+    "textOnly": {
+      "en": "Changes death saves and Hit Point Dice at the table: nothing on the sheet.",
+      "fr": "Modifie les JS contre la mort et les dés de vie en jeu : rien sur la feuille.",
+      "es": "Modifica las tiradas de salvación contra muerte y los dados de puntos de golpe en la mesa: nada en la hoja."
+    },
+    "source": {
+      "page": 234,
+      "frPage": 220,
+      "section": "Magic Items > Periapt of Wound Closure"
+    }
+  },
+  {
+    "id": "item:philter-of-love",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 234,
+      "frPage": 251,
+      "section": "Magic Items > Philter of Love"
+    }
+  },
+  {
+    "id": "item:pipes-of-haunting",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: DC 15 Wis or Frightened",
+        "fr": "1 charge : Sag DD 15 ou Effrayé",
+        "es": "1 carga: Sab CD 15 o Asustado"
+      }
+    },
+    "source": {
+      "page": 234,
+      "frPage": 243,
+      "section": "Magic Items > Pipes of Haunting"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:pipes-of-the-sewers",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge per Swarm of Rats called",
+        "fr": "1 charge par nuée de rats appelée",
+        "es": "1 carga por enjambre de ratas llamado"
+      }
+    },
+    "source": {
+      "page": 234,
+      "frPage": 243,
+      "section": "Magic Items > Pipes of the Sewers"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:plate-armor-of-etherealness",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "etherealness",
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 234,
+      "frPage": 245,
+      "section": "Magic Items > Plate Armor of Etherealness"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:portable-hole",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 234,
+      "frPage": 255,
+      "section": "Magic Items > Portable Hole"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:potion-of-animal-friendship",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "animal-friendship",
+          "level": 3,
+          "dc": 13
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Animal Friendship"
+    }
+  },
+  {
+    "id": "item:potion-of-clairvoyance",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "clairvoyance",
+          "note": {
+            "en": "no Concentration",
+            "fr": "sans Concentration",
+            "es": "sin Concentración"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Clairvoyance"
+    }
+  },
+  {
+    "id": "item:potion-of-climbing",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Climbing"
+    }
+  },
+  {
+    "id": "item:potion-of-diminution",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "enlarge-reduce",
+          "note": {
+            "en": "reduce, 1d4 hours, no Concentration",
+            "fr": "rapetisser, 1d4 heures, sans Concentration",
+            "es": "reducir, 1d4 horas, sin Concentración"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Diminution"
+    }
+  },
+  {
+    "id": "item:potion-of-flying",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Flying"
+    }
+  },
+  {
+    "id": "item:potion-of-gaseous-form",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "gaseous-form",
+          "note": {
+            "en": "1 hour, no Concentration",
+            "fr": "1 heure, sans Concentration",
+            "es": "1 hora, sin Concentración"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Gaseous Form"
+    }
+  },
+  {
+    "id": "item:potion-of-giant-strength",
+    "spellItem": {
+      "spells": [],
+      "consumable": true,
+      "variantNotes": [
+        {
+          "en": "Strength 21 for 1 hour",
+          "fr": "Force 21 pendant 1 heure",
+          "es": "Fuerza 21 durante 1 hora"
+        },
+        {
+          "en": "Strength 23 for 1 hour",
+          "fr": "Force 23 pendant 1 heure",
+          "es": "Fuerza 23 durante 1 hora"
+        },
+        {
+          "en": "Strength 25 for 1 hour",
+          "fr": "Force 25 pendant 1 heure",
+          "es": "Fuerza 25 durante 1 hora"
+        },
+        {
+          "en": "Strength 27 for 1 hour",
+          "fr": "Force 27 pendant 1 heure",
+          "es": "Fuerza 27 durante 1 hora"
+        },
+        {
+          "en": "Strength 29 for 1 hour",
+          "fr": "Force 29 pendant 1 heure",
+          "es": "Fuerza 29 durante 1 hora"
+        }
+      ]
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Giant Strength"
+    }
+  },
+  {
+    "id": "item:potion-of-growth",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "enlarge-reduce",
+          "note": {
+            "en": "enlarge, 10 minutes, no Concentration",
+            "fr": "agrandir, 10 minutes, sans Concentration",
+            "es": "agrandar, 10 minutos, sin Concentración"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 235,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Growth"
+    }
+  },
+  {
+    "id": "item:potion-of-heroism",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "bless",
+          "note": {
+            "en": "on you, 1 hour, no Concentration; and 10 Temporary HP",
+            "fr": "sur vous, 1 heure, sans Concentration ; et 10 PV temporaires",
+            "es": "sobre ti, 1 hora, sin Concentración; y 10 PG temporales"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Heroism"
+    }
+  },
+  {
+    "id": "item:potion-of-invisibility",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Invisibility"
+    }
+  },
+  {
+    "id": "item:potion-of-invulnerability",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 253,
+      "section": "Magic Items > Potion of Invulnerability"
+    }
+  },
+  {
+    "id": "item:potion-of-longevity",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 239,
+      "section": "Magic Items > Potion of Longevity"
+    }
+  },
+  {
+    "id": "item:potion-of-mind-reading",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "detect-thoughts",
+          "dc": 13,
+          "note": {
+            "en": "10 minutes, no Concentration",
+            "fr": "10 minutes, sans Concentration",
+            "es": "10 minutos, sin Concentración"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Mind Reading"
+    }
+  },
+  {
+    "id": "item:potion-of-poison",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Poison"
+    }
+  },
+  {
+    "id": "item:potion-of-resistance",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Resistance"
+    }
+  },
+  {
+    "id": "item:potion-of-speed",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "haste",
+          "note": {
+            "en": "1 minute, no Concentration, no lethargy",
+            "fr": "1 minute, sans Concentration ni léthargie",
+            "es": "1 minuto, sin Concentración ni letargo"
+          }
+        }
+      ],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Speed"
+    }
+  },
+  {
+    "id": "item:potion-of-vitality",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Vitality"
+    }
+  },
+  {
+    "id": "item:potion-of-water-breathing",
+    "spellItem": {
+      "spells": [],
+      "consumable": true
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potion of Water Breathing"
+    }
+  },
+  {
+    "id": "item:potions-of-healing",
+    "spellItem": {
+      "spells": [],
+      "consumable": true,
+      "variantNotes": [
+        {
+          "en": "Regain 2d4 + 2 Hit Points",
+          "fr": "Récupérer 2d4 + 2 points de vie",
+          "es": "Recuperar 2d4 + 2 puntos de golpe"
+        },
+        {
+          "en": "Regain 4d4 + 4 Hit Points",
+          "fr": "Récupérer 4d4 + 4 points de vie",
+          "es": "Recuperar 4d4 + 4 puntos de golpe"
+        },
+        {
+          "en": "Regain 8d4 + 8 Hit Points",
+          "fr": "Récupérer 8d4 + 8 points de vie",
+          "es": "Recuperar 8d4 + 8 puntos de golpe"
+        },
+        {
+          "en": "Regain 10d4 + 20 Hit Points",
+          "fr": "Récupérer 10d4 + 20 points de vie",
+          "es": "Recuperar 10d4 + 20 puntos de golpe"
+        }
+      ]
+    },
+    "source": {
+      "page": 236,
+      "frPage": 254,
+      "section": "Magic Items > Potions of Healing"
+    }
+  },
+  {
+    "id": "item:quarterstaff-of-the-acrobat",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.acrobatics"
+      }
+    ],
+    "source": {
+      "page": 237,
+      "frPage": 230,
+      "section": "Magic Items > Quarterstaff of the Acrobat"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      },
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-animal-influence",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "animal-friendship",
+          "cost": 1,
+          "dc": 13
+        },
+        {
+          "spellId": "fear",
+          "cost": 1,
+          "dc": 13,
+          "note": {
+            "en": "Beasts only",
+            "fr": "bêtes seulement",
+            "es": "solo bestias"
+          }
+        },
+        {
+          "spellId": "speak-with-animals",
+          "cost": 1,
+          "dc": 13
+        }
+      ],
+      "charges": 3,
+      "recharge": "1d3"
+    },
+    "source": {
+      "page": 237,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Animal Influence"
+    }
+  },
+  {
+    "id": "item:ring-of-djinni-summoning",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 237,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Djinni Summoning"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-elemental-command",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Elemental Plane",
+          "fr": "Plan élémentaire",
+          "es": "Plano elemental"
+        },
+        "options": {
+          "air": {
+            "name": {
+              "en": "Air",
+              "fr": "Air",
+              "es": "Aire"
+            },
+            "modifiers": [
+              {
+                "target": "speed.fly",
+                "value": "speed"
+              }
+            ],
+            "grants": [
+              {
+                "kind": "language",
+                "value": "Auran"
+              },
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "earth": {
+            "name": {
+              "en": "Earth",
+              "fr": "Terre",
+              "es": "Tierra"
+            },
+            "grants": [
+              {
+                "kind": "language",
+                "value": "Terran"
+              },
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "fire": {
+            "name": {
+              "en": "Fire",
+              "fr": "Feu",
+              "es": "Fuego"
+            },
+            "grants": [
+              {
+                "kind": "language",
+                "value": "Ignan"
+              },
+              {
+                "kind": "immunity",
+                "on": "fire"
+              }
+            ]
+          },
+          "water": {
+            "name": {
+              "en": "Water",
+              "fr": "Eau",
+              "es": "Agua"
+            },
+            "modifiers": [
+              {
+                "target": "speed.swim",
+                "value": 60
+              }
+            ],
+            "grants": [
+              {
+                "kind": "language",
+                "value": "Aquan"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "chain-lightning",
+          "cost": 3,
+          "dc": 18,
+          "note": {
+            "en": "Air",
+            "fr": "Air",
+            "es": "Aire"
+          }
+        },
+        {
+          "spellId": "feather-fall",
+          "cost": 0,
+          "dc": 18,
+          "note": {
+            "en": "Air",
+            "fr": "Air",
+            "es": "Aire"
+          }
+        },
+        {
+          "spellId": "gust-of-wind",
+          "cost": 2,
+          "dc": 18,
+          "note": {
+            "en": "Air",
+            "fr": "Air",
+            "es": "Aire"
+          }
+        },
+        {
+          "spellId": "wind-wall",
+          "cost": 1,
+          "dc": 18,
+          "note": {
+            "en": "Air",
+            "fr": "Air",
+            "es": "Aire"
+          }
+        },
+        {
+          "spellId": "earthquake",
+          "cost": 5,
+          "dc": 18,
+          "note": {
+            "en": "Earth",
+            "fr": "Terre",
+            "es": "Tierra"
+          }
+        },
+        {
+          "spellId": "stone-shape",
+          "cost": 2,
+          "dc": 18,
+          "note": {
+            "en": "Earth",
+            "fr": "Terre",
+            "es": "Tierra"
+          }
+        },
+        {
+          "spellId": "stoneskin",
+          "cost": 3,
+          "dc": 18,
+          "note": {
+            "en": "Earth",
+            "fr": "Terre",
+            "es": "Tierra"
+          }
+        },
+        {
+          "spellId": "wall-of-stone",
+          "cost": 3,
+          "dc": 18,
+          "note": {
+            "en": "Earth",
+            "fr": "Terre",
+            "es": "Tierra"
+          }
+        },
+        {
+          "spellId": "burning-hands",
+          "cost": 1,
+          "dc": 18,
+          "note": {
+            "en": "Fire",
+            "fr": "Feu",
+            "es": "Fuego"
+          }
+        },
+        {
+          "spellId": "fireball",
+          "cost": 2,
+          "dc": 18,
+          "note": {
+            "en": "Fire",
+            "fr": "Feu",
+            "es": "Fuego"
+          }
+        },
+        {
+          "spellId": "fire-storm",
+          "cost": 4,
+          "dc": 18,
+          "note": {
+            "en": "Fire",
+            "fr": "Feu",
+            "es": "Fuego"
+          }
+        },
+        {
+          "spellId": "wall-of-fire",
+          "cost": 3,
+          "dc": 18,
+          "note": {
+            "en": "Fire",
+            "fr": "Feu",
+            "es": "Fuego"
+          }
+        },
+        {
+          "spellId": "create-or-destroy-water",
+          "cost": 1,
+          "dc": 18,
+          "note": {
+            "en": "Water",
+            "fr": "Eau",
+            "es": "Agua"
+          }
+        },
+        {
+          "spellId": "ice-storm",
+          "cost": 2,
+          "dc": 18,
+          "note": {
+            "en": "Water",
+            "fr": "Eau",
+            "es": "Agua"
+          }
+        },
+        {
+          "spellId": "tsunami",
+          "cost": 5,
+          "dc": 18,
+          "note": {
+            "en": "Water",
+            "fr": "Eau",
+            "es": "Agua"
+          }
+        },
+        {
+          "spellId": "wall-of-ice",
+          "cost": 3,
+          "dc": 18,
+          "note": {
+            "en": "Water",
+            "fr": "Eau",
+            "es": "Agua"
+          }
+        },
+        {
+          "spellId": "water-walk",
+          "cost": 2,
+          "dc": 18,
+          "note": {
+            "en": "Water",
+            "fr": "Eau",
+            "es": "Agua"
+          }
+        }
+      ],
+      "charges": 5,
+      "recharge": "1d4 + 1",
+      "note": {
+        "en": "only the spells of the ring’s plane",
+        "fr": "seulement les sorts du plan de l’anneau",
+        "es": "solo los conjuros del plano del anillo"
+      }
+    },
+    "source": {
+      "page": 237,
+      "frPage": 222,
+      "section": "Magic Items > Ring of Elemental Command"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-evasion",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: succeed on a failed Dex save",
+        "fr": "1 charge : réussir un JS de Dex raté",
+        "es": "1 carga: superar una salvación de Des fallida"
+      }
+    },
+    "source": {
+      "page": 238,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Evasion"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-feather-falling",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 238,
+      "frPage": 222,
+      "section": "Magic Items > Ring of Feather Falling"
+    }
+  },
+  {
+    "id": "item:ring-of-free-action",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "paralyzed",
+        "condition": {
+          "en": "caused by magic",
+          "fr": "causé par la magie",
+          "es": "causado por magia"
+        }
+      },
+      {
+        "kind": "immunity",
+        "on": "restrained",
+        "condition": {
+          "en": "caused by magic",
+          "fr": "causé par la magie",
+          "es": "causado por magia"
+        }
+      }
+    ],
+    "source": {
+      "page": 238,
+      "frPage": 220,
+      "section": "Magic Items > Ring of Free Action"
+    }
+  },
+  {
+    "id": "item:ring-of-invisibility",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 238,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Invisibility"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-jumping",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "jump",
+          "atWill": true,
+          "note": {
+            "en": "yourself only",
+            "fr": "vous seul",
+            "es": "solo sobre ti"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 238,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Jumping"
+    }
+  },
+  {
+    "id": "item:ring-of-mind-shielding",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 238,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Mind Shielding"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-protection",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      },
+      {
+        "target": "save.all",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 238,
+      "frPage": 222,
+      "section": "Magic Items > Ring of Protection"
+    }
+  },
+  {
+    "id": "item:ring-of-regeneration",
+    "textOnly": {
+      "en": "Healing over time outside combat: apply it in the Hit Points block.",
+      "fr": "Soin dans la durée hors combat : appliquez-le dans le bloc Points de vie.",
+      "es": "Curación con el tiempo fuera de combate: aplícala en el bloque Puntos de golpe."
+    },
+    "source": {
+      "page": 238,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Regeneration"
+    }
+  },
+  {
+    "id": "item:ring-of-resistance",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Damage type",
+          "fr": "Type de dégâts",
+          "es": "Tipo de daño"
+        },
+        "options": {
+          "acid": {
+            "name": {
+              "en": "Acid",
+              "fr": "acide",
+              "es": "ácido"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "cold": {
+            "name": {
+              "en": "Cold",
+              "fr": "froid",
+              "es": "frío"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          },
+          "fire": {
+            "name": {
+              "en": "Fire",
+              "fr": "feu",
+              "es": "fuego"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "force": {
+            "name": {
+              "en": "Force",
+              "fr": "force",
+              "es": "fuerza"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "force"
+              }
+            ]
+          },
+          "lightning": {
+            "name": {
+              "en": "Lightning",
+              "fr": "foudre",
+              "es": "relámpago"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "necrotic": {
+            "name": {
+              "en": "Necrotic",
+              "fr": "nécrotiques",
+              "es": "necrótico"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "necrotic"
+              }
+            ]
+          },
+          "poison": {
+            "name": {
+              "en": "Poison",
+              "fr": "poison",
+              "es": "veneno"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ]
+          },
+          "psychic": {
+            "name": {
+              "en": "Psychic",
+              "fr": "psychiques",
+              "es": "psíquico"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "psychic"
+              }
+            ]
+          },
+          "radiant": {
+            "name": {
+              "en": "Radiant",
+              "fr": "radiants",
+              "es": "radiante"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "radiant"
+              }
+            ]
+          },
+          "thunder": {
+            "name": {
+              "en": "Thunder",
+              "fr": "tonnerre",
+              "es": "trueno"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "thunder"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 238,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Resistance"
+    }
+  },
+  {
+    "id": "item:ring-of-shooting-stars",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "dancing-lights",
+          "atWill": true
+        },
+        {
+          "spellId": "light",
+          "atWill": true
+        },
+        {
+          "spellId": "faerie-fire",
+          "cost": 1
+        }
+      ],
+      "charges": 6,
+      "recharge": "1d6",
+      "note": {
+        "en": "lightning spheres 2 charges, shooting stars 1 to 3 charges (DC 15 Dex)",
+        "fr": "sphères de foudre 2 charges, étoiles filantes 1 à 3 charges (Dex DD 15)",
+        "es": "esferas de rayos 2 cargas, estrellas fugaces 1 a 3 cargas (Des CD 15)"
+      }
+    },
+    "source": {
+      "page": 238,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Shooting Stars"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-spell-storing",
+    "spellItem": {
+      "spells": [],
+      "stores": true,
+      "note": {
+        "en": "up to 5 levels of spells",
+        "fr": "jusqu’à 5 niveaux de sorts",
+        "es": "hasta 5 niveles de conjuros"
+      }
+    },
+    "source": {
+      "page": 239,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Spell Storing"
+    }
+  },
+  {
+    "id": "item:ring-of-spell-turning",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.spells",
+        "condition": {
+          "en": "against spells",
+          "fr": "contre les sorts",
+          "es": "contra conjuros"
+        }
+      }
+    ],
+    "source": {
+      "page": 239,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Spell Turning"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-swimming",
+    "modifiers": [
+      {
+        "target": "speed.swim",
+        "value": 40
+      }
+    ],
+    "source": {
+      "page": 239,
+      "frPage": 222,
+      "section": "Magic Items > Ring of Swimming"
+    }
+  },
+  {
+    "id": "item:ring-of-telekinesis",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "telekinesis",
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 239,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Telekinesis"
+    }
+  },
+  {
+    "id": "item:ring-of-the-ram",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "+7 to hit, 2d10 Force per charge",
+        "fr": "+7 au toucher, 2d10 force par charge",
+        "es": "+7 al ataque, 2d10 de fuerza por carga"
+      }
+    },
+    "source": {
+      "page": 239,
+      "frPage": 223,
+      "section": "Magic Items > Ring of the Ram"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:ring-of-three-wishes",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "wish",
+          "cost": 1
+        }
+      ],
+      "charges": 3
+    },
+    "source": {
+      "page": 239,
+      "frPage": 223,
+      "section": "Magic Items > Ring of Three Wishes"
+    }
+  },
+  {
+    "id": "item:ring-of-warmth",
+    "computed": [
+      {
+        "id": "cold",
+        "label": {
+          "en": "Cold damage reduced",
+          "fr": "Dégâts de froid réduits",
+          "es": "Daño de frío reducido"
+        },
+        "dice": "2d8"
+      }
+    ],
+    "source": {
+      "page": 239,
+      "frPage": 221,
+      "section": "Magic Items > Ring of Warmth"
+    }
+  },
+  {
+    "id": "item:ring-of-water-walking",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "water-walk",
+          "atWill": true,
+          "note": {
+            "en": "yourself only",
+            "fr": "vous seul",
+            "es": "solo sobre ti"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 239,
+      "frPage": 222,
+      "section": "Magic Items > Ring of Water Walking"
+    }
+  },
+  {
+    "id": "item:ring-of-x-ray-vision",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 239,
+      "frPage": 222,
+      "section": "Magic Items > Ring of X-ray Vision"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:robe-of-eyes",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.perception",
+        "condition": {
+          "en": "relying on sight",
+          "fr": "basés sur la vue",
+          "es": "que dependan de la vista"
+        }
+      },
+      {
+        "kind": "darkvision",
+        "value": 120
+      }
+    ],
+    "source": {
+      "page": 240,
+      "frPage": 256,
+      "section": "Magic Items > Robe of Eyes"
+    }
+  },
+  {
+    "id": "item:robe-of-scintillating-colors",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge until the end of your next turn",
+        "fr": "1 charge jusqu’à la fin de votre tour suivant",
+        "es": "1 carga hasta el final de tu siguiente turno"
+      }
+    },
+    "source": {
+      "page": 240,
+      "frPage": 257,
+      "section": "Magic Items > Robe of Scintillating Colors"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:robe-of-stars",
+    "modifiers": [
+      {
+        "target": "save.all",
+        "value": 1
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "magic-missile",
+          "cost": 1,
+          "level": 5
+        }
+      ],
+      "charges": 6,
+      "recharge": "1d6",
+      "rechargeAt": "dusk"
+    },
+    "source": {
+      "page": 240,
+      "frPage": 256,
+      "section": "Magic Items > Robe of Stars"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:robe-of-the-archmagi",
+    "acFormula": {
+      "base": 15,
+      "abilities": ["dex"],
+      "noArmor": true,
+      "noShield": false
+    },
+    "modifiers": [
+      {
+        "target": "spell.dc",
+        "value": 2
+      },
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.magic",
+        "condition": {
+          "en": "against spells and magical effects",
+          "fr": "contre les sorts et effets magiques",
+          "es": "contra conjuros y efectos mágicos"
+        }
+      }
+    ],
+    "source": {
+      "page": 240,
+      "frPage": 256,
+      "section": "Magic Items > Robe of the Archmagi"
+    }
+  },
+  {
+    "id": "item:robe-of-useful-items",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 240,
+      "frPage": 256,
+      "section": "Magic Items > Robe of Useful Items"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:rod-of-absorption",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 241,
+      "frPage": 259,
+      "section": "Magic Items > Rod of Absorption"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:rod-of-alertness",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.perception"
+      },
+      {
+        "kind": "advantage",
+        "on": "initiative"
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "detect-evil-and-good",
+          "atWill": true
+        },
+        {
+          "spellId": "detect-magic",
+          "atWill": true
+        },
+        {
+          "spellId": "detect-poison-and-disease",
+          "atWill": true
+        },
+        {
+          "spellId": "see-invisibility",
+          "atWill": true
+        }
+      ]
+    },
+    "source": {
+      "page": 241,
+      "frPage": 260,
+      "section": "Magic Items > Rod of Alertness"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:rod-of-lordly-might",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      }
+    ],
+    "source": {
+      "page": 241,
+      "frPage": 259,
+      "section": "Magic Items > Rod of Lordly Might"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:rod-of-resurrection",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "heal",
+          "cost": 1
+        },
+        {
+          "spellId": "resurrection",
+          "cost": 5
+        }
+      ],
+      "charges": 5,
+      "recharge": "1"
+    },
+    "source": {
+      "page": 242,
+      "frPage": 260,
+      "section": "Magic Items > Rod of Resurrection"
+    }
+  },
+  {
+    "id": "item:rod-of-rulership",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 242,
+      "frPage": 260,
+      "section": "Magic Items > Rod of Rulership"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:rod-of-security",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 242,
+      "frPage": 260,
+      "section": "Magic Items > Rod of Security"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:rope-of-climbing",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 242,
+      "frPage": 238,
+      "section": "Magic Items > Rope of Climbing"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:rope-of-entanglement",
+    "textOnly": {
+      "en": "Activated property (Magic action, Bonus Action or Reaction): nothing on the sheet; applied at the table.",
+      "fr": "Propriété activée (action Magie, action Bonus ou Réaction) : rien sur la feuille ; s’applique en jeu.",
+      "es": "Propiedad activada (acción de magia, acción adicional o reacción): nada en la hoja; se aplica en la mesa."
+    },
+    "source": {
+      "page": 242,
+      "frPage": 239,
+      "section": "Magic Items > Rope of Entanglement"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      },
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:scarab-of-protection",
+    "activeWhen": "on-person",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 1
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.spells",
+        "condition": {
+          "en": "against spells",
+          "fr": "contre les sorts",
+          "es": "contra conjuros"
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 12,
+      "note": {
+        "en": "Reaction, 1 charge: succeed on a failed save against a Necromancy spell or an Undead",
+        "fr": "Réaction, 1 charge : réussir un JS raté contre un sort de nécromancie ou un mort-vivant",
+        "es": "reacción, 1 carga: superar una salvación fallida contra un conjuro de nigromancia o un muerto viviente"
+      }
+    },
+    "source": {
+      "page": 243,
+      "frPage": 259,
+      "section": "Magic Items > Scarab of Protection"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:scimitar-of-speed",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      }
+    ],
+    "source": {
+      "page": 243,
+      "frPage": 238,
+      "section": "Magic Items > Scimitar of Speed"
+    },
+    "activation": [
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:sending-stones",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "sending",
+          "perDay": 1
+        }
+      ]
+    },
+    "source": {
+      "page": 243,
+      "frPage": 252,
+      "section": "Magic Items > Sending Stones"
+    }
+  },
+  {
+    "id": "item:sentinel-shield",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "initiative"
+      },
+      {
+        "kind": "advantage",
+        "on": "skill.perception"
+      }
+    ],
+    "source": {
+      "page": 243,
+      "frPage": 234,
+      "section": "Magic Items > Sentinel Shield"
+    }
+  },
+  {
+    "id": "item:shield-1-2-or-3",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 0,
+        "byVariant": [1, 2, 3]
+      }
+    ],
+    "source": {
+      "page": 243,
+      "frPage": 233,
+      "section": "Magic Items > Shield, +1, +2, or +3"
+    }
+  },
+  {
+    "id": "item:shield-of-missile-attraction",
+    "textOnly": {
+      "en": "Resistance to ranged weapon attacks (not a damage type) and a curse: applied at the table.",
+      "fr": "Résistance aux attaques d’armes à distance (pas un type de dégâts) et malédiction : en jeu.",
+      "es": "Resistencia a los ataques con armas a distancia (no es un tipo de daño) y una maldición: se aplica en la mesa."
+    },
+    "source": {
+      "page": 243,
+      "frPage": 233,
+      "section": "Magic Items > Shield of Missile Attraction"
+    }
+  },
+  {
+    "id": "item:shield-of-the-cavalier",
+    "modifiers": [
+      {
+        "target": "ac",
+        "value": 2
+      }
+    ],
+    "computed": [
+      {
+        "id": "bash",
+        "label": {
+          "en": "Forceful Bash damage (Force)",
+          "fr": "Coup de bouclier (force)",
+          "es": "Golpe contundente (fuerza)"
+        },
+        "dice": "2d6",
+        "parts": [2, "str"]
+      }
+    ],
+    "source": {
+      "page": 243,
+      "frPage": 233,
+      "section": "Magic Items > Shield of the Cavalier"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:slippers-of-spider-climbing",
+    "modifiers": [
+      {
+        "target": "speed.climb",
+        "value": "speed"
+      }
+    ],
+    "source": {
+      "page": 244,
+      "frPage": 237,
+      "section": "Magic Items > Slippers of Spider Climbing"
+    }
+  },
+  {
+    "id": "item:sovereign-glue",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 244,
+      "frPage": 238,
+      "section": "Magic Items > Sovereign Glue"
+    }
+  },
+  {
+    "id": "item:spell-scroll",
+    "spellItem": {
+      "spells": [],
+      "scroll": true,
+      "consumable": true,
+      "note": {
+        "en": "higher than you can cast: spellcasting check DC 10 + level",
+        "fr": "niveau trop élevé : test d’incantation DD 10 + niveau",
+        "es": "de nivel superior al que puedes lanzar: prueba de aptitud mágica CD 10 + nivel"
+      }
+    },
+    "source": {
+      "page": 244,
+      "frPage": 250,
+      "section": "Magic Items > Spell Scroll"
+    }
+  },
+  {
+    "id": "item:spellguard-shield",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.magic",
+        "condition": {
+          "en": "against spells and magical effects",
+          "fr": "contre les sorts et effets magiques",
+          "es": "contra conjuros y efectos mágicos"
+        }
+      },
+      {
+        "kind": "disadvantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "spell attacks",
+          "fr": "attaques de sort",
+          "es": "ataques de conjuro"
+        }
+      }
+    ],
+    "source": {
+      "page": 244,
+      "frPage": 233,
+      "section": "Magic Items > Spellguard Shield"
+    }
+  },
+  {
+    "id": "item:sphere-of-annihilation",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 244,
+      "frPage": 261,
+      "section": "Magic Items > Sphere of Annihilation"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-charming",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "charm-person",
+          "cost": 1
+        },
+        {
+          "spellId": "command",
+          "cost": 1
+        },
+        {
+          "spellId": "comprehend-languages",
+          "cost": 1
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d8 + 2",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 245,
+      "frPage": 229,
+      "section": "Magic Items > Staff of Charming"
+    },
+    "activation": [
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-fire",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "fire"
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "burning-hands",
+          "cost": 1
+        },
+        {
+          "spellId": "fireball",
+          "cost": 3
+        },
+        {
+          "spellId": "wall-of-fire",
+          "cost": 4
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d6 + 4",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 245,
+      "frPage": 229,
+      "section": "Magic Items > Staff of Fire"
+    }
+  },
+  {
+    "id": "item:staff-of-frost",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "cold"
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "cone-of-cold",
+          "cost": 5
+        },
+        {
+          "spellId": "fog-cloud",
+          "cost": 1
+        },
+        {
+          "spellId": "ice-storm",
+          "cost": 4
+        },
+        {
+          "spellId": "wall-of-ice",
+          "cost": 4
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d6 + 4",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 245,
+      "frPage": 229,
+      "section": "Magic Items > Staff of Frost"
+    }
+  },
+  {
+    "id": "item:staff-of-healing",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "cure-wounds",
+          "cost": "level",
+          "level": 1,
+          "maxLevel": 4
+        },
+        {
+          "spellId": "lesser-restoration",
+          "cost": 2
+        },
+        {
+          "spellId": "mass-cure-wounds",
+          "cost": 5
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d6 + 4",
+      "wielderDc": true,
+      "note": {
+        "en": "uses your spellcasting ability modifier",
+        "fr": "utilise votre modificateur de caractéristique d’incantation",
+        "es": "usa tu modificador de aptitud mágica"
+      }
+    },
+    "source": {
+      "page": 245,
+      "frPage": 229,
+      "section": "Magic Items > Staff of Healing"
+    }
+  },
+  {
+    "id": "item:staff-of-power",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      },
+      {
+        "target": "ac",
+        "value": 2
+      },
+      {
+        "target": "save.all",
+        "value": 2
+      },
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "cone-of-cold",
+          "cost": 5
+        },
+        {
+          "spellId": "fireball",
+          "cost": 5,
+          "level": 5
+        },
+        {
+          "spellId": "globe-of-invulnerability",
+          "cost": 6
+        },
+        {
+          "spellId": "hold-monster",
+          "cost": 5
+        },
+        {
+          "spellId": "levitate",
+          "cost": 2
+        },
+        {
+          "spellId": "lightning-bolt",
+          "cost": 5,
+          "level": 5
+        },
+        {
+          "spellId": "magic-missile",
+          "cost": 1
+        },
+        {
+          "spellId": "ray-of-enfeeblement",
+          "cost": 1
+        },
+        {
+          "spellId": "wall-of-force",
+          "cost": 5
+        }
+      ],
+      "charges": 20,
+      "recharge": "2d8 + 4",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 245,
+      "frPage": 230,
+      "section": "Magic Items > Staff of Power"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-striking",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 10,
+      "recharge": "1d6 + 4",
+      "note": {
+        "en": "on a hit: up to 3 charges, +1d6 Force each",
+        "fr": "au toucher : jusqu’à 3 charges, +1d6 force chacune",
+        "es": "al impactar: hasta 3 cargas, +1d6 de fuerza cada una"
+      }
+    },
+    "source": {
+      "page": 246,
+      "frPage": 232,
+      "section": "Magic Items > Staff of Striking"
+    }
+  },
+  {
+    "id": "item:staff-of-swarming-insects",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "giant-insect",
+          "cost": 4
+        },
+        {
+          "spellId": "insect-plague",
+          "cost": 5
+        }
+      ],
+      "charges": 10,
+      "recharge": "1d6 + 4",
+      "wielderDc": true,
+      "note": {
+        "en": "insect cloud: 1 charge, 30-ft Heavily Obscured for 10 minutes",
+        "fr": "nuée d’insectes : 1 charge, visibilité nulle sur 9 m pendant 10 minutes",
+        "es": "nube de insectos: 1 carga, zona muy oscura de 9 m durante 10 minutos"
+      }
+    },
+    "source": {
+      "page": 246,
+      "frPage": 231,
+      "section": "Magic Items > Staff of Swarming Insects"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-the-magi",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      },
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.spells",
+        "condition": {
+          "en": "against spells",
+          "fr": "contre les sorts",
+          "es": "contra conjuros"
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "arcane-lock",
+          "cost": 0
+        },
+        {
+          "spellId": "conjure-elemental",
+          "cost": 7
+        },
+        {
+          "spellId": "detect-magic",
+          "cost": 0
+        },
+        {
+          "spellId": "dispel-magic",
+          "cost": 3
+        },
+        {
+          "spellId": "enlarge-reduce",
+          "cost": 0
+        },
+        {
+          "spellId": "fireball",
+          "cost": 7,
+          "level": 7
+        },
+        {
+          "spellId": "flaming-sphere",
+          "cost": 2
+        },
+        {
+          "spellId": "ice-storm",
+          "cost": 4
+        },
+        {
+          "spellId": "invisibility",
+          "cost": 2
+        },
+        {
+          "spellId": "knock",
+          "cost": 2
+        },
+        {
+          "spellId": "light",
+          "cost": 0
+        },
+        {
+          "spellId": "lightning-bolt",
+          "cost": 7,
+          "level": 7
+        },
+        {
+          "spellId": "mage-hand",
+          "cost": 0
+        },
+        {
+          "spellId": "passwall",
+          "cost": 5
+        },
+        {
+          "spellId": "plane-shift",
+          "cost": 7
+        },
+        {
+          "spellId": "protection-from-evil-and-good",
+          "cost": 0
+        },
+        {
+          "spellId": "telekinesis",
+          "cost": 5
+        },
+        {
+          "spellId": "wall-of-fire",
+          "cost": 4
+        },
+        {
+          "spellId": "web",
+          "cost": 2
+        }
+      ],
+      "charges": 50,
+      "recharge": "4d6 + 2",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 246,
+      "frPage": 232,
+      "section": "Magic Items > Staff of the Magi"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "reaction"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-the-python",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 247,
+      "frPage": 231,
+      "section": "Magic Items > Staff of the Python"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-the-woodlands",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      },
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "animal-friendship",
+          "cost": 1
+        },
+        {
+          "spellId": "awaken",
+          "cost": 5
+        },
+        {
+          "spellId": "barkskin",
+          "cost": 2
+        },
+        {
+          "spellId": "locate-animals-or-plants",
+          "cost": 2
+        },
+        {
+          "spellId": "pass-without-trace",
+          "cost": 2
+        },
+        {
+          "spellId": "speak-with-animals",
+          "cost": 1
+        },
+        {
+          "spellId": "speak-with-plants",
+          "cost": 3
+        },
+        {
+          "spellId": "wall-of-thorns",
+          "cost": 6
+        }
+      ],
+      "charges": 6,
+      "recharge": "1d6",
+      "wielderDc": true
+    },
+    "source": {
+      "page": 247,
+      "frPage": 231,
+      "section": "Magic Items > Staff of the Woodlands"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-thunder-and-lightning",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      }
+    ],
+    "source": {
+      "page": 247,
+      "frPage": 230,
+      "section": "Magic Items > Staff of Thunder and Lightning"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:staff-of-withering",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "on a hit, 1 charge: +2d10 Necrotic, DC 15 Con",
+        "fr": "au toucher, 1 charge : +2d10 nécrotiques, Con DD 15",
+        "es": "al impactar, 1 carga: +2d10 necrótico, Con CD 15"
+      }
+    },
+    "source": {
+      "page": 248,
+      "frPage": 229,
+      "section": "Magic Items > Staff of Withering"
+    }
+  },
+  {
+    "id": "item:stone-of-controlling-earth-elementals",
+    "textOnly": {
+      "en": "Summons a creature (stat block in “Monsters”): nothing on the sheet.",
+      "fr": "Convoque une créature (profil dans « Monstres ») : rien sur la feuille.",
+      "es": "Invoca una criatura (perfil en «Monstruos»): nada en la hoja."
+    },
+    "source": {
+      "page": 248,
+      "frPage": 251,
+      "section": "Magic Items > Stone of Controlling Earth Elementals"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:stone-of-good-luck-luckstone",
+    "activeWhen": "on-person",
+    "modifiers": [
+      {
+        "target": "check.all",
+        "value": 1
+      },
+      {
+        "target": "save.all",
+        "value": 1
+      }
+    ],
+    "source": {
+      "page": 248,
+      "frPage": 252,
+      "section": "Magic Items > Stone of Good Luck (Luckstone)"
+    }
+  },
+  {
+    "id": "item:sun-blade",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 2
+      },
+      {
+        "target": "item.damage",
+        "value": 2
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "1d8",
+        "condition": {
+          "en": "target is an Undead: Radiant",
+          "fr": "cible mort-vivant : radiants",
+          "es": "objetivo muerto viviente: radiante"
+        }
+      }
+    ],
+    "source": {
+      "page": 248,
+      "frPage": 240,
+      "section": "Magic Items > Sun Blade"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      },
+      {
+        "kind": "bonus-action"
+      }
+    ]
+  },
+  {
+    "id": "item:sword-of-life-stealing",
+    "textOnly": {
+      "en": "Applies on a roll of 20 or against a particular target: resolved at the table.",
+      "fr": "S’applique sur un 20 ou contre une cible particulière : se résout en jeu.",
+      "es": "Se aplica con un 20 o contra un objetivo concreto: se resuelve en la mesa."
+    },
+    "source": {
+      "page": 248,
+      "frPage": 240,
+      "section": "Magic Items > Sword of Life Stealing"
+    }
+  },
+  {
+    "id": "item:sword-of-sharpness",
+    "textOnly": {
+      "en": "Applies on a roll of 20 or against a particular target: resolved at the table.",
+      "fr": "S’applique sur un 20 ou contre une cible particulière : se résout en jeu.",
+      "es": "Se aplica con un 20 o contra un objetivo concreto: se resuelve en la mesa."
+    },
+    "source": {
+      "page": 248,
+      "frPage": 240,
+      "section": "Magic Items > Sword of Sharpness"
+    }
+  },
+  {
+    "id": "item:sword-of-wounding",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "2d6",
+        "condition": {
+          "en": "Necrotic",
+          "fr": "nécrotiques",
+          "es": "necrótico"
+        }
+      }
+    ],
+    "source": {
+      "page": 248,
+      "frPage": 240,
+      "section": "Magic Items > Sword of Wounding"
+    }
+  },
+  {
+    "id": "item:talisman-of-pure-good",
+    "modifiers": [
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 7,
+      "note": {
+        "en": "1 charge: DC 20 Dex or destroyed, else 4d6 Psychic",
+        "fr": "1 charge : Dex DD 20 ou détruit, sinon 4d6 psychiques",
+        "es": "1 carga: Des CD 20 o destruido; si no, 4d6 psíquico"
+      }
+    },
+    "source": {
+      "page": 248,
+      "frPage": 262,
+      "section": "Magic Items > Talisman of Pure Good"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:talisman-of-the-sphere",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "skill.arcana",
+        "condition": {
+          "en": "to control a Sphere of Annihilation",
+          "fr": "pour contrôler une sphère d’annihilation",
+          "es": "para controlar una esfera de aniquilación"
+        }
+      }
+    ],
+    "source": {
+      "page": 249,
+      "frPage": 262,
+      "section": "Magic Items > Talisman of the Sphere"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:talisman-of-ultimate-evil",
+    "modifiers": [
+      {
+        "target": "attack.spell",
+        "value": 2
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 6,
+      "note": {
+        "en": "1 charge: DC 20 Dex or destroyed, else 4d6 Psychic",
+        "fr": "1 charge : Dex DD 20 ou détruit, sinon 4d6 psychiques",
+        "es": "1 carga: Des CD 20 o destruido; si no, 4d6 psíquico"
+      }
+    },
+    "source": {
+      "page": 249,
+      "frPage": 262,
+      "section": "Magic Items > Talisman of Ultimate Evil"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:thunderous-greatclub",
+    "activeWhen": "attuned",
+    "modifiers": [
+      {
+        "target": "ability.str.set",
+        "value": 20
+      },
+      {
+        "target": "extraDamage.item",
+        "value": "1d8",
+        "condition": {
+          "en": "Thunder",
+          "fr": "tonnerre",
+          "es": "trueno"
+        }
+      }
+    ],
+    "source": {
+      "page": 249,
+      "frPage": 248,
+      "section": "Magic Items > Thunderous Greatclub"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:tome-of-clear-thought",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 249,
+      "frPage": 265,
+      "section": "Magic Items > Tome of Clear Thought"
+    }
+  },
+  {
+    "id": "item:tome-of-leadership-and-influence",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 249,
+      "frPage": 265,
+      "section": "Magic Items > Tome of Leadership and Influence"
+    }
+  },
+  {
+    "id": "item:tome-of-understanding",
+    "textOnly": {
+      "en": "Permanent increase after 48 hours of study: raise the base score in the level editor; carrying the book does nothing.",
+      "fr": "Augmentation permanente après 48 heures d’étude : relevez la valeur de base dans l’éditeur de niveaux ; porter le livre ne fait rien.",
+      "es": "Aumento permanente tras 48 horas de estudio: sube la puntuación base en el editor de niveles; llevar el libro no hace nada."
+    },
+    "source": {
+      "page": 250,
+      "frPage": 266,
+      "section": "Magic Items > Tome of Understanding"
+    }
+  },
+  {
+    "id": "item:trident-of-fish-command",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "dominate-beast",
+          "cost": 1,
+          "dc": 15,
+          "note": {
+            "en": "a Beast with a Swim Speed",
+            "fr": "une bête dotée d’une Vitesse de nage",
+            "es": "una bestia con velocidad nadando"
+          }
+        }
+      ],
+      "charges": 3,
+      "recharge": "1d3"
+    },
+    "source": {
+      "page": 250,
+      "frPage": 266,
+      "section": "Magic Items > Trident of Fish Command"
+    }
+  },
+  {
+    "id": "item:universal-solvent",
+    "textOnly": {
+      "en": "Single-use item: its effect is resolved at the table when used.",
+      "fr": "Objet à usage unique : son effet se résout en jeu à l’utilisation.",
+      "es": "Objeto de un solo uso: su efecto se resuelve en la mesa al usarlo."
+    },
+    "source": {
+      "page": 250,
+      "frPage": 261,
+      "section": "Magic Items > Universal Solvent"
+    }
+  },
+  {
+    "id": "item:vicious-weapon",
+    "modifiers": [
+      {
+        "target": "extraDamage.item",
+        "value": "2d6",
+        "condition": {
+          "en": "weapon’s type",
+          "fr": "type de l’arme",
+          "es": "tipo del arma"
+        }
+      }
+    ],
+    "source": {
+      "page": 250,
+      "frPage": 224,
+      "section": "Magic Items > Vicious Weapon"
+    }
+  },
+  {
+    "id": "item:vorpal-sword",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 3
+      },
+      {
+        "target": "item.damage",
+        "value": 3
+      }
+    ],
+    "source": {
+      "page": 250,
+      "frPage": 240,
+      "section": "Magic Items > Vorpal Sword"
+    }
+  },
+  {
+    "id": "item:wand-of-binding",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "hold-monster",
+          "cost": 5,
+          "dc": 17
+        },
+        {
+          "spellId": "hold-person",
+          "cost": 2,
+          "dc": 17
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 250,
+      "frPage": 227,
+      "section": "Magic Items > Wand of Binding"
+    }
+  },
+  {
+    "id": "item:wand-of-enemy-detection",
+    "spellItem": {
+      "spells": [],
+      "charges": 7,
+      "recharge": "1d6 + 1",
+      "note": {
+        "en": "1 charge: 1 minute, 60 ft",
+        "fr": "1 charge : 1 minute, 18 m",
+        "es": "1 carga: 1 minuto, 18 m"
+      }
+    },
+    "source": {
+      "page": 250,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Enemy Detection"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:wand-of-fear",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "command",
+          "cost": 1,
+          "dc": 15,
+          "note": {
+            "en": "“flee” or “grovel” only",
+            "fr": "« fuis » ou « rampe » seulement",
+            "es": "solo «huye» o «arrástrate»"
+          }
+        },
+        {
+          "spellId": "fear",
+          "cost": 3,
+          "dc": 15,
+          "note": {
+            "en": "60-ft Cone",
+            "fr": "cône de 18 m",
+            "es": "cono de 18 m"
+          }
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 250,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Fear"
+    }
+  },
+  {
+    "id": "item:wand-of-fireballs",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "fireball",
+          "cost": 1,
+          "level": 3,
+          "maxLevel": 5,
+          "dc": 15
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 250,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Fireballs"
+    }
+  },
+  {
+    "id": "item:wand-of-lightning-bolts",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "lightning-bolt",
+          "cost": 1,
+          "level": 3,
+          "maxLevel": 5,
+          "dc": 15
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 251,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Lightning Bolts"
+    }
+  },
+  {
+    "id": "item:wand-of-magic-detection",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "detect-magic",
+          "cost": 1
+        }
+      ],
+      "charges": 3,
+      "recharge": "1d3"
+    },
+    "source": {
+      "page": 251,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Magic Detection"
+    }
+  },
+  {
+    "id": "item:wand-of-magic-missiles",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "magic-missile",
+          "cost": 1,
+          "level": 1,
+          "maxLevel": 3
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 251,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Magic Missiles"
+    }
+  },
+  {
+    "id": "item:wand-of-paralysis",
+    "spellItem": {
+      "spells": [],
+      "charges": 7,
+      "recharge": "1d6 + 1",
+      "note": {
+        "en": "1 charge: 60 ft, DC 15 Con or Paralyzed",
+        "fr": "1 charge : 18 m, Con DD 15 ou Paralysé",
+        "es": "1 carga: 18 m, Con CD 15 o Paralizado"
+      }
+    },
+    "source": {
+      "page": 251,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Paralysis"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:wand-of-polymorph",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "polymorph",
+          "cost": 1,
+          "dc": 15
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 251,
+      "frPage": 226,
+      "section": "Magic Items > Wand of Polymorph"
+    }
+  },
+  {
+    "id": "item:wand-of-secrets",
+    "spellItem": {
+      "spells": [],
+      "charges": 3,
+      "recharge": "1d3",
+      "note": {
+        "en": "1 charge: 60 ft",
+        "fr": "1 charge : 18 m",
+        "es": "1 carga: 18 m"
+      }
+    },
+    "source": {
+      "page": 251,
+      "frPage": 228,
+      "section": "Magic Items > Wand of Secrets"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:wand-of-the-war-mage-1-2-or-3",
+    "modifiers": [
+      {
+        "target": "attack.spell",
+        "value": 0,
+        "byVariant": [1, 2, 3]
+      }
+    ],
+    "source": {
+      "page": 251,
+      "frPage": 228,
+      "section": "Magic Items > Wand of the War Mage, +1, +2, or +3"
+    }
+  },
+  {
+    "id": "item:wand-of-web",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "web",
+          "cost": 1,
+          "dc": 13
+        }
+      ],
+      "charges": 7,
+      "recharge": "1d6 + 1"
+    },
+    "source": {
+      "page": 251,
+      "frPage": 228,
+      "section": "Magic Items > Wand of Web"
+    }
+  },
+  {
+    "id": "item:wand-of-wonder",
+    "spellItem": {
+      "spells": [],
+      "charges": 7,
+      "recharge": "1d6 + 1",
+      "note": {
+        "en": "1 charge: roll on the Wand of Wonder Effects table",
+        "fr": "1 charge : jet sur la table des effets de la baguette",
+        "es": "1 carga: tirada en la tabla de efectos de la varita de las maravillas"
+      }
+    },
+    "source": {
+      "page": 251,
+      "frPage": 227,
+      "section": "Magic Items > Wand of Wonder"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:weapon-1-2-or-3",
+    "modifiers": [
+      {
+        "target": "item.attack",
+        "value": 0,
+        "byVariant": [1, 2, 3]
+      },
+      {
+        "target": "item.damage",
+        "value": 0,
+        "byVariant": [1, 2, 3]
+      }
+    ],
+    "source": {
+      "page": 253,
+      "frPage": 224,
+      "section": "Magic Items > Weapon, +1, +2, or +3"
+    }
+  },
+  {
+    "id": "item:weapon-of-warning",
+    "activeWhen": "attuned",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "initiative"
+      }
+    ],
+    "source": {
+      "page": 253,
+      "frPage": 224,
+      "section": "Magic Items > Weapon of Warning"
+    }
+  },
+  {
+    "id": "item:well-of-many-worlds",
+    "textOnly": {
+      "en": "Narrative or GM-adjudicated effect: nothing on the sheet.",
+      "fr": "Effet narratif ou arbitré par le MJ : rien sur la feuille.",
+      "es": "Efecto narrativo o arbitrado por el GM: nada en la hoja."
+    },
+    "source": {
+      "page": 253,
+      "frPage": 255,
+      "section": "Magic Items > Well of Many Worlds"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:wind-fan",
+    "spellItem": {
+      "spells": [
+        {
+          "spellId": "gust-of-wind",
+          "dc": 13,
+          "atWill": true,
+          "note": {
+            "en": "20% cumulative failure after the first use per dawn",
+            "fr": "20 % d’échec cumulatif après le premier usage par aube",
+            "es": "20 % de fallo acumulativo tras el primer uso por amanecer"
+          }
+        }
+      ]
+    },
+    "source": {
+      "page": 253,
+      "frPage": 241,
+      "section": "Magic Items > Wind Fan"
+    }
+  },
+  {
+    "id": "item:winged-boots",
+    "modifiers": [
+      {
+        "target": "speed.fly",
+        "value": 30,
+        "when": "toggle:winged-boots",
+        "condition": {
+          "en": "a charge spent (1 hour)",
+          "fr": "une charge dépensée (1 heure)",
+          "es": "una carga gastada (1 hora)"
+        }
+      }
+    ],
+    "spellItem": {
+      "spells": [],
+      "charges": 4,
+      "recharge": "1d4",
+      "note": {
+        "en": "1 charge: Fly Speed 30 ft for 1 hour",
+        "fr": "1 charge : vol 9 m pendant 1 heure",
+        "es": "1 carga: velocidad volando 9 m durante 1 hora"
+      }
+    },
+    "source": {
+      "page": 253,
+      "frPage": 232,
+      "section": "Magic Items > Winged Boots"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  },
+  {
+    "id": "item:wings-of-flying",
+    "modifiers": [
+      {
+        "target": "speed.fly",
+        "value": 60,
+        "when": "toggle:wings-of-flying",
+        "condition": {
+          "en": "wings spread (1 hour)",
+          "fr": "ailes déployées (1 heure)",
+          "es": "alas desplegadas (1 hora)"
+        }
+      }
+    ],
+    "source": {
+      "page": 253,
+      "frPage": 235,
+      "section": "Magic Items > Wings of Flying"
+    },
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic"
+      }
+    ]
+  }
+]

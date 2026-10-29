@@ -1,0 +1,5173 @@
+[
+  {
+    "id": "acid",
+    "name": {
+      "en": "Acid",
+      "fr": "Acide",
+      "es": "Ácido"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage.</p>",
+      "fr": "<p>Lorsque vous effectuez l’action Attaque, vous pouvez remplacer l’une de vos attaques par le jet d’une fiole d’acide. Ciblez une créature ou un objet que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d6 dégâts d’acide.</p>",
+      "es": "<p>Cuando lleves a cabo la acción de atacar, puedes sustituir uno de tus ataques por lanzar un vial de ácido. Haz objetivo a una criatura u objeto que puedas ver a 6 m o menos de ti. El objetivo deberá superar una tirada de salvación de Destreza (CD 8 más tu modificador por Destreza y tu bonificador por competencia) o sufrirá 2d6 de daño de ácido.</p>"
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Acid (25 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "airship",
+    "name": {
+      "en": "Airship",
+      "fr": "Dirigeable",
+      "es": "Aeronave"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 40000,
+      "text": {
+        "en": "40,000 GP",
+        "fr": "40 000 po",
+        "es": "40 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 8 mph. Crew: 10. Passengers: 20. Cargo (Tons): 1. AC: 13. HP: 300.</p>",
+      "fr": "<p>Vitesse : 12 km/h. Équipage : 10. Passagers : 20. Cargaison (tonnes) : 1. CA : 13. PV : 300.</p>",
+      "es": "<p>Velocidad: 12 km/h. Tripulación: 10. Pasajeros: 20. Cargamento (toneladas): 1. CA: 13. PG: 300.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "alchemists-fire",
+    "name": {
+      "en": "Alchemist’s Fire",
+      "fr": "Feu grégeois",
+      "es": "Fuego de alquimista"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>When you take the Attack action, you can replace one of your attacks with throwing a flask of Alchemist’s Fire. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 1d4 Fire damage and start burning (see “Rules Glossary”).</p>",
+      "fr": "<p>Lorsque vous effectuez l’action Attaque, vous pouvez remplacer l’une de vos attaques par le jet d’une flasque de feu grégeois. Ciblez une créature ou un objet que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 1d4 dégâts de feu et de prendre feu (cf. « Glossaire de règles »).</p>",
+      "es": "<p>Cuando lleves a cabo la acción de atacar, puedes sustituir uno de tus ataques por lanzar un frasco de fuego de alquimista. Haz objetivo a una criatura u objeto que puedas ver a 6 m o menos de ti. El objetivo deberá superar una tirada de salvación de Destreza (CD 8 más tu modificador por Destreza y tu bonificador por competencia) o sufrirá 1d4 de daño de fuego y comenzará a arder (consulta el capítulo “Glosario de reglas”).</p>"
+    },
+    "source": {
+      "page": 94,
+      "frPage": 103,
+      "section": "Alchemist’s Fire (50 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "alchemists-supplies",
+    "name": {
+      "en": "Alchemist’s Supplies",
+      "fr": "Matériel d’alchimiste",
+      "es": "Suministros de alquimista"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 8,
+      "kg": 4
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Identify a substance (DC 15), or start a fire (DC 15)",
+        "fr": "identifier une substance (DD 15), allumer un feu (DD 15)",
+        "es": "identificar una sustancia (CD 15) o encender un fuego (CD 15)"
+      },
+      "craft": {
+        "en": "Acid, Alchemist’s Fire, Component Pouch, Oil, Paper, Perfume",
+        "fr": "acide, feu grégeois, huile, papier, parfum, sacoche à composantes",
+        "es": "aceite, ácido, fuego de alquimista, papel, perfume, saquito de componentes"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Alchemist’s Supplies (50 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "ammunition",
+    "name": {
+      "en": "Ammunition",
+      "fr": "Munitions",
+      "es": "Munición"
+    },
+    "kind": "gear",
+    "text": {
+      "en": "<p>Ammunition is required by a weapon that has the Ammunition property. A weapon’s description specifies the type of ammunition used by the weapon. The Ammunition table lists the different types and the amount you get when you buy them. The table also lists the item that is typically used to store each type; storage must be bought separately.</p><table><caption>Ammunition</caption><thead><tr><th>Type</th><th>Amount</th><th>Storage</th><th>Weight</th><th>Cost</th></tr></thead><tbody><tr><td>Arrows</td><td>20</td><td>Quiver</td><td>1 lb.</td><td>1 GP</td></tr><tr><td>Bolts</td><td>20</td><td>Case</td><td>1½ lb.</td><td>1 GP</td></tr><tr><td>Bullets, Firearm</td><td>10</td><td>Pouch</td><td>2 lb.</td><td>3 GP</td></tr><tr><td>Bullets, Sling</td><td>20</td><td>Pouch</td><td>1½ lb.</td><td>4 CP</td></tr><tr><td>Needles</td><td>50</td><td>Pouch</td><td>1 lb.</td><td>1 GP</td></tr></tbody></table>",
+      "fr": "<p>Les munitions sont nécessaires pour toute arme dotée de la propriété Munitions. Le descriptif de l’arme indique le type de munitions qu’elle utilise. La table « Munitions » répertorie les différents types de munitions et la quantité que vous obtenez lorsque vous en achetez. Figure en outre l’objet généralement utilisé pour ranger chaque type de munitions, qui doit être acheté séparément.</p><table><caption>Munitions</caption><thead><tr><th>Type</th><th>Quantité</th><th>Rangement</th><th>Poids</th><th>Prix</th></tr></thead><tbody><tr><td>Balles d’arme à feu</td><td>10</td><td>Sacoche</td><td>1 kg</td><td>3 po</td></tr><tr><td>Billes de fronde</td><td>20</td><td>Sacoche</td><td>750 g</td><td>4 pc</td></tr><tr><td>Carreaux</td><td>20</td><td>Étui</td><td>750 g</td><td>1 po</td></tr><tr><td>Dards</td><td>50</td><td>Sacoche</td><td>0,5 kg</td><td>1 po</td></tr><tr><td>Flèches</td><td>20</td><td>Carquois</td><td>0,5 kg</td><td>1 po</td></tr></tbody></table>",
+      "es": "<p>Las armas que tienen la propiedad de munición requieren munición. La descripción del arma especifica el tipo de munición que utiliza. La tabla “Munición” indica los diferentes tipos y la cantidad que obtienes cuando los compras. También incluye el objeto que se usa normalmente para almacenar cada tipo, que debe comprarse por separado.</p><table><caption>Munición</caption><thead><tr><th>Tipo</th><th>Cantidad</th><th>Recipiente</th><th>Peso</th><th>Precio</th></tr></thead><tbody><tr><td>Balas de arma de fuego</td><td>10</td><td>Bolsa</td><td>1 kg</td><td>3 po</td></tr><tr><td>Dardos</td><td>50</td><td>Bolsa</td><td>0,5 kg</td><td>1 po</td></tr><tr><td>Flechas</td><td>20</td><td>Aljaba</td><td>0,5 kg</td><td>1 po</td></tr><tr><td>Proyectiles de honda</td><td>20</td><td>Bolsa</td><td>0,75 kg</td><td>4 pc</td></tr><tr><td>Virotes</td><td>20</td><td>Estuche</td><td>0,75 kg</td><td>1 po</td></tr></tbody></table>"
+    },
+    "source": {
+      "page": 94,
+      "frPage": 104,
+      "section": "Ammunition (Varies)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "antitoxin",
+    "name": {
+      "en": "Antitoxin",
+      "fr": "Antidote",
+      "es": "Antitoxina"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Bonus Action, you can drink a vial of Antitoxin to gain Advantage on saving throws to avoid or end the Poisoned condition for 1 hour.</p>",
+      "fr": "<p>Par une action Bonus, vous pouvez boire le contenu d’une fiole d’antidote pour recevoir l’Avantage aux jets de sauvegarde visant à éviter l’état Empoisonné pendant 1 heure ou à y mettre un terme.</p>",
+      "es": "<p>Como acción adicional, puedes beber un vial de antitoxina para obtener ventaja en las tiradas de salvación para evitar o poner fin al estado de envenenado durante 1 hora.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 100,
+      "section": "Antitoxin (50 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "arcane-focus",
+    "name": {
+      "en": "Arcane Focus",
+      "fr": "Focaliseur arcanique",
+      "es": "Canalizador arcano"
+    },
+    "kind": "gear",
+    "text": {
+      "en": "<p>An Arcane Focus takes one of the forms in the Arcane Focuses table and is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.</p><table><caption>Arcane Focuses</caption><thead><tr><th>Focus</th><th>Weight</th><th>Cost</th></tr></thead><tbody><tr><td>Crystal</td><td>1 lb.</td><td>10 GP</td></tr><tr><td>Orb</td><td>3 lb.</td><td>20 GP</td></tr><tr><td>Rod</td><td>2 lb.</td><td>10 GP</td></tr><tr><td>Staff (also a Quarterstaff)</td><td>4 lb.</td><td>5 GP</td></tr><tr><td>Wand</td><td>1 lb.</td><td>10 GP</td></tr></tbody></table>",
+      "fr": "<p>Un focaliseur arcanique prend l’une des formes de la table « Focaliseurs arcaniques » et il est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d’un tel objet comme focaliseur d’incantation.</p><table><caption>Focaliseurs arcaniques</caption><thead><tr><th>Focaliseur</th><th>Poids</th><th>Prix</th></tr></thead><tbody><tr><td>Baguette</td><td>0,5 kg</td><td>10 po</td></tr><tr><td>Bâton (également bâton de combat)</td><td>2 kg</td><td>5 po</td></tr><tr><td>Cristal</td><td>0,5 kg</td><td>10 po</td></tr><tr><td>Orbe</td><td>1,5 kg</td><td>20 po</td></tr><tr><td>Sceptre</td><td>1 kg</td><td>10 po</td></tr></tbody></table>",
+      "es": "<p>Un canalizador arcano puede ser uno de los objetos de la tabla “Canalizadores arcanos” y está ornamentado o tallado para canalizar la magia arcana. Los brujos, hechiceros o magos pueden utilizar estos objetos como canalizadores mágicos.</p><table><caption>Canalizadores arcanos</caption><thead><tr><th>Canalizador</th><th>Peso</th><th>Precio</th></tr></thead><tbody><tr><td>Bastón</td><td>2 kg</td><td>5 po</td></tr><tr><td>Cristal</td><td>0,5 kg</td><td>10 po</td></tr><tr><td>Orbe</td><td>1,5 kg</td><td>20 po</td></tr><tr><td>Vara</td><td>1 kg</td><td>10 po</td></tr><tr><td>Varita</td><td>0,5 kg</td><td>10 po</td></tr></tbody></table>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 103,
+      "section": "Arcane Focus (Varies)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "arrows",
+    "name": {
+      "en": "Arrows",
+      "fr": "Flèches",
+      "es": "Flechas"
+    },
+    "kind": "ammunition",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>Amount: 20. Storage: Quiver.</p>",
+      "fr": "<p>Quantité : 20. Rangement : Carquois.</p>",
+      "es": "<p>Cantidad: 20. Recipiente: Aljaba.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Ammunition",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "backpack",
+    "name": {
+      "en": "Backpack",
+      "fr": "Sac à dos",
+      "es": "Mochila"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Backpack holds up to 30 pounds within 1 cubic foot. It can also serve as a saddlebag.</p>",
+      "fr": "<p>Un sac à dos contient jusqu’à 15 kg pour un volume de 30 litres ou 0,03 m3. Il peut également servir de sacoche de selle.</p>",
+      "es": "<p>Una mochila soporta hasta 15 kg en un volumen de 30 l. También puede servir de alforja.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 106,
+      "section": "Backpack (2 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "ball-bearings",
+    "name": {
+      "en": "Ball Bearings",
+      "fr": "Billes",
+      "es": "Bolas de metal"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can spill Ball Bearings from their pouch. They spread to cover a level, 10-footsquare area within 10 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 10 Dexterity saving throw or have the Prone condition. It takes 10 minutes to recover the Ball Bearings.</p>",
+      "fr": "<p>Par une action Utilisation, vous pouvez déverser les billes de leur sacoche. Elles se répandent sur une suface plane de 3 m x 3 m, à une distance maximale de 3 m. Une créature qui traverse cette zone pour la première fois d’un tour doit réussir un jet de sauvegarde de Dextérité DD 10 sous peine de subir l’état À terre. 10 minutes sont nécessaires pour récupérer les billes.</p>",
+      "es": "<p>Como acción de utilizar, puedes verter las bolas de metal de su bolsa. Se esparcirán para cubrir una zona cuadrada y plana de 3 m de lado a 3 m o menos de ti. Las criaturas que entren en esta zona por primera vez en un turno deberán superar una tirada de salvación de Destreza con CD 10 o tendrán el estado de derribadas. Se tarda 10 minutos en recuperar las bolas de metal.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Ball Bearings (1 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "barrel",
+    "name": {
+      "en": "Barrel",
+      "fr": "Tonneau",
+      "es": "Barril"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 70,
+      "kg": 35
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Barrel holds up to 40 gallons of liquid or up to 4 cubic feet of dry goods.</p>",
+      "fr": "<p>Un tonneau contient jusqu’à 140 litres de liquide ou 0,12 m3 de solide.</p>",
+      "es": "<p>En un barril caben 160 l de líquido o un volumen de 120 l de mercancías secas.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 106,
+      "section": "Barrel (2 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "basket",
+    "name": {
+      "en": "Basket",
+      "fr": "Panier",
+      "es": "Cesta"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 0.4,
+      "text": {
+        "en": "4 SP",
+        "fr": "4 pa",
+        "es": "4 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Basket holds up to 40 pounds within 2 cubic feet.</p>",
+      "fr": "<p>Un panier contient jusqu’à 20 kg pour un volume de 60 litres ou 0,06 m3.</p>",
+      "es": "<p>Una cesta soporta hasta 20 kg en un volumen de 60 l.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Basket (4 SP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "bedroll",
+    "name": {
+      "en": "Bedroll",
+      "fr": "Sac de couchage",
+      "es": "Petate"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 7,
+      "kg": 3.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Bedroll sleeps one Small or Medium creature. While in a Bedroll, you automatically succeed on saving throws against extreme cold (see “Gameplay Toolbox”).</p>",
+      "fr": "<p>Un sac de couchage permet à une créature de taille P ou M de dormir. Dans un sac de couchage, vous réussissez automatiquement vos jets de sauvegarde contre le froid extrême (cf. « Boîte à outils ludique »).</p>",
+      "es": "<p>En un petate puede dormir una criatura Pequeña o Mediana. Mientras estés en un petate, superarás automáticamente las tiradas de salvación contra el frío extremo (consulta el capítulo “Herramientas del juego”).</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 106,
+      "section": "Bedroll (1 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "bell",
+    "name": {
+      "en": "Bell",
+      "fr": "Cloche",
+      "es": "Campana"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>When rung as a Utilize action, a Bell produces a sound that can be heard up to 60 feet away.</p>",
+      "fr": "<p>Actionnée par une action Utilisation, une cloche produit un son audible à 18 m.</p>",
+      "es": "<p>Al tañer una campana como acción de utilizar, producirá un sonido audible a 18 m de distancia.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Bell (1 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "blanket",
+    "name": {
+      "en": "Blanket",
+      "fr": "Couverture",
+      "es": "Manta"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "text": {
+      "en": "<p>While wrapped in a blanket, you have Advantage on saving throws against extreme cold (see “Gameplay Toolbox”).</p>",
+      "fr": "<p>Enveloppé dans une couverture, vous avez l’Avantage aux jets de sauvegarde contre le froid extrême (cf. « Boîte à outils ludique »).</p>",
+      "es": "<p>Mientras te envuelvas en una manta, tendrás ventaja en las tiradas de salvación contra el frío extremo (consulta el capítulo “Herramientas del juego”).</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Blanket (5 SP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "block-and-tackle",
+    "name": {
+      "en": "Block and Tackle",
+      "fr": "Palan",
+      "es": "Polipasto"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Block and Tackle allows you to hoist up to four times the weight you can normally lift.</p>",
+      "fr": "<p>Un palan vous permet de soulever jusqu’à quatre fois le poids que vous pouvez normalement soulever.</p>",
+      "es": "<p>Un polipasto te permite levantar hasta cuatro veces el peso que normalmente puedes levantar.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Block and Tackle (1 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "bolts",
+    "name": {
+      "en": "Bolts",
+      "fr": "Carreaux",
+      "es": "Virotes"
+    },
+    "kind": "ammunition",
+    "weight": {
+      "lb": 1.5,
+      "kg": 0.75
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>Amount: 20. Storage: Case.</p>",
+      "fr": "<p>Quantité : 20. Rangement : Étui.</p>",
+      "es": "<p>Cantidad: 20. Recipiente: Estuche.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Ammunition",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "book",
+    "name": {
+      "en": "Book",
+      "fr": "Livre",
+      "es": "Libro"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Book contains fiction or nonfiction. If you consult an accurate nonfiction Book about its topic, you gain a +5 bonus to Intelligence (Arcana, History, Nature, or Religion) checks you make about that topic.</p>",
+      "fr": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d’Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>",
+      "es": "<p>Un libro contiene ficción o no ficción. Si consultas un libro veraz de no ficción para saber algo sobre su materia, ganarás un bonificador de +5 a las pruebas de Inteligencia (Conocimiento arcano, Historia, Naturaleza o Religión) que hagas sobre esa materia.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Book (25 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "bottle-glass",
+    "name": {
+      "en": "Bottle, Glass",
+      "fr": "Bouteille, verre",
+      "es": "Botella de cristal"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Glass Bottle holds up to 11/2 pints.</p>",
+      "fr": "<p>Une bouteille en verre peut contenir jusqu’à 75 cl.</p>",
+      "es": "<p>En una botella de cristal caben hasta 0,75 l de líquido.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Bottle, Glass (2 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "brewers-supplies",
+    "name": {
+      "en": "Brewer’s Supplies",
+      "fr": "Matériel de brasseur",
+      "es": "Suministros de cervecero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 9,
+      "kg": 4.5
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Detect poisoned drink (DC 15), or identify alcohol (DC 10)",
+        "fr": "détecter qu’une boisson est empoisonnée (DD 15), identifier un alcool (DD 10)",
+        "es": "detectar bebida envenenada (CD 15) o identificar alcohol (CD 10)"
+      },
+      "craft": {
+        "en": "Antitoxin",
+        "fr": "antidote",
+        "es": "antitoxina"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Brewer’s Supplies (20 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "bucket",
+    "name": {
+      "en": "Bucket",
+      "fr": "Seau",
+      "es": "Cubo"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 0.05,
+      "text": {
+        "en": "5 CP",
+        "fr": "5 pc",
+        "es": "5 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Bucket holds up to half a cubic foot of contents.</p>",
+      "fr": "<p>Un seau contient 15 litres de liquide ou 0,015 m3.</p>",
+      "es": "<p>En un cubo cabe un volumen de 15 l de contenido.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 106,
+      "section": "Bucket (5 CP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "bullets-firearm",
+    "name": {
+      "en": "Bullets, Firearm",
+      "fr": "Balles d’arme à feu",
+      "es": "Balas de arma de fuego"
+    },
+    "kind": "ammunition",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 3,
+      "text": {
+        "en": "3 GP",
+        "fr": "3 po",
+        "es": "3 po"
+      }
+    },
+    "text": {
+      "en": "<p>Amount: 10. Storage: Pouch.</p>",
+      "fr": "<p>Quantité : 10. Rangement : Sacoche.</p>",
+      "es": "<p>Cantidad: 10. Recipiente: Bolsa.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Ammunition",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "bullets-sling",
+    "name": {
+      "en": "Bullets, Sling",
+      "fr": "Billes de fronde",
+      "es": "Proyectiles de honda"
+    },
+    "kind": "ammunition",
+    "weight": {
+      "lb": 1.5,
+      "kg": 0.75
+    },
+    "cost": {
+      "gp": 0.04,
+      "text": {
+        "en": "4 CP",
+        "fr": "4 pc",
+        "es": "4 pc"
+      }
+    },
+    "text": {
+      "en": "<p>Amount: 20. Storage: Pouch.</p>",
+      "fr": "<p>Quantité : 20. Rangement : Sacoche.</p>",
+      "es": "<p>Cantidad: 20. Recipiente: Bolsa.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Ammunition",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "burglars-pack",
+    "name": {
+      "en": "Burglar’s Pack",
+      "fr": "Paquetage de cambrioleur",
+      "es": "Paquete de ladrón"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 42,
+      "kg": 21
+    },
+    "cost": {
+      "gp": 16,
+      "text": {
+        "en": "16 GP",
+        "fr": "16 po",
+        "es": "16 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Burglar’s Pack contains the following items: Backpack, Ball Bearings, Bell, 10 Candles, Crowbar, Hooded Lantern, 7 flasks of Oil, 5 days of Rations, Rope, Tinderbox, and Waterskin.</p>",
+      "fr": "<p>Le paquetage de cambrioleur contient les objets suivants : sac à dos, billes, boîte à amadou, 10 bougies, cloche, corde, 7 flasques d’huile, lanterne à capote, outre, pied-de-biche, 5 jours de rations.</p>",
+      "es": "<p>Un paquete de ladrón contiene los siguientes objetos: bolas de metal, campana, cantimplora, cuerda, 7 frascos de aceite, linterna sorda, mochila, palanqueta, raciones para 5 días, 10 velas y yesquero.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Burglar’s Pack (16 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "calligraphers-supplies",
+    "name": {
+      "en": "Calligrapher’s Supplies",
+      "fr": "Matériel de calligraphe",
+      "es": "Suministros de calígrafo"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Write text with impressive flourishes that guard against forgery (DC 15)",
+        "fr": "écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)",
+        "es": "escribir texto lleno de florituras que no se pueda falsificar (CD 15)"
+      },
+      "craft": {
+        "en": "Ink, <em>Spell Scroll</em>",
+        "fr": "encre, <em>parchemin de sort</em>",
+        "es": "<em>pergamino de conjuro</em>, tinta"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Calligrapher’s Supplies (10 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "caltrops",
+    "name": {
+      "en": "Caltrops",
+      "fr": "Chausse-trappes",
+      "es": "Abrojos"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can spread Caltrops from their bag to cover a 5-foot-square area within 5 feet of yourself. A creature that enters this area for the first time on a turn must succeed on a DC 15 Dexterity saving throw or take 1 Piercing damage and have its Speed reduced to 0 until the start of its next turn. It takes 10 minutes to recover the Caltrops.</p>",
+      "fr": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d’un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa vitesse réduite à 0 jusqu’au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+      "es": "<p>Como acción de utilizar, puedes esparcir los abrojos de tu bolsa para cubrir una zona cuadrada de 1,5 m de lado a 1,5 m o menos de ti. Las criaturas que entren en esta zona por primera vez en un turno deberán superar una tirada de salvación de Destreza con CD 15 o sufrirán 1 de daño perforante y su velocidad se reducirá a 0 hasta el principio de su siguiente turno. Se tarda 10 minutos en recuperar los abrojos.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Caltrops (1 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "camel",
+    "name": {
+      "en": "Camel",
+      "fr": "Chameau",
+      "es": "Camello"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 450 lb.</p>",
+      "fr": "<p>Capacité de charge : 225 kg.</p>",
+      "es": "<p>Capacidad de carga: 225 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "candle",
+    "name": {
+      "en": "Candle",
+      "fr": "Bougie",
+      "es": "Vela"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.01,
+      "text": {
+        "en": "1 CP",
+        "fr": "1 pc",
+        "es": "1 pc"
+      }
+    },
+    "text": {
+      "en": "<p>For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.</p>",
+      "fr": "<p>Après allumage et pendant 1 heure, une bougie produit une Lumière vive sur un rayon de 1,50 m et une Lumière faible sur 1,50 m de plus.</p>",
+      "es": "<p>Durante 1 hora, una vela encendida emite luz brillante en un radio de 1,5 m y luz tenue 1,5 m más allá.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Candle (1 CP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "carpenters-tools",
+    "name": {
+      "en": "Carpenter’s Tools",
+      "fr": "Outils de charpentier",
+      "es": "Herramientas de carpintero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 8,
+      "text": {
+        "en": "8 GP",
+        "fr": "8 po",
+        "es": "8 po"
+      }
+    },
+    "tool": {
+      "ability": "str",
+      "utilize": {
+        "en": "Seal or pry open a door or container (DC 20)",
+        "fr": "sceller ou forcer une porte ou un contenant (DD 20)",
+        "es": "sellar o forzar una puerta o un recipiente (CD 20)"
+      },
+      "craft": {
+        "en": "Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch",
+        "fr": "bâton de combat, bélier portable, coffre, échelle, gourdin, massue, perche, tonneau, torche",
+        "es": "bastón, garrote, garrote grande, antorcha, ariete portátil, barril, cofre, escalera, vara"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Carpenter’s Tools (8 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "carriage",
+    "name": {
+      "en": "Carriage",
+      "fr": "Calèche",
+      "es": "Carruaje"
+    },
+    "kind": "vehicle",
+    "weight": {
+      "lb": 600,
+      "kg": 300
+    },
+    "cost": {
+      "gp": 100,
+      "text": {
+        "en": "100 GP",
+        "fr": "100 po",
+        "es": "100 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "cart",
+    "name": {
+      "en": "Cart",
+      "fr": "Charrette",
+      "es": "Carreta"
+    },
+    "kind": "vehicle",
+    "weight": {
+      "lb": 200,
+      "kg": 100
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "cartographers-tools",
+    "name": {
+      "en": "Cartographer’s Tools",
+      "fr": "Outils de cartographe",
+      "es": "Herramientas de cartógrafo"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "tool": {
+      "ability": "wis",
+      "utilize": {
+        "en": "Draft a map of a small area (DC 15)",
+        "fr": "cartographier une petite région (DD 15)",
+        "es": "dibujar un mapa de una zona pequeña (CD 15)"
+      },
+      "craft": {
+        "en": "Map",
+        "fr": "carte",
+        "es": "mapa"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Cartographer’s Tools (15 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "case-crossbow-bolt",
+    "name": {
+      "en": "Case, Crossbow Bolt",
+      "fr": "Étui pour carreaux d’arbalète",
+      "es": "Estuche para virotes de ballesta"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Crossbow Bolt Case holds up to 20 Bolts.</p>",
+      "fr": "<p>Cet étui peut contenir 20 carreaux d’arbalète.</p>",
+      "es": "<p>En un estuche para virotes de ballesta caben hasta 20 virotes.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Case, Crossbow Bolt (1 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "case-map-or-scroll",
+    "name": {
+      "en": "Case, Map or Scroll",
+      "fr": "Étui à cartes ou à parchemins",
+      "es": "Estuche para mapas o pergaminos"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Map or Scroll Case holds up to 10 sheets of paper or 5 sheets of parchment.</p>",
+      "fr": "<p>L’étui à cartes ou à parchemins peut contenir 10 feuilles de papier ou 5 feuilles de parchemin.</p>",
+      "es": "<p>En un estuche para mapas o pergaminos caben hasta 10 hojas de papel o 5 hojas de pergamino.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Case, Map or Scroll (1 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "chain",
+    "name": {
+      "en": "Chain",
+      "fr": "Chaîne",
+      "es": "Cadena"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can wrap a Chain around an unwilling creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Strength (Athletics) check. If the creature’s legs are bound, the creature has the Restrained condition until it escapes. Escaping the Chain requires the creature to make a successful DC 18 Dexterity (Acrobatics) check as an action. Bursting the Chain requires a successful DC 20 Strength (Athletics) check as an action.</p>",
+      "fr": "<p>Par une action Utilisation, vous enroulez une chaîne autour d’une créature non consentante dans un rayon de 1,50 m subissant l’état Agrippé, Entravé ou Neutralisé pour peu que vous réussissiez un test de Force (Athlétisme) DD 13. Si la créature a les jambes enchaînées, elle subit l’état Entravé jusqu’à ce qu’elle se libère. Se libérer de la chaîne nécessite que la créature réussisse un test de Dextérité (Acrobaties) DD 18 au prix d’une action. Briser cette chaîne nécessite de réussir un test de Force (Athlétisme) DD 20 au prix d’une action.</p>",
+      "es": "<p>Como acción de utilizar, puedes atar con una cadena a una criatura no voluntaria a 1,5 m o menos de ti que tenga el estado de agarrada, apresada o incapacitada si superas una prueba de Fuerza (Atletismo) con CD 13. Si la criatura tiene las piernas atadas, tendrá el estado de apresada hasta que se libere. Para liberarse de la cadena, deberá superar una prueba de Destreza (Acrobacias) con CD 18 como acción. Romper la cadena requiere superar una prueba de Fuerza (Atletismo) con CD 20 como acción.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 102,
+      "section": "Chain (5 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "chariot",
+    "name": {
+      "en": "Chariot",
+      "fr": "Char",
+      "es": "Carro de guerra"
+    },
+    "kind": "vehicle",
+    "weight": {
+      "lb": 100,
+      "kg": 50
+    },
+    "cost": {
+      "gp": 250,
+      "text": {
+        "en": "250 GP",
+        "fr": "250 po",
+        "es": "250 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "chest",
+    "name": {
+      "en": "Chest",
+      "fr": "Coffre",
+      "es": "Cofre"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 25,
+      "kg": 12.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Chest holds up to 12 cubic feet of contents.</p>",
+      "fr": "<p>Un coffre contient jusqu’à 0,36 m3.</p>",
+      "es": "<p>En un cofre cabe un volumen de hasta 360 l de contenido.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 102,
+      "section": "Chest (5 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "climbers-kit",
+    "name": {
+      "en": "Climber’s Kit",
+      "fr": "Matériel d’escalade",
+      "es": "Útiles de escalada"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 12,
+      "kg": 6
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Climber’s Kit includes boot tips, gloves, pitons, and a harness. As a Utilize action, you can use the Climber’s Kit to anchor yourself; when you do, you can’t fall more than 25 feet from the anchor point, and you can’t move more than 25 feet from there without undoing the anchor as a Bonus Action.</p>",
+      "fr": "<p>Le matériel d’escalade comprend des crampons de chaussures, des gants, des pitons et un harnais. Par une action Utilisation, vous pouvez recourir au matériel d’escalade pour vous ancrer ; cette précaution prise, vous ne pouvez pas tomber à plus de 7,50 m du point d’ancrage, et vous ne pouvez pas vous en éloigner de plus de 7,50 m sans défaire préalablement l’ancrage par une action Bonus.</p>",
+      "es": "<p>Los útiles de escalada incluyen arnés, guantes, pitones y puntas para las botas. Como acción de utilizar, puedes emplear los útiles de escalada para anclarte; cuando lo hagas, no podrás caer más de 7,5 m desde el punto de anclaje ni podrás alejarte más de 7,5 m de ahí si no quitas la sujeción como acción adicional.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 104,
+      "section": "Climber’s Kit (25 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "clothes-fine",
+    "name": {
+      "en": "Clothes, Fine",
+      "fr": "Beaux habits",
+      "es": "Ropas de calidad"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "text": {
+      "en": "<p>Fine Clothes are made of expensive fabrics and adorned with expertly crafted details. Some events and locations admit only people wearing these clothes.</p>",
+      "fr": "<p>Les beaux habits sont fabriqués dans des tissus coûteux et dotés d’ornements élaborés. Certains événements et lieux n’acceptent que les personnes portant de tels vêtements.</p>",
+      "es": "<p>Las ropas de calidad están confeccionadas con telas caras y ornamentadas con detalles elaborados por manos expertas. Algunos eventos y lugares admiten solo a gente que lleve esta indumentaria.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 100,
+      "section": "Clothes, Fine (15 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "clothes-travelers",
+    "name": {
+      "en": "Clothes, Traveler’s",
+      "fr": "Tenue de voyage",
+      "es": "Ropas de viaje"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>Traveler’s Clothes are resilient garments designed for travel in various environments.</p>",
+      "fr": "<p>La tenue de voyage comprend des vêtements résistants, conçus pour voyager dans divers environnements.</p>",
+      "es": "<p>Las ropas de viaje son prendas resistentes y diseñadas para viajar por diversos entornos.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 106,
+      "section": "Clothes, Traveler’s (2 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "cobblers-tools",
+    "name": {
+      "en": "Cobbler’s Tools",
+      "fr": "Outils de cordonnier",
+      "es": "Herramientas de zapatero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Modify footwear to give Advantage on the wearer’s next Dexterity (Acrobatics) check (DC 10)",
+        "fr": "modifier des chaussures afin d’octroyer l’Avantage au prochain test de Dextérité (Acrobaties) de leur porteur (DD 10)",
+        "es": "modificar calzado para dar ventaja a la siguiente prueba de Destreza (Acrobacias) de quien lo lleve (CD 10)"
+      },
+      "craft": {
+        "en": "Climber’s Kit",
+        "fr": "matériel d’escalade",
+        "es": "útiles de escalada"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Cobbler’s Tools (5 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "component-pouch",
+    "name": {
+      "en": "Component Pouch",
+      "fr": "Sacoche à composantes",
+      "es": "Saquito de componentes"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Component Pouch is watertight and filled with compartments that hold all the free Material components of your spells.</p>",
+      "fr": "<p>Une sacoche à composantes est étanche et divisée en compartiments qui permettent d’y ranger toutes les composantes matérielles gratuites de vos sorts.</p>",
+      "es": "<p>Un saquito de componentes es una bolsa hermética y llena de compartimentos que contienen todos los componentes materiales gratuitos para tus conjuros.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 106,
+      "section": "Component Pouch (25 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "cooks-utensils",
+    "name": {
+      "en": "Cook’s Utensils",
+      "fr": "Ustensiles de cuisinier",
+      "es": "Útiles de cocinero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 8,
+      "kg": 4
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "tool": {
+      "ability": "wis",
+      "utilize": {
+        "en": "Improve food’s flavor (DC 10), or detect spoiled or poisoned food (DC 15)",
+        "fr": "améliorer la saveur des aliments (DD 10), détecter si un plat est avarié ou empoisonné (DD 15)",
+        "es": "mejorar el sabor de la comida (CD 10) o detectar alimentos podridos o envenenados (CD 15)"
+      },
+      "craft": {
+        "en": "Rations",
+        "fr": "rations",
+        "es": "raciones"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 100,
+      "section": "Cook’s Utensils (1 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "costume",
+    "name": {
+      "en": "Costume",
+      "fr": "Costume",
+      "es": "Disfraz"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>While wearing a Costume, you have Advantage on any ability check you make to impersonate the person or type of person it represents.</p>",
+      "fr": "<p>Vêtu d’un costume, vous avez l’Avantage aux tests de caractéristique visant à vous faire passer pour la personne ou le type de personne qu’il représente.</p>",
+      "es": "<p>Mientras lleves puesto un disfraz, tienes ventaja en cualquier prueba de característica que hagas para hacerte pasar por la persona o tipo de persona que representa.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 102,
+      "section": "Costume (5 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "crowbar",
+    "name": {
+      "en": "Crowbar",
+      "fr": "Pied-de-biche",
+      "es": "Palanqueta"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>Using a Crowbar gives you Advantage on Strength checks where the Crowbar’s leverage can be applied.</p>",
+      "fr": "<p>Le pied-de-biche vous octroie l’Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>",
+      "es": "<p>Una palanqueta te da ventaja en las pruebas de Fuerza en las que se pueda hacer palanca.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 105,
+      "section": "Crowbar (2 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "diplomats-pack",
+    "name": {
+      "en": "Diplomat’s Pack",
+      "fr": "Paquetage de diplomate",
+      "es": "Paquete de diplomático"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 39,
+      "kg": 19.5
+    },
+    "cost": {
+      "gp": 39,
+      "text": {
+        "en": "39 GP",
+        "fr": "39 po",
+        "es": "39 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Diplomat’s Pack contains the following items: Chest, Fine Clothes, Ink, 5 Ink Pens, Lamp, 2 Map or Scroll Cases, 4 flasks of Oil, 5 sheets of Paper, 5 sheets of Parchment, Perfume, and Tinderbox.</p>",
+      "fr": "<p>Le paquetage de diplomate contient les objets suivants : beaux habits, boîte à amadou, coffre, encre, 2 étuis à cartes et à parchemins, 5 feuilles de papier, 5 feuilles de parchemin, 4 flasques d’huile, lampe, 5 porte-plume, parfum.</p>",
+      "es": "<p>Un paquete de diplomático contiene los siguientes objetos: cofre, 2 estuches para mapas o pergaminos, 4 frascos de aceite, 5 hojas de papel, 5 hojas de pergamino, lámpara, perfume, 5 plumas, ropas de calidad, tinta y yesquero.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 104,
+      "section": "Diplomat’s Pack (39 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "disguise-kit",
+    "name": {
+      "en": "Disguise Kit",
+      "fr": "Accessoires de déguisement",
+      "es": "Útiles para disfrazarse"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "tool": {
+      "ability": "cha",
+      "utilize": {
+        "en": "Apply makeup (DC 10)",
+        "fr": "appliquer du maquillage (DD 10)",
+        "es": "maquillar (CD 10)"
+      },
+      "craft": {
+        "en": "Costume",
+        "fr": "costume",
+        "es": "disfraz"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Disguise Kit (25 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "druidic-focus",
+    "name": {
+      "en": "Druidic Focus",
+      "fr": "Focaliseur druidique",
+      "es": "Canalizador druídico"
+    },
+    "kind": "gear",
+    "text": {
+      "en": "<p>A Druidic Focus takes one of the forms in the Druidic Focuses table and is carved, tied with ribbon, or painted to channel primal magic. A Druid or Ranger can use such an object as a Spellcasting Focus.</p><table><caption>Druidic Focuses</caption><thead><tr><th>Focus</th><th>Weight</th><th>Cost</th></tr></thead><tbody><tr><td>Sprig of mistletoe</td><td>—</td><td>1 GP</td></tr><tr><td>Wooden staff (also a Quarterstaff)</td><td>4 lb.</td><td>5 GP</td></tr><tr><td>Yew wand</td><td>1 lb.</td><td>10 GP</td></tr></tbody></table>",
+      "fr": "<p>Un focaliseur druidique prend l’une des formes proposées dans la table « Focaliseurs druidiques » et il est sculpté, attaché avec un ruban ou peint de façon à canaliser la magie primitive. Un Druide ou un Rôdeur peut se servir d’un tel objet comme focaliseur d’incantation.</p><table><caption>Focaliseurs druidiques</caption><thead><tr><th>Focaliseur</th><th>Poids</th><th>Prix</th></tr></thead><tbody><tr><td>Baguette d’if</td><td>0,5 kg</td><td>10 po</td></tr><tr><td>Bâton en bois (également bâton de combat)</td><td>2 kg</td><td>5 po</td></tr><tr><td>Branche de houx</td><td>—</td><td>1 po</td></tr></tbody></table>",
+      "es": "<p>Un canalizador druídico puede ser uno de los objetos de la tabla “Canalizadores druídicos” y está tallado, atado con un lazo o pintado para canalizar la magia primigenia. Los druidas o exploradores pueden utilizar estos objetos como canalizadores mágicos.</p><table><caption>Canalizadores druídicos</caption><thead><tr><th>Canalizador</th><th>Peso</th><th>Precio</th></tr></thead><tbody><tr><td>Bastón de madera (también bastón)</td><td>2 kg</td><td>5 po</td></tr><tr><td>Rama de muérdago</td><td>—</td><td>1 po</td></tr><tr><td>Varita de tejo</td><td>0,5 kg</td><td>10 po</td></tr></tbody></table>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 103,
+      "section": "Druidic Focus (Varies)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "dungeoneers-pack",
+    "name": {
+      "en": "Dungeoneer’s Pack",
+      "fr": "Paquetage d’exploration souterraine",
+      "es": "Paquete de explorador de mazmorras"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 55,
+      "kg": 27.5
+    },
+    "cost": {
+      "gp": 12,
+      "text": {
+        "en": "12 GP",
+        "fr": "12 po",
+        "es": "12 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Dungeoneer’s Pack contains the following items: Backpack, Caltrops, Crowbar, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.</p>",
+      "fr": "<p>Le paquetage d’exploration souterraine contient les objets suivants : sac à dos, boîte à amadou, chaussetrappes, corde, 2 flasques d’huile, 10 jours de rations, outre, pied-de-biche, 10 torches.</p>",
+      "es": "<p>Un paquete de explorador de mazmorras contiene los siguientes objetos: abrojos, 10 antorchas, cantimplora, cuerda, 2 frascos de aceite, mochila, palanqueta, raciones para 10 días y yesquero.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 105,
+      "section": "Dungeoneer’s Pack (12 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "elephant",
+    "name": {
+      "en": "Elephant",
+      "fr": "Éléphant",
+      "es": "Elefante"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 200,
+      "text": {
+        "en": "200 GP",
+        "fr": "200 po",
+        "es": "200 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 1,320 lb.</p>",
+      "fr": "<p>Capacité de charge : 660 kg.</p>",
+      "es": "<p>Capacidad de carga: 660 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "entertainers-pack",
+    "name": {
+      "en": "Entertainer’s Pack",
+      "fr": "Paquetage d’artiste",
+      "es": "Paquete de artista"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 58.5,
+      "kg": 29
+    },
+    "cost": {
+      "gp": 40,
+      "text": {
+        "en": "40 GP",
+        "fr": "40 po",
+        "es": "40 po"
+      }
+    },
+    "text": {
+      "en": "<p>An Entertainer’s Pack contains the following items: Backpack, Bedroll, Bell, Bullseye Lantern, 3 Costumes, Mirror, 8 flasks of Oil, 9 days of Rations, Tinderbox, and Waterskin.</p>",
+      "fr": "<p>Le paquetage d’artiste contient les objets suivants : sac à dos, boîte à amadou, cloche, 3 costumes, 8 flasques d’huile, 9 jours de rations, lanterne sourde, miroir, outre, sac de couchage.</p>",
+      "es": "<p>Un paquete de artista contiene los siguientes objetos: campana, cantimplora, 3 disfraces, espejo, 8 frascos de aceite, linterna de ojo de buey, mochila, petate, raciones para 9 días y yesquero.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 104,
+      "section": "Entertainer’s Pack (40 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "explorers-pack",
+    "name": {
+      "en": "Explorer’s Pack",
+      "fr": "Paquetage d’explorateur",
+      "es": "Paquete de explorador"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 55,
+      "kg": 27.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "text": {
+      "en": "<p>An Explorer’s Pack contains the following items: Backpack, Bedroll, 2 flasks of Oil, 10 days of Rations, Rope, Tinderbox, 10 Torches, and Waterskin.</p>",
+      "fr": "<p>Le paquetage d’explorateur contient les objets suivants : sac à dos, sac de couchage, boîte à amadou, corde, 2 flasques d’huile, 10 jours de rations, outre, 10 torches.</p>",
+      "es": "<p>Un paquete de explorador contiene los siguientes objetos: 10 antorchas, cantimplora, cuerda, 2 frascos de aceite, mochila, petate, raciones para 10 días y yesquero.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 105,
+      "section": "Explorer’s Pack (10 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "feed-per-day",
+    "name": {
+      "en": "Feed per day",
+      "fr": "Fourrage (par jour)",
+      "es": "Alimento por día"
+    },
+    "kind": "tack",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 0.05,
+      "text": {
+        "en": "5 CP",
+        "fr": "5 pc",
+        "es": "5 pc"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "flask",
+    "name": {
+      "en": "Flask",
+      "fr": "Flasque",
+      "es": "Frasco"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP",
+        "fr": "2 pc",
+        "es": "2 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Flask holds up to 1 pint.</p>",
+      "fr": "<p>Une flasque contient 0,5 litre de liquide.</p>",
+      "es": "<p>En un frasco caben hasta 0,5 l de líquido.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 103,
+      "section": "Flask (2 CP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "food-ale-mug",
+    "name": {
+      "en": "Ale (mug)",
+      "fr": "Bière (pichet)",
+      "es": "Cerveza (jarra)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.04,
+      "text": {
+        "en": "4 CP",
+        "fr": "4 pc",
+        "es": "4 pc"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "food-bread-loaf",
+    "name": {
+      "en": "Bread (loaf)",
+      "fr": "Pain (miche)",
+      "es": "Pan (hogaza)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP",
+        "fr": "2 pc",
+        "es": "2 pc"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "food-cheese-wedge",
+    "name": {
+      "en": "Cheese (wedge)",
+      "fr": "Fromage (tranche)",
+      "es": "Queso (cuña)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "forgery-kit",
+    "name": {
+      "en": "Forgery Kit",
+      "fr": "Matériel de contrefaçon",
+      "es": "Útiles para falsificar"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Mimic 10 or fewer words of someone else’s handwriting (DC 15), or duplicate a wax seal (DC 20)",
+        "fr": "imiter 10 mots ou moins de l’écriture d’autrui (DD 15), reproduire un cachet de cire (DD 20)",
+        "es": "escribir 10 o menos palabras imitando la letra de otra persona (CD 15) o duplicar un sello de cera (CD 20)"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Forgery Kit (15 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "galley",
+    "name": {
+      "en": "Galley",
+      "fr": "Galère",
+      "es": "Galera"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 30000,
+      "text": {
+        "en": "30,000 GP",
+        "fr": "30 000 po",
+        "es": "30 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 4 mph. Crew: 80. Cargo (Tons): 150. AC: 15. HP: 500. Damage Threshold: 20.</p>",
+      "fr": "<p>Vitesse : 6 km/h. Équipage : 80. Cargaison (tonnes) : 150. CA : 15. PV : 500. Seuil de dégâts : 20.</p>",
+      "es": "<p>Velocidad: 6 km/h. Tripulación: 80. Cargamento (toneladas): 150. CA: 15. PG: 500. Umbral de daño: 20.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "gaming-set",
+    "name": {
+      "en": "Gaming Set",
+      "fr": "Boîte de jeux",
+      "es": "Juego"
+    },
+    "kind": "tool",
+    "tool": {
+      "ability": "wis",
+      "utilize": {
+        "en": "Discern whether someone is cheating (DC 10), or win the game (DC 20)",
+        "fr": "déterminer si quelqu’un triche (DD 10), gagner la partie (DD 20)",
+        "es": "distinguir si alguien hace trampas (CD 10) o ganar la partida (CD 20)"
+      },
+      "variants": {
+        "en": "Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)",
+        "fr": "cartes à jouer (5 pa), dés (1 pa), échecs draconiques (1 po), jeu des dragons (1 po)",
+        "es": "ajedrez dragón (1 po), apuesta de los tres dragones (1 po), dados (1 pp), naipes (5 pp)"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Gaming Set (Varies)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "glassblowers-tools",
+    "name": {
+      "en": "Glassblower’s Tools",
+      "fr": "Outils de souffleur de verre",
+      "es": "Herramientas de soplador de vidrio"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Discern what a glass object held in the past 24 hours (DC 15)",
+        "fr": "déterminer ce qu’a contenu un objet en verre lors des dernières 24 heures (DD 15)",
+        "es": "distinguir lo que ha contenido un objeto de vidrio durante las últimas 24 horas (CD 15)"
+      },
+      "craft": {
+        "en": "Glass Bottle, Magnifying Glass, Spyglass, Vial",
+        "fr": "bouteille en verre, fiole, longue-vue, loupe",
+        "es": "botella de cristal, catalejo, lupa, vial"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 100,
+      "section": "Glassblower’s Tools (30 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "grappling-hook",
+    "name": {
+      "en": "Grappling Hook",
+      "fr": "Grappin",
+      "es": "Garfio de escalada"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can throw the Grappling Hook at a railing, a ledge, or another catch within 50 feet of yourself, and the hook catches on if you succeed on a DC 13 Dexterity (Acrobatics) check. If you tied a Rope to the hook, you can then climb it.</p>",
+      "fr": "<p>Par une action Utilisation, vous lancez le grappin sur une balustrade, un rebord ou une autre prise à une distance maximale de 15 m, et le grappin s’accroche si vous réussissez un test de Dextérité (Acrobaties) DD 13. Si vous aviez attaché une corde au grappin, vous pouvez y grimper.</p>",
+      "es": "<p>Como acción de utilizar, puedes lanzar un garfio de escalada a una barandilla, cornisa u otro saliente a 15 m o menos de ti, y el garfio se enganchará si superas una prueba de Destreza (Acrobacias) con CD 13. Si el garfio tiene una cuerda atada, podrás escalar.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 103,
+      "section": "Grappling Hook (2 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "healers-kit",
+    "name": {
+      "en": "Healer’s Kit",
+      "fr": "Trousse de soins",
+      "es": "Útiles de sanador"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Healer’s Kit has ten uses. As a Utilize action, you can expend one of its uses to stabilize an Unconscious creature that has 0 Hit Points without needing to make a Wisdom (Medicine) check.</p>",
+      "fr": "<p>Une trousse de soins dispose de dix charges. Par une action Utilisation, dépenser une charge permet de stabiliser une créature avec l’état Inconscient et tombée à 0 point de vie sans passer par un test de Sagesse (Médecine).</p>",
+      "es": "<p>Los útiles de sanador tienen diez usos. Como acción de utilizar, puedes gastar uno de ellos para estabilizar a una criatura inconsciente que tenga 0 puntos de golpe sin necesidad de hacer una prueba de Sabiduría (Medicina).</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 106,
+      "section": "Healer’s Kit (5 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "herbalism-kit",
+    "name": {
+      "en": "Herbalism Kit",
+      "fr": "Matériel d’herboriste",
+      "es": "Útiles de herborista"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Identify a plant (DC 10)",
+        "fr": "identifier une plante (DD 10)",
+        "es": "identificar una planta (CD 10)"
+      },
+      "craft": {
+        "en": "Antitoxin, Candle, Healer’s Kit, <em>Potion of Healing</em>",
+        "fr": "antidote, bougie, trousse de soins, <em>potion de guérison</em>",
+        "es": "antitoxina, <em>poción de curación</em>, útiles de sanador, vela"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Herbalism Kit (5 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "hireling-messenger",
+    "name": {
+      "en": "Messenger",
+      "fr": "Messager",
+      "es": "Mensajero"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP per mile",
+        "fr": "2 pc par 1,5 km",
+        "es": "1 o 2 pc por kilómetro"
+      }
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Hirelings",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "hireling-skilled-hireling",
+    "name": {
+      "en": "Skilled hireling",
+      "fr": "Employé qualifié",
+      "es": "Asalariado cualificado"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP per day",
+        "fr": "2 po par jour",
+        "es": "2 po al día"
+      }
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Hirelings",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "hireling-untrained-hireling",
+    "name": {
+      "en": "Untrained hireling",
+      "fr": "Employé sans formation",
+      "es": "Asalariado no cualificado"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP per day",
+        "fr": "2 pa par jour",
+        "es": "2 pp al día"
+      }
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Hirelings",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "holy-symbol",
+    "name": {
+      "en": "Holy Symbol",
+      "fr": "Symbole sacré",
+      "es": "Símbolo sagrado"
+    },
+    "kind": "gear",
+    "text": {
+      "en": "<p>A Holy Symbol takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.</p><p>The table indicates whether a Holy Symbol needs to be held, worn, or borne on fabric (such as a tabard or banner) or a Shield.</p><table><caption>Holy Symbols</caption><thead><tr><th>Symbol</th><th>Weight</th><th>Cost</th></tr></thead><tbody><tr><td>Amulet (worn or held)</td><td>1 lb.</td><td>5 GP</td></tr><tr><td>Emblem (borne on fabric or a Shield)</td><td>—</td><td>5 GP</td></tr><tr><td>Reliquary (held)</td><td>2 lb.</td><td>5 GP</td></tr></tbody></table>",
+      "fr": "<p>Un symbole sacré, qui prend l’une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d’un symbole sacré comme focaliseur d’incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><th>Symbole</th><th>Poids</th><th>Prix</th></tr></thead><tbody><tr><td>Amulette (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>Emblème (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>Reliquaire (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>",
+      "es": "<p>Un símbolo sagrado puede ser uno de los objetos de la tabla “Símbolos sagrados” y está ornamentado o pintado para canalizar la magia divina. Los clérigos o paladines pueden utilizar un símbolo sagrado como canalizador mágico.</p><p>La tabla indica si un símbolo sagrado se debe sostener, llevar puesto o mostrar en tela (como un tabardo o un estandarte) o en un escudo.</p><table><caption>Símbolos sagrados</caption><thead><tr><th>Símbolo</th><th>Peso</th><th>Precio</th></tr></thead><tbody><tr><td>Amuleto (puesto o sostenido)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>Emblema (en tela o en escudo)</td><td>—</td><td>5 po</td></tr><tr><td>Relicario (sostenido)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 106,
+      "section": "Holy Symbol (Varies)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "holy-water",
+    "name": {
+      "en": "Holy Water",
+      "fr": "Eau bénite",
+      "es": "Agua bendita"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>When you take the Attack action, you can replace one of your attacks with throwing a flask of Holy Water. Target one creature you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d8 Radiant damage if it is a Fiend or an Undead.</p>",
+      "fr": "<p>Lorsque vous effectuez l’action Attaque, vous pouvez remplacer l’une de vos attaques par le jet d’une flasque d’eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+      "es": "<p>Cuando lleves a cabo la acción de atacar, puedes sustituir uno de tus ataques por lanzar un frasco de agua bendita. Haz objetivo a una criatura que puedas ver a 6 m o menos de ti. El objetivo deberá superar una tirada de salvación de Destreza (CD 8 más tu modificador por Destreza y tu bonificador por competencia) o sufrirá 2d8 de daño radiante si es un infernal o un muerto viviente.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 102,
+      "section": "Holy Water (25 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "horse-draft",
+    "name": {
+      "en": "Horse, Draft",
+      "fr": "Cheval de trait",
+      "es": "Caballo de tiro"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 540 lb.</p>",
+      "fr": "<p>Capacité de charge : 270 kg.</p>",
+      "es": "<p>Capacidad de carga: 270 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "horse-riding",
+    "name": {
+      "en": "Horse, Riding",
+      "fr": "Cheval de selle",
+      "es": "Caballo de monta"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 75,
+      "text": {
+        "en": "75 GP",
+        "fr": "75 po",
+        "es": "75 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 480 lb.</p>",
+      "fr": "<p>Capacité de charge : 240 kg.</p>",
+      "es": "<p>Capacidad de carga: 240 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "hunting-trap",
+    "name": {
+      "en": "Hunting Trap",
+      "fr": "Piège à mâchoires",
+      "es": "Trampa para cazar"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 25,
+      "kg": 12.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can set a Hunting Trap, which is a sawtooth steel ring that snaps shut when a creature steps on a pressure plate in the center.</p><p>The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 Piercing damage and have its Speed reduced to 0 until the start of its next turn. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet). A creature can use its action to make a DC 13 Strength (Athletics) check, freeing itself or another creature within its reach on a success. Each failed check deals 1 Piercing damage to the trapped creature.</p>",
+      "fr": "<p>Par une action Utilisation, vous posez un piège à mâchoires, anneau d’acier en dents de scie qui se referme lorsqu’une créature marche sur la plaque de pression centrale. Le piège est ancré par une lourde chaîne à un objet immobile, comme un arbre ou une pointe enfoncée dans le sol. Une créature qui marche sur la plaque doit réussir un jet de sauvegarde de Dextérité DD 13 sous peine de subir 1d4 dégâts perforants et de voir sa Vitesse réduite à 0 jusqu’au début de son tour suivant. Par la suite et jusqu’à ce que la créature se libère du piège, son déplacement est limité par la taille de la chaîne (en règle générale 90 cm de long). Toute créature peut consacrer son action à effectuer un test de Force (Athlétisme) DD 13 et se libère, ou en extrait une autre créature à portée d’allonge, en cas de réussite. Chaque échec au test inflige 1 dégât perforant à la créature piégée.</p>",
+      "es": "<p>Como acción de utilizar, puedes poner una trampa para cazar, que consiste en una anilla dentada de acero que se cierra cuando una criatura pisa una placa de presión situada en su centro. La trampa se fija mediante una pesada cadena a cualquier objeto inmóvil, como un árbol o una estaca clavada en el suelo. Si una criatura pisa la placa, deberá superar una tirada de salvación de Destreza con CD 13 o sufrirá 1d4 de daño perforante y su velocidad se reducirá a 0 hasta el principio de su siguiente turno. A partir de ese momento y hasta que la criatura se libere de la trampa, su movimiento se verá limitado por la longitud de la cadena (normalmente 90 cm). Una criatura puede emplear su acción para hacer una prueba de Fuerza (Atletismo) con CD 13 para liberarse a sí misma o a otra criatura que esté a su alcance si la supera. Cada prueba fallida causa 1 de daño perforante a la criatura atrapada.</p>"
+    },
+    "source": {
+      "page": 97,
+      "frPage": 105,
+      "section": "Hunting Trap (5 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "ink",
+    "name": {
+      "en": "Ink",
+      "fr": "Encre",
+      "es": "Tinta"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "text": {
+      "en": "<p>Ink comes in a 1-ounce bottle, which provides enough ink to write about 500 pages.</p>",
+      "fr": "<p>Conditionnée en bouteille de 30 ml, cette quantité d’encre permet de noircir environ 500 pages.</p>",
+      "es": "<p>La tinta viene en un frasco de 30 ml que basta para escribir unas 500 páginas.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 102,
+      "section": "Ink (10 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "ink-pen",
+    "name": {
+      "en": "Ink Pen",
+      "fr": "Porte-plume",
+      "es": "Pluma"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP",
+        "fr": "2 pc",
+        "es": "2 pc"
+      }
+    },
+    "text": {
+      "en": "<p>Using Ink, an Ink Pen is used to write or draw.</p>",
+      "fr": "<p>Combiné à l’encre, le porte-plume permet d’écrire ou de dessiner.</p>",
+      "es": "<p>Una pluma sirve para escribir o dibujar con tinta.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 105,
+      "section": "Ink Pen (2 CP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "inn-stay-aristocratic",
+    "name": {
+      "en": "Inn Stay per Day (Aristocratic)",
+      "fr": "Séjour à l’auberge (aristocratique)",
+      "es": "Estancia en posada por día (Aristocrática)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 4,
+      "text": {
+        "en": "4 GP",
+        "fr": "4 po",
+        "es": "4 po"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "inn-stay-comfortable",
+    "name": {
+      "en": "Inn Stay per Day (Comfortable)",
+      "fr": "Séjour à l’auberge (confortable)",
+      "es": "Estancia en posada por día (Cómoda)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.8,
+      "text": {
+        "en": "8 SP",
+        "fr": "8 pa",
+        "es": "8 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "inn-stay-modest",
+    "name": {
+      "en": "Inn Stay per Day (Modest)",
+      "fr": "Séjour à l’auberge (modeste)",
+      "es": "Estancia en posada por día (Modesta)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "inn-stay-poor",
+    "name": {
+      "en": "Inn Stay per Day (Poor)",
+      "fr": "Séjour à l’auberge (pauvre)",
+      "es": "Estancia en posada por día (Pobre)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "inn-stay-squalid",
+    "name": {
+      "en": "Inn Stay per Day (Squalid)",
+      "fr": "Séjour à l’auberge (misérable)",
+      "es": "Estancia en posada por día (Miserable)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.07,
+      "text": {
+        "en": "7 CP",
+        "fr": "7 pc",
+        "es": "7 pc"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "inn-stay-wealthy",
+    "name": {
+      "en": "Inn Stay per Day (Wealthy)",
+      "fr": "Séjour à l’auberge (riche)",
+      "es": "Estancia en posada por día (Lujosa)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "jewelers-tools",
+    "name": {
+      "en": "Jeweler’s Tools",
+      "fr": "Outils de joaillier",
+      "es": "Herramientas de joyero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Discern a gem’s value (DC 15)",
+        "fr": "déterminer la valeur d’une gemme (DD 15)",
+        "es": "discernir el valor de una gema (CD 15)"
+      },
+      "craft": {
+        "en": "Arcane Focus, Holy Symbol",
+        "fr": "focaliseur arcanique, symbole sacré",
+        "es": "canalizador arcano, símbolo sagrado"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Jeweler’s Tools (25 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "jug",
+    "name": {
+      "en": "Jug",
+      "fr": "Cruche",
+      "es": "Jarro"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP",
+        "fr": "2 pc",
+        "es": "2 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Jug holds up to 1 gallon.</p>",
+      "fr": "<p>Une cruche contient jusqu’à 4 litres de liquide.</p>",
+      "es": "<p>En un jarro caben hasta 4 l de líquido.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 102,
+      "section": "Jug (2 CP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "keelboat",
+    "name": {
+      "en": "Keelboat",
+      "fr": "Barge",
+      "es": "Barcaza"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 3000,
+      "text": {
+        "en": "3,000 GP",
+        "fr": "3 000 po",
+        "es": "3000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 1 mph. Crew: 1. Passengers: 6. Cargo (Tons): 1/2. AC: 15. HP: 100. Damage Threshold: 10.</p>",
+      "fr": "<p>Vitesse : 1,5 km/h. Équipage : 1. Passagers : 6. Cargaison (tonnes) : 1/2. CA : 15. PV : 100. Seuil de dégâts : 10.</p>",
+      "es": "<p>Velocidad: 1,5 km/h. Tripulación: 1. Pasajeros: 6. Cargamento (toneladas): 1/2. CA: 15. PG: 100. Umbral de daño: 10.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "ladder",
+    "name": {
+      "en": "Ladder",
+      "fr": "Échelle",
+      "es": "Escalera"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 25,
+      "kg": 12.5
+    },
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Ladder is 10 feet tall. You must climb to move up or down it.</p>",
+      "fr": "<p>Une échelle mesure 3 m de haut. Grimper dessus permet de monter ou descendre.</p>",
+      "es": "<p>Una escalera mide 3 m de altura. Debes trepar para subir o bajar por ella.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 102,
+      "section": "Ladder (1 SP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "lamp",
+    "name": {
+      "en": "Lamp",
+      "fr": "Lampe",
+      "es": "Lámpara"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Lamp burns Oil as fuel to cast Bright Light in a 15- foot radius and Dim Light for an additional 30 feet.</p>",
+      "fr": "<p>Une lampe brûle de l’huile comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu’une Lumière faible sur 9 m de plus.</p>",
+      "es": "<p>Una lámpara quema aceite como combustible para emitir luz brillante en un radio de 4,5 m y luz tenue 9 m más allá.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 103,
+      "section": "Lamp (5 SP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "lantern-bullseye",
+    "name": {
+      "en": "Lantern, Bullseye",
+      "fr": "Lanterne sourde",
+      "es": "Linterna de ojo de buey"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Bullseye Lantern burns Oil as fuel to cast Bright Light in a 60-foot Cone and Dim Light for an additional 60 feet.</p>",
+      "fr": "<p>Une lanterne sourde brûle de l’huile comme combustible et produit une Lumière vive sur un Cône de 18 m, ainsi qu’une Lumière faible sur 18 m de plus.</p>",
+      "es": "<p>Una linterna de ojo de buey quema aceite como combustible para emitir luz brillante en un cono de 18 m y luz tenue 18 m más allá.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 104,
+      "section": "Lantern, Bullseye (10 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "lantern-hooded",
+    "name": {
+      "en": "Lantern, Hooded",
+      "fr": "Lanterne à capote",
+      "es": "Linterna sorda"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Hooded Lantern burns Oil as fuel to cast Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. As a Bonus Action, you can lower the hood, reducing the light to Dim Light in a 5-foot radius, or raise it again.</p>",
+      "fr": "<p>Une lanterne à capote brûle de l’huile comme combustible et produit une Lumière vive sur un rayon de 9 m, ainsi qu’une Lumière faible sur 9 m de plus. Abaisser la capote par une action Bonus permet de réduire l’éclairage à une Lumière faible sur un rayon de 1,50 m, et la relever de rétablir la pleine lumière.</p>",
+      "es": "<p>Una linterna sorda quema aceite como combustible para emitir luz brillante en un radio de 9 m y luz tenue 9 m más allá. Como acción adicional, puedes cubrir la abertura con la tapa y hacer que solo emita luz tenue en un radio de 1,5 m, o abrirla de nuevo.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 103,
+      "section": "Lantern, Hooded (5 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "leatherworkers-tools",
+    "name": {
+      "en": "Leatherworker’s Tools",
+      "fr": "Outils de tanneur",
+      "es": "Herramientas de curtidor"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Add a design to a leather item (DC 10)",
+        "fr": "ajouter un motif à un objet en cuir (DD 10)",
+        "es": "añadir un diseño a un objeto de cuero (CD 10)"
+      },
+      "craft": {
+        "en": "Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin",
+        "fr": "fouet, fronde, armure de cuir, armure de cuir clouté, armure de peaux, carquois, étui à carreaux d’arbalète, étui à cartes ou à parchemins, outre, parchemin, sacoche, sac à dos",
+        "es": "honda, látigo, armadura de cuero, armadura de cuero tachonado, armadura de pieles, aljaba, bolsa, cantimplora, estuche para mapas o pergaminos, estuche para virotes de ballesta, mochila, pergamino"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 100,
+      "section": "Leatherworker’s Tools (5 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "lifestyle-aristocratic",
+    "name": {
+      "en": "Aristocratic",
+      "fr": "Aristocratique",
+      "es": "Aristocrático"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP per Day",
+        "fr": "10 po par jour",
+        "es": "10 po al día"
+      }
+    },
+    "text": {
+      "en": "<p>You pay for the best and might have a staff that supports your lifestyle. Others notice your wealth and might encourage you to share it, either legally or otherwise.</p>",
+      "fr": "<p>Vous payez pour ce qu’il y a de mieux et régnez sur une petite armée de serviteurs. Les personnes qui remarquent tout ce faste risquent de vous « inviter » à partager, par des moyens légaux ou non.</p>",
+      "es": "<p>Pagas por lo mejor de lo mejor y podrías tener empleados para asistirte con tu estilo de vida. Otros se percatan de tu riqueza y podrían alentarte a compartirla, ya sea de forma legal o no.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-comfortable",
+    "name": {
+      "en": "Comfortable",
+      "fr": "Confortable",
+      "es": "Cómodo"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP per Day",
+        "fr": "2 po par jour",
+        "es": "2 po al día"
+      }
+    },
+    "text": {
+      "en": "<p>You spend modestly for your necessities and enjoy a few luxuries.</p>",
+      "fr": "<p>Vous subvenez aux besoins élémentaires et profitez de temps à autre du superflu.</p>",
+      "es": "<p>Inviertes modestamente en tus necesidades y disfrutas de ciertos lujos.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-modest",
+    "name": {
+      "en": "Modest",
+      "fr": "Modeste",
+      "es": "Modesto"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP per Day",
+        "fr": "1 po par jour",
+        "es": "1 po al día"
+      }
+    },
+    "text": {
+      "en": "<p>You support yourself at an average level.</p>",
+      "fr": "<p>Vous subvenez à vos besoins à un niveau moyen.</p>",
+      "es": "<p>Tienes un nivel medio de vida.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-poor",
+    "name": {
+      "en": "Poor",
+      "fr": "Pauvre",
+      "es": "Pobre"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP per Day",
+        "fr": "2 pa par jour",
+        "es": "2 pp al día"
+      }
+    },
+    "text": {
+      "en": "<p>You spend frugally for your necessities.</p>",
+      "fr": "<p>Vous dépensez avec parcimonie pour vos besoins essentiels.</p>",
+      "es": "<p>Gastas con mesura para cubrir tus necesidades.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-squalid",
+    "name": {
+      "en": "Squalid",
+      "fr": "Misérable",
+      "es": "Miserable"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP per Day",
+        "fr": "1 pa par jour",
+        "es": "1 pp al día"
+      }
+    },
+    "text": {
+      "en": "<p>You spend the bare minimum for your necessities. You might be exposed to unhealthy conditions and opportunistic criminals.</p>",
+      "fr": "<p>Vous dépensez le strict minimum pour vos besoins. Vous êtes parfois exposé à des conditions insalubres et aux exactions des petits criminels.</p>",
+      "es": "<p>Gastas lo mínimo para cubrir tus necesidades. Podrías exponerte a condiciones insalubres y a delincuentes oportunistas.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-wealthy",
+    "name": {
+      "en": "Wealthy",
+      "fr": "Riche",
+      "es": "Lujoso"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 4,
+      "text": {
+        "en": "4 GP per Day",
+        "fr": "4 po par jour",
+        "es": "4 po al día"
+      }
+    },
+    "text": {
+      "en": "<p>You’re accustomed to the finer things in life and might have servants.</p>",
+      "fr": "<p>Habitué à vivre dans le luxe, vous pourriez même avoir des domestiques.</p>",
+      "es": "<p>Acostumbras a disfrutar de los placeres de la vida y podrías tener sirvientes.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lifestyle-wretched",
+    "name": {
+      "en": "Wretched",
+      "fr": "Mendiant",
+      "es": "Deplorable"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0,
+      "text": {
+        "en": "Free",
+        "fr": "gratuit",
+        "es": "gratis"
+      }
+    },
+    "text": {
+      "en": "<p>You survive via chance and charity. You’re often exposed to natural dangers as a result of sleeping outside.</p>",
+      "fr": "<p>Vous comptez sur votre bonne étoile et sur la charité pour survivre. Dormir à l’extérieur vous expose souvent à des dangers naturels.</p>",
+      "es": "<p>Vives de la caridad y de las oportunidades. Por lo general, te expones a peligros naturales como consecuencia de dormir en el exterior.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Lifestyle Expenses",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "lock",
+    "name": {
+      "en": "Lock",
+      "fr": "Cadenas",
+      "es": "Cerradura"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Lock comes with a key. Without the key, a creature can use Thieves’ Tools to pick this Lock with a successful DC 15 Dexterity (Sleight of Hand) check.</p>",
+      "fr": "<p>Un cadenas est livré avec une clef. Sans cette clef, une créature peut crocheter le cadenas à condition de réussir un test de Dextérité (Escamotage) DD 15 avec des outils de voleur.</p>",
+      "es": "<p>Una cerradura viene con una llave. Sin la llave, una criatura puede usar herramientas de ladrón para forzar la cerradura si supera una prueba de Destreza (Juego de manos) con CD 15.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 102,
+      "section": "Lock (10 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "longship",
+    "name": {
+      "en": "Longship",
+      "fr": "Drakkar",
+      "es": "Drakkar"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 10000,
+      "text": {
+        "en": "10,000 GP",
+        "fr": "10 000 po",
+        "es": "10 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 3 mph. Crew: 40. Passengers: 150. Cargo (Tons): 10. AC: 15. HP: 300. Damage Threshold: 15.</p>",
+      "fr": "<p>Vitesse : 4,5 km/h. Équipage : 40. Passagers : 150. Cargaison (tonnes) : 10. CA : 15. PV : 300. Seuil de dégâts : 15.</p>",
+      "es": "<p>Velocidad: 4,5 km/h. Tripulación: 40. Pasajeros: 150. Cargamento (toneladas): 10. CA: 15. PG: 300. Umbral de daño: 15.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "magnifying-glass",
+    "name": {
+      "en": "Magnifying Glass",
+      "fr": "Loupe",
+      "es": "Lupa"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 100,
+      "text": {
+        "en": "100 GP",
+        "fr": "100 po",
+        "es": "100 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Magnifying Glass grants Advantage on any ability check made to appraise or inspect a highly detailed item. Lighting a fire with a Magnifying Glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.</p>",
+      "fr": "<p>Une loupe octroie l’Avantage à tout test de caractéristique visant à inspecter ou estimer la valeur d’un objet très détaillé. Démarrer un feu avec une loupe nécessite une lumière aussi vive que celle du soleil, que la lentille concentre sur de l’amadou, lequel s’enflamme au bout d’environ 5 minutes.</p>",
+      "es": "<p>Una lupa te da ventaja en las pruebas de característica que hagas para tasar o inspeccionar un objeto muy detallado. Para encender un fuego con una lupa, se necesita una luz tan brillante como la del sol para enfocar, yesca para prender y unos 5 minutos para que se encienda el fuego.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 104,
+      "section": "Magnifying Glass (100 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "manacles",
+    "name": {
+      "en": "Manacles",
+      "fr": "Menottes",
+      "es": "Esposas"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can use Manacles to bind an unwilling Small or Medium creature within 5 feet of yourself that has the Grappled, Incapacitated, or Restrained condition if you succeed on a DC 13 Dexterity (Sleight of Hand) check. While bound, a creature has Disadvantage on attack rolls, and the creature is Restrained if the Manacles are attached to a chain or hook that is fixed in place. Escaping the Manacles requires a successful DC 20 Dexterity (Sleight of Hand) check as an action. Bursting them requires a successful DC 25 Strength (Athletics) check as an action.</p><p>Each set of Manacles comes with a key. Without the key, a creature can use Thieves’ Tools to pick the Manacles’ lock with a successful DC 15 Dexterity (Sleight of Hand) check.</p>",
+      "fr": "<p>Par une action Utilisation, vous menottez une créature non consentante de taille P ou de taille M située dans un rayon de 1,50 m et qui subit l’état Agrippé, Entravé ou Neutralisé à condition de réussir un test de Dextérité (Escamotage) DD 13. Tant qu’elle est menottée, la créature subit le Désavantage aux jets d’attaque, ainsi que l’état Entravé si les menottes sont attachées à une chaîne ou à un crochet fixe. Se libérer des menottes nécessite de réussir un test de Dextérité (Escamotage) DD 20 au prix d’une action. Les briser nécessite de réussir un test de Force (Athlétisme) DD 25 au prix d’une action.</p><p>Chaque paire de menottes est fournie avec une clef. Sans cette clef, une créature peut crocheter la serrure des menottes à condition de réussir un test de Dextérité (Escamotage) DD 15 avec des outils de voleur.</p>",
+      "es": "<p>Como acción de utilizar, puedes esposar a una criatura Pequeña o Mediana no voluntaria que esté a 1,5 m o menos de ti que tenga el estado de agarrada, apresada o incapacitada si superas una prueba de Destreza (Juego de manos) con CD 13. Mientras esté esposada, la criatura tendrá desventaja en las tiradas de ataque y estará apresada si las esposas están sujetas a una cadena o garfio fijados en el sitio. Para liberarse de las esposas, deberá superar una prueba de Destreza (Juego de manos) con CD 20 como acción. Para romperlas, deberá superar una prueba de Fuerza (Atletismo) con CD 25 como acción.</p><p>Cada juego de esposas viene con una llave. Sin la llave, una criatura puede usar herramientas de ladrón para forzar la cerradura de las esposas si supera una prueba de Destreza (Juego de manos) con CD 15.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 104,
+      "section": "Manacles (2 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "map",
+    "name": {
+      "en": "Map",
+      "fr": "Carte",
+      "es": "Mapa"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>If you consult an accurate Map, you gain a +5 bonus to Wisdom (Survival) checks you make to find your way in the place represented on it.</p>",
+      "fr": "<p>Si vous consultez une carte précise, vous recevez un bonus de +5 aux tests de Sagesse (Survie) effectués pour trouver votre chemin dans le lieu représenté sur la carte.</p>",
+      "es": "<p>Si consultas un mapa preciso, recibes un bonificador de +5 a las pruebas de Sabiduría (Supervivencia) que hagas para orientarte en el lugar representado en él.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 102,
+      "section": "Map (1 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "masons-tools",
+    "name": {
+      "en": "Mason’s Tools",
+      "fr": "Outils de maçon",
+      "es": "Herramientas de albañil"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 8,
+      "kg": 4
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "tool": {
+      "ability": "str",
+      "utilize": {
+        "en": "Chisel a symbol or hole in stone (DC 10)",
+        "fr": "ciseler un symbole ou creuser un trou dans la pierre (DD 10)",
+        "es": "esculpir un símbolo o un agujero en la piedra (CD 10)"
+      },
+      "craft": {
+        "en": "Block and Tackle",
+        "fr": "palan",
+        "es": "polipasto"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Mason’s Tools (10 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "mastiff",
+    "name": {
+      "en": "Mastiff",
+      "fr": "Molosse",
+      "es": "Mastín"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 195 lb.</p>",
+      "fr": "<p>Capacité de charge : 97,5 kg.</p>",
+      "es": "<p>Capacidad de carga: 97,5 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "meal-aristocratic",
+    "name": {
+      "en": "Meal (Aristocratic)",
+      "fr": "Repas (aristocratique)",
+      "es": "Comida (Aristocrática)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.6,
+      "text": {
+        "en": "6 SP",
+        "fr": "6 pa",
+        "es": "6 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "meal-comfortable",
+    "name": {
+      "en": "Meal (Comfortable)",
+      "fr": "Repas (confortable)",
+      "es": "Comida (Copiosa)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "meal-modest",
+    "name": {
+      "en": "Meal (Modest)",
+      "fr": "Repas (modeste)",
+      "es": "Comida (Modesta)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "meal-poor",
+    "name": {
+      "en": "Meal (Poor)",
+      "fr": "Repas (pauvre)",
+      "es": "Comida (Pobre)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.02,
+      "text": {
+        "en": "2 CP",
+        "fr": "2 pc",
+        "es": "2 pc"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "meal-squalid",
+    "name": {
+      "en": "Meal (Squalid)",
+      "fr": "Repas (misérable)",
+      "es": "Comida (Miserable)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.01,
+      "text": {
+        "en": "1 CP",
+        "fr": "1 pc",
+        "es": "1 pc"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "meal-wealthy",
+    "name": {
+      "en": "Meal (Wealthy)",
+      "fr": "Repas (riche)",
+      "es": "Comida (Lujosa)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.3,
+      "text": {
+        "en": "3 SP",
+        "fr": "3 pa",
+        "es": "3 po"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "mirror",
+    "name": {
+      "en": "Mirror",
+      "fr": "Miroir",
+      "es": "Espejo"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 0.5,
+      "kg": 0.25
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>A handheld steel Mirror is useful for personal cosmetics but also for peeking around corners and reflecting light as a signal.</p>",
+      "fr": "<p>Ce miroir à main en acier est pratique pour se maquiller, mais aussi pour risquer un œil au détour d’un angle et réfléchir la lumière en guise de signal.</p>",
+      "es": "<p>Un espejito de acero portátil resulta útil para arreglarse, pero también para mirar por las esquinas y reflejar la luz a modo de señal.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 104,
+      "section": "Mirror (5 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "mule",
+    "name": {
+      "en": "Mule",
+      "fr": "Mule",
+      "es": "Mula"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 8,
+      "text": {
+        "en": "8 GP",
+        "fr": "8 po",
+        "es": "8 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 420 lb.</p>",
+      "fr": "<p>Capacité de charge : 210 kg.</p>",
+      "es": "<p>Capacidad de carga: 210 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "musical-instrument",
+    "name": {
+      "en": "Musical Instrument",
+      "fr": "Instrument de musique",
+      "es": "Instrumento musical"
+    },
+    "kind": "tool",
+    "tool": {
+      "ability": "cha",
+      "utilize": {
+        "en": "Play a known tune (DC 10), or improvise a song (DC 15)",
+        "fr": "jouer un air connu (DD 10), improviser une chanson (DD 15)",
+        "es": "tocar una melodía conocida (CD 10) o improvisar una canción (CD 15)"
+      },
+      "variants": {
+        "en": "Bagpipes (30 GP, 6 lb.), drum (6 GP, 3 lb.), dulcimer (25 GP, 10 lb.), flute (2 GP, 1 lb.), horn (3 GP, 2 lb.), lute (35 GP, 2 lb.), lyre (30 GP, 2 lb.), pan flute (12 GP, 2 lb.), shawm (2 GP, 1 lb.), viol (30 GP, 1 lb.)",
+        "fr": "chalemie (2 po, 0,5 kg), cor (3 po, 1 kg), cornemuse (30 po, 3 kg), flûte (2 po, 0,5 kg), flûte de pan (12 po, 1 kg), luth (35 po, 1 kg), lyre (30 po, 1 kg), tambour (6 po, 1,5 kg), tympanon (25 po, 5 kg), viole (30 po, 0,5 kg)",
+        "es": "chirimía (2 po, 0,5 kg), cuerno (3 po, 1 kg), dulcémele (25 po, 5 kg), flauta (2 po, 0,5 kg), flauta de pan (12 po, 1 kg), gaita (30 po, 3 kg), laúd (35 po, 1 kg), lira (30 po, 1 kg), tambor (6 po, 1,5 kg), viola (30 po, 0,5 kg)"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Musical Instrument (Varies)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "navigators-tools",
+    "name": {
+      "en": "Navigator’s Tools",
+      "fr": "Instruments de navigateur",
+      "es": "Herramientas de navegante"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "tool": {
+      "ability": "wis",
+      "utilize": {
+        "en": "Plot a course (DC 10), or determine position by stargazing (DC 15)",
+        "fr": "tracer un cap (DD 10), déterminer sa position en observant les étoiles (DD 15)",
+        "es": "trazar un rumbo (CD 10) o determinar la posición contemplando las estrellas (CD 15)"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Navigator’s Tools (25 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "needles",
+    "name": {
+      "en": "Needles",
+      "fr": "Dards",
+      "es": "Dardos"
+    },
+    "kind": "ammunition",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>Amount: 50. Storage: Pouch.</p>",
+      "fr": "<p>Quantité : 50. Rangement : Sacoche.</p>",
+      "es": "<p>Cantidad: 50. Recipiente: Bolsa.</p>"
+    },
+    "source": {
+      "page": 96,
+      "frPage": 104,
+      "section": "Ammunition",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "net",
+    "name": {
+      "en": "Net",
+      "fr": "Filet",
+      "es": "Red"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>When you take the Attack action, you can replace one of your attacks with throwing a Net. Target a creature you can see within 15 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or have the Restrained condition until it escapes. The target succeeds automatically if it is Huge or larger.</p><p>To escape, the target or a creature within 5 feet of it must take an action to make a DC 10 Strength (Athletics) check, freeing the Restrained creature on a success. Destroying the Net (AC 10; 5 HP; Immunity to Bludgeoning, Poison, and Psychic damage) also frees the target, ending the effect.</p>",
+      "fr": "<p>Lorsque vous effectuez l’action Attaque, vous pouvez remplacer l’une de vos attaques par le lancer d’un filet. Ciblez une créature que vous voyez à une distance maximale de 4,50 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir l’état Entravé jusqu’à sa libération. La cible réussit automatiquement si elle est de taille TG ou supérieure.</p><p>Pour être libérée, la cible (ou une créature dans un rayon de 1,50 m d’elle) doit entreprendre une action et effectuer un test de Force (Athlétisme) DD 10, libérant la créature Entravée en cas de réussite. La destruction du filet (CA 10 ; 5 pv ; Immunité aux dégâts contondants, psychiques et de poison) libère également la cible, mettant un terme à l’effet Entravé.</p>",
+      "es": "<p>Cuando lleves a cabo la acción de atacar, puedes sustituir uno de tus ataques por lanzar una red. Haz objetivo a una criatura que puedas ver a 4,5 m o menos de ti. El objetivo deberá superar una tirada de salvación de Destreza (CD 8 más tu modificador por Destreza y tu bonificador por competencia) o tendrá el estado de apresado hasta que se libere. El objetivo la superará automáticamente si es Enorme o más grande.</p><p>Para liberarse, el objetivo o una criatura que esté a 1,5 m o menos de él deberá usar una acción para hacer una prueba de Fuerza (Atletismo) con CD 10; si la supera, la criatura apresada se liberará. Si se destruye la red (CA 10, 5 pg; inmunidad al daño contundente, psíquico y de veneno), también se libera al objetivo y se pone fin al efecto.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 103,
+      "section": "Net (1 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "oil",
+    "name": {
+      "en": "Oil",
+      "fr": "Huile",
+      "es": "Aceite"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "text": {
+      "en": "<p>You can douse a creature, object, or space with Oil or use it as fuel, as detailed below.</p><p><strong>Dousing a Creature or an Object.</strong> When you take the Attack action, you can replace one of your attacks with throwing an Oil flask. Target one creature or object within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or be covered in oil. If the target takes Fire damage before the oil dries (after 1 minute), the target takes an extra 5 Fire damage from burning oil.</p><p><strong>Dousing a Space.</strong> You can take the Utilize action to pour an Oil flask on level ground to cover a 5-foot-square area within 5 feet of yourself. If lit, the oil burns until the end of the turn 2 rounds from when the oil was lit (or 12 seconds) and deals 5 Fire damage to any creature that enters the area or ends its turn there. A creature can take this damage only once per turn.</p><p><strong>Fuel.</strong> Oil serves as fuel for Lamps and Lanterns. Once lit, a flask of Oil burns for 6 hours in a Lamp or Lantern. That duration doesn’t need to be consecutive; you can extinguish the burning Oil (as a Utilize action) and rekindle it again until it has burned for a total of 6 hours.</p>",
+      "fr": "<p>Vous pouvez asperger une créature, un objet ou un espace avec de l’huile ou l’utiliser comme combustible, comme détaillé ci-dessous.</p><p><strong>Asperger une créature ou un objet.</strong> Lorsque vous effectuez l’action Attaque, vous pouvez remplacer l’une de vos attaques par le jet d’une flasque d’huile. Ciblez une créature ou un objet à une distance maximale de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine d’être couverte d’huile. Si elle subit des dégâts de feu avant que l’huile ait séché (ce qui demande 1 minute), la cible subit 5 dégâts de feu supplémentaires, provoqués par l’embrasement de l’huile.</p><p><strong>Asperger un espace.</strong> Entreprendre l’action Utilisation permet d’étaler le contenu d’une flasque d’huile sur un sol plan et de couvrir une zone de 1,50 m de côté dans un rayon de 1,50 m. Embrasée, l’huile brûle jusqu’à la fin du tour 2 rounds après son allumage (soit pendant 12 secondes) et inflige 5 dégâts de feu à toute créature qui pénètre dans la zone ou y termine son tour. Une même créature ne peut subir ces dégâts qu’une fois par tour.</p><p><strong>Combustible.</strong> L’huile sert de combustible pour les lampes et les lanternes. Le contenu d’une flasque d’huile embrasée brûle pendant 6 heures dans une lampe ou une lanterne. Cette durée n’est pas nécessairement consécutive ; vous pouvez éteindre l’huile (par une action Utilisation) et la rallumer jusqu’à ce qu’elle ait brûlé pendant un total de 6 heures.</p>",
+      "es": "<p>Puedes empapar de aceite a una criatura, un objeto o un espacio o utilizarlo como combustible, como se detalla a continuación.</p><p><strong>Empapar a una criatura o un objeto.</strong> Cuando lleves a cabo la acción de atacar, puedes sustituir uno de tus ataques por lanzar un frasco de aceite. Haz objetivo a una criatura u objeto a 6 m o menos de ti. El objetivo deberá superar una tirada de salvación de Destreza (CD 8 más tu modificador por Destreza y tu bonificador por competencia) o quedará cubierto de aceite. Si el objetivo sufre daño de fuego antes de que el aceite se seque (tras 1 minuto), recibirá 5 de daño de fuego adicional debido a que el aceite arderá.</p><p><strong>Empapar un espacio.</strong> Puedes llevar a cabo la acción de utilizar para verter un frasco de aceite sobre un suelo plano para cubrir una zona cuadrada de 1,5 m de lado a 1,5 m o menos de ti. Si se prende, el aceite arderá durante 2 asaltos desde que se prendió (o 12 segundos) hasta el final de ese turno y hará 5 de daño de fuego a cualquier criatura que entre en la zona o termine su turno en ella. Una criatura solo puede sufrir este daño una vez por turno.</p><p><strong>Combustible.</strong> El aceite sirve de combustible para lámparas y linternas. Un frasco de aceite prendido arde durante 6 horas en una lámpara o linterna. Esa duración no tiene que ser consecutiva; puedes apagar el aceite ardiendo (como acción de utilizar) y volver a encenderlo hasta que haya ardido durante un total de 6 horas.</p>"
+    },
+    "source": {
+      "page": 98,
+      "frPage": 103,
+      "section": "Oil (1 SP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "painters-supplies",
+    "name": {
+      "en": "Painter’s Supplies",
+      "fr": "Matériel de peintre",
+      "es": "Suministros de pintor"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "tool": {
+      "ability": "wis",
+      "utilize": {
+        "en": "Paint a recognizable image of something you’ve seen (DC 10)",
+        "fr": "produire une image ressemblante de quelque chose que vous avez vu (DD 10)",
+        "es": "pintar una imagen reconocible de algo que hayas visto (CD 10)"
+      },
+      "craft": {
+        "en": "Druidic Focus, Holy Symbol",
+        "fr": "focaliseur druidique, symbole sacré",
+        "es": "canalizador druídico, símbolo sagrado"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Painter’s Supplies (10 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "paper",
+    "name": {
+      "en": "Paper",
+      "fr": "Papier",
+      "es": "Papel"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "text": {
+      "en": "<p>One sheet of Paper can hold about 250 handwritten words.</p>",
+      "fr": "<p>Une feuille de papier peut contenir environ 250 mots écrits à la main.</p>",
+      "es": "<p>En una hoja de papel caben unas 250 palabras escritas a mano.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 104,
+      "section": "Paper (2 SP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "parchment",
+    "name": {
+      "en": "Parchment",
+      "fr": "Parchemin",
+      "es": "Pergamino"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "text": {
+      "en": "<p>One sheet of Parchment can hold about 250 handwritten words.</p>",
+      "fr": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>",
+      "es": "<p>En una hoja de pergamino caben unas 250 palabras escritas a mano.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Parchment (1 SP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "perfume",
+    "name": {
+      "en": "Perfume",
+      "fr": "Parfum",
+      "es": "Perfume"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "text": {
+      "en": "<p>Perfume comes in a 4-ounce vial. For 1 hour after applying Perfume to yourself, you have Advantage on Charisma (Persuasion) checks made to influence an Indifferent Humanoid within 5 feet of yourself.</p>",
+      "fr": "<p>Le parfum est présenté dans un flacon de 120 ml. Pendant 1 heure après vous être appliqué du parfum, vous avez l’Avantage aux tests de Charisme (Persuasion) effectués afin d’influencer un Humanoïde Indifférent dans un rayon de 1,5 m.</p>",
+      "es": "<p>El perfume viene en un vial de 120 ml. Después de ponerte el perfume, durante 1 hora tendrás ventaja en las pruebas de Carisma (Persuasión) que hagas para influir en un humanoide indiferente situado a 1,5 m o menos de ti.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Perfume (5 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "poison-basic",
+    "name": {
+      "en": "Poison, Basic",
+      "fr": "Poison standard",
+      "es": "Veneno básico"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 100,
+      "text": {
+        "en": "100 GP",
+        "fr": "100 po",
+        "es": "100 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Bonus Action, you can use a vial of Basic Poison to coat one weapon or up to three pieces of ammunition. A creature that takes Piercing or Slashing damage from the poisoned weapon or ammunition takes an extra 1d4 Poison damage. Once applied, the poison retains potency for 1 minute or until its damage is dealt, whichever comes first.</p>",
+      "fr": "<p>Par une action Bonus, utiliser une fiole de poison standard vous permet d’enduire une arme ou jusqu’à trois munitions. Une créature qui subit des dégâts perforants ou tranchants de l’arme ou des munitions empoisonnées subit 1d4 dégâts de poison supplémentaires. Une fois appliqué, le poison conserve sa virulence pendant 1 minute ou jusqu’à ce que ces dégâts soient infligés, selon ce qui survient en premier.</p>",
+      "es": "<p>Como acción adicional, puedes usar un vial de veneno básico para impregnar un arma o hasta tres unidades de munición. Las criaturas que sufran daño cortante o perforante por el arma o munición envenenadas recibirán 1d4 de daño de veneno adicional. Una vez aplicado, el veneno mantiene su efectividad durante 1 minuto o hasta que inflija su daño, lo que ocurra primero.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Poison, Basic (100 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "poisoners-kit",
+    "name": {
+      "en": "Poisoner’s Kit",
+      "fr": "Matériel d’empoisonneur",
+      "es": "Útiles de envenenador"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Detect a poisoned object (DC 10)",
+        "fr": "déterminer qu’un objet est empoisonné (DD 10)",
+        "es": "detectar un objeto envenenado (CD 10)"
+      },
+      "craft": {
+        "en": "Basic Poison",
+        "fr": "poison standard",
+        "es": "veneno básico"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Poisoner’s Kit (50 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "pole",
+    "name": {
+      "en": "Pole",
+      "fr": "Perche",
+      "es": "Vara"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 7,
+      "kg": 3.5
+    },
+    "cost": {
+      "gp": 0.05,
+      "text": {
+        "en": "5 CP",
+        "fr": "5 pc",
+        "es": "5 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Pole is 10 feet long. You can use it to touch something up to 10 feet away. If you must make a Strength (Athletics) check as part of a High or Long Jump, you can use the Pole to vault, giving yourself Advantage on the check.</p>",
+      "fr": "<p>Une perche mesure 3 m de long. Vous pouvez l’utiliser pour toucher quelque chose à une distance maximale de 3 m. Si vous effectuez un test de Force (Athlétisme) dans le cadre d’un saut en hauteur ou en longueur, utiliser la perche pour sauter vous octroie l’Avantage à ce test.</p>",
+      "es": "<p>Una vara mide 3 m de longitud. Puedes usarla para tocar algo que esté a hasta 3 m de distancia. Si tienes que hacer una prueba de Fuerza (Atletismo) como parte de un salto de altura o longitud, puedes impulsarte con la vara, lo que te dará ventaja en la prueba.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Pole (5 CP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "pony",
+    "name": {
+      "en": "Pony",
+      "fr": "Poney",
+      "es": "Poni"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 225 lb.</p>",
+      "fr": "<p>Capacité de charge : 112,5 kg.</p>",
+      "es": "<p>Capacidad de carga: 112,5 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "pot-iron",
+    "name": {
+      "en": "Pot, Iron",
+      "fr": "Pot en fer",
+      "es": "Olla de hierro"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>An Iron Pot holds up to 1 gallon.</p>",
+      "fr": "<p>Un pot en fer contient jusqu’à 4 litres de liquide.</p>",
+      "es": "<p>En una olla de hierro caben hasta 4 l.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Pot, Iron (2 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "potion-of-healing",
+    "name": {
+      "en": "Potion of Healing",
+      "fr": "Potion de guérison",
+      "es": "Poción de curación"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 0.5,
+      "kg": 0.25
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>This potion is a magic item. As a Bonus Action, you can drink it or administer it to another creature within 5 feet of yourself. The creature that drinks the magical red fluid in this vial regains 2d4 + 2 Hit Points.</p>",
+      "fr": "<p>Cette potion est un objet magique. Par une action Bonus, vous pouvez boire une potion de guérison ou l’administrer à une autre créature dans un rayon de 1,50 m. La créature qui boit le liquide magique rouge contenu dans cette fiole récupère 2d4 + 2 points de vie.</p>",
+      "es": "<p>Esta poción es un objeto mágico. Como acción adicional, puedes beberla o administrarla a otra criatura que se encuentre a 1,5 m o menos de ti. La criatura que beba el fluido mágico de color rojo de este vial recuperará 2d4 + 2 puntos de golpe.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Potion of Healing (50 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "potters-tools",
+    "name": {
+      "en": "Potter’s Tools",
+      "fr": "Outils de potier",
+      "es": "Herramientas de alfarero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "tool": {
+      "ability": "int",
+      "utilize": {
+        "en": "Discern what a ceramic object held in the past 24 hours (DC 15)",
+        "fr": "déterminer ce qu’a contenu un objet en céramique lors des dernières 24 heures (DD 15)",
+        "es": "distinguir lo que ha contenido un objeto de cerámica durante las últimas 24 horas (CD 15)"
+      },
+      "craft": {
+        "en": "Jug, Lamp",
+        "fr": "cruche, lampe",
+        "es": "jarro, lámpara"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 100,
+      "section": "Potter’s Tools (10 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "pouch",
+    "name": {
+      "en": "Pouch",
+      "fr": "Sacoche",
+      "es": "Bolsa"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Pouch holds up to 6 pounds within one-fifth of a cubic foot.</p>",
+      "fr": "<p>Une sacoche contient jusqu’à 3 kg pour un volume de 0,006 m3.</p>",
+      "es": "<p>Una bolsa soporta hasta 3 kg en un volumen de 6 l.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 106,
+      "section": "Pouch (5 SP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "priests-pack",
+    "name": {
+      "en": "Priest’s Pack",
+      "fr": "Paquetage d’ecclésiastique",
+      "es": "Paquete de sacerdote"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 29,
+      "kg": 14.5
+    },
+    "cost": {
+      "gp": 33,
+      "text": {
+        "en": "33 GP",
+        "fr": "33 po",
+        "es": "33 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Priest’s Pack contains the following items: Backpack, Blanket, Holy Water, Lamp, 7 days of Rations, Robe, and Tinderbox.</p>",
+      "fr": "<p>Le paquetage d’ecclésiastique contient les objets suivants : sac à dos, boîte à amadou, couverture, eau bénite, lampe, 7 jours de rations, robe.</p>",
+      "es": "<p>Un paquete de sacerdote contiene los siguientes objetos: agua bendita, lámpara, manta, mochila, raciones para 7 días, túnica y yesquero.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 104,
+      "section": "Priest’s Pack (33 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "quiver",
+    "name": {
+      "en": "Quiver",
+      "fr": "Carquois",
+      "es": "Aljaba"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Quiver holds up to 20 Arrows.</p>",
+      "fr": "<p>Un carquois peut contenir jusqu’à 20 flèches.</p>",
+      "es": "<p>En una aljaba caben hasta 20 flechas.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 102,
+      "section": "Quiver (1 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "ram-portable",
+    "name": {
+      "en": "Ram, Portable",
+      "fr": "Bélier portable",
+      "es": "Ariete portátil"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 35,
+      "kg": 17.5
+    },
+    "cost": {
+      "gp": 4,
+      "text": {
+        "en": "4 GP",
+        "fr": "4 po",
+        "es": "4 po"
+      }
+    },
+    "text": {
+      "en": "<p>You can use a Portable Ram to break down doors. When doing so, you gain a +4 bonus to the Strength check. One other character can help you use the ram, giving you Advantage on this check.</p>",
+      "fr": "<p>Vous pouvez utiliser un bélier portable pour enfoncer les portes. Vous recevez alors un bonus de +4 au test de Force associé. Si un autre personnage vous aide à utiliser le bélier, vous recevez l’Avantage à ce test.</p>",
+      "es": "<p>Puedes usar un ariete portátil para derribar puertas. Cuando lo hagas, obtendrás un bonificador de +4 a la prueba de Fuerza. Si otro personaje te ayuda a usar el ariete, tendrás ventaja en esta prueba.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 100,
+      "section": "Ram, Portable (4 GP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "rations",
+    "name": {
+      "en": "Rations",
+      "fr": "Rations",
+      "es": "Raciones"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "text": {
+      "en": "<p>Rations consist of travel-ready food, including jerky, dried fruit, hardtack, and nuts. See “Malnutrition” in “Rules Glossary” for the risks of not eating.</p>",
+      "fr": "<p>Les rations sont composées d’aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « Malnutrition » dans le « Glossaire de règles » pour les risques liés à l’absence de nourriture.</p>",
+      "es": "<p>Las raciones se componen de alimentos propicios para viajar, como cecina, fruta deshidratada, galletas y frutos secos. Consulta “Desnutrición” en el capítulo “Glosario de reglas” para saber los riesgos que implica no comer.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Rations (5 SP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "robe",
+    "name": {
+      "en": "Robe",
+      "fr": "Robe",
+      "es": "Túnica"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Robe has vocational or ceremonial significance. Some events and locations admit only people wearing a Robe bearing certain colors or symbols.</p>",
+      "fr": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n’admettent que les personnes vêtues d’une robe d’une couleur donnée ou arborant certains symboles.</p>",
+      "es": "<p>Una túnica tiene un significado vocacional y ceremonial. Algunos eventos y lugares admiten solo a gente que vista una túnica con determinados colores o símbolos.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 106,
+      "section": "Robe (1 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "rope",
+    "name": {
+      "en": "Rope",
+      "fr": "Corde",
+      "es": "Cuerda"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>As a Utilize action, you can tie a knot with Rope if you succeed on a DC 10 Dexterity (Sleight of Hand) check. The Rope can be burst with a successful DC 20 Strength (Athletics) check.</p><p>You can bind an unwilling creature with the Rope only if the creature has the Grappled, Incapacitated, or Restrained condition. If the creature’s legs are bound, the creature has the Restrained condition until it escapes. Escaping the Rope requires the creature to make a successful DC 15 Dexterity (Acrobatics) check as an action.</p>",
+      "fr": "<p>Par une action Utilisation, vous pouvez nouer la corde à condition de réussir un test de Dextérité (Escamotage) DD 10. Rompre la corde nécessite de réussir un test de Force (Athlétisme) DD 20.</p><p>Attacher une créature non consentante avec la corde nécessite que celle-ci subisse l’état Agrippé, Entravé ou Neutralisé. Si la créature a les jambes attachées, elle subit l’état Entravé jusqu’à ce qu’elle se libère. Se libérer de la corde nécessite que la créature réussisse un test de Dextérité (Acrobaties) DD 15 au prix d’une action.</p>",
+      "es": "<p>Como acción de utilizar, puedes hacer un nudo con una cuerda si superas una prueba de Destreza (Juego de manos) con CD 10. Para romper la cuerda, se debe superar una prueba de Fuerza (Atletismo) con CD 20.</p><p>Puedes atar a una criatura no voluntaria con la cuerda solo si tiene el estado de agarrada, apresada o incapacitada. Si la criatura tiene las piernas atadas, tendrá el estado de apresada hasta que se libere. Para liberarse de la cuerda, deberá superar una prueba de Destreza (Acrobacias) con CD 15 como acción.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 102,
+      "section": "Rope (1 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "rowboat",
+    "name": {
+      "en": "Rowboat",
+      "fr": "Barque",
+      "es": "Bote de remos"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 1½ mph. Crew: 1. Passengers: 3. AC: 11. HP: 50.</p>",
+      "fr": "<p>Vitesse : 2,25 km/h. Équipage : 1. Passagers : 3. CA : 11. PV : 50.</p>",
+      "es": "<p>Velocidad: 2,4 km/h. Tripulación: 1. Pasajeros: 3. CA: 11. PG: 50.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "sack",
+    "name": {
+      "en": "Sack",
+      "fr": "Sac",
+      "es": "Saco"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 0.5,
+      "kg": 0.25
+    },
+    "cost": {
+      "gp": 0.01,
+      "text": {
+        "en": "1 CP",
+        "fr": "1 pc",
+        "es": "1 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Sack holds up to 30 pounds within 1 cubic foot.</p>",
+      "fr": "<p>Un sac contient jusqu’à 15 kg pour un volume de 0,03 m3.</p>",
+      "es": "<p>Un saco soporta hasta 15 kg en un volumen de 30 l.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 106,
+      "section": "Sack (1 CP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "saddle-exotic",
+    "name": {
+      "en": "Saddle (Exotic)",
+      "fr": "Selle (exotique)",
+      "es": "Silla (Exótica)"
+    },
+    "kind": "tack",
+    "weight": {
+      "lb": 40,
+      "kg": 20
+    },
+    "cost": {
+      "gp": 60,
+      "text": {
+        "en": "60 GP",
+        "fr": "60 po",
+        "es": "60 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "saddle-military",
+    "name": {
+      "en": "Saddle (Military)",
+      "fr": "Selle (militaire)",
+      "es": "Silla (Militar)"
+    },
+    "kind": "tack",
+    "weight": {
+      "lb": 30,
+      "kg": 15
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "saddle-riding",
+    "name": {
+      "en": "Saddle (Riding)",
+      "fr": "Selle (d’équitation)",
+      "es": "Silla (De monta)"
+    },
+    "kind": "tack",
+    "weight": {
+      "lb": 25,
+      "kg": 12.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "sailing-ship",
+    "name": {
+      "en": "Sailing Ship",
+      "fr": "Bateau à voiles",
+      "es": "Velero"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 10000,
+      "text": {
+        "en": "10,000 GP",
+        "fr": "10 000 po",
+        "es": "10 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 2 mph. Crew: 20. Passengers: 20. Cargo (Tons): 100. AC: 15. HP: 300. Damage Threshold: 15.</p>",
+      "fr": "<p>Vitesse : 3 km/h. Équipage : 20. Passagers : 20. Cargaison (tonnes) : 100. CA : 15. PV : 300. Seuil de dégâts : 15.</p>",
+      "es": "<p>Velocidad: 3 km/h. Tripulación: 20. Pasajeros: 20. Cargamento (toneladas): 100. CA: 15. PG: 300. Umbral de daño: 15.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "scholars-pack",
+    "name": {
+      "en": "Scholar’s Pack",
+      "fr": "Paquetage d’érudit",
+      "es": "Paquete de erudito"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 22,
+      "kg": 11
+    },
+    "cost": {
+      "gp": 40,
+      "text": {
+        "en": "40 GP",
+        "fr": "40 po",
+        "es": "40 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Scholar’s Pack contains the following items: Backpack, Book, Ink, Ink Pen, Lamp, 10 flasks of Oil, 10 sheets of Parchment, and Tinderbox.</p>",
+      "fr": "<p>Le paquetage d’érudit contient les objets suivants : sac à dos, boîte à amadou, encre, lampe, livre, porteplume, 10 flasques d’huile, 10 feuilles de parchemin.</p>",
+      "es": "<p>Un paquete de erudito contiene los siguientes objetos: 10 frascos de aceite, 10 hojas de pergamino, lámpara, libro, mochila, pluma, tinta y yesquero.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Scholar’s Pack (40 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "shovel",
+    "name": {
+      "en": "Shovel",
+      "fr": "Pelle",
+      "es": "Pala"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>Working for 1 hour, you can use a Shovel to dig a hole that is 5 feet on each side in soil or similar material.</p>",
+      "fr": "<p>Au prix de 1 heure d’efforts, une pelle permet de creuser un trou de 1,5 m de côté pour autant de profondeur dans de la terre ou tout matériau similaire.</p>",
+      "es": "<p>Con 1 hora de trabajo, puedes usar una pala para cavar un agujero cúbico de 1,5 m de lado en la tierra o en un material similar.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Shovel (2 GP)",
+      "esPage": 106
+    }
+  },
+  {
+    "id": "signal-whistle",
+    "name": {
+      "en": "Signal Whistle",
+      "fr": "Sifflet",
+      "es": "Silbato de supervivencia"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.05,
+      "text": {
+        "en": "5 CP",
+        "fr": "5 pc",
+        "es": "5 pc"
+      }
+    },
+    "text": {
+      "en": "<p>When blown as a Utilize action, a Signal Whistle produces a sound that can be heard up to 600 feet away.</p>",
+      "fr": "<p>Souffler dans le sifflet par une action Utilisation produit un son audible à 180 m.</p>",
+      "es": "<p>Cuando se sopla como acción de utilizar, un silbato de supervivencia produce un sonido que se puede oír a 180 m de distancia.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 106,
+      "section": "Signal Whistle (5 CP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "sled",
+    "name": {
+      "en": "Sled",
+      "fr": "Traîneau",
+      "es": "Trineo"
+    },
+    "kind": "vehicle",
+    "weight": {
+      "lb": 300,
+      "kg": 150
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "smiths-tools",
+    "name": {
+      "en": "Smith’s Tools",
+      "fr": "Outils de forgeron",
+      "es": "Herramientas de herrero"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 8,
+      "kg": 4
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "tool": {
+      "ability": "str",
+      "utilize": {
+        "en": "Pry open a door or container (DC 20)",
+        "fr": "forcer une porte ou un contenant (DD 20)",
+        "es": "forzar una puerta o un recipiente (CD 20)"
+      },
+      "craft": {
+        "en": "Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, Ball Bearings, Bucket, Caltrops, Chain, Crowbar, Firearm Bullets, Grappling Hook, Iron Pot, Iron Spikes, Sling Bullets",
+        "fr": "toute arme de corps à corps (hormis bâton de combat, gourdin, massue et fouet), toute armure intermédiaire (hormis armure de peaux), toute armure lourde, balles pour arme à feu, billes, billes de fronde, chaîne, chausse-trappes, grappin, pied-de-biche, pointes en fer, pot en fer, seau",
+        "es": "cualquier arma cuerpo a cuerpo (salvo bastón, garrote, garrote grande y látigo), armaduras medias (salvo de pieles), armaduras pesadas, abrojos, balas de arma de fuego, bolas de metal, cadena, cubo, garfio de escalada, olla de hierro, palanqueta, proyectiles de honda, puntas de hierro"
+      }
+    },
+    "source": {
+      "page": 93,
+      "frPage": 99,
+      "section": "Smith’s Tools (20 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "spell-scroll-cantrip",
+    "name": {
+      "en": "Spell Scroll (Cantrip)",
+      "fr": "Parchemin de sort (sort mineur)",
+      "es": "Pergamino de conjuro (truco)"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "text": {
+      "en": "<p>A <em>Spell Scroll</em> (Cantrip) or <em>Spell Scroll</em> (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.</p><p>If the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.</p>",
+      "fr": "<p>Un <em>parchemin de sort</em> (sort mineur) ou <em>parchemin de</em> <em>sort</em> (1er niveau) est un objet magique qui porte la formule d’un sort mineur ou d’un sort du 1er niveau, respectivement, tel que défini par le créateur du parchemin. Si ce sort figure dans votre liste de sorts de classe, vous pouvez lire le parchemin pour en lancer le sort avec son temps d’incantation habituel et sans en fournir les éventuelles composantes matérielles.</p><p>Si le sort nécessite un jet de sauvegarde ou un jet d’attaque, le DD de sauvegarde est de 13 et le bonus à l’attaque est de +5. Le parchemin se désintègre lorsque l’incantation est terminée.</p>",
+      "es": "<p>Un <em>pergamino de conjuro</em> (truco) o un <em>pergamino de</em> <em>conjuro</em> (nivel 1) es un objeto mágico que contiene las palabras de un truco o de un conjuro de nivel 1, respectivamente, según lo determine el creador del pergamino. Si el conjuro está en la lista de conjuros de tu clase, puedes leer el pergamino y lanzar el conjuro con su tiempo de lanzamiento normal y sin necesidad de componentes materiales.</p><p>Si el conjuro requiere una tirada de salvación o una tirada de ataque, la CD de salvación de conjuros será 13 y el bonificador de ataque será de +5. El pergamino se desintegra cuando se completa el lanzamiento.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Spell Scroll (Cantrip, 30 GP; Level 1, 50 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "spell-scroll-level-1",
+    "name": {
+      "en": "Spell Scroll (Level 1)",
+      "fr": "Parchemin de sort (1er niveau)",
+      "es": "Pergamino de conjuro (nivel 1)"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>A <em>Spell Scroll</em> (Cantrip) or <em>Spell Scroll</em> (Level 1) is a magic item that bears the words of a cantrip or level 1 spell, respectively, determined by the scroll’s creator. If the spell is on your class’s spell list, you can read the scroll and cast the spell using its normal casting time and without providing any Material components.</p><p>If the spell requires a saving throw or an attack roll, the spell save DC is 13, and the attack bonus is +5. The scroll disintegrates when the casting is completed.</p>",
+      "fr": "<p>Un <em>parchemin de sort</em> (sort mineur) ou <em>parchemin de</em> <em>sort</em> (1er niveau) est un objet magique qui porte la formule d’un sort mineur ou d’un sort du 1er niveau, respectivement, tel que défini par le créateur du parchemin. Si ce sort figure dans votre liste de sorts de classe, vous pouvez lire le parchemin pour en lancer le sort avec son temps d’incantation habituel et sans en fournir les éventuelles composantes matérielles.</p><p>Si le sort nécessite un jet de sauvegarde ou un jet d’attaque, le DD de sauvegarde est de 13 et le bonus à l’attaque est de +5. Le parchemin se désintègre lorsque l’incantation est terminée.</p>",
+      "es": "<p>Un <em>pergamino de conjuro</em> (truco) o un <em>pergamino de</em> <em>conjuro</em> (nivel 1) es un objeto mágico que contiene las palabras de un truco o de un conjuro de nivel 1, respectivamente, según lo determine el creador del pergamino. Si el conjuro está en la lista de conjuros de tu clase, puedes leer el pergamino y lanzar el conjuro con su tiempo de lanzamiento normal y sin necesidad de componentes materiales.</p><p>Si el conjuro requiere una tirada de salvación o una tirada de ataque, la CD de salvación de conjuros será 13 y el bonificador de ataque será de +5. El pergamino se desintegra cuando se completa el lanzamiento.</p>"
+    },
+    "source": {
+      "page": 99,
+      "frPage": 105,
+      "section": "Spell Scroll (Cantrip, 30 GP; Level 1, 50 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "spellcasting-cantrip",
+    "name": {
+      "en": "Spellcasting Services (Spell Level Cantrip)",
+      "fr": "Services d’incantation (Niveau du sort Sort mineur)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro Truco)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: Village, town, or city.</p>",
+      "fr": "<p>Disponibilité : Village, bourgade ou ville.</p>",
+      "es": "<p>Disponibilidad: Aldea, pueblo o ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-1",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 1)",
+      "fr": "Services d’incantation (Niveau du sort 1)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 1)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: Village, town, or city.</p>",
+      "fr": "<p>Disponibilité : Village, bourgade ou ville.</p>",
+      "es": "<p>Disponibilidad: Aldea, pueblo o ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-2",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 2)",
+      "fr": "Services d’incantation (Niveau du sort 2)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 2)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 200,
+      "text": {
+        "en": "200 GP",
+        "fr": "200 po",
+        "es": "200 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: Village, town, or city.</p>",
+      "fr": "<p>Disponibilité : Village, bourgade ou ville.</p>",
+      "es": "<p>Disponibilidad: Aldea, pueblo o ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-3",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 3)",
+      "fr": "Services d’incantation (Niveau du sort 3)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 3)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 300,
+      "text": {
+        "en": "300 GP",
+        "fr": "300 po",
+        "es": "300 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: Town or city only.</p>",
+      "fr": "<p>Disponibilité : Bourgade ou ville uniquement.</p>",
+      "es": "<p>Disponibilidad: Solo pueblo o ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-4-5",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 4–5)",
+      "fr": "Services d’incantation (Niveau du sort 4–5)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 4–5)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 2000,
+      "text": {
+        "en": "2,000 GP",
+        "fr": "2 000 po",
+        "es": "2000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: Town or city only.</p>",
+      "fr": "<p>Disponibilité : Bourgade ou ville uniquement.</p>",
+      "es": "<p>Disponibilidad: Solo pueblo o ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-6-8",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 6–8)",
+      "fr": "Services d’incantation (Niveau du sort 6–8)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 6–8)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 20000,
+      "text": {
+        "en": "20,000 GP",
+        "fr": "20 000 po",
+        "es": "20 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: City only.</p>",
+      "fr": "<p>Disponibilité : Ville uniquement.</p>",
+      "es": "<p>Disponibilidad: Solo ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spellcasting-level-9",
+    "name": {
+      "en": "Spellcasting Services (Spell Level 9)",
+      "fr": "Services d’incantation (Niveau du sort 9)",
+      "es": "Servicios de lanzamiento de conjuros (Nivel del conjuro 9)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 100000,
+      "text": {
+        "en": "100,000 GP",
+        "fr": "100 000 po",
+        "es": "100 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Availability: City only.</p>",
+      "fr": "<p>Disponibilité : Ville uniquement.</p>",
+      "es": "<p>Disponibilidad: Solo ciudad.</p>"
+    },
+    "source": {
+      "page": 102,
+      "frPage": 108,
+      "section": "Spellcasting",
+      "esPage": 111
+    }
+  },
+  {
+    "id": "spikes-iron",
+    "name": {
+      "en": "Spikes, Iron",
+      "fr": "Pointes en fer",
+      "es": "Puntas de hierro"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>Iron Spikes come in bundles of ten. As a Utilize action, you can use a blunt object, such as a Light Hammer, to hammer a spike into wood, earth, or a similar material. You can do so to jam a door shut or to then tie a Rope or Chain to the Spike.</p>",
+      "fr": "<p>Les pointes en fer sont vendues par paquets de dix. Par une action Utilisation, vous pouvez recourir à un objet contondant, par exemple un marteau léger, pour enfoncer une pointe dans du bois, de la terre ou tout matériau similaire. Faire ainsi permet de bloquer une porte ou d’attacher une corde ou une chaîne à la pointe.</p>",
+      "es": "<p>Las puntas de hierro vienen en lotes de diez. Como acción de utilizar, puedes usar un objeto romo, como un martillo ligero, para clavar una punta en una superficie de madera, tierra u otra materia similar. Puedes hacerlo para atrancar una puerta o para después atar una cuerda o cadena a la punta.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 105,
+      "section": "Spikes, Iron (1 GP)",
+      "esPage": 107
+    }
+  },
+  {
+    "id": "spyglass",
+    "name": {
+      "en": "Spyglass",
+      "fr": "Longue-vue",
+      "es": "Catalejo"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 1000,
+      "text": {
+        "en": "1,000 GP",
+        "fr": "1 000 po",
+        "es": "1000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Objects viewed through a Spyglass are magnified to twice their size.</p>",
+      "fr": "<p>Une longue-vue permet de grossir jusqu’à deux fois les objets que vous voyez à distance.</p>",
+      "es": "<p>Los objetos que se observan a través de un catalejo se ven al doble de su tamaño real.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 104,
+      "section": "Spyglass (1,000 GP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "stabling-per-day",
+    "name": {
+      "en": "Stabling per day",
+      "fr": "Écuries, par jour",
+      "es": "Estabulado por día"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "string",
+    "name": {
+      "en": "String",
+      "fr": "Ficelle",
+      "es": "Cordel"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "text": {
+      "en": "<p>String is 10 feet long. You can tie a knot in it as a Utilize action.</p>",
+      "fr": "<p>Cette ficelle mesure 3 m de long. Vous pouvez y faire un nœud par une action Utilisation.</p>",
+      "es": "<p>Un cordel mide 3 m de longitud. Puedes atar un nudo con él como acción de utilizar.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 103,
+      "section": "String (1 SP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "tent",
+    "name": {
+      "en": "Tent",
+      "fr": "Tente",
+      "es": "Tienda"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 20,
+      "kg": 10
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Tent sleeps up to two Small or Medium creatures.</p>",
+      "fr": "<p>Jusqu’à deux créatures de taille P ou M peuvent dormir sous la même tente.</p>",
+      "es": "<p>En una tienda pueden dormir hasta dos criaturas Pequeñas o Medianas.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 106,
+      "section": "Tent (2 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "thieves-tools",
+    "name": {
+      "en": "Thieves’ Tools",
+      "fr": "Outils de voleur",
+      "es": "Herramientas de ladrón"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Pick a lock (DC 15), or disarm a trap (DC 15)",
+        "fr": "crocheter une serrure (DD 15), désamorcer un piège (DD 15)",
+        "es": "forzar una cerradura (CD 15) o desarmar una trampa (CD 15)"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Thieves’ Tools (25 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "tinderbox",
+    "name": {
+      "en": "Tinderbox",
+      "fr": "Boîte à amadou",
+      "es": "Yesquero"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Tinderbox is a small container holding flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a Candle, Lamp, Lantern, or Torch—or anything else with exposed fuel—takes a Bonus Action. Lighting any other fire takes 1 minute.</p>",
+      "fr": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d’huile), soit de quoi allumer un feu. L’utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s’effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+      "es": "<p>Un yesquero es un pequeño recipiente que contiene un pedernal, un chispero y yescas (normalmente, tela seca untada en aceite) y se utiliza para encender un fuego. Se necesita una acción adicional para prender con él una antorcha, lámpara, linterna o vela (o cualquier otra cosa con combustible expuesto). Encender cualquier otro tipo de fuego lleva 1 minuto.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 102,
+      "section": "Tinderbox (5 SP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "tinkers-tools",
+    "name": {
+      "en": "Tinker’s Tools",
+      "fr": "Outils de bricoleur",
+      "es": "Herramientas de manitas"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)",
+        "fr": "assembler un objet de taille TP composé de ferraille, qui se désagrège au bout de 1 minute (DD 20)",
+        "es": "montar un objeto Diminuto compuesto de chatarra, que se desarmará tras 1 minuto (CD 20)"
+      },
+      "craft": {
+        "en": "Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox",
+        "fr": "mousquet, pistolet, boîte à amadou, cloche, lanterne à capote, lanterne sourde, menottes, pelle, piège à mâchoires, serrure, sifflet",
+        "es": "mosquete, pistola, campana, cerradura, espejo, esposas, frasco, linterna de ojo de buey, linterna sorda, pala, silbato de supervivencia, trampa para cazar, yesquero"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 99,
+      "section": "Tinker’s Tools (50 GP)",
+      "esPage": 101
+    }
+  },
+  {
+    "id": "torch",
+    "name": {
+      "en": "Torch",
+      "fr": "Torche",
+      "es": "Antorcha"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 0.01,
+      "text": {
+        "en": "1 CP",
+        "fr": "1 pc",
+        "es": "1 pc"
+      }
+    },
+    "text": {
+      "en": "<p>A Torch burns for 1 hour, casting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet. When you take the Attack action, you can attack with the Torch, using it as a Simple Melee weapon. On a hit, the target takes 1 Fire damage.</p>",
+      "fr": "<p>Une torche brûle pendant 1 heure, produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. Dans le cadre de l’action Attaque, vous pouvez attaquer avec la torche, en considérant celle-ci comme une arme courante de corps à corps. Si l’attaque touche, la cible subit 1 dégât de feu.</p>",
+      "es": "<p>Una antorcha arde durante 1 hora y emite luz brillante en un radio de 6 m y luz tenue 6 m más allá. Cuando llevas a cabo la acción de atacar, puedes hacerlo con la antorcha como si fuera un arma cuerpo a cuerpo sencilla. Si acierta, el objetivo sufre 1 de daño de fuego.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 106,
+      "section": "Torch (1 CP)",
+      "esPage": 104
+    }
+  },
+  {
+    "id": "vial",
+    "name": {
+      "en": "Vial",
+      "fr": "Fiole",
+      "es": "Vial"
+    },
+    "kind": "gear",
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "text": {
+      "en": "<p>A Vial holds up to 4 ounces.</p>",
+      "fr": "<p>Une fiole contient 120 ml de liquide.</p>",
+      "es": "<p>En un vial caben 120 ml de líquido.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 103,
+      "section": "Vial (1 GP)",
+      "esPage": 108
+    }
+  },
+  {
+    "id": "wagon",
+    "name": {
+      "en": "Wagon",
+      "fr": "Chariot",
+      "es": "Carro"
+    },
+    "kind": "vehicle",
+    "weight": {
+      "lb": 400,
+      "kg": 200
+    },
+    "cost": {
+      "gp": 35,
+      "text": {
+        "en": "35 GP",
+        "fr": "35 po",
+        "es": "35 po"
+      }
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Tack, Harness, and Drawn Vehicles",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "warhorse",
+    "name": {
+      "en": "Warhorse",
+      "fr": "Destrier",
+      "es": "Caballo de guerra"
+    },
+    "kind": "mount",
+    "cost": {
+      "gp": 400,
+      "text": {
+        "en": "400 GP",
+        "fr": "400 po",
+        "es": "400 po"
+      }
+    },
+    "text": {
+      "en": "<p>Carrying Capacity: 540 lb.</p>",
+      "fr": "<p>Capacité de charge : 270 kg.</p>",
+      "es": "<p>Capacidad de carga: 270 kg.</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 107,
+      "section": "Mounts and Other Animals",
+      "esPage": 109
+    }
+  },
+  {
+    "id": "warship",
+    "name": {
+      "en": "Warship",
+      "fr": "Navire de guerre",
+      "es": "Navío de guerra"
+    },
+    "kind": "vehicle",
+    "cost": {
+      "gp": 25000,
+      "text": {
+        "en": "25,000 GP",
+        "fr": "25 000 po",
+        "es": "25 000 po"
+      }
+    },
+    "text": {
+      "en": "<p>Speed: 2½ mph. Crew: 60. Passengers: 60. Cargo (Tons): 200. AC: 15. HP: 500. Damage Threshold: 20.</p>",
+      "fr": "<p>Vitesse : 3,75 km/h. Équipage : 60. Passagers : 60. Cargaison (tonnes) : 200. CA : 15. PV : 500. Seuil de dégâts : 20.</p>",
+      "es": "<p>Velocidad: 4 km/h. Tripulación: 60. Pasajeros: 60. Cargamento (toneladas): 200. CA: 15. PG: 500. Umbral de daño: 20.</p>"
+    },
+    "source": {
+      "page": 101,
+      "frPage": 107,
+      "section": "Airborne and Waterborne Vehicles",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "waterskin",
+    "name": {
+      "en": "Waterskin",
+      "fr": "Outre",
+      "es": "Cantimplora"
+    },
+    "kind": "gear",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "text": {
+      "en": "<p>A Waterskin holds up to 4 pints. If you don’t drink sufficient water, you risk dehydration (see “Rules Glossary”).</p>",
+      "fr": "<p>Une outre contient 2 litres de liquide. Boire insuffisamment d’eau, c’est s’exposer à la déshydratation (cf. « Glossaire de règles »).</p>",
+      "es": "<p>En una cantimplora caben hasta 2 l de líquido. Si no bebes suficiente agua, te arriesgas a sufrir deshidratación (consulta el capítulo “Glosario de reglas”).</p>"
+    },
+    "source": {
+      "page": 100,
+      "frPage": 104,
+      "section": "Waterskin (2 SP)",
+      "esPage": 105
+    }
+  },
+  {
+    "id": "weavers-tools",
+    "name": {
+      "en": "Weaver’s Tools",
+      "fr": "Outils de tisserand",
+      "es": "Herramientas de tejedor"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)",
+        "fr": "raccommoder une déchirure dans un vêtement (DD 10), coudre un motif de taille TP (DD 10)",
+        "es": "remendar un roto en una prenda (CD 10) o coser un diseño Diminuto (CD 10)"
+      },
+      "craft": {
+        "en": "Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler’s Clothes",
+        "fr": "armure matelassée, beaux habits, corde, couverture, ficelle, filet, panier, robe, sac, sac de couchage, tente, tenue de voyage",
+        "es": "armadura acolchada, cesta, cordel, cuerda, manta, petate, red, ropas de calidad, ropas de viaje, saco, tienda, túnica"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 100,
+      "section": "Weaver’s Tools (1 GP)",
+      "esPage": 102
+    }
+  },
+  {
+    "id": "wine-common",
+    "name": {
+      "en": "Wine (bottle) (Common)",
+      "fr": "Vin (bouteille) (ordinaire)",
+      "es": "Vino (botella) (Común)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "wine-fine",
+    "name": {
+      "en": "Wine (bottle) (Fine)",
+      "fr": "Vin (bouteille) (fin)",
+      "es": "Vino (botella) (De calidad)"
+    },
+    "kind": "service",
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 101,
+      "frPage": 108,
+      "section": "Food, Drink, and Lodging",
+      "esPage": 110
+    }
+  },
+  {
+    "id": "woodcarvers-tools",
+    "name": {
+      "en": "Woodcarver’s Tools",
+      "fr": "Outils de menuisier",
+      "es": "Herramientas de ebanista"
+    },
+    "kind": "tool",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "tool": {
+      "ability": "dex",
+      "utilize": {
+        "en": "Carve a pattern in wood (DC 10)",
+        "fr": "sculpter un motif dans le bois (DD 10)",
+        "es": "tallar un dibujo en madera (CD 10)"
+      },
+      "craft": {
+        "en": "Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles",
+        "fr": "armes à distance (sauf fronde, mousquet et pistolet), bâton de combat, carreaux d’arbalète, dards de sarbacane, flèches, focaliseur arcanique, focaliseur druidique, porte-plume",
+        "es": "bastón, garrote, garrote grande, armas a distancia (salvo honda, mosquete y pistola), canalizador arcano, canalizador druídico, dardos, flechas, pluma, virotes"
+      }
+    },
+    "source": {
+      "page": 94,
+      "frPage": 99,
+      "section": "Woodcarver’s Tools (1 GP)",
+      "esPage": 101
+    }
+  }
+]

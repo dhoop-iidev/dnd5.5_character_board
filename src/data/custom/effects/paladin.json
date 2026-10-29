@@ -1,0 +1,351 @@
+[
+  {
+    "id": "paladin:lay-on-hands",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "trigger": {
+          "en": "Touch a creature: restore Hit Points from your pool (counter in Resources).",
+          "fr": "Touchez une créature : rendez des points de vie de votre réserve (compteur dans Ressources).",
+          "es": "Toca a una criatura: devuélvele puntos de golpe de tu reserva (contador en Recursos)."
+        }
+      }
+    ],
+    "uses": {
+      "count": "paladinLevel*5",
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "The pool holds 5 × Paladin level Hit Points (the resource counter); 5 points also remove the Poisoned condition.",
+      "fr": "La réserve contient 5 × niveau de Paladin points de vie (le compteur de ressource) ; 5 points retirent aussi l’état Empoisonné.",
+      "es": "La reserva contiene 5 × nivel de paladín puntos de golpe (el contador del recurso); 5 puntos también eliminan el estado de envenenado."
+    },
+    "source": {
+      "page": 53,
+      "frPage": 75,
+      "section": "Classes > Paladin Class Features > Level 1: Lay On Hands"
+    }
+  },
+  {
+    "id": "paladin:spellcasting",
+    "textOnly": {
+      "en": "Spell slots, the Prepared Spells count, the spell save DC and spell attack bonus (Charisma) are computed in the Spells pane.",
+      "fr": "Les emplacements de sort, le nombre de sorts préparés, le DD de sauvegarde et le bonus d’attaque des sorts (Charisme) sont calculés dans le volet Sorts.",
+      "es": "Los espacios de conjuro, el número de conjuros preparados, la CD de salvación y el bonificador de ataque de los conjuros (Carisma) se calculan en la pestaña Conjuros."
+    },
+    "source": {
+      "page": 54,
+      "frPage": 76,
+      "section": "Classes > Paladin Class Features > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "paladin:weapon-mastery",
+    "mastery": 2,
+    "source": {
+      "page": 54,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 1: Weapon Mastery"
+    }
+  },
+  {
+    "id": "paladin:fighting-style",
+    "textOnly": {
+      "en": "The chosen Fighting Style feat (level record) carries the effect. Needs engine: the Blessed Warrior option (two Cleric cantrips, Charisma) is not a feat and can't be chosen yet.",
+      "fr": "Le don de style de combat choisi (historique des niveaux) porte l’effet. Moteur manquant : l’option Guerrier béni (deux sorts mineurs de Clerc, Charisme) n’est pas un don et ne peut pas encore être choisie.",
+      "es": "La dote de estilo de combate elegida (registro de niveles) lleva el efecto. Requiere el motor: la opción Guerrero bendito (dos trucos de clérigo, Carisma) no es una dote y aún no puede elegirse."
+    },
+    "source": {
+      "page": 54,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 2: Fighting Style"
+    }
+  },
+  {
+    "id": "paladin:paladins-smite",
+    "spells": {
+      "always": ["divine-smite"]
+    },
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "source": {
+      "page": 54,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 2: Paladin’s Smite"
+    }
+  },
+  {
+    "id": "paladin:channel-divinity",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "name": { "en": "Divine Sense", "fr": "Perception divine", "es": "Sentidos divinos" },
+        "trigger": {
+          "en": "For 10 minutes, sense Celestials, Fiends and Undead within 60 ft.",
+          "fr": "Pendant 10 minutes, percevoir les Célestes, Fiélons et Morts-vivants à 18 m.",
+          "es": "Durante 10 minutos, percibir celestiales, infernales y muertos vivientes a 18 m."
+        }
+      }
+    ],
+    "uses": {
+      "count": "channelDivinity",
+      "per": "long",
+      "shortRestRegain": 1
+    },
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Channel Divinity save DC (spell save DC)",
+          "fr": "DD de sauvegarde de Conduit divin (DD de sauvegarde des sorts)",
+          "es": "CD de salvación de Canalizar divinidad (CD de salvación de conjuros)"
+        },
+        "parts": [8, "pb", "cha"]
+      }
+    ],
+    "source": {
+      "page": 54,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 3: Channel Divinity"
+    }
+  },
+  {
+    "id": "paladin:extra-attack",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "source": {
+      "page": 55,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 5: Extra Attack"
+    }
+  },
+  {
+    "id": "paladin:faithful-steed",
+    "spells": {
+      "always": ["find-steed"]
+    },
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "source": {
+      "page": 55,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 5: Faithful Steed"
+    }
+  },
+  {
+    "id": "paladin:aura-of-protection",
+    "modifiers": [
+      {
+        "target": "save.all",
+        "value": "cha:min1",
+        "effectName": "Aura of Protection"
+      }
+    ],
+    "source": {
+      "page": 55,
+      "frPage": 77,
+      "section": "Classes > Paladin Class Features > Level 6: Aura of Protection"
+    }
+  },
+  {
+    "id": "paladin:abjure-foes",
+    "activation": [{ "kind": "action", "action": "magic", "cost": { "resource": "paladin:channel-divinity" } }],
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Abjure Foes Wisdom save DC",
+          "fr": "DD de sauvegarde de Sagesse d’Abjuration des ennemis",
+          "es": "CD de la tirada de salvación de Sabiduría de Abjurar de los enemigos"
+        },
+        "parts": [8, "pb", "cha"]
+      },
+      {
+        "id": "targets",
+        "label": {
+          "en": "Abjure Foes targets (Cha modifier, minimum 1)",
+          "fr": "Cibles d’Abjuration des ennemis (modificateur de Cha, minimum 1)",
+          "es": "Objetivos de Abjurar de los enemigos (modificador por Carisma, mínimo 1)"
+        },
+        "parts": ["cha:min1"]
+      }
+    ],
+    "source": {
+      "page": 55,
+      "frPage": 78,
+      "section": "Classes > Paladin Class Features > Level 9: Abjure Foes"
+    }
+  },
+  {
+    "id": "paladin:aura-of-courage",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "frightened",
+        "condition": {
+          "en": "you and your allies in your Aura of Protection",
+          "fr": "vous et vos alliés dans votre Aura de protection",
+          "es": "tú y tus aliados en tu Aura de protección"
+        }
+      }
+    ],
+    "source": {
+      "page": 55,
+      "frPage": 78,
+      "section": "Classes > Paladin Class Features > Level 10: Aura of Courage"
+    }
+  },
+  {
+    "id": "paladin:radiant-strikes",
+    "modifiers": [
+      {
+        "target": "extraDamage.melee",
+        "value": "1d8",
+        "condition": {
+          "en": "Radiant, melee weapon or Unarmed Strike",
+          "fr": "radiants, arme de corps à corps ou Attaque à mains nues",
+          "es": "radiante, arma cuerpo a cuerpo o ataque sin armas"
+        }
+      }
+    ],
+    "source": {
+      "page": 55,
+      "frPage": 78,
+      "section": "Classes > Paladin Class Features > Level 11: Radiant Strikes"
+    }
+  },
+  {
+    "id": "paladin:restoring-touch",
+    "textOnly": {
+      "en": "Lay On Hands also removes Blinded, Charmed, Deafened, Frightened, Paralyzed or Stunned for 5 points of the pool each: spent from the Lay On Hands counter.",
+      "fr": "Imposition des mains retire aussi Aveuglé, Charmé, Assourdi, Effrayé, Paralysé ou Étourdi pour 5 points de la réserve chacun : dépensés sur le compteur d’Imposition des mains.",
+      "es": "Imponer las manos también elimina cegado, hechizado, ensordecido, asustado, paralizado o aturdido por 5 puntos de la reserva cada uno: se gastan del contador de Imponer las manos."
+    },
+    "source": {
+      "page": 55,
+      "frPage": 78,
+      "section": "Classes > Paladin Class Features > Level 14: Restoring Touch"
+    }
+  },
+  {
+    "id": "paladin:aura-expansion",
+    "textOnly": {
+      "en": "The Aura of Protection becomes a 30-foot Emanation: a range, no sheet number.",
+      "fr": "L’Aura de protection devient une émanation de 9 m : une portée, aucun nombre de la feuille.",
+      "es": "El Aura de protección se convierte en una emanación de 9 m: un alcance, ningún número en la hoja."
+    },
+    "source": {
+      "page": 55,
+      "frPage": 78,
+      "section": "Classes > Paladin Class Features > Level 18: Aura Expansion"
+    }
+  },
+  {
+    "id": "paladin:oath-of-devotion:oath-of-devotion-spells",
+    "textOnly": {
+      "en": "The Oath of Devotion Spells table is applied automatically: its spells are always prepared and listed under Spells.",
+      "fr": "La table des sorts du Serment de dévotion est appliquée automatiquement : ses sorts sont toujours préparés et listés dans Sorts.",
+      "es": "La tabla de conjuros del juramento de entrega se aplica automáticamente: sus conjuros están siempre preparados y aparecen en Conjuros."
+    },
+    "source": {
+      "page": 56,
+      "frPage": 79,
+      "section": "Classes > Paladin Subclass: Oath of Devotion > Level 3: Oath of Devotion Spells"
+    }
+  },
+  {
+    "id": "paladin:oath-of-devotion:sacred-weapon",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "paladin:channel-divinity" },
+        "when": "!toggle:sacred-weapon",
+        "setsToggle": "sacred-weapon",
+        "trigger": {
+          "en": "When you take the Attack action: your melee weapon adds your Charisma modifier to attack rolls for 10 minutes.",
+          "fr": "Quand vous prenez l’action Attaque : votre arme de corps à corps ajoute votre modificateur de Charisme aux jets d’attaque pendant 10 minutes.",
+          "es": "Al hacer la acción de Atacar: tu arma cuerpo a cuerpo suma tu modificador de Carisma a las tiradas de ataque durante 10 minutos."
+        }
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "attack.melee",
+        "value": "cha:min1",
+        "when": "toggle:sacred-weapon",
+        "effectName": "Sacred Weapon",
+        "condition": {
+          "en": "Sacred Weapon (one Channel Divinity use): Charisma modifier (minimum +1) to attack rolls with one Melee weapon for 10 minutes; its damage may be Radiant",
+          "fr": "Arme sacrée (une utilisation de Conduit divin) : modificateur de Charisme (minimum +1) aux jets d’attaque avec une arme de corps à corps pendant 10 minutes ; ses dégâts peuvent être radiants",
+          "es": "Arma sagrada (un uso de Canalizar divinidad): modificador por Carisma (mínimo +1) a las tiradas de ataque con un arma cuerpo a cuerpo durante 10 minutos; su daño puede ser radiante"
+        }
+      }
+    ],
+    "source": {
+      "page": 56,
+      "frPage": 79,
+      "section": "Classes > Paladin Subclass: Oath of Devotion > Level 3: Sacred Weapon"
+    }
+  },
+  {
+    "id": "paladin:oath-of-devotion:aura-of-devotion",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "charmed",
+        "condition": {
+          "en": "you and your allies in your Aura of Protection",
+          "fr": "vous et vos alliés dans votre Aura de protection",
+          "es": "tú y tus aliados en tu Aura de protección"
+        }
+      }
+    ],
+    "source": {
+      "page": 56,
+      "frPage": 79,
+      "section": "Classes > Paladin Subclass: Oath of Devotion > Level 7: Aura of Devotion"
+    }
+  },
+  {
+    "id": "paladin:oath-of-devotion:smite-of-protection",
+    "textOnly": {
+      "en": "Half Cover for you and your allies in the aura after you cast Divine Smite, until your next turn: applied at the table.",
+      "fr": "Abri partiel pour vous et vos alliés dans l’aura après avoir lancé Châtiment divin, jusqu’à votre prochain tour : appliqué à la table.",
+      "es": "Cobertura media para ti y tus aliados en el aura tras lanzar Castigo divino, hasta tu siguiente turno: se aplica en la mesa."
+    },
+    "source": {
+      "page": 57,
+      "frPage": 79,
+      "section": "Classes > Paladin Subclass: Oath of Devotion > Level 15: Smite of Protection"
+    }
+  },
+  {
+    "id": "paladin:oath-of-devotion:holy-nimbus",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "radiant",
+        "label": {
+          "en": "Holy Nimbus Radiant damage to enemies starting their turn in the aura (Cha + PB)",
+          "fr": "Dégâts radiants de Nimbe sacré aux ennemis qui commencent leur tour dans l’aura (Cha + BM)",
+          "es": "Daño radiante de Halo sagrado a los enemigos que empiezan su turno en el aura (Car + BC)"
+        },
+        "parts": ["cha", "pb"]
+      }
+    ],
+    "source": {
+      "page": 57,
+      "frPage": 79,
+      "section": "Classes > Paladin Subclass: Oath of Devotion > Level 20: Holy Nimbus"
+    }
+  }
+]

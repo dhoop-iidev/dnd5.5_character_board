@@ -1,0 +1,15 @@
+{
+  "acid": { "en": "Acid", "fr": "acide", "es": "ácido" },
+  "bludgeoning": { "en": "Bludgeoning", "fr": "contondants", "es": "contundente" },
+  "cold": { "en": "Cold", "fr": "froid", "es": "frío" },
+  "fire": { "en": "Fire", "fr": "feu", "es": "fuego" },
+  "force": { "en": "Force", "fr": "force", "es": "fuerza" },
+  "lightning": { "en": "Lightning", "fr": "foudre", "es": "relámpago" },
+  "necrotic": { "en": "Necrotic", "fr": "nécrotiques", "es": "necrótico" },
+  "piercing": { "en": "Piercing", "fr": "perforants", "es": "perforante" },
+  "poison": { "en": "Poison", "fr": "poison", "es": "veneno" },
+  "psychic": { "en": "Psychic", "fr": "psychiques", "es": "psíquico" },
+  "radiant": { "en": "Radiant", "fr": "radiants", "es": "radiante" },
+  "slashing": { "en": "Slashing", "fr": "tranchants", "es": "cortante" },
+  "thunder": { "en": "Thunder", "fr": "tonnerre", "es": "trueno" }
+}

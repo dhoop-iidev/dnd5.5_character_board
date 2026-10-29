@@ -1,0 +1,25 @@
+# dependencies & build
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+
+# local sources (the SRD PDFs and the Markdown clone are CC-BY-4.0 but large; never commit them)
+sources/
+books/
+*.pdf
+*.epub
+
+# python
+__pycache__/
+*.pyc
+tools/.cache/
+
+# editor / OS
+.idea/
+.DS_Store
+Thumbs.db
+*.local
+
+# personal exported saves: never commit
+character_saves/

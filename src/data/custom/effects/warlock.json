@@ -1,0 +1,718 @@
+[
+  {
+    "id": "warlock:eldritch-invocations",
+    "choices": [
+      {
+        "kind": "option",
+        "from": "eldritch-invocation",
+        "count": "invocations",
+        "name": { "en": "Eldritch Invocations", "fr": "Manifestations occultes", "es": "Invocaciones sobrenaturales" }
+      }
+    ],
+    "textOnly": {
+      "en": "Needs engine: a Repeatable invocation (Agonizing Blast, Eldritch Spear, Repelling Blast, Lessons of the First Ones) can be taken once only, and the cantrip it applies to isn't stored; prerequisites other than the Warlock level (Pact of the Blade…) aren't checked.",
+      "fr": "Needs engine : une manifestation répétable (Décharge déchirante, Lance occulte, Décharge répulsive, Enseignement des Premiers-Nés) ne peut être prise qu’une fois et le sort mineur concerné n’est pas enregistré ; les prérequis autres que le niveau d’Occultiste (Pacte de la lame…) ne sont pas vérifiés.",
+      "es": "Requiere el motor: una invocación repetible (Descarga agónica, Lanza sobrenatural, Descarga ahuyentadora, Lecciones de los primeros) solo puede tomarse una vez y el truco al que se aplica no se guarda; los requisitos distintos del nivel de brujo (Pacto del filo…) no se comprueban."
+    },
+    "source": {
+      "page": 70,
+      "frPage": 68,
+      "section": "Classes > Warlock Class Features > Level 1: Eldritch Invocations"
+    }
+  },
+  {
+    "id": "warlock:pact-magic",
+    "textOnly": {
+      "en": "Cantrips known, prepared spells and the Pact Magic slots (number and level, regained on a Short or Long Rest) come from the Warlock Features table (Sorts pane); spell save DC 8 + PB + Cha, spell attack PB + Cha.",
+      "fr": "Sorts mineurs connus, sorts préparés et emplacements de Magie de pacte (nombre et niveau, récupérés à un repos court ou long) viennent de la table des aptitudes de l’Occultiste (volet Sorts) ; DD de sauvegarde 8 + BM + Cha, attaque de sort BM + Cha.",
+      "es": "Trucos conocidos, conjuros preparados y los espacios de Magia del pacto (número y nivel, recuperados en un descanso corto o largo) salen de la tabla de rasgos de brujo (pestaña Conjuros); CD de salvación de conjuros 8 + BC + Car, ataque de conjuro BC + Car."
+    },
+    "source": { "page": 71, "frPage": 69, "section": "Classes > Warlock Class Features > Level 1: Pact Magic" }
+  },
+  {
+    "id": "warlock:magical-cunning",
+    "uses": { "count": 1, "per": "long" },
+    "textOnly": {
+      "en": "A 1-minute rite regains expended Pact Magic slots, up to half your maximum rounded up (1 slot with 1 or 2 slots, 2 with 3 or 4): applied by hand on the slots.",
+      "fr": "Un rite d’une minute rend des emplacements de Magie de pacte dépensés, jusqu’à la moitié du maximum arrondie au supérieur (1 emplacement avec 1 ou 2 emplacements, 2 avec 3 ou 4) : appliqué à la main sur les emplacements.",
+      "es": "Un rito de 1 minuto recupera espacios de Magia del pacto gastados, hasta la mitad de tu máximo redondeando hacia arriba (1 espacio con 1 o 2 espacios, 2 con 3 o 4): se aplica a mano en los espacios."
+    },
+    "source": { "page": 72, "frPage": 70, "section": "Classes > Warlock Class Features > Level 2: Magical Cunning" }
+  },
+  {
+    "id": "warlock:contact-patron",
+    "uses": { "count": 1, "per": "long" },
+    "spells": { "always": ["contact-other-plane"] },
+    "textOnly": {
+      "en": "Contact Other Plane is always prepared; once per Long Rest it is cast without a slot to contact the patron, with an automatic success on its saving throw.",
+      "fr": "Contact avec les plans est toujours préparé ; une fois par repos long, il est lancé sans emplacement pour contacter le protecteur, avec une réussite automatique à son jet de sauvegarde.",
+      "es": "Contactar con otro plano está siempre preparado; una vez por descanso largo se lanza sin espacio de conjuro para contactar con el patrón, superando automáticamente su tirada de salvación."
+    },
+    "source": { "page": 72, "frPage": 70, "section": "Classes > Warlock Class Features > Level 9: Contact Patron" }
+  },
+  {
+    "id": "warlock:mystic-arcanum",
+    "uses": { "count": 1, "per": "long", "byLevel": { "13": 2, "15": 3, "17": 4 } },
+    "textOnly": {
+      "en": "Needs engine: one level 6 Warlock spell chosen at level 11 (a level 7 one at 13, level 8 at 15, level 9 at 17), each cast once per Long Rest without a slot; the chosen spells go in the level record (spellsLearned), which the engine doesn't read yet.",
+      "fr": "Needs engine : un sort d’Occultiste de niveau 6 choisi au niveau 11 (un de niveau 7 au 13, niveau 8 au 15, niveau 9 au 17), chacun lancé une fois par repos long sans emplacement ; les sorts choisis se notent dans l’historique des niveaux (spellsLearned), que le moteur ne lit pas encore.",
+      "es": "Requiere el motor: un conjuro de brujo de nivel 6 elegido a nivel 11 (uno de nivel 7 a nivel 13, de nivel 8 a nivel 15, de nivel 9 a nivel 17), cada uno lanzado una vez por descanso largo sin espacio de conjuro; los conjuros elegidos se anotan en el registro de niveles (spellsLearned), que el motor aún no lee."
+    },
+    "source": { "page": 72, "frPage": 70, "section": "Classes > Warlock Class Features > Level 11: Mystic Arcanum" }
+  },
+  {
+    "id": "warlock:eldritch-master",
+    "uses": { "count": 1, "per": "long" },
+    "textOnly": {
+      "en": "Once per Long Rest, a 1-minute rite regains all expended Pact Magic slots: applied by hand on the slots.",
+      "fr": "Une fois par repos long, un rite d’une minute rend tous les emplacements de Magie de pacte dépensés : appliqué à la main sur les emplacements.",
+      "es": "Una vez por descanso largo, un rito de 1 minuto recupera todos los espacios de Magia del pacto gastados: se aplica a mano en los espacios."
+    },
+    "source": { "page": 72, "frPage": 70, "section": "Classes > Warlock Class Features > Level 20: Eldritch Master" }
+  },
+  {
+    "id": "warlock:fiend-patron:dark-ones-blessing",
+    "computed": [
+      {
+        "id": "temp",
+        "label": {
+          "en": "Dark One's Blessing Temporary HP (Cha + Warlock level, minimum 1)",
+          "fr": "PV temporaires de Bénédiction du ténébreux (Cha + niveau d’Occultiste, minimum 1)",
+          "es": "PG temporales de Bendición del oscuro (Car + nivel de brujo, mínimo 1)"
+        },
+        "parts": ["cha", "warlockLevel"]
+      }
+    ],
+    "source": {
+      "page": 76,
+      "frPage": 74,
+      "section": "Classes > Warlock Subclass: Fiend Patron > Level 3: Dark One’s Blessing"
+    }
+  },
+  {
+    "id": "warlock:fiend-patron:fiend-spells",
+    "textOnly": {
+      "en": "The Fiend Spells table is applied automatically: its spells are always prepared and don't count (Sorts pane).",
+      "fr": "La table des sorts du fiélon est appliquée automatiquement : ses sorts sont toujours préparés et ne comptent pas (volet Sorts).",
+      "es": "La tabla de conjuros del infernal se aplica automáticamente: sus conjuros están siempre preparados y no cuentan (pestaña Conjuros)."
+    },
+    "source": {
+      "page": 76,
+      "frPage": 74,
+      "section": "Classes > Warlock Subclass: Fiend Patron > Level 3: Fiend Spells"
+    }
+  },
+  {
+    "id": "warlock:fiend-patron:dark-ones-own-luck",
+    "uses": { "count": "cha", "per": "long" },
+    "computed": [
+      {
+        "id": "bonus",
+        "label": {
+          "en": "Dark One's Own Luck: added to an ability check or saving throw (once per roll)",
+          "fr": "Chance du ténébreux : ajouté à un test de caractéristique ou un jet de sauvegarde (une fois par jet)",
+          "es": "La suerte del oscuro: se suma a una prueba de característica o tirada de salvación (una vez por tirada)"
+        },
+        "dice": "1d10"
+      }
+    ],
+    "source": {
+      "page": 76,
+      "frPage": 74,
+      "section": "Classes > Warlock Subclass: Fiend Patron > Level 6: Dark One’s Own Luck"
+    }
+  },
+  {
+    "id": "warlock:fiend-patron:fiendish-resilience",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Fiendish Resilience damage type (chosen on each rest)",
+          "fr": "Type de dégâts de Résistance fiélonne (choisi à chaque repos)",
+          "es": "Tipo de daño de Resistencia infernal (se elige en cada descanso)"
+        },
+        "options": {
+          "acid": {
+            "name": { "en": "Acid", "fr": "Acide", "es": "Ácido" },
+            "grants": [{ "kind": "resistance", "on": "acid" }]
+          },
+          "bludgeoning": {
+            "name": { "en": "Bludgeoning", "fr": "Contondant", "es": "Contundente" },
+            "grants": [{ "kind": "resistance", "on": "bludgeoning" }]
+          },
+          "cold": {
+            "name": { "en": "Cold", "fr": "Froid", "es": "Frío" },
+            "grants": [{ "kind": "resistance", "on": "cold" }]
+          },
+          "fire": {
+            "name": { "en": "Fire", "fr": "Feu", "es": "Fuego" },
+            "grants": [{ "kind": "resistance", "on": "fire" }]
+          },
+          "lightning": {
+            "name": { "en": "Lightning", "fr": "Foudre", "es": "Relámpago" },
+            "grants": [{ "kind": "resistance", "on": "lightning" }]
+          },
+          "necrotic": {
+            "name": { "en": "Necrotic", "fr": "Nécrotique", "es": "Necrótico" },
+            "grants": [{ "kind": "resistance", "on": "necrotic" }]
+          },
+          "piercing": {
+            "name": { "en": "Piercing", "fr": "Perforant", "es": "Perforante" },
+            "grants": [{ "kind": "resistance", "on": "piercing" }]
+          },
+          "poison": {
+            "name": { "en": "Poison", "fr": "Poison", "es": "Veneno" },
+            "grants": [{ "kind": "resistance", "on": "poison" }]
+          },
+          "psychic": {
+            "name": { "en": "Psychic", "fr": "Psychique", "es": "Psíquico" },
+            "grants": [{ "kind": "resistance", "on": "psychic" }]
+          },
+          "radiant": {
+            "name": { "en": "Radiant", "fr": "Radiant", "es": "Radiante" },
+            "grants": [{ "kind": "resistance", "on": "radiant" }]
+          },
+          "slashing": {
+            "name": { "en": "Slashing", "fr": "Tranchant", "es": "Cortante" },
+            "grants": [{ "kind": "resistance", "on": "slashing" }]
+          },
+          "thunder": {
+            "name": { "en": "Thunder", "fr": "Tonnerre", "es": "Trueno" },
+            "grants": [{ "kind": "resistance", "on": "thunder" }]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 76,
+      "frPage": 75,
+      "section": "Classes > Warlock Subclass: Fiend Patron > Level 10: Fiendish Resilience"
+    }
+  },
+  {
+    "id": "warlock:fiend-patron:hurl-through-hell",
+    "activation": [
+      {
+        "kind": "free",
+        "trigger": {
+          "en": "Once per turn, on a hit with an attack roll: Charisma save or the target is hurled through the Lower Planes.",
+          "fr": "Une fois par tour, quand vous touchez avec un jet d’attaque : JS de Charisme ou la cible est projetée dans les plans inférieurs.",
+          "es": "Una vez por turno, al impactar con una tirada de ataque: salvación de Carisma o el objetivo es arrojado a los planos inferiores."
+        }
+      }
+    ],
+    "uses": { "count": 1, "per": "long" },
+    "computed": [
+      {
+        "id": "damage",
+        "label": {
+          "en": "Hurl Through Hell: Psychic damage (non-Fiend, Cha save against your spell DC)",
+          "fr": "Traversée des enfers : dégâts psychiques (non-fiélon, sauvegarde de Cha contre votre DD de sort)",
+          "es": "Arrastrar por el infierno: daño psíquico (no infernales, salvación de Carisma contra la CD de tus conjuros)"
+        },
+        "dice": "8d10"
+      }
+    ],
+    "textOnly": {
+      "en": "The use can be restored by expending a Pact Magic slot: applied by hand on the counters.",
+      "fr": "L’utilisation peut être restaurée en dépensant un emplacement de Magie de pacte : appliqué à la main sur les compteurs.",
+      "es": "El uso puede restaurarse gastando un espacio de Magia del pacto: se aplica a mano en los contadores."
+    },
+    "source": {
+      "page": 76,
+      "frPage": 75,
+      "section": "Classes > Warlock Subclass: Fiend Patron > Level 14: Hurl Through Hell"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:agonizing-blast",
+    "computed": [
+      {
+        "id": "damage",
+        "label": {
+          "en": "Agonizing Blast: added to each damage roll of the chosen cantrip",
+          "fr": "Décharge déchirante : ajouté à chaque jet de dégâts du sort mineur choisi",
+          "es": "Descarga agónica: se suma a cada tirada de daño del truco elegido"
+        },
+        "parts": ["cha"]
+      }
+    ],
+    "textOnly": {
+      "en": "Choose one known Warlock cantrip that deals damage (usually Eldritch Blast): the choice isn't stored, the bonus is read in Feature values.",
+      "fr": "Choisissez un sort mineur d’Occultiste connu qui inflige des dégâts (en général Décharge occulte) : le choix n’est pas enregistré, le bonus se lit dans les valeurs d’aptitude.",
+      "es": "Elige un truco de brujo conocido que cause daño (normalmente Descarga sobrenatural): la elección no se guarda, el bonificador se lee en Valores de rasgos."
+    },
+    "source": {
+      "page": 72,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Agonizing Blast"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:armor-of-shadows",
+    "acFormula": { "base": 13, "abilities": ["dex"], "noArmor": true, "noShield": false },
+    "textOnly": {
+      "en": "Mage Armor at will on yourself (8 hours, ends if you don armor): the 13 + Dex base AC is offered among the AC formulas.",
+      "fr": "Armure du mage à volonté sur vous-même (8 heures, prend fin si vous revêtez une armure) : la CA de base 13 + Dex est proposée parmi les formules de CA.",
+      "es": "Armadura de mago a voluntad sobre ti (8 horas, termina si te pones una armadura): la CA base 13 + Des se ofrece entre las fórmulas de CA."
+    },
+    "source": {
+      "page": 72,
+      "frPage": 70,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Armor of Shadows"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:ascendant-step",
+    "textOnly": {
+      "en": "Levitate at will on yourself: an at-will spell, no sheet number.",
+      "fr": "Lévitation à volonté sur vous-même : sort à volonté, aucun nombre de la feuille.",
+      "es": "Levitar a voluntad sobre ti: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 72,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Ascendant Step"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:devils-sight",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 120,
+        "condition": {
+          "en": "Devil's Sight: see normally in Dim Light and Darkness, magical or not",
+          "fr": "Vision du diable : voir normalement dans la lumière faible et l’obscurité, magique ou non",
+          "es": "Vista del diablo: ves con normalidad en luz tenue y oscuridad, mágica o no"
+        }
+      }
+    ],
+    "source": { "page": 72, "frPage": 73, "section": "Classes > Warlock > Eldritch Invocation Options > Devil’s Sight" }
+  },
+  {
+    "id": "warlock:eldritch-invocation:devouring-blade",
+    "flags": ["two-extra-attacks"],
+    "textOnly": {
+      "en": "Three attacks with the Attack action, for the pact weapon only (the count applies to every weapon on the sheet).",
+      "fr": "Trois attaques avec l’action Attaque, pour l’arme de pacte seulement (le nombre s’applique à toutes les armes de la feuille).",
+      "es": "Tres ataques con la acción de atacar, solo con el arma del pacto (el número se aplica a todas las armas de la hoja)."
+    },
+    "source": {
+      "page": 72,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Devouring Blade"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:eldritch-mind",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.con",
+        "condition": {
+          "en": "to maintain Concentration",
+          "fr": "pour maintenir la Concentration",
+          "es": "para mantener la concentración"
+        }
+      }
+    ],
+    "source": { "page": 72, "frPage": 71, "section": "Classes > Warlock > Eldritch Invocation Options > Eldritch Mind" }
+  },
+  {
+    "id": "warlock:eldritch-invocation:eldritch-smite",
+    "modifiers": [
+      {
+        "target": "extraDamage.melee",
+        "value": "1d8",
+        "condition": {
+          "en": "Force, +1d8 per level of the Pact Magic slot expended; pact weapon, once per turn; a Huge or smaller target can be knocked Prone",
+          "fr": "force, +1d8 par niveau de l’emplacement de Magie de pacte dépensé ; arme de pacte, une fois par tour ; une cible de taille TG ou moins peut être mise à terre",
+          "es": "fuerza, +1d8 por nivel del espacio de Magia del pacto gastado; arma del pacto, una vez por turno; un objetivo Enorme o más pequeño puede quedar derribado"
+        }
+      }
+    ],
+    "source": {
+      "page": 72,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Eldritch Smite"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:eldritch-spear",
+    "computed": [
+      {
+        "id": "range",
+        "label": {
+          "en": "Eldritch Spear: range added to the chosen cantrip, in feet (30 × Warlock level)",
+          "fr": "Lance occulte : portée ajoutée au sort mineur choisi, en pieds (30 × niveau d’Occultiste ; 9 m par niveau)",
+          "es": "Lanza sobrenatural: alcance añadido al truco elegido, en pies (30 × nivel de brujo; 9 m por nivel)"
+        },
+        "parts": ["warlockLevel*30"]
+      }
+    ],
+    "textOnly": {
+      "en": "Choose one known Warlock cantrip that deals damage with a range of 10+ feet: the choice isn't stored.",
+      "fr": "Choisissez un sort mineur d’Occultiste connu infligeant des dégâts avec une portée de 3 m ou plus : le choix n’est pas enregistré.",
+      "es": "Elige un truco de brujo conocido que cause daño con un alcance de 3 m o más: la elección no se guarda."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Eldritch Spear"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:fiendish-vigor",
+    "computed": [
+      {
+        "id": "temp",
+        "label": {
+          "en": "Fiendish Vigor: Temporary HP from False Life at will (1d4 maximized + 4)",
+          "fr": "Vigueur fiélonne : PV temporaires de Simulacre de vie à volonté (1d4 maximisé + 4)",
+          "es": "Vigor infernal: PG temporales de Falsa vida a voluntad (1d4 al máximo + 4)"
+        },
+        "parts": [8]
+      }
+    ],
+    "source": {
+      "page": 73,
+      "frPage": 73,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Fiendish Vigor"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:gaze-of-two-minds",
+    "activation": [{ "kind": "bonus-action" }],
+    "textOnly": {
+      "en": "Perceive through a willing creature's senses (Bonus Action to start and maintain), casting spells from either space within 60 feet: no sheet number.",
+      "fr": "Percevoir par les sens d’une créature consentante (action bonus pour commencer et maintenir), en lançant des sorts depuis l’un ou l’autre espace à 18 m ou moins : aucun nombre de la feuille.",
+      "es": "Percibes a través de los sentidos de una criatura voluntaria (acción adicional para empezar y mantenerlo) y lanzas conjuros desde cualquiera de los dos espacios a 18 m o menos: ningún número en la hoja."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Gaze of Two Minds"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:gift-of-the-depths",
+    "modifiers": [{ "target": "speed.swim", "value": "speed", "effectName": "Gift of the Depths" }],
+    "uses": { "count": 1, "per": "long" },
+    "textOnly": {
+      "en": "Breathe underwater; Water Breathing once per Long Rest without a slot (the counter above).",
+      "fr": "Respirer sous l’eau ; Respiration aquatique une fois par repos long sans emplacement (le compteur ci-dessus).",
+      "es": "Respiras bajo el agua; Respirar bajo el agua una vez por descanso largo sin espacio de conjuro (el contador de arriba)."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Gift of the Depths"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:gift-of-the-protectors",
+    "activation": [],
+    "uses": { "count": 1, "per": "long" },
+    "computed": [
+      {
+        "id": "names",
+        "label": {
+          "en": "Gift of the Protectors: names the page can hold",
+          "fr": "Présent des sauveurs : noms que la page peut contenir",
+          "es": "Don de los protectores: nombres que caben en la página"
+        },
+        "parts": ["cha:min1"]
+      }
+    ],
+    "textOnly": {
+      "en": "A named creature reduced to 0 HP drops to 1 HP instead, once per Long Rest for the whole page.",
+      "fr": "Une créature inscrite réduite à 0 PV tombe à 1 PV à la place, une fois par repos long pour toute la page.",
+      "es": "Una criatura inscrita que queda a 0 PG pasa a 1 PG en su lugar, una vez por descanso largo para toda la página."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Gift of the Protectors"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:investment-of-the-chain-master",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "name": { "en": "Familiar: Attack", "fr": "Familier : Attaque", "es": "Familiar: Atacar" },
+        "trigger": {
+          "en": "Command your familiar to take the Attack action.",
+          "fr": "Ordonnez à votre familier de prendre l’action Attaque.",
+          "es": "Ordena a tu familiar que haga la acción de Atacar."
+        }
+      },
+      {
+        "kind": "reaction",
+        "name": { "en": "Familiar: Resistance", "fr": "Familier : Résistance", "es": "Familiar: resistencia" },
+        "trigger": {
+          "en": "Your familiar takes damage: give it Resistance to that damage.",
+          "fr": "Votre familier subit des dégâts : donnez-lui la Résistance à ces dégâts.",
+          "es": "Tu familiar recibe daño: dale resistencia a ese daño."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "The familiar gains a 40-foot Fly or Swim Speed, attacks on your Bonus Action, can deal Necrotic or Radiant damage, uses your spell save DC, and you can grant it Resistance as a Reaction: shown with the familiar in the Companions pane, no sheet number.",
+      "fr": "Le familier gagne une Vitesse de vol ou de nage de 12 m, attaque par votre action bonus, peut infliger des dégâts nécrotiques ou radiants, utilise votre DD de sauvegarde, et vous pouvez lui accorder la Résistance par une réaction : affiché avec le familier dans le volet Compagnons, aucun nombre de la feuille.",
+      "es": "El familiar obtiene una velocidad volando o nadando de 12 m, ataca con tu acción adicional, puede causar daño necrótico o radiante, usa la CD de salvación de tus conjuros, y puedes darle resistencia como reacción: se muestra con el familiar en la pestaña Compañeros, ningún número en la hoja."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Investment of the Chain Master"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:lessons-of-the-first-ones",
+    "choices": [
+      {
+        "kind": "feat",
+        "category": "origin",
+        "name": { "en": "Origin feat", "fr": "Don d’origine", "es": "Dote de origen" }
+      }
+    ],
+    "source": {
+      "page": 73,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Lessons of the First Ones"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:lifedrinker",
+    "modifiers": [
+      {
+        "target": "extraDamage.melee",
+        "value": "1d6",
+        "condition": {
+          "en": "Necrotic, Psychic or Radiant; pact weapon, once per turn; you may expend a Hit Point Die to regain its roll + Con HP",
+          "fr": "nécrotique, psychique ou radiant ; arme de pacte, une fois par tour ; vous pouvez dépenser un dé de vie pour récupérer son résultat + Con PV",
+          "es": "necrótico, psíquico o radiante; arma del pacto, una vez por turno; puedes gastar un dado de puntos de golpe para recuperar su resultado + Con PG"
+        }
+      }
+    ],
+    "source": { "page": 73, "frPage": 70, "section": "Classes > Warlock > Eldritch Invocation Options > Lifedrinker" }
+  },
+  {
+    "id": "warlock:eldritch-invocation:mask-of-many-faces",
+    "textOnly": {
+      "en": "Disguise Self at will: an at-will spell, no sheet number.",
+      "fr": "Déguisement à volonté : sort à volonté, aucun nombre de la feuille.",
+      "es": "Disfrazarse a voluntad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Mask of Many Faces"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:master-of-myriad-forms",
+    "textOnly": {
+      "en": "Alter Self at will: an at-will spell, no sheet number.",
+      "fr": "Modification d’apparence à volonté : sort à volonté, aucun nombre de la feuille.",
+      "es": "Alterar el propio aspecto a voluntad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 73,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Master of Myriad Forms"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:misty-visions",
+    "textOnly": {
+      "en": "Silent Image at will: an at-will spell, no sheet number.",
+      "fr": "Image silencieuse à volonté : sort à volonté, aucun nombre de la feuille.",
+      "es": "Imagen silenciosa a voluntad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": { "page": 74, "frPage": 73, "section": "Classes > Warlock > Eldritch Invocation Options > Misty Visions" }
+  },
+  {
+    "id": "warlock:eldritch-invocation:one-with-shadows",
+    "textOnly": {
+      "en": "Invisibility at will on yourself while in Dim Light or Darkness: an at-will spell, no sheet number.",
+      "fr": "Invisibilité à volonté sur vous-même dans la lumière faible ou l’obscurité : sort à volonté, aucun nombre de la feuille.",
+      "es": "Invisibilidad a voluntad sobre ti en luz tenue u oscuridad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > One with Shadows"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:otherworldly-leap",
+    "textOnly": {
+      "en": "Jump at will on yourself: an at-will spell, no sheet number.",
+      "fr": "Saut à volonté sur vous-même : sort à volonté, aucun nombre de la feuille.",
+      "es": "Salto a voluntad sobre ti: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 73,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Otherworldly Leap"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:pact-of-the-blade",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "setsToggle": "pact-weapon",
+        "name": { "en": "Conjure the pact weapon", "fr": "Invoquer l’arme du pacte", "es": "Invocar el arma del pacto" }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "flag",
+        "on": "pact-weapon",
+        "when": "toggle:pact-weapon",
+        "condition": {
+          "en": "Pact weapon bonded (Bonus Action): Cha for attack and damage, proficiency, Necrotic / Psychic / Radiant damage at will",
+          "fr": "Arme de pacte liée (action bonus) : Cha pour l’attaque et les dégâts, maîtrise, dégâts nécrotiques / psychiques / radiants à volonté",
+          "es": "Arma del pacto vinculada (acción adicional): Car para el ataque y el daño, competencia, daño necrótico / psíquico / radiante a voluntad"
+        }
+      }
+    ],
+    "source": {
+      "page": 74,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Pact of the Blade"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:pact-of-the-chain",
+    "activation": [
+      {
+        "kind": "attack",
+        "cost": { "amount": 0 },
+        "name": { "en": "Familiar attacks", "fr": "Attaque du familier", "es": "Ataque del familiar" },
+        "trigger": {
+          "en": "Forgo one of your attacks: your familiar makes one attack with its Reaction.",
+          "fr": "Renoncez à l’une de vos attaques : votre familier attaque une fois avec sa Réaction.",
+          "es": "Renuncia a uno de tus ataques: tu familiar hace un ataque con su reacción."
+        }
+      }
+    ],
+    "spells": { "always": ["find-familiar"] },
+    "textOnly": {
+      "en": "Find Familiar without a slot, with the special forms (Imp, Pseudodragon, Quasit, Skeleton, Sphinx of Wonder, Sprite, Venomous Snake) handled in the Companions pane; forgo one attack to let the familiar attack with its Reaction.",
+      "fr": "Appel de familier sans emplacement, avec les formes spéciales (diablotin, pseudodragon, quasit, squelette, sphinx des merveilles, pixie, serpent venimeux) gérées dans le volet Compagnons ; renoncer à une attaque pour que le familier attaque par sa réaction.",
+      "es": "Encontrar familiar sin espacio de conjuro, con las formas especiales (diablillo, pseudodragón, quasit, esqueleto, esfinge de las maravillas, duende, serpiente venenosa) gestionadas en la pestaña Compañeros; renuncia a un ataque para que el familiar ataque con su reacción."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Pact of the Chain"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:pact-of-the-tome",
+    "choices": [
+      {
+        "id": "cantrips",
+        "kind": "spell",
+        "count": 3,
+        "level": 0,
+        "name": {
+          "en": "Book of Shadows: three cantrips (any class list)",
+          "fr": "Livre des ombres : trois sorts mineurs (toute liste de classe)",
+          "es": "Libro de las sombras: tres trucos (de cualquier lista de clase)"
+        }
+      },
+      {
+        "id": "rituals",
+        "kind": "spell",
+        "count": 2,
+        "level": 1,
+        "name": {
+          "en": "Book of Shadows: two level 1 Ritual spells (any class list)",
+          "fr": "Livre des ombres : deux sorts de niveau 1 à rituel (toute liste de classe)",
+          "es": "Libro de las sombras: dos conjuros de nivel 1 con la etiqueta ritual (de cualquier lista de clase)"
+        }
+      }
+    ],
+    "spells": { "fromChoices": ["cantrips", "rituals"] },
+    "textOnly": {
+      "en": "Needs engine: the Ritual tag of the two level 1 spells and \"not already prepared\" aren't checked; the book is a Spellcasting Focus.",
+      "fr": "Needs engine : la mention rituel des deux sorts de niveau 1 et « pas déjà préparé » ne sont pas vérifiées ; le livre est un focaliseur d’incantation.",
+      "es": "Requiere el motor: no se comprueban la etiqueta ritual de los dos conjuros de nivel 1 ni «aún no preparado»; el libro es un canalizador mágico."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Pact of the Tome"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:repelling-blast",
+    "textOnly": {
+      "en": "Push a Large or smaller creature up to 10 feet when the chosen attack-roll cantrip hits: no sheet number; the chosen cantrip isn't stored.",
+      "fr": "Repousser une créature de taille G ou moins de 3 m quand le sort mineur à jet d’attaque choisi touche : aucun nombre de la feuille ; le sort mineur choisi n’est pas enregistré.",
+      "es": "Empuja hasta 3 m a una criatura Grande o más pequeña cuando impacta el truco con tirada de ataque elegido: ningún número en la hoja; el truco elegido no se guarda."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Repelling Blast"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:thirsting-blade",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "textOnly": {
+      "en": "Extra Attack for the pact weapon only (the count applies to every weapon on the sheet).",
+      "fr": "Attaque supplémentaire pour l’arme de pacte seulement (le nombre s’applique à toutes les armes de la feuille).",
+      "es": "Ataque adicional solo con el arma del pacto (el número se aplica a todas las armas de la hoja)."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 71,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Thirsting Blade"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:visions-of-distant-realms",
+    "textOnly": {
+      "en": "Arcane Eye at will: an at-will spell, no sheet number.",
+      "fr": "Œil du mage à volonté : sort à volonté, aucun nombre de la feuille.",
+      "es": "Ojo arcano a voluntad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Visions of Distant Realms"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:whispers-of-the-grave",
+    "textOnly": {
+      "en": "Speak with Dead at will: an at-will spell, no sheet number.",
+      "fr": "Communication avec les morts à volonté : sort à volonté, aucun nombre de la feuille.",
+      "es": "Hablar con los muertos a voluntad: conjuro a voluntad, ningún número en la hoja."
+    },
+    "source": {
+      "page": 74,
+      "frPage": 72,
+      "section": "Classes > Warlock > Eldritch Invocation Options > Whispers of the Grave"
+    }
+  },
+  {
+    "id": "warlock:eldritch-invocation:witch-sight",
+    "textOnly": {
+      "en": "Truesight 30 feet: a sense, no sheet number.",
+      "fr": "Vision véritable 9 m : un sens, aucun nombre de la feuille.",
+      "es": "Visión verdadera 9 m: un sentido, ningún número en la hoja."
+    },
+    "source": { "page": 74, "frPage": 73, "section": "Classes > Warlock > Eldritch Invocation Options > Witch Sight" }
+  }
+]

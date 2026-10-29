@@ -1,0 +1,218 @@
+[
+  {
+    "id": "feat:ability-score-improvement",
+    "textOnly": {
+      "en": "The +2 / +1 +1 is entered with the feat in the level record (capped at 20).",
+      "fr": "Le +2 / +1 +1 se saisit avec le don dans l’historique des niveaux (plafonné à 20).",
+      "es": "El +2 / +1 +1 se introduce con la dote en el registro de niveles (máximo 20)."
+    },
+    "source": { "page": 87, "frPage": 93, "section": "Feats > General Feats > Ability Score Improvement" }
+  },
+  {
+    "id": "feat:alert",
+    "modifiers": [{ "target": "initiative", "value": "pb", "effectName": "Alert" }],
+    "source": { "page": 87, "frPage": 94, "section": "Feats > Origin Feats > Alert" }
+  },
+  {
+    "id": "feat:archery",
+    "modifiers": [{ "target": "attack.ranged", "value": 2, "when": "ranged-weapon", "effectName": "Archery" }],
+    "source": { "page": 87, "frPage": 93, "section": "Feats > Fighting Style Feats > Archery" }
+  },
+  {
+    "id": "feat:boon-of-combat-prowess",
+    "textOnly": {
+      "en": "Peerless Aim: turn a miss into a hit once per turn start; the +1 ability score is entered with the feat (maximum 30).",
+      "fr": "Visée hors pair : transformer un raté en coup au but ; le +1 de caractéristique se saisit avec le don (maximum 30).",
+      "es": "Precisión sin igual: convierte un fallo en impacto, una vez por inicio de turno; el +1 de característica se introduce con la dote (máximo 30)."
+    },
+    "source": { "page": 88, "frPage": 93, "section": "Feats > Epic Boon Feats > Boon of Combat Prowess" }
+  },
+  {
+    "id": "feat:boon-of-dimensional-travel",
+    "activation": [
+      {
+        "kind": "free",
+        "trigger": {
+          "en": "Right after an Attack or Magic action: teleport up to 30 ft.",
+          "fr": "Juste après une action Attaque ou Magie : téléportez-vous de 9 m au plus.",
+          "es": "Justo después de una acción de Atacar o de Magia: teletranspórtate hasta 9 m."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Blink Steps: a 30-foot teleport after the Attack or Magic action; the +1 ability score is entered with the feat.",
+      "fr": "Pas clignotants : téléportation de 9 m après l’action Attaque ou Magie ; le +1 de caractéristique se saisit avec le don.",
+      "es": "Pasos desplazadores: teletransporte de 9 m tras la acción de atacar o de magia; el +1 de característica se introduce con la dote."
+    },
+    "source": { "page": 88, "frPage": 93 }
+  },
+  {
+    "id": "feat:boon-of-fate",
+    "uses": { "count": 1, "per": "short" },
+    "source": { "page": 88, "frPage": 93, "section": "Feats > Epic Boon Feats > Boon of Fate" }
+  },
+  {
+    "id": "feat:boon-of-irresistible-offense",
+    "textOnly": {
+      "en": "Bludgeoning, Piercing and Slashing damage ignores Resistance; a natural 20 adds the ability score to the damage: applied at the dice.",
+      "fr": "Les dégâts contondants, perforants et tranchants ignorent la Résistance ; un 20 naturel ajoute la valeur de caractéristique aux dégâts : appliqué aux dés.",
+      "es": "El daño contundente, perforante y cortante ignora la resistencia; un 20 natural añade la puntuación de característica al daño: se aplica a los dados."
+    },
+    "source": { "page": 88, "frPage": 93 }
+  },
+  {
+    "id": "feat:boon-of-spell-recall",
+    "textOnly": {
+      "en": "Free Casting: a slot of level 1–4 isn't expended when the d4 matches its level: applied at the dice.",
+      "fr": "Incantation gratuite : un emplacement de niveau 1 à 4 n’est pas dépensé quand le d4 égale son niveau : appliqué aux dés.",
+      "es": "Lanzamiento gratuito: un espacio de nivel 1 a 4 no se gasta si el d4 coincide con su nivel: se aplica a los dados."
+    },
+    "source": { "page": 88, "frPage": 93 }
+  },
+  {
+    "id": "feat:boon-of-the-night-spirit",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "trigger": {
+          "en": "In Dim Light or Darkness: the Invisible condition until you act.",
+          "fr": "Dans une lumière faible ou les ténèbres : état Invisible jusqu’à ce que vous agissiez.",
+          "es": "En luz tenue u oscuridad: estado Invisible hasta que actúes."
+        }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "all",
+        "when": "toggle:night-spirit",
+        "condition": {
+          "en": "while within Dim Light or Darkness: Resistance to all damage except Psychic and Radiant",
+          "fr": "dans une lumière faible ou l’obscurité : Résistance à tous les dégâts sauf psychiques et radiants",
+          "es": "en luz tenue u oscuridad: resistencia a todo el daño salvo psíquico y radiante"
+        }
+      }
+    ],
+    "source": { "page": 88, "frPage": 94 }
+  },
+  {
+    "id": "feat:boon-of-truesight",
+    "textOnly": {
+      "en": "Truesight 60 feet: a sense, no sheet number.",
+      "fr": "Vision véritable 18 m : un sens, aucun nombre de la feuille.",
+      "es": "Visión verdadera 18 m: un sentido, ningún número en la hoja."
+    },
+    "source": { "page": 88, "frPage": 94 }
+  },
+  {
+    "id": "feat:defense",
+    "modifiers": [{ "target": "ac", "value": 1, "when": "armor", "effectName": "Defense" }],
+    "source": { "page": 87, "frPage": 93, "section": "Feats > Fighting Style Feats > Defense" }
+  },
+  {
+    "id": "feat:grappler",
+    "activation": [],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "attack",
+        "when": "toggle:grappler",
+        "condition": {
+          "en": "Attack Advantage: against a creature Grappled by you",
+          "fr": "Avantage d’attaque : contre une créature que vous agrippez",
+          "es": "Ventaja al atacar: contra una criatura que tienes agarrada"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Punch and Grab (grapple with an Unarmed Strike hit) and Fast Wrestler (no extra movement to drag a grappled creature your size or smaller) are rules of play.",
+      "fr": "Coup et saisie et Lutteur rapide sont des règles de jeu, sans nombre sur la feuille.",
+      "es": "Golpear y agarrar (agarrar con un impacto de ataque sin armas) y Luchador rápido (sin movimiento adicional para arrastrar a una criatura agarrada de tu tamaño o menor) son reglas de juego."
+    },
+    "source": { "page": 87, "frPage": 93, "section": "Feats > General Feats > Grappler" }
+  },
+  {
+    "id": "feat:great-weapon-fighting",
+    "textOnly": {
+      "en": "Treat a 1 or 2 on a damage die as a 3 with a two-handed Melee weapon: applied at the dice.",
+      "fr": "Un 1 ou un 2 sur un dé de dégâts compte 3 avec une arme de corps à corps tenue à deux mains : appliqué aux dés.",
+      "es": "Un 1 o un 2 en un dado de daño cuenta como 3 con un arma cuerpo a cuerpo empuñada a dos manos: se aplica a los dados."
+    },
+    "source": { "page": 87, "frPage": 93, "section": "Feats > Fighting Style Feats > Great Weapon Fighting" }
+  },
+  {
+    "id": "feat:magic-initiate",
+    "choices": [
+      {
+        "id": "list",
+        "kind": "option",
+        "name": { "en": "Spell list", "fr": "Liste de sorts", "es": "Lista de conjuros" },
+        "options": {
+          "cleric": { "name": { "en": "Cleric", "fr": "Clerc", "es": "Clérigo" } },
+          "druid": { "name": { "en": "Druid", "fr": "Druide", "es": "Druida" } },
+          "wizard": { "name": { "en": "Wizard", "fr": "Magicien", "es": "Mago" } }
+        }
+      },
+      {
+        "id": "ability",
+        "kind": "option",
+        "name": { "en": "Spellcasting ability", "fr": "Caractéristique d’incantation", "es": "Aptitud mágica" },
+        "options": {
+          "int": { "name": { "en": "Intelligence", "fr": "Intelligence", "es": "Inteligencia" } },
+          "wis": { "name": { "en": "Wisdom", "fr": "Sagesse", "es": "Sabiduría" } },
+          "cha": { "name": { "en": "Charisma", "fr": "Charisme", "es": "Carisma" } }
+        }
+      },
+      {
+        "id": "cantrips",
+        "kind": "spell",
+        "count": 2,
+        "level": 0,
+        "name": { "en": "Two cantrips", "fr": "Deux sorts mineurs", "es": "Dos trucos" }
+      },
+      {
+        "id": "spell",
+        "kind": "spell",
+        "count": 1,
+        "level": 1,
+        "name": { "en": "Level 1 spell", "fr": "Sort de niveau 1", "es": "Conjuro de nivel 1" }
+      }
+    ],
+    "spells": { "fromChoices": ["cantrips", "spell"] },
+    "uses": { "count": 1, "per": "long" },
+    "source": { "page": 87, "frPage": 94, "section": "Feats > Origin Feats > Magic Initiate" }
+  },
+  {
+    "id": "feat:savage-attacker",
+    "textOnly": {
+      "en": "Roll the weapon's damage dice twice once per turn and keep either: applied at the dice.",
+      "fr": "Lancer deux fois les dés de dégâts de l’arme une fois par tour et garder l’un des résultats : appliqué aux dés.",
+      "es": "Tira dos veces los dados de daño del arma una vez por turno y quédate con cualquiera de los resultados: se aplica a los dados."
+    },
+    "source": { "page": 87, "frPage": 94, "section": "Feats > Origin Feats > Savage Attacker" }
+  },
+  {
+    "id": "feat:skilled",
+    "choices": [
+      {
+        "kind": "skill",
+        "count": 3,
+        "name": {
+          "en": "Three skills or tools",
+          "fr": "Trois compétences ou outils",
+          "es": "Tres habilidades o herramientas"
+        }
+      }
+    ],
+    "source": { "page": 87, "frPage": 94, "section": "Feats > Origin Feats > Skilled" }
+  },
+  {
+    "id": "feat:two-weapon-fighting",
+    "textOnly": {
+      "en": "Add the ability modifier to the damage of the extra Light-weapon attack: applied on that extra attack.",
+      "fr": "Ajouter le modificateur de caractéristique aux dégâts de l’attaque supplémentaire d’arme Légère : appliqué sur cette attaque supplémentaire.",
+      "es": "Suma el modificador por característica al daño del ataque adicional con arma ligera: se aplica a ese ataque adicional."
+    },
+    "source": { "page": 87, "frPage": 93, "section": "Feats > Fighting Style Feats > Two-Weapon Fighting" }
+  }
+]

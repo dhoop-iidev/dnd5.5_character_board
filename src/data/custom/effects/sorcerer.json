@@ -1,0 +1,495 @@
+[
+  {
+    "id": "sorcerer:spellcasting",
+    "textOnly": {
+      "en": "Cantrips known, prepared spells and spell slots come from the Sorcerer Features table (Sorts pane); spell save DC and spell attack are 8 + PB + Cha and PB + Cha. Replacing a cantrip or a prepared spell happens on a Sorcerer level.",
+      "fr": "Sorts mineurs connus, sorts préparés et emplacements viennent de la table des aptitudes de l’Ensorceleur (volet Sorts) ; DD de sauvegarde 8 + BM + Cha, attaque de sort BM + Cha. Le remplacement d’un sort mineur ou d’un sort préparé se fait à un niveau d’Ensorceleur.",
+      "es": "Trucos conocidos, conjuros preparados y espacios de conjuro salen de la tabla de rasgos de hechicero (pestaña Conjuros); CD de salvación de conjuros 8 + BC + Car y ataque de conjuro BC + Car. Sustituir un truco o un conjuro preparado se hace al subir un nivel de hechicero."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 49,
+      "section": "Classes > Sorcerer Class Features > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "sorcerer:innate-sorcery",
+    "activation": [{ "kind": "bonus-action", "when": "!toggle:innate-sorcery", "setsToggle": "innate-sorcery" }],
+    "uses": {
+      "count": 2,
+      "per": "long"
+    },
+    "modifiers": [
+      {
+        "target": "spell.dc.sorcerer",
+        "value": 1,
+        "when": "toggle:innate-sorcery",
+        "condition": {
+          "en": "Innate Sorcery active (1 minute, Bonus Action)",
+          "fr": "Sorcellerie innée active (1 minute, action bonus)",
+          "es": "Hechicería innata activa (1 minuto, acción adicional)"
+        },
+        "effectName": "Innate Sorcery"
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "attack.spell",
+        "when": "toggle:innate-sorcery",
+        "condition": {
+          "en": "on the attack rolls of Sorcerer spells",
+          "fr": "aux jets d’attaque des sorts d’Ensorceleur",
+          "es": "en las tiradas de ataque de los conjuros de hechicero"
+        }
+      }
+    ],
+    "source": {
+      "page": 65,
+      "frPage": 51,
+      "section": "Classes > Sorcerer Class Features > Level 1: Innate Sorcery"
+    }
+  },
+  {
+    "id": "sorcerer:font-of-magic",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "name": {
+          "en": "Create a spell slot",
+          "fr": "Créer un emplacement de sort",
+          "es": "Crear un espacio de conjuro"
+        },
+        "trigger": {
+          "en": "Turn Sorcery Points into one spell slot (counter in Resources).",
+          "fr": "Convertir des points de sorcellerie en un emplacement de sort (compteur dans Ressources).",
+          "es": "Convertir puntos de hechicería en un espacio de conjuro (contador en Recursos)."
+        }
+      }
+    ],
+    "uses": {
+      "count": "sorceryPoints",
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "Converting a slot gives Sorcery Points equal to its level; creating a slot (Bonus Action) costs 2 / 3 / 5 / 6 / 7 points for a level 1–5 slot from Sorcerer level 2 / 3 / 5 / 7 / 9: applied by hand on the counter.",
+      "fr": "Convertir un emplacement donne autant de points de Sorcellerie que son niveau ; créer un emplacement (action bonus) coûte 2 / 3 / 5 / 6 / 7 points pour un emplacement de niveau 1 à 5 dès le niveau d’Ensorceleur 2 / 3 / 5 / 7 / 9 : appliqué à la main sur le compteur.",
+      "es": "Convertir un espacio da tantos puntos de hechicería como su nivel; crear un espacio (acción adicional) cuesta 2 / 3 / 5 / 6 / 7 puntos para un espacio de nivel 1 a 5 desde el nivel de hechicero 2 / 3 / 5 / 7 / 9: se aplica a mano en el contador."
+    },
+    "source": {
+      "page": 66,
+      "frPage": 51,
+      "section": "Classes > Sorcerer Class Features > Level 2: Font of Magic"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic",
+    "choices": [
+      {
+        "kind": "option",
+        "from": "metamagic",
+        "count": 2,
+        "byLevel": {
+          "10": 4,
+          "17": 6
+        },
+        "name": {
+          "en": "Metamagic options",
+          "fr": "Options de Métamagie",
+          "es": "Opciones de Metamagia"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Two options at level 2, two more at Sorcerer level 10 and two more at 17; one option per spell cast (two with Sorcery Incarnate). Each chosen option lists its Sorcery Point cost.",
+      "fr": "Deux options au niveau 2, deux de plus au niveau d’Ensorceleur 10 et deux de plus au 17 ; une option par sort lancé (deux avec Sorcellerie incarnée). Chaque option choisie indique son coût en points de Sorcellerie.",
+      "es": "Dos opciones a nivel 2, dos más a nivel 10 de hechicero y dos más a nivel 17; una opción por conjuro lanzado (dos con Encarnación mágica). Cada opción elegida indica su coste en puntos de hechicería."
+    },
+    "source": {
+      "page": 66,
+      "frPage": 51,
+      "section": "Classes > Sorcerer Class Features > Level 2: Metamagic"
+    }
+  },
+  {
+    "id": "sorcerer:sorcerous-restoration",
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "points",
+        "label": {
+          "en": "Sorcery Points regained on a Short Rest (half Sorcerer level, round down)",
+          "fr": "Points de Sorcellerie récupérés à un repos court (moitié du niveau d’Ensorceleur, arrondi à l’inférieur)",
+          "es": "Puntos de hechicería recuperados en un descanso corto (la mitad del nivel de hechicero, redondeando hacia abajo)"
+        },
+        "parts": ["sorcererLevel/2"]
+      }
+    ],
+    "source": {
+      "page": 66,
+      "frPage": 51,
+      "section": "Classes > Sorcerer Class Features > Level 5: Sorcerous Restoration"
+    }
+  },
+  {
+    "id": "sorcerer:sorcery-incarnate",
+    "activation": [],
+    "textOnly": {
+      "en": "Innate Sorcery can be activated for 2 Sorcery Points when no use is left, and allows two Metamagic options per spell while active: a rule of play, no sheet number.",
+      "fr": "Sorcellerie innée peut être activée pour 2 points de Sorcellerie quand il ne reste aucune utilisation, et permet deux options de Métamagie par sort tant qu’elle est active : règle de jeu, aucun nombre de la feuille.",
+      "es": "Hechicería innata puede activarse por 2 puntos de hechicería cuando no quedan usos, y permite dos opciones de Metamagia por conjuro mientras está activa: regla de juego, ningún número en la hoja."
+    },
+    "source": {
+      "page": 66,
+      "frPage": 52,
+      "section": "Classes > Sorcerer Class Features > Level 7: Sorcery Incarnate"
+    }
+  },
+  {
+    "id": "sorcerer:arcane-apotheosis",
+    "textOnly": {
+      "en": "While Innate Sorcery is active, one Metamagic option per turn costs no Sorcery Points: applied at the table.",
+      "fr": "Tant que Sorcellerie innée est active, une option de Métamagie par tour ne coûte aucun point de Sorcellerie : appliqué à la table.",
+      "es": "Mientras Hechicería innata está activa, una opción de Metamagia por turno no cuesta puntos de hechicería: se aplica en la mesa."
+    },
+    "source": {
+      "page": 66,
+      "frPage": 52,
+      "section": "Classes > Sorcerer Class Features > Level 20: Arcane Apotheosis"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:careful-spell",
+    "computed": [
+      {
+        "id": "creatures",
+        "label": {
+          "en": "Careful Spell: creatures protected (1 Sorcery Point)",
+          "fr": "Sort prévenant : créatures protégées (1 point de Sorcellerie)",
+          "es": "Conjuro cuidadoso: criaturas protegidas (1 punto de hechicería)"
+        },
+        "parts": ["cha:min1"]
+      }
+    ],
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: the chosen creatures automatically succeed on the save and take no damage on a half-damage save.",
+      "fr": "Coût 1 point de Sorcellerie : les créatures choisies réussissent automatiquement le jet de sauvegarde et ne subissent aucun dégât quand la réussite les réduirait de moitié.",
+      "es": "Coste 1 punto de hechicería: las criaturas elegidas superan automáticamente la tirada de salvación y no reciben daño si la superación les haría recibir la mitad."
+    },
+    "source": {
+      "page": 66,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Careful Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:distant-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: double the range of a spell with a range of 5+ feet, or make a Touch spell's range 30 feet: applied on the spell.",
+      "fr": "Coût 1 point de Sorcellerie : double la portée d’un sort de portée 1,50 m ou plus, ou porte à 9 m un sort de portée contact : appliqué sur le sort.",
+      "es": "Coste 1 punto de hechicería: duplica el alcance de un conjuro con alcance de 1,5 m o más, o lleva a 9 m el alcance de un conjuro de toque: se aplica en el conjuro."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Distant Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:empowered-spell",
+    "computed": [
+      {
+        "id": "dice",
+        "label": {
+          "en": "Empowered Spell: damage dice rerolled (1 Sorcery Point)",
+          "fr": "Sort renforcé : dés de dégâts relancés (1 point de Sorcellerie)",
+          "es": "Conjuro potenciado: dados de daño repetidos (1 punto de hechicería)"
+        },
+        "parts": ["cha:min1"]
+      }
+    ],
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: reroll up to that many damage dice, keep the new rolls; usable with another Metamagic option.",
+      "fr": "Coût 1 point de Sorcellerie : relancer jusqu’à ce nombre de dés de dégâts et garder les nouveaux résultats ; cumulable avec une autre option de Métamagie.",
+      "es": "Coste 1 punto de hechicería: vuelve a tirar hasta esa cantidad de dados de daño y quédate con los nuevos resultados; compatible con otra opción de Metamagia."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Empowered Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:extended-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: double the duration of a spell lasting 1 minute or more (max 24 hours), with Advantage on Concentration saves for it: applied on the spell.",
+      "fr": "Coût 1 point de Sorcellerie : double la durée d’un sort d’au moins 1 minute (maximum 24 heures), avec Avantage aux jets de sauvegarde de Concentration pour ce sort : appliqué sur le sort.",
+      "es": "Coste 1 punto de hechicería: duplica la duración de un conjuro de 1 minuto o más (máximo 24 horas), con ventaja en las salvaciones de concentración para ese conjuro: se aplica en el conjuro."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Extended Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:heightened-spell",
+    "textOnly": {
+      "en": "Cost 2 Sorcery Points: one target has Disadvantage on its saves against the spell: applied at the dice.",
+      "fr": "Coût 2 points de Sorcellerie : une cible a le Désavantage à ses jets de sauvegarde contre le sort : appliqué aux dés.",
+      "es": "Coste 2 puntos de hechicería: un objetivo tiene desventaja en sus salvaciones contra el conjuro: se aplica a los dados."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Heightened Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:quickened-spell",
+    "activation": [],
+    "textOnly": {
+      "en": "Cost 2 Sorcery Points: a spell with a casting time of an action is cast as a Bonus Action (no other level 1+ spell this turn): an action economy rule, no sheet number.",
+      "fr": "Coût 2 points de Sorcellerie : un sort dont l’incantation est une action se lance par une action bonus (aucun autre sort de niveau 1+ ce tour) : règle d’économie d’actions, aucun nombre de la feuille.",
+      "es": "Coste 2 puntos de hechicería: un conjuro con un tiempo de lanzamiento de una acción se lanza como acción adicional (ningún otro conjuro de nivel 1+ este turno): regla de economía de acciones, ningún número en la hoja."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Quickened Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:seeking-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: reroll the d20 of a missed spell attack; usable with another Metamagic option: applied at the dice.",
+      "fr": "Coût 1 point de Sorcellerie : relancer le d20 d’une attaque de sort ratée ; cumulable avec une autre option de Métamagie : appliqué aux dés.",
+      "es": "Coste 1 punto de hechicería: vuelve a tirar el d20 de un ataque de conjuro fallido; compatible con otra opción de Metamagia: se aplica a los dados."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Seeking Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:subtle-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: cast without Verbal, Somatic or Material components (except consumed or costly ones): no sheet number.",
+      "fr": "Coût 1 point de Sorcellerie : lancer sans composantes verbales, somatiques ni matérielles (sauf celles consommées ou à coût indiqué) : aucun nombre de la feuille.",
+      "es": "Coste 1 punto de hechicería: lanza sin componentes verbales, somáticos ni materiales (salvo los que se consumen o tienen coste): ningún número en la hoja."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Subtle Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:transmuted-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: change the spell's damage type among Acid, Cold, Fire, Lightning, Poison and Thunder: applied on the spell.",
+      "fr": "Coût 1 point de Sorcellerie : changer le type de dégâts du sort parmi acide, froid, feu, foudre, poison et tonnerre : appliqué sur le sort.",
+      "es": "Coste 1 punto de hechicería: cambia el tipo de daño del conjuro entre ácido, frío, fuego, relámpago, veneno y trueno: se aplica en el conjuro."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 53,
+      "section": "Classes > Sorcerer > Metamagic Options > Transmuted Spell"
+    }
+  },
+  {
+    "id": "sorcerer:metamagic:twinned-spell",
+    "textOnly": {
+      "en": "Cost 1 Sorcery Point: a spell that targets an additional creature when cast at a higher level has its effective level increased by 1: applied on the spell.",
+      "fr": "Coût 1 point de Sorcellerie : un sort qui cible une créature supplémentaire à un niveau supérieur voit son niveau effectif augmenter de 1 : appliqué sur le sort.",
+      "es": "Coste 1 punto de hechicería: un conjuro que afecta a una criatura adicional al lanzarse a nivel superior aumenta en 1 su nivel efectivo: se aplica en el conjuro."
+    },
+    "source": {
+      "page": 67,
+      "frPage": 52,
+      "section": "Classes > Sorcerer > Metamagic Options > Twinned Spell"
+    }
+  },
+  {
+    "id": "sorcerer:draconic-sorcery:draconic-resilience",
+    "modifiers": [
+      {
+        "target": "hp.max",
+        "value": "sorcererLevel",
+        "effectName": "Draconic Resilience"
+      }
+    ],
+    "acFormula": {
+      "abilities": ["dex", "cha"],
+      "noArmor": true,
+      "noShield": false
+    },
+    "source": {
+      "page": 69,
+      "frPage": 55,
+      "section": "Classes > Sorcerer Subclass: Draconic Sorcery > Level 3: Draconic Resilience"
+    }
+  },
+  {
+    "id": "sorcerer:draconic-sorcery:draconic-spells",
+    "textOnly": {
+      "en": "The Draconic Spells table is applied automatically: its spells are always prepared and don't count (Sorts pane).",
+      "fr": "La table des sorts draconiques est appliquée automatiquement : ses sorts sont toujours préparés et ne comptent pas (volet Sorts).",
+      "es": "La tabla de conjuros dracónicos se aplica automáticamente: sus conjuros están siempre preparados y no cuentan (pestaña Conjuros)."
+    },
+    "source": {
+      "page": 70,
+      "frPage": 55,
+      "section": "Classes > Sorcerer Subclass: Draconic Sorcery > Level 3: Draconic Spells"
+    }
+  },
+  {
+    "id": "sorcerer:draconic-sorcery:elemental-affinity",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Affinity damage type",
+          "fr": "Type de dégâts d’affinité",
+          "es": "Tipo de daño de la afinidad"
+        },
+        "options": {
+          "acid": {
+            "name": {
+              "en": "Acid",
+              "fr": "Acide",
+              "es": "Ácido"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "cold": {
+            "name": {
+              "en": "Cold",
+              "fr": "Froid",
+              "es": "Frío"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          },
+          "fire": {
+            "name": {
+              "en": "Fire",
+              "fr": "Feu",
+              "es": "Fuego"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "lightning": {
+            "name": {
+              "en": "Lightning",
+              "fr": "Foudre",
+              "es": "Relámpago"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "poison": {
+            "name": {
+              "en": "Poison",
+              "fr": "Poison",
+              "es": "Veneno"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "computed": [
+      {
+        "id": "damage",
+        "label": {
+          "en": "Elemental Affinity: bonus to one damage roll of a spell of the chosen type",
+          "fr": "Affinité élémentaire : bonus à un jet de dégâts d’un sort du type choisi",
+          "es": "Afinidad elemental: bonificador a una tirada de daño de un conjuro del tipo elegido"
+        },
+        "parts": ["cha"]
+      }
+    ],
+    "source": {
+      "page": 70,
+      "frPage": 55,
+      "section": "Classes > Sorcerer Subclass: Draconic Sorcery > Level 6: Elemental Affinity"
+    }
+  },
+  {
+    "id": "sorcerer:draconic-sorcery:dragon-wings",
+    "activation": [{ "kind": "bonus-action", "when": "!toggle:dragon-wings", "setsToggle": "dragon-wings" }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "modifiers": [
+      {
+        "target": "speed.fly",
+        "value": 60,
+        "when": "toggle:dragon-wings",
+        "condition": {
+          "en": "Dragon Wings (1 hour, Bonus Action)",
+          "fr": "Ailes draconiques (1 heure, action bonus)",
+          "es": "Alas de dragón (1 hora, acción adicional)"
+        },
+        "effectName": "Dragon Wings"
+      }
+    ],
+    "textOnly": {
+      "en": "The use can be restored for 3 Sorcery Points: applied by hand on the counters.",
+      "fr": "L’utilisation peut être restaurée pour 3 points de Sorcellerie : appliqué à la main sur les compteurs.",
+      "es": "El uso puede restaurarse por 3 puntos de hechicería: se aplica a mano en los contadores."
+    },
+    "source": {
+      "page": 70,
+      "frPage": 55,
+      "section": "Classes > Sorcerer Subclass: Draconic Sorcery > Level 14: Dragon Wings"
+    }
+  },
+  {
+    "id": "sorcerer:draconic-sorcery:dragon-companion",
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "Summon Dragon without a Material component, once per Long Rest without a slot, optionally without Concentration (1 minute): the summoned dragon is a card in the Combat pane.",
+      "fr": "Convocation de dragon sans composante matérielle, une fois par repos long sans emplacement, au choix sans Concentration (1 minute) : le dragon convoqué est une carte du volet Combat.",
+      "es": "Invocar dragón sin componente material, una vez por descanso largo sin espacio de conjuro, opcionalmente sin concentración (1 minuto): el dragón invocado es una tarjeta de la pestaña Combate."
+    },
+    "source": {
+      "page": 70,
+      "frPage": 55,
+      "section": "Classes > Sorcerer Subclass: Draconic Sorcery > Level 18: Dragon Companion"
+    }
+  }
+]

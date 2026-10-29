@@ -1,0 +1,178 @@
+[
+  {
+    "id": "acolyte",
+    "name": {
+      "en": "Acolyte",
+      "fr": "Acolyte",
+      "es": "Acólito"
+    },
+    "abilities": [
+      "int",
+      "wis",
+      "cha"
+    ],
+    "feat": "magic-initiate",
+    "featText": {
+      "en": "Magic Initiate (Cleric) (see “Feats”)",
+      "fr": "Initié à la magie (Clerc) (cf. « Dons »)",
+      "es": "Iniciado en la magia (clérigo) (consulta el capítulo “Dotes”)"
+    },
+    "skills": [
+      "insight",
+      "religion"
+    ],
+    "tool": {
+      "en": "Calligrapher’s Supplies",
+      "fr": "matériel de calligraphe",
+      "es": "suministros de calígrafo"
+    },
+    "equipment": {
+      "en": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+      "fr": "Choisissez A ou B : (A) Matériel de calligraphe, livre (de prières), symbole sacré, parchemin (10 feuilles), robe, 8 po ; ou (B) 50 po",
+      "es": "elige A o B: (A) suministros de calígrafo, libro (de oraciones), pergamino (10 hojas), símbolo sagrado, túnica y 8 po, o (B) 50 po"
+    },
+    "text": {
+      "en": "<p class=\"field\"><strong>Ability Scores:</strong> Intelligence, Wisdom, Charisma</p><p class=\"field\"><strong>Feat:</strong> Magic Initiate (Cleric) (see “Feats”)</p><p class=\"field\"><strong>Skill Proficiencies:</strong> Insight and Religion</p><p class=\"field\"><strong>Tool Proficiency:</strong> Calligrapher’s Supplies</p><p class=\"field\"><strong>Equipment:</strong> <em>Choose A or B:</em> (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP</p>",
+      "fr": "<p class=\"field\"><strong>Valeurs de caractéristique :</strong> Intelligence, Sagesse, Charisme</p><p class=\"field\"><strong>Don :</strong> Initié à la magie (Clerc) (cf. « Dons »)</p><p class=\"field\"><strong>Maîtrises de compétence :</strong> Intuition et Religion</p><p class=\"field\"><strong>Maîtrise d’outils :</strong> matériel de calligraphe</p><p class=\"field\"><strong>Équipement :</strong> <em>Choisissez A ou B :</em> (A) Matériel de calligraphe, livre (de prières), symbole sacré, parchemin (10 feuilles), robe, 8 po ; ou (B) 50 po</p>",
+      "es": "<p class=\"field\"><strong>Puntuaciones de característica:</strong> Inteligencia, Sabiduría, Carisma</p><p class=\"field\"><strong>Dote:</strong> Iniciado en la magia (clérigo) (consulta el capítulo “Dotes”)</p><p class=\"field\"><strong>Competencias en habilidades:</strong> Perspicacia y Religión</p><p class=\"field\"><strong>Competencia con herramientas:</strong> suministros de calígrafo</p><p class=\"field\"><strong>Equipo:</strong> <em>elige A o B:</em> (A) suministros de calígrafo, libro (de oraciones), pergamino (10 hojas), símbolo sagrado, túnica y 8 po, o (B) 50 po</p>"
+    },
+    "source": {
+      "page": 83,
+      "frPage": 87,
+      "section": "Character Origins > Background Descriptions > Acolyte",
+      "esPage": 89
+    }
+  },
+  {
+    "id": "criminal",
+    "name": {
+      "en": "Criminal",
+      "fr": "Criminel",
+      "es": "Criminal"
+    },
+    "abilities": [
+      "dex",
+      "con",
+      "int"
+    ],
+    "feat": "alert",
+    "featText": {
+      "en": "Alert (see “Feats”)",
+      "fr": "Vigilant (cf. « Dons »)",
+      "es": "Alerta (consulta el capítulo “Dotes”)"
+    },
+    "skills": [
+      "sleight-of-hand",
+      "stealth"
+    ],
+    "tool": {
+      "en": "Thieves’ Tools",
+      "fr": "outils de voleur",
+      "es": "herramientas de ladrón"
+    },
+    "equipment": {
+      "en": "Choose A or B: (A) 2 Daggers, Thieves’Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP",
+      "fr": "Choisissez A ou B : (A) 2 dagues, outils de voleur, 2 bourses, pied-de-biche, tenue de voyage, 16 po ; ou (B) 50 po",
+      "es": "elige A o B: (A) 2 dagas, herramientas de ladrón, palanqueta, 2 bolsas, ropas de viaje y 16 po, o (B) 50 po"
+    },
+    "text": {
+      "en": "<p class=\"field\"><strong>Ability Scores:</strong> Dexterity, Constitution, Intelligence</p><p class=\"field\"><strong>Feat:</strong> Alert (see “Feats”)</p><p class=\"field\"><strong>Skill Proficiencies:</strong> Sleight of Hand and Stealth</p><p class=\"field\"><strong>Tool Proficiency:</strong> Thieves’ Tools</p><p class=\"field\"><strong>Equipment:</strong> <em>Choose A or B:</em> (A) 2 Daggers, Thieves’Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP</p>",
+      "fr": "<p class=\"field\"><strong>Valeurs de caractéristique :</strong> Dextérité, Constitution, Intelligence</p><p class=\"field\"><strong>Don :</strong> Vigilant (cf. « Dons »)</p><p class=\"field\"><strong>Maîtrises de compétence :</strong> Discrétion et Escamotage</p><p class=\"field\"><strong>Maîtrise d’outils :</strong> outils de voleur</p><p class=\"field\"><strong>Équipement :</strong> <em>Choisissez A ou B :</em> (A) 2 dagues, outils de voleur, 2 bourses, pied-de-biche, tenue de voyage, 16 po ; ou (B) 50 po</p>",
+      "es": "<p class=\"field\"><strong>Puntuaciones de característica:</strong> Destreza, Constitución, Inteligencia</p><p class=\"field\"><strong>Dote:</strong> Alerta (consulta el capítulo “Dotes”)</p><p class=\"field\"><strong>Competencias en habilidades:</strong> Juego de manos y Sigilo</p><p class=\"field\"><strong>Competencia con herramientas:</strong> herramientas de ladrón</p><p class=\"field\"><strong>Equipo:</strong> <em>elige A o B:</em> (A) 2 dagas, herramientas de ladrón, palanqueta, 2 bolsas, ropas de viaje y 16 po, o (B) 50 po</p>"
+    },
+    "source": {
+      "page": 83,
+      "frPage": 87,
+      "section": "Character Origins > Background Descriptions > Criminal",
+      "esPage": 89
+    }
+  },
+  {
+    "id": "sage",
+    "name": {
+      "en": "Sage",
+      "fr": "Sage",
+      "es": "Erudito"
+    },
+    "abilities": [
+      "con",
+      "int",
+      "wis"
+    ],
+    "feat": "magic-initiate",
+    "featText": {
+      "en": "Magic Initiate (Wizard) (see “Feats”)",
+      "fr": "Initié à la magie (Magicien) (cf. « Dons »)",
+      "es": "Iniciado en la magia (mago) (consulta el capítulo “Dotes”)"
+    },
+    "skills": [
+      "arcana",
+      "history"
+    ],
+    "tool": {
+      "en": "Calligrapher’s Supplies",
+      "fr": "matériel de calligraphe",
+      "es": "suministros de calígrafo"
+    },
+    "equipment": {
+      "en": "Choose A or B: (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+      "fr": "Choisissez A ou B : (A) Bâton de combat, matériel de calligraphe, livre (d’histoire), parchemin (8 feuilles), robe, 8 po ; ou (B) 50 po",
+      "es": "elige A o B: (A) bastón, suministros de calígrafo, libro (de historia), pergamino (8 hojas), túnica y 8 po, o (B) 50 po"
+    },
+    "text": {
+      "en": "<p class=\"field\"><strong>Ability Scores:</strong> Constitution, Intelligence, Wisdom</p><p class=\"field\"><strong>Feat:</strong> Magic Initiate (Wizard) (see “Feats”)</p><p class=\"field\"><strong>Skill Proficiencies:</strong> Arcana and History</p><p class=\"field\"><strong>Tool Proficiency:</strong> Calligrapher’s Supplies</p><p class=\"field\"><strong>Equipment:</strong> <em>Choose A or B:</em> (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP</p>",
+      "fr": "<p class=\"field\"><strong>Valeurs de caractéristique :</strong> Constitution, Intelligence, Sagesse</p><p class=\"field\"><strong>Don :</strong> Initié à la magie (Magicien) (cf. « Dons »)</p><p class=\"field\"><strong>Maîtrises de compétence :</strong> Arcanes et Histoire</p><p class=\"field\"><strong>Maîtrise d’outils :</strong> matériel de calligraphe</p><p class=\"field\"><strong>Équipement :</strong> <em>Choisissez A ou B :</em> (A) Bâton de combat, matériel de calligraphe, livre (d’histoire), parchemin (8 feuilles), robe, 8 po ; ou (B) 50 po</p>",
+      "es": "<p class=\"field\"><strong>Puntuaciones de característica:</strong> Constitución, Inteligencia, Sabiduría</p><p class=\"field\"><strong>Dote:</strong> Iniciado en la magia (mago) (consulta el capítulo “Dotes”)</p><p class=\"field\"><strong>Competencias en habilidades:</strong> Conocimiento arcano e Historia</p><p class=\"field\"><strong>Competencia con herramientas:</strong> suministros de calígrafo</p><p class=\"field\"><strong>Equipo:</strong> <em>elige A o B:</em> (A) bastón, suministros de calígrafo, libro (de historia), pergamino (8 hojas), túnica y 8 po, o (B) 50 po</p>"
+    },
+    "source": {
+      "page": 83,
+      "frPage": 87,
+      "section": "Character Origins > Background Descriptions > Sage",
+      "esPage": 89
+    }
+  },
+  {
+    "id": "soldier",
+    "name": {
+      "en": "Soldier",
+      "fr": "Soldat",
+      "es": "Soldado"
+    },
+    "abilities": [
+      "str",
+      "dex",
+      "con"
+    ],
+    "feat": "savage-attacker",
+    "featText": {
+      "en": "Savage Attacker (see “Feats”)",
+      "fr": "Sauvagerie martiale (cf. « Dons »)",
+      "es": "Atacante salvaje (consulta el capítulo “Dotes”)"
+    },
+    "skills": [
+      "athletics",
+      "intimidation"
+    ],
+    "tool": {
+      "en": "Choose one kind of Gaming Set (see “Equipment”)",
+      "fr": "Choisissez un type de boîte de jeux (cf. « Équipement »)",
+      "es": "elige un tipo de juego (consulta el capítulo “Equipo”)"
+    },
+    "equipment": {
+      "en": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
+      "fr": "Choisissez A ou B : (A) Arc court + 20 flèches, carquois, lance, boîte de jeux (du même type que ci-dessus), trousse de soins, tenue de voyage, 14 po ; ou (B) 50 po",
+      "es": "elige A o B: (A) lanza, arco corto, 20 flechas, aljaba, juego (el mismo que arriba), útiles de sanador, ropas de viaje y 14 po, o (B) 50 po"
+    },
+    "text": {
+      "en": "<p class=\"field\"><strong>Ability Scores:</strong> Strength, Dexterity, Constitution</p><p class=\"field\"><strong>Feat:</strong> Savage Attacker (see “Feats”)</p><p class=\"field\"><strong>Skill Proficiencies:</strong> Athletics and Intimidation</p><p class=\"field\"><strong>Tool Proficiency:</strong> <em>Choose one kind of Gaming Set</em> (see “Equipment”)</p><p class=\"field\"><strong>Equipment:</strong> <em>Choose A or B:</em> (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP</p>",
+      "fr": "<p class=\"field\"><strong>Valeurs de caractéristique :</strong> Force, Dextérité, Constitution</p><p class=\"field\"><strong>Don :</strong> Sauvagerie martiale (cf. « Dons »)</p><p class=\"field\"><strong>Maîtrises de compétence :</strong> Athlétisme et Intimidation</p><p class=\"field\"><strong>Maîtrise d’outils :</strong> <em>Choisissez un type de boîte de jeux</em> (cf. « Équipement »)</p><p class=\"field\"><strong>Équipement :</strong> <em>Choisissez A ou B :</em> (A) Arc court + 20 flèches, carquois, lance, boîte de jeux (du même type que ci-dessus), trousse de soins, tenue de voyage, 14 po ; ou (B) 50 po</p>",
+      "es": "<p class=\"field\"><strong>Puntuaciones de característica:</strong> Fuerza, Destreza, Constitución</p><p class=\"field\"><strong>Dote:</strong> Atacante salvaje (consulta el capítulo “Dotes”)</p><p class=\"field\"><strong>Competencias en habilidades:</strong> Atletismo e Intimidación</p><p class=\"field\"><strong>Competencia con herramientas:</strong> <em>elige un tipo de juego</em> (consulta el capítulo “Equipo”)</p><p class=\"field\"><strong>Equipo:</strong> <em>elige A o B:</em> (A) lanza, arco corto, 20 flechas, aljaba, juego (el mismo que arriba), útiles de sanador, ropas de viaje y 14 po, o (B) 50 po</p>"
+    },
+    "source": {
+      "page": 83,
+      "frPage": 87,
+      "section": "Character Origins > Background Descriptions > Soldier",
+      "esPage": 89
+    }
+  }
+]

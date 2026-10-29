@@ -1,0 +1,338 @@
+[
+  {
+    "id": "cleric:spellcasting",
+    "textOnly": {
+      "en": "Cantrips, spell slots and prepared spells come from the Cleric Features table (Spells pane); Wisdom is the spellcasting ability; a Holy Symbol is the Spellcasting Focus.",
+      "fr": "Sorts mineurs, emplacements et sorts préparés viennent de la table des aptitudes du Clerc (volet Sorts) ; la Sagesse est la caractéristique d’incantation ; un symbole sacré sert de focaliseur.",
+      "es": "Trucos, espacios de conjuro y conjuros preparados salen de la tabla de rasgos de clérigo (pestaña Conjuros); la Sabiduría es la aptitud mágica; un símbolo sagrado sirve de canalizador mágico."
+    },
+    "source": {
+      "page": 36,
+      "frPage": 39,
+      "section": "Classes > Cleric > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "cleric:divine-order",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Divine Order",
+          "fr": "Ordre divin",
+          "es": "Orden divina"
+        },
+        "options": {
+          "protector": {
+            "name": {
+              "en": "Protector",
+              "fr": "Protecteur",
+              "es": "Protector"
+            },
+            "grants": [
+              {
+                "kind": "proficiency",
+                "on": "weapon.martial"
+              },
+              {
+                "kind": "proficiency",
+                "on": "armor.heavy"
+              }
+            ]
+          },
+          "thaumaturge": {
+            "name": {
+              "en": "Thaumaturge",
+              "fr": "Thaumaturge",
+              "es": "Taumaturgo"
+            },
+            "modifiers": [
+              {
+                "target": "cantrips.cleric",
+                "value": 1,
+                "effectName": "Thaumaturge"
+              },
+              {
+                "target": "skill.arcana",
+                "value": "wis:min1",
+                "effectName": "Thaumaturge"
+              },
+              {
+                "target": "skill.religion",
+                "value": "wis:min1",
+                "effectName": "Thaumaturge"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 37,
+      "frPage": 39,
+      "section": "Classes > Cleric > Level 1: Divine Order"
+    }
+  },
+  {
+    "id": "cleric:channel-divinity",
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic",
+        "name": { "en": "Divine Spark", "fr": "Étincelle divine", "es": "Chispa divina" },
+        "trigger": {
+          "en": "A creature within 30 ft: heal it, or it takes Necrotic or Radiant damage (Con save for half).",
+          "fr": "Une créature à 9 m : la soigner, ou lui infliger des dégâts nécrotiques ou radiants (JS de Con pour la moitié).",
+          "es": "Una criatura a 9 m: curarla, o hacerle daño necrótico o radiante (salvación de Con para la mitad)."
+        }
+      },
+      {
+        "kind": "action",
+        "action": "magic",
+        "name": { "en": "Turn Undead", "fr": "Renvoi des morts-vivants", "es": "Expulsar muertos vivientes" },
+        "trigger": {
+          "en": "Undead within 30 ft: Wisdom save or Frightened and Incapacitated for 1 minute.",
+          "fr": "Morts-vivants à 9 m : JS de Sagesse ou Effrayés et Neutralisés pendant 1 minute.",
+          "es": "Muertos vivientes a 9 m: salvación de Sabiduría o Asustados e Incapacitados durante 1 minuto."
+        }
+      }
+    ],
+    "uses": {
+      "count": "channelDivinity",
+      "per": "long",
+      "shortRestRegain": 1
+    },
+    "computed": [
+      {
+        "id": "divine-spark",
+        "label": {
+          "en": "Divine Spark: d8s + Wisdom modifier, healing or Necrotic/Radiant damage (Con save, half on a success)",
+          "fr": "Étincelle divine : d8 + modificateur de Sagesse, soins ou dégâts nécrotiques/radiants (sauvegarde de Con, moitié en cas de réussite)",
+          "es": "Chispa divina: d8 + modificador por Sabiduría, curación o daño necrótico/radiante (salvación de Constitución, la mitad si la supera)"
+        },
+        "parts": ["wis"],
+        "dice": "1d8",
+        "diceByLevel": {
+          "2": "1d8",
+          "7": "2d8",
+          "13": "3d8",
+          "18": "4d8"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Turn Undead: Wisdom saving throw against your spell save DC, Frightened and Incapacitated for 1 minute. The Divine Spark dice step with the Cleric level: shown in the label, the number is the Wisdom modifier.",
+      "fr": "Renvoi des morts-vivants : jet de sauvegarde de Sagesse contre votre DD de sauvegarde des sorts, Effrayé et Neutralisé pendant 1 minute. Les d8 d’Étincelle divine augmentent avec le niveau de Clerc : indiqués dans le libellé, le nombre affiché est le modificateur de Sagesse.",
+      "es": "Expulsar muertos vivientes: tirada de salvación de Sabiduría contra la CD de salvación de tus conjuros, asustado e incapacitado durante 1 minuto. Los d8 de Chispa divina aumentan con el nivel de clérigo: se indican en la etiqueta, el número mostrado es el modificador por Sabiduría."
+    },
+    "source": {
+      "page": 37,
+      "frPage": 39,
+      "section": "Classes > Cleric > Level 2: Channel Divinity"
+    }
+  },
+  {
+    "id": "cleric:sear-undead",
+    "computed": [
+      {
+        "id": "dice",
+        "label": {
+          "en": "Sear Undead: number of d8s of Radiant damage to each Undead that fails its save against Turn Undead (Wisdom modifier, minimum 1)",
+          "fr": "Calcination de Mort-vivant : nombre de d8 de dégâts radiants à chaque mort-vivant qui rate sa sauvegarde contre Renvoi des morts-vivants (modificateur de Sagesse, minimum 1)",
+          "es": "Abrasar muertos vivientes: número de d8 de daño radiante a cada muerto viviente que falle su salvación contra Expulsar muertos vivientes (modificador por Sabiduría, mínimo 1)"
+        },
+        "parts": ["wis:min1"]
+      }
+    ],
+    "source": {
+      "page": 37,
+      "frPage": 40,
+      "section": "Classes > Cleric > Level 5: Sear Undead"
+    }
+  },
+  {
+    "id": "cleric:blessed-strikes",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Blessed Strikes",
+          "fr": "Impacts bénis",
+          "es": "Golpes benditos"
+        },
+        "options": {
+          "divine-strike": {
+            "name": {
+              "en": "Divine Strike",
+              "fr": "Frappe divine",
+              "es": "Golpe divino"
+            },
+            "modifiers": [
+              {
+                "target": "extraDamage.all",
+                "value": "1d8",
+                "effectName": "Divine Strike",
+                "condition": {
+                  "en": "Necrotic or Radiant, once per turn on a hit with a weapon",
+                  "fr": "nécrotiques ou radiants, une fois par tour sur un coup au but avec une arme",
+                  "es": "necrótico o radiante, una vez por turno al impactar con un arma"
+                }
+              }
+            ]
+          },
+          "potent-spellcasting": {
+            "name": {
+              "en": "Potent Spellcasting",
+              "fr": "Incantation puissante",
+              "es": "Lanzamiento potente"
+            },
+            "computed": [
+              {
+                "id": "potent-spellcasting",
+                "label": {
+                  "en": "Potent Spellcasting: bonus to the damage of Cleric cantrips (Wisdom modifier)",
+                  "fr": "Incantation puissante : bonus aux dégâts des sorts mineurs de Clerc (modificateur de Sagesse)",
+                  "es": "Lanzamiento potente: bonificador al daño de los trucos de clérigo (modificador por Sabiduría)"
+                },
+                "parts": ["wis"]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 38,
+      "frPage": 40,
+      "section": "Classes > Cleric > Level 7: Blessed Strikes"
+    }
+  },
+  {
+    "id": "cleric:divine-intervention",
+    "activation": [{ "kind": "action", "action": "magic" }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "Magic action: cast a Cleric spell of level 5 or lower (no Reaction spells) without a spell slot or Material components.",
+      "fr": "Action Magie : lancez un sort de Clerc de niveau 5 ou inférieur (pas de sort à Réaction) sans emplacement ni composantes matérielles.",
+      "es": "Acción de magia: lanza un conjuro de clérigo de nivel 5 o inferior (no de reacción) sin gastar un espacio de conjuro ni componentes materiales."
+    },
+    "source": {
+      "page": 38,
+      "frPage": 40,
+      "section": "Classes > Cleric > Level 10: Divine Intervention"
+    }
+  },
+  {
+    "id": "cleric:improved-blessed-strikes",
+    "textOnly": {
+      "en": "Needs engine: the Divine Strike extra damage becomes 2d8 (the Blessed Strikes option is a level 7 choice and this entry can't change its dice); Potent Spellcasting grants Temporary Hit Points equal to twice the Wisdom modifier when a Cleric cantrip deals damage.",
+      "fr": "Needs engine : les dégâts supplémentaires de Frappe divine passent à 2d8 (l’option d’Impacts bénis est un choix du niveau 7 et cette entrée ne peut pas en changer les dés) ; Incantation puissante accorde des points de vie temporaires égaux à deux fois le modificateur de Sagesse quand un sort mineur de Clerc inflige des dégâts.",
+      "es": "Requiere el motor: el daño adicional de Golpe divino pasa a 2d8 (la opción de Golpes benditos es una elección de nivel 7 y esta entrada no puede cambiar sus dados); Lanzamiento potente otorga puntos de golpe temporales iguales al doble del modificador por Sabiduría cuando un truco de clérigo causa daño."
+    },
+    "source": {
+      "page": 38,
+      "frPage": 40,
+      "section": "Classes > Cleric > Level 14: Improved Blessed Strikes"
+    }
+  },
+  {
+    "id": "cleric:greater-divine-intervention",
+    "textOnly": {
+      "en": "Divine Intervention may cast Wish; then it can't be used again for 2d4 Long Rests. Tracked by hand.",
+      "fr": "Intervention divine peut lancer Souhait ; elle est alors indisponible pendant 2d4 repos longs. À suivre à la main.",
+      "es": "Intercesión divina puede lanzar Deseo; después no puede volver a usarse durante 2d4 descansos largos. Se lleva a mano."
+    },
+    "source": {
+      "page": 38,
+      "frPage": 40,
+      "section": "Classes > Cleric > Level 20: Greater Divine Intervention"
+    }
+  },
+  {
+    "id": "cleric:life-domain:disciple-of-life",
+    "computed": [
+      {
+        "id": "bonus",
+        "label": {
+          "en": "Disciple of Life: additional Hit Points restored by a healing spell cast with a spell slot, 2 + the slot's level",
+          "fr": "Disciple de la Vie : points de vie supplémentaires rendus par un sort de soins lancé avec un emplacement, 2 + le niveau de l’emplacement",
+          "es": "Discípulo de la vida: puntos de golpe adicionales que recupera un conjuro de curación lanzado con un espacio de conjuro, 2 + el nivel del espacio"
+        },
+        "parts": [2]
+      }
+    ],
+    "source": {
+      "page": 40,
+      "frPage": 42,
+      "section": "Classes > Cleric Subclass: Life Domain > Level 3: Disciple of Life"
+    }
+  },
+  {
+    "id": "cleric:life-domain:life-domain-spells",
+    "textOnly": {
+      "en": "The Life Domain Spells table is applied automatically: its spells are always prepared at the listed Cleric levels (Spells pane) and don't count against the prepared number.",
+      "fr": "La table des sorts du Domaine de la Vie est appliquée automatiquement : ses sorts sont toujours préparés aux niveaux de Clerc indiqués (volet Sorts) et ne comptent pas dans le nombre de sorts préparés.",
+      "es": "La tabla de conjuros del dominio de la vida se aplica automáticamente: sus conjuros están siempre preparados a los niveles de clérigo indicados (pestaña Conjuros) y no cuentan para el número de conjuros preparados."
+    },
+    "source": {
+      "page": 40,
+      "frPage": 42,
+      "section": "Classes > Cleric Subclass: Life Domain > Level 3: Life Domain Spells"
+    }
+  },
+  {
+    "id": "cleric:life-domain:preserve-life",
+    "activation": [{ "kind": "action", "action": "magic", "cost": { "resource": "cleric:channel-divinity" } }],
+    "computed": [
+      {
+        "id": "pool",
+        "label": {
+          "en": "Preserve Life: Hit Points to divide among Bloodied creatures within 30 feet (five times the Cleric level; a creature regains up to half its maximum), one Channel Divinity use",
+          "fr": "Survivance : points de vie à répartir entre les créatures en Péril à 9 m (cinq fois le niveau de Clerc ; une créature ne dépasse pas la moitié de son maximum), une utilisation de Conduit divin",
+          "es": "Preservar vida: puntos de golpe a repartir entre criaturas maltrechas a 9 m o menos (cinco veces el nivel de clérigo; una criatura no puede superar la mitad de su máximo), un uso de Canalizar divinidad"
+        },
+        "parts": ["clericLevel*5"]
+      }
+    ],
+    "source": {
+      "page": 40,
+      "frPage": 42,
+      "section": "Classes > Cleric Subclass: Life Domain > Level 3: Preserve Life"
+    }
+  },
+  {
+    "id": "cleric:life-domain:blessed-healer",
+    "computed": [
+      {
+        "id": "bonus",
+        "label": {
+          "en": "Blessed Healer: Hit Points you regain after casting a healing spell with a spell slot on others, 2 + the slot's level",
+          "fr": "Guérisseur béni : points de vie que vous récupérez après avoir lancé un sort de soins avec un emplacement sur autrui, 2 + le niveau de l’emplacement",
+          "es": "Sanador bendito: puntos de golpe que recuperas tras lanzar sobre otros un conjuro de curación con un espacio de conjuro, 2 + el nivel del espacio"
+        },
+        "parts": [2]
+      }
+    ],
+    "source": {
+      "page": 40,
+      "frPage": 42,
+      "section": "Classes > Cleric Subclass: Life Domain > Level 6: Blessed Healer"
+    }
+  },
+  {
+    "id": "cleric:life-domain:supreme-healing",
+    "textOnly": {
+      "en": "Healing dice of spells and Channel Divinity are maximized instead of rolled. Applied at the dice.",
+      "fr": "Les dés de soins des sorts et du Conduit divin donnent leur maximum au lieu d’être lancés. Appliqué aux dés.",
+      "es": "Los dados de curación de los conjuros y de Canalizar divinidad dan su valor máximo en lugar de tirarse. Se aplica a los dados."
+    },
+    "source": {
+      "page": 40,
+      "frPage": 42,
+      "section": "Classes > Cleric Subclass: Life Domain > Level 17: Supreme Healing"
+    }
+  }
+]

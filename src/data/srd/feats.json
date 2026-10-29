@@ -1,0 +1,560 @@
+[
+  {
+    "id": "ability-score-improvement",
+    "name": {
+      "en": "Ability Score Improvement",
+      "fr": "Amélioration de caractéristique",
+      "es": "Mejora de característica"
+    },
+    "category": "general",
+    "categoryText": {
+      "en": "General Feat (Prerequisite: Level 4+)",
+      "fr": "Don général (prérequis : niveau 4 ou supérieur)",
+      "es": "Dote general (requisitos: nivel 4 o más)"
+    },
+    "text": {
+      "en": "<p>Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can’t increase an ability score above 20.</p><p><strong>Repeatable.</strong> You can take this feat more than once.</p>",
+      "fr": "<p>Augmentez de 2 la valeur de caractéristique de votre choix, ou augmentez de 1 deux valeurs de caractéristique de votre choix. Ce don ne peut pas porter une valeur de caractéristique au-delà de 20.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d’une fois.</p>",
+      "es": "<p>Aumenta en 2 una puntuación de característica que elijas o aumenta dos en 1 cada una. Esta dote no puede aumentar una puntuación de característica por encima de 20.</p><p><strong>Repetible.</strong> Puedes elegir esta dote más de una vez.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > General Feats > Ability Score Improvement",
+      "esPage": 94
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 4+",
+        "fr": "niveau 4 ou supérieur",
+        "es": "nivel 4 o más"
+      },
+      "level": 4
+    },
+    "repeatable": true
+  },
+  {
+    "id": "alert",
+    "name": {
+      "en": "Alert",
+      "fr": "Vigilant",
+      "es": "Alerta"
+    },
+    "category": "origin",
+    "categoryText": {
+      "en": "Origin Feat",
+      "fr": "Don d’origines",
+      "es": "Dote de origen"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Initiative Proficiency.</strong> When you roll Initiative, you can add your Proficiency Bonus to the roll.</p><p><strong>Initiative Swap.</strong> Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can’t make this swap if you or the ally has the Incapacitated condition.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Maîtrise de l’Initiative.</strong> Lorsque vous jouez l’Initiative, ajoutez votre bonus de maîtrise au jet.</p><p><strong>Échange d’Initiative.</strong> Aussitôt après avoir joué l’Initiative, vous pouvez échanger votre Initiative avec celle d’un allié volontaire pour le combat à venir. Un tel échange est impossible si vous-même ou l’allié désigné subissez l’état Neutralisé.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Competencia en iniciativa.</strong> Cuando tires iniciativa, puedes sumar tu bonificador por competencia a la tirada.</p><p><strong>Intercambio de iniciativa.</strong> Justo después de tirar iniciativa, puedes cambiar tu iniciativa con la de un aliado que esté dispuesto a hacerlo en el mismo combate. No puedes hacer este intercambio si el aliado o tú tenéis el estado de incapacitado.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > Origin Feats > Alert",
+      "esPage": 94
+    }
+  },
+  {
+    "id": "archery",
+    "name": {
+      "en": "Archery",
+      "fr": "Archerie",
+      "es": "Tiro con arco"
+    },
+    "category": "fighting-style",
+    "categoryText": {
+      "en": "Fighting Style Feat (Prerequisite: Fighting Style Feature)",
+      "fr": "Don de Style de combat (prérequis : aptitude Style de combat)",
+      "es": "Dote de estilo de combate (requisitos: rasgo Estilo de combate)"
+    },
+    "text": {
+      "en": "<p>You gain a +2 bonus to attack rolls you make with Ranged weapons.</p>",
+      "fr": "<p>Vous recevez un bonus de +2 aux jets d’attaque effectués avec des armes à distance.</p>",
+      "es": "<p>Recibes un bonificador de +2 a las tiradas de ataque con armas a distancia.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 93,
+      "section": "Feats > Fighting Style Feats > Archery",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Fighting Style Feature",
+        "fr": "aptitude Style de combat",
+        "es": "rasgo Estilo de combate"
+      },
+      "feature": "fighting-style"
+    }
+  },
+  {
+    "id": "boon-of-combat-prowess",
+    "name": {
+      "en": "Boon of Combat Prowess",
+      "fr": "Faveur de prouesse martiale",
+      "es": "Don de la pericia en combate"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><strong>Peerless Aim.</strong> When you miss with an attack roll, you can hit instead. Once you use this benefit, you can’t use it again until the start of your next turn.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Visée infaillible.</strong> Lorsque vous échouez à un jet d’attaque, vous pouvez décider que cette attaque touche. Une fois ce bénéfice utilisé, vous ne pouvez plus y recourir jusqu’au début de votre tour suivant.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta una puntuación de característica de tu elección en 1, hasta un máximo de 30.</p><p><strong>Precisión sin igual.</strong> Cuando falles con una tirada de ataque, puedes acertarla. Cuando uses este beneficio, no podrás volver a hacerlo hasta el principio de tu siguiente turno.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Epic Boon Feats > Boon of Combat Prowess",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": "any"
+  },
+  {
+    "id": "boon-of-dimensional-travel",
+    "name": {
+      "en": "Boon of Dimensional Travel",
+      "fr": "Faveur de déplacement dimensionnel",
+      "es": "Don del viaje dimensional"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><strong>Blink Steps.</strong> Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Entrechats dimensionnels.</strong> Aussitôt après avoir effectué l’action Attaque ou Magie, vous pouvez vous téléporter d’un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta una puntuación de característica de tu elección en 1, hasta un máximo de 30.</p><p><strong>Pasos desplazadores.</strong> Inmediatamente después de que realices la acción de atacar o la de magia, puedes teletransportarte hasta 9 m a un espacio sin ocupar que puedas ver.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Epic Boon Feats > Boon of Dimensional Travel",
+      "esPage": 96
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": "any"
+  },
+  {
+    "id": "boon-of-fate",
+    "name": {
+      "en": "Boon of Fate",
+      "fr": "Faveur du destin",
+      "es": "Don del destino"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><strong>Improve Fate.</strong> When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can’t use it again until you roll Initiative or finish a Short or Long Rest.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Destin aiguillé.</strong> Lorsque vous-même ou une autre créature dans un rayon de 18 m réussissez ou échouez à un Test d20, vous pouvez lancer 2d4 et appliquer le total obtenu comme bonus ou malus au résultat du d20. Une fois ce bénéfice utilisé, vous devez jouer l’Initiative ou terminer un Repos court ou long pour pouvoir y recourir de nouveau.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta una puntuación de característica de tu elección en 1, hasta un máximo de 30.</p><p><strong>Mejorar el destino.</strong> Cuando tú u otra criatura que esté a 18 m o menos de ti superéis o falléis una prueba con d20, puedes tirar 2d4 y aplicar el resultado total como bonificador o penalizador a la tirada del d20. Cuando uses este beneficio, no podrás volver a hacerlo hasta que tires iniciativa o finalices un descanso corto o largo.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 94,
+      "section": "Feats > Epic Boon Feats > Boon of Fate",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": "any"
+  },
+  {
+    "id": "boon-of-irresistible-offense",
+    "name": {
+      "en": "Boon of Irresistible Offense",
+      "fr": "Faveur d’attaque irrésistible",
+      "es": "Don del ataque imparable"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase your Strength or Dexterity score by 1, to a maximum of 30.</p><p><strong>Overcome Defenses.</strong> The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.</p><p><strong>Overwhelming Strike.</strong> When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage’s type is the same as the attack’s type.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Défenses surmontées.</strong> Les dégâts contondants, perforants et tranchants que vous infligez ne sont pas affectés par la Résistance.</p><p><strong>Frappe écrasante.</strong> Lorsque vous obtenez un 20 au d20 d’un jet d’attaque, vous pouvez infliger des dégâts supplémentaires à la cible à hauteur de la valeur de caractéristique augmentée par ce don. Ces dégâts supplémentaires sont du même type que celui de l’attaque.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta tu puntuación de Fuerza o Destreza en 1, hasta un máximo de 30.</p><p><strong>Superar las defensas.</strong> El daño contundente, cortante y perforante que causas siempre ignora la resistencia.</p><p><strong>Golpe arrollador.</strong> Cuando saques un 20 en el d20 en una tirada de ataque, puedes infligir una cantidad de daño adicional al objetivo igual a la puntuación de característica aumentada con esta dote. El daño adicional es del mismo tipo que el del ataque.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Epic Boon Feats > Boon of Irresistible Offense",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": [
+      "str",
+      "dex"
+    ]
+  },
+  {
+    "id": "boon-of-spell-recall",
+    "name": {
+      "en": "Boon of Spell Recall",
+      "fr": "Faveur de mémoire magique",
+      "es": "Don del recuerdo de conjuros"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+, Spellcasting Feature)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur, aptitude Sorts)",
+      "es": "Dote de don épico (requisito: nivel 19 o más, rasgo Lanzamiento de conjuros)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p><strong>Free Casting.</strong> Whenever you cast a spell with a level 1–4 spell slot, roll 1d4. If the number you roll is the same as the slot’s level, the slot isn’t expended.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur d’Intelligence, de Sagesse ou de Charisme augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Incantation gratuite.</strong> Chaque fois que vous lancez un sort avec un emplacement de sort du 1er au 4e niveau, lancez 1d4. Si le résultat obtenu est égal au niveau de l’emplacement, celui-ci n’est pas dépensé.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta tu puntuación de Inteligencia, Sabiduría o Carisma en 1, hasta un máximo de 30.</p><p><strong>Lanzamiento gratuito.</strong> Cada vez que lances un conjuro con un espacio de conjuro de nivel 1 a 4, tira 1d4. Si el número que sacas es el mismo que el nivel del espacio, este no se gasta.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Epic Boon Feats > Boon of Spell Recall",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+, Spellcasting Feature",
+        "fr": "niveau 19 ou supérieur, aptitude Sorts",
+        "es": "nivel 19 o más, rasgo Lanzamiento de conjuros"
+      },
+      "level": 19,
+      "feature": "spellcasting"
+    },
+    "abilityIncrease": [
+      "int",
+      "wis",
+      "cha"
+    ]
+  },
+  {
+    "id": "boon-of-the-night-spirit",
+    "name": {
+      "en": "Boon of the Night Spirit",
+      "fr": "Faveur de l’esprit nocturne",
+      "es": "Don del espíritu de la noche"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><strong>Merge with Shadows.</strong> While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.</p><p><strong>Shadowy Form.</strong> While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Fusion avec l’ombre.</strong> Tant vous êtes dans une zone de Lumière faible ou de Ténèbres, vous pouvez vous octroyer l’état Invisible par une action Bonus. Cet état prend fin aussitôt après que vous avez entrepris une action, une action Bonus ou joué votre Réaction.</p><p><strong>Forme ombreuse.</strong> Tant que vous êtes dans une zone de Lumière faible ou de Ténèbres, vous avez la Résistance à tous les dégâts hormis les dégâts psychiques et radiants.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta una puntuación de característica de tu elección en 1, hasta un máximo de 30.</p><p><strong>Fusionarse con las sombras.</strong> Cuando estés en una zona de luz tenue u oscuridad, puedes otorgarte el estado de invisible como acción adicional. El estado finaliza inmediatamente después de que realices una acción, una acción adicional o una reacción.</p><p><strong>Forma sombría.</strong> Cuando estés en una zona de luz tenue u oscuridad, tienes resistencia a todo el daño excepto al psíquico y al radiante.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Epic Boon Feats > Boon of the Night Spirit",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": "any"
+  },
+  {
+    "id": "boon-of-truesight",
+    "name": {
+      "en": "Boon of Truesight",
+      "fr": "Faveur de Vision lucide",
+      "es": "Don de la visión verdadera"
+    },
+    "category": "epic-boon",
+    "categoryText": {
+      "en": "Epic Boon Feat (Prerequisite: Level 19+)",
+      "fr": "Don de faveur épique (prérequis : niveau 19 ou supérieur)",
+      "es": "Dote de don épico (requisito: nivel 19 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase one ability score of your choice by 1, to a maximum of 30.</p><p><strong>Truesight.</strong> You have Truesight with a range of 60 feet.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30.</p><p><strong>Vision lucide.</strong> Vous disposez de la Vision lucide sur 18 m.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta una puntuación de característica de tu elección en 1, hasta un máximo de 30.</p><p><strong>Visión verdadera.</strong> Tienes visión verdadera hasta 18 m.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 94,
+      "section": "Feats > Epic Boon Feats > Boon of Truesight",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 19+",
+        "fr": "niveau 19 ou supérieur",
+        "es": "nivel 19 o más"
+      },
+      "level": 19
+    },
+    "abilityIncrease": "any"
+  },
+  {
+    "id": "defense",
+    "name": {
+      "en": "Defense",
+      "fr": "Défense",
+      "es": "Defensa"
+    },
+    "category": "fighting-style",
+    "categoryText": {
+      "en": "Fighting Style Feat (Prerequisite: Fighting Style Feature)",
+      "fr": "Don de Style de combat (prérequis : aptitude Style de combat)",
+      "es": "Dote de estilo de combate (requisitos: rasgo Estilo de combate)"
+    },
+    "text": {
+      "en": "<p>While you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.</p>",
+      "fr": "<p>Tant que vous portez une armure légère, intermédiaire ou lourde, vous recevez un bonus de +1 à la Classe d’armure.</p>",
+      "es": "<p>Mientras lleves puesta una armadura ligera, media o pesada, recibes un bonificador de +1 a la clase de armadura.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Fighting Style Feats > Defense",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Fighting Style Feature",
+        "fr": "aptitude Style de combat",
+        "es": "rasgo Estilo de combate"
+      },
+      "feature": "fighting-style"
+    }
+  },
+  {
+    "id": "grappler",
+    "name": {
+      "en": "Grappler",
+      "fr": "Empoigneur",
+      "es": "Apresador"
+    },
+    "category": "general",
+    "categoryText": {
+      "en": "General Feat (Prerequisite: Level 4+, Strength or Dexterity 13+)",
+      "fr": "Don général (prérequis : niveau 4 ou supérieur, Force ou Dextérité 13 ou plus)",
+      "es": "Dote general (requisitos: nivel 4 o más, Fuerza o Destreza 13 o más)"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Ability Score Increase.</strong> Increase your Strength or Dexterity score by 1, to a maximum of 20.</p><p><strong>Punch and Grab.</strong> When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.</p><p><strong>Attack Advantage.</strong> You have Advantage on attack rolls against a creature Grappled by you.</p><p><strong>Fast Wrestler.</strong> You don’t have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 20.</p><p><strong>Frappe et empoignade.</strong> Lorsque vous touchez une créature avec une attaque à mains nues dans le cadre de l’action Attaque à votre tour, vous pouvez recourir simultanément aux options Dégâts et Lutte. Vous ne pouvez recourir à ce bénéfice qu’une seule fois par tour.</p><p><strong>Attaque avec avantage.</strong> Vous avez l’Avantage aux jets d’attaque contre une créature à laquelle vous imposez l’état Agrippé.</p><p><strong>Lutteur rapide.</strong> Votre Vitesse n’est pas réduite de moitié lorsque vous déplacez une créature à laquelle vous imposez l’état Agrippé, à condition que cette créature soit de votre taille ou d’une catégorie inférieure.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Mejora de característica.</strong> Aumenta tu puntuación de Fuerza o Destreza en 1, hasta un máximo de 20.</p><p><strong>Golpear y agarrar.</strong> Cuando aciertes a una criatura con un ataque sin armas como parte de la acción de atacar en tu turno, puedes utilizar las opciones de daño y agarre. Solo puedes usar este beneficio una vez por turno.</p><p><strong>Ventaja al atacar.</strong> Tienes ventaja en las tiradas de ataque contra una criatura a la que estés agarrando.</p><p><strong>Luchador rápido.</strong> No tienes que invertir movimiento adicional para mover a una criatura a la que estés agarrando si la criatura es de tu tamaño o más pequeña.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > General Feats > Grappler",
+      "esPage": 94
+    },
+    "prereq": {
+      "text": {
+        "en": "Level 4+, Strength or Dexterity 13+",
+        "fr": "niveau 4 ou supérieur, Force ou Dextérité 13 ou plus",
+        "es": "nivel 4 o más, Fuerza o Destreza 13 o más"
+      },
+      "level": 4,
+      "abilities": {
+        "any": [
+          "str",
+          "dex"
+        ],
+        "min": 13
+      }
+    },
+    "abilityIncrease": [
+      "str",
+      "dex"
+    ]
+  },
+  {
+    "id": "great-weapon-fighting",
+    "name": {
+      "en": "Great Weapon Fighting",
+      "fr": "Armes à deux mains",
+      "es": "Combate con armas a dos manos"
+    },
+    "category": "fighting-style",
+    "categoryText": {
+      "en": "Fighting Style Feat (Prerequisite: Fighting Style Feature)",
+      "fr": "Don de Style de combat (prérequis : aptitude Style de combat)",
+      "es": "Dote de estilo de combate (requisitos: rasgo Estilo de combate)"
+    },
+    "text": {
+      "en": "<p>When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.</p>",
+      "fr": "<p>Lorsque vous lancez les dégâts d’une attaque effectuée avec une arme de corps à corps tenue à deux mains, vous pouvez considérer tous les 1 et 2 obtenus aux dés de dégâts comme des 3. Pour que vous puissiez recevoir ce bénéfice, l’arme doit afficher la propriété Deux mains ou Polyvalente.</p>",
+      "es": "<p>Cuando tires el daño para un ataque hecho con un arma cuerpo a cuerpo que empuñas con ambas manos, puedes tratar cualquier 1 o 2 en los dados de daño como un 3. Para obtener este beneficio, el arma debe poseer la propiedad “a dos manos” o “versátil”.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Fighting Style Feats > Great Weapon Fighting",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Fighting Style Feature",
+        "fr": "aptitude Style de combat",
+        "es": "rasgo Estilo de combate"
+      },
+      "feature": "fighting-style"
+    }
+  },
+  {
+    "id": "magic-initiate",
+    "name": {
+      "en": "Magic Initiate",
+      "fr": "Initié à la magie",
+      "es": "Iniciado en la magia"
+    },
+    "category": "origin",
+    "categoryText": {
+      "en": "Origin Feat",
+      "fr": "Don d’origines",
+      "es": "Dote de origen"
+    },
+    "text": {
+      "en": "<p>You gain the following benefits.</p><p><strong>Two Cantrips.</strong> You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).</p><p><strong>Level 1 Spell.</strong> Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.</p><p><strong>Spell Change.</strong> Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.</p><p><strong>Repeatable.</strong> You can take this feat more than once, but you must choose a different spell list each time.</p>",
+      "fr": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Deux sorts mineurs.</strong> Vous apprenez deux sorts mineurs de votre choix issus de la liste de sorts du Clerc, du Druide ou du Magicien. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts de ce don (décidez laquelle à l’acquisition du don).</p><p><strong>Sort du 1</strong><strong>er niveau.</strong> Choisissez un sort du 1er niveau dans la même liste de sorts où vous avez choisi les sorts mineurs de ce don. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez aussi lancer ce même sort avec vos éventuels emplacements de sort.</p><p><strong>Changement de sort.</strong> Chaque fois que vous gagnez un niveau, vous pouvez remplacer l’un des sorts choisis dans le cadre de ce don par un autre sort du même niveau figurant dans la liste de sorts choisie.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d’une fois, mais devez choisir une liste de sorts différente à chaque fois.</p>",
+      "es": "<p>Obtienes los siguientes beneficios:</p><p><strong>Dos trucos.</strong> Aprendes dos trucos de tu elección escogidos de entre los de la lista de conjuros de clérigo, druida o mago. Tu aptitud mágica para los conjuros de esta dote es la Inteligencia, la Sabiduría o el Carisma (elígela cuando selecciones esta dote).</p><p><strong>Conjuro de nivel 1.</strong> Elige un conjuro de nivel 1 de la misma lista que seleccionaste para los trucos de esta dote. Siempre tienes ese conjuro preparado. Puedes lanzarlo una vez sin gastar un espacio de conjuro y recuperas la capacidad de hacerlo de esta forma tras finalizar un descanso largo. También puedes lanzar el conjuro usando cualquier espacio de conjuro que tengas.</p><p><strong>Cambiar conjuro.</strong> Cada vez que subas un nivel, puedes reemplazar uno de los conjuros que elijas con esta dote por un conjuro distinto del mismo nivel de la lista de conjuros seleccionada.</p><p><strong>Repetible.</strong> Puedes elegir esta dote más de una vez, pero debes elegir una lista de conjuros distinta cada vez.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > Origin Feats > Magic Initiate",
+      "esPage": 94
+    },
+    "repeatable": true
+  },
+  {
+    "id": "savage-attacker",
+    "name": {
+      "en": "Savage Attacker",
+      "fr": "Sauvagerie martiale",
+      "es": "Atacante salvaje"
+    },
+    "category": "origin",
+    "categoryText": {
+      "en": "Origin Feat",
+      "fr": "Don d’origines",
+      "es": "Dote de origen"
+    },
+    "text": {
+      "en": "<p>You’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target.</p>",
+      "fr": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l’arme et utiliser l’un ou l’autre résultat contre la cible.</p>",
+      "es": "<p>Te has preparado para asestar golpes especialmente dañinos. Una vez por turno, cuando aciertes a un objetivo con un arma, podrás tirar dos veces los dados de daño del arma y usar el resultado que prefieras contra el objetivo.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > Origin Feats > Savage Attacker",
+      "esPage": 94
+    }
+  },
+  {
+    "id": "skilled",
+    "name": {
+      "en": "Skilled",
+      "fr": "Doué",
+      "es": "Habilidoso"
+    },
+    "category": "origin",
+    "categoryText": {
+      "en": "Origin Feat",
+      "fr": "Don d’origines",
+      "es": "Dote de origen"
+    },
+    "text": {
+      "en": "<p>You gain proficiency in any combination of three skills or tools of your choice.</p><p><strong>Repeatable.</strong> You can take this feat more than once.</p>",
+      "fr": "<p>Vous recevez la maîtrise d’une combinaison au choix de trois compétences ou outils.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d’une fois.</p>",
+      "es": "<p>Ganas competencia en cualquier combinación de tres habilidades o herramientas que elijas.</p><p><strong>Repetible.</strong> Puedes elegir esta dote más de una vez.</p>"
+    },
+    "source": {
+      "page": 87,
+      "frPage": 92,
+      "section": "Feats > Origin Feats > Skilled",
+      "esPage": 94
+    },
+    "repeatable": true
+  },
+  {
+    "id": "two-weapon-fighting",
+    "name": {
+      "en": "Two-Weapon Fighting",
+      "fr": "Combat à deux armes",
+      "es": "Combate con dos armas"
+    },
+    "category": "fighting-style",
+    "categoryText": {
+      "en": "Fighting Style Feat (Prerequisite: Fighting Style Feature)",
+      "fr": "Don de Style de combat (prérequis : aptitude Style de combat)",
+      "es": "Dote de estilo de combate (requisitos: rasgo Estilo de combate)"
+    },
+    "text": {
+      "en": "<p>When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren’t already adding it to the damage.</p>",
+      "fr": "<p>Lorsque vous effectuez une attaque supplémentaire résultant de l’emploi d’une arme avec la propriété Légère, vous pouvez ajouter votre modificateur de caractéristique aux dégâts de cette attaque si vous ne l’ajoutiez pas déjà.</p>",
+      "es": "<p>Cuando haces un ataque extra como resultado de utilizar un arma con la propiedad “ligera”, puedes sumar tu modificador por característica al daño de ese ataque si no lo estás sumando ya al daño.</p>"
+    },
+    "source": {
+      "page": 88,
+      "frPage": 93,
+      "section": "Feats > Fighting Style Feats > Two-Weapon Fighting",
+      "esPage": 95
+    },
+    "prereq": {
+      "text": {
+        "en": "Fighting Style Feature",
+        "fr": "aptitude Style de combat",
+        "es": "rasgo Estilo de combate"
+      },
+      "feature": "fighting-style"
+    }
+  }
+]

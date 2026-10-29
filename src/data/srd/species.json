@@ -1,0 +1,1125 @@
+[
+  {
+    "id": "dragonborn",
+    "name": {
+      "en": "Dragonborn",
+      "fr": "Drakéide",
+      "es": "Dracónido"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 5–7 feet tall)",
+      "fr": "M (moyenne, entre 1,50 m et 2,10 m)",
+      "es": "Mediano (entre 1,5 y 2,1 m de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "dragonborn:draconic-ancestry",
+        "name": {
+          "en": "Draconic Ancestry",
+          "fr": "Ascendance draconique",
+          "es": "Linaje dracónico"
+        },
+        "text": {
+          "en": "<p>Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.</p><table><caption>Draconic Ancestors</caption><thead><tr><th>Dragon</th><th>Damage Type</th></tr></thead><tbody><tr><td>Black</td><td>Acid</td></tr><tr><td>Blue</td><td>Lightning</td></tr><tr><td>Brass</td><td>Fire</td></tr><tr><td>Bronze</td><td>Lightning</td></tr><tr><td>Copper</td><td>Acid</td></tr><tr><td>Gold</td><td>Fire</td></tr><tr><td>Green</td><td>Poison</td></tr><tr><td>Red</td><td>Fire</td></tr><tr><td>Silver</td><td>Cold</td></tr><tr><td>White</td><td>Cold</td></tr></tbody></table>",
+          "fr": "<p>Votre lignée remonte à un géniteur dragon. Choisissez le type de dragon dans la table « Ancêtres draconiques ». Ce choix affecte vos traits Souffle et Résistance aux dégâts, ainsi que votre apparence.</p><table><caption>Ancêtres draconiques</caption><thead><tr><th>Dragon</th><th>Type de dégâts</th></tr></thead><tbody><tr><td>Airain</td><td>Feu</td></tr><tr><td>Argent</td><td>Froid</td></tr><tr><td>Blanc</td><td>Froid</td></tr><tr><td>Bleu</td><td>Foudre</td></tr><tr><td>Bronze</td><td>Foudre</td></tr><tr><td>Cuivre</td><td>Acide</td></tr><tr><td>Noir</td><td>Acide</td></tr><tr><td>Or</td><td>Feu</td></tr><tr><td>Rouge</td><td>Feu</td></tr><tr><td>Vert</td><td>Poison</td></tr></tbody></table>",
+          "es": "<p>Tu linaje proviene de un progenitor dragón. Elige el tipo de dragón en la tabla “Ancestros dracónicos”. Tu elección afectará a tus atributos Ataque de aliento y Resistencia al daño además de a tu aspecto.</p><table><caption>Ancestros dracónicos</caption><thead><tr><th>Dragón</th><th>Tipo de daño</th></tr></thead><tbody><tr><td>Azul</td><td>Relámpago</td></tr><tr><td>Blanco</td><td>Frío</td></tr><tr><td>Bronce</td><td>Relámpago</td></tr><tr><td>Cobre</td><td>Ácido</td></tr><tr><td>Negro</td><td>Ácido</td></tr><tr><td>Oro</td><td>Fuego</td></tr><tr><td>Oropel</td><td>Fuego</td></tr><tr><td>Plata</td><td>Frío</td></tr><tr><td>Rojo</td><td>Fuego</td></tr><tr><td>Verde</td><td>Veneno</td></tr></tbody></table>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Dragonborn > Draconic Ancestry",
+          "esPage": 90
+        }
+      },
+      {
+        "id": "dragonborn:breath-weapon",
+        "name": {
+          "en": "Breath Weapon",
+          "fr": "Souffle",
+          "es": "Ataque de aliento"
+        },
+        "text": {
+          "en": "<p>When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).</p><p>You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>",
+          "fr": "<p>Lorsque vous entreprenez l’action Attaque à votre tour, vous pouvez remplacer l’une de vos attaques par une expiration d’énergie magique sous la forme d’un Cône de 4,50 m ou d’une Ligne de 9 m de long et 1,50 m de large (choisissez la forme à chaque fois). Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité (DD 8 + votre modificateur de Constitution + votre bonus de maîtrise). En cas d’échec, la créature subit 1d10 dégâts du type déterminé par votre trait Ascendance draconique. En cas de réussite, elle ne subit que la moitié de ces dégâts. Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux de personnage 5 (2d10), 11 (3d10) et 17 (4d10).</p><p>Vous pouvez recourir à ce Souffle autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p>",
+          "es": "<p>Cuando lleves a cabo la acción de atacar en tu turno, puedes sustituir uno de tus ataques por una exhalación de energía mágica en un cono de 4,5 m o en una línea de 9 m de largo y 1,5 m de ancho (elige la forma cada vez). Todas las criaturas situadas en esa zona deberán hacer una tirada de salvación de Destreza (CD 8 más tu modificador por Constitución y tu bonificador por competencia). Si la fallan, sufrirán 1d10 de daño del tipo determinado por tu atributo Linaje dracónico. Si la superan, sufrirán la mitad de ese daño. El daño aumenta en 1d10 cuando alcanzas los niveles 5 (2d10), 11 (3d10) y 17 (4d10) de personaje.</p><p>Puedes utilizar este ataque de aliento una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso largo.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Dragonborn > Breath Weapon",
+          "esPage": 90
+        }
+      },
+      {
+        "id": "dragonborn:damage-resistance",
+        "name": {
+          "en": "Damage Resistance",
+          "fr": "Résistance aux dégâts",
+          "es": "Resistencia al daño"
+        },
+        "text": {
+          "en": "<p>You have Resistance to the damage type determined by your Draconic Ancestry trait.</p>",
+          "fr": "<p>Vous bénéficiez de la résistance au type de dégâts déterminé par votre trait Ascendance draconique.</p>",
+          "es": "<p>Tienes resistencia al tipo de daño determinado por tu atributo Linaje dracónico.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Dragonborn > Damage Resistance",
+          "esPage": 90
+        }
+      },
+      {
+        "id": "dragonborn:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 60 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 18 m.</p>",
+          "es": "<p>Tienes visión en la oscuridad hasta 18 m.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Dragonborn > Darkvision",
+          "esPage": 90
+        }
+      },
+      {
+        "id": "dragonborn:draconic-flight",
+        "name": {
+          "en": "Draconic Flight",
+          "fr": "Vol draconique",
+          "es": "Vuelo dracónico"
+        },
+        "text": {
+          "en": "<p>When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can’t use it again until you finish a Long Rest.</p>",
+          "fr": "<p>Lorsque vous atteignez le niveau de personnage 5, vous pouvez canaliser la magie draconique pour vous octroyer le vol de façon temporaire. Par une action Bonus, il vous pousse des ailes spectrales dans le dos qui persistent 10 minutes ou jusqu’à ce que vous rétractiez ces ailes (pas d’action requise) ou subissiez l’état Neutralisé. Pour toute la durée, vous disposez d’une Vitesse de vol égale à votre Vitesse. Ces ailes semblent être faites de la même énergie que votre souffle. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
+          "es": "<p>Cuando alcanzas el nivel 5 de personaje, puedes canalizar la magia dracónica para volar de forma temporal. Como acción adicional, haces que en la espalda te broten unas alas espectrales que duran 10 minutos o hasta que las repliegues (no requiere acción) o tengas el estado de incapacitado. Durante ese tiempo, tendrás una velocidad volando igual a tu velocidad. Tus alas parecen hechas de la misma energía que tu ataque de aliento. Cuando uses este atributo, no podrás volver a hacerlo hasta que finalices un descanso largo.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Dragonborn > Draconic Flight",
+          "esPage": 90
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Dragonborn, you have these special traits.</p>",
+      "fr": "<p>En tant que drakéide, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como dracónido, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Species Descriptions > Dragonborn",
+      "esPage": 90
+    }
+  },
+  {
+    "id": "dwarf",
+    "name": {
+      "en": "Dwarf",
+      "fr": "Nain",
+      "es": "Enano"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 4–5 feet tall)",
+      "fr": "M (moyenne, entre 1,20 m et 1,50 m)",
+      "es": "Mediano (entre 1,2 y 1,5 m de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "dwarf:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 120 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 36 m.</p>",
+          "es": "<p>Tienes visión en la oscuridad hasta 36 m.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 90,
+          "section": "Character Origins > Dwarf > Darkvision",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "dwarf:dwarven-resilience",
+        "name": {
+          "en": "Dwarven Resilience",
+          "fr": "Résistance naine",
+          "es": "Resistencia enana"
+        },
+        "text": {
+          "en": "<p>You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.</p>",
+          "fr": "<p>Vous bénéficiez de la Résistance aux dégâts de poison. Vous avez en outre l’Avantage aux jets de sauvegarde visant à éviter l’état Empoisonné ou à y mettre un terme sur vous-même.</p>",
+          "es": "<p>Tienes resistencia al daño de veneno. También tienes ventaja en las tiradas de salvación para evitar o poner fin al estado de envenenado.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 90,
+          "section": "Character Origins > Dwarf > Dwarven Resilience",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "dwarf:dwarven-toughness",
+        "name": {
+          "en": "Dwarven Toughness",
+          "fr": "Ténacité naine",
+          "es": "Aguante enano"
+        },
+        "text": {
+          "en": "<p>Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.</p>",
+          "fr": "<p>Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p>",
+          "es": "<p>Tus puntos de golpe máximos se incrementan en 1 y aumentarán en 1 más cada vez que subas un nivel.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 90,
+          "section": "Character Origins > Dwarf > Dwarven Toughness",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "dwarf:stonecunning",
+        "name": {
+          "en": "Stonecunning",
+          "fr": "Connaissance de la pierre",
+          "es": "Afinidad con la piedra"
+        },
+        "text": {
+          "en": "<p>As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.</p><p>You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>",
+          "fr": "<p>Par une action Bonus, vous recevez la Perception des vibrations à 18 m pendant 10 minutes. Cette Perception des vibrations nécessite que vous soyez sur une surface en pierre ou en contact physique avec une telle surface. Cette pierre peut être naturelle ou façonnée.</p><p>Vous pouvez recourir à cette action Bonus autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p>",
+          "es": "<p>Como acción adicional, ganas la capacidad de sentir vibraciones con un alcance de 18 m durante 10 minutos. Debes encontrarte sobre una superficie de piedra o en contacto con una superficie de piedra para usar esta capacidad. La piedra puede ser natural o labrada.</p><p>Puedes usar esta acción adicional una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso largo.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 90,
+          "section": "Character Origins > Dwarf > Stonecunning",
+          "esPage": 91
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Dwarf, you have these special traits.</p>",
+      "fr": "<p>En tant que nain, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como enano, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 84,
+      "frPage": 90,
+      "section": "Character Origins > Species Descriptions > Dwarf",
+      "esPage": 91
+    }
+  },
+  {
+    "id": "elf",
+    "name": {
+      "en": "Elf",
+      "fr": "Elfe",
+      "es": "Elfo"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 5–6 feet tall)",
+      "fr": "M (moyenne, entre 1,50 m et 1,80 m)",
+      "es": "Mediano (entre 1,5 y 1,8 m de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "elf:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 60 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 18 m.</p>",
+          "es": "<p>Tienes visión en la oscuridad hasta 18 m.</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 89,
+          "section": "Character Origins > Elf > Darkvision",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "elf:elven-lineage",
+        "name": {
+          "en": "Elven Lineage",
+          "fr": "Lignage elfique",
+          "es": "Linaje élfico"
+        },
+        "text": {
+          "en": "<p>You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.</p><p>When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p><table><caption>Elven Lineages</caption><thead><tr><th>Lineage</th><th>Level 1</th><th>Level 3</th><th>Level 5</th></tr></thead><tbody><tr><td>Drow</td><td>The range of your Darkvision increases to 120 feet. ​ You also know the Dancing Lights cantrip.</td><td>Faerie Fire</td><td>Darkness</td></tr><tr><td>High Elf</td><td>You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.</td><td>Detect Magic</td><td>Misty Step</td></tr><tr><td>Wood Elf</td><td>Your Speed increases to 35 feet. You also know the Druidcraft cantrip.</td><td>Longstrider</td><td>Pass without Trace</td></tr></tbody></table><p>Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).</p>",
+          "fr": "<p>Vous appartenez à un lignage qui vous octroie des aptitudes surnaturelles.</p><p>Choisissez-en un dans la table « Lignages elfiques ». Vous recevez le bénéfice du niveau 1 de ce lignage.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection du lignage).</p>",
+          "es": "<p>Formas parte de un linaje que te otorga capacidades sobrenaturales. Elige un linaje de la tabla “Linajes élficos”. Obtienes el beneficio de nivel 1 de ese linaje.</p><p>Cuando alcanzas los niveles 3 y 5 de personaje, aprendes un conjuro de nivel superior, como se muestra en la tabla. Siempre tienes ese conjuro preparado. Puedes lanzarlo una vez sin gastar un espacio de conjuro y recuperas la capacidad de ha</p><table><caption>Linajes élficos</caption><thead><tr><th>Linaje</th><th>Nivel 1</th><th>Nivel 3</th><th>Nivel 5</th></tr></thead><tbody><tr><td>Alto elfo</td><td>Conoces el truco prestidigitación. Tras finalizar un descanso largo, puedes sustituirese truco por otro truco diferente de la lista de conjuros de mago.</td><td>Detectar magia</td><td>Paso brumoso</td></tr><tr><td>Drow</td><td>El alcance de tu visión en la oscuridad aumenta a 36 m. ​ También conoces el truco luces danzantes.</td><td>Fuego feérico</td><td>Oscuridad</td></tr><tr><td>Elfo de los bosques</td><td>Tu velocidad aumenta a 10,5 m. También conoces el truco saber druídico.</td><td>Zancada prodigiosa</td><td>Pasar sin rastro</td></tr></tbody></table><p>cerlo de esta forma tras finalizar un descanso largo. También puedes lanzar el conjuro usando cualquier espacio de conjuro que tengas del nivel apropiado.</p><p>La Inteligencia, la Sabiduría o el Carisma es tu aptitud mágica para los conjuros que lances con este atributo (elige la característica al seleccionar el linaje).</p>"
+        },
+        "source": {
+          "page": 84,
+          "frPage": 88,
+          "section": "Character Origins > Elf > Elven Lineage",
+          "esPage": 90
+        }
+      },
+      {
+        "id": "elf:fey-ancestry",
+        "name": {
+          "en": "Fey Ancestry",
+          "fr": "Ascendance féerique",
+          "es": "Linaje feérico"
+        },
+        "text": {
+          "en": "<p>You have Advantage on saving throws you make to avoid or end the Charmed condition.</p>",
+          "fr": "<p>Vous avez l’Avantage aux jets de sauvegarde visant à éviter l’état Charmé ou à y mettre un terme.</p>",
+          "es": "<p>Tienes ventaja en las tiradas de salvación para evitar o poner fin al estado de hechizado.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 88,
+          "section": "Character Origins > Elf > Fey Ancestry",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "elf:keen-senses",
+        "name": {
+          "en": "Keen Senses",
+          "fr": "Sens aiguisés",
+          "es": "Sentidos agudos"
+        },
+        "text": {
+          "en": "<p>You have proficiency in the Insight, Perception, or Survival skill.</p>",
+          "fr": "<p>Vous bénéficiez de la maîtrise de la compétence Intuition, Perception ou Survie au choix.</p>",
+          "es": "<p>Tienes competencia en la habilidad de Percepción, Perspicacia o Supervivencia.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 88,
+          "section": "Character Origins > Elf > Keen Senses",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "elf:trance",
+        "name": {
+          "en": "Trance",
+          "fr": "Transe",
+          "es": "Trance"
+        },
+        "text": {
+          "en": "<p>You don’t need to sleep, and magic can’t put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.</p>",
+          "fr": "<p>Vous vous passez de sommeil et la magie ne peut pas vous endormir. Vous pouvez terminer un Repos long en 4 heures si vous les passez en transe méditative durant laquelle vous restez en éveil.</p><table><caption>Lignages elfiques</caption><thead><tr><th>Lignage</th><th>Niveau 1</th><th>Niveau 3</th><th>Niveau 5</th></tr></thead><tbody><tr><td>Drow</td><td>La portée de votre Vision dans le noir passe à 36 m. Vous connaissez également le sort mineur lumières dansantes.</td><td>lueurs féeriques</td><td>ténèbres</td></tr><tr><td>Elfe sylvestre</td><td>Votre Vitesse passe à 10,50 m. Vous connaissez également le sort mineur druidisme.</td><td>grande foulée</td><td>passage sans trace</td></tr><tr><td>Haut-elfe</td><td>Vous connaissez le sort mineur prestidigitation. Chaque fois que vous terminez un Repos long, vous pouvez remplacer ce sort mineur par un autre sort mineur de la liste de sorts du Magicien.</td><td>détection de la magie</td><td>foulée brumeuse</td></tr></tbody></table>",
+          "es": "<p>No necesitas dormir y la magia no puede dormirte. Puedes finalizar un descanso largo en 4 horas si las pasas en una meditación similar a un trance, tiempo durante el cual conservas la consciencia.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 88,
+          "section": "Character Origins > Elf > Trance",
+          "esPage": 91
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As an Elf, you have these special traits.</p>",
+      "fr": "<p>En tant qu’elfe, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como elfo, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Species Descriptions > Elf",
+      "esPage": 90
+    }
+  },
+  {
+    "id": "gnome",
+    "name": {
+      "en": "Gnome",
+      "fr": "Gnome",
+      "es": "Gnomo"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "small"
+    ],
+    "sizeText": {
+      "en": "Small (about 3–4 feet tall)",
+      "fr": "P (petite, entre 90 cm et 1,20 m)",
+      "es": "Pequeño (entre 90 cm y 1,2 m de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "gnome:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 60 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 18 m.</p>",
+          "es": "<p>Tienes visión en la oscuridad hasta 18 m.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Gnome > Darkvision",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "gnome:gnomish-cunning",
+        "name": {
+          "en": "Gnomish Cunning",
+          "fr": "Ruse gnome",
+          "es": "Astucia gnoma"
+        },
+        "text": {
+          "en": "<p>You have Advantage on Intelligence, Wisdom, and Charisma saving throws.</p>",
+          "fr": "<p>Vous avez l’Avantage aux jets de sauvegarde d’Intelligence, de Sagesse et de Charisme.</p>",
+          "es": "<p>Tienes ventaja en las tiradas de salvación de Inteligencia, Sabiduría y Carisma.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Gnome > Gnomish Cunning",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "gnome:gnomish-lineage",
+        "name": {
+          "en": "Gnomish Lineage",
+          "fr": "Lignage gnome",
+          "es": "Linaje gnomo"
+        },
+        "text": {
+          "en": "<p>You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):</p>",
+          "fr": "<p>Vous appartenez à un lignage qui vous octroie des aptitudes surnaturelles. Choisissez l’une des options ci-après ; quelle que soit celle que vous choisissez, l’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection du lignage) :</p>",
+          "es": "<p>Formas parte de un linaje que te otorga capacidades sobrenaturales. Escoge una de las siguientes opciones; elijas la que elijas, la Inteligencia, la Sabiduría o el Carisma es tu aptitud mágica para los conjuros que lances con este atributo (elige la característica al seleccionar el linaje):</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Gnome > Gnomish Lineage",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "gnome:forest-gnome",
+        "name": {
+          "en": "Forest Gnome",
+          "fr": "Gnome des forêts",
+          "es": "Gnomo de los bosques"
+        },
+        "text": {
+          "en": "<p>You know the <em>Minor Illusion</em> cantrip. You also always have the <em>Speak with Animals</em> spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.</p>",
+          "fr": "<p>Vous connaissez le sort mineur <em>illusion mineure</em>. Le sort <em>communication avec les</em> <em>animaux</em> est en outre considéré pour vous comme toujours préparé. Vous pouvez le lancer sans emplacement de sort autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long. Vous pouvez en outre dépenser les emplacements de sort adaptés dont vous disposez pour lancer ce sort.</p>",
+          "es": "<p>Conoces el truco <em>ilusión menor</em>. Además, siempre tienes el conjuro <em>hablar con</em> <em>los animales</em> preparado. Puedes lanzarlo sin gastar un espacio de conjuro una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso largo. También puedes usar cualquier espacio de conjuro que tengas para lanzarlo.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Gnome > Forest Gnome",
+          "esPage": 91
+        }
+      },
+      {
+        "id": "gnome:rock-gnome",
+        "name": {
+          "en": "Rock Gnome",
+          "fr": "Gnome des roches",
+          "es": "Gnomo de las rocas"
+        },
+        "text": {
+          "en": "<p>You know the <em>Mending</em> and <em>Presti-</em> <em>digitation</em> cantrips. In addition, you can spend 10 minutes casting <em>Prestidigitation</em> to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from <em>Prestidigitation</em>; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.</p>",
+          "fr": "<p>Vous connaissez les sorts mineurs <em>prestidigitation</em> et <em>réparation</em>. Vous pouvez en outre consacrer 10 minutes à lancer <em>prestidigita-</em> <em>tion</em> pour créer un appareil mécanique de taille TP (CA 5, 1 pv) tel qu’un jouet, un allume-feu ou une boîte à musique. Lorsque vous créez l’appareil, vous déterminez sa fonction en choisissant un effet parmi ceux de <em>prestidigitation</em> ; l’appareil produit cet effet chaque fois que vous-même ou une autre créature entreprenez une action Bonus pour l’activer par simple contact. Lorsque l’effet choisi comporte des options, vous devez en choisir une pour l’appareil à sa création. Si vous choisissez l’effet « allumage-extinction » du sort, par exemple, vous devez déterminer si l’appareil allume ou éteint le feu ; il ne peut pas faire les deux. Vous pouvez avoir trois appareils actifs de ce type à la fois, et chacun tombe en morceaux 8 heures après sa création ou lorsque vous le démantelez par simple contact en entreprenant l’action Utilisation.</p>",
+          "es": "<p>Conoces los trucos <em>prestidigitación</em> y <em>reparar</em>. Además, puedes pasar 10 minutos lanzando <em>prestidigitación</em> para crear un dispositivo mecánico Diminuto (CA 5, 1 pg), como un juguete, un encendedor o una caja de música. Cuando crees el dispositivo, determinarás su función eligiendo un efecto de <em>prestidigitación</em>. El dispositivo producirá ese efecto cada vez que otra criatura o tú empleéis una acción adicional para activarlo con un toque. Si el efecto elegido tiene varias opciones, escoges una de ellas para el dispositivo cuando lo crees. Por ejemplo, si eliges el efecto de encender o apagar del conjuro, determinas si el dispositivo enciende o apaga los fuegos: el dispositivo no hace ambas cosas. Puedes tener tres de estos dispositivos activos al mismo tiempo y se desarman 8 horas después de crearlos o cuando los desmontes con un toque como acción de utilizar.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Gnome > Rock Gnome",
+          "esPage": 91
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Gnome, you have these special traits.</p>",
+      "fr": "<p>En tant que gnome, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como gnomo, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Species Descriptions > Gnome",
+      "esPage": 91
+    }
+  },
+  {
+    "id": "goliath",
+    "name": {
+      "en": "Goliath",
+      "fr": "Goliath",
+      "es": "Goliat"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 7–8 feet tall)",
+      "fr": "M (moyenne, entre 2,10 m et 2,40 m)",
+      "es": "Mediano (entre 2,1 y 2,4 m de altura)"
+    },
+    "speed": {
+      "ft": 35,
+      "m": 10.5
+    },
+    "traits": [
+      {
+        "id": "goliath:giant-ancestry",
+        "name": {
+          "en": "Giant Ancestry",
+          "fr": "Ascendance gigante",
+          "es": "Linaje gigante"
+        },
+        "text": {
+          "en": "<p>You are descended from Giants. Choose one of the following benefits—a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:</p>",
+          "fr": "<p>Vous êtes un lointain descendant des géants. Choisissez l’un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p>",
+          "es": "<p>Desciendes de los gigantes. Elige uno de los siguientes beneficios sobrenaturales que te concede tu linaje; podrás usar el beneficio elegido una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso largo:</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Giant Ancestry",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:clouds-jaunt-cloud-giant",
+        "name": {
+          "en": "Cloud’s Jaunt (Cloud Giant)",
+          "fr": "Saut des nuées (géants des nuages)",
+          "es": "Excursión de las nubes (gigante de las nubes)"
+        },
+        "text": {
+          "en": "<p>As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.</p>",
+          "fr": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d’un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+          "es": "<p>Como acción adicional, te teletransportas mágicamente hasta 9 m a un espacio sin ocupar que puedas ver.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Cloud’s Jaunt (Cloud Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:fires-burn-fire-giant",
+        "name": {
+          "en": "Fire’s Burn (Fire Giant)",
+          "fr": "Brûlure ignée (géants du feu)",
+          "es": "Abrasión del fuego (gigante de fuego)"
+        },
+        "text": {
+          "en": "<p>When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.</p>",
+          "fr": "<p>Lorsque vous touchez une cible avec un jet d’attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p>",
+          "es": "<p>Cuando aciertes a un objetivo con una tirada de ataque y le causes daño, también puedes causarle 1d10 de daño de fuego.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Fire’s Burn (Fire Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:frosts-chill-frost-giant",
+        "name": {
+          "en": "Frost’s Chill (Frost Giant)",
+          "fr": "Froid mordant (géants du givre)",
+          "es": "Frío de la escarcha (gigante de escarcha)"
+        },
+        "text": {
+          "en": "<p>When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.</p>",
+          "fr": "<p>Lorsque vous touchez une cible avec un jet d’attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa vitesse de 3 m jusqu’au début de votre tour suivant.</p>",
+          "es": "<p>Cuando aciertes a un objetivo con una tirada de ataque y le causes daño, también puedes causarle 1d6 de daño de frío y reducir su velocidad en 3 m hasta el principio de tu siguiente turno.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Frost’s Chill (Frost Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:hills-tumble-hill-giant",
+        "name": {
+          "en": "Hill’s Tumble (Hill Giant)",
+          "fr": "Renversement des coteaux (géants des collines)",
+          "es": "Caída de las colinas (gigante de las colinas)"
+        },
+        "text": {
+          "en": "<p>When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.</p>",
+          "fr": "<p>Lorsque vous touchez une créature de taille G ou inférieure avec un jet d’attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l’état À terre.</p>",
+          "es": "<p>Cuando aciertes a una criatura Grande o más pequeña con una tirada de ataque y le causes daño, también puedes infligirle el estado de derribada.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Hill’s Tumble (Hill Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:stones-endurance-stone-giant",
+        "name": {
+          "en": "Stone’s Endurance (Stone Giant)",
+          "fr": "Endurance de la pierre (géants des pierres)",
+          "es": "Resistencia de la piedra (gigante de piedra)"
+        },
+        "text": {
+          "en": "<p>When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.</p>",
+          "fr": "<p>Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p>",
+          "es": "<p>Cuando recibas daño, puedes usar una reacción para tirar 1d12. Suma tu modificador por Constitución al resultado y reduce el daño en ese total.</p>"
+        },
+        "source": {
+          "page": 85,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Stone’s Endurance (Stone Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:storms-thunder-storm-giant",
+        "name": {
+          "en": "Storm’s Thunder (Storm Giant)",
+          "fr": "Tonnerre des cieux (géants des tempêtes)",
+          "es": "Trueno de la tormenta (gigante de las tormentas)"
+        },
+        "text": {
+          "en": "<p>When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.</p>",
+          "fr": "<p>Lorsque vous subissez des dégâts de la part d’une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+          "es": "<p>Cuando una criatura que esté a 18 m o menos de ti te cause daño, puedes usar una reacción para infligirle 1d8 de daño de trueno.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 89,
+          "section": "Character Origins > Goliath > Storm’s Thunder (Storm Giant)",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:large-form",
+        "name": {
+          "en": "Large Form",
+          "fr": "Forme de géant",
+          "es": "Forma grande"
+        },
+        "text": {
+          "en": "<p>Starting at character level 5, you can change your size to Large as a Bonus Action if you’re in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can’t use it again until you finish a Long Rest.</p>",
+          "fr": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l’espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu’à ce que vous y mettiez un terme (pas d’action requise). Pour toute la durée, vous avez l’Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
+          "es": "<p>A partir del nivel 5 de personaje, puedes cambiar de tamaño a Grande como acción adicional si estás en un lugar lo bastante espacioso. Esta transformación dura 10 minutos o hasta que le pongas fin (no requiere acción). Durante ese tiempo, tendrás ventaja en las pruebas de Fuerza y tu velocidad aumentará en 3 m. Cuando uses este atributo, no podrás volver a hacerlo hasta que finalices un descanso largo.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Goliath > Large Form",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "goliath:powerful-build",
+        "name": {
+          "en": "Powerful Build",
+          "fr": "Forte carrure",
+          "es": "Constitución poderosa"
+        },
+        "text": {
+          "en": "<p>You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.</p>",
+          "fr": "<p>Vous avez l’Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l’état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+          "es": "<p>Tienes ventaja en cualquier prueba de característica que hagas para poner fin al estado de agarrado. Además, al determinar tu capacidad de carga, cuentas como si tuvieras un tamaño una categoría superior.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Goliath > Powerful Build",
+          "esPage": 92
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Goliath, you have these special traits.</p>",
+      "fr": "<p>En tant que goliath, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como goliat, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Species Descriptions > Goliath",
+      "esPage": 92
+    }
+  },
+  {
+    "id": "halfling",
+    "name": {
+      "en": "Halfling",
+      "fr": "Halfelin",
+      "es": "Mediano"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "small"
+    ],
+    "sizeText": {
+      "en": "Small (about 2–3 feet tall)",
+      "fr": "P (petite, entre 60 cm et 90 cm)",
+      "es": "Pequeño (entre 60 y 90 cm de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "halfling:brave",
+        "name": {
+          "en": "Brave",
+          "fr": "Brave",
+          "es": "Valiente"
+        },
+        "text": {
+          "en": "<p>You have Advantage on saving throws you make to avoid or end the Frightened condition.</p>",
+          "fr": "<p>Vous avez l’Avantage aux jets de sauvegarde visant à éviter l’état Effrayé ou à y mettre un terme.</p>",
+          "es": "<p>Tienes ventaja en las tiradas de salvación que hagas para evitar o poner fin al estado de asustado.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Halfling > Brave",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "halfling:halfling-nimbleness",
+        "name": {
+          "en": "Halfling Nimbleness",
+          "fr": "Agilité halfeline",
+          "es": "Agilidad de mediano"
+        },
+        "text": {
+          "en": "<p>You can move through the space of any creature that is a size larger than you, but you can’t stop in the same space.</p>",
+          "fr": "<p>Vous pouvez vous déplacer dans l’espace de toute créature d’une catégorie de taille supérieure à la vôtre, mais ne pouvez pas vous arrêter dans le même espace que celle-ci.</p>",
+          "es": "<p>Puedes moverte a través del espacio ocupado por cualquier criatura de tamaño superior al tuyo, pero no puedes detenerte en el mismo espacio.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Halfling > Halfling Nimbleness",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "halfling:luck",
+        "name": {
+          "en": "Luck",
+          "fr": "Chance",
+          "es": "Fortuna"
+        },
+        "text": {
+          "en": "<p>When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.</p>",
+          "fr": "<p>Lorsque vous obtenez un 1 au d20 d’un Test d20, vous pouvez relancer le dé, mais devez utiliser le nouveau résultat.</p>",
+          "es": "<p>Cuando saques un 1 en una prueba con d20, podrás repetir la tirada y deberás utilizar el nuevo resultado.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Halfling > Luck",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "halfling:naturally-stealthy",
+        "name": {
+          "en": "Naturally Stealthy",
+          "fr": "Discrétion naturelle",
+          "es": "Sigiloso por naturaleza"
+        },
+        "text": {
+          "en": "<p>You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.</p>",
+          "fr": "<p>Il vous suffit d’être dans l’ombre d’une créature dont la catégorie de taille est d’au moins un cran supérieure à la vôtre pour pouvoir entreprendre l’action Furtivité.</p>",
+          "es": "<p>Puedes llevar a cabo la acción de esconderte incluso tras una criatura cuyo tamaño sea, al menos, una categoría superior al tuyo.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Halfling > Naturally Stealthy",
+          "esPage": 92
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Halfling, you have these special traits.</p>",
+      "fr": "<p>En tant que halfelin, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como mediano, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Species Descriptions > Halfling",
+      "esPage": 92
+    }
+  },
+  {
+    "id": "human",
+    "name": {
+      "en": "Human",
+      "fr": "Humain",
+      "es": "Humano"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "small",
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species",
+      "fr": "M (moyenne, entre 1,20 m et 2,10 m) ou P (petite, de 60 cm à 1,20 m), à choisir lors de la sélection de l’espèce",
+      "es": "Mediano (entre 1,2 y 2,1 m de altura) o Pequeño (entre 60 cm y 1,2 m de altura), elegido al seleccionar la especie"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "human:resourceful",
+        "name": {
+          "en": "Resourceful",
+          "fr": "Ingénieux",
+          "es": "Ingenioso"
+        },
+        "text": {
+          "en": "<p>You gain Heroic Inspiration whenever you finish a Long Rest.</p>",
+          "fr": "<p>Vous recevez l’Inspiration héroïque chaque fois que vous terminez un Repos long.</p>",
+          "es": "<p>Obtienes inspiración heroica tras finalizar un descanso largo.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Human > Resourceful",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "human:skillful",
+        "name": {
+          "en": "Skillful",
+          "fr": "Compétent",
+          "es": "Diestro"
+        },
+        "text": {
+          "en": "<p>You gain proficiency in one skill of your choice.</p>",
+          "fr": "<p>Vous recevez la maîtrise d’une compétence de votre choix.</p>",
+          "es": "<p>Ganas competencia en una habilidad de tu elección.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Human > Skillful",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "human:versatile",
+        "name": {
+          "en": "Versatile",
+          "fr": "Polyvalent",
+          "es": "Versátil"
+        },
+        "text": {
+          "en": "<p>You gain an Origin feat of your choice (see “Feats”). Skilled is recommended.</p>",
+          "fr": "<p>Vous recevez le don d’origines de votre choix (cf. « Dons »). Doué est recommandé.</p>",
+          "es": "<p>Obtienes una dote de origen de tu elección (consulta el capítulo “Dotes”). Se recomienda Habilidoso.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Human > Versatile",
+          "esPage": 92
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Human, you have these special traits.</p>",
+      "fr": "<p>En tant qu’humain, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como humano, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Species Descriptions > Human",
+      "esPage": 92
+    }
+  },
+  {
+    "id": "orc",
+    "name": {
+      "en": "Orc",
+      "fr": "Orc",
+      "es": "Orco"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 6–7 feet tall)",
+      "fr": "M (moyenne, entre 1,80 m et 2,10 m)",
+      "es": "Mediano (entre 1,8 y 2,1 m de altura)"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "orc:adrenaline-rush",
+        "name": {
+          "en": "Adrenaline Rush",
+          "fr": "Poussée d’adrénaline",
+          "es": "Descarga de adrenalina"
+        },
+        "text": {
+          "en": "<p>You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.</p><p>You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.</p>",
+          "fr": "<p>Vous pouvez entreprendre l’action Pointe par une action Bonus. Quand vous faites ainsi, vous recevez un nombre de points de vie temporaires égal à votre bonus de maîtrise.</p><p>Vous pouvez recourir à ce trait autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos court ou long.</p>",
+          "es": "<p>Puedes llevar a cabo la acción de correr como acción adicional. Cuando lo hagas, obtendrás una cantidad de puntos de golpe temporales igual a tu bonificador por competencia.</p><p>Puedes usar este atributo una cantidad de veces igual a tu bonificador por competencia y recuperas todos los usos tras finalizar un descanso corto o largo.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Orc > Adrenaline Rush",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "orc:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 120 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 36 m.</p>",
+          "es": "<p>Tienes visión en la oscuridad hasta 36 m.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Orc > Darkvision",
+          "esPage": 92
+        }
+      },
+      {
+        "id": "orc:relentless-endurance",
+        "name": {
+          "en": "Relentless Endurance",
+          "fr": "Acharnement",
+          "es": "Aguante incansable"
+        },
+        "text": {
+          "en": "<p>When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can’t do so again until you finish a Long Rest.</p>",
+          "fr": "<p>Si vous tombez à 0 point de vie sans être tué sur le coup, vous pouvez en fait vous retrouver à 1 point de vie. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
+          "es": "<p>Cuando tus puntos de golpe se reducen a 0 pero no mueres inmediatamente, puedes recuperar 1 punto de golpe. Cuando uses este atributo, no podrás volver a hacerlo hasta que finalices un descanso largo.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 90,
+          "section": "Character Origins > Orc > Relentless Endurance",
+          "esPage": 92
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As an Orc, you have these special traits.</p>",
+      "fr": "<p>En tant qu’orc, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como orco, tienes estos atributos especiales:</p>"
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Species Descriptions > Orc",
+      "esPage": 92
+    }
+  },
+  {
+    "id": "tiefling",
+    "name": {
+      "en": "Tiefling",
+      "fr": "Tieffelin",
+      "es": "Tiefling"
+    },
+    "creatureType": {
+      "en": "Humanoid",
+      "fr": "Humanoïde",
+      "es": "humanoide"
+    },
+    "size": [
+      "small",
+      "medium"
+    ],
+    "sizeText": {
+      "en": "Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species",
+      "fr": "M (moyenne, entre 1,20 m et 2,10 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l’espèce",
+      "es": "Mediano (entre 1,2 y 2,1 m de altura) o Pequeño (entre 90 cm y 1,2 m de altura), elegido al seleccionar la especie"
+    },
+    "speed": {
+      "ft": 30,
+      "m": 9
+    },
+    "traits": [
+      {
+        "id": "tiefling:darkvision",
+        "name": {
+          "en": "Darkvision",
+          "fr": "Vision dans le noir",
+          "es": "Visión en la oscuridad"
+        },
+        "text": {
+          "en": "<p>You have Darkvision with a range of 60 feet.</p>",
+          "fr": "<p>Vous disposez de la Vision dans le noir sur 18 m.</p><table><caption>Héritages fiélons</caption><thead><tr><th>Héritage</th><th>Niveau 1</th><th>Niveau 3</th><th>Niveau 5</th></tr></thead><tbody><tr><td>Abyssal</td><td>Vous bénéficiez de la Résistance aux dégâts de poison. Vous connaissez en outre le sort mineur bouffée de poison.</td><td>rayon empoisonné</td><td>immobilisation de personne</td></tr><tr><td>Chtonien</td><td>Vous bénéficiez de la Résistance aux dégâts nécrotiques. Vous connaissez en outre le sort mineur contact glacial.</td><td>simulacre de vie</td><td>rayon affaiblissant</td></tr><tr><td>Infernal</td><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur trait de feu.</td><td>représailles infernales</td><td>ténèbres</td></tr></tbody></table>",
+          "es": "<p>Tienes visión en la oscuridad hasta 18 m.</p><table><caption>Legados infernales</caption><thead><tr><th>Legado</th><th>Nivel 1</th><th>Nivel 3</th><th>Nivel 5</th></tr></thead><tbody><tr><td>Abisal</td><td>Tienes resistencia al daño de veneno. También conoces el truco rociada venenosa.</td><td>Rayo nauseabundo</td><td>Inmovilizar persona</td></tr><tr><td>Ctónico</td><td>Tienes resistencia al daño necrótico. También conoces el truco toque helado.</td><td>Falsa vida</td><td>Rayo debilitador</td></tr><tr><td>Infernal</td><td>Tienes resistencia al daño de fuego. También conoces el truco descarga de fuego.</td><td>Reprensión infernal</td><td>Oscuridad</td></tr></tbody></table>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 91,
+          "section": "Character Origins > Tiefling > Darkvision",
+          "esPage": 93
+        }
+      },
+      {
+        "id": "tiefling:fiendish-legacy",
+        "name": {
+          "en": "Fiendish Legacy",
+          "fr": "Héritage fiélon",
+          "es": "Legado infernal"
+        },
+        "text": {
+          "en": "<p>You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.</p><p>When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p><p>Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</p>",
+          "fr": "<p>Votre héritage vous octroie des aptitudes surnaturelles. Choisissez un héritage dans la table Héritages fiélons. Vous recevez le bénéfice de niveau 1 de l’héritage choisi.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l’héritage).</p>",
+          "es": "<p>Eres el destinatario de un legado que te otorga capacidades sobrenaturales. Elige un legado de la tabla “Legados infernales”. Obtienes el beneficio de nivel 1 del legado elegido.</p><p>Cuando alcanzas los niveles 3 y 5 de personaje, aprendes un conjuro de nivel superior, como se muestra en la tabla. Siempre tienes ese conjuro preparado. Puedes lanzarlo una vez sin gastar un espacio de conjuro y recuperas la capacidad de hacerlo de esta forma tras finalizar un descanso largo. También puedes lanzar el conjuro usando cualquier espacio de conjuro que tengas del nivel apropiado.</p><p>La Inteligencia, la Sabiduría o el Carisma es tu aptitud mágica para los conjuros que lances con este atributo (elige la característica al seleccionar el legado).</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 91,
+          "section": "Character Origins > Tiefling > Fiendish Legacy",
+          "esPage": 93
+        }
+      },
+      {
+        "id": "tiefling:otherworldly-presence",
+        "name": {
+          "en": "Otherworldly Presence",
+          "fr": "Présence d’outre-monde",
+          "es": "Presencia sobrenatural"
+        },
+        "text": {
+          "en": "<p>You know the <em>Thauma-</em> <em>turgy</em> cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.</p><table><caption>Fiendish Legacies</caption><thead><tr><th>Legacy</th><th>Level 1</th><th>Level 3</th><th>Level 5</th></tr></thead><tbody><tr><td>Abyssal</td><td>You have Resistance to Poison damage. You also know the Poison Spray cantrip.</td><td>Ray of Sickness</td><td>Hold Person</td></tr><tr><td>Chthonic</td><td>You have Resistance to Necrotic damage. You also know the Chill Touch cantrip.</td><td>False Life</td><td>Ray of Enfeeblement</td></tr><tr><td>Infernal</td><td>You have Resistance to Fire damage. You also know the Fire Bolt cantrip.</td><td>Hellish Rebuke</td><td>Darkness</td></tr></tbody></table>",
+          "fr": "<p>Vous connaissez le sort mineur <em>thaumaturgie</em>. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d’incantation que celle du trait Héritage fiélon.</p>",
+          "es": "<p>Conoces el truco <em>taumaturgia</em>. Cuando lo lances con este atributo, el conjuro utiliza la misma aptitud mágica que la de tu atributo Legado infernal.</p>"
+        },
+        "source": {
+          "page": 86,
+          "frPage": 91,
+          "section": "Character Origins > Tiefling > Otherworldly Presence",
+          "esPage": 93
+        }
+      }
+    ],
+    "text": {
+      "en": "<p>As a Tiefling, you have the following special traits.</p>",
+      "fr": "<p>En tant que tieffelin, vous disposez des traits spéciaux suivants.</p>",
+      "es": "<p>Como tiefling, tienes los siguientes atributos especiales:</p>"
+    },
+    "source": {
+      "page": 86,
+      "frPage": 91,
+      "section": "Character Origins > Species Descriptions > Tiefling",
+      "esPage": 93
+    }
+  }
+]

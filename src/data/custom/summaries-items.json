@@ -1,0 +1,1292 @@
+{
+  "item:adamantine-armor": {
+    "en": "Critical Hits against you become normal hits.",
+    "fr": "Les coups critiques contre vous deviennent des coups normaux.",
+    "es": "Los críticos contra ti pasan a ser impactos normales."
+  },
+  "item:ammunition-1-2-or-3": {
+    "en": "+1/+2/+3 to attack and damage with this ammunition; nonmagical once it hits.",
+    "fr": "+1/+2/+3 à l’attaque et aux dégâts avec ces munitions ; non magiques après avoir touché.",
+    "es": "+1/+2/+3 al ataque y al daño con esta munición; deja de ser mágica al impactar."
+  },
+  "item:ammunition-of-slaying": {
+    "en": "Vs its creature type: DC 17 Con save or extra 6d10 Force (half on success).",
+    "fr": "Contre son type de créature : JS de Con DD 17 ou 6d10 dégâts de force en plus (moitié si réussi).",
+    "es": "Contra su tipo de criatura: salvación de Con CD 17 o 6d10 de fuerza adicional (la mitad si la supera)."
+  },
+  "item:amulet-of-health": {
+    "en": "Your Constitution is 19 while you wear it.",
+    "fr": "Votre Constitution est de 19 tant que vous la portez.",
+    "es": "Tu Constitución es 19 mientras lo llevas puesto."
+  },
+  "item:amulet-of-proof-against-detection-and-location": {
+    "en": "Hidden from Divination spells and scrying sensors.",
+    "fr": "Vous échappez aux sorts de divination et aux capteurs de scrutation.",
+    "es": "Oculto a los conjuros de adivinación y a los sensores de escudriñamiento."
+  },
+  "item:amulet-of-the-planes": {
+    "en": "Magic action + DC 15 Arcana check: cast Plane Shift; a failure sends you somewhere random.",
+    "fr": "Action Magie + test d’Arcanes DD 15 : lancer Changement de plan ; un échec vous envoie au hasard.",
+    "es": "Acción de magia + prueba de Conocimiento Arcano CD 15: lanzar Desplazamiento entre planos; si fallas, acabas en un lugar aleatorio."
+  },
+  "item:animated-shield": {
+    "en": "Bonus Action: the Shield hovers and protects you for 1 minute, hands free.",
+    "fr": "Action Bonus : le bouclier flotte et vous protège 1 minute, mains libres.",
+    "es": "Acción adicional: el escudo flota y te protege durante 1 minuto, con las manos libres."
+  },
+  "item:apparatus-of-the-crab": {
+    "en": "A Large lobster-shaped vehicle for two (AC 20, 200 HP, Swim 30 ft).",
+    "fr": "Un véhicule G en forme de homard pour deux (CA 20, 200 PV, nage 9 m).",
+    "es": "Un vehículo Grande con forma de langosta para dos (CA 20, 200 PG, nadando 9 m)."
+  },
+  "item:armor-1-2-or-3": {
+    "en": "+1/+2/+3 to Armor Class while worn.",
+    "fr": "+1/+2/+3 à la CA tant que vous la portez.",
+    "es": "+1/+2/+3 a la clase de armadura mientras la llevas puesta."
+  },
+  "item:armor-of-invulnerability": {
+    "en": "Resistance to Bludgeoning, Piercing and Slashing; once a dawn, Immunity for 10 minutes.",
+    "fr": "Résistance aux dégâts contondants, perforants et tranchants ; une fois par aube, Immunité 10 minutes.",
+    "es": "Resistencia a contundente, perforante y cortante; una vez por amanecer, inmunidad durante 10 minutos."
+  },
+  "item:armor-of-resistance": {
+    "en": "Resistance to one damage type (chosen by the GM).",
+    "fr": "Résistance à un type de dégâts (choisi par le MJ).",
+    "es": "Resistencia a un tipo de daño (elegido por el GM)."
+  },
+  "item:armor-of-vulnerability": {
+    "en": "Resistance to one of Bludgeoning, Piercing, Slashing; cursed: Vulnerability to the other two.",
+    "fr": "Résistance aux dégâts contondants, perforants ou tranchants ; maudite : Vulnérabilité aux deux autres.",
+    "es": "Resistencia a contundente, perforante o cortante; maldita: vulnerabilidad a los otros dos."
+  },
+  "item:arrow-catching-shield": {
+    "en": "+2 AC against ranged attacks; Reaction: become the target of a ranged attack instead.",
+    "fr": "+2 à la CA contre les attaques à distance ; Réaction : devenir la cible d’une attaque à distance.",
+    "es": "+2 a la CA contra ataques a distancia; reacción: pasar a ser el objetivo de un ataque a distancia en lugar de otro."
+  },
+  "item:bag-of-beans": {
+    "en": "Dump beans to explode (5d4 Force) or plant one for a random effect.",
+    "fr": "Répandez des haricots pour une explosion (5d4 force) ou plantez-en un pour un effet aléatoire.",
+    "es": "Vaciar las judías para que exploten (5d4 de fuerza) o plantar una para un efecto aleatorio."
+  },
+  "item:bag-of-devouring": {
+    "en": "A feeding orifice: devours creatures and organic matter placed inside.",
+    "fr": "Un orifice nourricier : dévore créatures et matières organiques placées dedans.",
+    "es": "Un orificio que se alimenta: devora las criaturas y la materia orgánica que se meten dentro."
+  },
+  "item:bag-of-holding": {
+    "en": "Holds 500 lb (64 cubic feet) and always weighs 5 lb.",
+    "fr": "Contient 250 kg (1,8 m³) et pèse toujours 2,5 kg.",
+    "es": "Contiene 250 kg (1,8 m³) y siempre pesa 2,5 kg."
+  },
+  "item:bag-of-tricks": {
+    "en": "Magic action: pull a fuzzy object that becomes a random beast; three per dawn.",
+    "fr": "Action Magie : sortir une boule de fourrure qui devient une bête aléatoire ; trois par aube.",
+    "es": "Acción de magia: sacar un objeto peludo que se convierte en una bestia aleatoria; tres por amanecer."
+  },
+  "item:bead-of-force": {
+    "en": "Throw: 10-ft sphere, DC 15 Dex save or 5d4 Force and trapped in a force sphere for 1 minute.",
+    "fr": "Lancer : sphère de 3 m, JS de Dex DD 15 ou 5d4 force et prisonnier d’une sphère de force 1 minute.",
+    "es": "Lanzar: esfera de 3 m, salvación de Des CD 15 o 5d4 de fuerza y atrapado en una esfera de fuerza durante 1 minuto."
+  },
+  "item:bead-of-nourishment": {
+    "en": "Dissolves on the tongue: a day of Rations.",
+    "fr": "Fond sur la langue : une journée de rations.",
+    "es": "Se disuelve en la lengua: un día de raciones."
+  },
+  "item:belt-of-dwarvenkind": {
+    "en": "Con +2 (max 20), Dwarvish, Advantage on Persuasion with dwarves; non-dwarves: Darkvision 60 ft, Poison Resistance.",
+    "fr": "Con +2 (max 20), nain, Avantage en Persuasion avec les nains ; non-nains : vision dans le noir 18 m, Résistance au poison.",
+    "es": "Con +2 (máx. 20), enano, ventaja en Persuasión con enanos; si no eres enano: visión en la oscuridad 18 m, resistencia al veneno."
+  },
+  "item:belt-of-giant-strength": {
+    "en": "Your Strength becomes 21, 23, 25, 27 or 29 (by giant type) unless already higher.",
+    "fr": "Votre Force passe à 21, 23, 25, 27 ou 29 (selon le géant) si elle est inférieure.",
+    "es": "Tu Fuerza pasa a ser 21, 23, 25, 27 o 29 (según el gigante), salvo que ya sea mayor."
+  },
+  "item:berserker-axe": {
+    "en": "+1 attack and damage, +1 HP per level; cursed: berserk when damaged (DC 15 Wis).",
+    "fr": "+1 à l’attaque et aux dégâts, +1 PV par niveau ; maudite : rage meurtrière si blessé (Sag DD 15).",
+    "es": "+1 al ataque y al daño, +1 PG por nivel; maldita: frenesí al recibir daño (Sab CD 15)."
+  },
+  "item:boots-of-elvenkind": {
+    "en": "Silent steps; Advantage on Dexterity (Stealth) checks.",
+    "fr": "Pas silencieux ; Avantage aux tests de Dextérité (Discrétion).",
+    "es": "Pasos silenciosos; ventaja en las pruebas de Destreza (Sigilo)."
+  },
+  "item:boots-of-levitation": {
+    "en": "Cast Levitate on yourself at will.",
+    "fr": "Lancer Lévitation sur vous-même à volonté.",
+    "es": "Lanzar Levitar sobre ti a voluntad."
+  },
+  "item:boots-of-speed": {
+    "en": "Bonus Action: double your Speed (10 minutes per Long Rest); Opportunity Attacks against you have Disadvantage.",
+    "fr": "Action Bonus : Vitesse doublée (10 minutes par repos long) ; les attaques d’opportunité contre vous ont le Désavantage.",
+    "es": "Acción adicional: duplicar tu velocidad (10 minutos por descanso largo); los ataques de oportunidad contra ti tienen desventaja."
+  },
+  "item:boots-of-striding-and-springing": {
+    "en": "Speed at least 30 ft, not reduced by load or Heavy Armor; jump 30 ft for 10 ft of movement.",
+    "fr": "Vitesse d’au moins 9 m, non réduite par la charge ou une armure lourde ; saut de 9 m pour 3 m de déplacement.",
+    "es": "Velocidad mínima de 9 m, sin reducción por carga ni armadura pesada; saltar 9 m por cada 3 m de movimiento."
+  },
+  "item:boots-of-the-winterlands": {
+    "en": "Resistance to Cold; ignore ice and snow Difficult Terrain.",
+    "fr": "Résistance au froid ; ignore le terrain difficile de glace et de neige.",
+    "es": "Resistencia al frío; ignoras el terreno difícil de hielo y nieve."
+  },
+  "item:bowl-of-commanding-water-elementals": {
+    "en": "Magic action: summon a Water Elemental for 1 hour, once per dawn.",
+    "fr": "Action Magie : convoquer un élémentaire de l’eau 1 heure, une fois par aube.",
+    "es": "Acción de magia: invocar un elemental de agua durante 1 hora, una vez por amanecer."
+  },
+  "item:bracers-of-archery": {
+    "en": "Proficiency with Longbow and Shortbow; +2 damage with them.",
+    "fr": "Maîtrise de l’arc long et de l’arc court ; +2 aux dégâts avec eux.",
+    "es": "Competencia con arco largo y arco corto; +2 al daño con ellos."
+  },
+  "item:bracers-of-defense": {
+    "en": "+2 AC while wearing no armor and using no Shield.",
+    "fr": "+2 à la CA sans armure ni bouclier.",
+    "es": "+2 a la CA si no llevas armadura ni usas escudo."
+  },
+  "item:brazier-of-commanding-fire-elementals": {
+    "en": "Magic action: summon a Fire Elemental for 1 hour, once per dawn.",
+    "fr": "Action Magie : convoquer un élémentaire du feu 1 heure, une fois par aube.",
+    "es": "Acción de magia: invocar un elemental de fuego durante 1 hora, una vez por amanecer."
+  },
+  "item:brooch-of-shielding": {
+    "en": "Resistance to Force; immune to Magic Missile damage.",
+    "fr": "Résistance à la force ; immunisé contre les dégâts de Projectile magique.",
+    "es": "Resistencia a fuerza; inmune al daño de Proyectil mágico."
+  },
+  "item:broom-of-flying": {
+    "en": "Ride it: Fly Speed 50 ft (30 ft over 200 lb); can fly alone to a known place.",
+    "fr": "Chevauchez-le : vol 15 m (9 m au-delà de 100 kg) ; peut voler seul vers un lieu connu.",
+    "es": "Montarla: velocidad volando 15 m (9 m con más de 100 kg); puede volar sola a un lugar conocido."
+  },
+  "item:candle-of-invocation": {
+    "en": "Lit: Advantage on D20 Tests in its light, free level 1 spells for Clerics and Druids; or cast Gate once.",
+    "fr": "Allumée : Avantage aux tests d20 dans sa lumière, sorts du niveau 1 gratuits pour clercs et druides ; ou lancer Portail une fois.",
+    "es": "Encendida: ventaja en las pruebas con d20 bajo su luz, conjuros de nivel 1 gratis para clérigos y druidas; o lanzar Portal una vez."
+  },
+  "item:cape-of-the-mountebank": {
+    "en": "Cast Dimension Door once per dawn, leaving a cloud of smoke.",
+    "fr": "Lancer Porte dimensionnelle une fois par aube, en laissant un nuage de fumée.",
+    "es": "Lanzar Puerta dimensional una vez por amanecer, dejando una nube de humo."
+  },
+  "item:carpet-of-flying": {
+    "en": "Command word: the carpet flies (30 to 80 ft by size) carrying its load.",
+    "fr": "Mot de commande : le tapis vole (9 à 24 m selon la taille) avec sa charge.",
+    "es": "Palabra de mando: la alfombra vuela (de 9 a 24 m según su tamaño) con su carga."
+  },
+  "item:censer-of-controlling-air-elementals": {
+    "en": "Magic action: summon an Air Elemental for 1 hour, once per dawn.",
+    "fr": "Action Magie : convoquer un élémentaire de l’air 1 heure, une fois par aube.",
+    "es": "Acción de magia: invocar un elemental de aire durante 1 hora, una vez por amanecer."
+  },
+  "item:chime-of-opening": {
+    "en": "Cast Knock; 10 uses, then it cracks.",
+    "fr": "Lancer Déblocage ; 10 utilisations, puis il se fend.",
+    "es": "Lanzar Abrir; 10 usos y después se agrieta."
+  },
+  "item:circlet-of-blasting": {
+    "en": "Cast Scorching Ray (+5 to hit) once per dawn.",
+    "fr": "Lancer Rayon ardent (+5 au toucher) une fois par aube.",
+    "es": "Lanzar Rayo abrasador (+5 al ataque) una vez por amanecer."
+  },
+  "item:cloak-of-arachnida": {
+    "en": "Poison Resistance, Climb Speed equal to Speed, webs don’t hold you; Web (DC 13) once per dawn.",
+    "fr": "Résistance au poison, escalade égale à la Vitesse, insensible aux toiles ; Toile d’araignée (DD 13) une fois par aube.",
+    "es": "Resistencia al veneno, velocidad trepando igual a tu velocidad, las telarañas no te retienen; Telaraña (CD 13) una vez por amanecer."
+  },
+  "item:cloak-of-displacement": {
+    "en": "Attack rolls against you have Disadvantage until you take damage (back at your next turn).",
+    "fr": "Les jets d’attaque contre vous ont le Désavantage jusqu’à ce que vous subissiez des dégâts (retour à votre tour).",
+    "es": "Las tiradas de ataque contra ti tienen desventaja hasta que recibes daño (vuelve en tu siguiente turno)."
+  },
+  "item:cloak-of-elvenkind": {
+    "en": "Advantage on Stealth; Perception checks to perceive you have Disadvantage.",
+    "fr": "Avantage en Discrétion ; les tests de Perception pour vous percevoir ont le Désavantage.",
+    "es": "Ventaja en Sigilo; las pruebas de Percepción para percibirte tienen desventaja."
+  },
+  "item:cloak-of-invisibility": {
+    "en": "3 charges: Magic action, 1 charge, Invisible for 1 hour.",
+    "fr": "3 charges : action Magie, 1 charge, Invisible pendant 1 heure.",
+    "es": "3 cargas: acción de magia, 1 carga, Invisible durante 1 hora."
+  },
+  "item:cloak-of-protection": {
+    "en": "+1 to AC and saving throws.",
+    "fr": "+1 à la CA et aux jets de sauvegarde.",
+    "es": "+1 a la CA y a las tiradas de salvación."
+  },
+  "item:cloak-of-the-bat": {
+    "en": "Advantage on Stealth; Fly 40 ft in Dim Light or Darkness; Polymorph into a bat once per dawn.",
+    "fr": "Avantage en Discrétion ; vol 12 m en lumière faible ou dans les ténèbres ; Métamorphose en chauve-souris une fois par aube.",
+    "es": "Ventaja en Sigilo; volando 12 m en luz tenue u oscuridad; Polimorfar en murciélago una vez por amanecer."
+  },
+  "item:cloak-of-the-manta-ray": {
+    "en": "Breathe underwater; Swim Speed 60 ft.",
+    "fr": "Respirer sous l’eau ; Vitesse de nage de 18 m.",
+    "es": "Respirar bajo el agua; velocidad nadando 18 m."
+  },
+  "item:crystal-ball": {
+    "en": "Cast Scrying (DC 17).",
+    "fr": "Lancer Scrutation (DD 17).",
+    "es": "Lanzar Escudriñar (CD 17)."
+  },
+  "item:crystal-ball-of-mind-reading": {
+    "en": "Cast Scrying (DC 17) and Detect Thoughts (DC 17) through the sensor.",
+    "fr": "Lancer Scrutation (DD 17) et Détection des pensées (DD 17) par le capteur.",
+    "es": "Lanzar Escudriñar (CD 17) y Detectar pensamientos (CD 17) a través del sensor."
+  },
+  "item:crystal-ball-of-telepathy": {
+    "en": "Scrying (DC 17), telepathy through the sensor, Suggestion (DC 17) once per dawn.",
+    "fr": "Scrutation (DD 17), télépathie par le capteur, Suggestion (DD 17) une fois par aube.",
+    "es": "Escudriñar (CD 17), telepatía a través del sensor, Sugestión (CD 17) una vez por amanecer."
+  },
+  "item:crystal-ball-of-true-seeing": {
+    "en": "Scrying (DC 17) with Truesight 120 ft around the sensor.",
+    "fr": "Scrutation (DD 17) avec vision véritable de 36 m autour du capteur.",
+    "es": "Escudriñar (CD 17) con visión verdadera 36 m alrededor del sensor."
+  },
+  "item:cube-of-force": {
+    "en": "10 charges: Mage Armor, Shield, Tiny Hut, Private Sanctum, Resilient Sphere, Wall of Force (DC 17).",
+    "fr": "10 charges : Armure du mage, Bouclier, Petite hutte, Sanctuaire privé, Sphère résiliente, Mur de force (DD 17).",
+    "es": "10 cargas: Armadura de mago, Escudo, Pequeña choza, Sanctasanctórum privado, Esfera elástica, Muro de fuerza (CD 17)."
+  },
+  "item:cubic-gate": {
+    "en": "3 charges: cast Gate or Plane Shift to the plane keyed to a side.",
+    "fr": "3 charges : lancer Portail ou Changement de plan vers le plan d’une face.",
+    "es": "3 cargas: lanzar Portal o Desplazamiento entre planos al plano asociado a una cara."
+  },
+  "item:dagger-of-venom": {
+    "en": "+1 attack and damage; once per dawn coat it: DC 15 Con or 2d10 Poison and Poisoned.",
+    "fr": "+1 à l’attaque et aux dégâts ; une fois par aube, l’enduire : Con DD 15 ou 2d10 poison et Empoisonné.",
+    "es": "+1 al ataque y al daño; una vez por amanecer, untarla: Con CD 15 o 2d10 de veneno y Envenenado."
+  },
+  "item:dancing-sword": {
+    "en": "Bonus Action: it flies and attacks up to four times with your attack roll.",
+    "fr": "Action Bonus : elle vole et attaque jusqu’à quatre fois avec votre jet d’attaque.",
+    "es": "Acción adicional: vuela y ataca hasta cuatro veces con tu tirada de ataque."
+  },
+  "item:decanter-of-endless-water": {
+    "en": "Magic action: 1, 5 or 30 gallons of water (geyser: DC 13 Str or Prone).",
+    "fr": "Action Magie : 4, 20 ou 120 litres d’eau (geyser : For DD 13 ou À terre).",
+    "es": "Acción de magia: 4, 20 o 120 litros de agua (géiser: Fue CD 13 o Derribado)."
+  },
+  "item:deck-of-illusions": {
+    "en": "Draw a card: an illusory creature appears until dispelled.",
+    "fr": "Tirer une carte : une créature illusoire apparaît jusqu’à dissipation.",
+    "es": "Sacar una carta: aparece una criatura ilusoria hasta que se disipa."
+  },
+  "item:defender": {
+    "en": "+3 attack and damage; move some of the bonus to your AC each turn.",
+    "fr": "+3 à l’attaque et aux dégâts ; transférez une partie du bonus à votre CA à chaque tour.",
+    "es": "+3 al ataque y al daño; traslada parte del bonificador a tu CA cada turno."
+  },
+  "item:demon-armor": {
+    "en": "+1 AC, Abyssal; Unarmed Strikes deal 1d8 Slashing at +1; cursed.",
+    "fr": "+1 à la CA, abyssal ; attaques à mains nues 1d8 tranchants à +1 ; maudite.",
+    "es": "+1 a la CA, abisal; los ataques sin armas infligen 1d8 cortante con +1; maldita."
+  },
+  "item:dimensional-shackles": {
+    "en": "Bind an Incapacitated creature: no extradimensional travel (DC 30 Athletics every 30 days).",
+    "fr": "Entravez une créature Neutralisée : aucun voyage extradimensionnel (Athlétisme DD 30 tous les 30 jours).",
+    "es": "Atar a una criatura Incapacitada: ningún viaje extradimensional (Atletismo CD 30 cada 30 días)."
+  },
+  "item:dragon-orb": {
+    "en": "Artifact: DC 15 Cha to control; 7 charges for Cure Wounds, Daylight, Death Ward, Detect Magic, Scrying.",
+    "fr": "Artefact : Cha DD 15 pour la contrôler ; 7 charges pour Soins, Lumière du jour, Protection contre la mort, Détection de la magie, Scrutation.",
+    "es": "Artefacto: Car CD 15 para controlarlo; 7 cargas para Curar heridas, Luz del día, Guarda contra la muerte, Detectar magia, Escudriñar."
+  },
+  "item:dragon-scale-mail": {
+    "en": "+1 AC, Advantage on saves against Dragon breath, Resistance by dragon kind.",
+    "fr": "+1 à la CA, Avantage aux JS contre les souffles de dragon, Résistance selon le dragon.",
+    "es": "+1 a la CA, ventaja en las salvaciones contra el aliento de los dragones, resistencia según el dragón."
+  },
+  "item:dragon-slayer": {
+    "en": "+1 attack and damage; extra 3d6 against Dragons.",
+    "fr": "+1 à l’attaque et aux dégâts ; 3d6 dégâts en plus contre les dragons.",
+    "es": "+1 al ataque y al daño; 3d6 adicionales contra dragones."
+  },
+  "item:dust-of-disappearance": {
+    "en": "Throw: you and all within 10 ft are Invisible for 2d4 minutes.",
+    "fr": "Lancer : vous et tout ce qui est à 3 m êtes Invisibles pendant 2d4 minutes.",
+    "es": "Lanzar: tú y todo lo que esté a 3 m o menos sois Invisibles durante 2d4 minutos."
+  },
+  "item:dust-of-dryness": {
+    "en": "A pinch turns a 15-ft cube of water into a pellet, or deals 10d6 Necrotic to a water elemental (DC 13).",
+    "fr": "Une pincée transforme un cube d’eau de 4,50 m en bille, ou 10d6 nécrotiques à un élémentaire d’eau (DD 13).",
+    "es": "Una pizca convierte un cubo de agua de 4,5 m en una bolita, o inflige 10d6 necrótico a un elemental de agua (CD 13)."
+  },
+  "item:dust-of-sneezing-and-choking": {
+    "en": "Throw: creatures within 30 ft, DC 15 Con or Incapacitated and suffocating.",
+    "fr": "Lancer : créatures à 9 m, Con DD 15 ou Neutralisées et suffocant.",
+    "es": "Lanzar: criaturas a 9 m o menos, Con CD 15 o Incapacitadas y asfixiándose."
+  },
+  "item:dwarven-plate": {
+    "en": "+2 AC; Reaction: reduce a forced move by 10 ft.",
+    "fr": "+2 à la CA ; Réaction : réduire de 3 m un déplacement forcé.",
+    "es": "+2 a la CA; reacción: reducir en 3 m un desplazamiento forzado."
+  },
+  "item:dwarven-thrower": {
+    "en": "+3 attack and damage, Thrown 20/60; extra 1d8 Force when thrown (2d8 vs Giants), returns.",
+    "fr": "+3 à l’attaque et aux dégâts, lancer 6/18 m ; 1d8 force en plus lancée (2d8 contre les géants), revient.",
+    "es": "+3 al ataque y al daño, arrojadiza 6/18 m; 1d8 de fuerza adicional al lanzarla (2d8 contra gigantes), vuelve."
+  },
+  "item:efficient-quiver": {
+    "en": "Holds 60 arrows, 18 javelins and 6 long objects; weighs 2 lb.",
+    "fr": "Contient 60 flèches, 18 javelines et 6 objets longs ; pèse 1 kg.",
+    "es": "Contiene 60 flechas, 18 jabalinas y 6 objetos largos; pesa 1 kg."
+  },
+  "item:efreeti-bottle": {
+    "en": "Open: an efreeti appears; the GM rolls whether it serves, attacks or grants a wish.",
+    "fr": "Ouvrir : un éfrit apparaît ; le MJ détermine s’il sert, attaque ou exauce un souhait.",
+    "es": "Abrirla: aparece un ifrit; el GM tira si te sirve, te ataca o te concede un deseo."
+  },
+  "item:elemental-gem": {
+    "en": "Break it: summon an elemental by gem type for 1 hour.",
+    "fr": "La briser : convoquer un élémentaire selon la gemme pour 1 heure.",
+    "es": "Romperla: invocar un elemental según la gema durante 1 hora."
+  },
+  "item:elixir-of-health": {
+    "en": "Drink: cures magical contagions and ends Blinded, Deafened, Paralyzed, Poisoned.",
+    "fr": "Boire : guérit les contagions magiques et met fin à Aveuglé, Assourdi, Paralysé, Empoisonné.",
+    "es": "Beberlo: cura los contagios mágicos y pone fin a Cegado, Ensordecido, Paralizado y Envenenado."
+  },
+  "item:elven-chain": {
+    "en": "+1 AC; trained with it even without Medium or Heavy armor training.",
+    "fr": "+1 à la CA ; formé à son port même sans formation aux armures intermédiaires ou lourdes.",
+    "es": "+1 a la CA; entrenado con ella aunque no tengas entrenamiento con armaduras medias o pesadas."
+  },
+  "item:energy-bow": {
+    "en": "+1 attack and damage, Force arrows; Arrow of Restraint, Transport, Energy Ladder.",
+    "fr": "+1 à l’attaque et aux dégâts, flèches de force ; flèche d’entrave, de transport, échelle d’énergie.",
+    "es": "+1 al ataque y al daño, flechas de fuerza; Flecha apresadora, Flecha transportadora, Escalera de energía."
+  },
+  "item:eversmoking-bottle": {
+    "en": "Open: smoke fills a 60-ft Emanation (up to 120 ft), Heavily Obscured.",
+    "fr": "Ouverte : une fumée remplit une émanation de 18 m (jusqu’à 36 m), visibilité nulle.",
+    "es": "Abrirla: el humo llena una emanación de 18 m (hasta 36 m), muy oscura."
+  },
+  "item:eyes-of-charming": {
+    "en": "3 charges: Charm Person (DC 13), one level higher per extra charge.",
+    "fr": "3 charges : Charme-personne (DD 13), un niveau de plus par charge supplémentaire.",
+    "es": "3 cargas: Hechizar persona (CD 13), un nivel más por carga adicional."
+  },
+  "item:eyes-of-minute-seeing": {
+    "en": "Darkvision within 1 ft; Advantage on Investigation within 1 ft.",
+    "fr": "Vision dans le noir à 30 cm ; Avantage en Investigation à 30 cm.",
+    "es": "Visión en la oscuridad a 30 cm; ventaja en Investigación a 30 cm."
+  },
+  "item:eyes-of-the-eagle": {
+    "en": "Advantage on Perception checks that rely on sight; see far details.",
+    "fr": "Avantage aux tests de Perception basés sur la vue ; détails lointains.",
+    "es": "Ventaja en las pruebas de Percepción que dependan de la vista; ves detalles lejanos."
+  },
+  "item:feather-token": {
+    "en": "Single-use token: anchor, bird, fan, swan boat, tree or whip.",
+    "fr": "Plume à usage unique : ancre, oiseau, éventail, bateau-cygne, arbre ou fouet.",
+    "es": "Ficha de un solo uso: ancla, pájaro, abanico, bote cisne, árbol o látigo."
+  },
+  "item:figurine-of-wondrous-power": {
+    "en": "Throw it: becomes a creature for a while, then needs days to recover.",
+    "fr": "La lancer : devient une créature un temps, puis doit se reposer des jours.",
+    "es": "Lanzarla: se convierte en una criatura durante un tiempo y luego necesita días para recuperarse."
+  },
+  "item:flame-tongue": {
+    "en": "Bonus Action: the weapon ignites, extra 2d6 Fire on a hit.",
+    "fr": "Action Bonus : l’arme s’embrase, 2d6 dégâts de feu en plus.",
+    "es": "Acción adicional: el arma se enciende, 2d6 de fuego adicional al impactar."
+  },
+  "item:folding-boat": {
+    "en": "A box that unfolds into a Rowboat or a Keelboat.",
+    "fr": "Une boîte qui se déplie en barque ou en quillard.",
+    "es": "Una caja que se despliega en un bote de remos o una barcaza."
+  },
+  "item:frost-brand": {
+    "en": "Extra 1d6 Cold on a hit; Fire Resistance while held; puts out flames.",
+    "fr": "1d6 dégâts de froid en plus ; Résistance au feu en main ; éteint les flammes.",
+    "es": "1d6 de frío adicional al impactar; resistencia al fuego mientras la empuñas; apaga las llamas."
+  },
+  "item:gauntlets-of-ogre-power": {
+    "en": "Your Strength is 19 while you wear them.",
+    "fr": "Votre Force est de 19 tant que vous les portez.",
+    "es": "Tu Fuerza es 19 mientras los llevas puestos."
+  },
+  "item:gem-of-brightness": {
+    "en": "50 charges: light, a blinding beam (1) or a blinding cone (5), DC 15 Con.",
+    "fr": "50 charges : lumière, rayon aveuglant (1) ou cône aveuglant (5), Con DD 15.",
+    "es": "50 cargas: luz, un rayo cegador (1) o un cono cegador (5), Con CD 15."
+  },
+  "item:gem-of-seeing": {
+    "en": "3 charges: Truesight 120 ft through the gem for 10 minutes.",
+    "fr": "3 charges : vision véritable 36 m à travers la gemme pendant 10 minutes.",
+    "es": "3 cargas: visión verdadera 36 m a través de la gema durante 10 minutos."
+  },
+  "item:giant-slayer": {
+    "en": "+1 attack and damage; vs Giants extra 2d6 and DC 15 Str or Prone.",
+    "fr": "+1 à l’attaque et aux dégâts ; contre les géants 2d6 en plus et For DD 15 ou À terre.",
+    "es": "+1 al ataque y al daño; contra gigantes, 2d6 adicionales y Fue CD 15 o Derribado."
+  },
+  "item:glamoured-studded-leather": {
+    "en": "+1 AC; Bonus Action: looks like clothing or other armor.",
+    "fr": "+1 à la CA ; action Bonus : ressemble à des vêtements ou à une autre armure.",
+    "es": "+1 a la CA; acción adicional: parece ropa u otra armadura."
+  },
+  "item:gloves-of-missile-snaring": {
+    "en": "Reaction: reduce ranged weapon damage by 1d10 + Dex; catch it if reduced to 0.",
+    "fr": "Réaction : réduire les dégâts d’une arme à distance de 1d10 + Dex ; l’attraper si réduits à 0.",
+    "es": "Reacción: reducir el daño de un arma a distancia en 1d10 + Des; atraparla si queda en 0."
+  },
+  "item:gloves-of-swimming-and-climbing": {
+    "en": "Climb and Swim Speeds equal to Speed; +5 Athletics to climb or swim.",
+    "fr": "Vitesses d’escalade et de nage égales à la Vitesse ; +5 en Athlétisme pour grimper ou nager.",
+    "es": "Velocidades trepando y nadando iguales a tu velocidad; +5 a Atletismo para trepar o nadar."
+  },
+  "item:gloves-of-thievery": {
+    "en": "Imperceptible; +5 to Dexterity (Sleight of Hand) checks.",
+    "fr": "Imperceptibles ; +5 aux tests de Dextérité (Escamotage).",
+    "es": "Imperceptibles; +5 a las pruebas de Destreza (Juego de manos)."
+  },
+  "item:goggles-of-night": {
+    "en": "Darkvision 60 ft (or +60 ft if you have it).",
+    "fr": "Vision dans le noir 18 m (ou +18 m si vous l’avez déjà).",
+    "es": "Visión en la oscuridad 18 m (o +18 m si ya la tienes)."
+  },
+  "item:hammer-of-thunderbolts": {
+    "en": "+1 attack and damage; 5 charges: hurl it, DC 17 Con or Stunned; Giant’s Bane with a strength item.",
+    "fr": "+1 à l’attaque et aux dégâts ; 5 charges : le lancer, Con DD 17 ou Étourdi ; Fléau des géants avec un objet de force.",
+    "es": "+1 al ataque y al daño; 5 cargas: lanzarlo, Con CD 17 o Aturdido; Azote de gigantes con un objeto de fuerza."
+  },
+  "item:handy-haversack": {
+    "en": "Two 200-lb side pouches and a 500-lb central pouch; always 5 lb.",
+    "fr": "Deux poches latérales de 100 kg et une centrale de 250 kg ; toujours 2,5 kg.",
+    "es": "Dos bolsas laterales de 100 kg y una central de 250 kg; siempre 2,5 kg."
+  },
+  "item:hat-of-disguise": {
+    "en": "Cast Disguise Self at will.",
+    "fr": "Lancer Déguisement à volonté.",
+    "es": "Lanzar Disfrazarse a voluntad."
+  },
+  "item:hat-of-many-spells": {
+    "en": "Wizard focus; try to cast an unknown Wizard spell (Arcana DC 10 + level) or a random effect.",
+    "fr": "Focaliseur de magicien ; tenter un sort de magicien inconnu (Arcanes DD 10 + niveau) ou effet aléatoire.",
+    "es": "Canalizador de mago; intentar lanzar un conjuro de mago desconocido (Conocimiento Arcano CD 10 + nivel) o un efecto aleatorio."
+  },
+  "item:headband-of-intellect": {
+    "en": "Your Intelligence is 19 while you wear it.",
+    "fr": "Votre Intelligence est de 19 tant que vous le portez.",
+    "es": "Tu Inteligencia es 19 mientras la llevas puesta."
+  },
+  "item:helm-of-brilliance": {
+    "en": "Gems: Fire Resistance (ruby), flaming weapon (+1d6 Fire), spells (DC 18) using up gems.",
+    "fr": "Gemmes : Résistance au feu (rubis), arme enflammée (+1d6 feu), sorts (DD 18) qui consomment des gemmes.",
+    "es": "Gemas: resistencia al fuego (rubí), arma en llamas (+1d6 de fuego), conjuros (CD 18) que gastan gemas."
+  },
+  "item:helm-of-comprehending-languages": {
+    "en": "Cast Comprehend Languages at will.",
+    "fr": "Lancer Compréhension des langues à volonté.",
+    "es": "Lanzar Entender idiomas a voluntad."
+  },
+  "item:helm-of-telepathy": {
+    "en": "Telepathy 30 ft; Detect Thoughts and Suggestion (DC 13) once per dawn each.",
+    "fr": "Télépathie 9 m ; Détection des pensées et Suggestion (DD 13) une fois par aube chacun.",
+    "es": "Telepatía 9 m; Detectar pensamientos y Sugestión (CD 13) una vez por amanecer cada uno."
+  },
+  "item:helm-of-teleportation": {
+    "en": "3 charges: cast Teleport.",
+    "fr": "3 charges : lancer Téléportation.",
+    "es": "3 cargas: lanzar Teletransporte."
+  },
+  "item:holy-avenger": {
+    "en": "+3 attack and damage; extra 2d10 Radiant vs Fiends and Undead; aura of Advantage on saves against magic.",
+    "fr": "+3 à l’attaque et aux dégâts ; 2d10 radiants en plus contre fiélons et morts-vivants ; aura d’Avantage aux JS contre la magie.",
+    "es": "+3 al ataque y al daño; 2d10 radiante adicional contra infernales y muertos vivientes; aura de ventaja en las salvaciones contra la magia."
+  },
+  "item:horn-of-blasting": {
+    "en": "30-ft Cone: DC 15 Con, 5d8 Thunder and Deafened; 20% chance to explode.",
+    "fr": "Cône de 9 m : Con DD 15, 5d8 tonnerre et Assourdi ; 20 % de risque d’exploser.",
+    "es": "Cono de 9 m: Con CD 15, 5d8 de trueno y Ensordecido; 20 % de probabilidad de explotar."
+  },
+  "item:horn-of-valhalla": {
+    "en": "Blow it: 2 to 5 Berserker spirits for 1 hour; once per 7 days.",
+    "fr": "Le sonner : 2 à 5 esprits berserkers pour 1 heure ; une fois par 7 jours.",
+    "es": "Soplarlo: de 2 a 5 espíritus berserker durante 1 hora; una vez cada 7 días."
+  },
+  "item:horseshoes-of-a-zephyr": {
+    "en": "A horse floats over any surface, ignores Difficult Terrain, travels 12 hours a day.",
+    "fr": "Un cheval flotte sur toute surface, ignore le terrain difficile, voyage 12 heures par jour.",
+    "es": "Un caballo flota sobre cualquier superficie, ignora el terreno difícil y viaja 12 horas al día."
+  },
+  "item:horseshoes-of-speed": {
+    "en": "The shod creature’s Speed increases by 30 ft.",
+    "fr": "La Vitesse de la créature ferrée augmente de 9 m.",
+    "es": "La velocidad de la criatura herrada aumenta en 9 m."
+  },
+  "item:immovable-rod": {
+    "en": "Press the button: fixed in place, holds 8,000 lb.",
+    "fr": "Appuyer sur le bouton : fixé sur place, supporte 4 tonnes.",
+    "es": "Pulsar el botón: queda fijo en el sitio, aguanta 4 toneladas."
+  },
+  "item:instant-fortress": {
+    "en": "Command word: grows into a 20-ft adamantine tower.",
+    "fr": "Mot de commande : devient une tour d’adamantium de 6 m.",
+    "es": "Palabra de mando: crece hasta ser una torre de adamantina de 6 m."
+  },
+  "item:ioun-stone": {
+    "en": "Orbits your head: a benefit by type (ability +2, +1 AC, Advantage, spell absorption…).",
+    "fr": "Gravite autour de votre tête : un bénéfice selon le type (caractéristique +2, +1 CA, Avantage, absorption…).",
+    "es": "Orbita alrededor de tu cabeza: un beneficio según el tipo (característica +2, +1 a la CA, ventaja, absorción de conjuros…)."
+  },
+  "item:iron-bands": {
+    "en": "Throw (Dex + PB to hit): the target is Restrained until released; once per dawn.",
+    "fr": "Lancer (Dex + bonus de maîtrise) : la cible est Entravée jusqu’à libération ; une fois par aube.",
+    "es": "Lanzar (Des + BC al ataque): el objetivo queda Apresado hasta que se libera; una vez por amanecer."
+  },
+  "item:iron-flask": {
+    "en": "Trap an extraplanar creature (DC 17 Wis); release it to command it for 1 hour.",
+    "fr": "Piéger une créature extraplanaire (Sag DD 17) ; la libérer pour la commander 1 heure.",
+    "es": "Atrapar a una criatura extraplanar (Sab CD 17); liberarla para darle órdenes durante 1 hora."
+  },
+  "item:javelin-of-lightning": {
+    "en": "Lightning damage on a hit; once per dawn a 120-ft bolt, DC 13 Dex, 4d6 Lightning.",
+    "fr": "Dégâts de foudre au toucher ; une fois par aube un éclair de 36 m, Dex DD 13, 4d6 foudre.",
+    "es": "Daño de relámpago al impactar; una vez por amanecer, un rayo de 36 m, Des CD 13, 4d6 de relámpago."
+  },
+  "item:lantern-of-revealing": {
+    "en": "Its Bright Light reveals Invisible creatures and objects.",
+    "fr": "Sa lumière vive révèle créatures et objets invisibles.",
+    "es": "Su luz brillante revela criaturas y objetos invisibles."
+  },
+  "item:luck-blade": {
+    "en": "+1 attack and damage, +1 saves while on you; reroll a failed D20 Test per dawn; Wish charges.",
+    "fr": "+1 à l’attaque et aux dégâts, +1 aux JS tant que vous l’avez ; relancer un test d20 raté par aube ; charges de Souhait.",
+    "es": "+1 al ataque y al daño, +1 a las salvaciones mientras la lleves; repetir una prueba con d20 fallida por amanecer; cargas de Deseo."
+  },
+  "item:mace-of-disruption": {
+    "en": "Extra 2d6 Radiant vs Fiends and Undead (destroyed at 25 HP or fewer, DC 15 Wis); sheds light.",
+    "fr": "2d6 radiants en plus contre fiélons et morts-vivants (détruits à 25 PV ou moins, Sag DD 15) ; éclaire.",
+    "es": "2d6 radiante adicional contra infernales y muertos vivientes (destruidos con 25 PG o menos, Sab CD 15); emite luz."
+  },
+  "item:mace-of-smiting": {
+    "en": "+1 attack and damage (+3 vs Constructs); a 20 deals 7 extra (14 vs Constructs).",
+    "fr": "+1 à l’attaque et aux dégâts (+3 contre les créatures artificielles) ; un 20 inflige 7 en plus (14).",
+    "es": "+1 al ataque y al daño (+3 contra autómatas); un 20 inflige 7 adicionales (14 contra autómatas)."
+  },
+  "item:mace-of-terror": {
+    "en": "3 charges: creatures within 30 ft, DC 15 Wis or Frightened and fleeing.",
+    "fr": "3 charges : créatures à 9 m, Sag DD 15 ou Effrayées et en fuite.",
+    "es": "3 cargas: criaturas a 9 m o menos, Sab CD 15 o Asustadas y huyendo."
+  },
+  "item:mantle-of-spell-resistance": {
+    "en": "Advantage on saving throws against spells.",
+    "fr": "Avantage aux jets de sauvegarde contre les sorts.",
+    "es": "Ventaja en las tiradas de salvación contra conjuros."
+  },
+  "item:manual-of-bodily-health": {
+    "en": "Study 48 hours: Constitution +2 (max 30).",
+    "fr": "Étude de 48 heures : Constitution +2 (max 30).",
+    "es": "Estudio de 48 horas: Constitución +2 (máx. 30)."
+  },
+  "item:manual-of-gainful-exercise": {
+    "en": "Study 48 hours: Strength +2 (max 30).",
+    "fr": "Étude de 48 heures : Force +2 (max 30).",
+    "es": "Estudio de 48 horas: Fuerza +2 (máx. 30)."
+  },
+  "item:manual-of-golems": {
+    "en": "Instructions and incantations to build a golem (time and cost by type).",
+    "fr": "Instructions et incantations pour fabriquer un golem (temps et coût selon le type).",
+    "es": "Instrucciones y encantamientos para construir un gólem (tiempo y coste según el tipo)."
+  },
+  "item:manual-of-quickness-of-action": {
+    "en": "Study 48 hours: Dexterity +2 (max 30).",
+    "fr": "Étude de 48 heures : Dextérité +2 (max 30).",
+    "es": "Estudio de 48 horas: Destreza +2 (máx. 30)."
+  },
+  "item:marvelous-pigments": {
+    "en": "Paint objects in a 20-ft cube: they become real (up to 500 GP per pot).",
+    "fr": "Peindre des objets dans un cube de 6 m : ils deviennent réels (jusqu’à 500 po par pot).",
+    "es": "Pintar objetos en un cubo de 6 m: se vuelven reales (hasta 500 po por bote)."
+  },
+  "item:medallion-of-thoughts": {
+    "en": "5 charges: cast Detect Thoughts (DC 13).",
+    "fr": "5 charges : lancer Détection des pensées (DD 13).",
+    "es": "5 cargas: lanzar Detectar pensamientos (CD 13)."
+  },
+  "item:mirror-of-life-trapping": {
+    "en": "Traps creatures that see their reflection (DC 15 Cha) in twelve cells.",
+    "fr": "Piège les créatures qui voient leur reflet (Cha DD 15) dans douze cellules.",
+    "es": "Atrapa a las criaturas que ven su reflejo (Car CD 15) en doce celdas."
+  },
+  "item:mithral-armor": {
+    "en": "No Stealth Disadvantage and no Strength requirement.",
+    "fr": "Ni Désavantage en Discrétion ni Force minimale.",
+    "es": "Sin desventaja en Sigilo ni requisito de Fuerza."
+  },
+  "item:mysterious-deck": {
+    "en": "Declare a number of cards and draw them: each has a powerful random effect.",
+    "fr": "Annoncez un nombre de cartes et tirez-les : chacune a un puissant effet aléatoire.",
+    "es": "Declarar un número de cartas y sacarlas: cada una tiene un poderoso efecto aleatorio."
+  },
+  "item:necklace-of-adaptation": {
+    "en": "Breathe in any environment; Advantage on saves against the Poisoned condition.",
+    "fr": "Respirer dans tout environnement ; Avantage aux JS contre l’état Empoisonné.",
+    "es": "Respirar en cualquier entorno; ventaja en las salvaciones contra el estado Envenenado."
+  },
+  "item:necklace-of-fireballs": {
+    "en": "1d6 + 3 beads: each a level 3 Fireball (DC 15), +1d6 per extra bead thrown together.",
+    "fr": "1d6 + 3 perles : chacune une Boule de feu du niveau 3 (DD 15), +1d6 par perle lancée en plus.",
+    "es": "1d6 + 3 cuentas: cada una es una Bola de fuego de nivel 3 (CD 15), +1d6 por cuenta adicional lanzada a la vez."
+  },
+  "item:necklace-of-prayer-beads": {
+    "en": "Magic beads cast Bless, Cure Wounds, Greater Restoration, Shining Smite, Guardian of Faith or Wind Walk.",
+    "fr": "Des perles lancent Bénédiction, Soins, Restauration suprême, Châtiment de révélation, Gardien de la foi ou Vent divin.",
+    "es": "Las cuentas mágicas lanzan Bendición, Curar heridas, Restablecimiento mayor, Castigo brillante, Guardián de la fe o Viajar con el viento."
+  },
+  "item:nine-lives-stealer": {
+    "en": "+2 attack and damage; on a 20, a creature under 100 HP saves (DC 15 Con) or dies.",
+    "fr": "+2 à l’attaque et aux dégâts ; sur un 20, une créature de moins de 100 PV réussit un JS (Con DD 15) ou meurt.",
+    "es": "+2 al ataque y al daño; con un 20, una criatura con menos de 100 PG hace una salvación (Con CD 15) o muere."
+  },
+  "item:oathbow": {
+    "en": "Sworn enemy: Advantage, ignores cover and long range, extra 3d6 Piercing.",
+    "fr": "Ennemi juré : Avantage, ignore l’abri et la longue portée, 3d6 perforants en plus.",
+    "es": "Enemigo jurado: ventaja, ignora la cobertura y el alcance largo, 3d6 perforante adicional."
+  },
+  "item:oil-of-etherealness": {
+    "en": "Applied in 10 minutes: the effect of Etherealness for 1 hour.",
+    "fr": "Appliquée en 10 minutes : l’effet de Forme éthérée pendant 1 heure.",
+    "es": "Aplicado en 10 minutos: el efecto de Excursión etérea durante 1 hora."
+  },
+  "item:oil-of-sharpness": {
+    "en": "Coats a Slashing or Piercing weapon (or 20 ammunition): it becomes +3.",
+    "fr": "Enduit une arme tranchante ou perforante (ou 20 munitions) : elle devient +3.",
+    "es": "Unta un arma cortante o perforante (o 20 municiones): pasa a ser +3."
+  },
+  "item:oil-of-slipperiness": {
+    "en": "Freedom of Movement for 8 hours, or Grease on a 10-ft square.",
+    "fr": "Liberté de mouvement pendant 8 heures, ou Graisse sur un carré de 3 m.",
+    "es": "Libertad de movimiento durante 8 horas, o Grasa en un cuadrado de 3 m."
+  },
+  "item:pearl-of-power": {
+    "en": "Magic action: regain one expended spell slot of level 3 or lower, once per dawn.",
+    "fr": "Action Magie : récupérer un emplacement de sort du niveau 3 ou inférieur, une fois par aube.",
+    "es": "Acción de magia: recuperar un espacio de conjuro gastado de nivel 3 o inferior, una vez por amanecer."
+  },
+  "item:periapt-of-health": {
+    "en": "Regain 2d4 + 2 HP once per dawn; Advantage on saves against Poisoned.",
+    "fr": "Récupérer 2d4 + 2 PV une fois par aube ; Avantage aux JS contre Empoisonné.",
+    "es": "Recuperar 2d4 + 2 PG una vez por amanecer; ventaja en las salvaciones contra Envenenado."
+  },
+  "item:periapt-of-proof-against-poison": {
+    "en": "Immunity to the Poisoned condition and Poison damage.",
+    "fr": "Immunité contre l’état Empoisonné et les dégâts de poison.",
+    "es": "Inmunidad al estado Envenenado y al daño de veneno."
+  },
+  "item:periapt-of-wound-closure": {
+    "en": "Death Saving Throws of 9 or lower become 10; Hit Point Dice heal double.",
+    "fr": "Les jets de sauvegarde contre la mort de 9 ou moins deviennent 10 ; les dés de vie soignent le double.",
+    "es": "Las tiradas de salvación contra muerte de 9 o menos pasan a ser 10; los dados de puntos de golpe curan el doble."
+  },
+  "item:philter-of-love": {
+    "en": "Drink: Charmed by the next creature you see within 10 minutes, for 1 hour.",
+    "fr": "Boire : Charmé par la prochaine créature vue dans les 10 minutes, pendant 1 heure.",
+    "es": "Beberlo: Hechizado por la próxima criatura que veas en 10 minutos, durante 1 hora."
+  },
+  "item:pipes-of-haunting": {
+    "en": "3 charges: creatures within 30 ft, DC 15 Wis or Frightened 1 minute.",
+    "fr": "3 charges : créatures à 9 m, Sag DD 15 ou Effrayées 1 minute.",
+    "es": "3 cargas: criaturas a 9 m o menos, Sab CD 15 o Asustadas 1 minuto."
+  },
+  "item:pipes-of-the-sewers": {
+    "en": "Rats are Indifferent; 3 charges: call Swarms of Rats and sway them (DC 15 Wis).",
+    "fr": "Les rats sont indifférents ; 3 charges : appeler des nuées de rats et les charmer (Sag DD 15).",
+    "es": "Las ratas son indiferentes; 3 cargas: llamar enjambres de ratas e influirlos (Sab CD 15)."
+  },
+  "item:plate-armor-of-etherealness": {
+    "en": "Command word: the effect of Etherealness, once per dawn.",
+    "fr": "Mot de commande : l’effet de Forme éthérée, une fois par aube.",
+    "es": "Palabra de mando: el efecto de Excursión etérea, una vez por amanecer."
+  },
+  "item:portable-hole": {
+    "en": "Unfolds into a 10-ft-deep extradimensional hole.",
+    "fr": "Se déplie en un trou extradimensionnel de 3 m de profondeur.",
+    "es": "Se despliega en un agujero extradimensional de 3 m de profundidad."
+  },
+  "item:potion-of-animal-friendship": {
+    "en": "Drink: cast the level 3 Animal Friendship (DC 13).",
+    "fr": "Boire : lancer Amitié avec les animaux du niveau 3 (DD 13).",
+    "es": "Beberla: lanzar Encantar animal de nivel 3 (CD 13)."
+  },
+  "item:potion-of-clairvoyance": {
+    "en": "Drink: the effect of Clairvoyance, no Concentration.",
+    "fr": "Boire : l’effet de Clairvoyance, sans Concentration.",
+    "es": "Beberla: el efecto de Clarividencia, sin Concentración."
+  },
+  "item:potion-of-climbing": {
+    "en": "Drink: Climb Speed equal to Speed and Advantage to climb for 1 hour.",
+    "fr": "Boire : escalade égale à la Vitesse et Avantage pour grimper pendant 1 heure.",
+    "es": "Beberla: velocidad trepando igual a tu velocidad y ventaja para trepar durante 1 hora."
+  },
+  "item:potion-of-diminution": {
+    "en": "Drink: the reduce effect of Enlarge/Reduce for 1d4 hours.",
+    "fr": "Boire : l’effet rapetisser d’Agrandissement/rapetissement pendant 1d4 heures.",
+    "es": "Beberla: el efecto reducir de Agrandar/reducir durante 1d4 horas."
+  },
+  "item:potion-of-flying": {
+    "en": "Drink: Fly Speed equal to Speed (hover) for 1 hour.",
+    "fr": "Boire : vol égal à la Vitesse (stationnaire) pendant 1 heure.",
+    "es": "Beberla: velocidad volando igual a tu velocidad (levitar) durante 1 hora."
+  },
+  "item:potion-of-gaseous-form": {
+    "en": "Drink: the effect of Gaseous Form for 1 hour.",
+    "fr": "Boire : l’effet de Forme gazeuse pendant 1 heure.",
+    "es": "Beberla: el efecto de Forma gaseosa durante 1 hora."
+  },
+  "item:potion-of-giant-strength": {
+    "en": "Drink: Strength 21 to 29 (by giant type) for 1 hour.",
+    "fr": "Boire : Force 21 à 29 (selon le géant) pendant 1 heure.",
+    "es": "Beberla: Fuerza de 21 a 29 (según el gigante) durante 1 hora."
+  },
+  "item:potion-of-growth": {
+    "en": "Drink: the enlarge effect of Enlarge/Reduce for 10 minutes.",
+    "fr": "Boire : l’effet agrandir d’Agrandissement/rapetissement pendant 10 minutes.",
+    "es": "Beberla: el efecto agrandar de Agrandar/reducir durante 10 minutos."
+  },
+  "item:potion-of-heroism": {
+    "en": "Drink: 10 Temporary Hit Points and Bless for 1 hour.",
+    "fr": "Boire : 10 points de vie temporaires et Bénédiction pendant 1 heure.",
+    "es": "Beberla: 10 puntos de golpe temporales y Bendición durante 1 hora."
+  },
+  "item:potion-of-invisibility": {
+    "en": "Drink: Invisible for 1 hour, until you attack, deal damage or cast.",
+    "fr": "Boire : Invisible pendant 1 heure, jusqu’à une attaque, des dégâts ou un sort.",
+    "es": "Beberla: Invisible durante 1 hora, hasta que ataques, inflijas daño o lances un conjuro."
+  },
+  "item:potion-of-invulnerability": {
+    "en": "Drink: Resistance to all damage for 1 minute.",
+    "fr": "Boire : Résistance à tous les dégâts pendant 1 minute.",
+    "es": "Beberla: resistencia a todo el daño durante 1 minuto."
+  },
+  "item:potion-of-longevity": {
+    "en": "Drink: 1d6 + 6 years younger (10% cumulative risk of aging instead).",
+    "fr": "Boire : 1d6 + 6 ans de moins (10 % de risque cumulatif de vieillir).",
+    "es": "Beberla: 1d6 + 6 años más joven (10 % de riesgo acumulativo de envejecer en su lugar)."
+  },
+  "item:potion-of-mind-reading": {
+    "en": "Drink: Detect Thoughts (DC 13) for 10 minutes.",
+    "fr": "Boire : Détection des pensées (DD 13) pendant 10 minutes.",
+    "es": "Beberla: Detectar pensamientos (CD 13) durante 10 minutos."
+  },
+  "item:potion-of-poison": {
+    "en": "Looks beneficial; drinking deals 4d6 Poison, DC 13 Con or Poisoned 1 hour.",
+    "fr": "Semble bénéfique ; la boire inflige 4d6 poison, Con DD 13 ou Empoisonné 1 heure.",
+    "es": "Parece beneficiosa; beberla inflige 4d6 de veneno, Con CD 13 o Envenenado 1 hora."
+  },
+  "item:potion-of-resistance": {
+    "en": "Drink: Resistance to one damage type for 1 hour.",
+    "fr": "Boire : Résistance à un type de dégâts pendant 1 heure.",
+    "es": "Beberla: resistencia a un tipo de daño durante 1 hora."
+  },
+  "item:potion-of-speed": {
+    "en": "Drink: Haste for 1 minute, no lethargy afterwards.",
+    "fr": "Boire : Hâte pendant 1 minute, sans léthargie ensuite.",
+    "es": "Beberla: Acelerar durante 1 minuto, sin letargo después."
+  },
+  "item:potion-of-vitality": {
+    "en": "Drink: removes Exhaustion and Poisoned; Hit Point Dice heal the maximum for 24 hours.",
+    "fr": "Boire : retire l’Épuisement et Empoisonné ; les dés de vie soignent au maximum 24 heures.",
+    "es": "Beberla: elimina Cansancio y Envenenado; los dados de puntos de golpe curan el máximo durante 24 horas."
+  },
+  "item:potion-of-water-breathing": {
+    "en": "Drink: breathe underwater for 24 hours.",
+    "fr": "Boire : respirer sous l’eau pendant 24 heures.",
+    "es": "Beberla: respirar bajo el agua durante 24 horas."
+  },
+  "item:potions-of-healing": {
+    "en": "Drink: regain 2d4 + 2, 4d4 + 4, 8d4 + 8 or 10d4 + 20 HP by strength.",
+    "fr": "Boire : récupérer 2d4 + 2, 4d4 + 4, 8d4 + 8 ou 10d4 + 20 PV selon la puissance.",
+    "es": "Beberla: recuperar 2d4 + 2, 4d4 + 4, 8d4 + 8 o 10d4 + 20 PG según su potencia."
+  },
+  "item:quarterstaff-of-the-acrobat": {
+    "en": "+2 attack and damage; Advantage on Acrobatics; +5 AC reaction; thrown 30/120.",
+    "fr": "+2 à l’attaque et aux dégâts ; Avantage en Acrobaties ; réaction +5 CA ; lancer 9/36 m.",
+    "es": "+2 al ataque y al daño; ventaja en Acrobacias; reacción +5 a la CA; arrojadizo 9/36 m."
+  },
+  "item:ring-of-animal-influence": {
+    "en": "3 charges: Animal Friendship, Fear (Beasts) or Speak with Animals (DC 13).",
+    "fr": "3 charges : Amitié avec les animaux, Terreur (bêtes) ou Communication avec les animaux (DD 13).",
+    "es": "3 cargas: Encantar animal, Terror (bestias) o Hablar con los animales (CD 13)."
+  },
+  "item:ring-of-djinni-summoning": {
+    "en": "Summon a djinni for up to 1 hour (Concentration); once per 24 hours.",
+    "fr": "Convoquer un djinn jusqu’à 1 heure (Concentration) ; une fois par 24 heures.",
+    "es": "Invocar un djinn hasta 1 hora (Concentración); una vez cada 24 horas."
+  },
+  "item:ring-of-elemental-command": {
+    "en": "Elemental Bane and Compulsion (DC 18); plane benefits; 5 charges of plane spells (DC 18).",
+    "fr": "Fléau et coercition élémentaires (DD 18) ; bénéfices du plan ; 5 charges de sorts du plan (DD 18).",
+    "es": "Perdición y Compulsión elementales (CD 18); beneficios del plano; 5 cargas de conjuros del plano (CD 18)."
+  },
+  "item:ring-of-evasion": {
+    "en": "3 charges: Reaction, turn a failed Dexterity save into a success.",
+    "fr": "3 charges : Réaction, transformer un JS de Dextérité raté en réussite.",
+    "es": "3 cargas: reacción, convertir una salvación de Destreza fallida en un éxito."
+  },
+  "item:ring-of-feather-falling": {
+    "en": "You fall 60 ft per round and take no falling damage.",
+    "fr": "Vous tombez de 18 m par round et ne subissez aucun dégât de chute.",
+    "es": "Caes 18 m por asalto y no recibes daño por caída."
+  },
+  "item:ring-of-free-action": {
+    "en": "Difficult Terrain costs no extra movement; magic can’t slow, paralyze or restrain you.",
+    "fr": "Le terrain difficile ne coûte rien de plus ; la magie ne peut vous ralentir, paralyser ni entraver.",
+    "es": "El terreno difícil no cuesta movimiento adicional; la magia no puede ralentizarte, paralizarte ni apresarte."
+  },
+  "item:ring-of-invisibility": {
+    "en": "Magic action: Invisible until you remove the ring or end it.",
+    "fr": "Action Magie : Invisible jusqu’à ce que vous retiriez l’anneau ou y mettiez fin.",
+    "es": "Acción de magia: Invisible hasta que te quitas el anillo o lo terminas."
+  },
+  "item:ring-of-jumping": {
+    "en": "Cast Jump on yourself at will.",
+    "fr": "Lancer Saut sur vous-même à volonté.",
+    "es": "Lanzar Salto sobre ti a voluntad."
+  },
+  "item:ring-of-mind-shielding": {
+    "en": "Your thoughts, lies, alignment and type can’t be read by magic; can hold your soul.",
+    "fr": "Pensées, mensonges, alignement et type indétectables par la magie ; peut abriter votre âme.",
+    "es": "La magia no puede leer tus pensamientos, mentiras, alineamiento ni tipo; puede albergar tu alma."
+  },
+  "item:ring-of-protection": {
+    "en": "+1 to AC and saving throws.",
+    "fr": "+1 à la CA et aux jets de sauvegarde.",
+    "es": "+1 a la CA y a las tiradas de salvación."
+  },
+  "item:ring-of-regeneration": {
+    "en": "Regain 1d6 HP every 10 minutes; regrow lost body parts.",
+    "fr": "Récupérer 1d6 PV toutes les 10 minutes ; repousse des membres perdus.",
+    "es": "Recuperas 1d6 PG cada 10 minutos; regeneras las partes del cuerpo perdidas."
+  },
+  "item:ring-of-resistance": {
+    "en": "Resistance to one damage type, shown by its gemstone.",
+    "fr": "Résistance à un type de dégâts, indiqué par sa gemme.",
+    "es": "Resistencia a un tipo de daño, indicado por su gema."
+  },
+  "item:ring-of-shooting-stars": {
+    "en": "Dancing Lights, Light; 6 charges: Faerie Fire, lightning spheres, shooting stars.",
+    "fr": "Lumières dansantes, Lumière ; 6 charges : Lueurs féeriques, sphères de foudre, étoiles filantes.",
+    "es": "Luces danzantes, Luz; 6 cargas: Fuego feérico, esferas de rayos, estrellas fugaces."
+  },
+  "item:ring-of-spell-storing": {
+    "en": "Stores up to 5 levels of spells cast into it, cast later with the original caster’s DC.",
+    "fr": "Stocke jusqu’à 5 niveaux de sorts, relancés avec le DD du lanceur d’origine.",
+    "es": "Almacena hasta 5 niveles de conjuros lanzados en él, que se lanzan después con la CD del lanzador original."
+  },
+  "item:ring-of-spell-turning": {
+    "en": "Advantage on saves against spells; level 7 or lower spells you save against have no effect.",
+    "fr": "Avantage aux JS contre les sorts ; les sorts du niveau 7 ou moins réussis n’ont aucun effet.",
+    "es": "Ventaja en las salvaciones contra conjuros; los conjuros de nivel 7 o inferior contra los que haces una salvación no tienen efecto."
+  },
+  "item:ring-of-swimming": {
+    "en": "Swim Speed of 40 ft.",
+    "fr": "Vitesse de nage de 12 m.",
+    "es": "Velocidad nadando de 12 m."
+  },
+  "item:ring-of-telekinesis": {
+    "en": "Cast Telekinesis at will.",
+    "fr": "Lancer Télékinésie à volonté.",
+    "es": "Lanzar Telequinesis a voluntad."
+  },
+  "item:ring-of-the-ram": {
+    "en": "3 charges: ranged spell attack +7, 2d10 Force and push 5 ft per charge.",
+    "fr": "3 charges : attaque de sort à distance +7, 2d10 force et repousse de 1,50 m par charge.",
+    "es": "3 cargas: ataque de conjuro a distancia +7, 2d10 de fuerza y empujón de 1,5 m por carga."
+  },
+  "item:ring-of-three-wishes": {
+    "en": "3 charges: cast Wish; nonmagical after the last.",
+    "fr": "3 charges : lancer Souhait ; non magique après la dernière.",
+    "es": "3 cargas: lanzar Deseo; deja de ser mágico tras la última."
+  },
+  "item:ring-of-warmth": {
+    "en": "Cold damage reduced by 2d8; unharmed by extreme cold.",
+    "fr": "Dégâts de froid réduits de 2d8 ; insensible au grand froid.",
+    "es": "Daño de frío reducido en 2d8; el frío extremo no te daña."
+  },
+  "item:ring-of-water-walking": {
+    "en": "Cast Water Walk on yourself at will.",
+    "fr": "Lancer Marche sur l’onde sur vous-même à volonté.",
+    "es": "Lanzar Caminar sobre el agua sobre ti a voluntad."
+  },
+  "item:ring-of-x-ray-vision": {
+    "en": "Magic action: see through solid matter within 30 ft for 1 minute (Exhaustion risk).",
+    "fr": "Action Magie : voir à travers la matière à 9 m pendant 1 minute (risque d’Épuisement).",
+    "es": "Acción de magia: ver a través de la materia sólida a 9 m durante 1 minuto (riesgo de Cansancio)."
+  },
+  "item:robe-of-eyes": {
+    "en": "Advantage on sight-based Perception; Darkvision and Truesight 120 ft.",
+    "fr": "Avantage en Perception basée sur la vue ; vision dans le noir et vision véritable 36 m.",
+    "es": "Ventaja en Percepción basada en la vista; visión en la oscuridad y visión verdadera 36 m."
+  },
+  "item:robe-of-scintillating-colors": {
+    "en": "3 charges: dazzling colors, Disadvantage to attack you, DC 15 Wis or Stunned.",
+    "fr": "3 charges : couleurs éblouissantes, Désavantage pour vous attaquer, Sag DD 15 ou Étourdi.",
+    "es": "3 cargas: colores deslumbrantes, desventaja para atacarte, Sab CD 15 o Aturdido."
+  },
+  "item:robe-of-stars": {
+    "en": "+1 to saving throws; six stars cast level 5 Magic Missile; step into the Astral Plane.",
+    "fr": "+1 aux jets de sauvegarde ; six étoiles lancent Projectile magique du niveau 5 ; passer dans le plan Astral.",
+    "es": "+1 a las tiradas de salvación; seis estrellas lanzan Proyectil mágico de nivel 5; entrar en el plano Astral."
+  },
+  "item:robe-of-the-archmagi": {
+    "en": "Base AC 15 + Dex without armor, Advantage on saves against magic, +2 spell save DC and spell attacks.",
+    "fr": "CA de base 15 + Dex sans armure, Avantage aux JS contre la magie, +2 au DD et à l’attaque des sorts.",
+    "es": "CA base 15 + Des sin armadura, ventaja en las salvaciones contra la magia, +2 a la CD de salvación de conjuros y a los ataques de conjuro."
+  },
+  "item:robe-of-useful-items": {
+    "en": "Detach a patch: it becomes the object it shows.",
+    "fr": "Détacher une pièce : elle devient l’objet représenté.",
+    "es": "Arrancar un parche: se convierte en el objeto que muestra."
+  },
+  "item:rod-of-absorption": {
+    "en": "Reaction: absorb a spell targeting only you; turn stored levels into spell slots.",
+    "fr": "Réaction : absorber un sort qui ne cible que vous ; convertir les niveaux en emplacements.",
+    "es": "Reacción: absorber un conjuro que solo te tenga a ti como objetivo; convertir los niveles almacenados en espacios de conjuro."
+  },
+  "item:rod-of-alertness": {
+    "en": "Advantage on Perception and Initiative; detection spells; protective aura once per dawn.",
+    "fr": "Avantage en Perception et à l’Initiative ; sorts de détection ; aura protectrice une fois par aube.",
+    "es": "Ventaja en Percepción e iniciativa; conjuros de detección; aura protectora una vez por amanecer."
+  },
+  "item:rod-of-lordly-might": {
+    "en": "A +3 Mace; buttons turn it into other weapons, a ladder, a ram; drain, paralyze, terrify once per dawn.",
+    "fr": "Une masse d’armes +3 ; des boutons la changent en armes, échelle, bélier ; drain, paralysie, terreur une fois par aube.",
+    "es": "Una maza +3; sus botones la convierten en otras armas, una escalera, un ariete; drenar, paralizar, aterrorizar una vez por amanecer."
+  },
+  "item:rod-of-resurrection": {
+    "en": "5 charges: Heal (1) or Resurrection (5).",
+    "fr": "5 charges : Guérison (1) ou Résurrection (5).",
+    "es": "5 cargas: Curar (1) o Resurrección (5)."
+  },
+  "item:rod-of-rulership": {
+    "en": "Magic action: creatures within 120 ft, DC 15 Wis or Charmed 8 hours; once per dawn.",
+    "fr": "Action Magie : créatures à 36 m, Sag DD 15 ou Charmées 8 heures ; une fois par aube.",
+    "es": "Acción de magia: criaturas a 36 m o menos, Sab CD 15 o Hechizadas 8 horas; una vez por amanecer."
+  },
+  "item:rod-of-security": {
+    "en": "Transport you and up to 199 creatures to a paradise demiplane; once per 10 days.",
+    "fr": "Transporte vous et jusqu’à 199 créatures dans un demi-plan paradisiaque ; une fois par 10 jours.",
+    "es": "Transportarte a ti y hasta 199 criaturas a un semiplano paradisíaco; una vez cada 10 días."
+  },
+  "item:rope-of-climbing": {
+    "en": "60-ft rope that moves, knots and fastens on command.",
+    "fr": "Corde de 18 m qui se déplace, se noue et s’attache sur ordre.",
+    "es": "Cuerda de 18 m que se mueve, se anuda y se ata cuando se le ordena."
+  },
+  "item:rope-of-entanglement": {
+    "en": "Magic action: entangle a creature within 20 ft (DC 15 Dex or Restrained).",
+    "fr": "Action Magie : enchevêtrer une créature à 6 m (Dex DD 15 ou Entravée).",
+    "es": "Acción de magia: enredar a una criatura a 6 m o menos (Des CD 15 o Apresado)."
+  },
+  "item:scarab-of-protection": {
+    "en": "+1 AC, Advantage on saves against spells; 12 charges to succeed against necromancy and Undead.",
+    "fr": "+1 à la CA, Avantage aux JS contre les sorts ; 12 charges pour réussir contre la nécromancie et les morts-vivants.",
+    "es": "+1 a la CA, ventaja en las salvaciones contra conjuros; 12 cargas para superar las de nigromancia y muertos vivientes."
+  },
+  "item:scimitar-of-speed": {
+    "en": "+2 attack and damage; one attack with it as a Bonus Action each turn.",
+    "fr": "+2 à l’attaque et aux dégâts ; une attaque avec en action Bonus à chaque tour.",
+    "es": "+2 al ataque y al daño; un ataque con ella como acción adicional cada turno."
+  },
+  "item:sending-stones": {
+    "en": "Cast Sending to the bearer of the paired stone, once per dawn.",
+    "fr": "Lancer Communication à distance vers le porteur de la pierre jumelle, une fois par aube.",
+    "es": "Lanzar Recado al portador de la piedra emparejada, una vez por amanecer."
+  },
+  "item:sentinel-shield": {
+    "en": "Advantage on Initiative and Perception checks.",
+    "fr": "Avantage à l’Initiative et aux tests de Perception.",
+    "es": "Ventaja en las pruebas de iniciativa y de Percepción."
+  },
+  "item:shield-1-2-or-3": {
+    "en": "+1/+2/+3 AC on top of the Shield’s normal bonus.",
+    "fr": "+1/+2/+3 à la CA en plus du bonus normal du bouclier.",
+    "es": "+1/+2/+3 a la CA además del bonificador normal del escudo."
+  },
+  "item:shield-of-missile-attraction": {
+    "en": "Resistance to damage from Ranged weapons; cursed: ranged attacks nearby target you.",
+    "fr": "Résistance aux dégâts des armes à distance ; maudit : les attaques à distance proches vous ciblent.",
+    "es": "Resistencia al daño de armas a distancia; maldito: los ataques a distancia cercanos te tienen como objetivo."
+  },
+  "item:shield-of-the-cavalier": {
+    "en": "+2 AC on top of the Shield; Forceful Bash (2d6 + 2 + Str Force) and Protective Field.",
+    "fr": "+2 à la CA en plus du bouclier ; coup de bouclier (2d6 + 2 + For force) et champ protecteur.",
+    "es": "+2 a la CA además del escudo; Golpe contundente (2d6 + 2 + Fue de fuerza) y Campo protector."
+  },
+  "item:slippers-of-spider-climbing": {
+    "en": "Climb Speed equal to Speed, on walls and ceilings, hands free.",
+    "fr": "Escalade égale à la Vitesse, sur murs et plafonds, mains libres.",
+    "es": "Velocidad trepando igual a tu velocidad, por paredes y techos, con las manos libres."
+  },
+  "item:sovereign-glue": {
+    "en": "Bonds any two objects permanently.",
+    "fr": "Colle définitivement deux objets.",
+    "es": "Une dos objetos cualesquiera de forma permanente."
+  },
+  "item:spell-scroll": {
+    "en": "Cast its spell if it’s on your list; DC and attack set by the spell’s level.",
+    "fr": "Lancer son sort s’il est dans votre liste ; DD et attaque selon le niveau du sort.",
+    "es": "Lanzar su conjuro si está en tu lista; la CD y el ataque dependen del nivel del conjuro."
+  },
+  "item:spellguard-shield": {
+    "en": "Advantage on saves against magic; spell attacks against you have Disadvantage.",
+    "fr": "Avantage aux JS contre la magie ; les attaques de sort contre vous ont le Désavantage.",
+    "es": "Ventaja en las salvaciones contra la magia; los ataques de conjuro contra ti tienen desventaja."
+  },
+  "item:sphere-of-annihilation": {
+    "en": "A hole in the multiverse: control it with DC 25 Arcana; 8d10 Force on contact.",
+    "fr": "Un trou dans le multivers : contrôle par Arcanes DD 25 ; 8d10 force au contact.",
+    "es": "Un agujero en el multiverso: controlarla con Conocimiento Arcano CD 25; 8d10 de fuerza al contacto."
+  },
+  "item:staff-of-charming": {
+    "en": "10 charges: Charm Person, Command, Comprehend Languages; reflect and resist enchantments.",
+    "fr": "10 charges : Charme-personne, Injonction, Compréhension des langues ; renvoie et résiste aux enchantements.",
+    "es": "10 cargas: Hechizar persona, Orden imperiosa, Entender idiomas; reflejar y resistir los encantamientos."
+  },
+  "item:staff-of-fire": {
+    "en": "Fire Resistance; 10 charges: Burning Hands, Fireball, Wall of Fire.",
+    "fr": "Résistance au feu ; 10 charges : Mains brûlantes, Boule de feu, Mur de feu.",
+    "es": "Resistencia al fuego; 10 cargas: Manos ardientes, Bola de fuego, Muro de fuego."
+  },
+  "item:staff-of-frost": {
+    "en": "Cold Resistance; 10 charges: Cone of Cold, Fog Cloud, Ice Storm, Wall of Ice.",
+    "fr": "Résistance au froid ; 10 charges : Cône de froid, Nappe de brouillard, Tempête de grêle, Mur de glace.",
+    "es": "Resistencia al frío; 10 cargas: Cono de frío, Nube de oscurecimiento, Tormenta de hielo, Muro de hielo."
+  },
+  "item:staff-of-healing": {
+    "en": "10 charges: Cure Wounds (1 per level), Lesser Restoration, Mass Cure Wounds.",
+    "fr": "10 charges : Soins (1 par niveau), Restauration partielle, Soins de groupe.",
+    "es": "10 cargas: Curar heridas (1 por nivel), Restablecimiento menor, Curar heridas en masa."
+  },
+  "item:staff-of-power": {
+    "en": "A +2 Quarterstaff; +2 AC, saves and spell attacks; 20 charges of spells; Retributive Strike.",
+    "fr": "Un bâton +2 ; +2 à la CA, aux JS et aux attaques de sort ; 20 charges de sorts ; frappe vengeresse.",
+    "es": "Un bastón +2; +2 a la CA, a las salvaciones y a los ataques de conjuro; 20 cargas de conjuros; Golpe vengador."
+  },
+  "item:staff-of-striking": {
+    "en": "A +3 Quarterstaff; spend up to 3 charges on a hit for 1d6 Force each.",
+    "fr": "Un bâton +3 ; dépenser jusqu’à 3 charges au toucher pour 1d6 force chacune.",
+    "es": "Un bastón +3; gasta hasta 3 cargas al impactar para 1d6 de fuerza cada una."
+  },
+  "item:staff-of-swarming-insects": {
+    "en": "10 charges: insect cloud, Giant Insect, Insect Plague.",
+    "fr": "10 charges : nuée d’insectes, Insecte géant, Fléau d’insectes.",
+    "es": "10 cargas: nube de insectos, Insecto gigante, Plaga de insectos."
+  },
+  "item:staff-of-the-magi": {
+    "en": "A +2 Quarterstaff; +2 spell attacks, Advantage on saves against spells; 50 charges of spells.",
+    "fr": "Un bâton +2 ; +2 aux attaques de sort, Avantage aux JS contre les sorts ; 50 charges de sorts.",
+    "es": "Un bastón +2; +2 a los ataques de conjuro, ventaja en las salvaciones contra conjuros; 50 cargas de conjuros."
+  },
+  "item:staff-of-the-python": {
+    "en": "Throw it: becomes a Giant Constrictor Snake under your control.",
+    "fr": "Le lancer : devient un serpent constricteur géant sous vos ordres.",
+    "es": "Lanzarlo: se convierte en una serpiente constrictora gigante bajo tu control."
+  },
+  "item:staff-of-the-woodlands": {
+    "en": "A +2 Quarterstaff; +2 spell attacks; 6 charges of nature spells; Tree Form.",
+    "fr": "Un bâton +2 ; +2 aux attaques de sort ; 6 charges de sorts de la nature ; forme d’arbre.",
+    "es": "Un bastón +2; +2 a los ataques de conjuro; 6 cargas de conjuros de la naturaleza; Forma de árbol."
+  },
+  "item:staff-of-thunder-and-lightning": {
+    "en": "A +2 Quarterstaff; Lightning, Thunder, Lightning Strike, Thunderclap once per dawn each (DC 17).",
+    "fr": "Un bâton +2 ; Foudre, Tonnerre, Éclair, Coup de tonnerre une fois par aube chacun (DD 17).",
+    "es": "Un bastón +2; Relámpago, Trueno, Golpe relampagueante, Golpe atronador una vez por amanecer cada uno (CD 17)."
+  },
+  "item:staff-of-withering": {
+    "en": "A magic Quarterstaff; 3 charges: extra 2d10 Necrotic and DC 15 Con or Disadvantage on Str and Con.",
+    "fr": "Un bâton magique ; 3 charges : 2d10 nécrotiques en plus et Con DD 15 ou Désavantage en For et Con.",
+    "es": "Un bastón mágico; 3 cargas: 2d10 necrótico adicional y Con CD 15 o desventaja en Fue y Con."
+  },
+  "item:stone-of-controlling-earth-elementals": {
+    "en": "Magic action: summon an Earth Elemental for 1 hour, once per dawn.",
+    "fr": "Action Magie : convoquer un élémentaire de la terre 1 heure, une fois par aube.",
+    "es": "Acción de magia: invocar un elemental de tierra durante 1 hora, una vez por amanecer."
+  },
+  "item:stone-of-good-luck-luckstone": {
+    "en": "+1 to ability checks and saving throws while on you.",
+    "fr": "+1 aux tests de caractéristique et aux jets de sauvegarde tant que vous l’avez.",
+    "es": "+1 a las pruebas de característica y a las tiradas de salvación mientras la lleves."
+  },
+  "item:sun-blade": {
+    "en": "A Finesse Longsword of radiance: +2 attack and damage, Radiant, extra 1d8 vs Undead; sunlight.",
+    "fr": "Une épée longue de finesse radieuse : +2 à l’attaque et aux dégâts, radiants, 1d8 en plus contre les morts-vivants ; lumière du soleil.",
+    "es": "Una espada larga sutil de resplandor: +2 al ataque y al daño, radiante, 1d8 adicional contra muertos vivientes; luz solar."
+  },
+  "item:sword-of-life-stealing": {
+    "en": "On a 20: extra 15 Necrotic and as many Temporary Hit Points.",
+    "fr": "Sur un 20 : 15 nécrotiques en plus et autant de points de vie temporaires.",
+    "es": "Con un 20: 15 necrótico adicional y otros tantos puntos de golpe temporales."
+  },
+  "item:sword-of-sharpness": {
+    "en": "Maximum damage against objects; on a 20: extra 14 Slashing and 1 Exhaustion level.",
+    "fr": "Dégâts maximaux contre les objets ; sur un 20 : 14 tranchants en plus et 1 niveau d’Épuisement.",
+    "es": "Daño máximo contra objetos; con un 20: 14 cortante adicional y 1 nivel de Cansancio."
+  },
+  "item:sword-of-wounding": {
+    "en": "Extra 2d6 Necrotic on a hit; DC 15 Con or no healing for 1 hour.",
+    "fr": "2d6 nécrotiques en plus au toucher ; Con DD 15 ou aucun soin pendant 1 heure.",
+    "es": "2d6 necrótico adicional al impactar; Con CD 15 o sin curación durante 1 hora."
+  },
+  "item:talisman-of-pure-good": {
+    "en": "Holy Symbol, +2 spell attacks; 7 charges of Pure Rebuke (DC 20 Dex or destroyed).",
+    "fr": "Symbole sacré, +2 aux attaques de sort ; 7 charges de châtiment pur (Dex DD 20 ou détruit).",
+    "es": "Símbolo sagrado, +2 a los ataques de conjuro; 7 cargas de Represalia pura (Des CD 20 o destruido)."
+  },
+  "item:talisman-of-the-sphere": {
+    "en": "Advantage on Arcana checks to control a Sphere of Annihilation; move it farther.",
+    "fr": "Avantage aux tests d’Arcanes pour contrôler une sphère d’annihilation ; la déplacer plus loin.",
+    "es": "Ventaja en las pruebas de Conocimiento Arcano para controlar una esfera de aniquilación; moverla más lejos."
+  },
+  "item:talisman-of-ultimate-evil": {
+    "en": "Holy Symbol, +2 spell attacks; 6 charges of Ultimate End (DC 20 Dex or destroyed).",
+    "fr": "Symbole sacré, +2 aux attaques de sort ; 6 charges de fin ultime (Dex DD 20 ou détruit).",
+    "es": "Símbolo sagrado, +2 a los ataques de conjuro; 6 cargas de Final definitivo (Des CD 20 o destruido)."
+  },
+  "item:thunderous-greatclub": {
+    "en": "Strength 20 while attuned; extra 1d8 Thunder; Clap of Thunder and Earthquake.",
+    "fr": "Force 20 tant qu’harmonisé ; 1d8 tonnerre en plus ; coup de tonnerre et séisme.",
+    "es": "Fuerza 20 mientras estés sintonizado; 1d8 de trueno adicional; Estallido de trueno y Terremoto."
+  },
+  "item:tome-of-clear-thought": {
+    "en": "Study 48 hours: Intelligence +2 (max 30).",
+    "fr": "Étude de 48 heures : Intelligence +2 (max 30).",
+    "es": "Estudio de 48 horas: Inteligencia +2 (máx. 30)."
+  },
+  "item:tome-of-leadership-and-influence": {
+    "en": "Study 48 hours: Charisma +2 (max 30).",
+    "fr": "Étude de 48 heures : Charisme +2 (max 30).",
+    "es": "Estudio de 48 horas: Carisma +2 (máx. 30)."
+  },
+  "item:tome-of-understanding": {
+    "en": "Study 48 hours: Wisdom +2 (max 30).",
+    "fr": "Étude de 48 heures : Sagesse +2 (max 30).",
+    "es": "Estudio de 48 horas: Sabiduría +2 (máx. 30)."
+  },
+  "item:trident-of-fish-command": {
+    "en": "3 charges: cast Dominate Beast (DC 15) on a Beast with a Swim Speed.",
+    "fr": "3 charges : lancer Domination de bête (DD 15) sur une bête qui nage.",
+    "es": "3 cargas: lanzar Dominar bestia (CD 15) sobre una bestia con velocidad nadando."
+  },
+  "item:universal-solvent": {
+    "en": "Dissolves any adhesive, Sovereign Glue included.",
+    "fr": "Dissout tout adhésif, colle universelle comprise.",
+    "es": "Disuelve cualquier adhesivo, incluido el pegamento soberano."
+  },
+  "item:vicious-weapon": {
+    "en": "Extra 2d6 damage of the weapon’s type on a hit.",
+    "fr": "2d6 dégâts du type de l’arme en plus au toucher.",
+    "es": "2d6 de daño adicional del tipo del arma al impactar."
+  },
+  "item:vorpal-sword": {
+    "en": "+3 attack and damage, ignores Slashing Resistance; on a 20 cuts off a head.",
+    "fr": "+3 à l’attaque et aux dégâts, ignore la Résistance aux tranchants ; sur un 20 tranche une tête.",
+    "es": "+3 al ataque y al daño, ignora la resistencia a cortante; con un 20 corta una cabeza."
+  },
+  "item:wand-of-binding": {
+    "en": "7 charges: Hold Monster (5) or Hold Person (2), DC 17.",
+    "fr": "7 charges : Immobilisation de monstre (5) ou de personne (2), DD 17.",
+    "es": "7 cargas: Inmovilizar monstruo (5) o Inmovilizar persona (2), CD 17."
+  },
+  "item:wand-of-enemy-detection": {
+    "en": "7 charges: sense the direction of the nearest Hostile creature for 1 minute.",
+    "fr": "7 charges : sentir la direction de la créature hostile la plus proche pendant 1 minute.",
+    "es": "7 cargas: percibir la dirección de la criatura hostil más cercana durante 1 minuto."
+  },
+  "item:wand-of-fear": {
+    "en": "7 charges: Command (flee or grovel, 1) or Fear (3), DC 15.",
+    "fr": "7 charges : Injonction (fuir ou ramper, 1) ou Terreur (3), DD 15.",
+    "es": "7 cargas: Orden imperiosa (huir o arrastrarse, 1) o Terror (3), CD 15."
+  },
+  "item:wand-of-fireballs": {
+    "en": "7 charges: Fireball (DC 15), level 3 for 1 charge, +1 level per extra charge (max 3).",
+    "fr": "7 charges : Boule de feu (DD 15), niveau 3 pour 1 charge, +1 niveau par charge (max 3).",
+    "es": "7 cargas: Bola de fuego (CD 15), nivel 3 por 1 carga, +1 nivel por carga adicional (máx. 3)."
+  },
+  "item:wand-of-lightning-bolts": {
+    "en": "7 charges: Lightning Bolt (DC 15), level 3 for 1 charge, +1 level per extra charge (max 3).",
+    "fr": "7 charges : Éclair (DD 15), niveau 3 pour 1 charge, +1 niveau par charge (max 3).",
+    "es": "7 cargas: Relámpago (CD 15), nivel 3 por 1 carga, +1 nivel por carga adicional (máx. 3)."
+  },
+  "item:wand-of-magic-detection": {
+    "en": "3 charges: cast Detect Magic.",
+    "fr": "3 charges : lancer Détection de la magie.",
+    "es": "3 cargas: lanzar Detectar magia."
+  },
+  "item:wand-of-magic-missiles": {
+    "en": "7 charges: Magic Missile, level 1 for 1 charge, +1 level per extra charge (max 3).",
+    "fr": "7 charges : Projectile magique, niveau 1 pour 1 charge, +1 niveau par charge (max 3).",
+    "es": "7 cargas: Proyectil mágico, nivel 1 por 1 carga, +1 nivel por carga adicional (máx. 3)."
+  },
+  "item:wand-of-paralysis": {
+    "en": "7 charges: a ray, DC 15 Con or Paralyzed for 1 minute.",
+    "fr": "7 charges : un rayon, Con DD 15 ou Paralysé pendant 1 minute.",
+    "es": "7 cargas: un rayo, Con CD 15 o Paralizado durante 1 minuto."
+  },
+  "item:wand-of-polymorph": {
+    "en": "7 charges: cast Polymorph (DC 15).",
+    "fr": "7 charges : lancer Métamorphose (DD 15).",
+    "es": "7 cargas: lanzar Polimorfar (CD 15)."
+  },
+  "item:wand-of-secrets": {
+    "en": "3 charges: points to the nearest secret door or trap within 60 ft.",
+    "fr": "3 charges : désigne la porte secrète ou le piège le plus proche à 18 m.",
+    "es": "3 cargas: señala la puerta secreta o la trampa más cercana a 18 m o menos."
+  },
+  "item:wand-of-the-war-mage-1-2-or-3": {
+    "en": "+1/+2/+3 to spell attack rolls; ignore Half Cover with spell attacks.",
+    "fr": "+1/+2/+3 aux jets d’attaque de sort ; ignore l’abri partiel.",
+    "es": "+1/+2/+3 a las tiradas de ataque de conjuro; ignora la cobertura media con los ataques de conjuro."
+  },
+  "item:wand-of-web": {
+    "en": "7 charges: cast Web (DC 13).",
+    "fr": "7 charges : lancer Toile d’araignée (DD 13).",
+    "es": "7 cargas: lanzar Telaraña (CD 13)."
+  },
+  "item:wand-of-wonder": {
+    "en": "7 charges: a random magical effect (spells DC 15).",
+    "fr": "7 charges : un effet magique aléatoire (sorts DD 15).",
+    "es": "7 cargas: un efecto mágico aleatorio (conjuros CD 15)."
+  },
+  "item:weapon-1-2-or-3": {
+    "en": "+1/+2/+3 to attack and damage rolls with this weapon.",
+    "fr": "+1/+2/+3 aux jets d’attaque et de dégâts avec cette arme.",
+    "es": "+1/+2/+3 a las tiradas de ataque y de daño con esta arma."
+  },
+  "item:weapon-of-warning": {
+    "en": "You and allies within 30 ft: Advantage on Initiative; woken when combat starts.",
+    "fr": "Vous et vos alliés à 9 m : Avantage à l’Initiative ; réveillés au début du combat.",
+    "es": "Tú y tus aliados a 9 m o menos: ventaja en la iniciativa; os despierta al empezar el combate."
+  },
+  "item:well-of-many-worlds": {
+    "en": "Unfolds into a two-way portal to another world.",
+    "fr": "Se déplie en un portail à double sens vers un autre monde.",
+    "es": "Se despliega en un portal de doble sentido hacia otro mundo."
+  },
+  "item:wind-fan": {
+    "en": "Cast Gust of Wind (DC 13); each extra use before dawn risks tearing it (20% cumulative).",
+    "fr": "Lancer Bourrasque (DD 13) ; chaque usage de plus avant l’aube risque de le déchirer (20 % cumulatif).",
+    "es": "Lanzar Ráfaga de viento (CD 13); cada uso adicional antes del amanecer puede rasgarlo (20 % acumulativo)."
+  },
+  "item:winged-boots": {
+    "en": "4 charges: Fly Speed 30 ft for 1 hour per charge.",
+    "fr": "4 charges : vol 9 m pendant 1 heure par charge.",
+    "es": "4 cargas: velocidad volando 9 m durante 1 hora por carga."
+  },
+  "item:wings-of-flying": {
+    "en": "Magic action: wings for 1 hour, Fly Speed 60 ft; 1d12 hours to recover.",
+    "fr": "Action Magie : des ailes pendant 1 heure, vol 18 m ; 1d12 heures de repos.",
+    "es": "Acción de magia: alas durante 1 hora, velocidad volando 18 m; 1d12 horas para recuperarse."
+  }
+}

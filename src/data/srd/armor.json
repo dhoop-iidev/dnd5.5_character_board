@@ -1,0 +1,525 @@
+[
+  {
+    "id": "breastplate",
+    "name": {
+      "en": "Breastplate",
+      "fr": "Cuirasse",
+      "es": "Coraza"
+    },
+    "category": "medium",
+    "baseAc": 14,
+    "dex": "max2",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 20,
+      "kg": 10
+    },
+    "cost": {
+      "gp": 400,
+      "text": {
+        "en": "400 GP",
+        "fr": "400 po",
+        "es": "400 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "chain-mail",
+    "name": {
+      "en": "Chain Mail",
+      "fr": "Cotte de mailles",
+      "es": "Cota de malla"
+    },
+    "category": "heavy",
+    "baseAc": 16,
+    "dex": "none",
+    "strength": 13,
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "10 Minutes",
+      "fr": "10 minutes",
+      "es": "10 minutos"
+    },
+    "doff": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "weight": {
+      "lb": 55,
+      "kg": 27.5
+    },
+    "cost": {
+      "gp": 75,
+      "text": {
+        "en": "75 GP",
+        "fr": "75 po",
+        "es": "75 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "chain-shirt",
+    "name": {
+      "en": "Chain Shirt",
+      "fr": "Chemise de mailles",
+      "es": "Camisa de malla"
+    },
+    "category": "medium",
+    "baseAc": 13,
+    "dex": "max2",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 20,
+      "kg": 10
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "half-plate-armor",
+    "name": {
+      "en": "Half Plate Armor",
+      "fr": "Demi-plate",
+      "es": "Media armadura"
+    },
+    "category": "medium",
+    "baseAc": 15,
+    "dex": "max2",
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 40,
+      "kg": 20
+    },
+    "cost": {
+      "gp": 750,
+      "text": {
+        "en": "750 GP",
+        "fr": "750 po",
+        "es": "750 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "hide-armor",
+    "name": {
+      "en": "Hide Armor",
+      "fr": "Armure de peaux",
+      "es": "Armadura de pieles"
+    },
+    "category": "medium",
+    "baseAc": 12,
+    "dex": "max2",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 12,
+      "kg": 6
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "leather-armor",
+    "name": {
+      "en": "Leather Armor",
+      "fr": "Armure de cuir",
+      "es": "Armadura de cuero"
+    },
+    "category": "light",
+    "baseAc": 11,
+    "dex": "full",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "padded-armor",
+    "name": {
+      "en": "Padded Armor",
+      "fr": "Armure matelassée",
+      "es": "Armadura acolchada"
+    },
+    "category": "light",
+    "baseAc": 11,
+    "dex": "full",
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 8,
+      "kg": 4
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "plate-armor",
+    "name": {
+      "en": "Plate Armor",
+      "fr": "Harnois",
+      "es": "Armadura de placas"
+    },
+    "category": "heavy",
+    "baseAc": 18,
+    "dex": "none",
+    "strength": 15,
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "10 Minutes",
+      "fr": "10 minutes",
+      "es": "10 minutos"
+    },
+    "doff": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "weight": {
+      "lb": 65,
+      "kg": 32.5
+    },
+    "cost": {
+      "gp": 1500,
+      "text": {
+        "en": "1,500 GP",
+        "fr": "1 500 po",
+        "es": "1500 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "ring-mail",
+    "name": {
+      "en": "Ring Mail",
+      "fr": "Broigne",
+      "es": "Cota guarnecida"
+    },
+    "category": "heavy",
+    "baseAc": 14,
+    "dex": "none",
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "10 Minutes",
+      "fr": "10 minutes",
+      "es": "10 minutos"
+    },
+    "doff": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "weight": {
+      "lb": 40,
+      "kg": 20
+    },
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "scale-mail",
+    "name": {
+      "en": "Scale Mail",
+      "fr": "Armure d’écailles",
+      "es": "Cota de escamas"
+    },
+    "category": "medium",
+    "baseAc": 14,
+    "dex": "max2",
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 45,
+      "kg": 22.5
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "shield",
+    "name": {
+      "en": "Shield",
+      "fr": "Bouclier",
+      "es": "Escudo"
+    },
+    "category": "shield",
+    "bonus": 2,
+    "dex": "none",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "Utilize Action",
+      "fr": "l’action Utilisation",
+      "es": "acción de utilizar"
+    },
+    "doff": {
+      "en": "Utilize Action",
+      "fr": "l’action Utilisation",
+      "es": "acción de utilizar"
+    },
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "splint-armor",
+    "name": {
+      "en": "Splint Armor",
+      "fr": "Clibanion",
+      "es": "Armadura de bandas"
+    },
+    "category": "heavy",
+    "baseAc": 17,
+    "dex": "none",
+    "strength": 15,
+    "stealthDisadvantage": true,
+    "don": {
+      "en": "10 Minutes",
+      "fr": "10 minutes",
+      "es": "10 minutos"
+    },
+    "doff": {
+      "en": "5 Minutes",
+      "fr": "5 minutes",
+      "es": "5 minutos"
+    },
+    "weight": {
+      "lb": 60,
+      "kg": 30
+    },
+    "cost": {
+      "gp": 200,
+      "text": {
+        "en": "200 GP",
+        "fr": "200 po",
+        "es": "200 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  },
+  {
+    "id": "studded-leather-armor",
+    "name": {
+      "en": "Studded Leather Armor",
+      "fr": "Armure de cuir clouté",
+      "es": "Armadura de cuero tachonado"
+    },
+    "category": "light",
+    "baseAc": 12,
+    "dex": "full",
+    "stealthDisadvantage": false,
+    "don": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "doff": {
+      "en": "1 Minute",
+      "fr": "1 minute",
+      "es": "1 minuto"
+    },
+    "weight": {
+      "lb": 13,
+      "kg": 6.5
+    },
+    "cost": {
+      "gp": 45,
+      "text": {
+        "en": "45 GP",
+        "fr": "45 po",
+        "es": "45 po"
+      }
+    },
+    "source": {
+      "page": 92,
+      "frPage": 98,
+      "section": "Armor",
+      "esPage": 100
+    }
+  }
+]

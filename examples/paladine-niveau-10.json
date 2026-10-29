@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Isolde Brisefer",
+    "player": "",
+    "alignment": "Lawful Good",
+    "background": "Raised in the mountain temple of a dragon-blooded clan, she swore the Oath of Devotion the night her village was saved by a stranger who asked for nothing in return.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Draconic"],
+    "height": {
+      "m": 1.92
+    },
+    "weight": {
+      "kg": 110
+    },
+    "age": "34"
+  },
+  "speciesId": "dragonborn",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "acolyte",
+    "abilities": {
+      "cha": 2,
+      "wis": 1
+    },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "cleric",
+        "ability": "cha",
+        "cantrips": ["guidance", "sacred-flame"],
+        "spell": ["bless"]
+      }
+    }
+  },
+  "baseAbilities": {
+    "str": 16,
+    "dex": 10,
+    "con": 14,
+    "int": 8,
+    "wis": 11,
+    "cha": 14
+  },
+  "levels": [
+    {
+      "classId": "paladin",
+      "hpRoll": 10,
+      "hpFixed": false,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {
+        "paladin:fighting-style": "defense"
+      }
+    },
+    {
+      "classId": "paladin",
+      "subclassId": "paladin:oath-of-devotion",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "str": 2
+        }
+      }
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "cha": 2
+        }
+      }
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["athletics", "persuasion"],
+  "toolProficiencies": [],
+  "expertise": [],
+  "weaponMastery": ["longsword", "javelin"],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "chain-mail",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "shd1",
+      "kind": "armor",
+      "refId": "shield",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "longsword",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "javelin",
+      "quantity": 6,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "holy-symbol",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "priests-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 59,
+    "pp": 0
+  },
+  "spellcasting": {
+    "paladin": {
+      "prepared": [
+        "warding-bond",
+        "command",
+        "cure-wounds",
+        "heroism",
+        "searing-smite",
+        "lesser-restoration",
+        "magic-weapon",
+        "daylight",
+        "revivify"
+      ],
+      "cantrips": []
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 84,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "dragonborn:draconic-ancestry": "gold"
+  },
+  "extraFeats": {}
+}

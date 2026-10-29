@@ -1,0 +1,513 @@
+[
+  {
+    "id": "barbarian:unarmored-defense",
+    "acFormula": {
+      "abilities": ["dex", "con"],
+      "noArmor": true,
+      "noShield": false
+    },
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 1: Unarmored Defense"
+    }
+  },
+  {
+    "id": "barbarian:rage",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "when": "!toggle:rage",
+        "setsToggle": "rage",
+        "trigger": {
+          "en": "Not in Heavy armor: Resistance to Bludgeoning, Piercing and Slashing, Rage damage, Advantage on Strength.",
+          "fr": "Sans armure lourde : Résistance aux dégâts contondants, perforants et tranchants, dégâts de Rage, Avantage en Force.",
+          "es": "Sin armadura pesada: resistencia al daño contundente, perforante y cortante, daño por furia, ventaja en Fuerza."
+        }
+      },
+      {
+        "kind": "bonus-action",
+        "when": "toggle:rage",
+        "cost": { "amount": 0 },
+        "name": { "en": "Extend Rage", "fr": "Prolonger la Rage", "es": "Prolongar la furia" },
+        "trigger": {
+          "en": "Keeps the Rage going until the end of your next turn.",
+          "fr": "Maintient la Rage jusqu’à la fin de votre prochain tour.",
+          "es": "Mantiene la furia hasta el final de tu siguiente turno."
+        }
+      }
+    ],
+    "uses": {
+      "count": "rages",
+      "per": "long",
+      "shortRestRegain": 1
+    },
+    "modifiers": [
+      {
+        "target": "damage.melee.str",
+        "value": "rageDamage",
+        "when": "toggle:rage",
+        "effectName": "Rage Damage"
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "check.str",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        },
+        "when": "toggle:rage"
+      },
+      {
+        "kind": "advantage",
+        "on": "save.str",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        },
+        "when": "toggle:rage"
+      },
+      {
+        "kind": "resistance",
+        "on": "bludgeoning",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        },
+        "when": "toggle:rage"
+      },
+      {
+        "kind": "resistance",
+        "on": "piercing",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        },
+        "when": "toggle:rage"
+      },
+      {
+        "kind": "resistance",
+        "on": "slashing",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        },
+        "when": "toggle:rage"
+      }
+    ],
+    "flags": ["rage"],
+    "source": {
+      "page": 28,
+      "frPage": 30,
+      "section": "Classes > Barbarian > Level 1: Rage"
+    }
+  },
+  {
+    "id": "barbarian:weapon-mastery",
+    "mastery": "weaponMastery",
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 1: Weapon Mastery"
+    }
+  },
+  {
+    "id": "barbarian:danger-sense",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.dex",
+        "condition": {
+          "en": "unless Incapacitated",
+          "fr": "sauf si Neutralisé",
+          "es": "salvo si estás incapacitado"
+        }
+      }
+    ],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 2: Danger Sense"
+    }
+  },
+  {
+    "id": "barbarian:reckless-attack",
+    "activation": [
+      {
+        "kind": "free",
+        "when": "!toggle:reckless-attack",
+        "setsToggle": "reckless-attack",
+        "trigger": {
+          "en": "Before your first attack roll of the turn: Advantage on Strength attacks, but attacks against you have Advantage until your next turn.",
+          "fr": "Avant votre premier jet d’attaque du tour : Avantage aux attaques de Force, mais les attaques contre vous ont l’Avantage jusqu’à votre prochain tour.",
+          "es": "Antes de tu primera tirada de ataque del turno: ventaja en los ataques de Fuerza, pero los ataques contra ti tienen ventaja hasta tu siguiente turno."
+        }
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "attack.melee",
+        "when": "toggle:reckless-attack",
+        "condition": {
+          "en": "Reckless Attack: on attack rolls using Strength until the start of your next turn",
+          "fr": "Attaque téméraire : aux jets d’attaque de Force jusqu’au début de votre prochain tour",
+          "es": "Ataque temerario: en las tiradas de ataque que usen Fuerza hasta el inicio de tu siguiente turno"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "when": "toggle:reckless-attack",
+        "condition": {
+          "en": "attack rolls against you have Advantage until the start of your next turn",
+          "fr": "les jets d’attaque contre vous ont l’Avantage jusqu’au début de votre prochain tour",
+          "es": "las tiradas de ataque contra ti tienen ventaja hasta el inicio de tu siguiente turno"
+        }
+      }
+    ],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 2: Reckless Attack"
+    }
+  },
+  {
+    "id": "barbarian:primal-knowledge",
+    "choices": [
+      {
+        "kind": "skill",
+        "count": 1,
+        "from": ["animal-handling", "athletics", "intimidation", "nature", "perception", "survival"],
+        "name": {
+          "en": "Primal Knowledge skill",
+          "fr": "Compétence de Savoir primal",
+          "es": "Habilidad de Conocimiento primigenio"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Needs engine: while raging, Acrobatics, Intimidation, Perception, Stealth and Survival checks can be made as Strength checks (ability swap on a skill); the extra skill proficiency is the choice above.",
+      "fr": "Moteur requis : en Rage, les tests d’Acrobaties, Intimidation, Perception, Discrétion et Survie peuvent être faits comme des tests de Force (changement de caractéristique d’une compétence) ; la maîtrise supplémentaire est le choix ci-dessus.",
+      "es": "Requiere el motor: en furia, las pruebas de Acrobacias, Intimidación, Percepción, Sigilo y Supervivencia pueden hacerse como pruebas de Fuerza (cambio de característica de una habilidad); la competencia en habilidad adicional es la elección de arriba."
+    },
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 3: Primal Knowledge"
+    }
+  },
+  {
+    "id": "barbarian:extra-attack",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 5: Extra Attack"
+    }
+  },
+  {
+    "id": "barbarian:fast-movement",
+    "modifiers": [
+      {
+        "target": "speed",
+        "value": 10,
+        "when": "no-heavy-armor"
+      }
+    ],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 5: Fast Movement"
+    }
+  },
+  {
+    "id": "barbarian:feral-instinct",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "initiative"
+      }
+    ],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 7: Feral Instinct"
+    }
+  },
+  {
+    "id": "barbarian:instinctive-pounce",
+    "activation": [],
+    "textOnly": {
+      "en": "Move up to half your Speed as part of the Bonus Action that starts your Rage: a movement rule, no sheet number.",
+      "fr": "Déplacement jusqu’à la moitié de votre Vitesse dans l’action bonus qui déclenche la Rage : règle de déplacement, aucun nombre de la feuille.",
+      "es": "Muévete hasta la mitad de tu velocidad como parte de la acción adicional con la que entras en furia: regla de movimiento, ningún número en la hoja."
+    },
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 7: Instinctive Pounce"
+    }
+  },
+  {
+    "id": "barbarian:brutal-strike",
+    "activation": [
+      {
+        "kind": "free",
+        "when": "toggle:reckless-attack",
+        "trigger": {
+          "en": "Forgo the Advantage of Reckless Attack on one Strength attack: on a hit, extra damage and a Brutal Strike effect.",
+          "fr": "Renoncez à l’Avantage d’Attaque téméraire sur une attaque de Force : si elle touche, dégâts en plus et un effet de Coup brutal.",
+          "es": "Renuncia a la ventaja de Ataque temerario en un ataque de Fuerza: si impacta, daño adicional y un efecto de Golpe brutal."
+        }
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "extraDamage.melee",
+        "value": "1d10",
+        "when": "toggle:reckless-attack",
+        "condition": {
+          "en": "Brutal Strike: forgo Advantage on one Strength-based attack roll (without Disadvantage) while using Reckless Attack; same damage type, plus Forceful Blow (push 15 ft) or Hamstring Blow (Speed −15 ft)",
+          "fr": "Coup brutal : renoncez à l’Avantage sur un jet d’attaque de Force (sans Désavantage) pendant une Attaque téméraire ; même type de dégâts, plus Coup appuyé (repoussé de 4,50 m) ou Coup au jarret (Vitesse −4,50 m)",
+          "es": "Golpe brutal: renuncia a la ventaja en una tirada de ataque basada en Fuerza (sin desventaja) mientras usas Ataque temerario; mismo tipo de daño, más Golpe enérgico (empuja 4,5 m) o Golpe ralentizador (velocidad −4,5 m)"
+        }
+      }
+    ],
+    "source": {
+      "page": 29,
+      "frPage": 31,
+      "section": "Classes > Barbarian > Level 9: Brutal Strike"
+    }
+  },
+  {
+    "id": "barbarian:relentless-rage",
+    "uses": {
+      "count": 1,
+      "per": "short"
+    },
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Relentless Rage Con save DC (first use; +5 per further use before a rest)",
+          "fr": "DD du jet de sauvegarde de Constitution de Rage implacable (première utilisation ; +5 par utilisation suivante avant un repos)",
+          "es": "CD de la tirada de salvación de Constitución de Furia implacable (primer uso; +5 por cada uso posterior antes de un descanso)"
+        },
+        "parts": [10]
+      },
+      {
+        "id": "hp",
+        "label": {
+          "en": "Relentless Rage: Hit Points on a success (twice the Barbarian level)",
+          "fr": "Rage implacable : points de vie en cas de réussite (deux fois le niveau de Barbare)",
+          "es": "Furia implacable: puntos de golpe si la superas (el doble del nivel de bárbaro)"
+        },
+        "parts": ["barbarianLevel*2"]
+      }
+    ],
+    "textOnly": {
+      "en": "Needs engine: a per-rest counter that raises the DC by 5 on each use (10, 15, 20…); the single tick only records that it was used since the last Short or Long Rest.",
+      "fr": "Moteur requis : un compteur par repos qui augmente le DD de 5 à chaque utilisation (10, 15, 20…) ; la case unique note seulement qu’elle a servi depuis le dernier repos court ou long.",
+      "es": "Requiere el motor: un contador por descanso que aumente la CD en 5 con cada uso (10, 15, 20…); la casilla única solo indica que se ha usado desde el último descanso corto o largo."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 11: Relentless Rage"
+    }
+  },
+  {
+    "id": "barbarian:improved-brutal-strike",
+    "textOnly": {
+      "en": "Staggering Blow and Sundering Blow join the Brutal Strike options: applied at the table.",
+      "fr": "Coup stupéfiant et Coup déchirant s’ajoutent aux options de Coup brutal : appliqué à la table.",
+      "es": "Golpe abrumador y Golpe desgarrador se añaden a las opciones de Golpe brutal: se aplica en la mesa."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 13: Improved Brutal Strike"
+    }
+  },
+  {
+    "id": "barbarian:improved-brutal-strike-17",
+    "textOnly": {
+      "en": "Brutal Strike extra damage becomes 2d10 and you apply two different effects. Needs engine: the 2d10 step (the Brutal Strike dice are fixed at 1d10).",
+      "fr": "Les dégâts supplémentaires de Coup brutal passent à 2d10 et vous appliquez deux effets différents. Moteur requis : le passage à 2d10 (les dés de Coup brutal sont fixés à 1d10).",
+      "es": "El daño adicional de Golpe brutal pasa a 2d10 y aplicas dos efectos diferentes. Requiere el motor: el paso a 2d10 (los dados de Golpe brutal están fijados en 1d10)."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 17: Improved Brutal Strike"
+    }
+  },
+  {
+    "id": "barbarian:persistent-rage",
+    "textOnly": {
+      "en": "Regain all Rage uses when rolling Initiative (once per Long Rest) and the Rage lasts 10 minutes without extending it: applied at the table.",
+      "fr": "Récupération de toutes les Rages au jet d’initiative (une fois par repos long) et Rage de 10 minutes sans la prolonger : appliqué à la table.",
+      "es": "Recuperas todos los usos de Furia al tirar iniciativa (una vez por descanso largo) y la furia dura 10 minutos sin necesidad de prolongarla: se aplica en la mesa."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 15: Persistent Rage"
+    }
+  },
+  {
+    "id": "barbarian:indomitable-might",
+    "textOnly": {
+      "en": "Use your Strength score in place of a lower total on a Strength check or saving throw: applied at the dice.",
+      "fr": "Utiliser votre valeur de Force à la place d’un total inférieur à un test ou un jet de sauvegarde de Force : appliqué aux dés.",
+      "es": "Usa tu puntuación de Fuerza en lugar de un total inferior en una prueba o tirada de salvación de Fuerza: se aplica a los dados."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 18: Indomitable Might"
+    }
+  },
+  {
+    "id": "barbarian:primal-champion",
+    "modifiers": [
+      {
+        "target": "ability.str",
+        "value": 4,
+        "effectName": "Primal Champion"
+      },
+      {
+        "target": "ability.str.max",
+        "value": 5,
+        "effectName": "Primal Champion"
+      },
+      {
+        "target": "ability.con",
+        "value": 4,
+        "effectName": "Primal Champion"
+      },
+      {
+        "target": "ability.con.max",
+        "value": 5,
+        "effectName": "Primal Champion"
+      }
+    ],
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Level 20: Primal Champion"
+    }
+  },
+  {
+    "id": "barbarian:path-of-the-berserker:frenzy",
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Path of the Berserker > Level 3: Frenzy"
+    },
+    "modifiers": [
+      {
+        "target": "extraDamage.melee",
+        "value": "rageDamage*d6",
+        "when": "toggle:rage",
+        "condition": {
+          "en": "Frenzy: on the first Reckless Attack hit of your turn while raging (Rage Damage × d6)",
+          "fr": "Frénésie : au premier coup au but d’Attaque téméraire de votre tour en Rage (dégâts de rage × d6)",
+          "es": "Frenesí: con el primer impacto de Ataque temerario de tu turno en furia (Daño por furia × d6)"
+        },
+        "effectName": "Frenzy"
+      }
+    ]
+  },
+  {
+    "id": "barbarian:path-of-the-berserker:mindless-rage",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "charmed",
+        "when": "toggle:rage",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        }
+      },
+      {
+        "kind": "immunity",
+        "on": "frightened",
+        "when": "toggle:rage",
+        "condition": {
+          "en": "while raging",
+          "fr": "en Rage",
+          "es": "en furia"
+        }
+      }
+    ],
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Path of the Berserker > Level 6: Mindless Rage"
+    }
+  },
+  {
+    "id": "barbarian:path-of-the-berserker:retaliation",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "A creature within 5 ft damages you: one melee attack against it.",
+          "fr": "Une créature à 1,50 m vous inflige des dégâts : une attaque au corps à corps contre elle.",
+          "es": "Una criatura a 1,5 m te hace daño: un ataque cuerpo a cuerpo contra ella."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "A Reaction melee attack against a creature within 5 feet that damages you: an action, no sheet number.",
+      "fr": "Une attaque de corps à corps en Réaction contre une créature à 1,50 m qui vous blesse : une action, aucun nombre de la feuille.",
+      "es": "Un ataque cuerpo a cuerpo como reacción contra una criatura a 1,5 m o menos que te daña: una acción, ningún número en la hoja."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Path of the Berserker > Level 10: Retaliation"
+    }
+  },
+  {
+    "id": "barbarian:path-of-the-berserker:intimidating-presence",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Intimidating Presence Wis save DC",
+          "fr": "DD du jet de sauvegarde de Sagesse de Présence intimidante",
+          "es": "CD de la tirada de salvación de Sabiduría de Presencia intimidante"
+        },
+        "parts": [8, "str", "pb"]
+      }
+    ],
+    "textOnly": {
+      "en": "Expending a Rage use restores the use (no action): tick the Rage counter by hand.",
+      "fr": "Dépenser une Rage rend l’utilisation (aucune action) : cochez la Rage à la main.",
+      "es": "Gastar un uso de Furia restaura el uso (no requiere acción): marca el contador de Furia a mano."
+    },
+    "source": {
+      "page": 30,
+      "frPage": 32,
+      "section": "Classes > Barbarian > Path of the Berserker > Level 14: Intimidating Presence"
+    }
+  }
+]

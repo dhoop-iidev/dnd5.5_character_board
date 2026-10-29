@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Borga Pierrefeu",
+    "player": "",
+    "alignment": "Lawful Good",
+    "background": "Archiviste du temple de Moradin, elle a quitté ses parchemins pour porter la lumière de la Forge aux blessés des routes du Nord.",
+    "title": "",
+    "motto": "",
+    "deity": "Moradin",
+    "languages": ["Commun", "Nain", "Céleste"],
+    "height": {
+      "m": 1.32
+    },
+    "weight": {
+      "kg": 68
+    },
+    "age": "87"
+  },
+  "speciesId": "dwarf",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "sage",
+    "abilities": {
+      "wis": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "wizard",
+        "ability": "wis",
+        "cantrips": ["mage-hand", "prestidigitation"],
+        "spell": ["detect-magic"]
+      }
+    }
+  },
+  "baseAbilities": {
+    "str": 14,
+    "dex": 10,
+    "con": 13,
+    "int": 8,
+    "wis": 15,
+    "cha": 12
+  },
+  "levels": [
+    {
+      "classId": "cleric",
+      "hpRoll": 8,
+      "hpFixed": false,
+      "choices": {
+        "cleric:divine-order": "protector"
+      }
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "cleric",
+      "subclassId": "cleric:life-domain",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 2
+        }
+      }
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {
+        "cleric:blessed-strikes": "divine-strike"
+      }
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 1,
+          "str": 1
+        }
+      }
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["medicine", "insight"],
+  "toolProficiencies": ["Matériel de calligraphe"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "chain-mail",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "shd1",
+      "kind": "armor",
+      "refId": "shield",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "mace",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "holy-symbol",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "priests-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 15,
+    "pp": 0
+  },
+  "spellcasting": {
+    "cleric": {
+      "prepared": [
+        "healing-word",
+        "guiding-bolt",
+        "shield-of-faith",
+        "command",
+        "protection-from-evil-and-good",
+        "spiritual-weapon",
+        "hold-person",
+        "prayer-of-healing",
+        "silence",
+        "spirit-guardians",
+        "dispel-magic",
+        "beacon-of-hope",
+        "banishment",
+        "guardian-of-faith",
+        "flame-strike"
+      ],
+      "cantrips": ["guidance", "sacred-flame", "thaumaturgy", "spare-the-dying", "light"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 83,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {},
+  "extraFeats": {}
+}

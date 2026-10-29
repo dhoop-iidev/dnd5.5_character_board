@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Ghazra Œil-de-Loup",
+    "player": "",
+    "alignment": "Neutral Good",
+    "background": "A scout of the steppe war bands who deserted after refusing to burn a village; she now hunts the raiders she once marched with.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Orc", "Elvish", "Goblin"],
+    "height": {
+      "m": 1.88
+    },
+    "weight": {
+      "kg": 95
+    },
+    "age": "29"
+  },
+  "speciesId": "orc",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "soldier",
+    "abilities": {
+      "dex": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "savage-attacker"
+    }
+  },
+  "baseAbilities": {
+    "str": 12,
+    "dex": 15,
+    "con": 14,
+    "int": 8,
+    "wis": 15,
+    "cha": 10
+  },
+  "levels": [
+    {
+      "classId": "ranger",
+      "hpRoll": 10,
+      "hpFixed": false,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {
+        "ranger:fighting-style": "archery"
+      }
+    },
+    {
+      "classId": "ranger",
+      "subclassId": "ranger:hunter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "dex": 1,
+          "wis": 1
+        }
+      }
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 2
+        }
+      }
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["perception", "stealth", "survival"],
+  "toolProficiencies": [],
+  "expertise": ["perception", "stealth", "survival"],
+  "weaponMastery": ["longbow", "shortsword"],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "studded-leather-armor",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "longbow",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "shortsword",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn3",
+      "kind": "weapon",
+      "refId": "scimitar",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "arrows",
+      "quantity": 20,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "quiver",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "druidic-focus",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear4",
+      "kind": "gear",
+      "refId": "explorers-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 5,
+    "ep": 0,
+    "gp": 37,
+    "pp": 0
+  },
+  "spellcasting": {
+    "ranger": {
+      "prepared": [
+        "cure-wounds",
+        "ensnaring-strike",
+        "goodberry",
+        "longstrider",
+        "lesser-restoration",
+        "pass-without-trace",
+        "spike-growth",
+        "conjure-animals",
+        "plant-growth"
+      ],
+      "cantrips": []
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 84,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "ranger:deft-explorer#expertise": ["perception"],
+    "ranger:deft-explorer#languages": ["Elvish", "Goblin"],
+    "ranger:expertise": ["stealth", "survival"],
+    "ranger:hunter:hunters-prey": "colossus-slayer",
+    "ranger:hunter:defensive-tactics": "escape-the-horde"
+  },
+  "extraFeats": {}
+}

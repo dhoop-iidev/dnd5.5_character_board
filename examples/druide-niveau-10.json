@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Nim Brindacier",
+    "player": "",
+    "alignment": "Neutral",
+    "background": "Ancien braconnier des bois de Brume, il a été recueilli par le cercle qu’il volait et en est devenu le gardien le plus discret.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Commun", "Gnome", "Druidique", "Sylvestre"],
+    "height": {
+      "m": 1.05
+    },
+    "weight": {
+      "kg": 20
+    },
+    "age": "112"
+  },
+  "speciesId": "gnome",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "criminal",
+    "abilities": {
+      "dex": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "alert"
+    }
+  },
+  "baseAbilities": {
+    "str": 8,
+    "dex": 14,
+    "con": 13,
+    "int": 12,
+    "wis": 15,
+    "cha": 10
+  },
+  "levels": [
+    {
+      "classId": "druid",
+      "hpRoll": 8,
+      "hpFixed": false,
+      "choices": {
+        "druid:primal-order": "magician"
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "subclassId": "druid:circle-of-the-land",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 2
+        }
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {
+        "druid:elemental-fury": "potent-spellcasting"
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 2
+        }
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["nature", "perception"],
+  "toolProficiencies": ["Matériel d’herboriste", "Outils de voleur"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "leather-armor",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "shd1",
+      "kind": "armor",
+      "refId": "shield",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "quarterstaff",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "sickle",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn3",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 2,
+      "location": "carried"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "druidic-focus",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "explorers-pack",
+      "quantity": 1,
+      "location": "carried"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "herbalism-kit",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 25,
+    "pp": 0
+  },
+  "spellcasting": {
+    "druid": {
+      "prepared": [
+        "cure-wounds",
+        "entangle",
+        "faerie-fire",
+        "goodberry",
+        "healing-word",
+        "moonbeam",
+        "pass-without-trace",
+        "spike-growth",
+        "barkskin",
+        "call-lightning",
+        "conjure-animals",
+        "dispel-magic",
+        "polymorph",
+        "ice-storm",
+        "conjure-elemental"
+      ],
+      "cantrips": ["druidcraft", "produce-flame", "guidance", "shillelagh", "starry-wisp"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 73,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [
+    {
+      "uid": "fam1",
+      "kind": "familiar",
+      "creatureId": "raven",
+      "name": "Croâ",
+      "creatureType": "fey",
+      "hp": {
+        "current": 2,
+        "temp": 0,
+        "max": 2
+      }
+    }
+  ],
+  "wildShape": {
+    "known": ["brown-bear", "dire-wolf", "giant-spider", "panther", "owl", "eagle", "riding-horse", "crocodile"]
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "gnome:gnomish-lineage": "forest-gnome",
+    "gnome:gnomish-lineage#ability": "wis",
+    "druid:circle-of-the-land:spells": "temperate"
+  },
+  "extraFeats": {}
+}

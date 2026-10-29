@@ -1,0 +1,228 @@
+[
+  {
+    "id": "bard:bardic-inspiration",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": {
+      "count": "cha",
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "die",
+        "label": {
+          "en": "Bardic Inspiration die (Bardic Die column: d6, d8 at level 5, d10 at 10, d12 at 15)",
+          "fr": "Dé d’inspiration bardique (colonne Dé bardique : d6, d8 au niveau 5, d10 au 10, d12 au 15)",
+          "es": "Dado de Inspiración bárdica (columna Dado bárdico: d6, d8 a nivel 5, d10 a nivel 10, d12 a nivel 15)"
+        },
+        "dice": "bardicDie"
+      }
+    ],
+    "source": {
+      "page": 31,
+      "frPage": 34,
+      "section": "Classes > Bard > Level 1: Bardic Inspiration"
+    }
+  },
+  {
+    "id": "bard:spellcasting",
+    "textOnly": {
+      "en": "Cantrips, spell slots and prepared spells come from the Bard Features table (Spells pane); Charisma is the spellcasting ability; a Musical Instrument is the Spellcasting Focus.",
+      "fr": "Sorts mineurs, emplacements et sorts préparés viennent de la table des aptitudes du Barde (volet Sorts) ; le Charisme est la caractéristique d’incantation ; un instrument de musique sert de focaliseur.",
+      "es": "Trucos, espacios de conjuro y conjuros preparados salen de la tabla de rasgos de bardo (pestaña Conjuros); el Carisma es la aptitud mágica; un instrumento musical sirve de canalizador mágico."
+    },
+    "source": {
+      "page": 32,
+      "frPage": 34,
+      "section": "Classes > Bard > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "bard:expertise",
+    "choices": [
+      {
+        "kind": "expertise",
+        "name": {
+          "en": "Expertise skills (two at level 2, two more at level 9)",
+          "fr": "Compétences d’Expertise (deux au niveau 2, deux de plus au niveau 9)",
+          "es": "Habilidades de Pericia (dos a nivel 2, dos más a nivel 9)"
+        },
+        "count": 2,
+        "byLevel": {
+          "9": 4
+        }
+      }
+    ],
+    "source": {
+      "page": 32,
+      "frPage": 34,
+      "section": "Classes > Bard > Level 2: Expertise"
+    }
+  },
+  {
+    "id": "bard:jack-of-all-trades",
+    "flags": ["jack-of-all-trades"],
+    "source": {
+      "page": 32,
+      "frPage": 34,
+      "section": "Classes > Bard > Level 2: Jack of All Trades"
+    }
+  },
+  {
+    "id": "bard:font-of-inspiration",
+    "activation": [],
+    "overrides": [
+      {
+        "resource": "bard:bardic-inspiration",
+        "per": "short"
+      }
+    ],
+    "textOnly": {
+      "en": "Uses of Bardic Inspiration come back on a Short or Long Rest; a spell slot can also be expended (no action) to regain one use.",
+      "fr": "Les utilisations d’Inspiration bardique reviennent à chaque repos court ou long ; un emplacement de sort peut aussi être dépensé (sans action) pour en récupérer une.",
+      "es": "Los usos de Inspiración bárdica se recuperan con cada descanso corto o largo; también puedes gastar un espacio de conjuro (no requiere acción) para recuperar un uso."
+    },
+    "source": {
+      "page": 32,
+      "frPage": 35,
+      "section": "Classes > Bard > Level 5: Font of Inspiration"
+    }
+  },
+  {
+    "id": "bard:countercharm",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "You or a creature within 30 ft fails a save against Charmed or Frightened: reroll it with Advantage.",
+          "fr": "Vous ou une créature à 9 m ratez un JS contre Charmé ou Effrayé : relancez-le avec l’Avantage.",
+          "es": "Tú o una criatura a 9 m falláis una salvación contra Hechizado o Asustado: se repite con ventaja."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Reaction when you or a creature within 30 feet fails a save against the Charmed or Frightened condition: the save is rerolled with Advantage. No sheet number.",
+      "fr": "Réaction quand vous ou une créature à 9 m rate une sauvegarde contre l’état Charmé ou Effrayé : la sauvegarde est relancée avec Avantage. Aucun nombre de la feuille.",
+      "es": "Reacción cuando tú o una criatura a 9 m o menos falláis una tirada de salvación contra el estado de hechizado o asustado: se repite la tirada con ventaja. Ningún número en la hoja."
+    },
+    "source": {
+      "page": 33,
+      "frPage": 35,
+      "section": "Classes > Bard > Level 7: Countercharm"
+    }
+  },
+  {
+    "id": "bard:magical-secrets",
+    "spells": {
+      "lists": ["cleric", "druid", "wizard"]
+    },
+    "source": {
+      "page": 33,
+      "frPage": 35,
+      "section": "Classes > Bard > Level 10: Magical Secrets"
+    }
+  },
+  {
+    "id": "bard:superior-inspiration",
+    "textOnly": {
+      "en": "When you roll Initiative, you regain expended uses of Bardic Inspiration until you have two. Applied by hand on the resource counter.",
+      "fr": "Quand vous lancez l’Initiative, vous récupérez des utilisations d’Inspiration bardique jusqu’à en avoir deux. À appliquer à la main sur le compteur.",
+      "es": "Cuando tiras iniciativa, recuperas usos gastados de Inspiración bárdica hasta tener dos. Se aplica a mano en el contador del recurso."
+    },
+    "source": {
+      "page": 33,
+      "frPage": 35,
+      "section": "Classes > Bard > Level 18"
+    }
+  },
+  {
+    "id": "bard:words-of-creation",
+    "spells": {
+      "always": ["power-word-heal", "power-word-kill"]
+    },
+    "source": {
+      "page": 33,
+      "frPage": 35,
+      "section": "Classes > Bard > Level 20: Words of Creation"
+    }
+  },
+  {
+    "id": "bard:college-of-lore:bonus-proficiencies",
+    "choices": [
+      {
+        "kind": "skill",
+        "count": 3,
+        "name": {
+          "en": "Three skill proficiencies",
+          "fr": "Trois maîtrises de compétence",
+          "es": "Tres competencias en habilidades"
+        }
+      }
+    ],
+    "source": {
+      "page": 35,
+      "frPage": 37,
+      "section": "Classes > Bard Subclass: College of Lore > Level 3: Bonus Proficiencies"
+    }
+  },
+  {
+    "id": "bard:college-of-lore:cutting-words",
+    "activation": [
+      {
+        "kind": "reaction",
+        "cost": { "resource": "bard:bardic-inspiration" },
+        "trigger": {
+          "en": "A creature within 60 ft rolls damage or succeeds on a check or attack: subtract your Bardic Inspiration die.",
+          "fr": "Une créature à 18 m lance des dégâts ou réussit un test ou une attaque : soustrayez votre dé d’Inspiration bardique.",
+          "es": "Una criatura a 18 m tira daño o supera una prueba o un ataque: resta tu dado de Inspiración bárdica."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Reaction: expend a use of Bardic Inspiration, roll the Bardic Inspiration die (see its value above) and subtract it from a creature's damage roll, ability check or attack roll within 60 feet. Applied at the dice.",
+      "fr": "Réaction : dépensez une utilisation d’Inspiration bardique, lancez le dé d’inspiration bardique (voir sa valeur ci-dessus) et soustrayez-le au jet de dégâts, test de caractéristique ou jet d’attaque d’une créature à 18 m. Appliqué aux dés.",
+      "es": "Reacción: gasta un uso de Inspiración bárdica, tira el dado de Inspiración bárdica (ver su valor arriba) y réstalo de la tirada de daño, prueba de característica o tirada de ataque de una criatura a 18 m o menos. Se aplica a los dados."
+    },
+    "source": {
+      "page": 35,
+      "frPage": 37,
+      "section": "Classes > Bard Subclass: College of Lore > Level 3: Cutting Words"
+    }
+  },
+  {
+    "id": "bard:college-of-lore:magical-discoveries",
+    "choices": [
+      {
+        "kind": "spell",
+        "count": 2,
+        "list": ["cleric", "druid", "wizard"],
+        "maxLevel": 5,
+        "name": {
+          "en": "Two spells from the Cleric, Druid or Wizard list (a cantrip or a level you have slots for)",
+          "fr": "Deux sorts des listes de Clerc, Druide ou Magicien (un sort mineur ou un niveau dont vous avez des emplacements)",
+          "es": "Dos conjuros de las listas de clérigo, druida o mago (un truco o un nivel para el que tengas espacios)"
+        }
+      }
+    ],
+    "spells": {
+      "fromChoices": ["choice"]
+    },
+    "source": {
+      "page": 35,
+      "frPage": 37,
+      "section": "Classes > Bard Subclass: College of Lore > Level 6: Magical Discoveries"
+    }
+  },
+  {
+    "id": "bard:college-of-lore:peerless-skill",
+    "textOnly": {
+      "en": "On a failed ability check or attack roll, expend a use of Bardic Inspiration and add the die to the d20; not expended if it still fails. Applied at the dice.",
+      "fr": "Sur un test de caractéristique ou un jet d’attaque raté, dépensez une utilisation d’Inspiration bardique et ajoutez le dé au d20 ; non dépensée si c’est encore un échec. Appliqué aux dés.",
+      "es": "Si fallas una prueba de característica o una tirada de ataque, gasta un uso de Inspiración bárdica y suma el dado al d20; no se gasta si sigues fallando. Se aplica a los dados."
+    },
+    "source": {
+      "page": 35,
+      "frPage": 37,
+      "section": "Classes > Bard Subclass: College of Lore > Level 14: Peerless Skill"
+    }
+  }
+]

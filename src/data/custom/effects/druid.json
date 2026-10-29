@@ -1,0 +1,380 @@
+[
+  {
+    "id": "druid:spellcasting",
+    "textOnly": {
+      "en": "Cantrips, spell slots and prepared spells come from the Druid Features table (Spells pane); Wisdom is the spellcasting ability; a Druidic Focus is the Spellcasting Focus.",
+      "fr": "Sorts mineurs, emplacements et sorts préparés viennent de la table des aptitudes du Druide (volet Sorts) ; la Sagesse est la caractéristique d’incantation ; un focaliseur druidique sert de focaliseur.",
+      "es": "Trucos, espacios de conjuro y conjuros preparados salen de la tabla de rasgos de druida (pestaña Conjuros); la Sabiduría es la aptitud mágica; un canalizador druídico sirve de canalizador mágico."
+    },
+    "source": {
+      "page": 41,
+      "frPage": 43,
+      "section": "Classes > Druid > Level 1: Spellcasting"
+    }
+  },
+  {
+    "id": "druid:druidic",
+    "grants": [
+      {
+        "kind": "language",
+        "value": "Druidic"
+      }
+    ],
+    "spells": {
+      "always": ["speak-with-animals"]
+    },
+    "textOnly": {
+      "en": "Hidden messages in Druidic: others spot them with a DC 15 Intelligence (Investigation) check but can't read them without magic.",
+      "fr": "Messages cachés en druidique : les autres les repèrent avec un test d’Intelligence (Investigation) DD 15 mais ne peuvent pas les lire sans magie.",
+      "es": "Mensajes ocultos en druídico: los demás los detectan con una prueba de Inteligencia (Investigación) CD 15, pero no pueden leerlos sin magia."
+    },
+    "source": {
+      "page": 42,
+      "frPage": 43,
+      "section": "Classes > Druid > Level 1: Druidic"
+    }
+  },
+  {
+    "id": "druid:primal-order",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Primal Order",
+          "fr": "Ordre primitif",
+          "es": "Orden primigenia"
+        },
+        "options": {
+          "magician": {
+            "name": {
+              "en": "Magician",
+              "fr": "Magicien",
+              "es": "Naturalista"
+            },
+            "modifiers": [
+              {
+                "target": "cantrips.druid",
+                "value": 1,
+                "effectName": "Magician"
+              },
+              {
+                "target": "skill.arcana",
+                "value": "wis:min1",
+                "effectName": "Magician"
+              },
+              {
+                "target": "skill.nature",
+                "value": "wis:min1",
+                "effectName": "Magician"
+              }
+            ]
+          },
+          "warden": {
+            "name": {
+              "en": "Warden",
+              "fr": "Gardien",
+              "es": "Guardián"
+            },
+            "grants": [
+              {
+                "kind": "proficiency",
+                "on": "weapon.martial"
+              },
+              {
+                "kind": "proficiency",
+                "on": "armor.medium"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 42,
+      "frPage": 44,
+      "section": "Classes > Druid > Level 1: Primal Order"
+    }
+  },
+  {
+    "id": "druid:wild-shape",
+    "activation": [
+      { "kind": "bonus-action" },
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "name": { "en": "Leave Wild Shape", "fr": "Quitter la Forme sauvage", "es": "Abandonar la Forma salvaje" },
+        "trigger": {
+          "en": "Return to your normal form early.",
+          "fr": "Reprendre votre forme normale avant la fin.",
+          "es": "Recuperar tu forma normal antes de tiempo."
+        }
+      }
+    ],
+    "uses": {
+      "count": "wildShape",
+      "per": "long",
+      "shortRestRegain": 1
+    },
+    "computed": [
+      {
+        "id": "temp-hp",
+        "label": {
+          "en": "Wild Shape: Temporary Hit Points gained when assuming a form (Druid level); the form lasts half the Druid level in hours",
+          "fr": "Forme sauvage : points de vie temporaires obtenus en prenant une forme (niveau de Druide) ; la forme dure la moitié du niveau de Druide en heures",
+          "es": "Forma salvaje: puntos de golpe temporales obtenidos al adoptar una forma (nivel de druida); la forma dura tantas horas como la mitad del nivel de druida"
+        },
+        "parts": ["druidLevel"]
+      }
+    ],
+    "source": {
+      "page": 42,
+      "frPage": 44,
+      "section": "Classes > Druid > Level 2: Wild Shape"
+    }
+  },
+  {
+    "id": "druid:wild-companion",
+    "activation": [
+      {
+        "kind": "action",
+        "action": "magic",
+        "cost": { "resource": "druid:wild-shape" },
+        "trigger": {
+          "en": "Cast Find Familiar without Material components (or spend a spell slot instead).",
+          "fr": "Lancer Appel de familier sans composantes matérielles (ou dépenser un emplacement de sort à la place).",
+          "es": "Lanzar Encontrar familiar sin componentes materiales (o gastar un espacio de conjuro en su lugar)."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Magic action: expend a spell slot or a Wild Shape use to cast Find Familiar without Material components; the familiar is Fey and vanishes after a Long Rest. The familiar is managed in the Companions pane.",
+      "fr": "Action Magie : dépensez un emplacement de sort ou une utilisation de Forme sauvage pour lancer Appel de familier sans composantes matérielles ; le familier est une Fée et disparaît après un repos long. Le familier se gère dans le volet Compagnons.",
+      "es": "Acción de magia: gasta un espacio de conjuro o un uso de Forma salvaje para lanzar Encontrar familiar sin componentes materiales; el familiar es un hada y desaparece tras un descanso largo. El familiar se gestiona en la pestaña Compañeros."
+    },
+    "source": {
+      "page": 43,
+      "frPage": 45,
+      "section": "Classes > Druid > Level 2: Wild Companion"
+    }
+  },
+  {
+    "id": "druid:wild-resurgence",
+    "activation": [],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "Once per turn with no Wild Shape use left, expend a spell slot to regain one use (no action, unlimited). The counter above is the other way round: expend a Wild Shape use for a level 1 spell slot, once per Long Rest.",
+      "fr": "Une fois par tour sans utilisation de Forme sauvage, dépensez un emplacement de sort pour en récupérer une (sans action, illimité). Le compteur ci-dessus est l’inverse : dépensez une utilisation de Forme sauvage pour un emplacement de niveau 1, une fois par repos long.",
+      "es": "Una vez por turno, si no te quedan usos de Forma salvaje, gasta un espacio de conjuro para recuperar uno (no requiere acción, sin límite). El contador de arriba es lo contrario: gasta un uso de Forma salvaje para obtener un espacio de conjuro de nivel 1, una vez por descanso largo."
+    },
+    "source": {
+      "page": 43,
+      "frPage": 45,
+      "section": "Classes > Druid > Level 5: Wild Resurgence"
+    }
+  },
+  {
+    "id": "druid:elemental-fury",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Elemental Fury",
+          "fr": "Fureur élémentaire",
+          "es": "Furia elemental"
+        },
+        "options": {
+          "potent-spellcasting": {
+            "name": {
+              "en": "Potent Spellcasting",
+              "fr": "Incantation puissante",
+              "es": "Lanzamiento potente"
+            },
+            "computed": [
+              {
+                "id": "potent-spellcasting",
+                "label": {
+                  "en": "Potent Spellcasting: bonus to the damage of Druid cantrips (Wisdom modifier)",
+                  "fr": "Incantation puissante : bonus aux dégâts des sorts mineurs de Druide (modificateur de Sagesse)",
+                  "es": "Lanzamiento potente: bonificador al daño de los trucos de druida (modificador por Sabiduría)"
+                },
+                "parts": ["wis"]
+              }
+            ]
+          },
+          "primal-strike": {
+            "name": {
+              "en": "Primal Strike",
+              "fr": "Frappe primitive",
+              "es": "Golpe primordial"
+            },
+            "modifiers": [
+              {
+                "target": "extraDamage.all",
+                "value": "1d8",
+                "effectName": "Primal Strike",
+                "condition": {
+                  "en": "Cold, Fire, Lightning or Thunder, once per turn on a hit with a weapon or a Beast form's attack",
+                  "fr": "froid, feu, foudre ou tonnerre, une fois par tour sur un coup au but avec une arme ou une attaque de forme de Bête",
+                  "es": "frío, fuego, relámpago o trueno, una vez por turno al impactar con un arma o con un ataque de una forma de bestia"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 43,
+      "frPage": 45,
+      "section": "Classes > Druid > Level 7: Elemental Fury"
+    }
+  },
+  {
+    "id": "druid:improved-elemental-fury",
+    "textOnly": {
+      "en": "Needs engine: Primal Strike's extra damage becomes 2d8 (the Elemental Fury option is a level 7 choice and this entry can't change its dice); Potent Spellcasting adds 300 feet to the range of Druid cantrips with a range of 10 feet or more.",
+      "fr": "Needs engine : les dégâts supplémentaires de Frappe primitive passent à 2d8 (l’option de Fureur élémentaire est un choix du niveau 7 et cette entrée ne peut pas en changer les dés) ; Incantation puissante ajoute 90 m à la portée des sorts mineurs de Druide d’une portée de 3 m ou plus.",
+      "es": "Requiere el motor: el daño adicional de Golpe primordial pasa a 2d8 (la opción de Furia elemental es una elección de nivel 7 y esta entrada no puede cambiar sus dados); Lanzamiento potente añade 90 m al alcance de los trucos de druida con un alcance de 3 m o más."
+    },
+    "source": {
+      "page": 43,
+      "frPage": 45,
+      "section": "Classes > Druid > Level 15: Improved Elemental Fury"
+    }
+  },
+  {
+    "id": "druid:beast-spells",
+    "textOnly": {
+      "en": "Spells can be cast in Beast form, except those with a costly or consumed Material component. A rule of play, no sheet number.",
+      "fr": "Les sorts peuvent être lancés sous forme de Bête, sauf ceux à composante matérielle coûteuse ou consommée. Règle de jeu, aucun nombre de la feuille.",
+      "es": "Puedes lanzar conjuros en forma de bestia, salvo los que tienen un componente material con coste o que se consume. Regla de juego, ningún número en la hoja."
+    },
+    "source": {
+      "page": 43,
+      "frPage": 45,
+      "section": "Classes > Druid > Level 18: Beast Spells"
+    }
+  },
+  {
+    "id": "druid:archdruid",
+    "activation": [],
+    "textOnly": {
+      "en": "Evergreen Wild Shape (regain a use on Initiative when none is left), Nature Magician (convert Wild Shape uses into one spell slot, 2 spell levels each, once per Long Rest) and Longevity: applied by hand on the counters.",
+      "fr": "Forme sauvage éternelle (récupérez une utilisation à l’Initiative quand il n’en reste aucune), Magicien de la nature (convertissez des utilisations de Forme sauvage en un emplacement de sort, 2 niveaux chacune, une fois par repos long) et Longévité : à appliquer à la main sur les compteurs.",
+      "es": "Forma salvaje perenne (recupera un uso al tirar iniciativa si no te queda ninguno), Mago de la naturaleza (convierte usos de Forma salvaje en un espacio de conjuro, 2 niveles cada uno, una vez por descanso largo) y Longevidad: se aplican a mano en los contadores."
+    },
+    "source": {
+      "page": 43,
+      "frPage": 46,
+      "section": "Classes > Druid > Level 20: Archdruid"
+    }
+  },
+  {
+    "id": "druid:circle-of-the-land:circle-of-the-land-spells",
+    "textOnly": {
+      "en": "The land type (arid, polar, temperate, tropical) is chosen in the Spells pane after each Long Rest; its Circle Spells for your Druid level are then always prepared and don't count against the prepared number.",
+      "fr": "Le type d’environnement (aride, polaire, tempéré, tropical) se choisit dans le volet Sorts après chaque repos long ; ses sorts de cercle pour votre niveau de Druide sont alors toujours préparés et ne comptent pas dans le nombre de sorts préparés.",
+      "es": "El tipo de terreno (árido, polar, templado, tropical) se elige en la pestaña Conjuros tras cada descanso largo; sus conjuros de círculo para tu nivel de druida quedan entonces siempre preparados y no cuentan para el número de conjuros preparados."
+    },
+    "source": {
+      "page": 46,
+      "frPage": 48,
+      "section": "Classes > Druid Subclass: Circle of the Land > Level 3: Circle of the Land Spells"
+    }
+  },
+  {
+    "id": "druid:circle-of-the-land:lands-aid",
+    "activation": [{ "kind": "action", "action": "magic", "cost": { "resource": "druid:wild-shape" } }],
+    "textOnly": {
+      "en": "Magic action, expend a Wild Shape use: 10-foot-radius Sphere within 60 feet, Constitution save against your spell save DC, the dice as Necrotic damage (half on a success) and one creature in the Sphere regains that many Hit Points.",
+      "fr": "Action Magie, dépensez une utilisation de Forme sauvage : sphère de 3 m de rayon à 18 m, sauvegarde de Constitution contre votre DD de sauvegarde des sorts, les dés en dégâts nécrotiques (moitié en cas de réussite) et une créature de la sphère récupère autant de points de vie.",
+      "es": "Acción de magia, gasta un uso de Forma salvaje: esfera de 3 m de radio a 18 m o menos, salvación de Constitución contra la CD de salvación de tus conjuros, los dados como daño necrótico (la mitad si la supera) y una criatura de la esfera recupera esa misma cantidad de puntos de golpe."
+    },
+    "source": {
+      "page": 46,
+      "frPage": 48,
+      "section": "Classes > Druid Subclass: Circle of the Land > Level 3: Land's Aid"
+    },
+    "computed": [
+      {
+        "id": "dice",
+        "label": {
+          "en": "Land’s Aid damage and healing",
+          "fr": "Dégâts et soins d’Aide de la terre",
+          "es": "Daño y curación de Ayuda de la tierra"
+        },
+        "dice": "2d6",
+        "diceByLevel": {
+          "3": "2d6",
+          "10": "3d6",
+          "14": "4d6"
+        }
+      }
+    ]
+  },
+  {
+    "id": "druid:circle-of-the-land:natural-recovery",
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "The counter is the free casting of a level 1+ Circle Spell. Needs engine: on a Short Rest, once per Long Rest, recover expended spell slots whose combined level is at most half the Druid level rounded up (none of level 6+).",
+      "fr": "Le compteur est l’incantation gratuite d’un sort de cercle de niveau 1 ou plus. Needs engine : lors d’un repos court, une fois par repos long, récupérez des emplacements dépensés dont le total des niveaux ne dépasse pas la moitié du niveau de Druide arrondie au supérieur (aucun de niveau 6 ou plus).",
+      "es": "El contador es el lanzamiento gratuito de un conjuro de círculo de nivel 1 o superior. Requiere el motor: durante un descanso corto, una vez por descanso largo, recupera espacios de conjuro gastados cuya suma de niveles no supere la mitad del nivel de druida redondeando hacia arriba (ninguno de nivel 6 o superior)."
+    },
+    "source": {
+      "page": 46,
+      "frPage": 49,
+      "section": "Classes > Druid Subclass: Circle of the Land > Level 6: Natural Recovery"
+    }
+  },
+  {
+    "id": "druid:circle-of-the-land:natures-ward",
+    "grants": [
+      {
+        "kind": "immunity",
+        "on": "poisoned"
+      }
+    ],
+    "textOnly": {
+      "en": "Needs engine: Resistance to the damage type of the current land choice (Arid: Fire, Polar: Cold, Temperate: Lightning, Tropical: Poison); the land is chosen in the Spells pane, which effects can't read.",
+      "fr": "Needs engine : Résistance au type de dégâts de l’environnement en cours (aride : feu, polaire : froid, tempéré : foudre, tropical : poison) ; l’environnement se choisit dans le volet Sorts, que les effets ne peuvent pas lire.",
+      "es": "Requiere el motor: resistencia al tipo de daño del terreno elegido (árido: fuego, polar: frío, templado: relámpago, tropical: veneno); el terreno se elige en la pestaña Conjuros, que los efectos no pueden leer."
+    },
+    "source": {
+      "page": 46,
+      "frPage": 49,
+      "section": "Classes > Druid Subclass: Circle of the Land > Level 10: Nature's Ward"
+    }
+  },
+  {
+    "id": "druid:circle-of-the-land:natures-sanctuary",
+    "activation": [
+      { "kind": "action", "action": "magic", "cost": { "resource": "druid:wild-shape" } },
+      {
+        "kind": "bonus-action",
+        "cost": { "amount": 0 },
+        "name": { "en": "Move the sanctuary", "fr": "Déplacer le sanctuaire", "es": "Mover el santuario" },
+        "trigger": {
+          "en": "Move the Cube up to 60 ft.",
+          "fr": "Déplacer le cube de 18 m au plus.",
+          "es": "Mover el cubo hasta 18 m."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Magic action, expend a Wild Shape use: a 15-foot Cube of spectral trees within 120 feet for 1 minute; you and your allies have Half Cover there and your allies share your Nature's Ward Resistance. A battlefield effect, no sheet number.",
+      "fr": "Action Magie, dépensez une utilisation de Forme sauvage : un cube de 4,50 m d’arbres spectraux à 36 m pendant 1 minute ; vous et vos alliés y avez un abri partiel et vos alliés partagent la Résistance de Protégé de dame Nature. Effet de terrain, aucun nombre de la feuille.",
+      "es": "Acción de magia, gasta un uso de Forma salvaje: un cubo de 4,5 m de árboles espectrales a 36 m o menos durante 1 minuto; tú y tus aliados tenéis allí cobertura media y tus aliados comparten tu resistencia de Protección de la naturaleza. Efecto de terreno, ningún número en la hoja."
+    },
+    "source": {
+      "page": 46,
+      "frPage": 49,
+      "section": "Classes > Druid Subclass: Circle of the Land > Level 14: Nature's Sanctuary"
+    }
+  }
+]

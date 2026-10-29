@@ -1,0 +1,210 @@
+[
+  {
+    "id": "fighter:fighting-style",
+    "textOnly": {
+      "en": "The chosen Fighting Style feat (level record) carries the effect.",
+      "fr": "Le don de style de combat choisi (historique des niveaux) porte l’effet.",
+      "es": "La dote de estilo de combate elegida (registro de niveles) lleva el efecto."
+    },
+    "source": { "page": 47, "frPage": 56, "section": "Classes > Fighter > Level 1: Fighting Style" }
+  },
+  {
+    "id": "fighter:second-wind",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": { "count": "secondWind", "per": "long", "shortRestRegain": 1 },
+    "computed": [
+      {
+        "id": "heal",
+        "label": {
+          "en": "Second Wind healing (Bonus Action)",
+          "fr": "Soins de Second souffle (action bonus)",
+          "es": "Curación de Tomar aliento (acción adicional)"
+        },
+        "dice": "1d10",
+        "parts": ["fighterLevel"]
+      }
+    ],
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 1: Second Wind" }
+  },
+  {
+    "id": "fighter:weapon-mastery",
+    "mastery": "weaponMastery",
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 1: Weapon Mastery" }
+  },
+  {
+    "id": "fighter:action-surge",
+    "activation": [
+      {
+        "kind": "free",
+        "extraAction": { "except": ["magic"] },
+        "trigger": {
+          "en": "One more action this turn, except the Magic action.",
+          "fr": "Une action de plus ce tour-ci, sauf l’action Magie.",
+          "es": "Una acción más este turno, salvo la acción de Magia."
+        }
+      }
+    ],
+    "uses": { "count": 1, "per": "short", "byLevel": { "17": 2 } },
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 2: Action Surge" }
+  },
+  {
+    "id": "fighter:tactical-mind",
+    "textOnly": {
+      "en": "Spend a Second Wind use to add 1d10 to a failed ability check (the use isn't expended if the check still fails): applied at the dice, with the Second Wind counter.",
+      "fr": "Dépenser un Second souffle pour ajouter 1d10 à un test de caractéristique raté (l’utilisation n’est pas dépensée si le test échoue encore) : appliqué aux dés, avec le compteur de Second souffle.",
+      "es": "Gasta un uso de Tomar aliento para sumar 1d10 a una prueba de característica fallida (el uso no se gasta si la prueba sigue fallando): se aplica a los dados, con el contador de Tomar aliento."
+    },
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 2: Tactical Mind" }
+  },
+  {
+    "id": "fighter:extra-attack",
+    "activation": [],
+    "flags": ["extra-attack"],
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 5: Extra Attack" }
+  },
+  {
+    "id": "fighter:tactical-shift",
+    "activation": [],
+    "textOnly": {
+      "en": "Move up to half your Speed without provoking Opportunity Attacks when you use Second Wind as a Bonus Action: a movement rule, no sheet number.",
+      "fr": "Déplacement jusqu’à la moitié de votre Vitesse sans provoquer d’attaque d’opportunité quand vous utilisez Second souffle en action bonus : règle de déplacement, aucun nombre de la feuille.",
+      "es": "Muévete hasta la mitad de tu velocidad sin provocar ataques de oportunidad cuando usas Tomar aliento como acción adicional: regla de movimiento, ningún número en la hoja."
+    },
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 5: Tactical Shift" }
+  },
+  {
+    "id": "fighter:indomitable",
+    "activation": [
+      {
+        "kind": "free",
+        "trigger": {
+          "en": "You fail a saving throw: reroll it with a bonus equal to your Fighter level.",
+          "fr": "Vous ratez un jet de sauvegarde : relancez-le avec un bonus égal à votre niveau de guerrier.",
+          "es": "Fallas una tirada de salvación: repítela con un bonificador igual a tu nivel de guerrero."
+        }
+      }
+    ],
+    "uses": { "count": 1, "per": "long", "byLevel": { "13": 2, "17": 3 } },
+    "computed": [
+      {
+        "id": "bonus",
+        "label": {
+          "en": "Indomitable: bonus to the rerolled saving throw",
+          "fr": "Inflexible : bonus au jet de sauvegarde relancé",
+          "es": "Indómito: bonificador a la tirada de salvación repetida"
+        },
+        "parts": ["fighterLevel"]
+      }
+    ],
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 9: Indomitable" }
+  },
+  {
+    "id": "fighter:tactical-master",
+    "textOnly": {
+      "en": "Replace the mastery property of a weapon you can use with Push, Sap or Slow for one attack: chosen at the attack, no sheet number.",
+      "fr": "Remplacer la botte d’une arme dont vous pouvez l’utiliser par Bousculade, Affaiblissement ou Ralentissement pour une attaque : choisi à l’attaque, aucun nombre de la feuille.",
+      "es": "Sustituye la propiedad de maestría de un arma que puedas usar por Empujar, Debilitar o Ralentizar en un ataque: se elige al atacar, ningún número en la hoja."
+    },
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 9: Tactical Master" }
+  },
+  {
+    "id": "fighter:two-extra-attacks",
+    "activation": [],
+    "flags": ["two-extra-attacks"],
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 11: Two Extra Attacks" }
+  },
+  {
+    "id": "fighter:studied-attacks",
+    "textOnly": {
+      "en": "Advantage on the next attack roll against a creature you just missed: applied at the dice, no sheet number.",
+      "fr": "Avantage au prochain jet d’attaque contre une créature que vous venez de rater : appliqué aux dés, aucun nombre de la feuille.",
+      "es": "Ventaja en la siguiente tirada de ataque contra una criatura a la que acabas de fallar: se aplica a los dados, ningún número en la hoja."
+    },
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 13: Studied Attacks" }
+  },
+  {
+    "id": "fighter:three-extra-attacks",
+    "activation": [],
+    "flags": ["three-extra-attacks"],
+    "source": { "page": 48, "frPage": 57, "section": "Classes > Fighter > Level 20: Three Extra Attacks" }
+  },
+  {
+    "id": "fighter:champion:improved-critical",
+    "modifiers": [{ "target": "critRange", "value": 19, "effectName": "Improved Critical" }],
+    "source": { "page": 49, "frPage": 58, "section": "Classes > Fighter > Champion > Level 3: Improved Critical" }
+  },
+  {
+    "id": "fighter:champion:remarkable-athlete",
+    "grants": [
+      { "kind": "advantage", "on": "initiative" },
+      {
+        "kind": "advantage",
+        "on": "skill.athletics",
+        "condition": {
+          "en": "Strength (Athletics) checks",
+          "fr": "tests de Force (Athlétisme)",
+          "es": "pruebas de Fuerza (Atletismo)"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "After a Critical Hit, move up to half your Speed without provoking Opportunity Attacks: a movement rule.",
+      "fr": "Après un coup critique, déplacement jusqu’à la moitié de votre Vitesse sans provoquer d’attaque d’opportunité : règle de déplacement.",
+      "es": "Tras un crítico, muévete hasta la mitad de tu velocidad sin provocar ataques de oportunidad: regla de movimiento."
+    },
+    "source": { "page": 49, "frPage": 58, "section": "Classes > Fighter > Champion > Level 3: Remarkable Athlete" }
+  },
+  {
+    "id": "fighter:champion:additional-fighting-style",
+    "choices": [
+      {
+        "kind": "feat",
+        "category": "fighting-style",
+        "name": {
+          "en": "Additional Fighting Style feat",
+          "fr": "Don de style de combat supplémentaire",
+          "es": "Dote de estilo de combate adicional"
+        }
+      }
+    ],
+    "source": {
+      "page": 49,
+      "frPage": 58,
+      "section": "Classes > Fighter > Champion > Level 7: Additional Fighting Style"
+    }
+  },
+  {
+    "id": "fighter:champion:heroic-warrior",
+    "textOnly": {
+      "en": "Give yourself Heroic Inspiration at the start of a combat turn when you lack it: tick the Heroic Inspiration box.",
+      "fr": "Vous accorder l’Inspiration héroïque au début d’un tour de combat quand vous ne l’avez pas : cochez la case Inspiration héroïque.",
+      "es": "Obtienes inspiración heroica al inicio de un turno de combate si no la tienes: marca la casilla de Inspiración heroica."
+    },
+    "source": { "page": 49, "frPage": 58, "section": "Classes > Fighter > Champion > Level 10: Heroic Warrior" }
+  },
+  {
+    "id": "fighter:champion:superior-critical",
+    "modifiers": [{ "target": "critRange", "value": 18, "effectName": "Superior Critical" }],
+    "source": { "page": 49, "frPage": 58, "section": "Classes > Fighter > Champion > Level 15: Superior Critical" }
+  },
+  {
+    "id": "fighter:champion:survivor",
+    "computed": [
+      {
+        "id": "rally",
+        "label": {
+          "en": "Heroic Rally: Hit Points regained at the start of your turn while Bloodied",
+          "fr": "Ralliement héroïque : points de vie récupérés au début de votre tour en état Ensanglanté",
+          "es": "Mejoría heroica: puntos de golpe recuperados al inicio de tu turno mientras estás maltrecho"
+        },
+        "parts": [5, "con"]
+      }
+    ],
+    "textOnly": {
+      "en": "Defy Death: Advantage on Death Saving Throws and an 18–20 counts as a 20: applied at the dice.",
+      "fr": "Défier la mort : Avantage aux jets de sauvegarde contre la mort et un 18–20 compte comme un 20 : appliqué aux dés.",
+      "es": "Desafiar a la muerte: ventaja en las tiradas de salvación contra muerte y un 18–20 cuenta como un 20: se aplica a los dados."
+    },
+    "source": { "page": 49, "frPage": 58, "section": "Classes > Fighter > Champion > Level 18: Survivor" }
+  }
+]

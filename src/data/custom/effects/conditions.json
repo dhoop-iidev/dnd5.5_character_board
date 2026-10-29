@@ -1,0 +1,380 @@
+[
+  {
+    "id": "condition:blinded",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attack",
+        "condition": {
+          "en": "can't see",
+          "fr": "ne voit pas",
+          "es": "no puede ver"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you",
+          "fr": "jets d’attaque contre vous",
+          "es": "tiradas de ataque contra ti"
+        }
+      }
+    ],
+    "source": {
+      "page": 177,
+      "frPage": 188,
+      "section": "Rules Glossary > Blinded"
+    }
+  },
+  {
+    "id": "condition:charmed",
+    "textOnly": {
+      "en": "Can't harm the charmer; the charmer has Advantage on social ability checks against you: no sheet number changes.",
+      "fr": "Impossible de nuire au charmeur ; il a l’Avantage aux tests de caractéristique sociaux contre vous : aucun nombre de la feuille ne change.",
+      "es": "No puede dañar a quien la hechiza; este tiene ventaja en las pruebas de característica sociales contra ella: no cambia ningún número de la hoja."
+    },
+    "source": {
+      "page": 178,
+      "frPage": 189,
+      "section": "Rules Glossary > Charmed"
+    }
+  },
+  {
+    "id": "condition:deafened",
+    "textOnly": {
+      "en": "Can't hear; automatic failure on checks that require hearing: no sheet number changes.",
+      "fr": "N’entend pas ; échec automatique aux tests qui requièrent l’ouïe : aucun nombre de la feuille ne change.",
+      "es": "No puede oír; falla automáticamente las pruebas que requieran oído: no cambia ningún número de la hoja."
+    },
+    "source": {
+      "page": 180,
+      "frPage": 191,
+      "section": "Rules Glossary > Deafened"
+    }
+  },
+  {
+    "id": "condition:exhaustion",
+    "textOnly": {
+      "en": "Tracked as the Exhaustion level of the Combat pane (−2 × level on D20 Tests and spell save DCs, −5 ft Speed per level, death at 6).",
+      "fr": "Suivi par le niveau d’Épuisement du volet Combat (−2 × niveau aux tests d20 et aux DD de sauvegarde des sorts, −1,50 m de Vitesse par niveau, mort au niveau 6).",
+      "es": "Se lleva con el nivel de Cansancio de la pestaña Combate (−2 × nivel a las pruebas con d20 y a la CD de salvación de los conjuros, −1,5 m de velocidad por nivel, muerte a nivel 6)."
+    },
+    "source": {
+      "page": 181,
+      "frPage": 192,
+      "section": "Rules Glossary > Exhaustion"
+    }
+  },
+  {
+    "id": "condition:frightened",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "check.all",
+        "condition": {
+          "en": "while the source of fear is in line of sight",
+          "fr": "tant que la source de la peur est en vue",
+          "es": "mientras la fuente del miedo esté a la vista"
+        }
+      },
+      {
+        "kind": "disadvantage",
+        "on": "attack",
+        "condition": {
+          "en": "while the source of fear is in line of sight",
+          "fr": "tant que la source de la peur est en vue",
+          "es": "mientras la fuente del miedo esté a la vista"
+        }
+      }
+    ],
+    "source": {
+      "page": 181,
+      "frPage": 192,
+      "section": "Rules Glossary > Frightened"
+    }
+  },
+  {
+    "id": "condition:grappled",
+    "flags": ["speed-0"],
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attack",
+        "condition": {
+          "en": "against any target other than the grappler",
+          "fr": "contre toute cible autre que l’agrippeur",
+          "es": "contra cualquier objetivo que no sea quien la agarra"
+        }
+      }
+    ],
+    "source": {
+      "page": 182,
+      "frPage": 193,
+      "section": "Rules Glossary > Grappled"
+    }
+  },
+  {
+    "id": "condition:incapacitated",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "initiative"
+      }
+    ],
+    "source": {
+      "page": 183,
+      "frPage": 194,
+      "section": "Rules Glossary > Incapacitated"
+    }
+  },
+  {
+    "id": "condition:invisible",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "initiative"
+      },
+      {
+        "kind": "advantage",
+        "on": "attack",
+        "condition": {
+          "en": "unless the target can somehow see you",
+          "fr": "sauf si la cible peut vous voir",
+          "es": "salvo si el objetivo puede verte de algún modo"
+        }
+      },
+      {
+        "kind": "disadvantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you",
+          "fr": "jets d’attaque contre vous",
+          "es": "tiradas de ataque contra ti"
+        }
+      }
+    ],
+    "source": {
+      "page": 184,
+      "frPage": 195,
+      "section": "Rules Glossary > Invisible"
+    }
+  },
+  {
+    "id": "condition:paralyzed",
+    "flags": ["speed-0"],
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "initiative",
+        "condition": {
+          "en": "Incapacitated",
+          "fr": "Neutralisé",
+          "es": "Incapacitado"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you; hits within 5 feet are Critical Hits",
+          "fr": "jets d’attaque contre vous ; les coups portés à 1,50 m sont des coups critiques",
+          "es": "tiradas de ataque contra ti; los impactos a 1,5 m o menos son críticos"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Automatic failure on Strength and Dexterity saving throws: shown as text (no number).",
+      "fr": "Échec automatique aux jets de sauvegarde de Force et de Dextérité : affiché en texte (pas de nombre).",
+      "es": "Falla automáticamente las tiradas de salvación de Fuerza y Destreza: se muestra como texto (sin número)."
+    },
+    "source": {
+      "page": 185,
+      "frPage": 196,
+      "section": "Rules Glossary > Paralyzed"
+    }
+  },
+  {
+    "id": "condition:petrified",
+    "flags": ["speed-0"],
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "initiative",
+        "condition": {
+          "en": "Incapacitated",
+          "fr": "Neutralisé",
+          "es": "Incapacitado"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you",
+          "fr": "jets d’attaque contre vous",
+          "es": "tiradas de ataque contra ti"
+        }
+      },
+      {
+        "kind": "resistance",
+        "on": "all",
+        "condition": {
+          "en": "Resistance to all damage",
+          "fr": "Résistance à tous les dégâts",
+          "es": "Resistencia a todo el daño"
+        }
+      },
+      {
+        "kind": "immunity",
+        "on": "poisoned"
+      }
+    ],
+    "source": {
+      "page": 185,
+      "frPage": 196,
+      "section": "Rules Glossary > Petrified"
+    }
+  },
+  {
+    "id": "condition:poisoned",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attack"
+      },
+      {
+        "kind": "disadvantage",
+        "on": "check.all"
+      }
+    ],
+    "source": {
+      "page": 186,
+      "frPage": 197,
+      "section": "Rules Glossary > Poisoned"
+    }
+  },
+  {
+    "id": "condition:prone",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attack",
+        "condition": {
+          "en": "while Prone",
+          "fr": "À terre",
+          "es": "mientras está derribado"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you from within 5 feet (Disadvantage beyond)",
+          "fr": "jets d’attaque contre vous à 1,50 m (Désavantage au-delà)",
+          "es": "tiradas de ataque contra ti a 1,5 m o menos (desventaja a mayor distancia)"
+        }
+      }
+    ],
+    "source": {
+      "page": 186,
+      "frPage": 197,
+      "section": "Rules Glossary > Prone"
+    }
+  },
+  {
+    "id": "condition:restrained",
+    "flags": ["speed-0"],
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "attack"
+      },
+      {
+        "kind": "disadvantage",
+        "on": "save.dex"
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you",
+          "fr": "jets d’attaque contre vous",
+          "es": "tiradas de ataque contra ti"
+        }
+      }
+    ],
+    "source": {
+      "page": 187,
+      "frPage": 198,
+      "section": "Rules Glossary > Restrained"
+    }
+  },
+  {
+    "id": "condition:stunned",
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "initiative",
+        "condition": {
+          "en": "Incapacitated",
+          "fr": "Neutralisé",
+          "es": "Incapacitado"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you",
+          "fr": "jets d’attaque contre vous",
+          "es": "tiradas de ataque contra ti"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Automatic failure on Strength and Dexterity saving throws: shown as text (no number).",
+      "fr": "Échec automatique aux jets de sauvegarde de Force et de Dextérité : affiché en texte (pas de nombre).",
+      "es": "Falla automáticamente las tiradas de salvación de Fuerza y Destreza: se muestra como texto (sin número)."
+    },
+    "source": {
+      "page": 188,
+      "frPage": 199,
+      "section": "Rules Glossary > Stunned"
+    }
+  },
+  {
+    "id": "condition:unconscious",
+    "flags": ["speed-0"],
+    "grants": [
+      {
+        "kind": "disadvantage",
+        "on": "initiative",
+        "condition": {
+          "en": "Incapacitated",
+          "fr": "Neutralisé",
+          "es": "Incapacitado"
+        }
+      },
+      {
+        "kind": "advantage",
+        "on": "attacks-against",
+        "condition": {
+          "en": "attack rolls against you; hits within 5 feet are Critical Hits",
+          "fr": "jets d’attaque contre vous ; les coups portés à 1,50 m sont des coups critiques",
+          "es": "tiradas de ataque contra ti; los impactos a 1,5 m o menos son críticos"
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Incapacitated and Prone, automatic failure on Strength and Dexterity saving throws: shown as text.",
+      "fr": "Neutralisé et À terre, échec automatique aux jets de sauvegarde de Force et de Dextérité : affiché en texte.",
+      "es": "Incapacitado y derribado, falla automáticamente las tiradas de salvación de Fuerza y Destreza: se muestra como texto."
+    },
+    "source": {
+      "page": 190,
+      "frPage": 201,
+      "section": "Rules Glossary > Unconscious"
+    }
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Brienne de Valcourt",
+    "player": "",
+    "alignment": "Lawful Good",
+    "background": "A soldier of the border marches who took up adventuring after her company was disbanded.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Dwarvish"],
+    "height": {
+      "m": 1.78
+    },
+    "weight": {
+      "kg": 72
+    },
+    "age": "27"
+  },
+  "speciesId": "human",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "soldier",
+    "abilities": {
+      "str": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "savage-attacker"
+    }
+  },
+  "baseAbilities": {
+    "str": 15,
+    "dex": 13,
+    "con": 14,
+    "int": 10,
+    "wis": 12,
+    "cha": 8
+  },
+  "levels": [
+    {
+      "classId": "fighter",
+      "hpRoll": 10,
+      "hpFixed": false,
+      "choices": {
+        "fighter:fighting-style": "defense"
+      }
+    },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "fighter",
+      "subclassId": "fighter:champion",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "str": 2
+        }
+      }
+    },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 6500,
+  "skillProficiencies": ["perception", "survival"],
+  "toolProficiencies": [],
+  "expertise": [],
+  "weaponMastery": ["longsword", "longbow", "handaxe", "dagger"],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "chain-mail",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "shd1",
+      "kind": "armor",
+      "refId": "shield",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "longsword",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "longbow",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn3",
+      "kind": "weapon",
+      "refId": "handaxe",
+      "quantity": 2,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "dungeoneers-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 12,
+    "ep": 0,
+    "gp": 46,
+    "pp": 0
+  },
+  "spellcasting": {},
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 49,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "human:skillful": "insight"
+  },
+  "extraFeats": {
+    "human:versatile": {
+      "featId": "alert"
+    }
+  },
+  "companions": [],
+  "wildShape": {
+    "known": []
+  }
+}

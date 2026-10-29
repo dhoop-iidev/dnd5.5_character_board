@@ -1,0 +1,362 @@
+[
+  {
+    "id": "acrobatics",
+    "name": {
+      "en": "Acrobatics",
+      "fr": "Acrobaties",
+      "es": "Acrobacias"
+    },
+    "ability": "dex",
+    "text": {
+      "en": "Stay on your feet in a tricky situation, or perform an acrobatic stunt.",
+      "fr": "Rester debout lorsque l’équilibre est précaire ou accomplir un exercice acrobatique.",
+      "es": "Conservar el equilibrio en situaciones difíciles o realizar una proeza acrobática."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "animal-handling",
+    "name": {
+      "en": "Animal Handling",
+      "fr": "Dressage",
+      "es": "Trato con animales"
+    },
+    "ability": "wis",
+    "text": {
+      "en": "Calm or train an animal, or get an animal to behave in a certain way.",
+      "fr": "Apaiser ou dresser un animal, ou lui faire adopter un certain comportement.",
+      "es": "Tranquilizar o adiestrar a un animal, o conseguir que se comporte de una determinada forma."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "arcana",
+    "name": {
+      "en": "Arcana",
+      "fr": "Arcanes",
+      "es": "Conocimiento arcano"
+    },
+    "ability": "int",
+    "text": {
+      "en": "Recall lore about spells, magic items, and the planes of existence.",
+      "fr": "Se souvenir de détails concernant des sorts, des objets magiques ou les plans d’existence.",
+      "es": "Recordar información acerca de conjuros, objetos mágicos y los planos de existencia."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "athletics",
+    "name": {
+      "en": "Athletics",
+      "fr": "Athlétisme",
+      "es": "Atletismo"
+    },
+    "ability": "str",
+    "text": {
+      "en": "Jump farther than normal, stay afloat in rough water, or break something.",
+      "fr": "Sauter plus loin que la normale, garder la tête hors de l’eau dans des flots violents ou briser quelque chose.",
+      "es": "Saltar más lejos de lo normal, mantenerse a flote en aguas revueltas o romper algo."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "deception",
+    "name": {
+      "en": "Deception",
+      "fr": "Tromperie",
+      "es": "Engaño"
+    },
+    "ability": "cha",
+    "text": {
+      "en": "Tell a convincing lie, or wear a disguise convincingly.",
+      "fr": "Mentir de manière convaincante ou se déguiser sans éveiller les soupçons.",
+      "es": "Contar una mentira convincente o llevar un disfraz de manera creíble."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "history",
+    "name": {
+      "en": "History",
+      "fr": "Histoire",
+      "es": "Historia"
+    },
+    "ability": "int",
+    "text": {
+      "en": "Recall lore about historical events, people, nations, and cultures.",
+      "fr": "Se souvenir de détails historiques (événements, peuples, nations et cultures).",
+      "es": "Recordar información sobre acontecimientos, personas, naciones y culturas de carácter histórico."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "insight",
+    "name": {
+      "en": "Insight",
+      "fr": "Intuition",
+      "es": "Perspicacia"
+    },
+    "ability": "wis",
+    "text": {
+      "en": "Discern a person’s mood and intentions.",
+      "fr": "Reconnaître l’humeur et les intentions des gens.",
+      "es": "Discernir el estado de ánimo y las intenciones de una persona."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "intimidation",
+    "name": {
+      "en": "Intimidation",
+      "fr": "Intimidation",
+      "es": "Intimidación"
+    },
+    "ability": "cha",
+    "text": {
+      "en": "Awe or threaten someone into doing what you want.",
+      "fr": "Impressionner ou menacer quelqu’un pour qu’il obtempère.",
+      "es": "Asustar o amenazar a alguien para que haga lo que tú quieres."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "investigation",
+    "name": {
+      "en": "Investigation",
+      "fr": "Investigation",
+      "es": "Investigación"
+    },
+    "ability": "int",
+    "text": {
+      "en": "Find obscure information in books, or deduce how something works.",
+      "fr": "Retrouver des informations obscures dans des ouvrages ou déduire le fonctionnement des choses à partir d’indices.",
+      "es": "Encontrar información oculta en libros o deducir cómo funciona algo."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "medicine",
+    "name": {
+      "en": "Medicine",
+      "fr": "Médecine",
+      "es": "Medicina"
+    },
+    "ability": "wis",
+    "text": {
+      "en": "Diagnose an illness, or determine what killed the recently slain.",
+      "fr": "Diagnostiquer une maladie ou déterminer les causes de morts récentes.",
+      "es": "Diagnosticar una enfermedad o determinar de qué ha muerto un fallecido reciente."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "nature",
+    "name": {
+      "en": "Nature",
+      "fr": "Nature",
+      "es": "Naturaleza"
+    },
+    "ability": "int",
+    "text": {
+      "en": "Recall lore about terrain, plants, animals, and weather.",
+      "fr": "Se souvenir de détails sur l’environnement, le relief, la faune, la flore et le climat.",
+      "es": "Recordar información acerca del terreno, la flora, la fauna y el clima."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "perception",
+    "name": {
+      "en": "Perception",
+      "fr": "Perception",
+      "es": "Percepción"
+    },
+    "ability": "wis",
+    "text": {
+      "en": "Using a combination of senses, notice something that’s easy to miss.",
+      "fr": "Par l’intermédiaire d’un ou plusieurs sens, détecter ce qui peut échapper à d’autres.",
+      "es": "Mediante una combinación de sentidos, darse cuenta de algo que es fácil pasar por alto."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "performance",
+    "name": {
+      "en": "Performance",
+      "fr": "Représentation",
+      "es": "Interpretación"
+    },
+    "ability": "cha",
+    "text": {
+      "en": "Act, tell a story, perform music, or dance.",
+      "fr": "Jouer la comédie ou de la musique, conter une histoire ou danser.",
+      "es": "Actuar, contar una historia, tocar un instrumento o bailar."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "persuasion",
+    "name": {
+      "en": "Persuasion",
+      "fr": "Persuasion",
+      "es": "Persuasión"
+    },
+    "ability": "cha",
+    "text": {
+      "en": "Honestly and graciously convince someone of something.",
+      "fr": "Convaincre autrui sans le brusquer, en toute sincérité.",
+      "es": "Convencer a alguien de algo de una manera sincera y amable."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "religion",
+    "name": {
+      "en": "Religion",
+      "fr": "Religion",
+      "es": "Religión"
+    },
+    "ability": "int",
+    "text": {
+      "en": "Recall lore about gods, religious rituals, and holy symbols.",
+      "fr": "Se souvenir de détails sur les dieux, les rituels religieux et les symboles sacrés.",
+      "es": "Recordar información sobre dioses, rituales religiosos y símbolos sagrados."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "sleight-of-hand",
+    "name": {
+      "en": "Sleight of Hand",
+      "fr": "Escamotage",
+      "es": "Juego de manos"
+    },
+    "ability": "dex",
+    "text": {
+      "en": "Pick a pocket, conceal a handheld object, or perform legerdemain.",
+      "fr": "Faire les poches, dissimuler un petit objet ou exécuter un tour de passe-passe.",
+      "es": "Vaciar los bolsillos a alguien, ocultar un objeto que llevas en la mano o hacer trucos de prestidigitación."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "stealth",
+    "name": {
+      "en": "Stealth",
+      "fr": "Discrétion",
+      "es": "Sigilo"
+    },
+    "ability": "dex",
+    "text": {
+      "en": "Escape notice by moving quietly and hiding behind things.",
+      "fr": "Se soustraire à l’attention en se déplaçant sans faire de bruit et en se cachant.",
+      "es": "Pasar desapercibido al caminar en silencio y ocultarse detrás de las cosas."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  },
+  {
+    "id": "survival",
+    "name": {
+      "en": "Survival",
+      "fr": "Survie",
+      "es": "Supervivencia"
+    },
+    "ability": "wis",
+    "text": {
+      "en": "Follow tracks, forage, find a trail, or avoid natural hazards.",
+      "fr": "Remonter une piste, trouver de la nourriture, s’orienter dans la nature et éviter les dangers sauvages.",
+      "es": "Seguir huellas, forrajear, encontrar un camino o evitar peligros naturales."
+    },
+    "source": {
+      "page": 9,
+      "frPage": 9,
+      "section": "Skills",
+      "esPage": 9
+    }
+  }
+]

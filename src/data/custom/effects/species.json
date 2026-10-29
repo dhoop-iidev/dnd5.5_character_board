@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "dragonborn:draconic-ancestry",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Dragon ancestor",
+          "fr": "Ancêtre draconique",
+          "es": "Ancestro dracónico"
+        },
+        "options": {
+          "black": {
+            "name": {
+              "en": "Black (Acid)",
+              "fr": "Noir (acide)",
+              "es": "Negro (ácido)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "blue": {
+            "name": {
+              "en": "Blue (Lightning)",
+              "fr": "Bleu (foudre)",
+              "es": "Azul (relámpago)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "brass": {
+            "name": {
+              "en": "Brass (Fire)",
+              "fr": "Airain (feu)",
+              "es": "Oropel (fuego)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "bronze": {
+            "name": {
+              "en": "Bronze (Lightning)",
+              "fr": "Bronze (foudre)",
+              "es": "Bronce (relámpago)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "lightning"
+              }
+            ]
+          },
+          "copper": {
+            "name": {
+              "en": "Copper (Acid)",
+              "fr": "Cuivre (acide)",
+              "es": "Cobre (ácido)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "acid"
+              }
+            ]
+          },
+          "gold": {
+            "name": {
+              "en": "Gold (Fire)",
+              "fr": "Or (feu)",
+              "es": "Oro (fuego)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "green": {
+            "name": {
+              "en": "Green (Poison)",
+              "fr": "Vert (poison)",
+              "es": "Verde (veneno)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ]
+          },
+          "red": {
+            "name": {
+              "en": "Red (Fire)",
+              "fr": "Rouge (feu)",
+              "es": "Rojo (fuego)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ]
+          },
+          "silver": {
+            "name": {
+              "en": "Silver (Cold)",
+              "fr": "Argent (froid)",
+              "es": "Plata (frío)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          },
+          "white": {
+            "name": {
+              "en": "White (Cold)",
+              "fr": "Blanc (froid)",
+              "es": "Blanco (frío)"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "cold"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Dragonborn > Draconic Ancestry"
+    }
+  },
+  {
+    "id": "dragonborn:breath-weapon",
+    "activation": [{ "kind": "attack" }],
+    "uses": {
+      "count": "pb",
+      "per": "long"
+    },
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Breath Weapon save DC (Dex)",
+          "fr": "DD de sauvegarde du Souffle (Dex)",
+          "es": "CD de salvación del Ataque de aliento (Destreza)"
+        },
+        "parts": [8, "con", "pb"]
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Dragonborn > Breath Weapon"
+    }
+  },
+  {
+    "id": "dragonborn:damage-resistance",
+    "textOnly": {
+      "en": "The Resistance comes from the Draconic Ancestry choice above.",
+      "fr": "La Résistance vient du choix d’Ascendance draconique ci-dessus.",
+      "es": "La resistencia viene de la elección de Linaje dracónico de arriba."
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "dragonborn:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "dragonborn:draconic-flight",
+    "activation": [{ "kind": "bonus-action", "minLevel": 5 }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "textOnly": {
+      "en": "From character level 5: a Fly Speed equal to your Speed for 10 minutes (Bonus Action), once per Long Rest.",
+      "fr": "À partir du niveau 5 : une Vitesse de vol égale à votre Vitesse pendant 10 minutes (action bonus), une fois par repos long.",
+      "es": "A partir del nivel 5 de personaje: velocidad volando igual a tu velocidad durante 10 minutos (acción adicional), una vez por descanso largo."
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "dwarf:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 120
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "dwarf:dwarven-resilience",
+    "grants": [
+      {
+        "kind": "resistance",
+        "on": "poison"
+      },
+      {
+        "kind": "advantage",
+        "on": "save.poisoned",
+        "condition": {
+          "en": "to avoid or end the Poisoned condition",
+          "fr": "pour éviter ou mettre fin à l’état Empoisonné",
+          "es": "para evitar el estado de envenenado o ponerle fin"
+        }
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Dwarf > Dwarven Resilience"
+    }
+  },
+  {
+    "id": "dwarf:dwarven-toughness",
+    "modifiers": [
+      {
+        "target": "hp.max",
+        "value": "level",
+        "effectName": "Dwarven Toughness"
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Dwarf > Dwarven Toughness"
+    }
+  },
+  {
+    "id": "dwarf:stonecunning",
+    "activation": [{ "kind": "bonus-action" }],
+    "uses": {
+      "count": "pb",
+      "per": "long"
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "elf:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "elf:elven-lineage",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Lineage",
+          "fr": "Lignée",
+          "es": "Linaje"
+        },
+        "options": {
+          "drow": {
+            "name": {
+              "en": "Drow",
+              "fr": "Drow",
+              "es": "Drow"
+            },
+            "grants": [
+              {
+                "kind": "darkvision",
+                "value": 120
+              }
+            ],
+            "spells": {
+              "always": ["dancing-lights"],
+              "byLevel": {
+                "3": ["faerie-fire"],
+                "5": ["darkness"]
+              }
+            }
+          },
+          "high-elf": {
+            "name": {
+              "en": "High Elf",
+              "fr": "Haut-elfe",
+              "es": "Alto elfo"
+            },
+            "spells": {
+              "always": ["prestidigitation"],
+              "byLevel": {
+                "3": ["detect-magic"],
+                "5": ["misty-step"]
+              }
+            }
+          },
+          "wood-elf": {
+            "name": {
+              "en": "Wood Elf",
+              "fr": "Elfe des bois",
+              "es": "Elfo de los bosques"
+            },
+            "modifiers": [
+              {
+                "target": "speed",
+                "value": 5,
+                "effectName": "Wood Elf"
+              }
+            ],
+            "spells": {
+              "always": ["druidcraft"],
+              "byLevel": {
+                "3": ["longstrider"],
+                "5": ["pass-without-trace"]
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ability",
+        "kind": "option",
+        "name": {
+          "en": "Spellcasting ability",
+          "fr": "Caractéristique d’incantation",
+          "es": "Aptitud mágica"
+        },
+        "options": {
+          "int": {
+            "name": {
+              "en": "Intelligence",
+              "fr": "Intelligence",
+              "es": "Inteligencia"
+            }
+          },
+          "wis": {
+            "name": {
+              "en": "Wisdom",
+              "fr": "Sagesse",
+              "es": "Sabiduría"
+            }
+          },
+          "cha": {
+            "name": {
+              "en": "Charisma",
+              "fr": "Charisme",
+              "es": "Carisma"
+            }
+          }
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "The level 3 and 5 lineage spells are always prepared from those character levels and can each be cast once per Long Rest without a spell slot (then with slots); the High Elf may swap its cantrip for a Wizard cantrip on a Long Rest (text).",
+      "fr": "Les sorts de lignée des niveaux 3 et 5 sont toujours préparés à partir de ces niveaux de personnage et se lancent une fois par repos long sans emplacement (puis avec) ; le haut-elfe peut échanger son sort mineur contre un sort mineur de Magicien à chaque repos long (texte).",
+      "es": "Los conjuros de linaje de los niveles 3 y 5 están siempre preparados a partir de esos niveles de personaje y se pueden lanzar una vez por descanso largo sin espacio de conjuro (después, con espacios); el alto elfo puede cambiar su truco por un truco de mago en cada descanso largo (texto)."
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88,
+      "section": "Character Origins > Elf > Elven Lineage"
+    }
+  },
+  {
+    "id": "elf:fey-ancestry",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.charmed",
+        "condition": {
+          "en": "to avoid or end the Charmed condition",
+          "fr": "pour éviter ou mettre fin à l’état Charmé",
+          "es": "para evitar el estado de hechizado o ponerle fin"
+        }
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "elf:keen-senses",
+    "choices": [
+      {
+        "kind": "skill",
+        "count": 1,
+        "from": ["insight", "perception", "survival"],
+        "name": {
+          "en": "Keen Senses skill",
+          "fr": "Compétence de Sens aiguisés",
+          "es": "Habilidad de Sentidos agudos"
+        }
+      }
+    ],
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "elf:trance",
+    "textOnly": {
+      "en": "No sleep; a Long Rest in 4 hours of trance.",
+      "fr": "Pas de sommeil ; repos long en 4 heures de transe.",
+      "es": "Sin sueño; un descanso largo en 4 horas de trance."
+    },
+    "source": {
+      "page": 84,
+      "frPage": 88
+    }
+  },
+  {
+    "id": "gnome:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "gnome:gnomish-cunning",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.int"
+      },
+      {
+        "kind": "advantage",
+        "on": "save.wis"
+      },
+      {
+        "kind": "advantage",
+        "on": "save.cha"
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Gnome > Gnomish Cunning"
+    }
+  },
+  {
+    "id": "gnome:gnomish-lineage",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Lineage",
+          "fr": "Lignée",
+          "es": "Linaje"
+        },
+        "options": {
+          "forest-gnome": {
+            "name": {
+              "en": "Forest Gnome",
+              "fr": "Gnome des forêts",
+              "es": "Gnomo de los bosques"
+            },
+            "spells": {
+              "always": ["minor-illusion", "speak-with-animals"]
+            },
+            "uses": {
+              "count": "pb",
+              "per": "long"
+            }
+          },
+          "rock-gnome": {
+            "name": {
+              "en": "Rock Gnome",
+              "fr": "Gnome des roches",
+              "es": "Gnomo de las rocas"
+            },
+            "spells": {
+              "always": ["mending", "prestidigitation"]
+            }
+          }
+        }
+      },
+      {
+        "id": "ability",
+        "kind": "option",
+        "name": {
+          "en": "Spellcasting ability",
+          "fr": "Caractéristique d’incantation",
+          "es": "Aptitud mágica"
+        },
+        "options": {
+          "int": {
+            "name": {
+              "en": "Intelligence",
+              "fr": "Intelligence",
+              "es": "Inteligencia"
+            }
+          },
+          "wis": {
+            "name": {
+              "en": "Wisdom",
+              "fr": "Sagesse",
+              "es": "Sabiduría"
+            }
+          },
+          "cha": {
+            "name": {
+              "en": "Charisma",
+              "fr": "Charisme",
+              "es": "Carisma"
+            }
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Gnome > Gnomish Lineage"
+    }
+  },
+  {
+    "id": "gnome:forest-gnome",
+    "textOnly": {
+      "en": "Applied through the Gnomish Lineage choice.",
+      "fr": "Appliqué par le choix de Lignée gnome.",
+      "es": "Se aplica mediante la elección de Linaje gnomo."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "gnome:rock-gnome",
+    "activation": [],
+    "textOnly": {
+      "en": "Applied through the Gnomish Lineage choice.",
+      "fr": "Appliqué par le choix de Lignée gnome.",
+      "es": "Se aplica mediante la elección de Linaje gnomo."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:giant-ancestry",
+    "uses": {
+      "count": "pb",
+      "per": "long"
+    },
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Giant ancestry",
+          "fr": "Ascendance de géant",
+          "es": "Linaje gigante"
+        },
+        "options": {
+          "cloud": {
+            "name": {
+              "en": "Cloud’s Jaunt (Cloud Giant)",
+              "fr": "Bond des nuages (géant des nuages)",
+              "es": "Excursión de las nubes (gigante de las nubes)"
+            }
+          },
+          "fire": {
+            "name": {
+              "en": "Fire’s Burn (Fire Giant)",
+              "fr": "Brûlure du feu (géant du feu)",
+              "es": "Abrasión del fuego (gigante de fuego)"
+            },
+            "modifiers": [
+              {
+                "target": "extraDamage.all",
+                "value": "1d10",
+                "condition": {
+                  "en": "Fire, on a hit, one use",
+                  "fr": "feu, sur un coup au but, une utilisation",
+                  "es": "fuego, al impactar, un uso"
+                }
+              }
+            ]
+          },
+          "frost": {
+            "name": {
+              "en": "Frost’s Chill (Frost Giant)",
+              "fr": "Froid du givre (géant du givre)",
+              "es": "Frío de la escarcha (gigante de escarcha)"
+            },
+            "modifiers": [
+              {
+                "target": "extraDamage.all",
+                "value": "1d6",
+                "condition": {
+                  "en": "Cold, on a hit, one use; target’s Speed −10 ft",
+                  "fr": "froid, sur un coup au but, une utilisation ; Vitesse de la cible −3 m",
+                  "es": "frío, al impactar, un uso; velocidad del objetivo −3 m"
+                }
+              }
+            ]
+          },
+          "hill": {
+            "name": {
+              "en": "Hill’s Tumble (Hill Giant)",
+              "fr": "Culbute des collines (géant des collines)",
+              "es": "Caída de las colinas (gigante de las colinas)"
+            }
+          },
+          "stone": {
+            "name": {
+              "en": "Stone’s Endurance (Stone Giant)",
+              "fr": "Endurance de la pierre (géant des pierres)",
+              "es": "Resistencia de la piedra (gigante de piedra)"
+            },
+            "computed": [
+              {
+                "id": "reduce",
+                "label": {
+                  "en": "Stone’s Endurance damage reduction",
+                  "fr": "Réduction de dégâts d’Endurance de la pierre",
+                  "es": "Reducción de daño de Resistencia de la piedra"
+                },
+                "dice": "1d12",
+                "parts": ["con"]
+              }
+            ]
+          },
+          "storm": {
+            "name": {
+              "en": "Storm’s Thunder (Storm Giant)",
+              "fr": "Tonnerre des tempêtes (géant des tempêtes)",
+              "es": "Trueno de la tormenta (gigante de las tormentas)"
+            }
+          }
+        }
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Goliath > Giant Ancestry"
+    }
+  },
+  {
+    "id": "goliath:clouds-jaunt-cloud-giant",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "Teleport up to 30 ft to a space you can see.",
+          "fr": "Téléportez-vous de 9 m au plus vers un espace que vous voyez.",
+          "es": "Teletranspórtate hasta 9 m a un espacio que puedas ver."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:fires-burn-fire-giant",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "On a hit: 1d10 extra Fire damage.",
+          "fr": "Quand vous touchez : 1d10 dégâts de feu en plus.",
+          "es": "Al impactar: 1d10 de daño de fuego adicional."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:frosts-chill-frost-giant",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "On a hit: 1d6 extra Cold damage and the target’s Speed drops by 10 ft.",
+          "fr": "Quand vous touchez : 1d6 dégâts de froid en plus et la Vitesse de la cible baisse de 3 m.",
+          "es": "Al impactar: 1d6 de daño de frío adicional y la velocidad del objetivo baja 3 m."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:hills-tumble-hill-giant",
+    "activation": [
+      {
+        "kind": "free",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "On a hit against a Large or smaller creature: it has the Prone condition.",
+          "fr": "Quand vous touchez une créature de taille G ou moins : elle est À terre.",
+          "es": "Al impactar a una criatura Grande o menor: queda Derribada."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:stones-endurance-stone-giant",
+    "activation": [
+      {
+        "kind": "reaction",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "You take damage: reduce it by 1d12 + your Constitution modifier.",
+          "fr": "Vous subissez des dégâts : réduisez-les de 1d12 + votre modificateur de Constitution.",
+          "es": "Recibes daño: redúcelo en 1d12 + tu modificador de Constitución."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:storms-thunder-storm-giant",
+    "activation": [
+      {
+        "kind": "reaction",
+        "cost": { "resource": "goliath:giant-ancestry" },
+        "trigger": {
+          "en": "A creature within 60 ft damages you: it takes 1d8 Thunder damage.",
+          "fr": "Une créature à 18 m vous inflige des dégâts : elle subit 1d8 dégâts de tonnerre.",
+          "es": "Una criatura a 18 m te hace daño: recibe 1d8 de daño de trueno."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Applied through the Giant Ancestry choice.",
+      "fr": "Appliqué par le choix d’Ascendance de géant.",
+      "es": "Se aplica mediante la elección de Linaje gigante."
+    },
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "goliath:large-form",
+    "activation": [{ "kind": "bonus-action", "minLevel": 5, "when": "!toggle:large-form", "setsToggle": "large-form" }],
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "modifiers": [
+      {
+        "target": "speed",
+        "value": 10,
+        "when": "toggle:large-form",
+        "condition": {
+          "en": "Large Form",
+          "fr": "Forme de géant",
+          "es": "Forma grande"
+        },
+        "effectName": "Large Form"
+      }
+    ],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "check.str",
+        "when": "toggle:large-form",
+        "condition": {
+          "en": "while Large",
+          "fr": "en taille G",
+          "es": "mientras eres Grande"
+        }
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89,
+      "section": "Character Origins > Goliath > Large Form"
+    },
+    "textOnly": {
+      "en": "From character level 5 only (the switch is offered at any level: check your level).",
+      "fr": "À partir du niveau de personnage 5 seulement (l’interrupteur est proposé à tout niveau : vérifiez votre niveau).",
+      "es": "Solo a partir del nivel 5 de personaje (el interruptor se ofrece a cualquier nivel: comprueba tu nivel)."
+    }
+  },
+  {
+    "id": "goliath:powerful-build",
+    "flags": ["powerful-build"],
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "check.grapple-escape",
+        "condition": {
+          "en": "to end the Grappled condition",
+          "fr": "pour mettre fin à l’état Agrippé",
+          "es": "para poner fin al estado de agarrado"
+        }
+      }
+    ],
+    "source": {
+      "page": 85,
+      "frPage": 89
+    }
+  },
+  {
+    "id": "halfling:brave",
+    "grants": [
+      {
+        "kind": "advantage",
+        "on": "save.frightened",
+        "condition": {
+          "en": "to avoid or end the Frightened condition",
+          "fr": "pour éviter ou mettre fin à l’état Effrayé",
+          "es": "para evitar el estado de asustado o ponerle fin"
+        }
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "halfling:halfling-nimbleness",
+    "textOnly": {
+      "en": "Movement rule, no sheet number.",
+      "fr": "Règle de déplacement, aucun nombre de la feuille.",
+      "es": "Regla de movimiento, ningún número en la hoja."
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "halfling:luck",
+    "textOnly": {
+      "en": "Reroll a 1 on a D20 Test: applied at the dice, no sheet number.",
+      "fr": "Relance d’un 1 à un test d20 : appliqué aux dés, aucun nombre de la feuille.",
+      "es": "Repite un 1 en una prueba con d20: se aplica a los dados, ningún número en la hoja."
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "halfling:naturally-stealthy",
+    "activation": [],
+    "textOnly": {
+      "en": "Hide behind a larger creature: no sheet number.",
+      "fr": "Se cacher derrière une créature plus grande : aucun nombre de la feuille.",
+      "es": "Esconderse detrás de una criatura más grande: ningún número en la hoja."
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "human:resourceful",
+    "flags": ["resourceful"],
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Human > Resourceful"
+    }
+  },
+  {
+    "id": "human:skillful",
+    "choices": [
+      {
+        "kind": "skill",
+        "count": 1,
+        "name": {
+          "en": "Skillful skill",
+          "fr": "Compétence de Compétent",
+          "es": "Habilidad de Diestro"
+        }
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Human > Skillful"
+    }
+  },
+  {
+    "id": "human:versatile",
+    "choices": [
+      {
+        "kind": "feat",
+        "category": "origin",
+        "name": {
+          "en": "Origin feat",
+          "fr": "Don d’origine",
+          "es": "Dote de origen"
+        }
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Human > Versatile"
+    }
+  },
+  {
+    "id": "orc:adrenaline-rush",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "actions": ["dash"],
+        "trigger": {
+          "en": "Dash, and gain Temporary Hit Points equal to your Proficiency Bonus.",
+          "fr": "Pointe, et gagnez des points de vie temporaires égaux à votre bonus de maîtrise.",
+          "es": "Correr, y ganas puntos de golpe temporales iguales a tu bonificador por competencia."
+        }
+      }
+    ],
+    "uses": {
+      "count": "pb",
+      "per": "short"
+    },
+    "computed": [
+      {
+        "id": "temp",
+        "label": {
+          "en": "Adrenaline Rush Temporary HP",
+          "fr": "PV temporaires de Montée d’adrénaline",
+          "es": "PG temporales de Descarga de adrenalina"
+        },
+        "parts": ["pb"]
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "orc:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 120
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "orc:relentless-endurance",
+    "uses": {
+      "count": 1,
+      "per": "long"
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "tiefling:darkvision",
+    "grants": [
+      {
+        "kind": "darkvision",
+        "value": 60
+      }
+    ],
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  },
+  {
+    "id": "tiefling:fiendish-legacy",
+    "choices": [
+      {
+        "kind": "option",
+        "name": {
+          "en": "Legacy",
+          "fr": "Héritage",
+          "es": "Legado"
+        },
+        "options": {
+          "abyssal": {
+            "name": {
+              "en": "Abyssal",
+              "fr": "Abyssal",
+              "es": "Abisal"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "poison"
+              }
+            ],
+            "spells": {
+              "always": ["poison-spray"],
+              "byLevel": {
+                "3": ["ray-of-sickness"],
+                "5": ["hold-person"]
+              }
+            }
+          },
+          "chthonic": {
+            "name": {
+              "en": "Chthonic",
+              "fr": "Chthonien",
+              "es": "Ctónico"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "necrotic"
+              }
+            ],
+            "spells": {
+              "always": ["chill-touch"],
+              "byLevel": {
+                "3": ["false-life"],
+                "5": ["ray-of-enfeeblement"]
+              }
+            }
+          },
+          "infernal": {
+            "name": {
+              "en": "Infernal",
+              "fr": "Infernal",
+              "es": "Infernal"
+            },
+            "grants": [
+              {
+                "kind": "resistance",
+                "on": "fire"
+              }
+            ],
+            "spells": {
+              "always": ["fire-bolt"],
+              "byLevel": {
+                "3": ["hellish-rebuke"],
+                "5": ["darkness"]
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": "ability",
+        "kind": "option",
+        "name": {
+          "en": "Spellcasting ability",
+          "fr": "Caractéristique d’incantation",
+          "es": "Aptitud mágica"
+        },
+        "options": {
+          "int": {
+            "name": {
+              "en": "Intelligence",
+              "fr": "Intelligence",
+              "es": "Inteligencia"
+            }
+          },
+          "wis": {
+            "name": {
+              "en": "Wisdom",
+              "fr": "Sagesse",
+              "es": "Sabiduría"
+            }
+          },
+          "cha": {
+            "name": {
+              "en": "Charisma",
+              "fr": "Charisme",
+              "es": "Carisma"
+            }
+          }
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "The level 3 and 5 legacy spells are always prepared from those character levels and can each be cast once per Long Rest without a spell slot (then with slots).",
+      "fr": "Les sorts d’héritage des niveaux 3 et 5 sont toujours préparés à partir de ces niveaux de personnage et se lancent une fois par repos long sans emplacement (puis avec).",
+      "es": "Los conjuros de legado de los niveles 3 y 5 están siempre preparados a partir de esos niveles de personaje y se pueden lanzar una vez por descanso largo sin espacio de conjuro (después, con espacios)."
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90,
+      "section": "Character Origins > Tiefling > Fiendish Legacy"
+    }
+  },
+  {
+    "id": "tiefling:otherworldly-presence",
+    "spells": {
+      "always": ["thaumaturgy"]
+    },
+    "source": {
+      "page": 86,
+      "frPage": 90
+    }
+  }
+]

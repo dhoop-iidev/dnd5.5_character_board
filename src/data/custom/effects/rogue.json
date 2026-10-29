@@ -1,0 +1,344 @@
+[
+  {
+    "id": "rogue:expertise",
+    "choices": [
+      {
+        "kind": "expertise",
+        "count": 2,
+        "byLevel": {
+          "6": 4
+        },
+        "name": {
+          "en": "Expertise in two skill proficiencies (four from Rogue level 6)",
+          "fr": "Expertise dans deux maîtrises de compétence (quatre à partir du niveau 6 de Roublard)",
+          "es": "Pericia en dos habilidades con competencia (cuatro a partir del nivel 6 de pícaro)"
+        }
+      }
+    ],
+    "source": {
+      "page": 61,
+      "frPage": 84,
+      "section": "Classes > Rogue Class Features > Level 1: Expertise"
+    }
+  },
+  {
+    "id": "rogue:sneak-attack",
+    "modifiers": [
+      {
+        "target": "extraDamage.all",
+        "value": "sneakAttack",
+        "condition": {
+          "en": "Finesse or Ranged weapon, Advantage or an ally adjacent, once per turn",
+          "fr": "arme de finesse ou à distance, Avantage ou un allié adjacent, une fois par tour",
+          "es": "arma sutil o a distancia, ventaja o un aliado adyacente, una vez por turno"
+        }
+      }
+    ],
+    "source": {
+      "page": 61,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 1: Sneak Attack"
+    }
+  },
+  {
+    "id": "rogue:thieves-cant",
+    "grants": [
+      {
+        "kind": "language",
+        "value": "Thieves’ Cant"
+      }
+    ],
+    "choices": [
+      {
+        "kind": "text",
+        "count": 1,
+        "name": {
+          "en": "One other language",
+          "fr": "Une autre langue",
+          "es": "Otro idioma"
+        }
+      }
+    ],
+    "source": {
+      "page": 62,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 1: Thieves’ Cant"
+    }
+  },
+  {
+    "id": "rogue:weapon-mastery",
+    "mastery": 2,
+    "source": {
+      "page": 62,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 1: Weapon Mastery"
+    }
+  },
+  {
+    "id": "rogue:cunning-action",
+    "activation": [{ "kind": "bonus-action", "actions": ["dash", "disengage", "hide"] }],
+    "textOnly": {
+      "en": "Dash, Disengage or Hide as a Bonus Action: an action, no sheet number.",
+      "fr": "Foncer, Se désengager ou Se cacher en action bonus : une action, aucun nombre de la feuille.",
+      "es": "Correr, destrabarse o esconderse como acción adicional: una acción, ningún número en la hoja."
+    },
+    "source": {
+      "page": 62,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 2: Cunning Action"
+    }
+  },
+  {
+    "id": "rogue:steady-aim",
+    "activation": [
+      {
+        "kind": "bonus-action",
+        "trigger": {
+          "en": "Only if you haven’t moved this turn: Advantage on your next attack roll this turn; your Speed becomes 0.",
+          "fr": "Seulement si vous ne vous êtes pas déplacé ce tour-ci : Avantage à votre prochain jet d’attaque du tour ; votre Vitesse tombe à 0.",
+          "es": "Solo si no te has movido este turno: ventaja en tu siguiente tirada de ataque del turno; tu velocidad pasa a 0."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Bonus Action: Advantage on the next attack roll this turn if you haven't moved; Speed 0 until the end of the turn. Applied at the dice.",
+      "fr": "Action bonus : Avantage au prochain jet d’attaque de ce tour si vous ne vous êtes pas déplacé ; Vitesse 0 jusqu’à la fin du tour. Appliqué aux dés.",
+      "es": "Acción adicional: ventaja en la siguiente tirada de ataque de este turno si no te has movido; velocidad 0 hasta el final del turno. Se aplica a los dados."
+    },
+    "source": {
+      "page": 62,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 3: Steady Aim"
+    }
+  },
+  {
+    "id": "rogue:cunning-strike",
+    "computed": [
+      {
+        "id": "dc",
+        "label": {
+          "en": "Cunning Strike save DC (8 + Dex + PB)",
+          "fr": "DD de sauvegarde de Frappe rusée (8 + Dex + BM)",
+          "es": "CD de salvación de Golpe astuto (8 + Des + BC)"
+        },
+        "parts": [8, "dex", "pb"]
+      }
+    ],
+    "textOnly": {
+      "en": "Poison (1d6, Con save, needs a Poisoner's Kit), Trip (1d6, Dex save, Large or smaller), Withdraw (1d6): the die cost is removed from the Sneak Attack at the dice.",
+      "fr": "Poison (1d6, sauvegarde de Con, requiert une trousse d’empoisonneur), Croc-en-jambe (1d6, sauvegarde de Dex, taille G ou inférieure), Retrait (1d6) : le coût en dés est retiré de l’Attaque sournoise aux dés.",
+      "es": "Veneno (1d6, salvación de Constitución, requiere útiles de envenenador), Tropiezo (1d6, salvación de Destreza, Grande o más pequeño), Retirada (1d6): el coste en dados se retira del Ataque furtivo al tirar."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 5: Cunning Strike"
+    }
+  },
+  {
+    "id": "rogue:uncanny-dodge",
+    "activation": [
+      {
+        "kind": "reaction",
+        "trigger": {
+          "en": "An attacker you can see hits you: halve the attack’s damage.",
+          "fr": "Un attaquant que vous voyez vous touche : réduisez de moitié les dégâts de l’attaque.",
+          "es": "Un atacante que puedes ver te impacta: reduce a la mitad el daño del ataque."
+        }
+      }
+    ],
+    "textOnly": {
+      "en": "Reaction: halve the damage of an attack from a visible attacker. Applied at the table.",
+      "fr": "Réaction : diviser par deux les dégâts d’une attaque d’un assaillant visible. Appliqué à la table.",
+      "es": "Reacción: reduce a la mitad el daño de un ataque de un atacante que puedas ver. Se aplica en la mesa."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 5: Uncanny Dodge"
+    }
+  },
+  {
+    "id": "rogue:evasion",
+    "textOnly": {
+      "en": "Dexterity saving throw for half damage: no damage on a success, half on a failure (not while Incapacitated). Applied at the table.",
+      "fr": "Jet de sauvegarde de Dextérité pour demi-dégâts : aucun dégât en cas de réussite, la moitié en cas d’échec (pas en état Neutralisé). Appliqué à la table.",
+      "es": "Tirada de salvación de Destreza para recibir la mitad del daño: ningún daño si la superas, la mitad si la fallas (no si estás incapacitado). Se aplica en la mesa."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 7: Evasion"
+    }
+  },
+  {
+    "id": "rogue:reliable-talent",
+    "flags": ["reliable-talent"],
+    "textOnly": {
+      "en": "A d20 roll of 9 or lower counts as 10 on ability checks using a skill or tool proficiency (flag reliable-talent): minimum 10 on the die, applied at the dice.",
+      "fr": "Un résultat de 9 ou moins au d20 compte comme 10 aux tests de caractéristique utilisant une maîtrise de compétence ou d’outil (drapeau reliable-talent) : minimum 10 sur le dé, appliqué aux dés.",
+      "es": "Un resultado de 9 o menos en el d20 cuenta como 10 en las pruebas de característica que usan una competencia en habilidad o herramienta (indicador reliable-talent): mínimo 10 en el dado, se aplica a los dados."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 85,
+      "section": "Classes > Rogue Class Features > Level 7: Reliable Talent"
+    }
+  },
+  {
+    "id": "rogue:improved-cunning-strike",
+    "textOnly": {
+      "en": "Up to two Cunning Strike effects per Sneak Attack, each paying its die cost: applied at the dice.",
+      "fr": "Jusqu’à deux effets de Frappe rusée par Attaque sournoise, chacun payant son coût en dés : appliqué aux dés.",
+      "es": "Hasta dos efectos de Golpe astuto por Ataque furtivo, pagando cada uno su coste en dados: se aplica a los dados."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 86,
+      "section": "Classes > Rogue Class Features > Level 11: Improved Cunning Strike"
+    }
+  },
+  {
+    "id": "rogue:devious-strikes",
+    "activation": [],
+    "textOnly": {
+      "en": "New Cunning Strike options: Daze (2d6, Con save), Knock Out (6d6, Con save), Obscure (3d6, Dex save). Same DC as Cunning Strike; applied at the dice.",
+      "fr": "Nouvelles options de Frappe rusée : Hébétement (2d6, sauvegarde de Con), Assommer (6d6, sauvegarde de Con), Aveugler (3d6, sauvegarde de Dex). Même DD que Frappe rusée ; appliqué aux dés.",
+      "es": "Nuevas opciones de Golpe astuto: Confundir (2d6, salvación de Constitución), Noquear (6d6, salvación de Constitución), Ofuscar (3d6, salvación de Destreza). Misma CD que Golpe astuto; se aplica a los dados."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 86,
+      "section": "Classes > Rogue Class Features > Level 14: Devious Strikes"
+    }
+  },
+  {
+    "id": "rogue:slippery-mind",
+    "grants": [
+      {
+        "kind": "proficiency",
+        "on": "save.wis"
+      },
+      {
+        "kind": "proficiency",
+        "on": "save.cha"
+      }
+    ],
+    "textOnly": {
+      "en": "Needs engine: saving-throw proficiency grants are not read by the saves yet (only the first class's list).",
+      "fr": "Moteur manquant : les maîtrises de jets de sauvegarde accordées ne sont pas encore lues par les sauvegardes (seule la liste de la première classe l’est).",
+      "es": "Requiere el motor: las competencias en tiradas de salvación otorgadas aún no las leen las salvaciones (solo la lista de la primera clase)."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 86,
+      "section": "Classes > Rogue Class Features > Level 15: Slippery Mind"
+    }
+  },
+  {
+    "id": "rogue:elusive",
+    "textOnly": {
+      "en": "No attack roll has Advantage against you unless you are Incapacitated: applied at the table.",
+      "fr": "Aucun jet d’attaque n’a l’Avantage contre vous sauf si vous êtes Neutralisé : appliqué à la table.",
+      "es": "Ninguna tirada de ataque tiene ventaja contra ti salvo si estás incapacitado: se aplica en la mesa."
+    },
+    "source": {
+      "page": 63,
+      "frPage": 86,
+      "section": "Classes > Rogue Class Features > Level 18: Elusive"
+    }
+  },
+  {
+    "id": "rogue:stroke-of-luck",
+    "uses": {
+      "count": 1,
+      "per": "short"
+    },
+    "source": {
+      "page": 63,
+      "frPage": 86,
+      "section": "Classes > Rogue Class Features > Level 20: Stroke of Luck"
+    }
+  },
+  {
+    "id": "rogue:thief:fast-hands",
+    "activation": [{ "kind": "bonus-action", "actions": ["utilize", "magic"] }],
+    "textOnly": {
+      "en": "Bonus Action: a Sleight of Hand check with Thieves' Tools or to pick a pocket, or the Utilize action / a magic item's Magic action. An action, no sheet number.",
+      "fr": "Action bonus : un test d’Escamotage avec des outils de voleur ou pour faire les poches, ou l’action Utiliser / l’action Magie d’un objet magique. Une action, aucun nombre de la feuille.",
+      "es": "Acción adicional: una prueba de Juego de manos con herramientas de ladrón o para robar un bolsillo, o la acción de utilizar / la acción de magia de un objeto mágico. Una acción, ningún número en la hoja."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 86,
+      "section": "Classes > Rogue Subclass: Thief > Level 3: Fast Hands"
+    }
+  },
+  {
+    "id": "rogue:thief:second-story-work",
+    "modifiers": [
+      {
+        "target": "speed.climb",
+        "value": "speed",
+        "effectName": "Second-Story Work"
+      }
+    ],
+    "textOnly": {
+      "en": "Jumper: jump distance from Dexterity instead of Strength (Long Jump = Dex score in feet, High Jump = 3 + Dex modifier): applied at the table.",
+      "fr": "Sauteur : distance de saut d’après la Dextérité au lieu de la Force (saut en longueur = valeur de Dex en pieds, saut en hauteur = 3 + modificateur de Dex) : appliqué à la table.",
+      "es": "Saltador: distancia de salto según la Destreza en lugar de la Fuerza (salto de longitud = puntuación de Destreza en pies, salto de altura = 3 + modificador por Destreza): se aplica en la mesa."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 86,
+      "section": "Classes > Rogue Subclass: Thief > Level 3: Second-Story Work"
+    }
+  },
+  {
+    "id": "rogue:thief:supreme-sneak",
+    "activation": [],
+    "textOnly": {
+      "en": "Stealth Attack (Cunning Strike, cost 1d6): the Hide action's Invisible condition doesn't end if you finish the turn behind Three-Quarters or Total Cover. Applied at the table.",
+      "fr": "Attaque furtive (Frappe rusée, coût 1d6) : l’état Invisible de l’action Se cacher ne prend pas fin si vous terminez le tour derrière un abri supérieur ou total. Appliqué à la table.",
+      "es": "Ataque sigiloso (Golpe astuto, coste 1d6): el estado de invisible de la acción de esconderse no termina si acabas el turno tras cobertura tres cuartos o completa. Se aplica en la mesa."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 86,
+      "section": "Classes > Rogue Subclass: Thief > Level 9: Supreme Sneak"
+    }
+  },
+  {
+    "id": "rogue:thief:use-magic-device",
+    "modifiers": [
+      {
+        "target": "attunement.max",
+        "value": 1,
+        "effectName": "Use Magic Device"
+      }
+    ],
+    "textOnly": {
+      "en": "Attunement to four items (attunement.max +1; needs engine: the Attunement check still counts three), a 6 on 1d6 saves a charge, any Spell Scroll with Intelligence (Arcana check DC 10 + spell level above level 1).",
+      "fr": "Harmonisation à quatre objets (attunement.max +1 ; moteur manquant : la vérification d’Harmonisation compte encore trois), un 6 sur 1d6 économise une charge, tout parchemin de sort avec l’Intelligence (test d’Arcanes DD 10 + niveau du sort au-delà du niveau 1).",
+      "es": "Sintonización con cuatro objetos (attunement.max +1; requiere el motor: la comprobación de sintonización sigue contando tres), un 6 en 1d6 ahorra una carga, cualquier pergamino de conjuro con la Inteligencia (prueba de Conocimiento arcano CD 10 + nivel del conjuro por encima de 1)."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 86,
+      "section": "Classes > Rogue Subclass: Thief > Level 13: Use Magic Device"
+    }
+  },
+  {
+    "id": "rogue:thief:thiefs-reflexes",
+    "textOnly": {
+      "en": "Two turns in the first round of a combat (Initiative, then Initiative − 10): applied at the table.",
+      "fr": "Deux tours au premier round d’un combat (Initiative, puis Initiative − 10) : appliqué à la table.",
+      "es": "Dos turnos en la primera ronda de un combate (iniciativa, luego iniciativa − 10): se aplica en la mesa."
+    },
+    "source": {
+      "page": 64,
+      "frPage": 86,
+      "section": "Classes > Rogue Subclass: Thief > Level 17: Thief’s Reflexes"
+    }
+  }
+]

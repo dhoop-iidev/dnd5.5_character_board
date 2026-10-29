@@ -1,0 +1,362 @@
+[
+  {
+    "id": "ammunition",
+    "name": {
+      "en": "Ammunition",
+      "fr": "Munitions",
+      "es": "Munición"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon’s range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.</p>",
+      "fr": "<p>Vous pouvez utiliser une arme dotée de la propriété Munitions pour effectuer une attaque à distance, à condition de disposer de ces munitions. Le type de munition nécessaire est indiqué avec la portée de l’arme. Chaque fois que vous attaquez avec cette arme, vous dépensez l’une de ces munitions. Saisir et charger un tel projectile fait partie de l’attaque (vous devez avoir une main libre pour charger une arme à une main). À l’issue d’un affrontement, vous pouvez consacrer 1 minute à récupérer la moitié de vos munitions utilisées pendant le combat (arrondir à l’inférieur) ; les autres sont perdues.</p>",
+      "es": "<p>Solo puedes realizar un ataque a distancia usando un arma con esta propiedad si tienes munición para ella. El tipo de munición necesaria se especifica junto con el alcance del arma. Cada ataque gasta una unidad de munición. Extraer la munición forma parte del ataque (necesitas una mano libre para cargar un arma de una mano). Tras un combate, puedes dedicar 1 minuto a recuperar la mitad de la munición (redondeada hacia abajo) que hayas usado en él.</p>"
+    },
+    "source": {
+      "page": 89,
+      "frPage": 96,
+      "section": "Ammunition",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "cleave",
+    "name": {
+      "en": "Cleave",
+      "fr": "Enchaînement",
+      "es": "Hender"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don’t add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.</p>",
+      "fr": "<p>Si vous touchez une créature avec un jet d’attaque de corps à corps avec cette arme, vous pouvez effectuer un jet d’attaque de corps à corps avec cette arme contre une deuxième créature située dans un rayon de 1,50 m de la première, et qui est elle aussi à votre portée. Si l’attaque touche, la deuxième créature subit les dégâts de l’arme, mais sans ajouter votre modificateur de caractéristique à ces dégâts, sauf si ce modificateur est négatif. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.</p>",
+      "es": "<p>Si aciertas a una criatura con una tirada de ataque cuerpo a cuerpo con esta arma, puedes hacer una tirada de ataque cuerpo a cuerpo con el arma contra una segunda criatura que se encuentre a 1,5 m o menos de la primera y que también esté a tu alcance. Si aciertas, la segunda criatura sufrirá el daño del arma, pero no sumarás tu modificador por característica a ese daño salvo que el modificador sea negativo. Solo puedes hacer este ataque extra una vez por turno.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Cleave",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "finesse",
+    "name": {
+      "en": "Finesse",
+      "fr": "Finesse",
+      "es": "Sutil"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.</p>",
+      "fr": "<p>Lorsque effectuez une attaque avec une arme dotée de la propriété Finesse, vous choisissez entre le modificateur de Force et le modificateur de Dextérité celui qui s’applique aux jets d’attaque et de dégâts. Vous devez utiliser le même modificateur pour les deux jets.</p>",
+      "es": "<p>Cuando ataques con un arma sutil, podrás elegir realizar las tiradas de ataque y de daño con el modificador por Fuerza o con el modificador por Destreza. Eso sí, deberás usar el mismo modificador para ambas tiradas.</p>"
+    },
+    "source": {
+      "page": 89,
+      "frPage": 95,
+      "section": "Finesse",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "graze",
+    "name": {
+      "en": "Graze",
+      "fr": "Écorchure",
+      "es": "Rozar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.</p>",
+      "fr": "<p>Si votre jet d’attaque avec cette arme rate une créature, vous pouvez lui infliger des dégâts égaux au modificateur de la caractéristique utilisée pour effectuer le jet d’attaque. Ces dégâts sont du même type que ceux infligés par l’arme, et ne peuvent être augmentés qu’en augmentant le modificateur de caractéristique.</p>",
+      "es": "<p>Si tu tirada de ataque con esta arma no acierta a una criatura, puedes causarle una cantidad de daño igual al modificador por característica que hayas usado para hacer la tirada de ataque. Este daño es del mismo tipo que inflija el arma y solo se puede incrementar si aumentas el modificador por característica.</p><table><caption>Armas</caption><thead><tr><th>Nombre</th><th>Daño</th><th>Propiedades</th><th>Maestría</th><th>Peso</th><th>Precio</th></tr></thead><tbody><tr class=\"section\"><th colspan=\"6\">Armas cuerpo a cuerpo sencillas</th></tr><tr><td>Bastón</td><td>1d6 contundente</td><td>Versátil (1d8)</td><td>Derribar</td><td>2 kg</td><td>2 pp</td></tr><tr><td>Daga</td><td>1d4 perforante</td><td>Arrojadiza (alcance 6/18), ligera, sutil</td><td>Mellar</td><td>0,5 kg</td><td>2 po</td></tr><tr><td>Garrote</td><td>1d4 contundente</td><td>Ligero</td><td>Ralentizar</td><td>1 kg</td><td>1 pp</td></tr><tr><td>Garrote grande</td><td>1d8 contundente</td><td>A dos manos</td><td>Empujar</td><td>5 kg</td><td>2 pp</td></tr><tr><td>Hacha de mano</td><td>1d6 cortante</td><td>Arrojadiza (alcance 6/18), ligera</td><td>Molestar</td><td>1 kg</td><td>5 po</td></tr><tr><td>Hoz</td><td>1d4 cortante</td><td>Ligera</td><td>Mellar</td><td>1 kg</td><td>1 po</td></tr><tr><td>Jabalina</td><td>1d6 perforante</td><td>Arrojadiza (alcance 9/36)</td><td>Ralentizar</td><td>1 kg</td><td>5 pp</td></tr><tr><td>Lanza</td><td>1d6 perforante</td><td>Arrojadiza (alcance 6/18), versátil (1d8)</td><td>Debilitar</td><td>1,5 kg</td><td>1 po</td></tr><tr><td>Martillo ligero</td><td>1d4 contundente</td><td>Arrojadizo (alcance 6/18), ligero</td><td>Mellar</td><td>1 kg</td><td>2 po</td></tr><tr><td>Maza</td><td>1d6 contundente</td><td>—</td><td>Debilitar</td><td>2 kg</td><td>5 po</td></tr><tr class=\"section\"><th colspan=\"6\">Armas a distancia sencillas</th></tr><tr><td>Arco corto</td><td>1d6 perforante</td><td>A dos manos, munición (alcance 24/96; flecha)</td><td>Molestar</td><td>1 kg</td><td>25 po</td></tr><tr><td>Ballesta ligera</td><td>1d8 perforante</td><td>A dos manos, munición (alcance 24/96; virote), recarga</td><td>Ralentizar</td><td>2,5 kg</td><td>25 po</td></tr><tr><td>Dardo</td><td>1d4 perforante</td><td>Arrojadizo (alcance 6/18), sutil</td><td>Molestar</td><td>125 g</td><td>5 pc</td></tr><tr><td>Honda</td><td>1d4 contundente</td><td>Munición (alcance 9/36; proyectil)</td><td>Ralentizar</td><td>—</td><td>1 pp</td></tr><tr class=\"section\"><th colspan=\"6\">Armas cuerpo a cuerpo marciales</th></tr><tr><td>Alabarda</td><td>1d10 cortante</td><td>A dos manos, gran alcance, pesada</td><td>Hender</td><td>3 kg</td><td>20 po</td></tr><tr><td>Cimitarra</td><td>1d6 cortante</td><td>Ligera, sutil</td><td>Mellar</td><td>1,5 kg</td><td>25 po</td></tr><tr><td>Espada corta</td><td>1d6 perforante</td><td>Ligera, sutil</td><td>Molestar</td><td>1 kg</td><td>10 po</td></tr><tr><td>Espada larga</td><td>1d8 cortante</td><td>Versátil (1d10)</td><td>Debilitar</td><td>1,5 kg</td><td>15 po</td></tr><tr><td>Espadón</td><td>2d6 cortante</td><td>A dos manos, pesado</td><td>Rozar</td><td>3 kg</td><td>50 po</td></tr><tr><td>Estoque</td><td>1d8 perforante</td><td>Sutil</td><td>Molestar</td><td>1 kg</td><td>25 po</td></tr><tr><td>Guja</td><td>1d10 cortante</td><td>A dos manos, gran alcance, pesada</td><td>Rozar</td><td>3 kg</td><td>20 po</td></tr><tr><td>Hacha a dos manos</td><td>1d12 cortante</td><td>A dos manos, pesada</td><td>Hender</td><td>3,5 kg</td><td>30 po</td></tr><tr><td>Hacha de guerra</td><td>1d8 cortante</td><td>Versátil (1d10)</td><td>Derribar</td><td>2 kg</td><td>10 po</td></tr><tr><td>Lanza de caballería</td><td>1d10 perforante</td><td>A dos manos (salvo montado), gran alcance, pesada</td><td>Derribar</td><td>3 kg</td><td>10 po</td></tr><tr><td>Látigo</td><td>1d4 cortante</td><td>Gran alcance, sutil</td><td>Ralentizar</td><td>1,5 kg</td><td>2 po</td></tr><tr><td>Lucero del alba</td><td>1d8 perforante</td><td>—</td><td>Debilitar</td><td>2 kg</td><td>15 po</td></tr><tr><td>Mangual</td><td>1d8 contundente</td><td>—</td><td>Debilitar</td><td>1 kg</td><td>10 po</td></tr><tr><td>Martillo de guerra</td><td>1d8 contundente</td><td>Versátil (1d10)</td><td>Empujar</td><td>2,5 kg</td><td>15 po</td></tr><tr><td>Maza a dos manos</td><td>2d6 contundente</td><td>A dos manos, pesada</td><td>Derribar</td><td>5 kg</td><td>10 po</td></tr><tr><td>Pica</td><td>1d10 perforante</td><td>A dos manos, gran alcance, pesada</td><td>Empujar</td><td>9 kg</td><td>5 po</td></tr><tr><td>Pico de guerra</td><td>1d8 perforante</td><td>Versátil (1d10)</td><td>Debilitar</td><td>1 kg</td><td>5 po</td></tr><tr><td>Tridente</td><td>1d8 perforante</td><td>Arrojadizo (alcance 6/18), versátil (1d10)</td><td>Derribar</td><td>2 kg</td><td>5 po</td></tr><tr class=\"section\"><th colspan=\"6\">Armas a distancia marciales</th></tr><tr><td>Arco largo</td><td>1d8 perforante</td><td>A dos manos, munición (alcance 45/180; flecha), pesado</td><td>Ralentizar</td><td>1 kg</td><td>50 po</td></tr><tr><td>Ballesta de mano</td><td>1d6 perforante</td><td>Ligera, munición (alcance 9/36; virote), recarga</td><td>Molestar</td><td>1,5 kg</td><td>75 po</td></tr><tr><td>Ballesta pesada</td><td>1d10 perforante</td><td>A dos manos, munición (alcance 30/120; virote), pesada, recarga</td><td>Empujar</td><td>9 kg</td><td>50 po</td></tr><tr><td>Cerbatana</td><td>1 perforante</td><td>Munición (alcance 7,5/30; dardo), recarga</td><td>Molestar</td><td>0,5 kg</td><td>10 po</td></tr><tr><td>Mosquete</td><td>1d12 perforante</td><td>A dos manos, munición (alcance 12/36; bala), recarga</td><td>Ralentizar</td><td>5 kg</td><td>500 po</td></tr><tr><td>Pistola</td><td>1d10 perforante</td><td>Munición (alcance 9/27; bala), recarga</td><td>Molestar</td><td>1,5 kg</td><td>250 po</td></tr></tbody></table>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Graze",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "heavy",
+    "name": {
+      "en": "Heavy",
+      "fr": "Lourde",
+      "es": "Pesada"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>You have Disadvantage on attack rolls with a Heavy weapon if it’s a Melee weapon and your Strength score isn’t at least 13 or if it’s a Ranged weapon and your Dexterity score isn’t at least 13.</p>",
+      "fr": "<p>Vous subissez le Désavantage aux jets d’attaque avec une arme Lourde s’il s’agit d’une arme de corps à corps et que votre valeur de Force est inférieure à 13, ou s’il s’agit d’une arme à distance et que votre valeur de Dextérité est inférieure à 13.</p>",
+      "es": "<p>Tendrás desventaja en las tiradas de ataque con un arma pesada si es un arma cuerpo a cuerpo y tu puntuación de Fuerza no llega a 13 o si es un arma a distancia y tu puntuación de Destreza no llega a 13.</p>"
+    },
+    "source": {
+      "page": 89,
+      "frPage": 96,
+      "section": "Heavy",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "light",
+    "name": {
+      "en": "Light",
+      "fr": "Légère",
+      "es": "Ligera"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don’t add your ability modifier to the extra attack’s damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don’t add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.</p>",
+      "fr": "<p>Lorsque vous effectuez l’action Attaque à votre tour et attaquez avec une arme Légère, vous pouvez effectuer une attaque supplémentaire par une action Bonus plus tard au cours de ce même tour. Cette attaque supplémentaire doit être effectuée avec une arme Légère différente et vous n’ajoutez pas votre modificateur de caractéristique aux dégâts de l’attaque supplémentaire, sauf si ce modificateur est négatif. Vous pouvez par exemple attaquer avec une épée courte dans une main et une dague dans l’autre en utilisant l’action Attaque et une action Bonus, mais vous n’ajoutez votre modificateur de Force ou de Dextérité au jet de dégâts de l’action Bonus que si ce modificateur est négatif.</p>",
+      "es": "<p>Cuando lleves a cabo la acción de atacar en tu turno y ataques con un arma ligera, podrás hacer un ataque extra como acción adicional más adelante en el mismo turno. Ese ataque extra debe hacerse con otra arma ligera y no sumarás tu modificador por característica al daño del ataque extra salvo que el modificador sea negativo. Por ejemplo, puedes atacar con una espada corta en una mano y una daga en la otra usando la acción de atacar y una acción adicional, pero no sumarás tu modificador por</p><p>Fuerza o Destreza a la tirada de daño de la acción adicional salvo que el modificador sea negativo.</p>"
+    },
+    "source": {
+      "page": 89,
+      "frPage": 95,
+      "section": "Light",
+      "esPage": 97
+    }
+  },
+  {
+    "id": "loading",
+    "name": {
+      "en": "Loading",
+      "fr": "Chargement",
+      "es": "Recarga"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.</p>",
+      "fr": "<p>Vous ne pouvez tirer qu’un seul projectile lorsque vous consacrez une action, une action Bonus ou une Réaction à attaquer avec une arme dotée de la propriété Chargement, quel que soit le nombre d’attaques que vous pourriez normalement effectuer.</p>",
+      "es": "<p>Cuando utilices una acción, una acción adicional o una reacción para atacar con un arma con recarga, solo podrás disparar una unidad de munición, incluso aunque normalmente pudieras hacer más de un ataque.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 95,
+      "section": "Loading",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "nick",
+    "name": {
+      "en": "Nick",
+      "fr": "Coup double",
+      "es": "Mellar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.</p>",
+      "fr": "<p>Lorsque vous effectuez l’attaque supplémentaire de la propriété Légère de l’arme, vous pouvez l’effectuer dans le cadre de l’action Attaque au lieu de devoir y consacrer votre action Bonus. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.</p>",
+      "es": "<p>Cuando hagas el ataque extra de la propiedad “ligera”, puedes hacerlo como parte de la acción de atacar en vez de como acción adicional. Solo puedes hacer este ataque extra una vez por turno.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Nick",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "push",
+    "name": {
+      "en": "Push",
+      "fr": "Poussée",
+      "es": "Empujar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.</p>",
+      "fr": "<p>Si vous touchez une créature avec cette arme, vous pouvez la repousser d’un maximum de 3 m en ligne droite pour peu qu’elle soit de taille G ou inférieure.</p>",
+      "es": "<p>Si aciertas a una criatura con esta arma, puedes empujarla hasta 3 m respecto a ti en línea recta si es Grande o más pequeña.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Push",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "range",
+    "name": {
+      "en": "Range",
+      "fr": "Portée",
+      "es": "Alcance"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second is the weapon’s long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can’t attack a target beyond the long range.</p>",
+      "fr": "<p>La portée d’une arme à distance figure entre parenthèses après la propriété Munitions ou Lancer. Cette portée se compose de deux nombres. Le premier correspond à la portée normale exprimée en mètres, le second à la portée longue. Lorsque vous attaquez une cible située au-delà de la portée normale, vous subissez le Désavantage au jet d’attaque. Vous ne pouvez pas attaquer une cible hors de portée longue.</p>",
+      "es": "<p>El alcance de un arma a distancia aparece entre paréntesis después de las propiedades “arrojadiza” o “munición”. El alcance muestra dos números: el primero es el alcance normal y el segundo es el alcance largo, ambos indicados en metros. Cuando ataques a un objetivo que esté más allá del alcance normal, tendrás desventaja en la tirada de ataque, y no podrás atacar a un objetivo que esté más allá del alcance largo.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Range",
+      "esPage": 97
+    }
+  },
+  {
+    "id": "reach",
+    "name": {
+      "en": "Reach",
+      "fr": "Allonge",
+      "es": "Gran alcance"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.</p>",
+      "fr": "<p>Une arme avec la propriété Allonge ajoute 1,50 m à votre allonge lorsque vous attaquez avec elle, ainsi qu’à l’allonge de vos attaques d’Opportunité.</p>",
+      "es": "<p>Cuando empleas un arma con esta propiedad, tu alcance aumenta en 1,5 m tanto al atacar como a efectos de determinar tu alcance en los ataques de oportunidad que hagas con ella.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 95,
+      "section": "Reach",
+      "esPage": 97
+    }
+  },
+  {
+    "id": "sap",
+    "name": {
+      "en": "Sap",
+      "fr": "Sape",
+      "es": "Debilitar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.</p>",
+      "fr": "<p>Si vous touchez une créature avec cette arme, cette créature subit le Désavantage à son prochain jet d’attaque avant le début de votre tour suivant.</p><table><caption>Armes</caption><thead><tr><th>Nom</th><th>Dégâts</th><th>Propriétés</th><th>Botte d’arme</th><th>Poids</th><th>Prix</th></tr></thead><tbody><tr class=\"section\"><th colspan=\"6\">Armes courantes de corps à corps</th></tr><tr><td>Bâton de combat</td><td>1d6 contondants</td><td>Polyvalente (1d8)</td><td>Renversement</td><td>2 kg</td><td>2 pa</td></tr><tr><td>Dague</td><td>1d4 perforants</td><td>Finesse, Lancer (portée 6/18), Légère</td><td>Coup double</td><td>0,5 kg</td><td>2 po</td></tr><tr><td>Gourdin</td><td>1d4 contondants</td><td>Légère</td><td>Ralentissement</td><td>1 kg</td><td>1 pa</td></tr><tr><td>Hachette</td><td>1d6 tranchants</td><td>Lancer (portée 6/18), Légère</td><td>Ouverture</td><td>1 kg</td><td>5 po</td></tr><tr><td>Javeline</td><td>1d6 perforants</td><td>Lancer (portée 9/36)</td><td>Ralentissement</td><td>1 kg</td><td>5 pa</td></tr><tr><td>Lance</td><td>1d6 perforants</td><td>Lancer (portée 6/18), Polyvalente (1d8)</td><td>Sape</td><td>1,5 kg</td><td>1 po</td></tr><tr><td>Marteau léger</td><td>1d4 contondants</td><td>Lancer (portée 6/18), Légère</td><td>Coup double</td><td>1 kg</td><td>2 po</td></tr><tr><td>Masse d’armes</td><td>1d6 contondants</td><td>—</td><td>Sape</td><td>2 kg</td><td>5 po</td></tr><tr><td>Massue</td><td>1d8 contondants</td><td>Deux mains</td><td>Poussée</td><td>5 kg</td><td>2 pa</td></tr><tr><td>Serpe</td><td>1d4 tranchants</td><td>Légère</td><td>Coup double</td><td>1 kg</td><td>1 po</td></tr><tr class=\"section\"><th colspan=\"6\">Armes courantes à distance</th></tr><tr><td>Arbalète légère</td><td>1d8 perforants</td><td>Chargement, Deux mains, Munitions (portée 24/96 ; carreaux)</td><td>Ralentissement</td><td>2,5 kg</td><td>25 po</td></tr><tr><td>Arc court</td><td>1d6 perforants</td><td>Deux mains, Munitions (portée 24/96 ; flèches)</td><td>Ouverture</td><td>1 kg</td><td>25 po</td></tr><tr><td>Fléchette</td><td>1d4 perforants</td><td>Finesse, Lancer (portée 6/18)</td><td>Ouverture</td><td>125 g</td><td>5 pc</td></tr><tr><td>Fronde</td><td>1d4 contondants</td><td>Munitions (portée 9/36 ; billes)</td><td>Ralentissement</td><td>—</td><td>1 pa</td></tr><tr class=\"section\"><th colspan=\"6\">Armes de guerre de corps à corps</th></tr><tr><td>Cimeterre</td><td>1d6 tranchants</td><td>Finesse, Légère</td><td>Coup double</td><td>1,5 kg</td><td>25 po</td></tr><tr><td>Coutille</td><td>1d10 tranchants</td><td>Allonge, Deux mains, Lourde</td><td>Écorchure</td><td>3 kg</td><td>20 po</td></tr><tr><td>Épée à deux mains</td><td>2d6 tranchants</td><td>Deux mains, Lourde</td><td>Écorchure</td><td>3 kg</td><td>50 po</td></tr><tr><td>Épée courte</td><td>1d6 perforants</td><td>Finesse, Légère</td><td>Ouverture</td><td>1 kg</td><td>10 po</td></tr><tr><td>Épée longue</td><td>1d8 tranchants</td><td>Polyvalente (1d10)</td><td>Sape</td><td>1,5 kg</td><td>15 po</td></tr><tr><td>Fléau d’armes</td><td>1d8 contondants</td><td>—</td><td>Sape</td><td>1 kg</td><td>10 po</td></tr><tr><td>Fouet</td><td>1d4 tranchants</td><td>Allonge, Finesse</td><td>Ralentissement</td><td>1,5 kg</td><td>2 po</td></tr><tr><td>Hache à deux mains</td><td>1d12 tranchants</td><td>Deux mains, Lourde</td><td>Enchaînement</td><td>3,5 kg</td><td>30 po</td></tr><tr><td>Hache d’armes</td><td>1d8 tranchants</td><td>Polyvalente (1d10)</td><td>Renversement</td><td>2 kg</td><td>10 po</td></tr><tr><td>Hallebarde</td><td>1d10 tranchants</td><td>Allonge, Deux mains, Lourde</td><td>Enchaînement</td><td>3 kg</td><td>20 po</td></tr><tr><td>Lance d’arçon</td><td>1d10 perforants</td><td>Allonge, Deux mains (sauf à cheval), Lourde</td><td>Renversement</td><td>3 kg</td><td>10 po</td></tr><tr><td>Maillet d’armes</td><td>2d6 contondants</td><td>Deux mains, Lourde</td><td>Renversement</td><td>5 kg</td><td>10 po</td></tr><tr><td>Marteau de guerre</td><td>1d8 contondants</td><td>Polyvalente (1d10)</td><td>Poussée</td><td>2,5 kg</td><td>15 po</td></tr><tr><td>Morgenstern</td><td>1d8 perforants</td><td>—</td><td>Sape</td><td>2 kg</td><td>15 po</td></tr><tr><td>Pic de guerre</td><td>1d8 perforants</td><td>Polyvalente (1d10)</td><td>Sape</td><td>1 kg</td><td>5 po</td></tr><tr><td>Pique</td><td>1d10 perforants</td><td>Allonge, Deux mains, Lourde</td><td>Poussée</td><td>9 kg</td><td>5 po</td></tr><tr><td>Rapière</td><td>1d8 perforants</td><td>Finesse</td><td>Ouverture</td><td>1 kg</td><td>25 po</td></tr><tr><td>Trident</td><td>1d8 perforants</td><td>Lancer (portée 6/18), Polyvalente (1d10)</td><td>Renversement</td><td>2 kg</td><td>5 po</td></tr><tr class=\"section\"><th colspan=\"6\">Armes de guerre à distance</th></tr><tr><td>Arbalète de poing</td><td>1d6 perforants</td><td>Chargement, Légère, Munitions (portée 9/36 ; carreaux)</td><td>Ouverture</td><td>1,5 kg</td><td>75 po</td></tr><tr><td>Arbalète lourde</td><td>1d10 perforants</td><td>Chargement, Deux mains, Lourde, Munitions (portée 30/120 ; carreaux)</td><td>Poussée</td><td>9 kg</td><td>50 po</td></tr><tr><td>Arc long</td><td>1d8 perforants</td><td>Deux mains, Lourde, Munitions (portée 45/180 ; flèches)</td><td>Ralentissement</td><td>1 kg</td><td>50 po</td></tr><tr><td>Mousquet</td><td>1d12 perforants</td><td>Chargement, Deux mains, Munitions (portée 12/36 ; balles)</td><td>Ralentissement</td><td>5 kg</td><td>500 po</td></tr><tr><td>Pistolet</td><td>1d10 perforants</td><td>Chargement, Munitions (portée 9/27 ; balles)</td><td>Ouverture</td><td>1,5 kg</td><td>250 po</td></tr><tr><td>Sarbacane</td><td>1 perforant</td><td>Chargement, Munitions (portée 7,50/30 ; dards)</td><td>Ouverture</td><td>0,5 kg</td><td>10 po</td></tr></tbody></table>",
+      "es": "<p>Si aciertas a una criatura con esta arma, tendrá desventaja en su próxima tirada de ataque antes del principio de tu siguiente turno.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Sap",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "slow",
+    "name": {
+      "en": "Slow",
+      "fr": "Ralentissement",
+      "es": "Ralentizar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.</p>",
+      "fr": "<p>Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous pouvez réduire sa Vitesse de 3 m jusqu’au début de votre tour suivant. Si la créature est touchée plus d’une fois par des armes dotées de cette propriété, la réduction de sa Vitesse n’excède pas 3 m.</p>",
+      "es": "<p>Si aciertas a una criatura con esta arma y le causas daño, puedes reducir su velocidad en 3 m hasta el principio de tu siguiente turno. Si la criatura sufre más de un ataque con armas que tengan esta propiedad, la reducción de su velocidad no superará los 3 m.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Slow",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "thrown",
+    "name": {
+      "en": "Thrown",
+      "fr": "Lancer",
+      "es": "Arrojadiza"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.</p>",
+      "fr": "<p>Quand une arme est dotée de la propriété Lancer, vous pouvez la lancer pour effectuer une attaque à distance, et la dégainer dans le cadre de l’attaque. S’il s’agit d’une arme de corps à corps, utilisez le même modificateur de caractéristique que pour les jets d’attaque et de dégâts de vos attaques de corps à corps avec cette arme.</p>",
+      "es": "<p>Si un arma tiene esta propiedad, puedes lanzarla para realizar un ataque a distancia y puedes desenvainar esa arma como parte del ataque. Si se trata de un arma cuerpo a cuerpo, las tiradas de ataque y de daño usan el mismo modificador por característica que usas para hacer ataques cuerpo a cuerpo con esa arma.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 95,
+      "section": "Thrown",
+      "esPage": 97
+    }
+  },
+  {
+    "id": "topple",
+    "name": {
+      "en": "Topple",
+      "fr": "Renversement",
+      "es": "Derribar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.</p>",
+      "fr": "<p>Si vous touchez une créature avec cette arme, vous pouvez la contraindre à effectuer un jet de sauvegarde de Constitution (DD égal à 8 + le modificateur de caractéristique utilisé pour le jet d’attaque + votre bonus de maîtrise). En cas d’échec, la créature subit l’état À terre.</p>",
+      "es": "<p>Si aciertas a una criatura con esta arma, puedes obligarla a hacer una tirada de salvación de Constitución (CD 8 más el modificador por característica usado en la tirada de ataque y tu bonificador por competencia). Si la falla, tendrá el estado de derribada.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Topple",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "two-handed",
+    "name": {
+      "en": "Two-Handed",
+      "fr": "Deux mains",
+      "es": "A dos manos"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>A Two-Handed weapon requires two hands when you attack with it.</p>",
+      "fr": "<p>Une arme à Deux mains requiert vos deux mains lorsque vous l’utilisez pour attaquer.</p>",
+      "es": "<p>Estas armas requieren el uso de las dos manos.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 95,
+      "section": "Two-Handed",
+      "esPage": 97
+    }
+  },
+  {
+    "id": "versatile",
+    "name": {
+      "en": "Versatile",
+      "fr": "Polyvalente",
+      "es": "Versátil"
+    },
+    "kind": "property",
+    "text": {
+      "en": "<p>A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack.</p>",
+      "fr": "<p>Une arme dite Polyvalente peut s’utiliser à une ou deux mains. Une valeur de dégâts apparaît entre parenthèses avec la propriété. L’arme inflige ces dégâts lorsqu’elle est utilisée à deux mains pour effectuer une attaque de corps à corps.</p>",
+      "es": "<p>Estas armas pueden utilizarse con una o dos manos. Tras esta propiedad aparece entre paréntesis un valor de daño. El arma causa ese daño cuando se usa a dos manos para hacer un ataque cuerpo a cuerpo.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Versatile",
+      "esPage": 98
+    }
+  },
+  {
+    "id": "vex",
+    "name": {
+      "en": "Vex",
+      "fr": "Ouverture",
+      "es": "Molestar"
+    },
+    "kind": "mastery",
+    "text": {
+      "en": "<p>If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.</p><table><caption>Weapons</caption><thead><tr><th>Name</th><th>Damage</th><th>Properties</th><th>Mastery</th><th>Weight</th><th>Cost</th></tr></thead><tbody><tr class=\"section\"><th colspan=\"6\">Simple Melee Weapons</th></tr><tr><td>Club</td><td>1d4 Bludgeoning</td><td>Light</td><td>Slow</td><td>2 lb.</td><td>1 SP</td></tr><tr><td>Dagger</td><td>1d4 Piercing</td><td>Finesse, Light, Thrown (Range 20/60)</td><td>Nick</td><td>1 lb.</td><td>2 GP</td></tr><tr><td>Greatclub</td><td>1d8 Bludgeoning</td><td>Two-Handed</td><td>Push</td><td>10 lb.</td><td>2 SP</td></tr><tr><td>Handaxe</td><td>1d6 Slashing</td><td>Light, Thrown (Range 20/60)</td><td>Vex</td><td>2 lb.</td><td>5 GP</td></tr><tr><td>Javelin</td><td>1d6 Piercing</td><td>Thrown (Range 30/120)</td><td>Slow</td><td>2 lb.</td><td>5 SP</td></tr><tr><td>Light Hammer</td><td>1d4 Bludgeoning</td><td>Light, Thrown (Range 20/60)</td><td>Nick</td><td>2 lb.</td><td>2 GP</td></tr><tr><td>Mace</td><td>1d6 Bludgeoning</td><td>—</td><td>Sap</td><td>4 lb.</td><td>5 GP</td></tr><tr><td>Quarterstaff</td><td>1d6 Bludgeoning</td><td>Versatile (1d8)</td><td>Topple</td><td>4 lb.</td><td>2 SP</td></tr><tr><td>Sickle</td><td>1d4 Slashing</td><td>Light</td><td>Nick</td><td>2 lb.</td><td>1 GP</td></tr><tr><td>Spear</td><td>1d6 Piercing</td><td>Thrown (Range 20/60), Versatile (1d8)</td><td>Sap</td><td>3 lb.</td><td>1 GP</td></tr><tr class=\"section\"><th colspan=\"6\">Simple Ranged Weapons</th></tr><tr><td>Dart</td><td>1d4 Piercing</td><td>Finesse, Thrown (Range 20/60)</td><td>Vex</td><td>1/4 lb.</td><td>5 CP</td></tr><tr><td>Light Crossbow</td><td>1d8 Piercing</td><td>Ammunition (Range 80/320; Bolt), Loading, Two-Handed</td><td>Slow</td><td>5 lb.</td><td>25 GP</td></tr><tr><td>Shortbow</td><td>1d6 Piercing</td><td>Ammunition (Range 80/320; Arrow), Two-Handed</td><td>Vex</td><td>2 lb.</td><td>25 GP</td></tr><tr><td>Sling</td><td>1d4 Bludgeoning</td><td>Ammunition (Range 30/120; Bullet)</td><td>Slow</td><td>—</td><td>1 SP</td></tr><tr class=\"section\"><th colspan=\"6\">Martial Melee Weapons</th></tr><tr><td>Battleaxe</td><td>1d8 Slashing</td><td>Versatile (1d10)</td><td>Topple</td><td>4 lb.</td><td>10 GP</td></tr><tr><td>Flail</td><td>1d8 Bludgeoning</td><td>—</td><td>Sap</td><td>2 lb.</td><td>10 GP</td></tr><tr><td>Glaive</td><td>1d10 Slashing</td><td>Heavy, Reach, Two-Handed</td><td>Graze</td><td>6 lb.</td><td>20 GP</td></tr><tr><td>Greataxe</td><td>1d12 Slashing</td><td>Heavy, Two-Handed</td><td>Cleave</td><td>7 lb.</td><td>30 GP</td></tr><tr><td>Greatsword</td><td>2d6 Slashing</td><td>Heavy, Two-Handed</td><td>Graze</td><td>6 lb.</td><td>50 GP</td></tr><tr><td>Halberd</td><td>1d10 Slashing</td><td>Heavy, Reach, Two-Handed</td><td>Cleave</td><td>6 lb.</td><td>20 GP</td></tr><tr><td>Lance</td><td>1d10 Piercing</td><td>Heavy, Reach, Two-Handed (unless mounted)</td><td>Topple</td><td>6 lb.</td><td>10 GP</td></tr><tr><td>Longsword</td><td>1d8 Slashing</td><td>Versatile (1d10)</td><td>Sap</td><td>3 lb.</td><td>15 GP</td></tr><tr><td>Maul</td><td>2d6 Bludgeoning</td><td>Heavy, Two-Handed</td><td>Topple</td><td>10 lb.</td><td>10 GP</td></tr><tr><td>Morningstar</td><td>1d8 Piercing</td><td>—</td><td>Sap</td><td>4 lb.</td><td>15 GP</td></tr><tr><td>Pike</td><td>1d10 Piercing</td><td>Heavy, Reach, Two-Handed</td><td>Push</td><td>18 lb.</td><td>5 GP</td></tr><tr><td>Rapier</td><td>1d8 Piercing</td><td>Finesse</td><td>Vex</td><td>2 lb.</td><td>25 GP</td></tr><tr><td>Scimitar</td><td>1d6 Slashing</td><td>Finesse, Light</td><td>Nick</td><td>3 lb.</td><td>25 GP</td></tr><tr><td>Shortsword</td><td>1d6 Piercing</td><td>Finesse, Light</td><td>Vex</td><td>2 lb.</td><td>10 GP</td></tr><tr><td>Trident</td><td>1d8 Piercing</td><td>Thrown (Range 20/60), Versatile (1d10)</td><td>Topple</td><td>4 lb.</td><td>5 GP</td></tr><tr><td>Warhammer</td><td>1d8 Bludgeoning</td><td>Versatile (1d10)</td><td>Push</td><td>5 lb.</td><td>15 GP</td></tr><tr><td>War Pick</td><td>1d8 Piercing</td><td>Versatile (1d10)</td><td>Sap</td><td>2 lb.</td><td>5 GP</td></tr><tr><td>Whip</td><td>1d4 Slashing</td><td>Finesse, Reach</td><td>Slow</td><td>3 lb.</td><td>2 GP</td></tr><tr class=\"section\"><th colspan=\"6\">Martial Ranged Weapons</th></tr><tr><td>Blowgun</td><td>1 Piercing</td><td>Ammunition (Range 25/100; Needle), Loading</td><td>Vex</td><td>1 lb.</td><td>10 GP</td></tr><tr><td>Hand Crossbow</td><td>1d6 Piercing</td><td>Ammunition (Range 30/120; Bolt), Light, Loading</td><td>Vex</td><td>3 lb.</td><td>75 GP</td></tr><tr><td>Heavy Crossbow</td><td>1d10 Piercing</td><td>Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed</td><td>Push</td><td>18 lb.</td><td>50 GP</td></tr><tr><td>Longbow</td><td>1d8 Piercing</td><td>Ammunition (Range 150/600; Arrow), Heavy, Two-Handed</td><td>Slow</td><td>2 lb.</td><td>50 GP</td></tr><tr><td>Musket</td><td>1d12 Piercing</td><td>Ammunition (Range 40/120; Bullet), Loading, Two-Handed</td><td>Slow</td><td>10 lb.</td><td>500 GP</td></tr><tr><td>Pistol</td><td>1d10 Piercing</td><td>Ammunition (Range 30/90; Bullet), Loading</td><td>Vex</td><td>3 lb.</td><td>250 GP</td></tr></tbody></table>",
+      "fr": "<p>Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous avez l’Avantage à votre prochain jet d’attaque contre cette créature avant la fin de votre tour suivant.</p>",
+      "es": "<p>Si aciertas a una criatura con esta arma y le causas daño, tendrás ventaja en tu siguiente tirada de ataque contra esa criatura antes del final de tu siguiente turno.</p>"
+    },
+    "source": {
+      "page": 90,
+      "frPage": 96,
+      "section": "Vex",
+      "esPage": 98
+    }
+  }
+]

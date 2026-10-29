@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Baldrek Marteau-Sombre",
+    "player": "",
+    "alignment": "Lawful Neutral",
+    "background": "A dwarf who ran contraband through the under-roads before a mercenary company gave him a cleaner trade. He keeps his old contacts and his old tools.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Dwarvish"],
+    "height": { "m": 1.35 },
+    "weight": { "kg": 78 },
+    "age": "112"
+  },
+  "speciesId": "dwarf",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "criminal",
+    "abilities": { "con": 2, "dex": 1 },
+    "feat": { "featId": "alert" }
+  },
+  "baseAbilities": { "str": 15, "dex": 13, "con": 14, "int": 10, "wis": 12, "cha": 8 },
+  "levels": [
+    {
+      "classId": "fighter",
+      "hpRoll": 10,
+      "hpFixed": false,
+      "choices": { "fighter:fighting-style": "great-weapon-fighting" }
+    },
+    { "classId": "fighter", "hpRoll": 6, "hpFixed": true, "choices": {} },
+    { "classId": "fighter", "subclassId": "fighter:champion", "hpRoll": 6, "hpFixed": true, "choices": {} },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "str": 2 } }
+    },
+    { "classId": "fighter", "hpRoll": 6, "hpFixed": true, "choices": {} },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "str": 2 } }
+    },
+    { "classId": "fighter", "hpRoll": 6, "hpFixed": true, "choices": {} },
+    {
+      "classId": "fighter",
+      "hpRoll": 6,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "str": 1, "wis": 1 } }
+    },
+    { "classId": "fighter", "hpRoll": 6, "hpFixed": true, "choices": {} },
+    { "classId": "fighter", "hpRoll": 6, "hpFixed": true, "choices": {} }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["athletics", "perception"],
+  "toolProficiencies": ["Thieves’ Tools"],
+  "expertise": [],
+  "weaponMastery": ["greatsword", "flail", "javelin", "longsword", "handaxe"],
+  "inventory": [
+    { "uid": "arm1", "kind": "armor", "refId": "chain-mail", "quantity": 1, "location": "worn" },
+    { "uid": "wpn1", "kind": "weapon", "refId": "greatsword", "quantity": 1, "location": "worn", "equipped": true },
+    { "uid": "wpn2", "kind": "weapon", "refId": "flail", "quantity": 1, "location": "worn" },
+    { "uid": "wpn3", "kind": "weapon", "refId": "javelin", "quantity": 8, "location": "worn" },
+    { "uid": "gear1", "kind": "gear", "refId": "dungeoneers-pack", "quantity": 1, "location": "carried" },
+    { "uid": "gear2", "kind": "gear", "refId": "thieves-tools", "quantity": 1, "location": "carried" }
+  ],
+  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 4, "pp": 0 },
+  "spellcasting": {},
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": { "current": 104, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": { "known": [] },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": { "lang": "fr" },
+  "featureChoices": {},
+  "extraFeats": {
+    "fighter:champion:additional-fighting-style": { "featId": "defense" }
+  }
+}

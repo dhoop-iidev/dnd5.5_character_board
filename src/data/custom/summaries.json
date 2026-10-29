@@ -1,0 +1,1837 @@
+{
+  "species:dragonborn": {
+    "en": "Medium, Speed 30 ft: draconic ancestry, Breath Weapon, damage Resistance, Darkvision, flight at level 5.",
+    "fr": "Taille M, Vitesse 9 m : ascendance draconique, souffle, Résistance aux dégâts, vision dans le noir, vol au niveau 5.",
+    "es": "Mediano, velocidad 9 m: linaje dracónico, Ataque de aliento, resistencia, visión en la oscuridad, vuelo a nivel 5."
+  },
+  "species:dwarf": {
+    "en": "Medium, Speed 30 ft: Darkvision 120 ft, Poison Resistance, +1 HP per level, Tremorsense on stone.",
+    "fr": "Taille M, Vitesse 9 m : vision dans le noir 36 m, Résistance au poison, +1 pv par niveau, perception des vibrations.",
+    "es": "Mediano, velocidad 9 m: visión en la oscuridad 36 m, resistencia al veneno, +1 pg por nivel, sentir vibraciones."
+  },
+  "species:elf": {
+    "en": "Medium, Speed 30 ft: Darkvision, elven lineage spells, Advantage vs Charmed, keen senses, 4-hour Trance.",
+    "fr": "Taille M, Vitesse 9 m : vision dans le noir, sorts de lignage, Avantage contre Charmé, sens aiguisés, transe de 4 h.",
+    "es": "Mediano, velocidad 9 m: visión en la oscuridad, conjuros élficos, ventaja contra hechizado, sentidos agudos, trance 4 h."
+  },
+  "species:gnome": {
+    "en": "Small, Speed 30 ft: Darkvision, Advantage on Int, Wis and Cha saves, gnomish lineage magic.",
+    "fr": "Taille P, Vitesse 9 m : vision dans le noir, Avantage aux JS d’Int, Sag et Cha, magie de lignage gnome.",
+    "es": "Pequeño, velocidad 9 m: visión en la oscuridad, ventaja en salvaciones de Int, Sab y Car, magia de linaje gnomo."
+  },
+  "species:goliath": {
+    "en": "Medium, Speed 35 ft: giant ancestry boon, Large Form at level 5, Powerful Build.",
+    "fr": "Taille M, Vitesse 10,50 m : faveur d’ascendance gigante, forme de géant au niveau 5, forte carrure.",
+    "es": "Mediano, velocidad 10,5 m: beneficio de linaje gigante, Forma grande a nivel 5, Constitución poderosa."
+  },
+  "species:halfling": {
+    "en": "Small, Speed 30 ft: Brave, move through larger creatures, reroll 1s on D20 Tests, naturally stealthy.",
+    "fr": "Taille P, Vitesse 9 m : brave, traverse les créatures plus grandes, relance les 1 aux tests d20, discret.",
+    "es": "Pequeño, velocidad 9 m: valiente, atraviesa criaturas más grandes, repite los 1 en pruebas con d20, sigiloso."
+  },
+  "species:human": {
+    "en": "Medium or Small, Speed 30 ft: Heroic Inspiration each Long Rest, one extra skill, an Origin feat.",
+    "fr": "Taille M ou P, Vitesse 9 m : Inspiration héroïque à chaque Repos long, une compétence, un don d’origine.",
+    "es": "Mediano o Pequeño, velocidad 9 m: inspiración heroica cada descanso largo, una habilidad más, una dote de origen."
+  },
+  "species:orc": {
+    "en": "Medium, Speed 30 ft: Adrenaline Rush (Bonus Action Dash), Darkvision 120 ft, Relentless Endurance.",
+    "fr": "Taille M, Vitesse 9 m : poussée d’adrénaline (Pointe par action Bonus), vision dans le noir 36 m, acharnement.",
+    "es": "Mediano, velocidad 9 m: Descarga de adrenalina (correr adicional), visión en la oscuridad 36 m, Aguante incansable."
+  },
+  "species:tiefling": {
+    "en": "Medium or Small, Speed 30 ft: Darkvision, fiendish legacy (Resistance and spells), Thaumaturgy.",
+    "fr": "Taille M ou P, Vitesse 9 m : vision dans le noir, héritage fiélon (Résistance et sorts), Thaumaturgie.",
+    "es": "Mediano o Pequeño, velocidad 9 m: visión en la oscuridad, legado infernal (resistencia y conjuros), Taumaturgia."
+  },
+  "trait:dragonborn:draconic-ancestry": {
+    "en": "Choose a dragon kind: sets your Breath Weapon and Resistance damage type.",
+    "fr": "Choisissez un type de dragon : il fixe le type de dégâts de votre souffle et de votre Résistance.",
+    "es": "Elige un tipo de dragón: fija el tipo de daño de tu Ataque de aliento y de tu resistencia."
+  },
+  "trait:dragonborn:breath-weapon": {
+    "en": "Replace an attack: 15-ft Cone or 30-ft Line, Dex save, 1d10 (scales); PB uses per Long Rest.",
+    "fr": "À la place d’une attaque : cône de 4,50 m ou ligne de 9 m, JS Dex, 1d10 (évolue) ; bonus de maîtrise fois par Repos long.",
+    "es": "En lugar de un ataque: cono de 4,5 m o línea de 9 m, salvación de Des, 1d10 (aumenta); usos = bonif. por competencia."
+  },
+  "trait:dragonborn:damage-resistance": {
+    "en": "Resistance to your draconic ancestry’s damage type.",
+    "fr": "Résistance au type de dégâts de votre ascendance draconique.",
+    "es": "Resistencia al tipo de daño de tu linaje dracónico."
+  },
+  "trait:dragonborn:darkvision": {
+    "en": "Darkvision 60 ft.",
+    "fr": "Vision dans le noir à 18 m.",
+    "es": "Visión en la oscuridad hasta 18 m."
+  },
+  "trait:dragonborn:draconic-flight": {
+    "en": "From level 5, Bonus Action: Fly Speed equal to your Speed for 10 minutes; once per Long Rest.",
+    "fr": "Dès le niveau 5, action Bonus : Vitesse de vol égale à votre Vitesse pendant 10 minutes ; 1/Repos long.",
+    "es": "Desde nivel 5, acción adicional: velocidad volando igual a tu velocidad durante 10 minutos; 1/descanso largo."
+  },
+  "trait:dwarf:darkvision": {
+    "en": "Darkvision 120 ft.",
+    "fr": "Vision dans le noir à 36 m.",
+    "es": "Visión en la oscuridad hasta 36 m."
+  },
+  "trait:dwarf:dwarven-resilience": {
+    "en": "Resistance to Poison damage; Advantage on saves to avoid or end Poisoned.",
+    "fr": "Résistance aux dégâts de poison ; Avantage aux JS contre l’état Empoisonné.",
+    "es": "Resistencia al daño de veneno; ventaja en salvaciones para evitar o poner fin al estado de envenenado."
+  },
+  "trait:dwarf:dwarven-toughness": {
+    "en": "+1 Hit Point maximum per level.",
+    "fr": "+1 point de vie maximum par niveau.",
+    "es": "+1 a los puntos de golpe máximos por nivel."
+  },
+  "trait:dwarf:stonecunning": {
+    "en": "Bonus Action: Tremorsense 60 ft on stone for 10 minutes; PB uses per Long Rest.",
+    "fr": "Action Bonus : perception des vibrations à 18 m sur la pierre pendant 10 minutes ; bonus de maîtrise fois par Repos long.",
+    "es": "Acción adicional: sentir vibraciones 18 m sobre piedra 10 minutos; usos = bonif. por competencia por descanso largo."
+  },
+  "trait:elf:darkvision": {
+    "en": "Darkvision 60 ft.",
+    "fr": "Vision dans le noir à 18 m.",
+    "es": "Visión en la oscuridad hasta 18 m."
+  },
+  "trait:elf:elven-lineage": {
+    "en": "Drow, High Elf or Wood Elf: a level 1 benefit and cantrip, then spells at levels 3 and 5.",
+    "fr": "Drow, haut-elfe ou elfe sylvestre : un bienfait et un sort mineur, puis des sorts aux niveaux 3 et 5.",
+    "es": "Drow, alto elfo o elfo de los bosques: un beneficio y un truco a nivel 1, luego conjuros a niveles 3 y 5."
+  },
+  "trait:elf:fey-ancestry": {
+    "en": "Advantage on saves to avoid or end Charmed.",
+    "fr": "Avantage aux JS contre l’état Charmé.",
+    "es": "Ventaja en salvaciones para evitar o poner fin al estado de hechizado."
+  },
+  "trait:elf:keen-senses": {
+    "en": "Proficiency in Insight, Perception or Survival.",
+    "fr": "Maîtrise d’Intuition, Perception ou Survie.",
+    "es": "Competencia en Percepción, Perspicacia o Supervivencia."
+  },
+  "trait:elf:trance": {
+    "en": "No sleep needed, immune to magical sleep; Long Rest in 4 hours of trance.",
+    "fr": "Pas besoin de dormir, insensible au sommeil magique ; Repos long en 4 heures de transe.",
+    "es": "No necesitas dormir y la magia no puede dormirte; descanso largo en 4 horas de trance."
+  },
+  "trait:gnome:darkvision": {
+    "en": "Darkvision 60 ft.",
+    "fr": "Vision dans le noir à 18 m.",
+    "es": "Visión en la oscuridad hasta 18 m."
+  },
+  "trait:gnome:gnomish-cunning": {
+    "en": "Advantage on Intelligence, Wisdom and Charisma saving throws.",
+    "fr": "Avantage aux jets de sauvegarde d’Intelligence, de Sagesse et de Charisme.",
+    "es": "Ventaja en las tiradas de salvación de Inteligencia, Sabiduría y Carisma."
+  },
+  "trait:gnome:gnomish-lineage": {
+    "en": "Choose Forest Gnome or Rock Gnome; Int, Wis or Cha casts its spells.",
+    "fr": "Choisissez gnome des forêts ou gnome des roches ; Int, Sag ou Cha pour ses sorts.",
+    "es": "Elige gnomo de los bosques o gnomo de las rocas; Int, Sab o Car como aptitud mágica de sus conjuros."
+  },
+  "trait:gnome:forest-gnome": {
+    "en": "Minor Illusion; Speak with Animals always prepared, free PB times per Long Rest.",
+    "fr": "Illusion mineure ; Communication avec les animaux toujours préparé, gratuit (bonus de maîtrise) fois par Repos long.",
+    "es": "Ilusión menor; Hablar con los animales siempre preparado, gratis bonif. por competencia veces por descanso largo."
+  },
+  "trait:gnome:rock-gnome": {
+    "en": "Mending and Prestidigitation; build up to three tiny clockwork devices.",
+    "fr": "Réparation et Prestidigitation ; fabriquez jusqu’à trois petits mécanismes.",
+    "es": "Prestidigitación y Reparar; construye hasta tres pequeños dispositivos mecánicos."
+  },
+  "trait:goliath:giant-ancestry": {
+    "en": "Choose a giant boon usable PB times per Long Rest.",
+    "fr": "Choisissez une faveur de géant utilisable (bonus de maîtrise) fois par Repos long.",
+    "es": "Elige un beneficio de gigante usable bonif. por competencia veces por descanso largo."
+  },
+  "trait:goliath:clouds-jaunt-cloud-giant": {
+    "en": "Bonus Action: teleport up to 30 ft to a space you can see.",
+    "fr": "Action Bonus : téléportation jusqu’à 9 m vers un espace visible.",
+    "es": "Acción adicional: teletranspórtate hasta 9 m a un espacio sin ocupar que puedas ver."
+  },
+  "trait:goliath:fires-burn-fire-giant": {
+    "en": "On a damaging attack hit, deal an extra 1d10 Fire damage.",
+    "fr": "Sur une attaque qui inflige des dégâts, 1d10 dégâts de feu de plus.",
+    "es": "Al acertar un ataque que causa daño, 1d10 de daño de fuego adicional."
+  },
+  "trait:goliath:frosts-chill-frost-giant": {
+    "en": "On a damaging attack hit, +1d6 Cold and Speed −10 ft until your next turn.",
+    "fr": "Sur une attaque qui inflige des dégâts, +1d6 froid et Vitesse −3 m jusqu’à votre tour suivant.",
+    "es": "Al acertar un ataque que causa daño, +1d6 de frío y velocidad −3 m hasta tu siguiente turno."
+  },
+  "trait:goliath:hills-tumble-hill-giant": {
+    "en": "On a damaging attack hit, knock a Large or smaller creature Prone.",
+    "fr": "Sur une attaque qui inflige des dégâts, une créature de taille G ou moins tombe À terre.",
+    "es": "Al acertar un ataque que causa daño, una criatura Grande o menor queda derribada."
+  },
+  "trait:goliath:stones-endurance-stone-giant": {
+    "en": "Reaction when damaged: reduce the damage by 1d12 + Con modifier.",
+    "fr": "Réaction quand vous subissez des dégâts : réduisez-les de 1d12 + mod. Con.",
+    "es": "Reacción al recibir daño: reduce el daño en 1d12 + mod. por Con."
+  },
+  "trait:goliath:storms-thunder-storm-giant": {
+    "en": "Reaction when damaged by a creature within 60 ft: deal it 1d8 Thunder damage.",
+    "fr": "Réaction quand une créature à 18 m vous blesse : elle subit 1d8 dégâts de tonnerre.",
+    "es": "Reacción si una criatura a 18 m o menos te daña: le causas 1d8 de daño de trueno."
+  },
+  "trait:goliath:large-form": {
+    "en": "From level 5, Bonus Action: Large for 10 minutes, Advantage on Strength checks, +10 ft Speed; once per Long Rest.",
+    "fr": "Dès le niveau 5, action Bonus : taille G 10 minutes, Avantage aux tests de Force, +3 m de Vitesse ; 1/Repos long.",
+    "es": "Desde nivel 5, acción adicional: Grande 10 minutos, ventaja en pruebas de Fuerza, +3 m de velocidad; 1/descanso largo."
+  },
+  "trait:goliath:powerful-build": {
+    "en": "Advantage on checks to end Grappled; count as one size larger for carrying capacity.",
+    "fr": "Avantage aux tests pour vous libérer de l’état Agrippé ; une taille de plus pour la capacité de charge.",
+    "es": "Ventaja en pruebas para poner fin al estado de agarrado; cuentas un tamaño más para la capacidad de carga."
+  },
+  "trait:halfling:brave": {
+    "en": "Advantage on saves to avoid or end Frightened.",
+    "fr": "Avantage aux JS contre l’état Effrayé.",
+    "es": "Ventaja en salvaciones para evitar o poner fin al estado de asustado."
+  },
+  "trait:halfling:halfling-nimbleness": {
+    "en": "Move through the space of any creature a size larger than you.",
+    "fr": "Vous traversez l’espace de toute créature d’une taille supérieure à la vôtre.",
+    "es": "Puedes moverte por el espacio de cualquier criatura de tamaño superior al tuyo."
+  },
+  "trait:halfling:luck": {
+    "en": "Reroll a 1 on the d20 of a D20 Test; use the new roll.",
+    "fr": "Relancez un 1 au d20 d’un test d20 ; le nouveau résultat s’applique.",
+    "es": "Si sacas un 1 en el d20 de una prueba con d20, repite la tirada y usa el nuevo resultado."
+  },
+  "trait:halfling:naturally-stealthy": {
+    "en": "Hide even when only obscured by a creature at least one size larger.",
+    "fr": "Furtivité possible derrière une créature d’au moins une taille de plus que vous.",
+    "es": "Puedes esconderte incluso tras una criatura al menos una categoría de tamaño mayor."
+  },
+  "trait:human:resourceful": {
+    "en": "Gain Heroic Inspiration whenever you finish a Long Rest.",
+    "fr": "Vous recevez l’Inspiration héroïque à chaque Repos long.",
+    "es": "Obtienes inspiración heroica tras finalizar un descanso largo."
+  },
+  "trait:human:skillful": {
+    "en": "Proficiency in one skill of your choice.",
+    "fr": "Maîtrise d’une compétence de votre choix.",
+    "es": "Competencia en una habilidad de tu elección."
+  },
+  "trait:human:versatile": {
+    "en": "Gain an Origin feat of your choice (Skilled recommended).",
+    "fr": "Un don d’origine de votre choix (Doué recommandé).",
+    "es": "Una dote de origen de tu elección (se recomienda Habilidoso)."
+  },
+  "trait:orc:adrenaline-rush": {
+    "en": "Bonus Action Dash and gain PB Temporary HP; PB uses per Short or Long Rest.",
+    "fr": "Pointe par action Bonus et bonus de maîtrise en pv temporaires ; bonus de maîtrise fois par Repos court ou long.",
+    "es": "Correr como acción adicional y ganar bonif. por competencia en pg temporales; mismos usos por descanso corto o largo."
+  },
+  "trait:orc:darkvision": {
+    "en": "Darkvision 120 ft.",
+    "fr": "Vision dans le noir à 36 m.",
+    "es": "Visión en la oscuridad hasta 36 m."
+  },
+  "trait:orc:relentless-endurance": {
+    "en": "When reduced to 0 HP but not killed, drop to 1 HP instead; once per Long Rest.",
+    "fr": "Réduit à 0 pv sans être tué, vous restez à 1 pv ; 1/Repos long.",
+    "es": "Si tus pg bajan a 0 sin morir, quedas a 1 pg; 1/descanso largo."
+  },
+  "trait:tiefling:darkvision": {
+    "en": "Darkvision 60 ft.",
+    "fr": "Vision dans le noir à 18 m.",
+    "es": "Visión en la oscuridad hasta 18 m."
+  },
+  "trait:tiefling:fiendish-legacy": {
+    "en": "Abyssal, Chthonic or Infernal: a Resistance and cantrip, then spells at levels 3 and 5.",
+    "fr": "Abyssal, chthonien ou infernal : une Résistance et un sort mineur, puis des sorts aux niveaux 3 et 5.",
+    "es": "Abisal, ctónico o infernal: una resistencia y un truco, luego conjuros a niveles 3 y 5."
+  },
+  "trait:tiefling:otherworldly-presence": {
+    "en": "You know Thaumaturgy, cast with your Fiendish Legacy ability.",
+    "fr": "Vous connaissez Thaumaturgie, lancé avec la caractéristique de votre héritage fiélon.",
+    "es": "Conoces Taumaturgia, lanzado con la aptitud mágica de tu Legado infernal."
+  },
+  "background:acolyte": {
+    "en": "Int/Wis/Cha; Magic Initiate (Cleric); Insight, Religion; Calligrapher’s Supplies.",
+    "fr": "Int/Sag/Cha ; Initié à la magie (Clerc) ; Intuition, Religion ; matériel de calligraphe.",
+    "es": "Int/Sab/Car; Iniciado en la magia (clérigo); Perspicacia, Religión; suministros de calígrafo."
+  },
+  "background:criminal": {
+    "en": "Dex/Con/Int; Alert; Sleight of Hand, Stealth; Thieves’ Tools.",
+    "fr": "Dex/Con/Int ; Vigilant ; Escamotage, Discrétion ; outils de voleur.",
+    "es": "Des/Con/Int; Alerta; Juego de manos, Sigilo; herramientas de ladrón."
+  },
+  "background:sage": {
+    "en": "Con/Int/Wis; Magic Initiate (Wizard); Arcana, History; Calligrapher’s Supplies.",
+    "fr": "Con/Int/Sag ; Initié à la magie (Magicien) ; Arcanes, Histoire ; matériel de calligraphe.",
+    "es": "Con/Int/Sab; Iniciado en la magia (mago); Conocimiento arcano, Historia; suministros de calígrafo."
+  },
+  "background:soldier": {
+    "en": "Str/Dex/Con; Savage Attacker; Athletics, Intimidation; one Gaming Set.",
+    "fr": "For/Dex/Con ; Sauvagerie martiale ; Athlétisme, Intimidation ; une boîte de jeux.",
+    "es": "Fue/Des/Con; Atacante salvaje; Atletismo, Intimidación; un tipo de juego."
+  },
+  "feat:ability-score-improvement": {
+    "en": "+2 to one ability score or +1 to two (max 20); repeatable.",
+    "fr": "+2 à une valeur de caractéristique ou +1 à deux (max. 20) ; répétable.",
+    "es": "+2 a una puntuación de característica o +1 a dos (máx. 20); repetible."
+  },
+  "feat:alert": {
+    "en": "Add your Proficiency Bonus to Initiative; swap Initiative with a willing ally.",
+    "fr": "Ajoutez votre bonus de maîtrise à l’Initiative ; échangez votre Initiative avec un allié consentant.",
+    "es": "Suma tu bonificador por competencia a la iniciativa; intercambia tu iniciativa con un aliado dispuesto."
+  },
+  "feat:archery": {
+    "en": "+2 to attack rolls with Ranged weapons.",
+    "fr": "+2 aux jets d’attaque avec les armes à distance.",
+    "es": "+2 a las tiradas de ataque con armas a distancia."
+  },
+  "feat:boon-of-combat-prowess": {
+    "en": "+1 to one ability (max 30); turn a miss into a hit once per turn.",
+    "fr": "+1 à une caractéristique (max. 30) ; transformez un échec en coup au but une fois par tour.",
+    "es": "+1 a una característica (máx. 30); convierte un fallo en acierto una vez por turno."
+  },
+  "feat:boon-of-dimensional-travel": {
+    "en": "+1 to one ability (max 30); teleport 30 ft after the Attack or Magic action.",
+    "fr": "+1 à une caractéristique (max. 30) ; téléportation de 9 m après l’action Attaque ou Magie.",
+    "es": "+1 a una característica (máx. 30); teletranspórtate 9 m tras la acción de atacar o de magia."
+  },
+  "feat:boon-of-fate": {
+    "en": "+1 to one ability (max 30); ±2d4 to a D20 Test within 60 ft, once per Initiative or rest.",
+    "fr": "+1 à une caractéristique (max. 30) ; ajoutez ou retranchez 2d4 à un test d20 à 18 m, une fois par Initiative ou repos.",
+    "es": "+1 a una característica (máx. 30); ±2d4 a una prueba con d20 a 18 m, una vez por iniciativa o descanso."
+  },
+  "feat:boon-of-irresistible-offense": {
+    "en": "+1 Str or Dex (max 30); your B/P/S damage ignores Resistance; extra damage on a natural 20.",
+    "fr": "+1 For ou Dex (max. 30) ; vos dégâts C/P/T ignorent la Résistance ; dégâts en plus sur un 20 naturel.",
+    "es": "+1 Fue o Des (máx. 30); tu daño contundente, cortante y perforante ignora la resistencia; daño extra con 20 natural."
+  },
+  "feat:boon-of-spell-recall": {
+    "en": "+1 Int, Wis or Cha (max 30); a level 1–4 slot isn’t spent if 1d4 equals its level.",
+    "fr": "+1 Int, Sag ou Cha (max. 30) ; un emplacement 1–4 n’est pas dépensé si 1d4 donne son niveau.",
+    "es": "+1 Int, Sab o Car (máx. 30); un espacio de nivel 1–4 no se gasta si 1d4 iguala su nivel."
+  },
+  "feat:boon-of-the-night-spirit": {
+    "en": "+1 to one ability (max 30); in Dim Light or Darkness, Bonus Action Invisible and Resistance to most damage.",
+    "fr": "+1 à une caractéristique (max. 30) ; en Lumière faible ou Ténèbres, Invisible par action Bonus et Résistance à presque tout.",
+    "es": "+1 a una característica (máx. 30); en luz tenue u oscuridad, invisible como acción adicional y resistencia a casi todo."
+  },
+  "feat:boon-of-truesight": {
+    "en": "+1 to one ability (max 30); Truesight 60 ft.",
+    "fr": "+1 à une caractéristique (max. 30) ; Vision lucide à 18 m.",
+    "es": "+1 a una característica (máx. 30); visión verdadera hasta 18 m."
+  },
+  "feat:defense": {
+    "en": "+1 AC while wearing Light, Medium or Heavy armor.",
+    "fr": "+1 à la CA quand vous portez une armure légère, intermédiaire ou lourde.",
+    "es": "+1 a la CA mientras lleves armadura ligera, media o pesada."
+  },
+  "feat:grappler": {
+    "en": "+1 Str or Dex; damage and Grapple with one Unarmed Strike; Advantage against creatures you grapple.",
+    "fr": "+1 For ou Dex ; dégâts et Lutte avec une même attaque à mains nues ; Avantage contre les créatures agrippées.",
+    "es": "+1 Fue o Des; daño y agarre con un mismo ataque sin armas; ventaja contra las criaturas que agarras."
+  },
+  "feat:great-weapon-fighting": {
+    "en": "With a two-handed melee weapon, treat 1s and 2s on damage dice as 3s.",
+    "fr": "Avec une arme de corps à corps tenue à deux mains, les 1 et 2 aux dés de dégâts comptent comme des 3.",
+    "es": "Con un arma cuerpo a cuerpo empuñada a dos manos, los 1 y 2 en los dados de daño cuentan como 3."
+  },
+  "feat:magic-initiate": {
+    "en": "Two cantrips and one level 1 spell (free once per Long Rest) from the Cleric, Druid or Wizard list.",
+    "fr": "Deux sorts mineurs et un sort du niveau 1 (gratuit 1/Repos long) de la liste du Clerc, du Druide ou du Magicien.",
+    "es": "Dos trucos y un conjuro de nivel 1 (gratis 1/descanso largo) de la lista de clérigo, druida o mago."
+  },
+  "feat:savage-attacker": {
+    "en": "Once per turn on a weapon hit, roll damage dice twice and use either roll.",
+    "fr": "Une fois par tour en touchant avec une arme, lancez deux fois les dés de dégâts et gardez l’un des résultats.",
+    "es": "Una vez por turno al acertar con un arma, tira dos veces los dados de daño y usa el resultado que prefieras."
+  },
+  "feat:skilled": {
+    "en": "Proficiency in any three skills or tools; repeatable.",
+    "fr": "Maîtrise de trois compétences ou outils au choix ; répétable.",
+    "es": "Competencia en tres habilidades o herramientas a tu elección; repetible."
+  },
+  "feat:two-weapon-fighting": {
+    "en": "Add your ability modifier to the damage of the extra attack from a Light weapon.",
+    "fr": "Ajoutez votre modificateur de caractéristique aux dégâts de l’attaque supplémentaire d’une arme légère.",
+    "es": "Suma tu modificador por característica al daño del ataque extra de un arma ligera."
+  },
+  "feature:barbarian:rage": {
+    "en": "Bonus Action, no Heavy armor: damage bonus, Resistance to B/P/S, Advantage on Strength checks and saves.",
+    "fr": "Action Bonus, sans armure lourde : bonus aux dégâts, Résistance contondant/perforant/tranchant, Avantage en Force.",
+    "es": "Acción adicional, sin armadura pesada: daño por furia, resistencia contundente/cortante/perforante, ventaja en Fuerza."
+  },
+  "feature:barbarian:unarmored-defense": {
+    "en": "Without armor, AC = 10 + Dexterity + Constitution modifiers; a Shield still applies.",
+    "fr": "Sans armure, CA = 10 + modificateurs de Dextérité et de Constitution ; bouclier permis.",
+    "es": "Sin armadura, CA = 10 + modificadores por Destreza y Constitución; el escudo sigue sumando."
+  },
+  "feature:barbarian:weapon-mastery": {
+    "en": "Use the mastery properties of two kinds of melee weapons (more with level); swap one per Long Rest.",
+    "fr": "Bottes de deux types d’arme de corps à corps (plus avec le niveau) ; un changement par Repos long.",
+    "es": "Usa las propiedades de maestría de dos tipos de armas cuerpo a cuerpo (más con el nivel); cambia una por descanso largo."
+  },
+  "feature:barbarian:danger-sense": {
+    "en": "Advantage on Dexterity saving throws unless Incapacitated.",
+    "fr": "Avantage aux jets de sauvegarde de Dextérité, sauf si vous êtes Neutralisé.",
+    "es": "Ventaja en las tiradas de salvación de Destreza salvo que estés incapacitado."
+  },
+  "feature:barbarian:reckless-attack": {
+    "en": "On your first attack: Advantage on Strength attacks until your next turn, but attacks against you have Advantage.",
+    "fr": "À votre première attaque : Avantage aux attaques de Force jusqu’à votre tour suivant, mais Avantage contre vous.",
+    "es": "En tu primer ataque: ventaja en ataques de Fuerza hasta tu siguiente turno, pero los ataques contra ti tienen ventaja."
+  },
+  "feature:barbarian:barbarian-subclass": {
+    "en": "Choose a Barbarian subclass (e.g. Path of the Berserker); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Barbare (p. ex. voie du Berserker) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de bárbaro (p. ej., senda del berserker); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:barbarian:primal-knowledge": {
+    "en": "One more Barbarian skill; while raging, Acrobatics, Intimidation, Perception, Stealth, Survival can use Strength.",
+    "fr": "Une compétence de Barbare de plus ; en Rage, Acrobaties, Intimidation, Perception, Discrétion, Survie peuvent utiliser la Force.",
+    "es": "Una habilidad de bárbaro más; enfurecido, Acrobacias, Intimidación, Percepción, Sigilo y Supervivencia usan Fuerza."
+  },
+  "feature:barbarian:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:barbarian:extra-attack": {
+    "en": "Attack twice instead of once when you take the Attack action.",
+    "fr": "Vous attaquez deux fois au lieu d’une quand vous effectuez l’action Attaque.",
+    "es": "Atacas dos veces en lugar de una al llevar a cabo la acción de atacar."
+  },
+  "feature:barbarian:fast-movement": {
+    "en": "+10 ft Speed while not wearing Heavy armor.",
+    "fr": "+3 m de Vitesse si vous ne portez pas d’armure lourde.",
+    "es": "+3 m de velocidad si no llevas armadura pesada."
+  },
+  "feature:barbarian:feral-instinct": {
+    "en": "Advantage on Initiative rolls.",
+    "fr": "Avantage aux jets d’Initiative.",
+    "es": "Ventaja en las tiradas de iniciativa."
+  },
+  "feature:barbarian:instinctive-pounce": {
+    "en": "When you enter your Rage, move up to half your Speed as part of that Bonus Action.",
+    "fr": "En entrant en Rage, vous vous déplacez de la moitié de votre Vitesse dans la même action Bonus.",
+    "es": "Al dejarte llevar por la furia, muévete hasta la mitad de tu velocidad con esa misma acción adicional."
+  },
+  "feature:barbarian:brutal-strike": {
+    "en": "With Reckless Attack, forgo Advantage on one Strength attack: +1d10 damage and push 15 ft or slow by 15 ft.",
+    "fr": "Avec Témérité, renoncez à l’Avantage sur une attaque de Force : +1d10 dégâts et repousser de 4,50 m ou ralentir de 4,50 m.",
+    "es": "Con Ataque temerario, renuncia a la ventaja en un ataque de Fuerza: +1d10 de daño y empuja 4,5 m o ralentiza 4,5 m."
+  },
+  "feature:barbarian:relentless-rage": {
+    "en": "Drop to 0 HP while raging: DC 10 Con save (+5 per use) to have HP = twice Barbarian level.",
+    "fr": "À 0 pv en Rage : JS de Constitution DD 10 (+5 par usage) pour remonter à deux fois votre niveau de Barbare.",
+    "es": "A 0 pg enfurecido: salvación de Con CD 10 (+5 por uso) para quedar con pg = el doble de tu nivel de bárbaro."
+  },
+  "feature:barbarian:improved-brutal-strike": {
+    "en": "Brutal Strike gains Staggering Blow and Sundering Blow.",
+    "fr": "Coup brutal gagne Coup stupéfiant et Coup déchirant.",
+    "es": "Golpe brutal gana Golpe abrumador y Golpe desgarrador."
+  },
+  "feature:barbarian:persistent-rage": {
+    "en": "Regain all Rages when rolling Initiative (once per Long Rest); Rage lasts 10 minutes without extending.",
+    "fr": "Récupérez toutes vos Rages au jet d’Initiative (1/Repos long) ; la Rage dure 10 minutes sans prolongation.",
+    "es": "Recupera todas tus furias al tirar iniciativa (1/descanso largo); la furia dura 10 minutos sin prolongarla."
+  },
+  "feature:barbarian:indomitable-might": {
+    "en": "A Strength check or save total below your Strength score uses the score instead.",
+    "fr": "Un test ou JS de Force inférieur à votre valeur de Force est remplacé par cette valeur.",
+    "es": "Si una prueba o salvación de Fuerza queda por debajo de tu puntuación de Fuerza, usa la puntuación."
+  },
+  "feature:barbarian:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Irresistible Offense recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur d’attaque irrésistible recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del ataque imparable)."
+  },
+  "feature:barbarian:primal-champion": {
+    "en": "Strength and Constitution +4, to a maximum of 25.",
+    "fr": "Force et Constitution +4, jusqu’à un maximum de 25.",
+    "es": "Fuerza y Constitución +4, hasta un máximo de 25."
+  },
+  "feature:barbarian:path-of-the-berserker:frenzy": {
+    "en": "Reckless Attack while raging: first Strength hit each turn deals extra d6s equal to your Rage Damage.",
+    "fr": "Témérité en Rage : votre premier coup de Force du tour inflige autant de d6 que vos dégâts de Rage.",
+    "es": "Ataque temerario enfurecido: tu primer acierto de Fuerza en el turno causa tantos d6 extra como tu daño por furia."
+  },
+  "feature:barbarian:path-of-the-berserker:mindless-rage": {
+    "en": "Immune to Charmed and Frightened while raging; entering Rage ends them.",
+    "fr": "Immunité aux états Charmé et Effrayé en Rage ; entrer en Rage y met fin.",
+    "es": "Inmunidad a hechizado y asustado mientras estás enfurecido; dejarte llevar por la furia los termina."
+  },
+  "feature:barbarian:path-of-the-berserker:retaliation": {
+    "en": "Reaction: when a creature within 5 ft damages you, make one melee attack against it.",
+    "fr": "Réaction : quand une créature à 1,50 m vous blesse, vous lui portez une attaque au corps à corps.",
+    "es": "Reacción: si una criatura a 1,5 m o menos te daña, haz un ataque cuerpo a cuerpo contra ella."
+  },
+  "feature:barbarian:path-of-the-berserker:intimidating-presence": {
+    "en": "Bonus Action: 30-ft Emanation, Wis save or Frightened 1 minute; once per Long Rest or spend a Rage.",
+    "fr": "Action Bonus : Émanation de 9 m, JS de Sagesse ou Effrayé 1 minute ; 1/Repos long ou contre une Rage.",
+    "es": "Acción adicional: emanación de 9 m, salvación de Sab o asustado 1 minuto; 1/descanso largo o gastando una furia."
+  },
+  "feature:bard:bardic-inspiration": {
+    "en": "Bonus Action: a creature within 60 ft gains a d6 (scales) to add to a failed D20 Test; Cha mod uses.",
+    "fr": "Action Bonus : une créature à 18 m reçoit un d6 (évolue) à ajouter à un test d20 raté ; mod. Cha par Repos long.",
+    "es": "Acción adicional: una criatura a 18 m gana un d6 (aumenta) para sumar a una prueba con d20 fallida; usos = mod. por Car."
+  },
+  "feature:bard:spellcasting": {
+    "en": "Prepared Charisma spellcasting from the Bard list; Musical Instrument as focus; slots back on a Long Rest.",
+    "fr": "Sorts préparés de Barde basés sur le Charisme ; instrument de musique comme focaliseur ; emplacements au Repos long.",
+    "es": "Conjuros preparados de bardo con Carisma; instrumento musical como canalizador; espacios al descanso largo."
+  },
+  "feature:bard:expertise": {
+    "en": "Expertise in two proficient skills; two more at Bard level 9.",
+    "fr": "Expertise dans deux compétences maîtrisées ; deux de plus au niveau 9 de Barde.",
+    "es": "Pericia en dos habilidades en las que seas competente; dos más a nivel 9 de bardo."
+  },
+  "feature:bard:jack-of-all-trades": {
+    "en": "Add half your Proficiency Bonus to ability checks with skills you aren’t proficient in.",
+    "fr": "Ajoutez la moitié de votre bonus de maîtrise aux tests avec des compétences non maîtrisées.",
+    "es": "Suma la mitad de tu bonificador por competencia a pruebas con habilidades en las que no seas competente."
+  },
+  "feature:bard:bard-subclass": {
+    "en": "Choose a Bard subclass (e.g. College of Lore); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Barde (p. ex. collège du Savoir) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de bardo (p. ej., colegio del conocimiento); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:bard:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:bard:font-of-inspiration": {
+    "en": "Bardic Inspiration returns on a Short or Long Rest; spend a spell slot to regain one use.",
+    "fr": "Inspiration bardique récupérée au Repos court ou long ; un emplacement de sort rend une utilisation.",
+    "es": "Inspiración bárdica se recupera en descanso corto o largo; gasta un espacio de conjuro para recuperar un uso."
+  },
+  "feature:bard:countercharm": {
+    "en": "Reaction: you or a creature within 30 ft rerolls a failed save against Charmed or Frightened, with Advantage.",
+    "fr": "Réaction : vous ou une créature à 9 m relancez avec Avantage un JS raté contre Charmé ou Effrayé.",
+    "es": "Reacción: tú o una criatura a 9 m repetís con ventaja una salvación fallida contra hechizado o asustado."
+  },
+  "feature:bard:magical-secrets": {
+    "en": "New prepared spells can come from the Bard, Cleric, Druid and Wizard lists.",
+    "fr": "Vos nouveaux sorts préparés peuvent venir des listes du Barde, du Clerc, du Druide et du Magicien.",
+    "es": "Tus nuevos conjuros preparados pueden ser de las listas de bardo, clérigo, druida y mago."
+  },
+  "feature:bard:superior-inspiration": {
+    "en": "When you roll Initiative, regain Bardic Inspiration uses up to two.",
+    "fr": "Au jet d’Initiative, récupérez des utilisations d’Inspiration bardique jusqu’à en avoir deux.",
+    "es": "Al tirar iniciativa, recupera usos de Inspiración bárdica hasta tener dos."
+  },
+  "feature:bard:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Spell Recall recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de mémoire magique recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del recuerdo de conjuros)."
+  },
+  "feature:bard:words-of-creation": {
+    "en": "Power Word Heal and Power Word Kill always prepared; each can target a second creature within 10 ft.",
+    "fr": "Mot de pouvoir guérisseur et Mot de pouvoir mortel toujours préparés ; une seconde cible à 3 m possible.",
+    "es": "Palabra de poder: sanar y Palabra de poder: matar siempre preparados; cada uno puede afectar a otra criatura a 3 m."
+  },
+  "feature:bard:college-of-lore:bonus-proficiencies": {
+    "en": "Proficiency in three skills of your choice.",
+    "fr": "Maîtrise de trois compétences de votre choix.",
+    "es": "Competencia en tres habilidades de tu elección."
+  },
+  "feature:bard:college-of-lore:cutting-words": {
+    "en": "Reaction: spend Bardic Inspiration to subtract its die from a creature’s damage, check or attack within 60 ft.",
+    "fr": "Réaction : dépensez une Inspiration bardique pour soustraire son dé aux dégâts, test ou attaque d’une créature à 18 m.",
+    "es": "Reacción: gasta Inspiración bárdica para restar su dado al daño, prueba o ataque de una criatura a 18 m."
+  },
+  "feature:bard:college-of-lore:magical-discoveries": {
+    "en": "Two always-prepared spells of your choice from the Cleric, Druid or Wizard lists.",
+    "fr": "Deux sorts toujours préparés au choix dans les listes du Clerc, du Druide ou du Magicien.",
+    "es": "Dos conjuros siempre preparados a tu elección de las listas de clérigo, druida o mago."
+  },
+  "feature:bard:college-of-lore:peerless-skill": {
+    "en": "On a failed check or attack, spend Bardic Inspiration to add its die; not spent if it still fails.",
+    "fr": "Test ou attaque raté : ajoutez un dé d’Inspiration bardique ; il n’est pas dépensé en cas d’échec.",
+    "es": "Prueba o ataque fallido: gasta Inspiración bárdica y suma su dado; no se gasta si aun así fallas."
+  },
+  "feature:cleric:spellcasting": {
+    "en": "Prepared Wisdom spellcasting from the Cleric list; Holy Symbol as focus; change prepared spells each Long Rest.",
+    "fr": "Sorts préparés de Clerc basés sur la Sagesse ; symbole sacré comme focaliseur ; liste modifiable à chaque Repos long.",
+    "es": "Conjuros preparados de clérigo con Sabiduría; símbolo sagrado como canalizador; cámbialos cada descanso largo."
+  },
+  "feature:cleric:divine-order": {
+    "en": "Protector (Martial weapons, Heavy armor) or Thaumaturge (extra cantrip, +Wis to Arcana and Religion).",
+    "fr": "Protecteur (armes de guerre, armures lourdes) ou Thaumaturge (sort mineur en plus, +Sag en Arcanes et Religion).",
+    "es": "Protector (armas marciales, armadura pesada) o Taumaturgo (un truco más, +Sab a Conocimiento arcano y Religión)."
+  },
+  "feature:cleric:channel-divinity": {
+    "en": "Divine Spark (1d8 + Wis heal or damage, scales) or Turn Undead; 2 uses, 1 back on a Short Rest.",
+    "fr": "Étincelle divine (soins ou dégâts 1d8 + Sag, évolue) ou Renvoi des morts-vivants ; 2 utilisations, 1 au Repos court.",
+    "es": "Chispa divina (1d8 + Sab de curación o daño, aumenta) o Expulsar muertos vivientes; 2 usos, 1 en descanso corto."
+  },
+  "feature:cleric:cleric-subclass": {
+    "en": "Choose a Cleric subclass (e.g. Life Domain); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Clerc (p. ex. domaine de la Vie) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de clérigo (p. ej., dominio de la vida); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:cleric:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:cleric:sear-undead": {
+    "en": "Turn Undead also deals Radiant damage: Wisdom modifier d8s to each Undead that fails.",
+    "fr": "Renvoi des morts-vivants inflige aussi des dégâts radiants : autant de d8 que votre mod. de Sagesse.",
+    "es": "Expulsar muertos vivientes también causa daño radiante: tantos d8 como tu mod. por Sab a cada muerto viviente que falle."
+  },
+  "feature:cleric:blessed-strikes": {
+    "en": "Divine Strike (+1d8 Necrotic or Radiant once per turn on a weapon hit) or Potent Spellcasting (+Wis to cantrips).",
+    "fr": "Impact divin (+1d8 nécrotiques ou radiants une fois par tour avec une arme) ou Incantation puissante (+Sag aux sorts mineurs).",
+    "es": "Golpe divino (+1d8 necrótico o radiante una vez por turno al acertar con arma) o Lanzamiento potente (+Sab a trucos)."
+  },
+  "feature:cleric:divine-intervention": {
+    "en": "Magic action: cast any Cleric spell of level 5 or lower free, no slot or Material; once per Long Rest.",
+    "fr": "Action Magie : lancez un sort de Clerc du niveau 5 ou moins sans emplacement ni composante matérielle ; 1/Repos long.",
+    "es": "Acción de magia: lanza un conjuro de clérigo de nivel 5 o menos sin espacio ni componentes materiales; 1/descanso largo."
+  },
+  "feature:cleric:improved-blessed-strikes": {
+    "en": "Divine Strike becomes 2d8, or damaging cantrips grant twice your Wis modifier in Temporary HP (60 ft).",
+    "fr": "Impact divin passe à 2d8, ou vos sorts mineurs offensifs donnent 2 × mod. Sag en points de vie temporaires (18 m).",
+    "es": "Golpe divino pasa a 2d8, o tus trucos dañinos dan el doble de tu mod. por Sab en pg temporales (18 m)."
+  },
+  "feature:cleric:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Fate recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur du destin recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del destino)."
+  },
+  "feature:cleric:greater-divine-intervention": {
+    "en": "Divine Intervention can cast Wish; then it is unusable for 2d4 Long Rests.",
+    "fr": "Intervention divine peut lancer Souhait ; elle est alors indisponible pendant 2d4 Repos longs.",
+    "es": "Intercesión divina puede lanzar Deseo; después no puedes usarla hasta finalizar 2d4 descansos largos."
+  },
+  "feature:cleric:life-domain:disciple-of-life": {
+    "en": "Healing spells cast with a slot restore an extra 2 + slot level Hit Points.",
+    "fr": "Vos sorts de soins lancés avec un emplacement rendent 2 + niveau de l’emplacement pv de plus.",
+    "es": "Tus conjuros de curación lanzados con espacio curan 2 + nivel del espacio pg adicionales."
+  },
+  "feature:cleric:life-domain:life-domain-spells": {
+    "en": "Always-prepared healing spells by Cleric level (Aid, Bless, Cure Wounds, Revivify…).",
+    "fr": "Sorts de soins toujours préparés selon le niveau de Clerc (Aide, Bénédiction, Soins, Retour à la vie…).",
+    "es": "Conjuros de curación siempre preparados según tu nivel de clérigo (Auxilio, Bendición, Curar heridas, Revivir…)."
+  },
+  "feature:cleric:life-domain:preserve-life": {
+    "en": "Channel Divinity: split 5 × Cleric level HP among Bloodied creatures within 30 ft, up to half their max.",
+    "fr": "Conduit divin : répartissez 5 × niveau de Clerc pv entre créatures en péril à 9 m, jusqu’à la moitié de leur max.",
+    "es": "Canalizar divinidad: reparte 5 × nivel de clérigo pg entre criaturas maltrechas a 9 m, hasta la mitad de su máximo."
+  },
+  "feature:cleric:life-domain:blessed-healer": {
+    "en": "When your slot spell heals others, you regain 2 + the slot’s level Hit Points.",
+    "fr": "Quand un sort à emplacement soigne autrui, vous récupérez 2 + niveau de l’emplacement pv.",
+    "es": "Cuando un conjuro con espacio cura a otros, recuperas 2 + nivel del espacio pg."
+  },
+  "feature:cleric:life-domain:supreme-healing": {
+    "en": "Healing dice from your spells and Channel Divinity always count as their maximum.",
+    "fr": "Les dés de soins de vos sorts et de Conduit divin donnent toujours leur maximum.",
+    "es": "Los dados de curación de tus conjuros y de Canalizar divinidad siempre dan su máximo."
+  },
+  "feature:druid:spellcasting": {
+    "en": "Prepared Wisdom spellcasting from the Druid list; Druidic Focus; change prepared spells each Long Rest.",
+    "fr": "Sorts préparés de Druide basés sur la Sagesse ; focaliseur druidique ; liste modifiable à chaque Repos long.",
+    "es": "Conjuros preparados de druida con Sabiduría; canalizador druídico; cambia los preparados cada descanso largo."
+  },
+  "feature:druid:druidic": {
+    "en": "You know Druidic (hidden messages) and always have Speak with Animals prepared.",
+    "fr": "Vous connaissez le druidique (messages cachés) et avez toujours Communication avec les animaux préparé.",
+    "es": "Sabes druídico (mensajes ocultos) y siempre tienes Hablar con los animales preparado."
+  },
+  "feature:druid:primal-order": {
+    "en": "Magician (extra cantrip, +Wis to Arcana and Nature) or Warden (Martial weapons, Medium armor).",
+    "fr": "Mage (sort mineur en plus, +Sag en Arcanes et Nature) ou Gardien (armes de guerre, armures intermédiaires).",
+    "es": "Naturalista (un truco más, +Sab a Conocimiento arcano y Naturaleza) o Guardián (armas marciales, armadura media)."
+  },
+  "feature:druid:wild-shape": {
+    "en": "Bonus Action: become a known Beast form for half your Druid level in hours; Temporary HP = Druid level.",
+    "fr": "Action Bonus : prenez une forme de Bête connue pour (niveau de Druide ÷ 2) heures ; pv temporaires = niveau.",
+    "es": "Acción adicional: adopta una forma de bestia conocida (nivel de druida ÷ 2) horas; pg temporales = nivel de druida."
+  },
+  "feature:druid:wild-companion": {
+    "en": "Magic action: spend a spell slot or Wild Shape use to cast Find Familiar (Fey) without Material components.",
+    "fr": "Action Magie : dépensez un emplacement ou une Forme sauvage pour lancer Appel de familier (fée) sans composante matérielle.",
+    "es": "Acción de magia: gasta un espacio o un uso de Forma salvaje para lanzar Encontrar familiar (feérico) sin material."
+  },
+  "feature:druid:druid-subclass": {
+    "en": "Choose a Druid subclass (e.g. Circle of the Land); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Druide (p. ex. cercle de la Terre) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de druida (p. ej., círculo de la tierra); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:druid:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:druid:wild-resurgence": {
+    "en": "Spend a slot to regain a Wild Shape use when out (1/turn), or a Wild Shape use for a level 1 slot (1/Long Rest).",
+    "fr": "Un emplacement rend une Forme sauvage si vous n’en avez plus (1/tour) ; une Forme sauvage donne un emplacement niv. 1 (1/Repos long).",
+    "es": "Un espacio da un uso de Forma salvaje si no te quedan (1/turno); un uso da un espacio de nivel 1 (1/descanso largo)."
+  },
+  "feature:druid:elemental-fury": {
+    "en": "Potent Spellcasting (+Wis to cantrip damage) or Primal Strike (+1d8 Cold/Fire/Lightning/Thunder once per turn).",
+    "fr": "Incantation puissante (+Sag aux dégâts des sorts mineurs) ou Attaques primitives (+1d8 froid/feu/foudre/tonnerre une fois par tour).",
+    "es": "Lanzamiento potente (+Sab al daño de trucos) o Golpe primordial (+1d8 frío/fuego/relámpago/trueno una vez por turno)."
+  },
+  "feature:druid:improved-elemental-fury": {
+    "en": "Cantrips with range 10 ft+ gain 300 ft of range, or Primal Strike becomes 2d8.",
+    "fr": "Les sorts mineurs de portée 3 m ou plus gagnent 90 m de portée, ou Attaques primitives passe à 2d8.",
+    "es": "Los trucos con alcance de 3 m o más ganan 90 m de alcance, o Golpe primordial pasa a 2d8."
+  },
+  "feature:druid:beast-spells": {
+    "en": "Cast spells in Wild Shape, except those with a costly or consumed Material component.",
+    "fr": "Vous lancez des sorts sous Forme sauvage, sauf ceux à composante matérielle coûteuse ou consommée.",
+    "es": "Lanzas conjuros con Forma salvaje, salvo los de componente material con coste o que se consuma."
+  },
+  "feature:druid:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Dimensional Travel recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de déplacement dimensionnel recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del viaje dimensional)."
+  },
+  "feature:druid:archdruid": {
+    "en": "Regain a Wild Shape use on Initiative when out; convert Wild Shape uses into a spell slot; age slowly.",
+    "fr": "Une Forme sauvage récupérée à l’Initiative si vous n’en avez plus ; Formes sauvages converties en emplacement ; vieillissement ralenti.",
+    "es": "Recupera un uso de Forma salvaje al tirar iniciativa si no te quedan; convierte usos en espacios; envejeces despacio."
+  },
+  "feature:druid:circle-of-the-land:circle-of-the-land-spells": {
+    "en": "Each Long Rest, pick arid, polar, temperate or tropical land: its spells are always prepared.",
+    "fr": "À chaque Repos long, choisissez une terre aride, polaire, tempérée ou tropicale : ses sorts sont toujours préparés.",
+    "es": "Cada descanso largo, elige terreno árido, polar, templado o tropical: sus conjuros quedan siempre preparados."
+  },
+  "feature:druid:circle-of-the-land:lands-aid": {
+    "en": "Wild Shape use, Magic action: 10-ft Sphere within 60 ft, 2d6 Necrotic (Con save) and one creature heals 2d6; scales.",
+    "fr": "Forme sauvage, action Magie : Sphère de 3 m à 18 m, 2d6 nécrotiques (JS Con) et une créature récupère 2d6 pv ; évolue.",
+    "es": "Forma salvaje, acción de magia: esfera de 3 m a 18 m, 2d6 necrótico (salvación de Con) y una criatura cura 2d6; aumenta."
+  },
+  "feature:druid:circle-of-the-land:natural-recovery": {
+    "en": "Cast one Circle spell free per Long Rest; on a Short Rest recover slots totalling half your Druid level.",
+    "fr": "Un sort de cercle gratuit par Repos long ; au Repos court, récupérez des emplacements totalisant la moitié du niveau de Druide.",
+    "es": "Un conjuro de círculo gratis por descanso largo; en descanso corto recupera espacios que sumen la mitad de tu nivel."
+  },
+  "feature:druid:circle-of-the-land:natures-ward": {
+    "en": "Immune to Poisoned; Resistance by land: Fire (arid), Cold (polar), Lightning (temperate), Poison (tropical).",
+    "fr": "Immunité à Empoisonné ; Résistance selon la terre : feu (aride), froid (polaire), foudre (tempérée), poison (tropicale).",
+    "es": "Inmune a envenenado; resistencia según terreno: fuego (árido), frío (polar), relámpago (templado), veneno (tropical)."
+  },
+  "feature:druid:circle-of-the-land:natures-sanctuary": {
+    "en": "Wild Shape use: 15-ft Cube for 1 minute; you and allies inside get Half Cover and your Nature’s Ward Resistance.",
+    "fr": "Forme sauvage, action Magie : Cube de 4,50 m pendant 1 minute, Abri partiel et Résistance de Protégé de dame Nature pour vos alliés.",
+    "es": "Uso de Forma salvaje: cubo de 4,5 m durante 1 minuto; tus aliados y tú dentro tenéis cobertura media y tu resistencia."
+  },
+  "feature:fighter:fighting-style": {
+    "en": "Gain a Fighting Style feat (Defense recommended); swap it whenever you gain a Fighter level.",
+    "fr": "Un don de style de combat (Défense recommandé) ; échangeable à chaque niveau de Guerrier.",
+    "es": "Obtienes una dote de estilo de combate (se recomienda Defensa); puedes cambiarla al subir un nivel de guerrero."
+  },
+  "feature:fighter:second-wind": {
+    "en": "Bonus Action: regain 1d10 + Fighter level HP; 2 uses (more later), 1 back on a Short Rest.",
+    "fr": "Action Bonus : récupérez 1d10 + niveau de Guerrier pv ; 2 utilisations (plus ensuite), 1 au Repos court.",
+    "es": "Acción adicional: recupera 1d10 + nivel de guerrero pg; 2 usos (más después), 1 en descanso corto."
+  },
+  "feature:fighter:weapon-mastery": {
+    "en": "Use the mastery properties of three kinds of weapons (more with level); swap one per Long Rest.",
+    "fr": "Bottes de trois types d’arme (plus avec le niveau) ; un changement par Repos long.",
+    "es": "Usa las propiedades de maestría de tres tipos de armas (más con el nivel); cambia una por descanso largo."
+  },
+  "feature:fighter:action-surge": {
+    "en": "One extra action on your turn (not Magic); once per Short or Long Rest, twice from level 17.",
+    "fr": "Une action supplémentaire à votre tour (sauf Magie) ; 1/Repos court ou long, 2 à partir du niveau 17.",
+    "es": "Una acción más en tu turno (salvo magia); 1/descanso corto o largo, 2 desde nivel 17."
+  },
+  "feature:fighter:tactical-mind": {
+    "en": "On a failed ability check, spend Second Wind to add 1d10; not spent if it still fails.",
+    "fr": "Test de caractéristique raté : dépensez Second souffle pour ajouter 1d10 ; non dépensé en cas d’échec.",
+    "es": "Prueba de característica fallida: gasta Tomar aliento para sumar 1d10; no se gasta si aun así fallas."
+  },
+  "feature:fighter:fighter-subclass": {
+    "en": "Choose a Fighter subclass (e.g. Champion); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Guerrier (p. ex. Champion) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de guerrero (p. ej., campeón); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:fighter:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:fighter:extra-attack": {
+    "en": "Attack twice instead of once when you take the Attack action.",
+    "fr": "Vous attaquez deux fois au lieu d’une quand vous effectuez l’action Attaque.",
+    "es": "Atacas dos veces en lugar de una al llevar a cabo la acción de atacar."
+  },
+  "feature:fighter:tactical-shift": {
+    "en": "Second Wind as a Bonus Action also lets you move half your Speed without Opportunity Attacks.",
+    "fr": "Second souffle par une action Bonus vous laisse aussi parcourir la moitié de votre Vitesse sans attaque d’Opportunité.",
+    "es": "Tomar aliento como acción adicional también te deja moverte la mitad de tu velocidad sin ataques de oportunidad."
+  },
+  "feature:fighter:indomitable": {
+    "en": "Reroll a failed save with a bonus equal to your Fighter level; 1/Long Rest (2 at 13, 3 at 17).",
+    "fr": "Relancez un JS raté avec un bonus égal à votre niveau de Guerrier ; 1/Repos long (2 au niv. 13, 3 au niv. 17).",
+    "es": "Repite una salvación fallida con un bonificador igual a tu nivel de guerrero; 1/descanso largo (2 a niv. 13, 3 a 17)."
+  },
+  "feature:fighter:tactical-master": {
+    "en": "Replace a weapon’s mastery property with Push, Sap or Slow for an attack.",
+    "fr": "Remplacez la botte d’une arme par Poussée, Sape ou Ralentissement pour une attaque.",
+    "es": "Sustituye la propiedad de maestría de un arma por debilitar, empujar o ralentizar en un ataque."
+  },
+  "feature:fighter:two-extra-attacks": {
+    "en": "Attack three times when you take the Attack action.",
+    "fr": "Vous attaquez trois fois quand vous effectuez l’action Attaque.",
+    "es": "Atacas tres veces al llevar a cabo la acción de atacar."
+  },
+  "feature:fighter:studied-attacks": {
+    "en": "After missing a creature, Advantage on your next attack against it before the end of your next turn.",
+    "fr": "Après avoir raté une créature, Avantage à votre prochaine attaque contre elle avant la fin de votre tour suivant.",
+    "es": "Tras fallar contra una criatura, ventaja en tu siguiente ataque contra ella antes del final de tu siguiente turno."
+  },
+  "feature:fighter:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Combat Prowess recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de prouesse martiale recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don de la pericia en combate)."
+  },
+  "feature:fighter:three-extra-attacks": {
+    "en": "Attack four times when you take the Attack action.",
+    "fr": "Vous attaquez quatre fois quand vous effectuez l’action Attaque.",
+    "es": "Atacas cuatro veces al llevar a cabo la acción de atacar."
+  },
+  "feature:fighter:champion:improved-critical": {
+    "en": "Weapon and Unarmed Strike attacks score a Critical Hit on 19–20.",
+    "fr": "Vos attaques avec une arme ou à mains nues font un coup critique sur 19–20.",
+    "es": "Tus ataques con armas y ataques sin armas causan crítico con 19–20."
+  },
+  "feature:fighter:champion:remarkable-athlete": {
+    "en": "Advantage on Initiative and Athletics; after a Critical Hit, move half your Speed without Opportunity Attacks.",
+    "fr": "Avantage à l’Initiative et en Athlétisme ; après un coup critique, déplacement de la moitié de votre Vitesse sans attaque d’Opportunité.",
+    "es": "Ventaja en iniciativa y Atletismo; tras un crítico, muévete la mitad de tu velocidad sin ataques de oportunidad."
+  },
+  "feature:fighter:champion:additional-fighting-style": {
+    "en": "Gain another Fighting Style feat.",
+    "fr": "Vous recevez un autre don de style de combat.",
+    "es": "Obtienes otra dote de estilo de combate."
+  },
+  "feature:fighter:champion:heroic-warrior": {
+    "en": "In combat, gain Heroic Inspiration when you start your turn without it.",
+    "fr": "En combat, vous recevez l’Inspiration héroïque au début de votre tour si vous ne l’avez pas.",
+    "es": "En combate, obtienes inspiración heroica si empiezas tu turno sin ella."
+  },
+  "feature:fighter:champion:superior-critical": {
+    "en": "Weapon and Unarmed Strike attacks score a Critical Hit on 18–20.",
+    "fr": "Vos attaques avec une arme ou à mains nues font un coup critique sur 18–20.",
+    "es": "Tus ataques con armas y ataques sin armas causan crítico con 18–20."
+  },
+  "feature:fighter:champion:survivor": {
+    "en": "Advantage on Death Saving Throws (18–20 counts as 20); while Bloodied, regain 5 + Con HP each turn.",
+    "fr": "Avantage aux JS contre la mort (18–20 compte comme 20) ; En péril, récupérez 5 + mod. Con pv à chaque tour.",
+    "es": "Ventaja en salvaciones contra muerte (18–20 cuenta como 20); maltrecho, recupera 5 + mod. por Con pg cada turno."
+  },
+  "feature:monk:martial-arts": {
+    "en": "Unarmored with Monk weapons: Bonus Action Unarmed Strike, Martial Arts die (scales), Dex for attack and damage.",
+    "fr": "Sans armure, armes de Moine : attaque à mains nues par action Bonus, dé d’arts martiaux (évolue), Dex à l’attaque et aux dégâts.",
+    "es": "Sin armadura, armas de monje: ataque sin armas como acción adicional, dado de Artes marciales, Des al ataque y daño."
+  },
+  "feature:monk:unarmored-defense": {
+    "en": "Without armor or Shield, AC = 10 + Dexterity + Wisdom modifiers.",
+    "fr": "Sans armure ni bouclier, CA = 10 + modificateurs de Dextérité et de Sagesse.",
+    "es": "Sin armadura ni escudo, CA = 10 + modificadores por Destreza y Sabiduría."
+  },
+  "feature:monk:monks-focus": {
+    "en": "Focus Points (= Monk level) back on a Short Rest: Flurry of Blows, Patient Defense, Step of the Wind.",
+    "fr": "Points de Credo (= niveau de Moine) récupérés au Repos court : Déluge de coups, Patience défensive, Porté par le vent.",
+    "es": "Puntos de concentración (= nivel de monje) en descanso corto: Ráfaga de golpes, Defensa paciente, Paso del viento."
+  },
+  "feature:monk:unarmored-movement": {
+    "en": "+10 ft Speed without armor or Shield; increases with Monk level.",
+    "fr": "+3 m de Vitesse sans armure ni bouclier ; augmente avec le niveau de Moine.",
+    "es": "+3 m de velocidad sin armadura ni escudo; aumenta con el nivel de monje."
+  },
+  "feature:monk:uncanny-metabolism": {
+    "en": "On Initiative, regain all Focus Points and Martial Arts die + Monk level HP; once per Long Rest.",
+    "fr": "À l’Initiative, récupérez tous vos points de Credo et dé d’arts martiaux + niveau de Moine pv ; 1/Repos long.",
+    "es": "Al tirar iniciativa, recupera los puntos de concentración y dado de Artes marciales + nivel pg; 1/descanso largo."
+  },
+  "feature:monk:deflect-attacks": {
+    "en": "Reaction: reduce B/P/S attack damage by 1d10 + Dex + Monk level; at 0, 1 Focus Point redirects it.",
+    "fr": "Réaction : réduisez les dégâts C/P/T d’une attaque de 1d10 + Dex + niveau ; à 0, 1 point de Credo la renvoie.",
+    "es": "Reacción: reduce el daño contundente/cortante/perforante 1d10 + Des + nivel; a 0, 1 punto de concentración lo redirige."
+  },
+  "feature:monk:monk-subclass": {
+    "en": "Choose a Monk subclass (e.g. Warrior of the Open Hand); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Moine (p. ex. credo de la Paume) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de monje (p. ej., guerrero de la mano abierta); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:monk:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:monk:slow-fall": {
+    "en": "Reaction: reduce falling damage by five times your Monk level.",
+    "fr": "Réaction : réduisez les dégâts de chute de cinq fois votre niveau de Moine.",
+    "es": "Reacción: reduce el daño por caída en cinco veces tu nivel de monje."
+  },
+  "feature:monk:extra-attack": {
+    "en": "Attack twice instead of once when you take the Attack action.",
+    "fr": "Vous attaquez deux fois au lieu d’une quand vous effectuez l’action Attaque.",
+    "es": "Atacas dos veces en lugar de una al llevar a cabo la acción de atacar."
+  },
+  "feature:monk:stunning-strike": {
+    "en": "Once per turn on a hit, 1 Focus Point: Con save or Stunned; on a success, Speed halved, next attack with Advantage.",
+    "fr": "Une fois par tour en touchant, 1 point de Credo : JS Con ou Étourdi ; sinon Vitesse réduite de moitié et Avantage à la prochaine attaque.",
+    "es": "1/turno al acertar, 1 punto de concentración: salvación de Con o aturdido; si la supera, velocidad a la mitad y ventaja."
+  },
+  "feature:monk:empowered-strikes": {
+    "en": "Unarmed Strikes can deal Force damage instead of their normal type.",
+    "fr": "Vos attaques à mains nues peuvent infliger des dégâts de force au lieu de leur type normal.",
+    "es": "Tus ataques sin armas pueden causar daño de fuerza en lugar de su tipo normal."
+  },
+  "feature:monk:evasion": {
+    "en": "Dex save for half damage: no damage on a success, half on a failure (not while Incapacitated).",
+    "fr": "JS de Dextérité pour moitié dégâts : aucun dégât en cas de réussite, moitié en cas d’échec (sauf Neutralisé).",
+    "es": "Salvación de Des para mitad de daño: sin daño si la superas, mitad si la fallas (no estando incapacitado)."
+  },
+  "feature:monk:acrobatic-movement": {
+    "en": "Without armor or Shield, move along vertical surfaces and across liquids on your turn.",
+    "fr": "Sans armure ni bouclier, vous vous déplacez sur les parois verticales et les liquides pendant votre tour.",
+    "es": "Sin armadura ni escudo, te mueves por superficies verticales y sobre líquidos durante tu turno."
+  },
+  "feature:monk:heightened-focus": {
+    "en": "Flurry of Blows makes three strikes; Patient Defense grants Temporary HP; Step of the Wind carries an ally.",
+    "fr": "Déluge de coups : trois attaques ; Patience défensive : pv temporaires ; Porté par le vent emmène un allié.",
+    "es": "Ráfaga de golpes hace tres ataques; Defensa paciente da pg temporales; Paso del viento lleva a un aliado."
+  },
+  "feature:monk:self-restoration": {
+    "en": "End Charmed, Frightened or Poisoned on yourself at the end of each turn; no Exhaustion from hunger or thirst.",
+    "fr": "Mettez fin à Charmé, Effrayé ou Empoisonné en fin de tour ; pas d’Épuisement dû à la faim ou la soif.",
+    "es": "Al final de cada turno, termina hechizado, asustado o envenenado en ti; sin cansancio por hambre o sed."
+  },
+  "feature:monk:deflect-energy": {
+    "en": "Deflect Attacks works against attacks of any damage type.",
+    "fr": "Déviation d’assaut fonctionne contre tous les types de dégâts.",
+    "es": "Desviar ataques funciona contra ataques de cualquier tipo de daño."
+  },
+  "feature:monk:disciplined-survivor": {
+    "en": "Proficiency in all saving throws; 1 Focus Point rerolls a failed save.",
+    "fr": "Maîtrise de tous les jets de sauvegarde ; 1 point de Credo relance un JS raté.",
+    "es": "Competencia en todas las tiradas de salvación; 1 punto de concentración repite una salvación fallida."
+  },
+  "feature:monk:perfect-focus": {
+    "en": "On Initiative without Uncanny Metabolism, regain Focus Points up to 4.",
+    "fr": "À l’Initiative sans Métabolisme surnaturel, récupérez des points de Credo jusqu’à 4.",
+    "es": "Al tirar iniciativa sin usar Metabolismo asombroso, recupera puntos de concentración hasta tener 4."
+  },
+  "feature:monk:superior-defense": {
+    "en": "3 Focus Points at turn start: Resistance to all damage but Force for 1 minute.",
+    "fr": "3 points de Credo en début de tour : Résistance à tous les dégâts sauf de force pendant 1 minute.",
+    "es": "3 puntos de concentración al principio del turno: resistencia a todo el daño salvo fuerza durante 1 minuto."
+  },
+  "feature:monk:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Irresistible Offense recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur d’attaque irrésistible recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del ataque imparable)."
+  },
+  "feature:monk:body-and-mind": {
+    "en": "Dexterity and Wisdom +4, to a maximum of 25.",
+    "fr": "Dextérité et Sagesse +4, jusqu’à un maximum de 25.",
+    "es": "Destreza y Sabiduría +4, hasta un máximo de 25."
+  },
+  "feature:monk:warrior-of-the-open-hand:open-hand-technique": {
+    "en": "Flurry of Blows hits can Addle (no Opportunity Attacks), Push 15 ft (Str save) or Topple (Dex save, Prone).",
+    "fr": "Déluge de coups peut imposer Hésitation (pas d’attaque d’Opportunité), Bourrade 4,50 m (JS For) ou Renversement (JS Dex, À terre).",
+    "es": "Los aciertos de Ráfaga de golpes pueden Desconcertar (sin ataques de oportunidad), Empujar 4,5 m (Fue) o Derribar (Des)."
+  },
+  "feature:monk:warrior-of-the-open-hand:wholeness-of-body": {
+    "en": "Bonus Action: heal Martial Arts die + Wis modifier; Wis modifier uses per Long Rest.",
+    "fr": "Action Bonus : récupérez dé d’arts martiaux + mod. Sag pv ; mod. Sag utilisations par Repos long.",
+    "es": "Acción adicional: cura dado de Artes marciales + mod. por Sab; usos = mod. por Sab por descanso largo."
+  },
+  "feature:monk:warrior-of-the-open-hand:fleet-step": {
+    "en": "After any other Bonus Action, you can also use Step of the Wind.",
+    "fr": "Après toute autre action Bonus, vous pouvez aussi utiliser Porté par le vent.",
+    "es": "Tras cualquier otra acción adicional, puedes usar también Paso del viento."
+  },
+  "feature:monk:warrior-of-the-open-hand:quivering-palm": {
+    "en": "4 Focus Points on an Unarmed Strike hit: end the vibrations later for 10d12 Force (Con save for half).",
+    "fr": "4 points de Credo sur une attaque à mains nues : terminez plus tard les vibrations pour 10d12 force (JS Con, moitié).",
+    "es": "4 puntos de concentración al acertar sin armas: luego terminas las vibraciones, 10d12 de fuerza (Con, mitad)."
+  },
+  "feature:paladin:lay-on-hands": {
+    "en": "Bonus Action: heal from a pool of 5 × Paladin level HP per Long Rest; 5 points remove Poisoned.",
+    "fr": "Action Bonus : soignez depuis une réserve de 5 × niveau de Paladin pv par Repos long ; 5 points retirent Empoisonné.",
+    "es": "Acción adicional: cura de una reserva de 5 × nivel de paladín pg por descanso largo; 5 puntos eliminan envenenado."
+  },
+  "feature:paladin:spellcasting": {
+    "en": "Prepared Charisma spellcasting from the Paladin list; Holy Symbol as focus; swap one spell per Long Rest.",
+    "fr": "Sorts préparés de Paladin basés sur le Charisme ; symbole sacré comme focaliseur ; un sort échangé par Repos long.",
+    "es": "Conjuros preparados de paladín con Carisma; símbolo sagrado como canalizador; cambia un conjuro por descanso largo."
+  },
+  "feature:paladin:weapon-mastery": {
+    "en": "Use the mastery properties of two kinds of proficient weapons; change them on a Long Rest.",
+    "fr": "Bottes de deux types d’arme maîtrisée ; modifiables à chaque Repos long.",
+    "es": "Usa las propiedades de maestría de dos tipos de armas con las que seas competente; cámbialas en descanso largo."
+  },
+  "feature:paladin:fighting-style": {
+    "en": "A Fighting Style feat, or Blessed Warrior: two Cleric cantrips using Charisma.",
+    "fr": "Un don de style de combat, ou Combattant béni : deux sorts mineurs de Clerc basés sur le Charisme.",
+    "es": "Una dote de estilo de combate, o Guerrero bendito: dos trucos de clérigo con Carisma."
+  },
+  "feature:paladin:paladins-smite": {
+    "en": "Divine Smite always prepared; cast it once per Long Rest without a spell slot.",
+    "fr": "Châtiment divin toujours préparé ; lancé une fois par Repos long sans emplacement.",
+    "es": "Castigo divino siempre preparado; lánzalo una vez por descanso largo sin espacio de conjuro."
+  },
+  "feature:paladin:channel-divinity": {
+    "en": "Divine Sense (Bonus Action: locate Celestials, Fiends, Undead within 60 ft); 2 uses, 1 back on a Short Rest.",
+    "fr": "Perception divine (action Bonus : repère célestes, fiélons, morts-vivants à 18 m) ; 2 utilisations, 1 au Repos court.",
+    "es": "Sentidos divinos (acción adicional: celestiales, infernales y muertos vivientes a 18 m); 2 usos, 1 en descanso corto."
+  },
+  "feature:paladin:paladin-subclass": {
+    "en": "Choose a Paladin subclass (e.g. Oath of Devotion); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Paladin (p. ex. serment de Dévotion) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de paladín (p. ej., juramento de entrega); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:paladin:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:paladin:extra-attack": {
+    "en": "Attack twice instead of once when you take the Attack action.",
+    "fr": "Vous attaquez deux fois au lieu d’une quand vous effectuez l’action Attaque.",
+    "es": "Atacas dos veces en lugar de una al llevar a cabo la acción de atacar."
+  },
+  "feature:paladin:faithful-steed": {
+    "en": "Find Steed always prepared; cast it once per Long Rest without a spell slot.",
+    "fr": "Appel de destrier toujours préparé ; lancé une fois par Repos long sans emplacement.",
+    "es": "Hallar corcel siempre preparado; lánzalo una vez por descanso largo sin espacio de conjuro."
+  },
+  "feature:paladin:aura-of-protection": {
+    "en": "10-ft Emanation: you and allies add your Charisma modifier (min +1) to saving throws.",
+    "fr": "Émanation de 3 m : vous et vos alliés ajoutez votre mod. de Charisme (min. +1) aux jets de sauvegarde.",
+    "es": "Emanación de 3 m: tus aliados y tú sumáis tu mod. por Carisma (mín. +1) a las tiradas de salvación."
+  },
+  "feature:paladin:abjure-foes": {
+    "en": "Channel Divinity, Magic action: Cha modifier creatures within 60 ft, Wis save or Frightened and limited actions.",
+    "fr": "Conduit divin, action Magie : mod. Cha créatures à 18 m, JS Sag ou Effrayées et actions limitées.",
+    "es": "Canalizar divinidad, acción de magia: mod. por Car criaturas a 18 m, salvación de Sab o asustadas y acciones limitadas."
+  },
+  "feature:paladin:aura-of-courage": {
+    "en": "You and allies in your Aura of Protection are immune to Frightened.",
+    "fr": "Vous et vos alliés dans votre Aura de protection êtes immunisés contre l’état Effrayé.",
+    "es": "Tus aliados y tú dentro de tu Aura de protección tenéis inmunidad al estado de asustado."
+  },
+  "feature:paladin:radiant-strikes": {
+    "en": "Melee weapon and Unarmed Strike hits deal an extra 1d8 Radiant damage.",
+    "fr": "Vos coups avec une arme de corps à corps ou à mains nues infligent 1d8 dégâts radiants de plus.",
+    "es": "Tus aciertos con armas cuerpo a cuerpo o ataques sin armas causan 1d8 de daño radiante adicional."
+  },
+  "feature:paladin:restoring-touch": {
+    "en": "Lay On Hands can remove Blinded, Charmed, Deafened, Frightened, Paralyzed or Stunned, 5 points each.",
+    "fr": "Imposition des mains retire Aveuglé, Charmé, Assourdi, Effrayé, Paralysé ou Étourdi, pour 5 points chacun.",
+    "es": "Imponer las manos puede eliminar cegado, hechizado, ensordecido, asustado, paralizado o aturdido, 5 puntos cada uno."
+  },
+  "feature:paladin:aura-expansion": {
+    "en": "Your Aura of Protection becomes a 30-ft Emanation.",
+    "fr": "Votre Aura de protection devient une Émanation de 9 m.",
+    "es": "Tu Aura de protección pasa a ser una emanación de 9 m."
+  },
+  "feature:paladin:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Truesight recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de Vision lucide recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don de la visión verdadera)."
+  },
+  "feature:paladin:oath-of-devotion:oath-of-devotion-spells": {
+    "en": "Always-prepared oath spells by Paladin level (Protection from Evil and Good, Shield of Faith, Aid…).",
+    "fr": "Sorts de serment toujours préparés selon le niveau (Protection contre le mal et le bien, Bouclier de la foi, Aide…).",
+    "es": "Conjuros de juramento siempre preparados según tu nivel (Protección contra el bien y el mal, Escudo de fe, Auxilio…)."
+  },
+  "feature:paladin:oath-of-devotion:sacred-weapon": {
+    "en": "Channel Divinity with the Attack action: weapon adds Cha to attacks, can deal Radiant, sheds light; 10 minutes.",
+    "fr": "Conduit divin avec l’action Attaque : l’arme ajoute le Cha à l’attaque, peut infliger des dégâts radiants, éclaire ; 10 minutes.",
+    "es": "Canalizar divinidad con la acción de atacar: el arma suma Car al ataque, puede causar daño radiante, da luz; 10 minutos."
+  },
+  "feature:paladin:oath-of-devotion:aura-of-devotion": {
+    "en": "You and allies in your Aura of Protection are immune to Charmed.",
+    "fr": "Vous et vos alliés dans votre Aura de protection êtes immunisés contre l’état Charmé.",
+    "es": "Tus aliados y tú dentro de tu Aura de protección tenéis inmunidad al estado de hechizado."
+  },
+  "feature:paladin:oath-of-devotion:smite-of-protection": {
+    "en": "When you cast Divine Smite, you and allies in your aura have Half Cover until your next turn.",
+    "fr": "Quand vous lancez Châtiment divin, vous et vos alliés dans l’aura avez un Abri partiel jusqu’à votre tour suivant.",
+    "es": "Al lanzar Castigo divino, tus aliados y tú en el aura tenéis cobertura media hasta tu siguiente turno."
+  },
+  "feature:paladin:oath-of-devotion:holy-nimbus": {
+    "en": "Bonus Action, 10 minutes: Advantage on saves vs Fiends and Undead, enemies in aura take Cha + PB Radiant, sunlight.",
+    "fr": "Action Bonus, 10 minutes : Avantage aux JS contre fiélons et morts-vivants, ennemis dans l’aura subissent Cha + maîtrise radiants, soleil.",
+    "es": "Acción adicional, 10 min: ventaja en salvaciones ante infernales y muertos vivientes, aura de daño radiante y luz solar."
+  },
+  "feature:ranger:spellcasting": {
+    "en": "Prepared Wisdom spellcasting from the Ranger list; Druidic Focus; swap one spell per Long Rest.",
+    "fr": "Sorts préparés de Rôdeur basés sur la Sagesse ; focaliseur druidique ; un sort échangé par Repos long.",
+    "es": "Conjuros preparados de explorador con Sabiduría; canalizador druídico; cambia un conjuro por descanso largo."
+  },
+  "feature:ranger:favored-enemy": {
+    "en": "Hunter’s Mark always prepared; cast it free twice per Long Rest (more with level).",
+    "fr": "Marque du chasseur toujours préparé ; lancé gratuitement deux fois par Repos long (plus avec le niveau).",
+    "es": "Marca del cazador siempre preparado; lánzalo gratis dos veces por descanso largo (más con el nivel)."
+  },
+  "feature:ranger:weapon-mastery": {
+    "en": "Use the mastery properties of two kinds of proficient weapons; change them on a Long Rest.",
+    "fr": "Bottes de deux types d’arme maîtrisée ; modifiables à chaque Repos long.",
+    "es": "Usa las propiedades de maestría de dos tipos de armas con las que seas competente; cámbialas en descanso largo."
+  },
+  "feature:ranger:deft-explorer": {
+    "en": "Expertise in one proficient skill and two extra languages.",
+    "fr": "Expertise dans une compétence maîtrisée et deux langues supplémentaires.",
+    "es": "Pericia en una habilidad en la que seas competente y dos idiomas más."
+  },
+  "feature:ranger:fighting-style": {
+    "en": "A Fighting Style feat, or Druidic Warrior: two Druid cantrips using Wisdom.",
+    "fr": "Un don de style de combat, ou Combattant druidique : deux sorts mineurs de Druide basés sur la Sagesse.",
+    "es": "Una dote de estilo de combate, o Guerrero druídico: dos trucos de druida con Sabiduría."
+  },
+  "feature:ranger:ranger-subclass": {
+    "en": "Choose a Ranger subclass (e.g. Hunter); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Rôdeur (p. ex. Chasseur) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de explorador (p. ej., cazador); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:ranger:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:ranger:extra-attack": {
+    "en": "Attack twice instead of once when you take the Attack action.",
+    "fr": "Vous attaquez deux fois au lieu d’une quand vous effectuez l’action Attaque.",
+    "es": "Atacas dos veces en lugar de una al llevar a cabo la acción de atacar."
+  },
+  "feature:ranger:roving": {
+    "en": "+10 ft Speed without Heavy armor; Climb and Swim Speed equal to your Speed.",
+    "fr": "+3 m de Vitesse sans armure lourde ; Vitesse d’escalade et de nage égales à votre Vitesse.",
+    "es": "+3 m de velocidad sin armadura pesada; velocidad trepando y nadando iguales a tu velocidad."
+  },
+  "feature:ranger:expertise": {
+    "en": "Expertise in two more proficient skills.",
+    "fr": "Expertise dans deux autres compétences maîtrisées.",
+    "es": "Pericia en otras dos habilidades en las que seas competente."
+  },
+  "feature:ranger:tireless": {
+    "en": "Magic action: 1d8 + Wis Temporary HP (Wis mod uses per Long Rest); Short Rest removes 1 Exhaustion level.",
+    "fr": "Action Magie : 1d8 + Sag pv temporaires (mod. Sag fois par Repos long) ; un Repos court retire 1 niveau d’Épuisement.",
+    "es": "Acción de magia: 1d8 + Sab pg temporales (mod. por Sab veces por descanso largo); descanso corto: −1 nivel de cansancio."
+  },
+  "feature:ranger:relentless-hunter": {
+    "en": "Taking damage can’t break your Concentration on Hunter’s Mark.",
+    "fr": "Subir des dégâts ne rompt pas votre Concentration sur Marque du chasseur.",
+    "es": "Recibir daño no rompe tu concentración en Marca del cazador."
+  },
+  "feature:ranger:natures-veil": {
+    "en": "Bonus Action: Invisible until the end of your next turn; Wis modifier uses per Long Rest.",
+    "fr": "Action Bonus : Invisible jusqu’à la fin de votre tour suivant ; mod. Sag utilisations par Repos long.",
+    "es": "Acción adicional: invisible hasta el final de tu siguiente turno; usos = mod. por Sab por descanso largo."
+  },
+  "feature:ranger:precise-hunter": {
+    "en": "Advantage on attack rolls against the creature marked by your Hunter’s Mark.",
+    "fr": "Avantage aux jets d’attaque contre la créature visée par votre Marque du chasseur.",
+    "es": "Ventaja en las tiradas de ataque contra la criatura con tu Marca del cazador."
+  },
+  "feature:ranger:feral-senses": {
+    "en": "Blindsight 30 ft.",
+    "fr": "Vision aveugle à 9 m.",
+    "es": "Visión ciega hasta 9 m."
+  },
+  "feature:ranger:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Dimensional Travel recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de déplacement dimensionnel recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del viaje dimensional)."
+  },
+  "feature:ranger:foe-slayer": {
+    "en": "Hunter’s Mark damage die becomes a d10 instead of a d6.",
+    "fr": "Le dé de dégâts de Marque du chasseur devient un d10 au lieu d’un d6.",
+    "es": "El dado de daño de Marca del cazador pasa a ser un d10 en lugar de un d6."
+  },
+  "feature:ranger:hunter:hunters-lore": {
+    "en": "You know the Immunities, Resistances and Vulnerabilities of a creature under your Hunter’s Mark.",
+    "fr": "Vous connaissez les Immunités, Résistances et Vulnérabilités de la créature marquée par votre Marque du chasseur.",
+    "es": "Sabes las inmunidades, resistencias y vulnerabilidades de una criatura con tu Marca del cazador."
+  },
+  "feature:ranger:hunter:hunters-prey": {
+    "en": "Colossus Slayer (+1d8 once per turn vs a wounded target) or Horde Breaker (extra attack on an adjacent foe).",
+    "fr": "Goût du sang (+1d8 une fois par tour contre une cible blessée) ou Briseur de hordes (attaque en plus sur un voisin).",
+    "es": "Azote de colosos (+1d8 1/turno contra un objetivo herido) o Destructor de hordas (ataque extra a un enemigo cercano)."
+  },
+  "feature:ranger:hunter:defensive-tactics": {
+    "en": "Escape the Horde (Opportunity Attacks against you have Disadvantage) or Multiattack Defense.",
+    "fr": "Cauchemar de la horde (Désavantage aux attaques d’Opportunité contre vous) ou Défense contre les attaques multiples.",
+    "es": "Escapar de la horda (los ataques de oportunidad contra ti tienen desventaja) o Defensa contra ataques múltiples."
+  },
+  "feature:ranger:hunter:superior-hunters-prey": {
+    "en": "Once per turn, Hunter’s Mark extra damage also hits another creature within 30 ft of the target.",
+    "fr": "Une fois par tour, les dégâts de Marque du chasseur touchent aussi une autre créature à 9 m de la cible.",
+    "es": "Una vez por turno, el daño extra de Marca del cazador también alcanza a otra criatura a 9 m del objetivo."
+  },
+  "feature:ranger:hunter:superior-hunters-defense": {
+    "en": "Reaction when damaged: Resistance to that damage type until the end of the turn.",
+    "fr": "Réaction quand vous subissez des dégâts : Résistance à ce type de dégâts jusqu’à la fin du tour.",
+    "es": "Reacción al recibir daño: resistencia a ese tipo de daño hasta el final del turno."
+  },
+  "feature:rogue:expertise": {
+    "en": "Expertise in two proficient skills; two more at Rogue level 6.",
+    "fr": "Expertise dans deux compétences maîtrisées ; deux de plus au niveau 6 de Roublard.",
+    "es": "Pericia en dos habilidades en las que seas competente; dos más a nivel 6 de pícaro."
+  },
+  "feature:rogue:sneak-attack": {
+    "en": "Once per turn, +1d6 (scales) with a Finesse or Ranged weapon if you have Advantage or an ally is adjacent.",
+    "fr": "Une fois par tour, +1d6 (évolue) avec une arme de finesse ou à distance si Avantage ou un allié au contact.",
+    "es": "Una vez por turno, +1d6 (aumenta) con arma sutil o a distancia si tienes ventaja o un aliado está junto al objetivo."
+  },
+  "feature:rogue:thieves-cant": {
+    "en": "You know Thieves’ Cant and one other language.",
+    "fr": "Vous connaissez l’argot des voleurs et une autre langue.",
+    "es": "Conoces la jerga de ladrones y otro idioma."
+  },
+  "feature:rogue:weapon-mastery": {
+    "en": "Use the mastery properties of two kinds of proficient weapons; change them on a Long Rest.",
+    "fr": "Bottes de deux types d’arme maîtrisée ; modifiables à chaque Repos long.",
+    "es": "Usa las propiedades de maestría de dos tipos de armas con las que seas competente; cámbialas en descanso largo."
+  },
+  "feature:rogue:cunning-action": {
+    "en": "Dash, Disengage or Hide as a Bonus Action.",
+    "fr": "Pointe, Désengagement ou Furtivité par une action Bonus.",
+    "es": "Correr, destrabarse o esconderse como acción adicional."
+  },
+  "feature:rogue:rogue-subclass": {
+    "en": "Choose a Rogue subclass (e.g. Thief); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Roublard (p. ex. Voleur) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de pícaro (p. ej., ladrón); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:rogue:steady-aim": {
+    "en": "Bonus Action if you haven’t moved: Advantage on your next attack this turn; Speed 0 afterwards.",
+    "fr": "Action Bonus si vous n’avez pas bougé : Avantage à votre prochaine attaque du tour ; Vitesse 0 ensuite.",
+    "es": "Acción adicional si no te has movido: ventaja en tu siguiente ataque del turno; después, velocidad 0."
+  },
+  "feature:rogue:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:rogue:cunning-strike": {
+    "en": "Forgo Sneak Attack dice for effects: Poison, Trip or Withdraw (1d6 each); DC 8 + Dex + PB.",
+    "fr": "Renoncez à des dés d’Attaque sournoise pour Poison, Croc-en-jambe ou repli (1d6 chacun) ; DD 8 + Dex + maîtrise.",
+    "es": "Renuncia a dados de Ataque furtivo: Veneno, Tropiezo o Retirada (1d6 cada uno); CD 8 + Des + bonif. por competencia."
+  },
+  "feature:rogue:uncanny-dodge": {
+    "en": "Reaction: halve the damage of an attack that hits you from an attacker you can see.",
+    "fr": "Réaction : divisez par deux les dégâts d’une attaque qui vous touche, d’un assaillant que vous voyez.",
+    "es": "Reacción: reduce a la mitad el daño de un ataque que te acierte de un atacante que puedas ver."
+  },
+  "feature:rogue:evasion": {
+    "en": "Dex save for half damage: no damage on a success, half on a failure (not while Incapacitated).",
+    "fr": "JS de Dextérité pour moitié dégâts : aucun dégât en cas de réussite, moitié en cas d’échec (sauf Neutralisé).",
+    "es": "Salvación de Des para mitad de daño: sin daño si la superas, mitad si la fallas (no estando incapacitado)."
+  },
+  "feature:rogue:reliable-talent": {
+    "en": "Ability checks with a skill or tool proficiency treat a d20 roll of 9 or lower as 10.",
+    "fr": "Aux tests avec une compétence ou un outil maîtrisé, un résultat de 9 ou moins au d20 compte comme 10.",
+    "es": "En pruebas con una habilidad o herramienta en la que seas competente, un 9 o menos en el d20 cuenta como 10."
+  },
+  "feature:rogue:improved-cunning-strike": {
+    "en": "Use up to two Cunning Strike effects per Sneak Attack, paying each cost.",
+    "fr": "Jusqu’à deux effets de Frappe malicieuse par Attaque sournoise, en payant chaque coût.",
+    "es": "Usa hasta dos efectos de Golpe astuto por Ataque furtivo, pagando cada coste."
+  },
+  "feature:rogue:devious-strikes": {
+    "en": "New Cunning Strikes: Daze (2d6), Obscure (3d6, Blinded), Knock Out (6d6, Unconscious).",
+    "fr": "Nouvelles Frappes malicieuses : Hébéter (2d6), Aveugler (3d6), Assommer (6d6, Inconscient).",
+    "es": "Nuevos Golpes astutos: Confundir (2d6), Ofuscar (3d6, cegado), Noquear (6d6, inconsciente)."
+  },
+  "feature:rogue:slippery-mind": {
+    "en": "Proficiency in Wisdom and Charisma saving throws.",
+    "fr": "Maîtrise des jets de sauvegarde de Sagesse et de Charisme.",
+    "es": "Competencia en las tiradas de salvación de Sabiduría y Carisma."
+  },
+  "feature:rogue:elusive": {
+    "en": "No attack roll has Advantage against you unless you are Incapacitated.",
+    "fr": "Aucun jet d’attaque n’a l’Avantage contre vous, sauf si vous êtes Neutralisé.",
+    "es": "Ninguna tirada de ataque tiene ventaja contra ti salvo que estés incapacitado."
+  },
+  "feature:rogue:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of the Night Spirit recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de l’esprit nocturne recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del espíritu de la noche)."
+  },
+  "feature:rogue:stroke-of-luck": {
+    "en": "Turn a failed D20 Test into a 20; once per Short or Long Rest.",
+    "fr": "Transformez un test d20 raté en 20 ; une fois par Repos court ou long.",
+    "es": "Convierte una prueba con d20 fallida en un 20; una vez por descanso corto o largo."
+  },
+  "feature:rogue:thief:fast-hands": {
+    "en": "Bonus Action: Sleight of Hand check (locks, traps, pockets), Utilize action, or use a magic item.",
+    "fr": "Action Bonus : test d’Escamotage (serrure, piège, poches), action Utilisation ou objet magique.",
+    "es": "Acción adicional: prueba de Juego de manos (cerraduras, trampas, bolsillos), acción de utilizar o usar un objeto mágico."
+  },
+  "feature:rogue:thief:second-story-work": {
+    "en": "Climb Speed equal to your Speed; jump distance uses Dexterity instead of Strength.",
+    "fr": "Vitesse d’escalade égale à votre Vitesse ; distance de saut basée sur la Dextérité au lieu de la Force.",
+    "es": "Velocidad trepando igual a tu velocidad; la distancia de salto usa Destreza en lugar de Fuerza."
+  },
+  "feature:rogue:thief:supreme-sneak": {
+    "en": "Cunning Strike Stealth Attack (1d6): attacking doesn’t end Invisible from Hide if you end behind cover.",
+    "fr": "Frappe malicieuse Attaque furtive (1d6) : attaquer ne met pas fin à l’état Invisible si vous finissez à l’abri.",
+    "es": "Golpe astuto Ataque sigiloso (1d6): atacar no termina el invisible de esconderte si acabas tras cobertura."
+  },
+  "feature:rogue:thief:use-magic-device": {
+    "en": "Attune to four magic items; 1 in 6 to save charges; use any Spell Scroll with Intelligence.",
+    "fr": "Harmonisation avec quatre objets magiques ; 1 chance sur 6 d’économiser les charges ; tout parchemin de sort avec l’Intelligence.",
+    "es": "Sintonízate con cuatro objetos mágicos; 1 de 6 de no gastar cargas; usa cualquier pergamino de conjuro con Inteligencia."
+  },
+  "feature:rogue:thief:thiefs-reflexes": {
+    "en": "Take two turns in the first round of combat: at your Initiative and at Initiative − 10.",
+    "fr": "Deux tours au premier round de combat : à votre Initiative et à Initiative − 10.",
+    "es": "Dos turnos en el primer asalto de combate: con tu iniciativa y con iniciativa − 10."
+  },
+  "feature:sorcerer:spellcasting": {
+    "en": "Prepared Charisma spellcasting from the Sorcerer list; Arcane Focus; swap one spell per level.",
+    "fr": "Sorts préparés d’Ensorceleur basés sur le Charisme ; focaliseur arcanique ; un sort échangé par niveau.",
+    "es": "Conjuros preparados de hechicero con Carisma; canalizador arcano; cambia un conjuro por nivel."
+  },
+  "feature:sorcerer:innate-sorcery": {
+    "en": "Bonus Action, 1 minute: spell save DC +1 and Advantage on Sorcerer spell attacks; 2 uses per Long Rest.",
+    "fr": "Action Bonus, 1 minute : DD des sorts +1 et Avantage aux attaques de sorts d’Ensorceleur ; 2 fois par Repos long.",
+    "es": "Acción adicional, 1 minuto: CD de salvación +1 y ventaja en ataques de conjuro de hechicero; 2 usos por descanso largo."
+  },
+  "feature:sorcerer:font-of-magic": {
+    "en": "Sorcery Points (= Sorcerer level) per Long Rest; convert slots to points, or points to slots (Bonus Action).",
+    "fr": "Points de Sorcellerie (= niveau d’Ensorceleur) par Repos long ; emplacements en points, ou points en emplacements (action Bonus).",
+    "es": "Puntos de hechicería (= nivel) por descanso largo; convierte espacios en puntos o puntos en espacios (acción adicional)."
+  },
+  "feature:sorcerer:metamagic": {
+    "en": "Two Metamagic options (more at 10 and 17) that modify spells for Sorcery Points; one per spell.",
+    "fr": "Deux options de Métamagie (plus aux niveaux 10 et 17) qui modifient vos sorts contre des points de Sorcellerie.",
+    "es": "Dos opciones de metamagia (más a niveles 10 y 17) que modifican conjuros por puntos de hechicería; una por conjuro."
+  },
+  "feature:sorcerer:sorcerer-subclass": {
+    "en": "Choose a Sorcerer subclass (e.g. Draconic Sorcery); its features come at set levels.",
+    "fr": "Choisissez une sous-classe d’Ensorceleur (p. ex. Sorcellerie draconique) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de hechicero (p. ej., hechicería dracónica); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:sorcerer:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:sorcerer:sorcerous-restoration": {
+    "en": "On a Short Rest, regain Sorcery Points up to half your Sorcerer level; once per Long Rest.",
+    "fr": "Au Repos court, récupérez des points de Sorcellerie jusqu’à la moitié de votre niveau ; 1/Repos long.",
+    "es": "En descanso corto, recupera puntos de hechicería hasta la mitad de tu nivel de hechicero; 1/descanso largo."
+  },
+  "feature:sorcerer:sorcery-incarnate": {
+    "en": "Spend 2 Sorcery Points for extra Innate Sorcery; while active, two Metamagic options per spell.",
+    "fr": "2 points de Sorcellerie pour une Sorcellerie innée de plus ; active, deux options de Métamagie par sort.",
+    "es": "2 puntos de hechicería dan otro uso de Hechicería innata; mientras está activa, dos opciones de metamagia por conjuro."
+  },
+  "feature:sorcerer:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Dimensional Travel recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de déplacement dimensionnel recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del viaje dimensional)."
+  },
+  "feature:sorcerer:arcane-apotheosis": {
+    "en": "While Innate Sorcery is active, one free Metamagic option on each of your turns.",
+    "fr": "Pendant Sorcellerie innée, une option de Métamagie gratuite à chacun de vos tours.",
+    "es": "Con Hechicería innata activa, una opción de metamagia gratis en cada uno de tus turnos."
+  },
+  "feature:sorcerer:draconic-sorcery:draconic-resilience": {
+    "en": "+3 HP, then +1 per Sorcerer level; without armor, AC = 10 + Dex + Cha modifiers.",
+    "fr": "+3 pv, puis +1 par niveau d’Ensorceleur ; sans armure, CA = 10 + mod. Dex + mod. Cha.",
+    "es": "+3 pg, luego +1 por nivel de hechicero; sin armadura, CA = 10 + mod. por Des + mod. por Car."
+  },
+  "feature:sorcerer:draconic-sorcery:draconic-spells": {
+    "en": "Always-prepared draconic spells by Sorcerer level (Chromatic Orb, Dragon’s Breath, Fly…).",
+    "fr": "Sorts draconiques toujours préparés selon le niveau d’Ensorceleur (Orbe chromatique, Souffle du dragon, Vol…).",
+    "es": "Conjuros dracónicos siempre preparados según tu nivel de hechicero (Orbe cromático, Aliento de dragón, Volar…)."
+  },
+  "feature:sorcerer:draconic-sorcery:elemental-affinity": {
+    "en": "Pick Acid, Cold, Fire, Lightning or Poison: Resistance to it and +Cha to one damage roll of such spells.",
+    "fr": "Acide, froid, feu, foudre ou poison : Résistance à ce type et +Cha à un jet de dégâts de ces sorts.",
+    "es": "Elige ácido, frío, fuego, relámpago o veneno: resistencia a ese tipo y +Car a una tirada de daño de esos conjuros."
+  },
+  "feature:sorcerer:draconic-sorcery:dragon-wings": {
+    "en": "Bonus Action: Fly Speed 60 ft for 1 hour; once per Long Rest or 3 Sorcery Points.",
+    "fr": "Action Bonus : Vitesse de vol de 18 m pendant 1 heure ; 1/Repos long ou 3 points de Sorcellerie.",
+    "es": "Acción adicional: velocidad volando 18 m durante 1 hora; 1/descanso largo o 3 puntos de hechicería."
+  },
+  "feature:sorcerer:draconic-sorcery:dragon-companion": {
+    "en": "Summon Dragon without Material component, once free per Long Rest; can skip Concentration (1 minute).",
+    "fr": "Convocation de dragon sans composante matérielle, une fois gratuite par Repos long ; sans Concentration possible (1 minute).",
+    "es": "Invocar dragón sin componente material, una vez gratis por descanso largo; puede no requerir concentración (1 minuto)."
+  },
+  "feature:warlock:eldritch-invocations": {
+    "en": "Choose Eldritch Invocations (more with level); swap one each time you gain a Warlock level.",
+    "fr": "Choisissez des manifestations occultes (plus avec le niveau) ; une échangeable à chaque niveau d’Occultiste.",
+    "es": "Elige invocaciones sobrenaturales (más con el nivel); cambia una cada vez que subas un nivel de brujo."
+  },
+  "feature:warlock:pact-magic": {
+    "en": "Charisma spellcasting with few same-level Pact slots that return on a Short or Long Rest.",
+    "fr": "Sorts basés sur le Charisme, quelques emplacements de pacte de même niveau récupérés au Repos court ou long.",
+    "es": "Conjuros con Carisma, pocos espacios de Magia del pacto del mismo nivel que se recuperan en descanso corto o largo."
+  },
+  "feature:warlock:magical-cunning": {
+    "en": "1-minute rite: regain up to half your Pact Magic slots (round up); once per Long Rest.",
+    "fr": "Rite d’1 minute : récupérez jusqu’à la moitié de vos emplacements de pacte (arrondi au supérieur) ; 1/Repos long.",
+    "es": "Rito de 1 minuto: recupera hasta la mitad de tus espacios de Magia del pacto (hacia arriba); 1/descanso largo."
+  },
+  "feature:warlock:warlock-subclass": {
+    "en": "Choose a Warlock subclass (e.g. Fiend Patron); its features come at set levels.",
+    "fr": "Choisissez une sous-classe d’Occultiste (p. ex. protecteur Fiélon) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de brujo (p. ej., patrón infernal); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:warlock:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:warlock:contact-patron": {
+    "en": "Contact Other Plane always prepared; once per Long Rest free to reach your patron, save auto-succeeds.",
+    "fr": "Contact avec les plans toujours préparé ; 1/Repos long gratuit pour joindre votre protecteur, JS réussi d’office.",
+    "es": "Contactar con otro plano siempre preparado; 1/descanso largo gratis para hablar con tu patrón, superas la salvación."
+  },
+  "feature:warlock:mystic-arcanum": {
+    "en": "One level 6 spell (later 7, 8, 9) cast once per Long Rest without a slot.",
+    "fr": "Un sort du niveau 6 (puis 7, 8, 9) lancé une fois par Repos long sans emplacement.",
+    "es": "Un conjuro de nivel 6 (luego 7, 8, 9) lanzado una vez por descanso largo sin espacio de conjuro."
+  },
+  "feature:warlock:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Fate recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur du destin recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del destino)."
+  },
+  "feature:warlock:eldritch-master": {
+    "en": "Magical Cunning restores all your Pact Magic slots.",
+    "fr": "Rouerie magique restaure tous vos emplacements de pacte.",
+    "es": "Astucia mágica recupera todos tus espacios de Magia del pacto."
+  },
+  "feature:warlock:fiend-patron:dark-ones-blessing": {
+    "en": "Gain Cha + Warlock level Temporary HP when you, or anyone within 10 ft of you, drop an enemy to 0 HP.",
+    "fr": "Quand vous (ou un tiers à 3 m de vous) amenez un ennemi à 0 pv, gagnez Cha + niveau d’Occultiste pv temporaires.",
+    "es": "Obtén Car + nivel de brujo pg temporales cuando tú, o alguien a 3 m de ti, reducís a un enemigo a 0 pg."
+  },
+  "feature:warlock:fiend-patron:fiend-spells": {
+    "en": "Always-prepared fiend spells by Warlock level (Burning Hands, Command, Fireball…).",
+    "fr": "Sorts fiélons toujours préparés selon le niveau d’Occultiste (Mains brûlantes, Injonction, Boule de feu…).",
+    "es": "Conjuros del infernal siempre preparados según tu nivel de brujo (Manos ardientes, Orden imperiosa, Bola de fuego…)."
+  },
+  "feature:warlock:fiend-patron:dark-ones-own-luck": {
+    "en": "Add 1d10 to an ability check or save after seeing the roll; Cha modifier uses per Long Rest.",
+    "fr": "Ajoutez 1d10 à un test ou JS après avoir vu le jet ; mod. Cha utilisations par Repos long.",
+    "es": "Suma 1d10 a una prueba de característica o salvación tras ver la tirada; usos = mod. por Car por descanso largo."
+  },
+  "feature:warlock:fiend-patron:fiendish-resilience": {
+    "en": "After each Short or Long Rest, choose a damage type other than Force: Resistance to it.",
+    "fr": "À chaque Repos court ou long, choisissez un type de dégâts autre que force : Résistance à ce type.",
+    "es": "Tras cada descanso corto o largo, elige un tipo de daño que no sea fuerza: tienes resistencia a él."
+  },
+  "feature:warlock:fiend-patron:hurl-through-hell": {
+    "en": "Once per turn on a hit: Cha save or 8d10 Psychic and Incapacitated; 1/Long Rest or a Pact slot.",
+    "fr": "Une fois par tour en touchant : JS Cha ou 8d10 psychiques et Neutralisé ; 1/Repos long ou un emplacement de pacte.",
+    "es": "Una vez por turno al acertar: salvación de Car o 8d10 psíquico e incapacitado; 1/descanso largo o un espacio del pacto."
+  },
+  "feature:wizard:spellcasting": {
+    "en": "Intelligence spellcasting prepared from your spellbook (+2 spells per level); change prepared spells each Long Rest.",
+    "fr": "Sorts basés sur l’Intelligence préparés depuis votre grimoire (+2 sorts par niveau) ; liste modifiable à chaque Repos long.",
+    "es": "Conjuros con Inteligencia preparados de tu libro de conjuros (+2 por nivel); cambia los preparados cada descanso largo."
+  },
+  "feature:wizard:ritual-adept": {
+    "en": "Cast any Ritual spell from your spellbook as a Ritual without preparing it.",
+    "fr": "Lancez tout sort rituel de votre grimoire comme rituel sans l’avoir préparé.",
+    "es": "Lanza como ritual cualquier conjuro ritual de tu libro de conjuros sin tenerlo preparado."
+  },
+  "feature:wizard:arcane-recovery": {
+    "en": "On a Short Rest, recover slots totalling half your Wizard level (round up), none level 6+; once per Long Rest.",
+    "fr": "Au Repos court, récupérez des emplacements totalisant la moitié du niveau (arrondi au supérieur), aucun du niv. 6+ ; 1/Repos long.",
+    "es": "En descanso corto, recupera espacios que sumen la mitad de tu nivel (hacia arriba), ninguno de niv. 6+; 1/desc. largo."
+  },
+  "feature:wizard:scholar": {
+    "en": "Expertise in one proficient skill: Arcana, History, Investigation, Medicine, Nature or Religion.",
+    "fr": "Expertise dans une compétence maîtrisée : Arcanes, Histoire, Investigation, Médecine, Nature ou Religion.",
+    "es": "Pericia en una habilidad con competencia: Conocimiento arcano, Historia, Investigación, Medicina, Naturaleza o Religión."
+  },
+  "feature:wizard:wizard-subclass": {
+    "en": "Choose a Wizard subclass (e.g. Evoker); its features come at set levels.",
+    "fr": "Choisissez une sous-classe de Magicien (p. ex. Évocateur) ; ses aptitudes viennent à certains niveaux.",
+    "es": "Elige una subclase de mago (p. ej., evocador); sus rasgos llegan a ciertos niveles."
+  },
+  "feature:wizard:ability-score-improvement": {
+    "en": "Ability Score Improvement feat (+2 to one score or +1 to two) or another feat you qualify for.",
+    "fr": "Don Amélioration de caractéristique (+2 à une valeur ou +1 à deux) ou un autre don accessible.",
+    "es": "Dote Mejora de característica (+2 a una puntuación o +1 a dos) u otra dote para la que cumplas las condiciones."
+  },
+  "feature:wizard:memorize-spell": {
+    "en": "On a Short Rest, swap one prepared spell for another from your spellbook.",
+    "fr": "Au Repos court, échangez un sort préparé contre un autre de votre grimoire.",
+    "es": "En descanso corto, cambia un conjuro preparado por otro de tu libro de conjuros."
+  },
+  "feature:wizard:spell-mastery": {
+    "en": "A level 1 and a level 2 spell always prepared, cast at their lowest level at will.",
+    "fr": "Un sort du niveau 1 et un du niveau 2 toujours préparés, lancés à volonté à leur niveau minimal.",
+    "es": "Un conjuro de nivel 1 y otro de nivel 2 siempre preparados, lanzados a voluntad a su nivel mínimo."
+  },
+  "feature:wizard:epic-boon": {
+    "en": "An Epic Boon feat or another feat you qualify for (Boon of Spell Recall recommended).",
+    "fr": "Un don de faveur épique ou un autre don accessible (Faveur de mémoire magique recommandée).",
+    "es": "Una dote de don épico u otra dote para la que cumplas las condiciones (se recomienda Don del recuerdo de conjuros)."
+  },
+  "feature:wizard:signature-spells": {
+    "en": "Two level 3 spells always prepared, each cast once at level 3 free per Short or Long Rest.",
+    "fr": "Deux sorts du niveau 3 toujours préparés, chacun lancé gratuitement au niveau 3 une fois par Repos court ou long.",
+    "es": "Dos conjuros de nivel 3 siempre preparados, cada uno lanzado gratis a nivel 3 una vez por descanso corto o largo."
+  },
+  "feature:wizard:evoker:evocation-savant": {
+    "en": "Two free Evocation spells (level 2 or lower), then one free each new slot level.",
+    "fr": "Deux sorts d’évocation gratuits (niveau 2 max.), puis un gratuit à chaque nouveau niveau d’emplacement.",
+    "es": "Dos conjuros de evocación gratis (nivel 2 o inferior), luego uno gratis con cada nuevo nivel de espacios."
+  },
+  "feature:wizard:evoker:potent-cantrip": {
+    "en": "When a cantrip misses or the target saves, it still takes half damage.",
+    "fr": "Quand un sort mineur rate ou que la cible réussit son JS, elle subit quand même la moitié des dégâts.",
+    "es": "Si un truco falla o el objetivo supera la salvación, aun así sufre la mitad del daño."
+  },
+  "feature:wizard:evoker:sculpt-spells": {
+    "en": "Evocation spells: 1 + spell level chosen creatures auto-succeed on saves and take no damage.",
+    "fr": "Sorts d’évocation : 1 + niveau du sort créatures choisies réussissent leur JS et ne subissent aucun dégât.",
+    "es": "Conjuros de evocación: 1 + nivel del conjuro criaturas elegidas superan la salvación y no sufren daño."
+  },
+  "feature:wizard:evoker:empowered-evocation": {
+    "en": "Add your Intelligence modifier to one damage roll of your Wizard Evocation spells.",
+    "fr": "Ajoutez votre mod. d’Intelligence à un jet de dégâts de vos sorts d’évocation de Magicien.",
+    "es": "Suma tu mod. por Inteligencia a una tirada de daño de tus conjuros de evocación de mago."
+  },
+  "feature:wizard:evoker:overchannel": {
+    "en": "Maximum damage with a level 1–5 slot spell; repeats before a Long Rest cost 2d12+ Necrotic per level.",
+    "fr": "Dégâts maximaux avec un sort d’emplacement 1–5 ; avant un Repos long, chaque reprise coûte 2d12+ nécrotiques par niveau.",
+    "es": "Daño máximo con un conjuro de espacio de nivel 1–5; repetirlo antes de un descanso largo cuesta 2d12+ necrótico/nivel."
+  },
+  "invocation:warlock:eldritch-invocation:agonizing-blast": {
+    "en": "Add your Charisma modifier to the damage of one damaging Warlock cantrip.",
+    "fr": "Ajoutez votre mod. de Charisme aux dégâts d’un sort mineur d’Occultiste offensif.",
+    "es": "Suma tu mod. por Carisma al daño de un truco de brujo que cause daño."
+  },
+  "invocation:warlock:eldritch-invocation:armor-of-shadows": {
+    "en": "Cast Mage Armor on yourself without a spell slot.",
+    "fr": "Lancez Armure du mage sur vous sans emplacement.",
+    "es": "Lanza Armadura de mago sobre ti sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:ascendant-step": {
+    "en": "Cast Levitate on yourself without a spell slot.",
+    "fr": "Lancez Lévitation sur vous sans emplacement.",
+    "es": "Lanza Levitar sobre ti sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:devils-sight": {
+    "en": "See normally in Dim Light and Darkness, even magical, within 120 ft.",
+    "fr": "Vision normale dans la Lumière faible et les Ténèbres, même magiques, à 36 m.",
+    "es": "Ves con normalidad en luz tenue y oscuridad, mágicas o no, hasta 36 m."
+  },
+  "invocation:warlock:eldritch-invocation:devouring-blade": {
+    "en": "Thirsting Blade grants two extra attacks instead of one.",
+    "fr": "Lame assoiffée octroie deux attaques supplémentaires au lieu d’une.",
+    "es": "Filo sediento otorga dos ataques adicionales en lugar de uno."
+  },
+  "invocation:warlock:eldritch-invocation:eldritch-mind": {
+    "en": "Advantage on Constitution saves to maintain Concentration.",
+    "fr": "Avantage aux JS de Constitution pour maintenir votre Concentration.",
+    "es": "Ventaja en las salvaciones de Constitución para mantener la concentración."
+  },
+  "invocation:warlock:eldritch-invocation:eldritch-smite": {
+    "en": "Pact weapon hit, spend a Pact slot: +1d8 Force + 1d8 per slot level, may knock Prone; once per turn.",
+    "fr": "Une fois par tour avec l’arme de pacte, un emplacement de pacte : +1d8 force +1d8 par niveau, peut mettre À terre.",
+    "es": "Al acertar con el arma de pacto, gasta un espacio del pacto: +1d8 de fuerza + 1d8 por nivel, puede derribar; 1/turno."
+  },
+  "invocation:warlock:eldritch-invocation:eldritch-spear": {
+    "en": "One damaging cantrip’s range increases by 30 ft × Warlock level.",
+    "fr": "La portée d’un sort mineur offensif augmente de 9 m × niveau d’Occultiste.",
+    "es": "El alcance de un truco que cause daño aumenta 10 m × tu nivel de brujo."
+  },
+  "invocation:warlock:eldritch-invocation:fiendish-vigor": {
+    "en": "Cast False Life on yourself without a slot, with maximum Temporary HP.",
+    "fr": "Lancez Simulacre de vie sur vous sans emplacement, avec le maximum de pv temporaires.",
+    "es": "Lanza Falsa vida sobre ti sin espacio de conjuro, con el máximo de pg temporales."
+  },
+  "invocation:warlock:eldritch-invocation:gaze-of-two-minds": {
+    "en": "Bonus Action: perceive through a willing touched creature’s senses and cast from its space.",
+    "fr": "Action Bonus : percevez par les sens d’une créature consentante touchée et lancez des sorts depuis sa position.",
+    "es": "Acción adicional: percibe por los sentidos de una criatura voluntaria que tocas y lanza conjuros desde su espacio."
+  },
+  "invocation:warlock:eldritch-invocation:gift-of-the-depths": {
+    "en": "Breathe underwater, Swim Speed equal to your Speed, Water Breathing free once per Long Rest.",
+    "fr": "Respiration sous l’eau, Vitesse de nage égale à votre Vitesse, Respiration aquatique gratuite 1/Repos long.",
+    "es": "Respiras bajo el agua, velocidad nadando igual a tu velocidad, Respirar bajo el agua gratis 1/descanso largo."
+  },
+  "invocation:warlock:eldritch-invocation:gift-of-the-protectors": {
+    "en": "Creatures named in your Book of Shadows drop to 1 HP instead of 0, once per Long Rest.",
+    "fr": "Les créatures inscrites dans votre grimoire tombent à 1 pv au lieu de 0, une fois par Repos long.",
+    "es": "Las criaturas inscritas en tu Libro de las sombras quedan a 1 pg en lugar de 0, una vez por descanso largo."
+  },
+  "invocation:warlock:eldritch-invocation:investment-of-the-chain-master": {
+    "en": "Your familiar gains 40-ft Fly or Swim, Bonus Action attacks, your save DC and Resistance on Reaction.",
+    "fr": "Votre familier gagne vol ou nage 12 m, attaque par action Bonus, votre DD et Résistance par Réaction.",
+    "es": "Tu familiar gana volar o nadar 12 m, ataque como acción adicional, tu CD de salvación y resistencia por reacción."
+  },
+  "invocation:warlock:eldritch-invocation:lessons-of-the-first-ones": {
+    "en": "Gain one Origin feat of your choice.",
+    "fr": "Vous recevez un don d’origine de votre choix.",
+    "es": "Obtienes una dote de origen de tu elección."
+  },
+  "invocation:warlock:eldritch-invocation:lifedrinker": {
+    "en": "Once per turn on a pact weapon hit: +1d6 Necrotic, Psychic or Radiant; spend a Hit Die to heal.",
+    "fr": "Une fois par tour avec l’arme de pacte : +1d6 nécrotiques, psychiques ou radiants ; un dé de vie pour vous soigner.",
+    "es": "1/turno al acertar con el arma de pacto: +1d6 necrótico, psíquico o radiante; gasta un dado de pg para curarte."
+  },
+  "invocation:warlock:eldritch-invocation:mask-of-many-faces": {
+    "en": "Cast Disguise Self without a spell slot.",
+    "fr": "Lancez Déguisement sans emplacement.",
+    "es": "Lanza Disfrazarse sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:master-of-myriad-forms": {
+    "en": "Cast Alter Self without a spell slot.",
+    "fr": "Lancez Modification d’apparence sans emplacement.",
+    "es": "Lanza Alterar el propio aspecto sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:misty-visions": {
+    "en": "Cast Silent Image without a spell slot.",
+    "fr": "Lancez Image silencieuse sans emplacement.",
+    "es": "Lanza Imagen silenciosa sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:one-with-shadows": {
+    "en": "In Dim Light or Darkness, cast Invisibility on yourself without a spell slot.",
+    "fr": "Dans la Lumière faible ou les Ténèbres, lancez Invisibilité sur vous sans emplacement.",
+    "es": "En luz tenue u oscuridad, lanza Invisibilidad sobre ti sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:otherworldly-leap": {
+    "en": "Cast Jump on yourself without a spell slot.",
+    "fr": "Lancez Saut sur vous sans emplacement.",
+    "es": "Lanza Salto sobre ti sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:pact-of-the-blade": {
+    "en": "Bonus Action: bond a melee pact weapon; proficient, Cha for attack and damage, Necrotic/Psychic/Radiant.",
+    "fr": "Action Bonus : liez une arme de pacte ; maîtrisée, Cha à l’attaque et aux dégâts, nécrotiques/psychiques/radiants.",
+    "es": "Acción adicional: vincula un arma de pacto; competente, Car a ataque y daño, daño necrótico/psíquico/radiante."
+  },
+  "invocation:warlock:eldritch-invocation:pact-of-the-chain": {
+    "en": "Find Familiar free with special forms; give up an attack so your familiar attacks with its Reaction.",
+    "fr": "Appel de familier gratuit avec formes spéciales ; renoncez à une attaque pour que le familier attaque par Réaction.",
+    "es": "Encontrar familiar gratis con formas especiales; renuncia a un ataque para que tu familiar ataque con su reacción."
+  },
+  "invocation:warlock:eldritch-invocation:pact-of-the-tome": {
+    "en": "Book of Shadows: three cantrips and two level 1 rituals from any list, always prepared; spellcasting focus.",
+    "fr": "Grimoire des ombres : trois sorts mineurs et deux rituels du niveau 1 de toute liste, préparés ; focaliseur.",
+    "es": "Libro de las sombras: tres trucos y dos rituales de nivel 1 de cualquier lista, siempre preparados; canalizador mágico."
+  },
+  "invocation:warlock:eldritch-invocation:repelling-blast": {
+    "en": "Hitting a Large or smaller creature with one attack cantrip pushes it up to 10 ft.",
+    "fr": "Toucher une créature de taille G ou moins avec un sort mineur d’attaque la repousse de 3 m.",
+    "es": "Acertar a una criatura Grande o menor con un truco de ataque la empuja hasta 3 m."
+  },
+  "invocation:warlock:eldritch-invocation:thirsting-blade": {
+    "en": "Extra Attack with your pact weapon.",
+    "fr": "Attaque supplémentaire avec votre arme de pacte.",
+    "es": "Ataque adicional con tu arma de pacto."
+  },
+  "invocation:warlock:eldritch-invocation:visions-of-distant-realms": {
+    "en": "Cast Arcane Eye without a spell slot.",
+    "fr": "Lancez Œil du mage sans emplacement.",
+    "es": "Lanza Ojo arcano sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:whispers-of-the-grave": {
+    "en": "Cast Speak with Dead without a spell slot.",
+    "fr": "Lancez Communication avec les morts sans emplacement.",
+    "es": "Lanza Hablar con los muertos sin gastar un espacio de conjuro."
+  },
+  "invocation:warlock:eldritch-invocation:witch-sight": {
+    "en": "Truesight 30 ft.",
+    "fr": "Vision lucide à 9 m.",
+    "es": "Visión verdadera hasta 9 m."
+  },
+  "metamagic:sorcerer:metamagic:careful-spell": {
+    "en": "1 SP: up to Cha modifier creatures automatically succeed on the spell’s save and take no half damage.",
+    "fr": "1 point : jusqu’à mod. Cha créatures réussissent d’office leur JS et ne subissent pas la moitié des dégâts.",
+    "es": "1 punto: hasta mod. por Car criaturas superan la salvación del conjuro y no sufren la mitad del daño."
+  },
+  "metamagic:sorcerer:metamagic:distant-spell": {
+    "en": "1 SP: double a spell’s range, or make a Touch spell 30 ft.",
+    "fr": "1 point : double la portée d’un sort, ou porte un sort de contact à 9 m.",
+    "es": "1 punto: duplica el alcance de un conjuro, o da 9 m a un conjuro de toque."
+  },
+  "metamagic:sorcerer:metamagic:empowered-spell": {
+    "en": "1 SP: reroll up to Cha modifier damage dice; combines with another option.",
+    "fr": "1 point : relancez jusqu’à mod. Cha dés de dégâts ; cumulable avec une autre option.",
+    "es": "1 punto: repite hasta mod. por Car dados de daño; combinable con otra opción."
+  },
+  "metamagic:sorcerer:metamagic:extended-spell": {
+    "en": "1 SP: double a duration of 1 minute+ (max 24 h); Advantage on Concentration saves.",
+    "fr": "1 point : double une durée d’au moins 1 minute (24 h max.) ; Avantage aux JS de Concentration.",
+    "es": "1 punto: duplica una duración de 1 minuto o más (máx. 24 h); ventaja en salvaciones de concentración."
+  },
+  "metamagic:sorcerer:metamagic:heightened-spell": {
+    "en": "2 SP: one target has Disadvantage on saves against the spell.",
+    "fr": "2 points : une cible subit le Désavantage à ses JS contre le sort.",
+    "es": "2 puntos: un objetivo tiene desventaja en las salvaciones contra el conjuro."
+  },
+  "metamagic:sorcerer:metamagic:quickened-spell": {
+    "en": "2 SP: cast an action spell as a Bonus Action; no other level 1+ spell that turn.",
+    "fr": "2 points : un sort à une action se lance par une action Bonus ; aucun autre sort de niveau 1+ ce tour.",
+    "es": "2 puntos: un conjuro de una acción se lanza como acción adicional; ningún otro conjuro de nivel 1+ ese turno."
+  },
+  "metamagic:sorcerer:metamagic:seeking-spell": {
+    "en": "1 SP: reroll a missed spell attack; combines with another option.",
+    "fr": "1 point : relancez une attaque de sort ratée ; cumulable avec une autre option.",
+    "es": "1 punto: repite un ataque de conjuro fallido; combinable con otra opción."
+  },
+  "metamagic:sorcerer:metamagic:subtle-spell": {
+    "en": "1 SP: cast without Verbal, Somatic or non-costly Material components.",
+    "fr": "1 point : lancez le sort sans composantes verbale, somatique ni matérielle non coûteuse.",
+    "es": "1 punto: lanza sin componentes verbales, somáticos ni materiales sin coste."
+  },
+  "metamagic:sorcerer:metamagic:transmuted-spell": {
+    "en": "1 SP: change Acid, Cold, Fire, Lightning, Poison or Thunder damage to another of these types.",
+    "fr": "1 point : changez des dégâts d’acide, froid, feu, foudre, poison ou tonnerre en un autre de ces types.",
+    "es": "1 punto: cambia daño de ácido, frío, fuego, relámpago, veneno o trueno a otro de esos tipos."
+  },
+  "metamagic:sorcerer:metamagic:twinned-spell": {
+    "en": "1 SP: raise a spell’s effective level by 1 when that adds a target (e.g. Charm Person).",
+    "fr": "1 point : augmente de 1 le niveau effectif d’un sort qui gagne ainsi une cible (p. ex. Charme-personne).",
+    "es": "1 punto: sube en 1 el nivel efectivo de un conjuro cuando eso añade un objetivo (p. ej., Hechizar persona)."
+  },
+  "resource:barbarian:relentless-rage": {
+    "en": "Uses since your last rest: save DC 10 + 5 per use; resets on a Short or Long Rest.",
+    "fr": "Utilisations depuis votre dernier repos : DD du JS de Con = 10 + 5 par usage ; remis à zéro au Repos court ou long.",
+    "es": "Usos desde tu último descanso: CD de la salvación 10 + 5 por uso; se reinicia en descanso corto o largo."
+  },
+  "resource:bard:bardic-inspiration": {
+    "en": "Bardic Inspiration dice (Cha mod), also spent by Cutting Words; back on a Short Rest from level 5.",
+    "fr": "Dés d’Inspiration bardique (mod. Cha), aussi dépensés par Mots cinglants ; récupérés au Repos court dès le niveau 5.",
+    "es": "Dados de Inspiración bárdica (mod. por Car), también gastados por Palabras cortantes; en descanso corto desde nivel 5."
+  },
+  "resource:cleric:channel-divinity": {
+    "en": "Shared by Divine Spark, Turn Undead and subclass options (Preserve Life); 1 back on a Short Rest.",
+    "fr": "Partagé par Étincelle divine, Renvoi des morts-vivants et les options de sous-classe (Survivance) ; 1 au Repos court.",
+    "es": "Compartido por Chispa divina, Expulsar muertos vivientes y opciones de subclase (Preservar vida); 1 en descanso corto."
+  },
+  "resource:paladin:channel-divinity": {
+    "en": "Shared by Divine Sense, Abjure Foes and oath options (Sacred Weapon); 1 back on a Short Rest; 3 at level 11.",
+    "fr": "Partagé par Perception divine, Abjuration d’ennemis et les options de serment (Arme sacrée) ; 1 au Repos court ; 3 au niveau 11.",
+    "es": "Para Sentidos divinos, Abjurar de los enemigos y opciones de juramento (Arma sagrada); 1 en descanso corto; 3 a niv. 11."
+  },
+  "resource:druid:wild-shape": {
+    "en": "Wild Shape uses, also spent by Wild Companion and Circle features; 1 back on a Short Rest.",
+    "fr": "Utilisations de Forme sauvage, aussi dépensées par Compagnon sauvage et les aptitudes de cercle ; 1 au Repos court.",
+    "es": "Usos de Forma salvaje, también gastados por Compañero salvaje y rasgos de círculo; 1 en descanso corto."
+  },
+  "resource:monk:monks-focus": {
+    "en": "Focus Points spent by Flurry of Blows, Patient Defense, Step of the Wind, Stunning Strike…; all back on a Short Rest.",
+    "fr": "Points de Credo pour Déluge de coups, Patience défensive, Porté par le vent, Frappe étourdissante… ; tous au Repos court.",
+    "es": "Puntos de concentración: Ráfaga de golpes, Defensa paciente, Paso del viento, Golpe aturdidor…; todos en descanso corto."
+  },
+  "resource:sorcerer:font-of-magic": {
+    "en": "Sorcery Points spent on Metamagic and spell slots; all back on a Long Rest.",
+    "fr": "Points de Sorcellerie pour la Métamagie et les emplacements ; tous récupérés au Repos long.",
+    "es": "Puntos de hechicería para Metamagia y espacios de conjuro; todos se recuperan en descanso largo."
+  },
+  "resource:warlock:mystic-arcanum": {
+    "en": "One free casting per arcanum spell (levels 6 to 9), each once per Long Rest.",
+    "fr": "Un lancement gratuit par sort d’arcanum (niveaux 6 à 9), chacun une fois par Repos long.",
+    "es": "Un lanzamiento gratis por conjuro de arcanum (niveles 6 a 9), cada uno una vez por descanso largo."
+  },
+  "feature:barbarian:improved-brutal-strike-17": {
+    "en": "Brutal Strike deals 2d10 extra damage and applies two different effects.",
+    "fr": "Coup brutal inflige 2d10 dégâts supplémentaires et applique deux effets différents.",
+    "es": "Golpe brutal causa 2d10 de daño adicional y aplica dos efectos diferentes."
+  },
+  "action:attack": {
+    "en": "Make one attack with a weapon or an Unarmed Strike; Extra Attack adds more attacks to the same action.",
+    "fr": "Faire une attaque avec une arme ou une Attaque à mains nues ; Attaque supplémentaire ajoute des attaques à la même action.",
+    "es": "Hacer un ataque con un arma o un ataque sin armas; Ataque extra añade más ataques a la misma acción."
+  },
+  "action:magic": {
+    "en": "Cast a spell whose casting time is an action, or use a magic item or a feature that takes a Magic action.",
+    "fr": "Lancer un sort dont le temps d’incantation est d’une action, ou utiliser un objet magique ou une aptitude qui demande l’action Magie.",
+    "es": "Lanzar un conjuro cuyo tiempo de lanzamiento es una acción, o usar un objeto mágico o un rasgo que requiere la acción de Magia."
+  },
+  "action:dash": {
+    "en": "Gain extra movement equal to your Speed for this turn.",
+    "fr": "Gagner un déplacement supplémentaire égal à votre Vitesse pour ce tour.",
+    "es": "Ganar movimiento adicional igual a tu velocidad durante este turno."
+  },
+  "action:disengage": {
+    "en": "Your movement doesn’t provoke Opportunity Attacks for the rest of this turn.",
+    "fr": "Votre déplacement ne provoque pas d’Attaques d’Opportunité jusqu’à la fin du tour.",
+    "es": "Tu movimiento no provoca ataques de oportunidad durante el resto del turno."
+  },
+  "action:dodge": {
+    "en": "Until your next turn, attack rolls against you have Disadvantage and you have Advantage on Dexterity saves.",
+    "fr": "Jusqu’à votre prochain tour, les jets d’attaque contre vous ont un Désavantage et vous avez l’Avantage aux jets de sauvegarde de Dextérité.",
+    "es": "Hasta tu siguiente turno, las tiradas de ataque contra ti tienen desventaja y tú tienes ventaja en las salvaciones de Destreza."
+  },
+  "action:help": {
+    "en": "Give an ally Advantage on their next ability check, or on their next attack against an enemy within 5 ft of you.",
+    "fr": "Donner l’Avantage à un allié pour son prochain test de caractéristique, ou sa prochaine attaque contre un ennemi à 1,50 m de vous.",
+    "es": "Dar ventaja a un aliado en su siguiente prueba de característica, o en su siguiente ataque contra un enemigo a 1,5 m de ti."
+  },
+  "action:hide": {
+    "en": "Out of sight, a DC 15 Dexterity (Stealth) check gives you the Invisible condition.",
+    "fr": "Hors de vue, un test de Dextérité (Discrétion) DD 15 vous donne l’état Invisible.",
+    "es": "Fuera de la vista, una prueba de Destreza (Sigilo) CD 15 te da el estado Invisible."
+  },
+  "action:influence": {
+    "en": "Try to convince, deceive or intimidate a creature with an ability check (Persuasion, Deception, Intimidation…).",
+    "fr": "Tenter de convaincre, tromper ou intimider une créature avec un test de caractéristique (Persuasion, Tromperie, Intimidation…).",
+    "es": "Intentar convencer, engañar o intimidar a una criatura con una prueba de característica (Persuasión, Engaño, Intimidación…)."
+  },
+  "action:ready": {
+    "en": "Choose a trigger and an action now; when it happens, you act with your Reaction.",
+    "fr": "Choisir maintenant un déclencheur et une action ; quand il survient, vous agissez avec votre Réaction.",
+    "es": "Elegir ahora un desencadenante y una acción; cuando ocurre, actúas con tu reacción."
+  },
+  "action:search": {
+    "en": "A Wisdom check (Insight, Medicine, Perception or Survival) to notice or discern something.",
+    "fr": "Un test de Sagesse (Intuition, Médecine, Perception ou Survie) pour repérer ou discerner quelque chose.",
+    "es": "Una prueba de Sabiduría (Perspicacia, Medicina, Percepción o Supervivencia) para notar o discernir algo."
+  },
+  "action:study": {
+    "en": "An Intelligence check (Arcana, History, Investigation, Nature or Religion) to recall or work out something.",
+    "fr": "Un test d’Intelligence (Arcanes, Histoire, Investigation, Nature ou Religion) pour se souvenir ou déduire quelque chose.",
+    "es": "Una prueba de Inteligencia (Conocimiento arcano, Historia, Investigación, Naturaleza o Religión) para recordar o deducir algo."
+  },
+  "action:utilize": {
+    "en": "Use an object that needs an action: a second object this turn, a lever, a stuck door…",
+    "fr": "Utiliser un objet qui demande une action : un deuxième objet ce tour-ci, un levier, une porte coincée…",
+    "es": "Usar un objeto que requiere una acción: un segundo objeto este turno, una palanca, una puerta atascada…"
+  },
+  "action:opportunity-attacks": {
+    "en": "When a creature you can see leaves your reach, use your Reaction for one melee attack against it.",
+    "fr": "Quand une créature que vous voyez quitte votre allonge, utilisez votre Réaction pour lui porter une attaque au corps à corps.",
+    "es": "Cuando una criatura que puedes ver sale de tu alcance, usa tu reacción para hacerle un ataque cuerpo a cuerpo."
+  },
+  "action:light-attack": {
+    "en": "After an Attack action with a Light weapon: one attack with another Light weapon, no ability modifier to its damage.",
+    "fr": "Après une action Attaque avec une arme légère : une attaque avec une autre arme légère, sans modificateur de caractéristique aux dégâts.",
+    "es": "Tras una acción de Atacar con un arma ligera: un ataque con otra arma ligera, sin modificador de característica al daño."
+  },
+  "action:potion": {
+    "en": "Drink a potion, or give it to a creature within 5 ft.",
+    "fr": "Boire une potion, ou l’administrer à une créature à 1,50 m.",
+    "es": "Beber una poción, o dársela a una criatura a 1,5 m."
+  },
+  "action:object": {
+    "en": "Draw or stow a weapon, open a door…: one object for free during your move or your action.",
+    "fr": "Dégainer ou rengainer une arme, ouvrir une porte… : un objet gratuitement pendant votre déplacement ou votre action.",
+    "es": "Desenvainar o envainar un arma, abrir una puerta…: un objeto gratis durante tu movimiento o tu acción."
+  },
+  "action:stand-up": {
+    "en": "Standing up from Prone costs half your Speed; the rest of your move is still there.",
+    "fr": "Se relever quand on est À terre coûte la moitié de votre Vitesse ; le reste du déplacement reste disponible.",
+    "es": "Levantarse estando Derribado cuesta la mitad de tu velocidad; el resto del movimiento sigue disponible."
+  },
+  "action:move": {
+    "en": "Move up to your Speed this turn; Dash adds your Speed again.",
+    "fr": "Se déplacer jusqu’à votre Vitesse ce tour-ci ; la Pointe ajoute de nouveau votre Vitesse.",
+    "es": "Moverte hasta tu velocidad este turno; Correr vuelve a sumar tu velocidad."
+  }
+}

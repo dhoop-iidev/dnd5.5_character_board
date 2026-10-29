@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Tobbin Fildargent",
+    "player": "",
+    "alignment": "Lawful Neutral",
+    "background": "A rock gnome tinkerer turned archivist of the Grand Library, who found that a well-aimed fireball settles arguments faster than footnotes.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Gnomish", "Draconic"],
+    "height": {
+      "m": 1.05
+    },
+    "weight": {
+      "kg": 19
+    },
+    "age": "87"
+  },
+  "speciesId": "gnome",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "sage",
+    "abilities": {
+      "int": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "wizard",
+        "ability": "int",
+        "cantrips": ["message", "true-strike"],
+        "spell": ["find-familiar"]
+      }
+    }
+  },
+  "baseAbilities": {
+    "str": 8,
+    "dex": 14,
+    "con": 14,
+    "int": 15,
+    "wis": 12,
+    "cha": 10
+  },
+  "levels": [
+    {
+      "classId": "wizard",
+      "hpRoll": 6,
+      "hpFixed": false,
+      "choices": {},
+      "spellsLearned": [
+        "magic-missile",
+        "detect-magic",
+        "alarm",
+        "burning-hands",
+        "comprehend-languages",
+        "feather-fall"
+      ]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["mage-armor", "shield"]
+    },
+    {
+      "classId": "wizard",
+      "subclassId": "wizard:evoker",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["invisibility", "knock"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "int": 2
+        }
+      },
+      "spellsLearned": ["scorching-ray", "web"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["haste", "misty-step"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["fly", "lightning-bolt"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["fireball", "counterspell"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "int": 1,
+          "wis": 1
+        }
+      },
+      "spellsLearned": ["polymorph", "ice-storm"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["dimension-door", "greater-invisibility"]
+    },
+    {
+      "classId": "wizard",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "spellsLearned": ["cone-of-cold", "wall-of-force"]
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["investigation", "insight"],
+  "toolProficiencies": ["Calligrapher's Supplies", "Tinker's Tools"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "quarterstaff",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 2,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "arcane-focus",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "robe",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "book",
+      "quantity": 1,
+      "location": "carried",
+      "note": "Spellbook"
+    },
+    {
+      "uid": "gear4",
+      "kind": "gear",
+      "refId": "scholars-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 5,
+    "pp": 0
+  },
+  "spellcasting": {
+    "wizard": {
+      "prepared": [
+        "mage-armor",
+        "shield",
+        "magic-missile",
+        "detect-magic",
+        "misty-step",
+        "scorching-ray",
+        "web",
+        "fireball",
+        "counterspell",
+        "fly",
+        "dimension-door",
+        "greater-invisibility",
+        "polymorph",
+        "cone-of-cold",
+        "wall-of-force"
+      ],
+      "cantrips": ["fire-bolt", "light", "mage-hand", "ray-of-frost", "shocking-grasp"],
+      "spellbook": ["find-familiar", "identify", "sleep", "thunderwave", "chromatic-orb", "mirror-image"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 62,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [
+    {
+      "uid": "fam1",
+      "kind": "familiar",
+      "creatureId": "owl",
+      "name": "Parchemin",
+      "creatureType": "fey",
+      "hp": {
+        "current": 1,
+        "temp": 0,
+        "max": 1
+      }
+    }
+  ],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "gnome:gnomish-lineage": "rock-gnome",
+    "gnome:gnomish-lineage#ability": "int",
+    "wizard:scholar": "arcana"
+  },
+  "extraFeats": {}
+}

@@ -1,0 +1,1515 @@
+[
+  {
+    "id": "battleaxe",
+    "name": {
+      "en": "Battleaxe",
+      "fr": "Hache d’armes",
+      "es": "Hacha de guerra"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "topple",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "blowgun",
+    "name": {
+      "en": "Blowgun",
+      "fr": "Sarbacane",
+      "es": "Cerbatana"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "loading"
+    ],
+    "range": {
+      "normal": {
+        "ft": 25,
+        "m": 7.5
+      },
+      "long": {
+        "ft": 100,
+        "m": 30
+      }
+    },
+    "ammunition": "needle",
+    "mastery": "vex",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "club",
+    "name": {
+      "en": "Club",
+      "fr": "Gourdin",
+      "es": "Garrote"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "light"
+    ],
+    "mastery": "slow",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "dagger",
+    "name": {
+      "en": "Dagger",
+      "fr": "Dague",
+      "es": "Daga"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light",
+      "thrown",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "nick",
+    "weight": {
+      "lb": 1,
+      "kg": 0.5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "dart",
+    "name": {
+      "en": "Dart",
+      "fr": "Fléchette",
+      "es": "Dardo"
+    },
+    "category": "simple",
+    "kind": "ranged",
+    "damage": "1d4",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "thrown",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "vex",
+    "weight": {
+      "lb": 0.25,
+      "kg": 0.125
+    },
+    "cost": {
+      "gp": 0.05,
+      "text": {
+        "en": "5 CP",
+        "fr": "5 pc",
+        "es": "5 pc"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "flail",
+    "name": {
+      "en": "Flail",
+      "fr": "Fléau d’armes",
+      "es": "Mangual"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [],
+    "mastery": "sap",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "glaive",
+    "name": {
+      "en": "Glaive",
+      "fr": "Coutille",
+      "es": "Guja"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d10",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "mastery": "graze",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "greataxe",
+    "name": {
+      "en": "Greataxe",
+      "fr": "Hache à deux mains",
+      "es": "Hacha a dos manos"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d12",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "mastery": "cleave",
+    "weight": {
+      "lb": 7,
+      "kg": 3.5
+    },
+    "cost": {
+      "gp": 30,
+      "text": {
+        "en": "30 GP",
+        "fr": "30 po",
+        "es": "30 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "greatclub",
+    "name": {
+      "en": "Greatclub",
+      "fr": "Massue",
+      "es": "Garrote grande"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [
+      "two-handed"
+    ],
+    "mastery": "push",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "greatsword",
+    "name": {
+      "en": "Greatsword",
+      "fr": "Épée à deux mains",
+      "es": "Espadón"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "2d6",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "mastery": "graze",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "halberd",
+    "name": {
+      "en": "Halberd",
+      "fr": "Hallebarde",
+      "es": "Alabarda"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d10",
+    "damageType": "slashing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "mastery": "cleave",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 20,
+      "text": {
+        "en": "20 GP",
+        "fr": "20 po",
+        "es": "20 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "hand-crossbow",
+    "name": {
+      "en": "Hand Crossbow",
+      "fr": "Arbalète de poing",
+      "es": "Ballesta de mano"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "light",
+      "loading"
+    ],
+    "range": {
+      "normal": {
+        "ft": 30,
+        "m": 9
+      },
+      "long": {
+        "ft": 120,
+        "m": 36
+      }
+    },
+    "ammunition": "bolt",
+    "mastery": "vex",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 75,
+      "text": {
+        "en": "75 GP",
+        "fr": "75 po",
+        "es": "75 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "handaxe",
+    "name": {
+      "en": "Handaxe",
+      "fr": "Hachette",
+      "es": "Hacha de mano"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "light",
+      "thrown",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "vex",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "heavy-crossbow",
+    "name": {
+      "en": "Heavy Crossbow",
+      "fr": "Arbalète lourde",
+      "es": "Ballesta pesada"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "heavy",
+      "loading",
+      "two-handed"
+    ],
+    "range": {
+      "normal": {
+        "ft": 100,
+        "m": 30
+      },
+      "long": {
+        "ft": 400,
+        "m": 120
+      }
+    },
+    "ammunition": "bolt",
+    "mastery": "push",
+    "weight": {
+      "lb": 18,
+      "kg": 9
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "javelin",
+    "name": {
+      "en": "Javelin",
+      "fr": "Javeline",
+      "es": "Jabalina"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 30,
+        "m": 9
+      },
+      "long": {
+        "ft": 120,
+        "m": 36
+      }
+    },
+    "mastery": "slow",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 0.5,
+      "text": {
+        "en": "5 SP",
+        "fr": "5 pa",
+        "es": "5 pp"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "lance",
+    "name": {
+      "en": "Lance",
+      "fr": "Lance d’arçon",
+      "es": "Lanza de caballería"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "mastery": "topple",
+    "weight": {
+      "lb": 6,
+      "kg": 3
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "light-crossbow",
+    "name": {
+      "en": "Light Crossbow",
+      "fr": "Arbalète légère",
+      "es": "Ballesta ligera"
+    },
+    "category": "simple",
+    "kind": "ranged",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "loading",
+      "two-handed"
+    ],
+    "range": {
+      "normal": {
+        "ft": 80,
+        "m": 24
+      },
+      "long": {
+        "ft": 320,
+        "m": 96
+      }
+    },
+    "ammunition": "bolt",
+    "mastery": "slow",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "light-hammer",
+    "name": {
+      "en": "Light Hammer",
+      "fr": "Marteau léger",
+      "es": "Martillo ligero"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "light",
+      "thrown",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "nick",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "longbow",
+    "name": {
+      "en": "Longbow",
+      "fr": "Arc long",
+      "es": "Arco largo"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "heavy",
+      "two-handed"
+    ],
+    "range": {
+      "normal": {
+        "ft": 150,
+        "m": 45
+      },
+      "long": {
+        "ft": 600,
+        "m": 180
+      }
+    },
+    "ammunition": "arrow",
+    "mastery": "slow",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 50,
+      "text": {
+        "en": "50 GP",
+        "fr": "50 po",
+        "es": "50 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "longsword",
+    "name": {
+      "en": "Longsword",
+      "fr": "Épée longue",
+      "es": "Espada larga"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "slashing",
+    "properties": [
+      "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "sap",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "mace",
+    "name": {
+      "en": "Mace",
+      "fr": "Masse d’armes",
+      "es": "Maza"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [],
+    "mastery": "sap",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "maul",
+    "name": {
+      "en": "Maul",
+      "fr": "Maillet d’armes",
+      "es": "Maza a dos manos"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "2d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "heavy",
+      "two-handed"
+    ],
+    "mastery": "topple",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "morningstar",
+    "name": {
+      "en": "Morningstar",
+      "fr": "Morgenstern",
+      "es": "Lucero del alba"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [],
+    "mastery": "sap",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "musket",
+    "name": {
+      "en": "Musket",
+      "fr": "Mousquet",
+      "es": "Mosquete"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1d12",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "loading",
+      "two-handed"
+    ],
+    "range": {
+      "normal": {
+        "ft": 40,
+        "m": 12
+      },
+      "long": {
+        "ft": 120,
+        "m": 36
+      }
+    },
+    "ammunition": "bullet",
+    "mastery": "slow",
+    "weight": {
+      "lb": 10,
+      "kg": 5
+    },
+    "cost": {
+      "gp": 500,
+      "text": {
+        "en": "500 GP",
+        "fr": "500 po",
+        "es": "500 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "pike",
+    "name": {
+      "en": "Pike",
+      "fr": "Pique",
+      "es": "Pica"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "heavy",
+      "reach",
+      "two-handed"
+    ],
+    "mastery": "push",
+    "weight": {
+      "lb": 18,
+      "kg": 9
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "pistol",
+    "name": {
+      "en": "Pistol",
+      "fr": "Pistolet",
+      "es": "Pistola"
+    },
+    "category": "martial",
+    "kind": "ranged",
+    "damage": "1d10",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "loading"
+    ],
+    "range": {
+      "normal": {
+        "ft": 30,
+        "m": 9
+      },
+      "long": {
+        "ft": 90,
+        "m": 27
+      }
+    },
+    "ammunition": "bullet",
+    "mastery": "vex",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 250,
+      "text": {
+        "en": "250 GP",
+        "fr": "250 po",
+        "es": "250 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "quarterstaff",
+    "name": {
+      "en": "Quarterstaff",
+      "fr": "Bâton de combat",
+      "es": "Bastón"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ],
+    "versatile": "1d8",
+    "mastery": "topple",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 0.2,
+      "text": {
+        "en": "2 SP",
+        "fr": "2 pa",
+        "es": "2 pp"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "rapier",
+    "name": {
+      "en": "Rapier",
+      "fr": "Rapière",
+      "es": "Estoque"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "finesse"
+    ],
+    "mastery": "vex",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "scimitar",
+    "name": {
+      "en": "Scimitar",
+      "fr": "Cimeterre",
+      "es": "Cimitarra"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "slashing",
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "mastery": "nick",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "shortbow",
+    "name": {
+      "en": "Shortbow",
+      "fr": "Arc court",
+      "es": "Arco corto"
+    },
+    "category": "simple",
+    "kind": "ranged",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "ammunition",
+      "range",
+      "two-handed"
+    ],
+    "range": {
+      "normal": {
+        "ft": 80,
+        "m": 24
+      },
+      "long": {
+        "ft": 320,
+        "m": 96
+      }
+    },
+    "ammunition": "arrow",
+    "mastery": "vex",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 25,
+      "text": {
+        "en": "25 GP",
+        "fr": "25 po",
+        "es": "25 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "shortsword",
+    "name": {
+      "en": "Shortsword",
+      "fr": "Épée courte",
+      "es": "Espada corta"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "finesse",
+      "light"
+    ],
+    "mastery": "vex",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 10,
+      "text": {
+        "en": "10 GP",
+        "fr": "10 po",
+        "es": "10 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "sickle",
+    "name": {
+      "en": "Sickle",
+      "fr": "Serpe",
+      "es": "Hoz"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d4",
+    "damageType": "slashing",
+    "properties": [
+      "light"
+    ],
+    "mastery": "nick",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "sling",
+    "name": {
+      "en": "Sling",
+      "fr": "Fronde",
+      "es": "Honda"
+    },
+    "category": "simple",
+    "kind": "ranged",
+    "damage": "1d4",
+    "damageType": "bludgeoning",
+    "properties": [
+      "ammunition",
+      "range"
+    ],
+    "range": {
+      "normal": {
+        "ft": 30,
+        "m": 9
+      },
+      "long": {
+        "ft": 120,
+        "m": 36
+      }
+    },
+    "ammunition": "bullet",
+    "mastery": "slow",
+    "weight": {
+      "lb": 0,
+      "kg": 0
+    },
+    "cost": {
+      "gp": 0.1,
+      "text": {
+        "en": "1 SP",
+        "fr": "1 pa",
+        "es": "1 pp"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "spear",
+    "name": {
+      "en": "Spear",
+      "fr": "Lance",
+      "es": "Lanza"
+    },
+    "category": "simple",
+    "kind": "melee",
+    "damage": "1d6",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "range",
+      "versatile"
+    ],
+    "versatile": "1d8",
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "sap",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 1,
+      "text": {
+        "en": "1 GP",
+        "fr": "1 po",
+        "es": "1 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "trident",
+    "name": {
+      "en": "Trident",
+      "fr": "Trident",
+      "es": "Tridente"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "thrown",
+      "range",
+      "versatile"
+    ],
+    "versatile": "1d10",
+    "range": {
+      "normal": {
+        "ft": 20,
+        "m": 6
+      },
+      "long": {
+        "ft": 60,
+        "m": 18
+      }
+    },
+    "mastery": "topple",
+    "weight": {
+      "lb": 4,
+      "kg": 2
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "war-pick",
+    "name": {
+      "en": "War Pick",
+      "fr": "Pic de guerre",
+      "es": "Pico de guerra"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "piercing",
+    "properties": [
+      "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "sap",
+    "weight": {
+      "lb": 2,
+      "kg": 1
+    },
+    "cost": {
+      "gp": 5,
+      "text": {
+        "en": "5 GP",
+        "fr": "5 po",
+        "es": "5 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "warhammer",
+    "name": {
+      "en": "Warhammer",
+      "fr": "Marteau de guerre",
+      "es": "Martillo de guerra"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d8",
+    "damageType": "bludgeoning",
+    "properties": [
+      "versatile"
+    ],
+    "versatile": "1d10",
+    "mastery": "push",
+    "weight": {
+      "lb": 5,
+      "kg": 2.5
+    },
+    "cost": {
+      "gp": 15,
+      "text": {
+        "en": "15 GP",
+        "fr": "15 po",
+        "es": "15 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  },
+  {
+    "id": "whip",
+    "name": {
+      "en": "Whip",
+      "fr": "Fouet",
+      "es": "Látigo"
+    },
+    "category": "martial",
+    "kind": "melee",
+    "damage": "1d4",
+    "damageType": "slashing",
+    "properties": [
+      "finesse",
+      "reach"
+    ],
+    "mastery": "slow",
+    "weight": {
+      "lb": 3,
+      "kg": 1.5
+    },
+    "cost": {
+      "gp": 2,
+      "text": {
+        "en": "2 GP",
+        "fr": "2 po",
+        "es": "2 po"
+      }
+    },
+    "source": {
+      "page": 91,
+      "frPage": 97,
+      "section": "Weapons",
+      "esPage": 99
+    }
+  }
+]

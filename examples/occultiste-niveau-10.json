@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Morvane Cendrenoire",
+    "player": "",
+    "alignment": "Neutral",
+    "background": "A pickpocket of the harbour slums who, cornered one night in a burning warehouse, accepted the bargain whispered from the flames.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Infernal", "Thieves' Cant"],
+    "height": { "m": 1.7 },
+    "weight": { "kg": 61 },
+    "age": "29"
+  },
+  "speciesId": "tiefling",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "criminal",
+    "abilities": { "dex": 2, "con": 1 },
+    "feat": { "featId": "alert" }
+  },
+  "baseAbilities": { "str": 8, "dex": 14, "con": 14, "int": 10, "wis": 12, "cha": 16 },
+  "levels": [
+    { "classId": "warlock", "hpRoll": 8, "hpFixed": false, "choices": {} },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    { "classId": "warlock", "subclassId": "warlock:fiend-patron", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    {
+      "classId": "warlock",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 2 } }
+    },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    {
+      "classId": "warlock",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 2 } }
+    },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    { "classId": "warlock", "hpRoll": 5, "hpFixed": true, "choices": {} }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["arcana", "deception"],
+  "toolProficiencies": ["Thieves' Tools"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    { "uid": "arm1", "kind": "armor", "refId": "leather-armor", "quantity": 1, "location": "carried" },
+    { "uid": "wpn1", "kind": "weapon", "refId": "sickle", "quantity": 1, "location": "worn", "equipped": true },
+    { "uid": "wpn2", "kind": "weapon", "refId": "dagger", "quantity": 2, "location": "worn" },
+    { "uid": "gear1", "kind": "gear", "refId": "arcane-focus", "quantity": 1, "location": "worn" },
+    { "uid": "gear2", "kind": "gear", "refId": "book", "quantity": 1, "location": "carried" },
+    { "uid": "gear3", "kind": "gear", "refId": "scholars-pack", "quantity": 1, "location": "carried" }
+  ],
+  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 15, "pp": 0 },
+  "spellcasting": {
+    "warlock": {
+      "prepared": [
+        "hex",
+        "hellish-rebuke",
+        "misty-step",
+        "hold-person",
+        "counterspell",
+        "fly",
+        "hypnotic-pattern",
+        "banishment",
+        "dimension-door",
+        "hold-monster",
+        "invisibility"
+      ],
+      "cantrips": ["eldritch-blast", "prestidigitation", "minor-illusion", "mage-hand"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": { "current": 73, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": { "known": [] },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": { "lang": "fr" },
+  "featureChoices": {
+    "tiefling:fiendish-legacy": "infernal",
+    "tiefling:fiendish-legacy#ability": "cha",
+    "warlock:eldritch-invocations": [
+      "warlock:eldritch-invocation:agonizing-blast",
+      "warlock:eldritch-invocation:armor-of-shadows",
+      "warlock:eldritch-invocation:repelling-blast",
+      "warlock:eldritch-invocation:devils-sight",
+      "warlock:eldritch-invocation:pact-of-the-tome",
+      "warlock:eldritch-invocation:eldritch-mind",
+      "warlock:eldritch-invocation:fiendish-vigor"
+    ],
+    "warlock:eldritch-invocation:pact-of-the-tome#cantrips": ["guidance", "light", "mending"],
+    "warlock:eldritch-invocation:pact-of-the-tome#rituals": ["detect-magic", "comprehend-languages"],
+    "warlock:fiend-patron:fiendish-resilience": "cold"
+  },
+  "extraFeats": {}
+}

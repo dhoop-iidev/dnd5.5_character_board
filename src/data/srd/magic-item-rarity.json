@@ -1,0 +1,152 @@
+[
+  {
+    "id": "artifact",
+    "name": {
+      "en": "Artifact",
+      "fr": "Artefact",
+      "es": "Artefacto"
+    },
+    "value": null,
+    "text": {
+      "en": "Priceless",
+      "fr": "Inestimable",
+      "es": "Incalculable"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  },
+  {
+    "id": "common",
+    "name": {
+      "en": "Common",
+      "fr": "Courante",
+      "es": "Común"
+    },
+    "value": 100,
+    "text": {
+      "en": "100 GP",
+      "fr": "100 po",
+      "es": "100 po"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  },
+  {
+    "id": "legendary",
+    "name": {
+      "en": "Legendary",
+      "fr": "Légendaire",
+      "es": "Legendario"
+    },
+    "value": 200000,
+    "text": {
+      "en": "200,000 GP",
+      "fr": "200 000 po",
+      "es": "200 000 po"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  },
+  {
+    "id": "rare",
+    "name": {
+      "en": "Rare",
+      "fr": "Rare",
+      "es": "Raro"
+    },
+    "value": 4000,
+    "text": {
+      "en": "4,000 GP",
+      "fr": "4 000 po",
+      "es": "4000 po"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  },
+  {
+    "id": "uncommon",
+    "name": {
+      "en": "Uncommon",
+      "fr": "Peu courante",
+      "es": "Infrecuente"
+    },
+    "value": 400,
+    "text": {
+      "en": "400 GP",
+      "fr": "400 po",
+      "es": "400 po"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  },
+  {
+    "id": "very-rare",
+    "name": {
+      "en": "Very Rare",
+      "fr": "Très rare",
+      "es": "Muy raro"
+    },
+    "value": 40000,
+    "text": {
+      "en": "40,000 GP",
+      "fr": "40 000 po",
+      "es": "40 000 po"
+    },
+    "source": {
+      "page": 206,
+      "frPage": 217,
+      "section": "Magic Item Rarities and Values",
+      "esPage": 225
+    },
+    "footnote": {
+      "en": "Halve the value for a consumable item other than a <em>Spell Scroll</em>. The value of a <em>Spell Scroll</em> is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”).",
+      "fr": "Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un <em>parchemin de sort</em>. La valeur d’un <em>parchemin de sort</em> est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »).",
+      "es": "La mitad del valor si es un objeto consumible distinto a un <em>pergamino de conjuro</em>. El valor de un <em>pergamino de conjuro</em> es el doble de lo que cuesta escribir el pergamino (como se indica en el apartado “Elaborar pergaminos de conjuro” del capítulo “Equipo”)."
+    }
+  }
+]

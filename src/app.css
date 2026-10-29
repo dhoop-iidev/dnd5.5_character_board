@@ -1,0 +1,312 @@
+/*
+ * Look: the official character sheet done as a modern app (same design tokens as the 3.5 playboard).
+ * Warm off-white paper, near-black ink, hairline rules, small-caps labels in black tags.
+ * One accent (deep red), used sparingly: active tab, links, key numbers. No gradients, no textures.
+ * Fonts: EB Garamond (text), IM Fell English SC (small-caps labels), Cinzel (numbers, titles),
+ * Cinzel Decorative (character name only).
+ */
+:root {
+  --font-display: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-title: 'IM Fell English SC', 'Cinzel', serif;
+  --font-num: 'Cinzel', 'Times New Roman', serif;
+  --font-body: 'EB Garamond', 'Crimson Text', Georgia, serif;
+
+  --page: #ecebe6; /* around the sheet (wide screens) */
+  --paper: #fbfaf7; /* the sheet */
+  --box: #ffffff; /* cards, inputs */
+  --paper-2: #f2f0eb; /* subtle fills: hover, wells */
+  --ink: #1a1714;
+  --ink-soft: #6b655d;
+  --rule: #dcd8d0; /* hairlines */
+  --rule-strong: #b9b3a8; /* control outlines */
+  --frame: var(--ink); /* panel frames, black labels */
+  --on-frame: #fbfaf7; /* text on black labels */
+  --accent: #8a1c14;
+  --accent-dark: #6a140e;
+  --accent-soft: #f5e9e7;
+  --gold: #9c7b2c;
+  --warn: #9a6400;
+  --danger: #a3241a;
+  --shadow-pop: 0 12px 40px rgb(26 23 20 / 0.18), 0 2px 6px rgb(26 23 20 / 0.08);
+  /* Schools of magic: distinct hues, used as a row tint and a thick edge (text keeps the ink colour). */
+  --school-abjuration: #2c6ba3;
+  --school-conjuration: #b8730f;
+  --school-divination: #6a8a1c;
+  --school-enchantment: #b23f7c;
+  --school-evocation: #c4432a;
+  --school-illusion: #6a4bbd;
+  --school-necromancy: #4d5563;
+  --school-transmutation: #11857a;
+  /* Magic items: a discreet arcane tint. */
+  --arcane: #5f4ea3;
+
+  /* Legacy names kept so older components keep resolving (no texture, no gold). */
+  --leather: var(--ink);
+  --leather-dark: var(--ink);
+  --gold-light: var(--paper);
+  --gold-dark: var(--ink);
+  --noise: none;
+  --blotches: none;
+  --grain-dark: none;
+  color-scheme: light;
+}
+
+/* Night reading: the same sheet inverted. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --page: #0b0a09;
+    --paper: #141210;
+    --box: #1b1916;
+    --paper-2: #23201c;
+    --ink: #ece7de;
+    --ink-soft: #a39b8f;
+    --rule: #34302b;
+    --rule-strong: #57514a;
+    --frame: #d9d3c8;
+    --on-frame: #141210;
+    --accent: #e06b5c;
+    --accent-dark: #c4544a;
+    --accent-soft: #3a1f1b;
+    --gold: #c9a85a;
+    --warn: #e0a84a;
+    --danger: #ef7b70;
+    --shadow-pop: 0 12px 40px rgb(0 0 0 / 0.6);
+    --school-abjuration: #6aaae8;
+    --school-conjuration: #f0a53c;
+    --school-divination: #a9cb4c;
+    --school-enchantment: #f07db8;
+    --school-evocation: #ff7d5f;
+    --school-illusion: #a991f2;
+    --school-necromancy: #a3aec0;
+    --school-transmutation: #42cfb8;
+    --arcane: #ab9ce6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --school-abjuration: #6aaae8;
+  --school-conjuration: #f0a53c;
+  --school-divination: #a9cb4c;
+  --school-enchantment: #f07db8;
+  --school-evocation: #ff7d5f;
+  --school-illusion: #a991f2;
+  --school-necromancy: #a3aec0;
+  --school-transmutation: #42cfb8;
+  --arcane: #ab9ce6;
+
+  --page: #0b0a09;
+  --paper: #141210;
+  --box: #1b1916;
+  --paper-2: #23201c;
+  --ink: #ece7de;
+  --ink-soft: #a39b8f;
+  --rule: #34302b;
+  --rule-strong: #57514a;
+  --frame: #d9d3c8;
+  --on-frame: #141210;
+  --accent: #e06b5c;
+  --accent-dark: #c4544a;
+  --accent-soft: #3a1f1b;
+  --gold: #c9a85a;
+  --warn: #e0a84a;
+  --danger: #ef7b70;
+  --shadow-pop: 0 12px 40px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17.5px;
+  line-height: 1.45;
+  font-variant-numeric: lining-nums;
+  background: var(--page);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  max-width: 80rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--paper);
+  border-inline: 1px solid var(--rule);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+/* ---------- Panels: framed card with a black small-caps tag, as on the official sheet ---------- */
+.box {
+  position: relative;
+  border: 1.5px solid var(--frame);
+  border-radius: 3px;
+  padding: 0 1rem 1rem;
+  background: var(--box);
+  min-width: 0;
+}
+.box > h3 {
+  width: fit-content;
+  max-width: calc(100% + 1rem);
+  margin: -1px 0 0.85rem -1rem;
+  padding: 0.3rem 0.9rem 0.35rem 1rem;
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: var(--on-frame);
+  background: var(--frame);
+  border-radius: 0 0 3px 0;
+}
+
+/* Tables: hairline rows, small-caps headers. */
+.box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.box th {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  border-bottom: 1.5px solid var(--frame);
+  text-align: left;
+  padding: 0.25em 0.45em;
+}
+.box td {
+  padding: 0.2em 0.45em;
+  border-bottom: 1px solid var(--rule);
+}
+.box tbody tr:hover {
+  background: var(--paper-2);
+}
+
+/* Base look of form controls, so none falls back to the browser's grey-on-white widgets (unreadable in dark
+   mode, and on iPad Safari). :where() keeps specificity at zero: component styles still win. */
+:where(button, select, input:not([type='checkbox'], [type='radio'], [type='range']), textarea) {
+  font: inherit;
+  color: var(--ink);
+  background-color: var(--box);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+}
+:where(button) {
+  cursor: pointer;
+}
+:where(button:disabled, select:disabled, input:disabled, textarea:disabled) {
+  color: var(--ink-soft);
+  background-color: var(--paper-2);
+  border-color: var(--rule);
+  cursor: default;
+}
+:where(input, textarea)::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+:where(input[type='checkbox'], input[type='radio'], input[type='range']) {
+  accent-color: var(--accent);
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+/* School of a spell row: sets --school for borders and accents. */
+.school-abjuration {
+  --school: var(--school-abjuration);
+}
+.school-conjuration {
+  --school: var(--school-conjuration);
+}
+.school-divination {
+  --school: var(--school-divination);
+}
+.school-enchantment {
+  --school: var(--school-enchantment);
+}
+.school-evocation {
+  --school: var(--school-evocation);
+}
+.school-illusion {
+  --school: var(--school-illusion);
+}
+.school-necromancy {
+  --school: var(--school-necromancy);
+}
+.school-transmutation {
+  --school: var(--school-transmutation);
+}
+
+/* Magic item marker: a small star with a slow glimmer (still when the user prefers reduced motion). */
+.arcane {
+  color: var(--arcane);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--arcane) 45%, transparent);
+  animation: glimmer 3.2s ease-in-out infinite;
+}
+@keyframes glimmer {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arcane {
+    animation: none;
+  }
+}
+
+/* A spell row of a given school: tinted background and a thick coloured edge. */
+.school-row {
+  background: color-mix(in srgb, var(--school, transparent) 15%, transparent);
+  border-left: 6px solid var(--school, var(--rule-strong));
+}
+
+/* Printing ("Generate the PDF", ui/PrintSheet.svelte): only the printable sheet, black on white, A4. */
+@media print {
+  /* No page margin: the sheet draws its own (padding in ui/PrintSheet.svelte), so it keeps them whatever the print
+     dialog's "Margins" setting is. */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  #app {
+    max-width: none;
+    min-height: 0;
+    border: none;
+    background: #fff;
+  }
+  #app > :not(.print-sheet) {
+    display: none !important;
+  }
+}

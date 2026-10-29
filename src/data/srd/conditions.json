@@ -1,0 +1,287 @@
+[
+  {
+    "id": "blinded",
+    "name": {
+      "en": "Blinded",
+      "fr": "Aveuglé",
+      "es": "Cegado"
+    },
+    "text": {
+      "en": "<p>While you have the Blinded condition, you experience the following effects.</p><p><strong>Can’t See.</strong> You can’t see and automatically fail any ability check that requires sight.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage, and your attack rolls have Disadvantage.</p>",
+      "fr": "<p>Tant que vous avez l’état Aveuglé, vous subissez les effets suivants.</p><p><strong>Incapable de voir.</strong> Vous ne voyez rien et ratez automatiquement tout test de caractéristique reposant sur la vue.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage, et vos jets d’attaque subissent le Désavantage.</p>",
+      "es": "<p>Mientras tengas el estado de cegado, experimentarás los siguientes efectos:</p><p><strong>No puedes ver.</strong> No puedes ver y fallas automáticamente todas las pruebas de característica que requieran la vista.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja y tus tiradas de ataque tienen desventaja.</p>"
+    },
+    "source": {
+      "page": 177,
+      "frPage": 189,
+      "section": "Rules Glossary",
+      "esPage": 197
+    }
+  },
+  {
+    "id": "charmed",
+    "name": {
+      "en": "Charmed",
+      "fr": "Charmé",
+      "es": "Hechizado"
+    },
+    "text": {
+      "en": "<p>While you have the Charmed condition, you experience the following effects.</p><p><strong>Can’t Harm the Charmer.</strong> You can’t attack the charmer or target the charmer with damaging abilities or magical effects.</p><p><strong>Social Advantage.</strong> The charmer has Advantage on any ability check to interact with you socially.</p>",
+      "fr": "<p>Tant que vous avez l’état Charmé, vous subissez les effets suivants.</p><p><strong>Ne pas nuire au charmeur.</strong> Vous ne pouvez pas attaquer votre « charmeur » ni le cibler avec des aptitudes ou effets magiques qui infligent des dégâts.</p><p><strong>Interaction avec Avantage.</strong> Le charmeur a l’Avantage aux tests de caractéristique d’interaction sociale avec vous.</p>",
+      "es": "<p>Mientras tengas el estado de hechizado, experimentarás los siguientes efectos:</p><p><strong>No puedes dañar a quien te haya hechizado.</strong> No puedes atacar ni elegir como objetivo de efectos dañinos o mágicos a quien te haya hechizado.</p><p><strong>Ventaja social.</strong> Quien te haya hechizado tiene ventaja en las pruebas de característica para interactuar socialmente contigo.</p>"
+    },
+    "source": {
+      "page": 178,
+      "frPage": 190,
+      "section": "Rules Glossary",
+      "esPage": 202
+    }
+  },
+  {
+    "id": "deafened",
+    "name": {
+      "en": "Deafened",
+      "fr": "Assourdi",
+      "es": "Ensordecido"
+    },
+    "text": {
+      "en": "<p>While you have the Deafened condition, you experience the following effect.</p><p><strong>Can’t Hear.</strong> You can’t hear and automatically fail any ability check that requires hearing.</p>",
+      "fr": "<p>Tant que vous avez l’état Assourdi, vous subissez les effets suivants.</p><p><strong>Incapable d’entendre.</strong> Vous n’entendez rien et ratez automatiquement tous les tests de caractéristique qui reposent sur l’ouïe.</p>",
+      "es": "<p>Mientras tengas el estado de ensordecido, experimentarás el siguiente efecto:</p><p><strong>No puedes oír.</strong> No puedes oír y fallas automáticamente las pruebas de característica que requieran el oído.</p>"
+    },
+    "source": {
+      "page": 181,
+      "frPage": 188,
+      "section": "Rules Glossary",
+      "esPage": 200
+    }
+  },
+  {
+    "id": "exhaustion",
+    "name": {
+      "en": "Exhaustion",
+      "fr": "Épuisement",
+      "es": "Cansancio"
+    },
+    "text": {
+      "en": "<p>While you have the Exhaustion condition, you experience the following effects.</p><p><strong>Exhaustion Levels.</strong> This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.</p><p><strong>D20 Tests Affected.</strong> When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.</p><p><strong>Speed Reduced.</strong> Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.</p><p><strong>Removing Exhaustion Levels.</strong> Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.</p>",
+      "fr": "<p>Tant que vous avez l’état Épuisement, vous subissez les effets suivants.</p><p><strong>Niveaux d’Épuisement.</strong> Cet état est cumulatif. Chaque fois que vous le recevez, vous subissez 1 niveau d’Épuisement. Vous mourez quand votre niveau d’Épuisement atteint 6.</p><p><strong>Tests d20 affectés.</strong> Lorsque vous effectuez un Test d20, le résultat est réduit de 2 fois votre niveau actuel d’Épuisement.</p><p><strong>Vitesse réduite.</strong> Votre Vitesse est réduite de 1,50 m x votre niveau actuel d’Épuisement.</p><p><strong>Suppression des niveaux d’Épuisement.</strong> Terminer un Repos long dissipe 1 niveau d’Épuisement. Lorsque votre niveau d’Épuisement atteint 0, l’état prend fin pour vous.</p>",
+      "es": "<p>Mientras tengas el estado de cansancio, experimentarás los siguientes efectos:</p><p><strong>Niveles de cansancio.</strong> Este estado es acumulativo. Cada vez que lo recibas, sumas 1 nivel de cansancio. Morirás si tu nivel de cansancio es 6.</p><p><strong>Pruebas con d20 afectadas.</strong> Cuando hagas una prueba con d20, el resultado se reduce en 2 × tu nivel de cansancio.</p><p><strong>Velocidad reducida.</strong> Tu velocidad se reduce en 1,5 m × tu nivel de cansancio.</p><p><strong>Eliminar niveles de cansancio.</strong> Tras finalizar un descanso largo, resta 1 nivel de cansancio. Cuando tus niveles de cansancio se reduzcan a 0, el estado terminará.</p>"
+    },
+    "source": {
+      "page": 181,
+      "frPage": 192,
+      "section": "Rules Glossary",
+      "esPage": 197
+    }
+  },
+  {
+    "id": "frightened",
+    "name": {
+      "en": "Frightened",
+      "fr": "Effrayé",
+      "es": "Asustado"
+    },
+    "text": {
+      "en": "<p>While you have the Frightened condition, you experience the following effects.</p><p><strong>Ability Checks and Attacks Affected.</strong> You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.</p><p><strong>Can’t Approach.</strong> You can’t willingly move closer to the source of fear.</p>",
+      "fr": "<p>Tant que vous avez l’état Effrayé, vous subissez les effets suivants.</p><p><strong>Effet sur les attaques et les tests de caractéris-</strong></p><p><strong>tique.</strong> Vous subissez le Désavantage aux tests de</p><p>caractéristique et aux jets d’attaque tant que la source de votre effroi est dans votre champ de vision.</p><p><strong>Impossible d’approcher.</strong> Vous ne pouvez pas vous rapprocher volontairement de la source de votre effroi.</p>",
+      "es": "<p>Mientras tengas el estado de asustado, experimentarás los siguientes efectos:</p><p><strong>Pruebas de característica y ataques afectados.</strong> Tienes desventaja en las pruebas de característica y las tiradas de ataque mientras la fuente de tu miedo esté en tu línea de visión.</p><p><strong>No puedes acercarte.</strong> No puedes acercarte voluntariamente a la fuente de tu miedo.</p>"
+    },
+    "source": {
+      "page": 182,
+      "frPage": 191,
+      "section": "Rules Glossary",
+      "esPage": 196
+    }
+  },
+  {
+    "id": "grappled",
+    "name": {
+      "en": "Grappled",
+      "fr": "Agrippé",
+      "es": "Agarrado"
+    },
+    "text": {
+      "en": "<p>While you have the Grappled condition, you experience the following effects.</p><p><strong>Speed 0.</strong> Your Speed is 0 and can’t increase.</p><p><strong>Attacks Affected.</strong> You have Disadvantage on attack rolls against any target other than the grappler.</p><p><strong>Movable.</strong> The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.</p>",
+      "fr": "<p>Tant que vous avez l’état Agrippé, vous subissez les effets suivants.</p><p><strong>Vitesse 0.</strong> Votre Vitesse est de 0 et ne peut pas augmenter.</p><p><strong>Effet sur les attaques.</strong> Vous subissez le Désavantage aux jets d’attaque contre toute cible hormis l’agrippeur.</p><p><strong>Déplaçable.</strong> L’agrippeur peut vous tirer ou vous porter lorsqu’il se déplace, mais ses coûts de déplacement</p><p>sont doublés, sauf si vous êtes de taille TP ou que votre catégorie de taille est inférieure d’au moins deux crans à la sienne.</p>",
+      "es": "<p>Mientras tengas el estado de agarrado, experimentarás los siguientes efectos:</p><p><strong>Velocidad 0.</strong> Tu velocidad es 0 y no puede aumentar.</p><p><strong>Ataques afectados.</strong> Tienes desventaja en las tiradas de ataque contra cualquier objetivo que no sea quien te agarra.</p><p><strong>Desplazable.</strong> Quien te agarra puede arrastrarte o transportarte al moverse, pero cada metro de movimiento le cuesta 1 m adicional, salvo que seas Diminuto o tu tamaño sea dos o más categorías inferior al suyo.</p>"
+    },
+    "source": {
+      "page": 182,
+      "frPage": 187,
+      "section": "Rules Glossary",
+      "esPage": 194
+    }
+  },
+  {
+    "id": "incapacitated",
+    "name": {
+      "en": "Incapacitated",
+      "fr": "Neutralisé",
+      "es": "Incapacitado"
+    },
+    "text": {
+      "en": "<p>While you have the Incapacitated condition, you experience the following effects.</p><p><strong>Inactive.</strong> You can’t take any action, Bonus Action, or Reaction.</p><p><strong>No Concentration.</strong> Your Concentration is broken.</p><p><strong>Speechless.</strong> You can’t speak.</p><p><strong>Surprised.</strong> If you’re Incapacitated when you roll Initiative, you have Disadvantage on the roll.</p>",
+      "fr": "<p>Tant que vous avez l’état Neutralisé, vous subissez les effets suivants.</p><p><strong>Inactif.</strong> Vous ne pouvez entreprendre ni action, ni action Bonus ni Réaction.</p><p><strong>Concentration brisée.</strong> Votre Concentration est brisée.</p><p><strong>Sans voix.</strong> Vous ne pouvez pas parler.</p><p><strong>Surpris.</strong> Si vous êtes Neutralisé au moment de jouer l’Initiative, vous subissez le Désavantage à ce jet.</p>",
+      "es": "<p>Mientras tengas el estado de incapacitado, experimentarás los siguientes efectos:</p><p><strong>Inactivo.</strong> No puedes llevar a cabo ninguna acción, acción adicional o reacción.</p><p><strong>Pérdida de concentración.</strong> Pierdes la concentración.</p><p><strong>Mudo.</strong> No puedes hablar.</p><p><strong>Sorprendido.</strong> Si tienes el estado de incapacitado cuando tiras iniciativa, tendrás desventaja en la tirada.</p>"
+    },
+    "source": {
+      "page": 184,
+      "frPage": 196,
+      "section": "Rules Glossary",
+      "esPage": 202
+    }
+  },
+  {
+    "id": "invisible",
+    "name": {
+      "en": "Invisible",
+      "fr": "Invisible",
+      "es": "Invisible"
+    },
+    "text": {
+      "en": "<p>While you have the Invisible condition, you experience the following effects.</p><p><strong>Surprise.</strong> If you’re Invisible when you roll Initiative, you have Advantage on the roll.</p><p><strong>Concealed.</strong> You aren’t affected by any effect that requires its target to be seen unless the effect’s creator can somehow see you. Any equipment you are wearing or carrying is also concealed.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don’t gain this benefit against that creature.</p>",
+      "fr": "<p>Tant que vous avez l’état Invisible, vous subissez les effets suivants.</p><p><strong>Surprise.</strong> Si vous êtes Invisible au moment de jouer l’Initiative, vous avez l’Avantage à ce jet.</p><p><strong>Dissimulé.</strong> Vous n’êtes pas affecté par les effets qui exigent que la cible soit vue, sauf si le créateur de l’effet vous « voit » par un biais ou un autre. Tout l’équipement que vous portez est lui aussi dissimulé.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous subissent le Désavantage, et vos jets d’attaque ont l’Avantage. Si une créature vous voit par un biais ou un autre, vous ne recevez pas ce bénéfice contre elle.</p>",
+      "es": "<p>Mientras tengas el estado de invisible, experimentarás los siguientes efectos:</p><p><strong>Sorpresa.</strong> Si tienes el estado de invisible cuando tiras iniciativa, tendrás ventaja en la tirada.</p><p><strong>Oculto.</strong> No te afecta ningún efecto que requiera ver a su objetivo, salvo que el creador del efecto pueda verte de alguna forma. Cualquier equipo que vistas o lleves contigo también se oculta.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen desventaja y tus tiradas de ataque tienen ventaja. Si una criatura puede verte de alguna forma, no obtienes este beneficio contra esa criatura.</p>"
+    },
+    "source": {
+      "page": 184,
+      "frPage": 195,
+      "section": "Rules Glossary",
+      "esPage": 203
+    }
+  },
+  {
+    "id": "paralyzed",
+    "name": {
+      "en": "Paralyzed",
+      "fr": "Paralysé",
+      "es": "Paralizado"
+    },
+    "text": {
+      "en": "<p>While you have the Paralyzed condition, you experience the following effects.</p><p><strong>Incapacitated.</strong> You have the Incapacitated condition.</p><p><strong>Speed 0.</strong> Your Speed is 0 and can’t increase.</p><p><strong>Saving Throws Affected.</strong> You automatically fail Strength and Dexterity saving throws.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage.</p><p><strong>Automatic Critical Hits.</strong> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p>",
+      "fr": "<p>Tant que vous avez l’état Paralysé, vous subissez les effets suivants.</p><p><strong>Neutralisé.</strong> Vous subissez l’état Neutralisé.</p><p><strong>Vitesse 0.</strong> Votre Vitesse est de 0 et ne peut pas augmenter.</p><p><strong>Effet sur les jets de sauvegarde.</strong> Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage.</p><p><strong>Coups critiques automatiques.</strong> Tout jet d’attaque qui vous touche est un Coup critique si l’assaillant qui la porte se trouve dans un rayon de 1,50 m.</p>",
+      "es": "<p>Mientras tengas el estado de paralizado, experimentarás los siguientes efectos:</p><p><strong>Incapacitado.</strong> Tienes el estado de incapacitado.</p><p><strong>Velocidad 0.</strong> Tu velocidad es 0 y no puede aumentar.</p><p><strong>Tiradas de salvación afectadas.</strong> Fallas automáticamente las tiradas de salvación de Fuerza y Destreza.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja.</p><p><strong>Críticos automáticos.</strong> Cualquier tirada de ataque que te acierte es un crítico si el atacante está a 1,5 m o menos de ti.</p>"
+    },
+    "source": {
+      "page": 186,
+      "frPage": 196,
+      "section": "Rules Glossary",
+      "esPage": 204
+    }
+  },
+  {
+    "id": "petrified",
+    "name": {
+      "en": "Petrified",
+      "fr": "Pétrifié",
+      "es": "Petrificado"
+    },
+    "text": {
+      "en": "<p>While you have the Petrified condition, you experience the following effects.</p><p><strong>Turned to Inanimate Substance.</strong> You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.</p><p><strong>Incapacitated.</strong> You have the Incapacitated condition.</p><p><strong>Speed 0.</strong> Your Speed is 0 and can’t increase.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage.</p><p><strong>Saving Throws Affected.</strong> You automatically fail Strength and Dexterity saving throws.</p><p><strong>Resist Damage.</strong> You have Resistance to all damage.</p><p><strong>Poison Immunity.</strong> You have Immunity to the Poisoned condition.</p>",
+      "fr": "<p>Tant que vous avez l’état Pétrifié, vous subissez les effets suivants.</p><p><strong>Transformé en substance inanimée.</strong> Vous êtes transformé, ainsi que les objets non magiques que vous portez, en une substance inanimée et dense (généralement de la pierre). Votre poids est décuplé et vous n’êtes plus soumis au vieillissement.</p><p><strong>Neutralisé.</strong> Vous subissez l’état Neutralisé.</p><p><strong>Vitesse 0.</strong> Votre Vitesse est de 0 et ne peut pas augmenter.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage.</p><p><strong>Effet sur les jets de sauvegarde.</strong> Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité.</p><p><strong>Résistance aux dégâts.</strong> Vous avez la Résistance à tous les dégâts.</p><p><strong>Immunité contre le poison.</strong> Vous avez l’Immunité contre l’état Empoisonné.</p>",
+      "es": "<p>Mientras tengas el estado de petrificado, experimentarás los siguientes efectos:</p><p><strong>Transformación en sustancia inanimada.</strong> Te transformas, junto con cualquier objeto no mágico</p><p>que vistas o lleves contigo, en una sustancia sólida e inanimada (normalmente piedra). Tu peso se multiplica por diez y dejas de envejecer.</p><p><strong>Incapacitado.</strong> Tienes el estado de incapacitado.</p><p><strong>Velocidad 0.</strong> Tu velocidad es 0 y no puede aumentar.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja.</p><p><strong>Tiradas de salvación afectadas.</strong> Fallas automáticamente las tiradas de salvación de Fuerza y Destreza.</p><p><strong>Resistencia al daño.</strong> Tienes resistencia a todo el daño.</p><p><strong>Inmunidad al veneno.</strong> Tienes inmunidad al estado de envenenado.</p>"
+    },
+    "source": {
+      "page": 186,
+      "frPage": 197,
+      "section": "Rules Glossary",
+      "esPage": 205
+    }
+  },
+  {
+    "id": "poisoned",
+    "name": {
+      "en": "Poisoned",
+      "fr": "Empoisonné",
+      "es": "Envenenado"
+    },
+    "text": {
+      "en": "<p>While you have the Poisoned condition, you experience the following effect.</p><p><strong>Ability Checks and Attacks Affected.</strong> You have Disadvantage on attack rolls and ability checks.</p>",
+      "fr": "<p>Tant que vous avez l’état Empoisonné, vous subissez l’effet suivant.</p><p><strong>Effet sur les attaques et les tests de caractéris-</strong></p><p><strong>tique.</strong> Vous subissez le Désavantage aux jets d’attaque</p><p>et aux tests de caractéristique.</p>",
+      "es": "<p>Mientras tengas el estado de envenenado, experimentarás el siguiente efecto:</p><p><strong>Pruebas de característica y ataques afectados.</strong> Tienes desventaja en las tiradas de ataque y las pruebas de característica.</p>"
+    },
+    "source": {
+      "page": 186,
+      "frPage": 192,
+      "section": "Rules Glossary",
+      "esPage": 201
+    }
+  },
+  {
+    "id": "prone",
+    "name": {
+      "en": "Prone",
+      "fr": "À terre",
+      "es": "Derribado"
+    },
+    "text": {
+      "en": "<p>While you have the Prone condition, you experience the following effects.</p><p><strong>Restricted Movement.</strong> Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.</p><p><strong>Attacks Affected.</strong> You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.</p>",
+      "fr": "<p>Tant que vous avez l’état À terre, vous subissez les effets suivants.</p><p><strong>Déplacement limité.</strong> Vos seules possibilités de déplacement sont ramper ou vous relever en dépensant la moitié de votre Vitesse (arrondie à l’inférieur), ce qui met un terme à l’état. Si votre Vitesse est de 0, vous ne pouvez pas vous relever.</p><p><strong>Effet sur les attaques.</strong> Vous subissez le Désavantage aux jets d’attaque. Un jet d’attaque contre vous reçoit l’Avantage si l’assaillant se trouve dans un rayon de 1,50 m de vous. Sans cela, ce jet d’attaque subit le Désavantage.</p>",
+      "es": "<p>Mientras tengas el estado de derribado, experimentarás los siguientes efectos:</p><p><strong>Movimiento restringido.</strong> Tus únicas opciones de movimiento son arrastrarte o gastar una cantidad de movimiento igual a la mitad de tu velocidad (redondeando hacia abajo) para levantarte y, por tanto, poner fin a este estado. Si tu velocidad es 0, no puedes levantarte.</p><p><strong>Ataques afectados.</strong> Tienes desventaja en las tiradas de ataque. Las tiradas de ataque contra ti tienen ventaja si el atacante está a 1,5 m o menos de ti. De lo contrario, las tiradas de ataque tienen desventaja.</p>"
+    },
+    "source": {
+      "page": 186,
+      "frPage": 187,
+      "section": "Rules Glossary",
+      "esPage": 199
+    }
+  },
+  {
+    "id": "restrained",
+    "name": {
+      "en": "Restrained",
+      "fr": "Entravé",
+      "es": "Apresado"
+    },
+    "text": {
+      "en": "<p>While you have the Restrained condition, you experience the following effects.</p><p><strong>Speed 0.</strong> Your Speed is 0 and can’t increase.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage, and your attack rolls have Disadvantage.</p><p><strong>Saving Throws Affected.</strong> You have Disadvantage on Dexterity saving throws.</p>",
+      "fr": "<p>Tant que vous avez l’état Entravé, vous subissez les effets suivants.</p><p><strong>Vitesse 0.</strong> Votre Vitesse est de 0 et ne peut pas augmenter.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage, et vos jets d’attaque subissent le Désavantage.</p><p><strong>Effet sur les jets de sauvegarde.</strong> Vous subissez le Désavantage aux jets de sauvegarde de Dextérité.</p>",
+      "es": "<p>Mientras tengas el estado de apresado, experimentarás los siguientes efectos:</p><p><strong>Velocidad 0.</strong> Tu velocidad es 0 y no puede aumentar.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja y tus tiradas de ataque tienen desventaja.</p><p><strong>Tiradas de salvación afectadas.</strong> Tienes desventaja en las tiradas de salvación de Destreza.</p>"
+    },
+    "source": {
+      "page": 187,
+      "frPage": 192,
+      "section": "Rules Glossary",
+      "esPage": 195
+    }
+  },
+  {
+    "id": "stunned",
+    "name": {
+      "en": "Stunned",
+      "fr": "Étourdi",
+      "es": "Aturdido"
+    },
+    "text": {
+      "en": "<p>While you have the Stunned condition, you experience the following effects.</p><p><strong>Incapacitated.</strong> You have the Incapacitated condition.</p><p><strong>Saving Throws Affected.</strong> You automatically fail Strength and Dexterity saving throws.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage.</p>",
+      "fr": "<p>Tant que vous avez l’état Étourdi, vous subissez les effets suivants.</p><p><strong>Neutralisé.</strong> Vous subissez l’état Neutralisé.</p><p><strong>Effet sur les jets de sauvegarde.</strong> Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage.</p>",
+      "es": "<p>Mientras tengas el estado de aturdido, experimentarás los siguientes efectos:</p><p><strong>Incapacitado.</strong> Tienes el estado de incapacitado.</p><p><strong>Tiradas de salvación afectadas.</strong> Fallas automáticamente las tiradas de salvación de Fuerza y Destreza.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja.</p>"
+    },
+    "source": {
+      "page": 189,
+      "frPage": 192,
+      "section": "Rules Glossary",
+      "esPage": 196
+    }
+  },
+  {
+    "id": "unconscious",
+    "name": {
+      "en": "Unconscious",
+      "fr": "Inconscient",
+      "es": "Inconsciente"
+    },
+    "text": {
+      "en": "<p>While you have the Unconscious condition, you experience the following effects.</p><p><strong>Inert.</strong> You have the Incapacitated and Prone conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.</p><p><strong>Speed 0.</strong> Your Speed is 0 and can’t increase.</p><p><strong>Attacks Affected.</strong> Attack rolls against you have Advantage.</p><p><strong>Saving Throws Affected.</strong> You automatically fail Strength and Dexterity saving throws.</p><p><strong>Automatic Critical Hits.</strong> Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.</p><p><strong>Unaware.</strong> You’re unaware of your surroundings.</p>",
+      "fr": "<p>Tant que vous avez l’état Inconscient, vous subissez les effets suivants.</p><p><strong>Inerte.</strong> Vous subissez les états À terre et Neutralisé, et laissez choir tout ce que vous teniez. Lorsque cet état prend fin, vous êtes toujours À terre.</p><p><strong>Vitesse 0.</strong> Votre Vitesse est de 0 et ne peut pas augmenter.</p><p><strong>Effet sur les attaques.</strong> Les jets d’attaque contre vous ont l’Avantage.</p><p><strong>Effet sur les jets de sauvegarde.</strong> Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité.</p><p><strong>Coups critiques automatiques.</strong> Tout jet d’attaque qui vous touche est un Coup critique si l’assaillant qui la porte se trouve dans un rayon de 1,50 m.</p><p><strong>Dénué de conscience.</strong> Vous n’avez pas conscience de ce qui vous entoure.</p>",
+      "es": "<p>Mientras tengas el estado de inconsciente, experimentarás los siguientes efectos:</p><p><strong>Inerte.</strong> Tienes los estados de derribado e incapacitado y sueltas lo que estés sujetando. Cuando concluya este estado, permanecerás derribado.</p><p><strong>Velocidad 0.</strong> Tu velocidad es 0 y no puede aumentar.</p><p><strong>Ataques afectados.</strong> Las tiradas de ataque contra ti tienen ventaja.</p><p><strong>Tiradas de salvación afectadas.</strong> Fallas automáticamente las tiradas de salvación de Fuerza y Destreza.</p><p><strong>Críticos automáticos.</strong> Cualquier tirada de ataque que te acierte es un crítico si el atacante está a 1,5 m o menos de ti.</p><p><strong>Ignorante.</strong> No eres consciente de tu entorno.</p>"
+    },
+    "source": {
+      "page": 191,
+      "frPage": 194,
+      "section": "Rules Glossary",
+      "esPage": 202
+    }
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Sélénia Brasecarlate",
+    "player": "",
+    "alignment": "Chaotic Good",
+    "background": "Raised in a mountain temple where the priests nursed a red dragon's egg, she woke one morning with embers in her blood and left to find out why.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Draconic", "Celestial"],
+    "height": { "m": 1.88 },
+    "weight": { "kg": 95 },
+    "age": "24"
+  },
+  "speciesId": "dragonborn",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "acolyte",
+    "abilities": { "cha": 2, "wis": 1 },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "cleric",
+        "ability": "cha",
+        "cantrips": ["guidance", "sacred-flame"],
+        "spell": ["healing-word"]
+      }
+    }
+  },
+  "baseAbilities": { "str": 8, "dex": 14, "con": 14, "int": 10, "wis": 12, "cha": 15 },
+  "levels": [
+    { "classId": "sorcerer", "hpRoll": 6, "hpFixed": false, "choices": {} },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    { "classId": "sorcerer", "subclassId": "sorcerer:draconic-sorcery", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 2 } }
+    },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true,
+      "choices": {},
+      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 1, "wis": 1 } }
+    },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["arcana", "persuasion"],
+  "toolProficiencies": ["Calligrapher's Supplies"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    { "uid": "wpn1", "kind": "weapon", "refId": "spear", "quantity": 1, "location": "worn", "equipped": true },
+    { "uid": "wpn2", "kind": "weapon", "refId": "dagger", "quantity": 2, "location": "worn" },
+    { "uid": "gear1", "kind": "gear", "refId": "arcane-focus", "quantity": 1, "location": "worn" },
+    { "uid": "gear2", "kind": "gear", "refId": "dungeoneers-pack", "quantity": 1, "location": "carried" }
+  ],
+  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 28, "pp": 0 },
+  "spellcasting": {
+    "sorcerer": {
+      "prepared": [
+        "shield",
+        "magic-missile",
+        "mage-armor",
+        "burning-hands",
+        "misty-step",
+        "scorching-ray",
+        "mirror-image",
+        "hold-person",
+        "fireball",
+        "counterspell",
+        "haste",
+        "dispel-magic",
+        "dimension-door",
+        "wall-of-fire",
+        "cone-of-cold"
+      ],
+      "cantrips": ["fire-bolt", "light", "prestidigitation", "shocking-grasp", "sorcerous-burst", "mage-hand"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": { "current": 72, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": { "known": [] },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": { "lang": "fr" },
+  "featureChoices": {
+    "dragonborn:draconic-ancestry": "red",
+    "sorcerer:metamagic": [
+      "sorcerer:metamagic:quickened-spell",
+      "sorcerer:metamagic:twinned-spell",
+      "sorcerer:metamagic:subtle-spell",
+      "sorcerer:metamagic:careful-spell"
+    ],
+    "sorcerer:draconic-sorcery:elemental-affinity": "fire"
+  },
+  "extraFeats": {}
+}

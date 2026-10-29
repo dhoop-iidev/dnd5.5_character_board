@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Maëlle du Val-aux-Loups",
+    "player": "",
+    "alignment": "Neutral Good",
+    "background": "Raised by a hermit scholar at the edge of the great forest, she keeps the old pacts between the villages and the woods.",
+    "title": "",
+    "motto": "",
+    "deity": "",
+    "languages": ["Common", "Druidic", "Sylvan"],
+    "height": {
+      "m": 1.65
+    },
+    "weight": {
+      "kg": 58
+    },
+    "age": "31"
+  },
+  "speciesId": "human",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "sage",
+    "abilities": {
+      "wis": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "wizard",
+        "ability": "wis",
+        "cantrips": ["mage-hand", "minor-illusion"],
+        "spell": ["find-familiar"]
+      }
+    }
+  },
+  "baseAbilities": {
+    "str": 10,
+    "dex": 14,
+    "con": 14,
+    "int": 12,
+    "wis": 15,
+    "cha": 8
+  },
+  "levels": [
+    {
+      "classId": "druid",
+      "hpRoll": 8,
+      "hpFixed": false,
+      "choices": {
+        "druid:primal-order": "magician"
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "subclassId": "druid:circle-of-the-land",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "wis": 2
+        }
+      }
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 6500,
+  "skillProficiencies": ["nature", "perception"],
+  "toolProficiencies": ["Herbalism Kit"],
+  "expertise": [],
+  "weaponMastery": [],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "leather-armor",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "shd1",
+      "kind": "armor",
+      "refId": "shield",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "quarterstaff",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "sickle",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "druidic-focus",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "explorers-pack",
+      "quantity": 1,
+      "location": "carried"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "herbalism-kit",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 9,
+    "pp": 0
+  },
+  "spellcasting": {
+    "druid": {
+      "prepared": [
+        "cure-wounds",
+        "entangle",
+        "faerie-fire",
+        "goodberry",
+        "healing-word",
+        "barkskin",
+        "moonbeam",
+        "call-lightning",
+        "conjure-animals"
+      ],
+      "cantrips": ["druidcraft", "guidance", "produce-flame", "starry-wisp"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 38,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [
+    {
+      "uid": "fam1",
+      "kind": "familiar",
+      "creatureId": "owl",
+      "name": "Hulotte",
+      "creatureType": "fey",
+      "hp": {
+        "current": 1,
+        "temp": 0,
+        "max": 1
+      }
+    }
+  ],
+  "wildShape": {
+    "known": ["wolf", "spider", "rat", "riding-horse"]
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "human:skillful": "medicine"
+  },
+  "extraFeats": {
+    "human:versatile": {
+      "featId": "skilled",
+      "choices": {
+        "choice": ["animal-handling", "insight", "survival"]
+      }
+    }
+  }
+}

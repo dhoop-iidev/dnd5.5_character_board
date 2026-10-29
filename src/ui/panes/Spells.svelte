@@ -1,0 +1,507 @@
+<script lang="ts">
+  // Spells pane: Druid Wild Shape first (ui/WildShapeBlock.svelte), then per spellcasting class the save DC, spell
+  // attack, prepared spells and cantrips (N / max); the shared spell slots (SRD 5.2.1 p. 104 "Preparing Spells", p. 25
+  // multiclass slots), Pact Magic slots; the Wizard spellbook level by level (p. 78). Each spell is one line
+  // (ui/SpellRow.svelte): summary, Metamagic ✦, Cast / Cast ✓ (slot spent, timed effect in the turn bar).
+  import { rules } from '../../data/rules'
+  import type { SpellDef } from '../../data/types'
+  import { spellbookLevels, wizardList } from '../../engine/spellbook'
+  import { UI } from '../../i18n/ui'
+  import type { SpellcastingState } from '../../model/character'
+  import { app, tr, view } from '../../state.svelte'
+  import { castLog } from '../castLog.svelte'
+  import { norm } from '../items'
+  import { byEnglishName } from '../order'
+  import RuleText from '../RuleText.svelte'
+  import SpellbookLevel from '../SpellbookLevel.svelte'
+  import SpellRow from '../SpellRow.svelte'
+  import StatValue from '../StatValue.svelte'
+  import WarningList from '../WarningList.svelte'
+  import WildShapeBlock from '../WildShapeBlock.svelte'
+
+  const c = $derived(app.character)
+  const sheet = $derived(view.sheet)
+  // Spells granted by feats and traits are prepared whatever the class: they don't count (SRD Magic Initiate p. 87, lineages p. 84–86).
+  const free = $derived(new Set(sheet.extraSpells.flatMap((x) => x.spells)))
+  let query = $state<Record<string, string>>({})
+
+  function castState(classId: string): SpellcastingState {
+    return (c.spellcasting[classId] ??= { prepared: [], cantrips: [] })
+  }
+  /** Spell definitions sorted by level then English name (same order in every language, ui/order.ts). */
+  const defs = (ids: string[]): SpellDef[] =>
+    ids
+      .map((id) => rules.spells.get(id))
+      .filter((x): x is SpellDef => !!x)
+      .sort((a, b) => a.level - b.level || byEnglishName(a, b))
+  function listOf(classId: string): SpellDef[] {
+    const def = rules.classes.get(classId)
+    const ids = new Set<string>()
+    for (const lv of def?.spellList ?? []) for (const id of lv.spells) ids.add(id)
+    for (const sub of def?.subclasses ?? []) for (const lv of sub.spells ?? []) for (const id of lv.spells) ids.add(id)
+    return [...ids].map((id) => rules.spells.get(id)!).filter(Boolean)
+  }
+  function candidates(classId: string, cantrip: boolean, book?: string[]): SpellDef[] {
+    const q = norm(query[classId] ?? '')
+    const st = castState(classId)
+    const taken = new Set([...st.prepared, ...st.cantrips])
+    // A Wizard prepares level 1+ spells from the spellbook (p. 78 "Prepared Spells of Level 1+").
+    return listOf(classId)
+      .filter(
+        (s) =>
+          (cantrip ? s.level === 0 : s.level > 0) &&
+          !taken.has(s.id) &&
+          (cantrip || !book || book.includes(s.id)) &&
+          (!q || norm(tr(s.name)).includes(q)),
+      )
+      .sort((a, b) => a.level - b.level || tr(a.name).localeCompare(tr(b.name)))
+  }
+  function add(classId: string, s: SpellDef) {
+    const st = castState(classId)
+    if (s.level === 0) st.cantrips.push(s.id)
+    else st.prepared.push(s.id)
+    query[classId] = ''
+  }
+  function removeSpell(classId: string, id: string) {
+    const st = castState(classId)
+    st.prepared = st.prepared.filter((x) => x !== id)
+    st.cantrips = st.cantrips.filter((x) => x !== id)
+  }
+
+  // ---- Wizard spellbook (p. 78)
+  const bookLevels = $derived(spellbookLevels(c, rules))
+  const wizList = wizardList(rules)
+  /** Spells copied into the book ("Expanding and Replacing a Spellbook", p. 78) that can be added: Wizard spells of a
+   * level the Wizard can prepare, not already in the book. */
+  function copyOptions(book: string[], maxLevel: number) {
+    const out: { level: number; spells: SpellDef[] }[] = []
+    for (let l = 1; l <= maxLevel; l++) {
+      const list = [...wizList.entries()]
+        .filter(([id, sl]) => sl === l && !book.includes(id))
+        .map(([id]) => rules.spells.get(id))
+        .filter((x): x is SpellDef => !!x)
+        .sort((a, b) => tr(a.name).localeCompare(tr(b.name)))
+      if (list.length) out.push({ level: l, spells: list })
+    }
+    return out
+  }
+  function copySpell(id: string) {
+    if (!id) return
+    const st = castState('wizard')
+    st.spellbook = [...(st.spellbook ?? []), id]
+  }
+  function uncopy(id: string) {
+    const st = castState('wizard')
+    st.spellbook = (st.spellbook ?? []).filter((x) => x !== id)
+  }
+</script>
+
+<WildShapeBlock />
+
+{#if castLog.message}
+  <p class="castmsg" role="status">
+    {tr(castLog.message)}
+    <button
+      class="x"
+      onclick={() => (castLog.message = undefined)}
+      aria-label={tr({ en: 'Close', fr: 'Fermer', es: 'Cerrar' })}>✕</button
+    >
+  </p>
+{/if}
+
+{#if sheet.slots.length || sheet.pact}
+  <section class="box">
+    <h3>{tr(UI.spellSlots)}</h3>
+    <div class="slots">
+      {#each sheet.slots as n, i (i)}
+        {#if n}
+          <div class="slot">
+            <span class="lvl">{i + 1}</span>
+            <span class="pips">
+              {#each Array(n) as _, k (k)}
+                <button
+                  class="pip"
+                  class:spent={k < (c.slotsUsed[i] ?? 0)}
+                  onclick={() => (c.slotsUsed[i] = k < (c.slotsUsed[i] ?? 0) ? k : k + 1)}
+                  aria-label={`${tr(UI.spellSlots)} ${i + 1}`}
+                ></button>
+              {/each}
+            </span>
+            <span class="meta">{n - (c.slotsUsed[i] ?? 0)} / {n}</span>
+          </div>
+        {/if}
+      {/each}
+      {#if sheet.pact}
+        <div class="slot">
+          <span class="lvl">{tr(UI.pactSlots)} ({sheet.pact.level})</span>
+          <span class="pips">
+            {#each Array(sheet.pact.slots) as _, k (k)}
+              <button
+                class="pip"
+                class:spent={k < c.pactUsed}
+                onclick={() => (c.pactUsed = k < c.pactUsed ? k : k + 1)}
+                aria-label="pact slot"
+              ></button>
+            {/each}
+          </span>
+        </div>
+      {/if}
+    </div>
+    <p class="hint">
+      {tr({
+        en: 'Slots are shared between your Spellcasting classes (SRD p. 25); Pact Magic slots are separate and return on a Short Rest.',
+        fr: 'Les emplacements sont partagés entre vos classes dotées de Sorts (SRD p. 25) ; ceux de Magie du pacte sont à part et reviennent après un repos court.',
+        es: 'Los espacios se comparten entre tus clases con Lanzamiento de conjuros (SRD p. 25); los de Magia del pacto van aparte y se recuperan con un descanso corto.',
+      })}
+    </p>
+  </section>
+{/if}
+
+{#if sheet.extraSpells.length}
+  <section class="box">
+    <h3>
+      {tr({
+        en: 'Spells from feats and traits',
+        fr: 'Sorts de dons et de traits',
+        es: 'Conjuros de dotes y atributos',
+      })}
+    </h3>
+    {#each sheet.extraSpells as x (x.ownerId)}
+      <h4>
+        <!-- The source is shown in the popup opened by the name (no SRD links in the main UI). -->
+        <RuleText name={x.name} source={x.source} noteKey="spells:{x.ownerId}" />{x.ability
+          ? ` · ${tr({ en: 'ability', fr: 'caractéristique', es: 'característica' })} ${x.ability.toUpperCase()}`
+          : ''}
+      </h4>
+      <ul class="spells">
+        {#each defs(x.spells) as s (s.id)}
+          <SpellRow {s} />
+        {/each}
+      </ul>
+    {/each}
+  </section>
+{/if}
+
+{#each sheet.spellcasting as sc (sc.classId)}
+  {@const st = castState(sc.classId)}
+  {@const pactFirst = sc.kind === 'pact'}
+  {@const counted = st.prepared.filter((id) => !sc.alwaysPrepared.includes(id) && !free.has(id)).length}
+  <section class="box">
+    <h3>{tr(sc.className)} · {tr({ en: 'Spellcasting', fr: 'Sorts', es: 'Lanzamiento de conjuros' })}</h3>
+    <div class="head">
+      <div>
+        <span class="tag">{tr(UI.spellSaveDc)}</span><StatValue
+          stat={() => sc.dc}
+          title={{
+            en: `${sc.className.en}: spell save DC`,
+            fr: `${sc.className.fr} : DD de sauvegarde`,
+            es: `${sc.className.es ?? sc.className.en}: CD de salvación`,
+          }}
+          signed={false}
+          big
+        />
+      </div>
+      <div>
+        <span class="tag">{tr(UI.spellAttack)}</span><StatValue
+          stat={() => sc.attack}
+          title={{
+            en: `${sc.className.en}: spell attack`,
+            fr: `${sc.className.fr} : attaque de sort`,
+            es: `${sc.className.es ?? sc.className.en}: ataque de conjuro`,
+          }}
+          big
+        />
+      </div>
+      <div>
+        <span class="tag">{tr(UI.cantrips)}</span><span class="big num">{st.cantrips.length} / {sc.cantripsMax}</span>
+      </div>
+      <div>
+        <span class="tag">{tr(UI.prepared)}</span><span class="big num">{counted} / {sc.preparedMax}</span>
+      </div>
+      {#if sc.spellbook}
+        <div>
+          <span class="tag">{tr(UI.spellbook)}</span><span class="big num">{sc.spellbook.length}</span>
+        </div>
+      {/if}
+      <div>
+        <span class="tag">{tr({ en: 'Max spell level', fr: 'Niveau de sort max', es: 'Nivel de conjuro máx.' })}</span
+        ><span class="big num">{sc.maxSpellLevel}</span>
+      </div>
+    </div>
+    {#if sc.spellChoice}
+      <p class="row">
+        <span class="meta">{tr(sc.spellChoice.name)} :</span>
+        <select
+          value={sc.spellChoice.value}
+          onchange={(e) => (c.featureChoices[sc.spellChoice!.key] = e.currentTarget.value)}
+        >
+          {#each sc.spellChoice.options as o (o.id)}<option value={o.id}>{tr(o.name) || o.id}</option>{/each}
+        </select>
+        <span class="meta"
+          >{tr({
+            en: 'chosen on each Long Rest',
+            fr: 'choisi à chaque repos long',
+            es: 'elegido en cada descanso largo',
+          })}</span
+        >
+      </p>
+    {/if}
+    {#if sc.alwaysPrepared.length}
+      <h4>
+        {tr({ en: 'Always prepared', fr: 'Toujours préparés', es: 'Siempre preparados' })}
+        <span class="meta">{tr({ en: 'not counted', fr: 'non comptés', es: 'no contados' })}</span>
+      </h4>
+      <ul class="spells">
+        {#each defs(sc.alwaysPrepared) as s (s.id)}
+          <SpellRow {s} classId={sc.classId} {pactFirst} />
+        {/each}
+      </ul>
+    {/if}
+    <h4>{tr(UI.cantrips)} <span class="meta">{st.cantrips.length} / {sc.cantripsMax}</span></h4>
+    <ul class="spells">
+      {#each defs(st.cantrips) as s (s.id)}
+        <SpellRow {s} classId={sc.classId} onremove={() => removeSpell(sc.classId, s.id)} />
+      {/each}
+    </ul>
+    <h4>{tr(UI.prepared)} <span class="meta">{counted} / {sc.preparedMax}</span></h4>
+    <ul class="spells">
+      {#each defs(st.prepared) as s (s.id)}
+        <SpellRow {s} classId={sc.classId} {pactFirst} onremove={() => removeSpell(sc.classId, s.id)} />
+      {/each}
+    </ul>
+    <input
+      type="search"
+      bind:value={query[sc.classId]}
+      placeholder={sc.spellbook
+        ? tr({
+            en: 'Add a cantrip, or prepare a spell from the spellbook…',
+            fr: 'Ajouter un sort mineur, ou préparer un sort du grimoire…',
+            es: 'Añadir un truco, o preparar un conjuro del libro de conjuros…',
+          })
+        : tr({
+            en: `Add a ${sc.className.en} spell…`,
+            fr: `Ajouter un sort de ${sc.className.fr}…`,
+            es: `Añadir un conjuro de ${sc.className.es ?? sc.className.en}…`,
+          })}
+    />
+    {#if (query[sc.classId] ?? '').length >= 2}
+      <ul class="results">
+        {#each [...candidates(sc.classId, true), ...candidates(sc.classId, false, sc.spellbook)].slice(0, 25) as s (s.id)}
+          <li>
+            <button onclick={() => add(sc.classId, s)}
+              >＋ {s.level ? s.level : 'C'} · {tr(s.name)} <span class="meta">{s.school}</span></button
+            >
+          </li>
+        {/each}
+      </ul>
+    {/if}
+    {#if sc.spellbook}
+      {@const copied = defs(st.spellbook ?? []).filter((s) => !bookLevels.some((l) => l.learned.includes(s.id)))}
+      {@const copyable = copyOptions(sc.spellbook, sc.maxSpellLevel)}
+      <h4>
+        {tr(UI.spellbook)}
+        <span class="meta"
+          >{tr({
+            en: 'six level 1 spells, then two per Wizard level',
+            fr: 'six sorts du 1er niveau, puis deux par niveau de Magicien',
+            es: 'seis conjuros de nivel 1, luego dos por nivel de mago',
+          })}</span
+        >
+      </h4>
+      <ul class="book">
+        {#each bookLevels as lv (lv.index)}
+          <SpellbookLevel {lv} book={sc.spellbook} list={wizList} />
+        {/each}
+      </ul>
+      <h4>
+        {tr({ en: 'Copied into the book', fr: 'Copiés dans le grimoire', es: 'Copiados en el libro' })}
+        <span class="meta"
+          >{tr({
+            en: 'found Wizard spells: 2 hours and 50 GP per spell level',
+            fr: 'sorts de Magicien trouvés : 2 heures et 50 po par niveau de sort',
+            es: 'conjuros de mago encontrados: 2 horas y 50 po por nivel de conjuro',
+          })}</span
+        >
+      </h4>
+      <ul class="chips">
+        {#each copied as s (s.id)}
+          <li class="school-row school-{s.school}">
+            <RuleText name={s.name} text={s.text} source={s.source} noteKey="spell:{s.id}" />
+            <small>{s.level}</small>
+            <button
+              class="x"
+              onclick={() => uncopy(s.id)}
+              aria-label={tr({ en: 'Remove', fr: 'Retirer', es: 'Quitar' })}>✕</button
+            >
+          </li>
+        {/each}
+        {#if copyable.length}
+          <li class="add">
+            <select
+              value=""
+              onchange={(e) => copySpell(e.currentTarget.value)}
+              aria-label={tr({
+                en: 'Copy a spell into the book',
+                fr: 'Copier un sort dans le grimoire',
+                es: 'Copiar un conjuro en el libro',
+              })}
+            >
+              <option value="">＋ {tr({ en: 'copy a spell', fr: 'copier un sort', es: 'copiar un conjuro' })}</option>
+              {#each copyable as g (g.level)}
+                <optgroup label={`${tr({ en: 'Level', fr: 'Niveau', es: 'Nivel' })} ${g.level}`}>
+                  {#each g.spells as sp (sp.id)}<option value={sp.id}>{tr(sp.name)}</option>{/each}
+                </optgroup>
+              {/each}
+            </select>
+          </li>
+        {/if}
+      </ul>
+    {/if}
+    <WarningList areas={['spells']} />
+  </section>
+{/each}
+
+<style>
+  .box {
+    margin-bottom: 1.25rem;
+  }
+  .slots {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .slot {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .lvl {
+    font-family: var(--font-num);
+    font-weight: 700;
+    min-width: 1.5rem;
+  }
+  .pips {
+    display: inline-flex;
+    gap: 0.25rem;
+  }
+  .pip {
+    width: 1.4rem;
+    height: 1.4rem;
+    min-height: 1.4rem;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid var(--frame);
+    background: var(--arcane);
+  }
+  .pip.spent {
+    background: transparent;
+  }
+  .head {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 0.6rem;
+    text-align: center;
+  }
+  .tag {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .big {
+    font-size: 1.5em;
+  }
+  .num {
+    font-family: var(--font-num);
+    font-weight: 700;
+  }
+  h4 {
+    font-family: var(--font-title);
+    font-weight: 400;
+    margin: 1rem 0 0.4rem;
+  }
+  .spells,
+  .results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .meta {
+    color: var(--ink-soft);
+    font-size: 0.85em;
+    font-family: var(--font-title);
+  }
+  input[type='search'] {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0 0.7rem;
+    font: inherit;
+    margin-top: 0.75rem;
+  }
+  .results button {
+    width: 100%;
+    text-align: left;
+    min-height: 2.5rem;
+    font: inherit;
+    border-color: transparent;
+    background: none;
+  }
+  .hint {
+    font-size: 0.9em;
+    color: var(--ink-soft);
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.6rem 0 0;
+  }
+  .row select {
+    min-height: 2.4rem;
+    font: inherit;
+  }
+  .castmsg {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-left: 3px solid var(--accent);
+    background: var(--paper-2);
+  }
+  .book,
+  .chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: center;
+    margin-top: 0.25rem;
+  }
+  .chips li:not(.add) {
+    padding: 0.1rem 0.3rem 0.1rem 0.6rem;
+    border-radius: 2px;
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+  .chips select {
+    min-height: 2.2rem;
+    max-width: 100%;
+  }
+  .x {
+    background: none;
+    border: none;
+    color: var(--ink-soft);
+    min-width: 2rem;
+    min-height: 2rem;
+    margin-left: auto;
+  }
+  .chips .x {
+    margin-left: 0;
+  }
+</style>

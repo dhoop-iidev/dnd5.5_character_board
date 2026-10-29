@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 3,
+  "edition": "srd-5.2.1",
+  "identity": {
+    "name": "Perrine Tournebrise",
+    "player": "",
+    "alignment": "Chaotic Good",
+    "background": "Enfant de chœur d’un petit temple de Yondalla, elle a troqué les psaumes contre les ballades de taverne et ne manque jamais une histoire à raconter.",
+    "title": "",
+    "motto": "",
+    "deity": "Yondalla",
+    "languages": ["Commun", "Halfelin", "Céleste"],
+    "height": {
+      "m": 0.92
+    },
+    "weight": {
+      "kg": 19
+    },
+    "age": "34"
+  },
+  "speciesId": "halfling",
+  "speciesChoices": {},
+  "background": {
+    "backgroundId": "acolyte",
+    "abilities": {
+      "cha": 2,
+      "wis": 1
+    },
+    "feat": {
+      "featId": "magic-initiate",
+      "choices": {
+        "list": "cleric",
+        "ability": "cha",
+        "cantrips": ["guidance", "thaumaturgy"],
+        "spell": ["sanctuary"]
+      }
+    }
+  },
+  "baseAbilities": {
+    "str": 8,
+    "dex": 14,
+    "con": 13,
+    "int": 10,
+    "wis": 12,
+    "cha": 15
+  },
+  "levels": [
+    {
+      "classId": "bard",
+      "hpRoll": 8,
+      "hpFixed": false,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "subclassId": "bard:college-of-lore",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "cha": 2
+        }
+      }
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {},
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "cha": 1,
+          "con": 1
+        }
+      }
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true,
+      "choices": {}
+    }
+  ],
+  "xp": 64000,
+  "skillProficiencies": ["performance", "persuasion", "deception"],
+  "toolProficiencies": ["Luth", "Flûte", "Tambour", "Matériel de calligraphe"],
+  "expertise": ["performance", "persuasion", "deception", "insight"],
+  "weaponMastery": [],
+  "inventory": [
+    {
+      "uid": "arm1",
+      "kind": "armor",
+      "refId": "leather-armor",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "musical-instrument",
+      "quantity": 1,
+      "location": "worn",
+      "note": "Luth"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "holy-symbol",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "entertainers-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
+  ],
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 27,
+    "pp": 0
+  },
+  "spellcasting": {
+    "bard": {
+      "prepared": [
+        "healing-word",
+        "dissonant-whispers",
+        "faerie-fire",
+        "charm-person",
+        "hold-person",
+        "invisibility",
+        "suggestion",
+        "shatter",
+        "lesser-restoration",
+        "hypnotic-pattern",
+        "dispel-magic",
+        "revivify",
+        "greater-invisibility",
+        "polymorph",
+        "mass-cure-wounds"
+      ],
+      "cantrips": ["vicious-mockery", "dancing-lights", "minor-illusion", "mage-hand"]
+    }
+  },
+  "slotsUsed": [],
+  "pactUsed": 0,
+  "toggles": {},
+  "resources": {},
+  "hitDiceSpent": {},
+  "hp": {
+    "current": 73,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
+  "exhaustion": 0,
+  "conditions": [],
+  "activeEffects": [],
+  "heroicInspiration": false,
+  "companions": [],
+  "wildShape": {
+    "known": []
+  },
+  "round": 0,
+  "notes": [],
+  "annotations": {},
+  "images": {},
+  "settings": {
+    "lang": "fr"
+  },
+  "featureChoices": {
+    "bard:expertise": ["performance", "persuasion", "deception", "insight"],
+    "bard:college-of-lore:bonus-proficiencies": ["arcana", "history", "perception"],
+    "bard:college-of-lore:magical-discoveries": ["fireball", "spirit-guardians"]
+  },
+  "extraFeats": {}
+}

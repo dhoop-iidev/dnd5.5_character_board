@@ -18,6 +18,11 @@ export interface RuleWarning {
   source?: Source
   /** Needs a choice from the player (missing/extra feat, skill, illegal pick). */
   actionable?: boolean
+  /** The owner (feature, trait, feat, option) the warning is about, its choice and the value at fault: where it is
+   * fixed is read from these, never from the id (ui/progression.ts, ui/spellChoices.ts). */
+  ownerId?: string
+  choiceId?: string
+  value?: string
 }
 
 export const w = (

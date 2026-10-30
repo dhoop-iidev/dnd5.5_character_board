@@ -14,6 +14,9 @@
   import PrintSheet from './ui/PrintSheet.svelte'
   import { printState } from './ui/print.svelte'
   import Welcome from './ui/Welcome.svelte'
+  import Builder from './ui/Builder.svelte'
+  import { builder, openBuilder } from './ui/builderState.svelte'
+  import { builderTodo } from './ui/creation'
 
   type Tab = 'general' | 'equipment' | 'combat' | 'spells' | 'companions' | 'notes'
   const TABS: { id: Tab; label: typeof UI.tabGeneral }[] = [
@@ -80,6 +83,10 @@
         spellChoiceOwners(view.sheet).length,
     ),
   )
+  /** Choices still to make in the Builder: the banner over the tabs opens it where the first one is. */
+  const left = $derived(builderTodo(c, view.sheet, rules, view.warnings))
+  const resume = () =>
+    left.first && openBuilder(left.first.index, { create: c.levels.length === 1, step: left.first.step })
 </script>
 
 <svelte:window onhashchange={() => (tab = fromHash())} />
@@ -106,59 +113,75 @@
     </div>
   </header>
 
-  <nav class="tabs">
-    {#each tabs as t (t.id)}
-      <button class:active={tab === t.id} onclick={() => (tab = t.id)}>
-        {tr(t.label)}
-        {#if toFix[t.id]}<span
-            class="count"
-            title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}>{toFix[t.id]}</span
-          >{/if}
-      </button>
-    {/each}
-  </nav>
-
-  <main>
-    {#if tab === 'general'}
-      <General />
-    {:else if tab === 'equipment'}
-      <Equipment />
-    {:else if tab === 'combat'}
-      <Combat />
-    {:else if tab === 'spells'}
-      <Spells />
-    {:else if tab === 'companions'}
-      <Companions />
-    {:else}
-      <Notes />
+  {#if builder.open}
+    <main><Builder /></main>
+  {:else}
+    {#if left.count}
+      <button class="resume" onclick={resume}
+        >{tr({
+          en: `${left.count} ${left.count > 1 ? 'choices' : 'choice'} left to make`,
+          fr: `${left.count} choix restant${left.count > 1 ? 's' : ''} à faire`,
+          es: `${left.count} ${left.count > 1 ? 'elecciones pendientes' : 'elección pendiente'}`,
+        })} ·
+        <b>{tr({ en: 'Continue the character', fr: 'Continuer le personnage', es: 'Continuar el personaje' })} →</b
+        ></button
+      >
     {/if}
-  </main>
+    <nav class="tabs">
+      {#each tabs as t (t.id)}
+        <button class:active={tab === t.id} onclick={() => (tab = t.id)}>
+          {tr(t.label)}
+          {#if toFix[t.id]}<span
+              class="count"
+              title={tr({ en: 'Choices to make', fr: 'Choix à faire', es: 'Elecciones pendientes' })}
+              >{toFix[t.id]}</span
+            >{/if}
+        </button>
+      {/each}
+    </nav>
 
-  <footer>
-    <SaveControls />
-    <p class="legal">
-      This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC,
-      available at
-      <a href="https://www.dndbeyond.com/srd" target="_blank" rel="noopener">dndbeyond.com/srd</a>. The SRD 5.2.1 is
-      licensed under the
-      <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener"
-        >Creative Commons Attribution 4.0 International License</a
-      >.
-      <a href="CC-BY.txt" target="_blank">CC-BY.txt</a>
-    </p>
-    {#if c.settings.lang === 'es'}
-      <p class="legal" lang="es">
-        Esta obra incluye material procedente del documento de referencia del sistema 5.2.1 (“SRD 5.2.1”) de Wizards of
-        the Coast LLC, disponible en <a href="https://www.dndbeyond.com/srd" target="_blank" rel="noopener"
-          >https://www.dndbeyond.com/srd</a
-        >. La licencia sobre el SRD 5.2.1 se concede de acuerdo con la licencia internacional de
-        atribución/reconocimiento 4.0 de Creative Commons, disponible en
+    <main>
+      {#if tab === 'general'}
+        <General />
+      {:else if tab === 'equipment'}
+        <Equipment />
+      {:else if tab === 'combat'}
+        <Combat />
+      {:else if tab === 'spells'}
+        <Spells />
+      {:else if tab === 'companions'}
+        <Companions />
+      {:else}
+        <Notes />
+      {/if}
+    </main>
+
+    <footer>
+      <SaveControls />
+      <p class="legal">
+        This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC,
+        available at
+        <a href="https://www.dndbeyond.com/srd" target="_blank" rel="noopener">dndbeyond.com/srd</a>. The SRD 5.2.1 is
+        licensed under the
         <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener"
-          >https://creativecommons.org/licenses/by/4.0/legalcode</a
+          >Creative Commons Attribution 4.0 International License</a
         >.
+        <a href="CC-BY.txt" target="_blank">CC-BY.txt</a>
       </p>
-    {/if}
-  </footer>
+      {#if c.settings.lang === 'es'}
+        <p class="legal" lang="es">
+          Esta obra incluye material procedente del documento de referencia del sistema 5.2.1 (“SRD 5.2.1”) de Wizards
+          of the Coast LLC, disponible en <a href="https://www.dndbeyond.com/srd" target="_blank" rel="noopener"
+            >https://www.dndbeyond.com/srd</a
+          >. La licencia sobre el SRD 5.2.1 se concede de acuerdo con la licencia internacional de
+          atribución/reconocimiento 4.0 de Creative Commons, disponible en
+          <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener"
+            >https://creativecommons.org/licenses/by/4.0/legalcode</a
+          >.
+        </p>
+      {/if}
+    </footer>
+  {/if}
 
   <Popup />
   {#if printState.on}<PrintSheet />{/if}
@@ -233,6 +256,23 @@
     background: var(--frame);
     border-color: var(--frame);
     color: var(--on-frame);
+  }
+  .resume {
+    display: block;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 1.5rem;
+    font: inherit;
+    text-align: left;
+    background: var(--paper-2);
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .resume b {
+    color: var(--accent);
   }
   .tabs {
     display: flex;

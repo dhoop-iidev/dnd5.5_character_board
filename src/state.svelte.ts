@@ -6,6 +6,8 @@ import { migrate } from './model/migrate'
 import { compute } from './engine/compute'
 import { validate } from './engine/validate'
 import { withCustom } from './model/custom'
+import { reconcile, structureOf } from './model/reconcile'
+import { untrack } from 'svelte'
 
 const STORAGE_KEY = 'dnd55-playboard:character'
 
@@ -97,5 +99,16 @@ $effect.root(() => {
   $effect(() => {
     JSON.stringify(app.character) // track deep changes
     save()
+  })
+  // After a structural change (a level's class, subclass or feat, a level removed, species, background, a granted
+  // feat), remove the choices that no longer belong to anything (model/reconcile.ts). Not on load or import: a file is
+  // never changed just by opening it (its leftovers show as warnings).
+  let last: { character: Character; structure: string } | undefined
+  $effect(() => {
+    if (!app.loaded) return
+    const character = app.character
+    const structure = structureOf(character)
+    if (last?.character === character && last.structure !== structure) untrack(() => reconcile(character, rules))
+    last = { character, structure }
   })
 })

@@ -14,7 +14,7 @@ import type {
   WeaponProperty,
 } from '../data/types'
 
-export const SCHEMA_VERSION = 4
+export const SCHEMA_VERSION = 5
 export const EDITION = 'srd-5.2.1'
 
 export interface Identity {
@@ -50,9 +50,6 @@ export interface LevelEntry {
   hpFixed: boolean
   /** At an Ability Score Improvement level: a General feat (default Ability Score Improvement) or an Epic Boon. */
   feat?: FeatPick
-  /** Class-feature choices made at this level, keyed by feature id (e.g. 'fighter:fighting-style': 'archery',
-   * 'barbarian:primal-knowledge': 'nature', 'rogue:expertise': ['stealth', 'thieves-tools'], 'cleric:channel-divinity'…). */
-  choices: Record<string, string | string[]>
   /** Spells learned or swapped at this level (prepared-spell casters choose on rest; this is for level-locked choices such
    * as a wizard's free spellbook spells and a warlock's Mystic Arcanum). */
   spellsLearned?: string[]
@@ -489,8 +486,6 @@ export interface Character {
   /** Proficiencies chosen at level 1 (class skills; tools, languages, instruments…). Granted ones are derived. */
   skillProficiencies: SkillId[]
   toolProficiencies: string[]
-  /** Expertise picked (Rogue, Bard). */
-  expertise: string[]
   inventory: ItemInstance[]
   money: { cp: number; sp: number; ep: number; gp: number; pp: number }
   /** Gems, jewelry, art objects and other valuables, free text beside the coins (no weight, not in the load; user
@@ -529,10 +524,11 @@ export interface Character {
   summons?: Summon[]
   /** The current turn's actions, movement and attacks (Combat pane "Your turn"). Optional, no migration. */
   turn?: TurnState
-  /** Choices attached to a feature, trait or class option rather than to a level (schema 3): keyed by the owner id
-   * (or '<owner id>#<choice id>'): 'human:skillful' → a skill id, 'druid:circle-of-the-land:spells' → 'polar',
-   * 'warlock:eldritch-invocations' → invocation ids, 'sorcerer:metamagic' → option ids. Level-bound choices stay in
-   * `LevelEntry.choices`; both are read. */
+  /** Every choice of a feature, species trait or class option, keyed by the owner id (or '<owner id>#<choice id>',
+   * engine/sheet/build.ts `choiceKey`): 'human:skillful' → a skill id, 'fighter:fighting-style' → a feat id,
+   * 'druid:circle-of-the-land:spells' → 'polar', 'warlock:eldritch-invocations' → invocation ids, 'rogue:expertise' →
+   * skill ids. One store since schema 5 (level choices and `expertise` were separate before). A feat's own choices
+   * stay in its `FeatPick`, which belongs to its slot (background, level, granting feature). */
   featureChoices: Record<string, string | string[]>
   /** Feats granted outside the level record, keyed by what grants them: 'human:versatile' (Origin feat),
    * 'fighter:champion:additional-fighting-style', 'warlock:eldritch-invocation:lessons-of-the-first-ones'. */

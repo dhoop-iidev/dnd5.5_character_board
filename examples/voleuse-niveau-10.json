@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Lisbeth Mains-de-Soie",
@@ -42,27 +42,23 @@
     {
       "classId": "rogue",
       "hpRoll": 8,
-      "hpFixed": false,
-      "choices": {}
+      "hpFixed": false
     },
     {
       "classId": "rogue",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "rogue",
       "subclassId": "rogue:thief",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "rogue",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -73,26 +69,22 @@
     {
       "classId": "rogue",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "rogue",
+      "hpRoll": 5,
+      "hpFixed": true
     },
     {
       "classId": "rogue",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "rogue",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "rogue",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -104,14 +96,12 @@
     {
       "classId": "rogue",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "rogue",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -123,7 +113,6 @@
   "xp": 64000,
   "skillProficiencies": ["acrobatics", "deception", "insight", "perception"],
   "toolProficiencies": [],
-  "expertise": ["stealth", "sleight-of-hand", "perception", "acrobatics"],
   "weaponMastery": ["shortsword", "dagger"],
   "inventory": [
     {

@@ -29,14 +29,12 @@ function rogue(level: number, abilities: Abilities = {}) {
   c.featureChoices['human:skillful'] = 'athletics'
   c.extraFeats['human:versatile'] = { featId: 'savage-attacker' }
   c.weaponMastery = ['shortsword', 'dagger']
-  c.expertise = ['stealth', 'sleight-of-hand']
   c.featureChoices['rogue:expertise'] = ['stealth', 'sleight-of-hand']
   for (let i = 2; i <= level; i++) {
     c.levels.push({
       classId: 'rogue',
       hpRoll: 5,
       hpFixed: true,
-      choices: {},
       ...(i === 3 ? { subclassId: 'rogue:thief' } : {}),
       ...(i === 4 || i === 8 || i === 10 || i === 12
         ? { feat: { featId: 'ability-score-improvement', abilities: { dex: 2 } } }
@@ -44,8 +42,7 @@ function rogue(level: number, abilities: Abilities = {}) {
     })
   }
   if (level >= 6) {
-    c.expertise.push('perception', 'acrobatics')
-    c.featureChoices['rogue:expertise'] = [...c.expertise]
+    c.featureChoices['rogue:expertise'] = ['stealth', 'sleight-of-hand', 'perception', 'acrobatics']
   }
   c.inventory = [
     { uid: 'a', kind: 'armor', refId: 'leather-armor', quantity: 1, location: 'worn' },
@@ -69,10 +66,10 @@ describe('Expertise (SRD p. 61)', () => {
   })
   it('a fifth pick, or Expertise in a skill without proficiency, is flagged', () => {
     const c = rogue(6)
-    c.expertise.push('arcana')
+    c.featureChoices['rogue:expertise'] = [...(c.featureChoices['rogue:expertise'] as string[]), 'arcana']
     const ids = validate(c, rules).map((w) => w.id)
-    expect(ids).toContain('expertise-count')
-    expect(ids).toContain('expertise-arcana')
+    expect(ids).toContain('choice-rogue:expertise')
+    expect(ids).toContain('choice-rogue:expertise-arcana-proficiency')
   })
 })
 

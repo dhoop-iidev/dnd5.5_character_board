@@ -190,12 +190,6 @@ export function checkBuild(ctx: CheckContext) {
       }),
     )
   const seen: Record<string, number> = {}
-  const featsTaken = new Map<string, number[]>()
-  const noteFeat = (id: string | undefined, L: number) => {
-    if (id) featsTaken.set(id, [...(featsTaken.get(id) ?? []), L])
-  }
-  noteFeat(char.background?.feat?.featId, 1)
-  for (const f of Object.values(char.extraFeats ?? {})) noteFeat(f.featId, 1)
   char.levels.forEach((l, i) => {
     const def = rules.classes.get(l.classId)
     const L = i + 1
@@ -279,7 +273,6 @@ export function checkBuild(ctx: CheckContext) {
         ),
       )
     if (l.feat) {
-      noteFeat(l.feat.featId, L)
       const f = rules.feats.get(l.feat.featId)
       if (!f)
         out.push(
@@ -391,7 +384,8 @@ export function checkBuild(ctx: CheckContext) {
     }
     // A Fighting Style feature gained at this class level needs its choice (each class's Fighting Style feature, e.g. p. 47).
     const styleFeature = def.features.find((f) => f.id.endsWith(':fighting-style') && f.level === cl)
-    if (styleFeature && !l.choices?.[styleFeature.id])
+    const style = styleFeature ? char.featureChoices?.[styleFeature.id] : undefined
+    if (styleFeature && !style)
       out.push(
         w(
           `choice-${styleFeature.id}`,
@@ -400,21 +394,20 @@ export function checkBuild(ctx: CheckContext) {
           `Level ${L}: choose a Fighting Style (${def.name.en} ${cl}).`,
           `Niveau ${L} : choisissez un style de combat (${def.name.fr} ${cl}).`,
           `Nivel ${L}: elige un estilo de combate (${esOf(def.name)} ${cl}).`,
-          { level: L, source: styleFeature.source, actionable: true },
+          { level: L, source: styleFeature.source, actionable: true, ownerId: styleFeature.id },
         ),
       )
     // A Fighting Style choice must be a Fighting Style feat.
-    for (const [fid, choice] of Object.entries(l.choices ?? {})) {
-      if (!fid.endsWith(':fighting-style') || typeof choice !== 'string' || !choice) continue
+    for (const choice of typeof style === 'string' && style ? [style] : []) {
       if (choice === 'blessed-warrior' || choice === 'druidic-warrior') {
         out.push(
           w(
             `fighting-style-${L}`,
             'info',
             'feats',
-            `Level ${L}: ${choice === 'blessed-warrior' ? 'Blessed Warrior: two Cleric cantrips' : 'Druidic Warrior: two Druid cantrips'} — add them under the class's cantrips (they don't count against the class limit yet).`,
+            `Level ${L}: ${choice === 'blessed-warrior' ? 'Blessed Warrior: two Cleric cantrips' : 'Druidic Warrior: two Druid cantrips'} — add them under the class's cantrips.`,
             `Niveau ${L} : ${choice === 'blessed-warrior' ? 'Guerrier béni : deux sorts mineurs de Clerc' : 'Guerrier druidique : deux sorts mineurs de Druide'} — ajoutez-les aux sorts mineurs de la classe.`,
-            `Nivel ${L}: ${choice === 'blessed-warrior' ? 'Guerrero bendito: dos trucos de clérigo' : 'Guerrero druídico: dos trucos de druida'} — añádelos a los trucos de la clase (todavía no cuentan para el límite de la clase).`,
+            `Nivel ${L}: ${choice === 'blessed-warrior' ? 'Guerrero bendito: dos trucos de clérigo' : 'Guerrero druídico: dos trucos de druida'} — añádelos a los trucos de la clase.`,
             {
               level: L,
               source: { page: choice === 'blessed-warrior' ? 54 : 58, frPage: choice === 'blessed-warrior' ? 77 : 81 },
@@ -436,7 +429,6 @@ export function checkBuild(ctx: CheckContext) {
             { level: L, source: { page: 87, frPage: 93 }, actionable: true },
           ),
         )
-      else noteFeat(choice, L)
     }
     // Multiclassing: 13+ in the primary ability of the new class and of the current ones (SRD p. 24); the Fighter's
     // "Strength or Dexterity" needs one of the two (p. 47).
@@ -477,9 +469,12 @@ export function checkBuild(ctx: CheckContext) {
     }
   })
   // Ability Score Increase of an extra feat (Human Versatile, Lessons of the First Ones…): +1 among the feat's abilities.
-  for (const [by, pick] of Object.entries(char.extraFeats ?? {})) {
-    const f = rules.feats.get(pick.featId)
-    if (!f) continue
+  // Only feats the character has now (a stored pick whose grantor is gone is reported as stale below).
+  for (const o of now.owners) {
+    const by = o.feat?.grantedBy
+    const pick = by ? char.extraFeats?.[by] : undefined
+    const f = pick && rules.feats.get(pick.featId)
+    if (!by || !pick || !f) continue
     const inc = Object.entries(pick.abilities ?? {}).filter(([, v]) => v)
     const total = inc.reduce((s, [, v]) => s + (v ?? 0), 0)
     if (f.abilityIncrease) {
@@ -493,7 +488,7 @@ export function checkBuild(ctx: CheckContext) {
             `${f.name.en} (${by}) increases one of ${allowed.map((a) => ABILITY_NAMES[a].en).join(', ')} by 1.`,
             `${f.name.fr} (${by}) augmente de 1 une des caractéristiques ${allowed.map((a) => ABILITY_NAMES[a].fr).join(', ')}.`,
             `${esOf(f.name)} (${by}) aumenta en 1 una de estas características: ${allowed.map((a) => esOf(ABILITY_NAMES[a])).join(', ')}.`,
-            { source: f.source, actionable: true },
+            { source: f.source, actionable: true, ownerId: o.id },
           ),
         )
     } else if (total)
@@ -505,23 +500,41 @@ export function checkBuild(ctx: CheckContext) {
           `${f.name.en} (${by}) doesn't increase an ability score.`,
           `${f.name.fr} (${by}) n’augmente pas de caractéristique.`,
           `${esOf(f.name)} (${by}) no aumenta ninguna puntuación de característica.`,
-          { source: f.source, actionable: true },
+          { source: f.source, actionable: true, ownerId: o.id },
         ),
       )
   }
   // A feat taken twice must be repeatable (SRD p. 87 "Repeatable").
-  for (const [id, levels] of featsTaken) {
+  for (const id of new Set(now.owners.flatMap((o) => (o.feat ? [o.feat.id] : [])))) {
     const f = rules.feats.get(id)
-    if (f && !f.repeatable && levels.length > 1 && id !== 'ability-score-improvement')
+    const copies = now.owners.filter((o) => o.feat?.id === id)
+    if (f && !f.repeatable && copies.length > 1 && id !== 'ability-score-improvement')
       out.push(
         w(
           `feat-repeat-${id}`,
           'error',
           'feats',
-          `${f.name.en} is taken ${levels.length} times; it isn't repeatable.`,
-          `${f.name.fr} est pris ${levels.length} fois ; il n’est pas répétable.`,
-          `${esOf(f.name)} se ha elegido ${levels.length} veces; no es repetible.`,
-          { source: f.source, actionable: true },
+          `${f.name.en} is taken ${copies.length} times; it isn't repeatable.`,
+          `${f.name.fr} est pris ${copies.length} fois ; il n’est pas répétable.`,
+          `${esOf(f.name)} se ha elegido ${copies.length} veces; no es repetible.`,
+          { source: f.source, actionable: true, ownerId: copies.at(-1)!.id },
+        ),
+      )
+  }
+  // Magic Initiate taken again: "you must choose a different spell list each time" (SRD p. 87 "Repeatable").
+  const listOwners = now.owners.filter((o) => o.feat && o.choiceValues.list?.length)
+  for (const o of listOwners) {
+    const first = listOwners.find((x) => x.feat!.id === o.feat!.id && x.choiceValues.list[0] === o.choiceValues.list[0])
+    if (first && first !== o)
+      out.push(
+        w(
+          `feat-list-${o.id}`,
+          'error',
+          'feats',
+          `${o.name.en}: each copy of this feat needs a different spell list.`,
+          `${o.name.fr} : chaque exemplaire de ce don demande une liste de sorts différente.`,
+          `${esOf(o.name)}: cada copia de esta dote necesita una lista de conjuros distinta.`,
+          { source: o.source, actionable: true, ownerId: o.id, choiceId: 'list' },
         ),
       )
   }
@@ -587,45 +600,9 @@ export function checkBuild(ctx: CheckContext) {
           ),
         )
   }
-  // Expertise: only in skills the character is proficient in (SRD p. 181), no more picks than the features allow.
+  // Expertise picks are each feature's 'expertise' choice (schema 5), checked with the other choices below: the count,
+  // and proficiency in the skill (SRD p. 181).
   const prof = grantedSkills({ ...now, rules }, char)
-  for (const e of char.expertise ?? [])
-    if (rules.skills.has(e) && !prof.has(e as never))
-      out.push(
-        w(
-          `expertise-${e}`,
-          'error',
-          'skills',
-          `Expertise in ${rules.skills.get(e)?.name.en} requires proficiency in it.`,
-          `L’Expertise en ${rules.skills.get(e)?.name.fr} requiert la maîtrise de cette compétence.`,
-          `La Pericia en ${esOf(rules.skills.get(e)?.name)} requiere competencia en esa habilidad.`,
-          { source: { page: 181, frPage: 192 }, actionable: true },
-        ),
-      )
-  if ((char.expertise ?? []).length > now.expertiseMax)
-    out.push(
-      w(
-        'expertise-count',
-        'error',
-        'skills',
-        `${char.expertise.length} Expertise picks; your features allow ${now.expertiseMax}.`,
-        `${char.expertise.length} Expertises choisies ; vos aptitudes en permettent ${now.expertiseMax}.`,
-        `${char.expertise.length} elecciones de Pericia; tus rasgos permiten ${now.expertiseMax}.`,
-        { source: { page: 181, frPage: 192 }, actionable: true },
-      ),
-    )
-  else if ((char.expertise ?? []).length < now.expertiseMax)
-    out.push(
-      w(
-        'expertise-missing',
-        'warning',
-        'skills',
-        `Expertise: choose ${now.expertiseMax} skills (${(char.expertise ?? []).length} chosen).`,
-        `Expertise : choisissez ${now.expertiseMax} compétences (${(char.expertise ?? []).length} choisie${(char.expertise ?? []).length > 1 ? 's' : ''}).`,
-        `Pericia: elige ${now.expertiseMax} habilidades (${(char.expertise ?? []).length} elegida${(char.expertise ?? []).length === 1 ? '' : 's'}).`,
-        { source: { page: 181, frPage: 192 }, actionable: true },
-      ),
-    )
   // Weapon Mastery: the count of the Weapon Mastery features; only weapons you're proficient with (e.g. Rogue p. 62).
   const masteries = char.weaponMastery ?? []
   if (masteries.length > now.masteryMax)
@@ -697,7 +674,8 @@ export function checkBuild(ctx: CheckContext) {
                 char.levels.slice(0, k + 1).filter((x) => x.classId === o.classId).length === o.level,
             ) + 1
           : o.level
-      const where = charLevel ? { level: charLevel } : {}
+      // What the warning is about, for the progression and the tabs (ui/progression.ts, ui/spellChoices.ts).
+      const where = { ...(charLevel ? { level: charLevel } : {}), ownerId: o.id, choiceId: c.id ?? 'choice' }
       if (c.kind === 'feat') {
         const pick = char.extraFeats?.[o.id]
         if (!pick) {
@@ -742,7 +720,6 @@ export function checkBuild(ctx: CheckContext) {
         continue
       }
       if (c.kind === 'text') continue
-      if (c.kind === 'expertise' && !c.from) continue // counted by `expertise-count` through character.expertise
       const n = resolveCount(c.count, c.byLevel, { ...now, char, rules }, o, mods) ?? 1
       const values = o.choiceValues[c.id ?? 'choice'] ?? []
       if (values.length !== n)
@@ -764,18 +741,33 @@ export function checkBuild(ctx: CheckContext) {
           ? Object.keys(c.options)
           : asList(c.from).flatMap((k) => rules.classes.get(o.classId ?? '')?.options?.[k]?.map((x) => x.id) ?? [])
       } else if (c.kind === 'skill' || c.kind === 'expertise')
-        offered = c.from ? asList(c.from) : [...rules.skills.keys()]
-      for (const v of values) {
+        offered = [
+          ...(c.from ? asList(c.from) : [...rules.skills.keys()]),
+          ...(c.tools ? [...rules.gear.values()].filter((g) => g.kind === 'tool').map((g) => g.id) : []),
+        ]
+      for (const v of [...new Set(values)]) {
+        if (values.indexOf(v) !== values.lastIndexOf(v))
+          out.push(
+            w(
+              `choice-${key}-${v}-repeated`,
+              'error',
+              'feats',
+              `${o.name.en}${label}: ${v} is chosen twice.`,
+              `${o.name.fr}${labelFr} : ${v} est choisi deux fois.`,
+              `${esOf(o.name)}${labelEs}: ${v} se ha elegido dos veces.`,
+              { ...where, value: v, source: o.source, actionable: true },
+            ),
+          )
         if (offered && !offered.includes(v))
           out.push(
             w(
-              `choice-${key}-${v}`,
+              `choice-${key}-${v}-option`,
               'error',
               'feats',
               `${o.name.en}${label}: ${v} is not among the options.`,
               `${o.name.fr}${labelFr} : ${v} ne fait pas partie des options.`,
               `${esOf(o.name)}${labelEs}: ${v} no está entre las opciones.`,
-              { ...where, source: o.source, actionable: true },
+              { ...where, value: v, source: o.source, actionable: true },
             ),
           )
         if (c.kind === 'spell') {
@@ -783,38 +775,38 @@ export function checkBuild(ctx: CheckContext) {
           if (!sp)
             out.push(
               w(
-                `choice-${key}-${v}`,
+                `choice-${key}-${v}-unknown`,
                 'error',
                 'feats',
                 `${o.name.en}: unknown spell ${v}.`,
                 `${o.name.fr} : sort inconnu ${v}.`,
                 `${esOf(o.name)}: conjuro desconocido ${v}.`,
-                { ...where, actionable: true },
+                { ...where, value: v, actionable: true },
               ),
             )
           else {
             if (c.level !== undefined && sp.level !== c.level)
               out.push(
                 w(
-                  `choice-${key}-${v}`,
+                  `choice-${key}-${v}-spell-level`,
                   'error',
                   'feats',
                   `${o.name.en}${label}: ${sp.name.en} is level ${sp.level}, a level ${c.level} spell is expected.`,
                   `${o.name.fr}${labelFr} : ${sp.name.fr} est de niveau ${sp.level}, un sort de niveau ${c.level} est attendu.`,
                   `${esOf(o.name)}${labelEs}: ${esOf(sp.name)} es de nivel ${sp.level}; se espera un conjuro de nivel ${c.level}.`,
-                  { ...where, source: o.source, actionable: true },
+                  { ...where, value: v, source: o.source, actionable: true },
                 ),
               )
             if (c.maxLevel !== undefined && sp.level > c.maxLevel)
               out.push(
                 w(
-                  `choice-${key}-${v}`,
+                  `choice-${key}-${v}-max-level`,
                   'error',
                   'feats',
                   `${o.name.en}${label}: ${sp.name.en} is above level ${c.maxLevel}.`,
                   `${o.name.fr}${labelFr} : ${sp.name.fr} dépasse le niveau ${c.maxLevel}.`,
                   `${esOf(o.name)}${labelEs}: ${esOf(sp.name)} supera el nivel ${c.maxLevel}.`,
-                  { ...where, source: o.source, actionable: true },
+                  { ...where, value: v, source: o.source, actionable: true },
                 ),
               )
             // The list: the choice's own, or the one picked by the owner's 'list' choice (Magic Initiate).
@@ -825,13 +817,13 @@ export function checkBuild(ctx: CheckContext) {
             )
               out.push(
                 w(
-                  `choice-${key}-${v}`,
+                  `choice-${key}-${v}-list`,
                   'warning',
                   'feats',
                   `${o.name.en}${label}: ${sp.name.en} is not on the ${lists.map((x) => rules.classes.get(x)?.name.en ?? x).join(' / ')} spell list.`,
                   `${o.name.fr}${labelFr} : ${sp.name.fr} n’est pas dans la liste de sorts ${lists.map((x) => rules.classes.get(x)?.name.fr ?? x).join(' / ')}.`,
                   `${esOf(o.name)}${labelEs}: ${esOf(sp.name)} no está en la lista de conjuros de ${lists.map((x) => esOf(rules.classes.get(x)?.name) || x).join(' / ')}.`,
-                  { ...where, source: o.source, actionable: true },
+                  { ...where, value: v, source: o.source, actionable: true },
                 ),
               )
           }
@@ -839,13 +831,13 @@ export function checkBuild(ctx: CheckContext) {
         if (c.kind === 'expertise' && !prof.has(v as never))
           out.push(
             w(
-              `choice-${key}-${v}`,
+              `choice-${key}-${v}-proficiency`,
               'error',
               'skills',
               `${o.name.en}: Expertise in ${rules.skills.get(v)?.name.en ?? v} requires proficiency in it.`,
               `${o.name.fr} : l’Expertise en ${rules.skills.get(v)?.name.fr ?? v} requiert la maîtrise de cette compétence.`,
               `${esOf(o.name)}: la Pericia en ${esOf(rules.skills.get(v)?.name) || v} requiere competencia en esa habilidad.`,
-              { ...where, source: o.source, actionable: true },
+              { ...where, value: v, source: o.source, actionable: true },
             ),
           )
       }
@@ -859,13 +851,13 @@ export function checkBuild(ctx: CheckContext) {
           if (m && (now.classLevels[o.classId ?? ''] ?? 0) < parseInt(m[1], 10))
             out.push(
               w(
-                `choice-${key}-${v}-level`,
+                `choice-${key}-${v}-prereq`,
                 'error',
                 'feats',
                 `${opt!.name.en} requires ${opt!.prereq!.en}.`,
                 `${opt!.name.fr} requiert : ${opt!.prereq!.fr || opt!.prereq!.en}.`,
                 `${esOf(opt!.name)} requiere: ${esOf(opt!.prereq)}.`,
-                { ...where, source: opt!.source, actionable: true },
+                { ...where, value: v, source: opt!.source, actionable: true },
               ),
             )
         }
@@ -874,6 +866,7 @@ export function checkBuild(ctx: CheckContext) {
   const stale = Object.keys(char.featureChoices ?? {}).filter(
     (k) =>
       !now.owners.some((o) => (o.eff.choices ?? []).some((c) => choiceKey(o.id, c) === k)) &&
+      !(k.endsWith(':fighting-style') && now.owners.some((o) => o.id === k)) &&
       !now.spellcasting.some((s) => s.spellChoice?.key === k),
   )
   for (const k of stale)
@@ -887,4 +880,18 @@ export function checkBuild(ctx: CheckContext) {
         `La elección guardada ${k} no corresponde a ningún rasgo actual.`,
       ),
     )
+  // A feat granted by a feature or trait the character no longer has (removed when the build changes, model/reconcile.ts).
+  const grantors = new Set(now.owners.filter((o) => o.eff.choices?.some((c) => c.kind === 'feat')).map((o) => o.id))
+  for (const k of Object.keys(char.extraFeats ?? {}))
+    if (!grantors.has(k))
+      out.push(
+        w(
+          `feat-stale-${k}`,
+          'info',
+          'feats',
+          `Stored feat ${char.extraFeats[k].featId} (${k}) belongs to no current feature.`,
+          `Le don enregistré ${char.extraFeats[k].featId} (${k}) ne correspond à aucune aptitude actuelle.`,
+          `La dote guardada ${char.extraFeats[k].featId} (${k}) no corresponde a ningún rasgo actual.`,
+        ),
+      )
 }

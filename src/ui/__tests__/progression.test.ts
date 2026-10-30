@@ -31,22 +31,19 @@ describe('progression places', () => {
   it('a missing feature choice goes to the row where the feature was gained', () => {
     const c = example('occultiste-niveau-10.json')
     for (const k of Object.keys(c.featureChoices)) if (k.includes('invocation')) delete c.featureChoices[k]
-    for (const l of c.levels)
-      for (const k of Object.keys(l.choices ?? {})) if (k.includes('invocation')) delete l.choices[k]
     const p = placesOf(c)
     const ws = validate(c, rules).filter((w) => w.id.startsWith('choice-warlock:eldritch-invocations'))
     expect(ws.length).toBeGreaterThan(0)
     for (const w of ws) expect(p.placeOfWarning(w)).toBe(0)
   })
 
-  it('Rogue Expertise: 2 picks at Rogue 1, 2 more at Rogue 6, taken in order', () => {
+  it('Rogue Expertise: the old flat list becomes the feature’s choice; picks missing at Rogue 6 go to that row', () => {
     const c = example('voleuse-niveau-10.json')
+    expect(c.featureChoices['rogue:expertise']).toHaveLength(4)
+    c.featureChoices['rogue:expertise'] = (c.featureChoices['rogue:expertise'] as string[]).slice(0, 2)
     const p = placesOf(c)
-    expect(p.expertiseGain.filter((n) => n)).toEqual([2, 2])
-    expect(p.expertiseGain[0]).toBe(2)
-    expect(p.expertiseGain[5]).toBe(2)
-    expect(p.expertiseHere(0)).toEqual(c.expertise.slice(0, 2))
-    expect(p.expertiseHere(5)).toEqual(c.expertise.slice(2, 4))
+    const w = validate(c, rules).find((x) => x.id === 'choice-rogue:expertise')!
+    expect(p.placeOfWarning(w)).toBe(c.levels.findIndex((_, i) => p.classLevelAt(i) === 6))
   })
 
   it('every build warning of the examples has a place', () => {
@@ -58,7 +55,6 @@ describe('progression places', () => {
     ]) {
       const c = example(f)
       c.background.abilities = {}
-      c.expertise = []
       const p = placesOf(c)
       const lost = validate(c, rules).filter(
         (w) => ['abilities', 'skills', 'feats'].includes(w.area) && p.placeOfWarning(w) === undefined,

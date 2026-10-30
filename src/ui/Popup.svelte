@@ -43,7 +43,7 @@
     {#if stat}
       <table>
         <tbody>
-          {#each stat.parts as p (p.sourceId + p.label.en + p.value)}
+          {#each stat.parts as p, i (i)}
             <tr class:inactive={!p.active}>
               <td>
                 {tr(p.label)}

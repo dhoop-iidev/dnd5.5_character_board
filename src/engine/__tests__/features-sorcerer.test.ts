@@ -30,7 +30,6 @@ const sorcerer = (
       classId: 'sorcerer',
       hpRoll: 4,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'sorcerer:draconic-sorcery' } : {}),
     })
   c.spellcasting.sorcerer = { prepared: [], cantrips: [] }

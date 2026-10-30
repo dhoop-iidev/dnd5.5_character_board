@@ -37,7 +37,6 @@ const bard = (level: number, abilities: Partial<Abilities> = {}) => {
       classId: 'bard',
       hpRoll: 5,
       hpFixed: true,
-      choices: {},
       ...(i === 3 ? { subclassId: 'bard:college-of-lore' } : {}),
       ...(i === 4 || i === 8 ? { feat: { featId: 'ability-score-improvement', abilities: { cha: 2 } } } : {}),
     })
@@ -84,13 +83,12 @@ describe('Expertise and Jack of All Trades (SRD p. 32)', () => {
   })
   it('Expertise doubles the Proficiency Bonus; three picks at level 2 are flagged (p. 32, p. 181)', () => {
     const c = bard(2)
-    c.expertise = ['performance', 'persuasion']
     c.featureChoices['bard:expertise'] = ['performance', 'persuasion']
     const s = compute(c, rules)
     expect(s.skills.find((k) => k.id === 'performance')!.total.total).toBe(3 + 2 * 2)
     expect(actionable(c).map((w) => w.id)).toEqual([])
-    c.expertise = ['performance', 'persuasion', 'deception']
-    expect(validate(c, rules).map((w) => w.id)).toContain('expertise-count')
+    c.featureChoices['bard:expertise'] = ['performance', 'persuasion', 'deception']
+    expect(validate(c, rules).map((w) => w.id)).toContain('choice-bard:expertise')
   })
   it('Jack of All Trades: half the Proficiency Bonus (round down) on checks without proficiency (p. 32)', () => {
     const s1 = compute(bard(1), rules)
@@ -151,7 +149,7 @@ describe('College of Lore (SRD p. 35)', () => {
     expect(validate(c, rules).filter((w) => w.area === 'spells' && !toChoose(w))).toEqual([])
     c.featureChoices['bard:college-of-lore:magical-discoveries'] = ['fireball', 'vicious-mockery'] // a Bard-only cantrip
     expect(validate(c, rules).map((w) => w.id)).toContain(
-      'choice-bard:college-of-lore:magical-discoveries-vicious-mockery',
+      'choice-bard:college-of-lore:magical-discoveries-vicious-mockery-list',
     )
   })
   it('Cutting Words and Countercharm are text-only (reaction at the dice, p. 35 and p. 33)', () => {

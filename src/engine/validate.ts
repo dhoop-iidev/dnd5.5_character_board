@@ -30,6 +30,13 @@ export function validate(char: Character, baseRules: Rules): RuleWarning[] {
   checkWornKinds(ctx)
   checkSpells(ctx)
   checkCompanions(ctx)
-  for (const x of out) x.actionable = x.actionable ?? false
+  // Ids are list keys in the panes (a duplicate key stops a pane from rendering): make every one unique.
+  const seen = new Map<string, number>()
+  for (const x of out) {
+    x.actionable = x.actionable ?? false
+    const n = (seen.get(x.id) ?? 0) + 1
+    seen.set(x.id, n)
+    if (n > 1) x.id = `${x.id}~${n}`
+  }
   return out
 }

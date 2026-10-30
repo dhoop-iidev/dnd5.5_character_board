@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Nim Brindacier",
@@ -42,29 +42,23 @@
     {
       "classId": "druid",
       "hpRoll": 8,
-      "hpFixed": false,
-      "choices": {
-        "druid:primal-order": "magician"
-      }
+      "hpFixed": false
     },
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "subclassId": "druid:circle-of-the-land",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -75,28 +69,22 @@
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "druid",
+      "hpRoll": 5,
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "druid",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {
-        "druid:elemental-fury": "potent-spellcasting"
-      }
-    },
-    {
-      "classId": "druid",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -107,20 +95,17 @@
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["nature", "perception"],
   "toolProficiencies": ["Matériel d’herboriste", "Outils de voleur"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
     {
@@ -255,7 +240,9 @@
   "featureChoices": {
     "gnome:gnomish-lineage": "forest-gnome",
     "gnome:gnomish-lineage#ability": "wis",
-    "druid:circle-of-the-land:spells": "temperate"
+    "druid:circle-of-the-land:spells": "temperate",
+    "druid:primal-order": "magician",
+    "druid:elemental-fury": "potent-spellcasting"
   },
   "extraFeats": {}
 }

@@ -132,30 +132,20 @@ describe('class features computed from custom/effects.json', () => {
 describe('leveling and multiclassing', () => {
   it('fixed hit points: half the die + 1 + Con per level, minimum 1 (SRD p. 23)', () => {
     const c = make('wizard', { con: 8 })
-    c.levels.push(
-      { classId: 'wizard', hpRoll: 0, hpFixed: true, choices: {} },
-      { classId: 'wizard', hpRoll: 1, hpFixed: false, choices: {} },
-    )
+    c.levels.push({ classId: 'wizard', hpRoll: 0, hpFixed: true }, { classId: 'wizard', hpRoll: 1, hpFixed: false })
     const s = compute(c, rules)
     expect(s.level).toBe(3)
     expect(s.hpMax.total).toBe(6 - 1 + (4 - 1) + 1) // level 1: 6 − 1; level 2 fixed 4 − 1 = 3; level 3 roll 1 − 1 → minimum 1
   })
   it('Proficiency Bonus follows the total level (SRD p. 24)', () => {
     const c = make('fighter')
-    for (let i = 0; i < 4; i++)
-      c.levels.push({ classId: i < 2 ? 'fighter' : 'rogue', hpRoll: 5, hpFixed: false, choices: {} })
+    for (let i = 0; i < 4; i++) c.levels.push({ classId: i < 2 ? 'fighter' : 'rogue', hpRoll: 5, hpFixed: false })
     expect(compute(c, rules).pb).toBe(3)
   })
   it('spell slots of a cleric 3 / paladin 2: full levels + half the Paladin levels rounded up → level 4 of the table (SRD p. 25)', () => {
     const c = make('cleric', { wis: 16, str: 13, cha: 13 })
-    c.levels.push(
-      { classId: 'cleric', hpRoll: 5, hpFixed: false, choices: {} },
-      { classId: 'cleric', hpRoll: 5, hpFixed: false, choices: {} },
-    )
-    c.levels.push(
-      { classId: 'paladin', hpRoll: 6, hpFixed: false, choices: {} },
-      { classId: 'paladin', hpRoll: 6, hpFixed: false, choices: {} },
-    )
+    c.levels.push({ classId: 'cleric', hpRoll: 5, hpFixed: false }, { classId: 'cleric', hpRoll: 5, hpFixed: false })
+    c.levels.push({ classId: 'paladin', hpRoll: 6, hpFixed: false }, { classId: 'paladin', hpRoll: 6, hpFixed: false })
     const s = compute(c, rules)
     expect(s.casterLevel).toBe(4)
     expect(s.slots).toEqual([4, 3])
@@ -173,14 +163,14 @@ describe('leveling and multiclassing', () => {
   })
   it('saving throw proficiencies come from the first class only (SRD p. 25)', () => {
     const c = make('fighter', { str: 13, int: 13 })
-    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: false, choices: {} })
+    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: false })
     const s = compute(c, rules)
     expect(s.abilities.str.saveProficient).toBe(true)
     expect(s.abilities.int.saveProficient).toBe(false)
   })
   it('multiclass prerequisites: 13 in the primary abilities of both classes (SRD p. 24)', () => {
     const c = make('fighter', { str: 13, int: 11 })
-    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: false, choices: {} })
+    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: false })
     const ids = validate(c, rules).map((x) => x.id)
     expect(ids).toContain('multiclass-2')
   })

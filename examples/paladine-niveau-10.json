@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Isolde Brisefer",
@@ -48,29 +48,23 @@
     {
       "classId": "paladin",
       "hpRoll": 10,
-      "hpFixed": false,
-      "choices": {}
+      "hpFixed": false
     },
     {
       "classId": "paladin",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {
-        "paladin:fighting-style": "defense"
-      }
+      "hpFixed": true
     },
     {
       "classId": "paladin",
       "subclassId": "paladin:oath-of-devotion",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "paladin",
       "hpRoll": 6,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -81,26 +75,22 @@
     {
       "classId": "paladin",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true
+    },
+    {
+      "classId": "paladin",
+      "hpRoll": 6,
+      "hpFixed": true
     },
     {
       "classId": "paladin",
       "hpRoll": 6,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "paladin",
-      "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "paladin",
-      "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -111,20 +101,17 @@
     {
       "classId": "paladin",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "paladin",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["athletics", "persuasion"],
   "toolProficiencies": [],
-  "expertise": [],
   "weaponMastery": ["longsword", "javelin"],
   "inventory": [
     {
@@ -224,7 +211,8 @@
     "lang": "fr"
   },
   "featureChoices": {
-    "dragonborn:draconic-ancestry": "gold"
+    "dragonborn:draconic-ancestry": "gold",
+    "paladin:fighting-style": "defense"
   },
   "extraFeats": {}
 }

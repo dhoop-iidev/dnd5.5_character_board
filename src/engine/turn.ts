@@ -277,6 +277,8 @@ export interface CastableSpell {
   spell: SpellDef
   classId?: string
   pactFirst: boolean
+  /** A feat or trait spell: the feat or trait it comes from. */
+  ownerId?: string
 }
 
 /** Spells the character can cast with this casting time: prepared, always prepared, cantrips, and those granted by
@@ -284,16 +286,17 @@ export interface CastableSpell {
 export function castableSpells(sheet: Sheet, rules: Rules, kind: SpellDef['castingKind']): CastableSpell[] {
   const out: CastableSpell[] = []
   const seen = new Set<string>()
-  const add = (id: string, classId: string | undefined, pactFirst: boolean) => {
+  const add = (id: string, classId: string | undefined, pactFirst: boolean, ownerId?: string) => {
     const s = rules.spells.get(id)
-    const k = `${classId ?? ''}:${id}`
+    const k = `${classId ?? ownerId ?? ''}:${id}`
     if (!s || s.castingKind !== kind || seen.has(k)) return
     seen.add(k)
-    out.push({ spell: s, classId, pactFirst })
+    out.push({ spell: s, classId, pactFirst, ownerId })
   }
   for (const sc of sheet.spellcasting)
     for (const id of [...sc.cantrips, ...sc.alwaysPrepared, ...sc.prepared]) add(id, sc.classId, sc.kind === 'pact')
-  for (const x of sheet.extraSpells) for (const id of x.spells) add(id, undefined, false)
+  // Each feat or trait copy is its own line: its slot-free cast is its own (two Magic Initiates with Detect Magic).
+  for (const x of sheet.extraSpells) for (const id of x.spells) add(id, undefined, false, x.ownerId)
   return out.sort((a, b) => a.spell.level - b.spell.level || a.spell.name.en.localeCompare(b.spell.name.en))
 }
 

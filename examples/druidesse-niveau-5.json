@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Maëlle du Val-aux-Loups",
@@ -48,29 +48,23 @@
     {
       "classId": "druid",
       "hpRoll": 8,
-      "hpFixed": false,
-      "choices": {
-        "druid:primal-order": "magician"
-      }
+      "hpFixed": false
     },
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "subclassId": "druid:circle-of-the-land",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "druid",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -81,14 +75,12 @@
     {
       "classId": "druid",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 6500,
   "skillProficiencies": ["nature", "perception"],
   "toolProficiencies": ["Herbalism Kit"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
     {
@@ -208,7 +200,8 @@
     "lang": "fr"
   },
   "featureChoices": {
-    "human:skillful": "medicine"
+    "human:skillful": "medicine",
+    "druid:primal-order": "magician"
   },
   "extraFeats": {
     "human:versatile": {

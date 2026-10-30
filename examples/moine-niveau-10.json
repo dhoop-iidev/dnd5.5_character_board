@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Liane Feuille-d’Aube",
@@ -10,15 +10,22 @@
     "motto": "",
     "deity": "",
     "languages": ["Common", "Elvish", "Celestial"],
-    "height": { "m": 1.72 },
-    "weight": { "kg": 55 },
+    "height": {
+      "m": 1.72
+    },
+    "weight": {
+      "kg": 55
+    },
     "age": "127"
   },
   "speciesId": "elf",
   "speciesChoices": {},
   "background": {
     "backgroundId": "acolyte",
-    "abilities": { "wis": 2, "int": 1 },
+    "abilities": {
+      "wis": 2,
+      "int": 1
+    },
     "feat": {
       "featId": "magic-initiate",
       "choices": {
@@ -29,62 +36,158 @@
       }
     }
   },
-  "baseAbilities": { "str": 10, "dex": 15, "con": 14, "int": 10, "wis": 15, "cha": 8 },
+  "baseAbilities": {
+    "str": 10,
+    "dex": 15,
+    "con": 14,
+    "int": 10,
+    "wis": 15,
+    "cha": 8
+  },
   "levels": [
-    { "classId": "monk", "hpRoll": 8, "hpFixed": false, "choices": {} },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} },
-    { "classId": "monk", "subclassId": "monk:warrior-of-the-open-hand", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    {
+      "classId": "monk",
+      "hpRoll": 8,
+      "hpFixed": false
+    },
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "monk",
+      "subclassId": "monk:warrior-of-the-open-hand",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
     {
       "classId": "monk",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "dex": 2 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "dex": 2
+        }
+      }
     },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} },
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
     {
       "classId": "monk",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "dex": 1, "wis": 1 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "dex": 1,
+          "wis": 1
+        }
+      }
     },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} },
-    { "classId": "monk", "hpRoll": 5, "hpFixed": true, "choices": {} }
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "monk",
+      "hpRoll": 5,
+      "hpFixed": true
+    }
   ],
   "xp": 64000,
   "skillProficiencies": ["acrobatics", "stealth"],
   "toolProficiencies": ["Calligrapher’s Supplies", "Flute"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
-    { "uid": "wpn1", "kind": "weapon", "refId": "spear", "quantity": 1, "location": "worn", "equipped": true },
-    { "uid": "wpn2", "kind": "weapon", "refId": "dagger", "quantity": 5, "location": "worn" },
-    { "uid": "gear1", "kind": "gear", "refId": "musical-instrument", "quantity": 1, "location": "carried" },
-    { "uid": "gear2", "kind": "gear", "refId": "explorers-pack", "quantity": 1, "location": "carried" },
-    { "uid": "gear3", "kind": "gear", "refId": "calligraphers-supplies", "quantity": 1, "location": "carried" }
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "spear",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 5,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "musical-instrument",
+      "quantity": 1,
+      "location": "carried"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "explorers-pack",
+      "quantity": 1,
+      "location": "carried"
+    },
+    {
+      "uid": "gear3",
+      "kind": "gear",
+      "refId": "calligraphers-supplies",
+      "quantity": 1,
+      "location": "carried"
+    }
   ],
-  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 11, "pp": 0 },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 11,
+    "pp": 0
+  },
   "spellcasting": {},
   "slotsUsed": [],
   "pactUsed": 0,
   "toggles": {},
   "resources": {},
   "hitDiceSpent": {},
-  "hp": { "current": 73, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "hp": {
+    "current": 73,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
   "exhaustion": 0,
   "conditions": [],
   "activeEffects": [],
   "heroicInspiration": false,
   "companions": [],
-  "wildShape": { "known": [] },
+  "wildShape": {
+    "known": []
+  },
   "round": 0,
   "notes": [],
   "annotations": {},
   "images": {},
-  "settings": { "lang": "fr" },
+  "settings": {
+    "lang": "fr"
+  },
   "featureChoices": {
     "elf:elven-lineage": "wood-elf",
     "elf:elven-lineage#ability": "wis",

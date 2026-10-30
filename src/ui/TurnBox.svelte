@@ -134,7 +134,7 @@
       : [
           `feature:${o.ownerId}`,
           `trait:${o.ownerId}`,
-          `feat:${o.ownerId.replace(/^feat:/, '')}`,
+          `feat:${o.ownerId.replace(/^feat:/, '').replace(/@.*$/, '')}`,
           `invocation:${o.ownerId}`,
         ]
     for (const k of keys) {
@@ -781,10 +781,11 @@
           </p>
         {/if}
         <ul class="spells">
-          {#each spellsBy[kind] as x (`${x.classId ?? ''}:${x.spell.id}`)}
+          {#each spellsBy[kind] as x (`${x.classId ?? x.ownerId ?? ''}:${x.spell.id}`)}
             <SpellRow
               s={x.spell}
               classId={x.classId}
+              ownerId={x.ownerId}
               pactFirst={x.pactFirst}
               blocked={b || undefined}
               slotSpentThisTurn={turn.slotSpent}

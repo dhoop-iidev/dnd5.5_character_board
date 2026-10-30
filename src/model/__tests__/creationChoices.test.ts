@@ -1,5 +1,5 @@
-// Languages (SRD p. 20): Common plus two languages, flagged until chosen; stored ids and older saves' names are both
-// read. Warnings are routed to the tab where they are fixed (spell picks in Spells, Weapon Mastery in Combat).
+// Creation choices: languages (SRD p. 20, Common plus two, flagged until chosen), the tab where each warning is fixed,
+// repeated feats (Magic Initiate twice, SRD p. 87) and Skilled's skills or tools.
 import { describe, expect, it } from 'vitest'
 import { rules } from '../../data/rules'
 import { compute } from '../../engine/compute'
@@ -55,5 +55,30 @@ describe('warning tabs', () => {
     const fs = compute(f, rules)
     const m = validate(f, rules).find((w) => w.id.startsWith('mastery'))
     if (m) expect(tabOfWarning(m, fs)).toBe('combat')
+  })
+})
+
+describe('repeated feats', () => {
+  it('Magic Initiate from the background and from Versatile are two owners, each with its own list', () => {
+    const c = fresh('cleric')
+    c.extraFeats = { 'human:versatile': { featId: 'magic-initiate' } }
+    const s = compute(c, rules)
+    const ids = s.owners.filter((o) => o.feat?.id === 'magic-initiate').map((o) => o.id)
+    expect(ids).toHaveLength(2)
+    expect(new Set(ids).size).toBe(2)
+    c.extraFeats['human:versatile'].choices = { list: 'wizard' }
+    expect(validate(c, rules).some((w) => w.id.startsWith('feat-list-'))).toBe(true)
+    c.extraFeats['human:versatile'].choices = { list: 'cleric' }
+    expect(validate(c, rules).some((w) => w.id.startsWith('feat-list-'))).toBe(false)
+  })
+
+  it('Skilled takes skills or tools (SRD p. 87)', () => {
+    const c = fresh('rogue')
+    c.extraFeats = {
+      'human:versatile': { featId: 'skilled', choices: { choice: ['stealth', 'thieves-tools', 'insight'] } },
+    }
+    const s = compute(c, rules)
+    expect(s.proficiencies.tools).toContain('Thieves’ Tools')
+    expect(validate(c, rules).filter((w) => w.id.includes('skilled') && w.severity === 'error')).toEqual([])
   })
 })

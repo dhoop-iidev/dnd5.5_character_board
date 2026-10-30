@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Tobbin Fildargent",
@@ -49,7 +49,6 @@
       "classId": "wizard",
       "hpRoll": 6,
       "hpFixed": false,
-      "choices": {},
       "spellsLearned": [
         "magic-missile",
         "detect-magic",
@@ -63,7 +62,6 @@
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["mage-armor", "shield"]
     },
     {
@@ -71,14 +69,12 @@
       "subclassId": "wizard:evoker",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["invisibility", "knock"]
     },
     {
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -91,28 +87,24 @@
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["haste", "misty-step"]
     },
     {
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["fly", "lightning-bolt"]
     },
     {
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["fireball", "counterspell"]
     },
     {
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -126,21 +118,18 @@
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["dimension-door", "greater-invisibility"]
     },
     {
       "classId": "wizard",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
       "spellsLearned": ["cone-of-cold", "wall-of-force"]
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["investigation", "insight"],
   "toolProficiencies": ["Calligrapher's Supplies", "Tinker's Tools"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
     {

@@ -151,6 +151,8 @@ export interface ChoiceDef {
   level?: number
   maxLevel?: number
   category?: 'origin' | 'general' | 'fighting-style' | 'epic-boon'
+  /** A 'skill' choice that also accepts tools (Skilled: "three skills or tools", SRD p. 87): gear ids of kind 'tool'. */
+  tools?: boolean
 }
 
 /** The effects of one option of an 'option' choice, merged into the owner when chosen. */

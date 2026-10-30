@@ -193,7 +193,7 @@ describe('schema 4 migration', () => {
       },
     ]
     const m = migrate(c)
-    expect(m.schemaVersion).toBe(4)
+    expect(m.schemaVersion).toBe(5)
     expect(m.inventory[0].custom?.attunement).toBe(true)
     expect(m.images.doll).toBeUndefined()
   })

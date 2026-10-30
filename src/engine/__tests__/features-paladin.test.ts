@@ -30,12 +30,12 @@ function paladin(level: number, abilities: Abilities = {}) {
   c.featureChoices['human:skillful'] = 'medicine'
   c.extraFeats['human:versatile'] = { featId: 'alert' }
   c.weaponMastery = ['longsword', 'javelin']
+  if (level >= 2) c.featureChoices['paladin:fighting-style'] = 'defense'
   for (let i = 2; i <= level; i++) {
     c.levels.push({
       classId: 'paladin',
       hpRoll: 6,
       hpFixed: true,
-      choices: i === 2 ? { 'paladin:fighting-style': 'defense' } : {},
       ...(i === 3 ? { subclassId: 'paladin:oath-of-devotion' } : {}),
       ...(i === 4 || i === 8 || i === 12
         ? { feat: { featId: 'ability-score-improvement', abilities: { str: 2 } } }

@@ -31,12 +31,12 @@ function ranger(level: number, abilities: Abilities = {}, armor = 'studded-leath
   c.featureChoices['human:skillful'] = 'nature'
   c.extraFeats['human:versatile'] = { featId: 'alert' }
   c.weaponMastery = ['longbow', 'shortsword']
+  if (level >= 2) c.featureChoices['ranger:fighting-style'] = 'archery'
   for (let i = 2; i <= level; i++) {
     c.levels.push({
       classId: 'ranger',
       hpRoll: 6,
       hpFixed: true,
-      choices: i === 2 ? { 'ranger:fighting-style': 'archery' } : {},
       ...(i === 3 ? { subclassId: 'ranger:hunter' } : {}),
       ...(i === 4 || i === 8 || i === 12
         ? { feat: { featId: 'ability-score-improvement', abilities: { wis: 2 } } }
@@ -75,7 +75,6 @@ describe('Deft Explorer (SRD p. 59) and Expertise (SRD p. 59)', () => {
   })
   it('Expertise doubles the Proficiency Bonus on the chosen skill (SRD p. 181)', () => {
     const c = ranger(2)
-    c.expertise = ['perception']
     c.featureChoices['ranger:deft-explorer#expertise'] = ['perception']
     const s = compute(c, rules)
     const perception = s.skills.find((k) => k.id === 'perception')!
@@ -131,7 +130,6 @@ describe("Hunter: Hunter's Prey (SRD p. 61) and Defensive Tactics (SRD p. 61)", 
   })
   it('Escape the Horde / Multiattack Defense: Disadvantage on attack rolls against you (situational)', () => {
     const c = ranger(7)
-    c.expertise = ['survival']
     c.featureChoices['ranger:deft-explorer#expertise'] = ['survival']
     c.featureChoices['ranger:hunter:hunters-prey'] = 'horde-breaker'
     expect(compute(c, rules).pool.disadvantage('attacks-against')).toEqual([])

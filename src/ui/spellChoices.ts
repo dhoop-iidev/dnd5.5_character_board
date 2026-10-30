@@ -3,7 +3,7 @@
 // and a level 1 spell, `spells.fromChoices`) is set up there entirely; any other spell pick (Pact of the Tome, Magical
 // Discoveries) too, the rest of its owner's choices staying in the progression. Also which tab fixes a warning, for the
 // tab badges.
-import type { ChoiceDef } from '../data/types'
+import type { ChoiceDef, I18n } from '../data/types'
 import type { RuleWarning } from '../engine/checks/common'
 import type { Owner, Sheet } from '../engine/sheet/types'
 
@@ -20,24 +20,24 @@ export function choicesFor(o: Owner, where: 'spells' | 'rest'): ChoiceDef[] {
 /** Owners with something to choose in the Spells pane. */
 export const spellChoiceOwners = (sheet: Sheet) => sheet.owners.filter((o) => choicesFor(o, 'spells').length > 0)
 
-/** The owner and choice a `choice-…` warning is about (ids `choice-<owner>`, `choice-<owner>#<choice>[-…]` for
- * features and traits, `choice-<owner>><choice>` for feats). */
+/** The owner and choice a warning is about (RuleWarning.ownerId / choiceId, set by the rule checks). */
 function choiceOfWarning(w: RuleWarning, sheet: Sheet): { o: Owner; ch?: ChoiceDef } | undefined {
-  if (!w.id.startsWith('choice-')) return undefined
-  const rest = w.id.slice('choice-'.length)
-  // Longest owner id that prefixes the rest (owner ids contain ':' and '-').
-  const o = sheet.owners
-    .filter(
-      (x) => rest === x.id || rest.startsWith(`${x.id}#`) || rest.startsWith(`${x.id}>`) || rest.startsWith(`${x.id}-`),
-    )
-    .sort((a, b) => b.id.length - a.id.length)[0]
+  const o = w.ownerId ? sheet.owners.find((x) => x.id === w.ownerId) : undefined
   if (!o) return undefined
-  const after = rest.slice(o.id.length)
-  const chId = after.startsWith('#') || after.startsWith('>') ? after.slice(1) : undefined
-  const ch = (o.effect?.choices ?? []).find(
-    (c) => (c.id ?? '') === (chId ?? '') || (chId !== undefined && c.id !== undefined && chId.startsWith(`${c.id}-`)),
-  )
-  return { o, ch }
+  return { o, ch: (o.effect?.choices ?? []).find((c) => (c.id ?? 'choice') === w.choiceId) }
+}
+
+/** The owner a warning is about. */
+export const ownerOfWarning = (w: RuleWarning, sheet: Sheet): Owner | undefined => choiceOfWarning(w, sheet)?.o
+
+/** Where a feat comes from, to tell two copies apart (Magic Initiate from the background and from Versatile). */
+export function featOrigin(o: Owner, sheet: Sheet): I18n | undefined {
+  if (!o.feat) return undefined
+  if (o.feat.from === 'background') return { en: 'background', fr: 'historique', es: 'trasfondo' }
+  const by = o.feat.grantedBy && sheet.owners.find((x) => x.id === o.feat!.grantedBy)
+  if (by) return by.name
+  if (o.feat.level) return { en: `level ${o.feat.level}`, fr: `niveau ${o.feat.level}`, es: `nivel ${o.feat.level}` }
+  return undefined
 }
 
 /** The warning is fixed in the Spells pane (a spell pick of a feat, trait or feature). */

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Sélénia Brasecarlate",
@@ -10,15 +10,22 @@
     "motto": "",
     "deity": "",
     "languages": ["Common", "Draconic", "Celestial"],
-    "height": { "m": 1.88 },
-    "weight": { "kg": 95 },
+    "height": {
+      "m": 1.88
+    },
+    "weight": {
+      "kg": 95
+    },
     "age": "24"
   },
   "speciesId": "dragonborn",
   "speciesChoices": {},
   "background": {
     "backgroundId": "acolyte",
-    "abilities": { "cha": 2, "wis": 1 },
+    "abilities": {
+      "cha": 2,
+      "wis": 1
+    },
     "feat": {
       "featId": "magic-initiate",
       "choices": {
@@ -29,43 +36,122 @@
       }
     }
   },
-  "baseAbilities": { "str": 8, "dex": 14, "con": 14, "int": 10, "wis": 12, "cha": 15 },
+  "baseAbilities": {
+    "str": 8,
+    "dex": 14,
+    "con": 14,
+    "int": 10,
+    "wis": 12,
+    "cha": 15
+  },
   "levels": [
-    { "classId": "sorcerer", "hpRoll": 6, "hpFixed": false, "choices": {} },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
-    { "classId": "sorcerer", "subclassId": "sorcerer:draconic-sorcery", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 6,
+      "hpFixed": false
+    },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
+    {
+      "classId": "sorcerer",
+      "subclassId": "sorcerer:draconic-sorcery",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
     {
       "classId": "sorcerer",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 2 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "cha": 2
+        }
+      }
     },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
     {
       "classId": "sorcerer",
       "hpRoll": 4,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "cha": 1, "wis": 1 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "cha": 1,
+          "wis": 1
+        }
+      }
     },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} },
-    { "classId": "sorcerer", "hpRoll": 4, "hpFixed": true, "choices": {} }
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    },
+    {
+      "classId": "sorcerer",
+      "hpRoll": 4,
+      "hpFixed": true
+    }
   ],
   "xp": 64000,
   "skillProficiencies": ["arcana", "persuasion"],
   "toolProficiencies": ["Calligrapher's Supplies"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
-    { "uid": "wpn1", "kind": "weapon", "refId": "spear", "quantity": 1, "location": "worn", "equipped": true },
-    { "uid": "wpn2", "kind": "weapon", "refId": "dagger", "quantity": 2, "location": "worn" },
-    { "uid": "gear1", "kind": "gear", "refId": "arcane-focus", "quantity": 1, "location": "worn" },
-    { "uid": "gear2", "kind": "gear", "refId": "dungeoneers-pack", "quantity": 1, "location": "carried" }
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "spear",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "dagger",
+      "quantity": 2,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "arcane-focus",
+      "quantity": 1,
+      "location": "worn"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "dungeoneers-pack",
+      "quantity": 1,
+      "location": "carried"
+    }
   ],
-  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 28, "pp": 0 },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 28,
+    "pp": 0
+  },
   "spellcasting": {
     "sorcerer": {
       "prepared": [
@@ -93,18 +179,29 @@
   "toggles": {},
   "resources": {},
   "hitDiceSpent": {},
-  "hp": { "current": 72, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "hp": {
+    "current": 72,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
   "exhaustion": 0,
   "conditions": [],
   "activeEffects": [],
   "heroicInspiration": false,
   "companions": [],
-  "wildShape": { "known": [] },
+  "wildShape": {
+    "known": []
+  },
   "round": 0,
   "notes": [],
   "annotations": {},
   "images": {},
-  "settings": { "lang": "fr" },
+  "settings": {
+    "lang": "fr"
+  },
   "featureChoices": {
     "dragonborn:draconic-ancestry": "red",
     "sorcerer:metamagic": [

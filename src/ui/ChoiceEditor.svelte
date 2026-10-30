@@ -12,7 +12,7 @@
   import { app, tr, view } from '../state.svelte'
   import SpellPicker from './SpellPicker.svelte'
   import { choicesFor } from './spellChoices'
-  import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
+  import { backgroundDef, CUSTOM_BACKGROUND, toolList } from '../model/customBackground'
   import { featListOf } from '../model/newCharacter'
 
   let {
@@ -25,13 +25,10 @@
   } = $props()
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
-  // Open Expertise picks (no list) are made with the Expertise chips of the level editor (character.expertise).
-  const choices = $derived(choicesFor(owner, where).filter((ch) => !(ch.kind === 'expertise' && !ch.from)))
+  const choices = $derived(choicesFor(owner, where))
   /** The spell list an SRD background already names for its feat ("Magic Initiate (Wizard)", SRD p. 83). */
   const fixedList = $derived(
-    owner.kind === 'feat' &&
-      owner.id === `feat:${c.background.feat?.featId}` &&
-      c.background.backgroundId !== CUSTOM_BACKGROUND
+    owner.kind === 'feat' && owner.feat?.from === 'background' && c.background.backgroundId !== CUSTOM_BACKGROUND
       ? featListOf(backgroundDef(c.background, rules)?.featText?.en, rules)
       : undefined,
   )
@@ -40,10 +37,7 @@
   const asList = (v: string | string[] | undefined): string[] => (Array.isArray(v) ? v : v ? [v] : [])
   function values(ch: ChoiceDef): string[] {
     if (owner.pick) return asList(owner.pick.choices?.[ch.id ?? 'choice'])
-    return asList(
-      c.featureChoices[choiceKey(owner.id, ch)] ??
-        c.levels.map((l) => l.choices?.[choiceKey(owner.id, ch)]).find((v) => v),
-    )
+    return asList(c.featureChoices[choiceKey(owner.id, ch)])
   }
   function setValues(ch: ChoiceDef, vals: string[]) {
     const n = count(ch)
@@ -51,12 +45,7 @@
     if (owner.pick) {
       owner.pick.choices ??= {}
       owner.pick.choices[ch.id ?? 'choice'] = v
-    } else {
-      // Level-bound storage of an older save: move the value to featureChoices.
-      for (const l of c.levels)
-        if (l.choices?.[choiceKey(owner.id, ch)] !== undefined) delete l.choices[choiceKey(owner.id, ch)]
-      c.featureChoices[choiceKey(owner.id, ch)] = v
-    }
+    } else c.featureChoices[choiceKey(owner.id, ch)] = v
   }
   function toggle(ch: ChoiceDef, id: string) {
     const cur = values(ch)
@@ -71,8 +60,20 @@
       .flatMap((k) => cls?.options?.[k] ?? [])
       .map((o) => ({ id: o.id, name: o.name, prereq: o.prereq }))
   }
-  const proficientIn = (id: string) =>
-    ['proficient', 'expertise'].includes(sheet.skills.find((s) => s.id === id)?.proficiency ?? '')
+  const profOf = (id: string) => sheet.skills.find((s) => s.id === id)?.proficiency ?? 'none'
+  const proficientIn = (id: string) => ['proficient', 'expertise'].includes(profOf(id))
+  /** Why a skill can't be picked in this choice (empty when it can): a skill already proficient for a proficiency pick;
+   * for Expertise, a skill not proficient or already with Expertise from another feature (SRD p. 181). */
+  function blocked(ch: ChoiceDef, id: string, vals: string[]): string {
+    if (vals.includes(id)) return ''
+    if (ch.kind === 'skill' && proficientIn(id))
+      return tr({ en: 'Already proficient', fr: 'Déjà maîtrisée', es: 'Ya tienes competencia' })
+    if (ch.kind === 'expertise' && profOf(id) === 'expertise')
+      return tr({ en: 'Already has Expertise', fr: 'Déjà en Expertise', es: 'Ya tiene Pericia' })
+    if (ch.kind === 'expertise' && !proficientIn(id))
+      return tr({ en: 'Not proficient', fr: 'Non maîtrisée', es: 'Sin competencia' })
+    return ''
+  }
   function skillList(ch: ChoiceDef): string[] {
     if (ch.from) return asList(ch.from)
     if (ch.kind === 'expertise')
@@ -159,24 +160,40 @@
       <div class="chips">
         {#each skillList(ch) as id (id)}
           <!-- A skill already proficient from elsewhere (background, class) would be a wasted pick. -->
-          {@const taken = ch.kind === 'skill' && !vals.includes(id) && proficientIn(id)}
-          <label
-            class="chip"
-            class:on={vals.includes(id)}
-            class:taken
-            title={taken ? tr({ en: 'Already proficient', fr: 'Déjà maîtrisée', es: 'Ya tienes competencia' }) : ''}
+          {@const why = blocked(ch, id, vals)}
+          <label class="chip" class:on={vals.includes(id)} class:taken={!!why} title={why}
             ><input
               type="checkbox"
-              checked={vals.includes(id) || taken}
-              disabled={taken}
+              checked={vals.includes(id) || (ch.kind === 'skill' && !!why)}
+              disabled={!!why}
               onchange={() => toggle(ch, id)}
             />{tr(rules.skills.get(id)?.name) || id}</label
           >
         {/each}
       </div>
+      {#if ch.tools}
+        <!-- "Skills or tools" (Skilled): the same count covers both. -->
+        <div class="chips">
+          {#each toolList(rules) as t (t.id)}
+            {@const taken = !vals.includes(t.id) && sheet.proficiencies.tools.includes(t.name.en)}
+            <label
+              class="chip"
+              class:on={vals.includes(t.id)}
+              class:taken
+              title={taken ? tr({ en: 'Already proficient', fr: 'Déjà maîtrisé', es: 'Ya tienes competencia' }) : ''}
+              ><input
+                type="checkbox"
+                checked={vals.includes(t.id) || taken}
+                disabled={taken}
+                onchange={() => toggle(ch, t.id)}
+              />{tr(t.name)}</label
+            >
+          {/each}
+        </div>
+      {/if}
     {:else if ch.kind === 'spell'}
       <div class="chips">
-        {#each vals as id (id)}
+        {#each [...new Set(vals)] as id (id)}
           <label class="chip on"
             ><input type="checkbox" checked onchange={() => toggle(ch, id)} />{tr(rules.spells.get(id)?.name) ||
               id}</label

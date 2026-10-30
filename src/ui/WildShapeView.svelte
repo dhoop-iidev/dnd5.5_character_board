@@ -123,7 +123,7 @@
   </details>
 
   <div class="actions">
-    {#each [...(def.traits ?? []), ...(def.actions ?? []), ...(def.bonusActions ?? []), ...(def.reactions ?? [])] as e (e.name.en)}
+    {#each [...(def.traits ?? []), ...(def.actions ?? []), ...(def.bonusActions ?? []), ...(def.reactions ?? [])] as e, i (i)}
       <p><strong>{tr(e.name)}.</strong> {@html tr(e.text)}</p>
     {/each}
     <p class="meta">
@@ -157,7 +157,7 @@
     >
   </p>
   <ul class="retained">
-    {#each v.retained as r (r.en)}<li>{tr(r)}</li>{/each}
+    {#each v.retained as r, i (i)}<li>{tr(r)}</li>{/each}
   </ul>
 </div>
 

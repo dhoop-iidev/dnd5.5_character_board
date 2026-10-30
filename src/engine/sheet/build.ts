@@ -54,13 +54,18 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
   const classLevels: Record<string, number> = {}
   const classOrder: string[] = []
   const subclassChoice: Record<string, string> = {}
-  const choices: Record<string, string | string[]> = { ...(char.featureChoices ?? {}) }
-  for (const l of levels) {
+  // Every feature, trait and option choice, keyed by owner (and choice id): one store (schema 5).
+  const choices: Record<string, string | string[]> = char.featureChoices ?? {}
+  /** The rows whose feat applies: a class's Ability Score Improvement levels and level 19 (Epic Boon). A feat stored on
+   * another row (its class changed) is ignored, and flagged by the rule checks. */
+  const featRows = new Set<number>()
+  levels.forEach((l, i) => {
     classLevels[l.classId] = (classLevels[l.classId] ?? 0) + 1
     if (!classOrder.includes(l.classId)) classOrder.push(l.classId)
     if (l.subclassId) subclassChoice[l.classId] = l.subclassId
-    for (const [k, v] of Object.entries(l.choices ?? {})) choices[k] = v
-  }
+    const cl = classLevels[l.classId]
+    if (rules.classes.get(l.classId)?.asiLevels.includes(cl) || cl === 19) featRows.add(i)
+  })
   const classes = new Map<string, ClassDef>()
   for (const id of classOrder) {
     const def = rules.classes.get(id)
@@ -126,9 +131,23 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
     const def = pick ? rules.feats.get(pick.featId) : undefined
     if (!def || !pick) return
     feats.push({ def, from, level: lvl, grantedBy })
-    owner(`feat:${def.id}`, 'feat', def.name, def.text, { source: def.source, level: lvl, pick })
+    // Each copy of a repeatable feat is its own owner: its choices, warnings, uses and free casts are its own. The
+    // first copy (the background's, built first) is `feat:<id>`; another one is named after where it comes from
+    // (`feat:magic-initiate@human:versatile`, `feat:skilled@level-4`), so adding or removing one copy never renames
+    // the other (saved uses and free casts are keyed by owner id).
+    const n = owners.filter((x) => x.feat?.id === def.id).length
+    const slot = grantedBy ?? `level-${lvl ?? 0}`
+    owner(n ? `feat:${def.id}@${slot}` : `feat:${def.id}`, 'feat', def.name, def.text, {
+      source: def.source,
+      level: lvl,
+      pick,
+      feat: { id: def.id, from, level: lvl, grantedBy },
+      ...(n ? { effectId: `feat:${def.id}` } : {}),
+    })
   }
 
+  // The background's feat first: it keeps the plain `feat:<id>` when a feature or trait grants the same feat.
+  addFeat(char.background?.feat, 'background')
   for (const [cid, def] of classes) {
     const cl = classLevels[cid]
     for (const f of def.features) {
@@ -154,15 +173,14 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
   const traits: SpeciesTraitDef[] = (species?.traits ?? []).filter((t) => !t.level || t.level <= level)
   for (const t of traits) owner(t.id, 'trait', t.name, t.text, { source: t.source })
   const background = backgroundDef(char.background, rules)
-  addFeat(char.background?.feat, 'background')
   levels.forEach((l, i) => {
-    addFeat(l.feat, 'level', i + 1)
-    // Class features that grant a feat chosen by the player (Fighting Style): the choice holds the feat id.
-    for (const [fid, choice] of Object.entries(l.choices ?? {})) {
-      if (fid.endsWith(':fighting-style') && typeof choice === 'string' && rules.feats.has(choice))
-        addFeat({ featId: choice }, 'class', i + 1, fid)
-    }
+    if (featRows.has(i)) addFeat(l.feat, 'level', i + 1)
   })
+  // Fighting Style features grant the feat the player chose (the choice holds the feat id), while the feature is there.
+  for (const o of owners.filter((x) => x.kind === 'feature' && x.id.endsWith(':fighting-style'))) {
+    const v = choices[o.id]
+    if (typeof v === 'string' && rules.feats.has(v)) addFeat({ featId: v }, 'class', undefined, o.id)
+  }
   // Conditions (Rules Glossary) and active effects.
   for (const cid of char.conditions ?? []) {
     const def = rules.conditions.get(cid)

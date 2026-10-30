@@ -197,6 +197,7 @@
       {
         "kind": "skill",
         "count": 3,
+        "tools": true,
         "name": {
           "en": "Three skills or tools",
           "fr": "Trois compétences ou outils",

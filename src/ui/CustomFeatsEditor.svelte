@@ -19,9 +19,10 @@
     const out: string[] = []
     if (c.background.feat?.featId === id) out.push(tr({ en: 'background', fr: 'historique', es: 'trasfondo' }))
     c.levels.forEach((l, i) => {
-      const style = Object.entries(l.choices ?? {}).some(([k, v]) => k.endsWith(':fighting-style') && v === id)
-      if (l.feat?.featId === id || style) out.push(`${tr({ en: 'level', fr: 'niveau', es: 'nivel' })} ${i + 1}`)
+      if (l.feat?.featId === id) out.push(`${tr({ en: 'level', fr: 'niveau', es: 'nivel' })} ${i + 1}`)
     })
+    if (Object.entries(c.featureChoices).some(([k, v]) => k.endsWith(':fighting-style') && v === id))
+      out.push(tr({ en: 'Fighting Style', fr: 'style de combat', es: 'estilo de combate' }))
     if (Object.values(c.extraFeats ?? {}).some((p) => p.featId === id))
       out.push(tr({ en: 'feature choice', fr: 'choix d’aptitude', es: 'elección de rasgo' }))
     return out

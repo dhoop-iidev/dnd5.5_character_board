@@ -35,7 +35,6 @@ const monk = (level: number, wis = 14) => {
       classId: 'monk',
       hpRoll: 5,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'monk:warrior-of-the-open-hand' } : {}),
     })
   c.inventory = [{ uid: 'w', kind: 'weapon', refId: 'spear', quantity: 1, location: 'worn', equipped: true }]

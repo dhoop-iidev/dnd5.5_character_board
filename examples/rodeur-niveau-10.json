@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Ghazra Œil-de-Loup",
@@ -42,29 +42,23 @@
     {
       "classId": "ranger",
       "hpRoll": 10,
-      "hpFixed": false,
-      "choices": {}
+      "hpFixed": false
     },
     {
       "classId": "ranger",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {
-        "ranger:fighting-style": "archery"
-      }
+      "hpFixed": true
     },
     {
       "classId": "ranger",
       "subclassId": "ranger:hunter",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "ranger",
       "hpRoll": 6,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -76,26 +70,22 @@
     {
       "classId": "ranger",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true
+    },
+    {
+      "classId": "ranger",
+      "hpRoll": 6,
+      "hpFixed": true
     },
     {
       "classId": "ranger",
       "hpRoll": 6,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "ranger",
-      "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "ranger",
-      "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -106,20 +96,17 @@
     {
       "classId": "ranger",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "ranger",
       "hpRoll": 6,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["perception", "stealth", "survival"],
   "toolProficiencies": [],
-  "expertise": ["perception", "stealth", "survival"],
   "weaponMastery": ["longbow", "shortsword"],
   "inventory": [
     {
@@ -236,7 +223,8 @@
     "ranger:deft-explorer#languages": ["Elvish", "Goblin"],
     "ranger:expertise": ["stealth", "survival"],
     "ranger:hunter:hunters-prey": "colossus-slayer",
-    "ranger:hunter:defensive-tactics": "escape-the-horde"
+    "ranger:hunter:defensive-tactics": "escape-the-horde",
+    "ranger:fighting-style": "archery"
   },
   "extraFeats": {}
 }

@@ -34,7 +34,6 @@ const warlock = (
       classId: 'warlock',
       hpRoll: 5,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'warlock:fiend-patron' } : {}),
     })
   c.spellcasting.warlock = { prepared: [], cantrips: ['eldritch-blast'] }
@@ -84,7 +83,7 @@ describe('Eldritch Invocations: count from the Invocations column (SRD p. 70)', 
   })
   it('a "Level 5+ Warlock" prerequisite is checked against the Warlock level (SRD p. 70 "Prerequisites")', () => {
     const w = invocationWarnings(warlock(2, ['eldritch-smite', 'pact-of-the-blade', 'eldritch-mind']))
-    expect(w.map((x) => x.id)).toEqual([`choice-warlock:eldritch-invocations-${INV('eldritch-smite')}-level`])
+    expect(w.map((x) => x.id)).toEqual([`choice-warlock:eldritch-invocations-${INV('eldritch-smite')}-prereq`])
     expect(
       invocationWarnings(
         warlock(5, ['eldritch-smite', 'pact-of-the-blade', 'eldritch-mind', 'devils-sight', 'agonizing-blast']),

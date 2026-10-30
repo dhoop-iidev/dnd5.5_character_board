@@ -1,7 +1,8 @@
 <script lang="ts">
   // Spells pane: Druid Wild Shape first (ui/WildShapeBlock.svelte), then per spellcasting class the save DC, spell
-  // attack, prepared spells and cantrips (N / max); the shared spell slots (SRD 5.2.1 p. 104 "Preparing Spells", p. 25
-  // multiclass slots), Pact Magic slots; the Wizard spellbook level by level (p. 78). Each spell is one line
+  // attack, cantrips (N / max), the Wizard spellbook level by level (p. 78; filled before preparing from it), prepared
+  // spells (N / max); the shared spell slots (SRD 5.2.1 p. 104 "Preparing Spells", p. 25 multiclass slots), Pact Magic
+  // slots. Each spell is one line
   // (ui/SpellRow.svelte): summary, Metamagic ✦, Cast / Cast ✓ (slot spent, timed effect in the turn bar).
   import { rules } from '../../data/rules'
   import type { SpellDef } from '../../data/types'
@@ -13,7 +14,8 @@
   import { app, tr, view } from '../../state.svelte'
   import { castLog } from '../castLog.svelte'
   import ChoiceEditor from '../ChoiceEditor.svelte'
-  import { isSpellChoiceWarning, spellChoiceOwners } from '../spellChoices'
+  import { featOrigin, isSpellChoiceWarning, ownerOfWarning, spellChoiceOwners } from '../spellChoices'
+  import type { RuleWarning } from '../../engine/checks/common'
   import SpellPicker from '../SpellPicker.svelte'
   import { byEnglishName } from '../order'
   import RuleText from '../RuleText.svelte'
@@ -22,6 +24,9 @@
   import StatValue from '../StatValue.svelte'
   import WarningList from '../WarningList.svelte'
   import WildShapeBlock from '../WildShapeBlock.svelte'
+
+  /** In the Builder (ui/Builder.svelte): only the spell picks, without Wild Shape and the spell slots. */
+  let { picking = false }: { picking?: boolean } = $props()
 
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
@@ -49,7 +54,7 @@
   const readState = (classId: string): SpellcastingState => c.spellcasting[classId] ?? NONE
   /** Spell definitions sorted by level then English name (same order in every language, ui/order.ts). */
   const defs = (ids: string[]): SpellDef[] =>
-    ids
+    [...new Set(ids)] // a spell saved twice is shown once (it is flagged by the rule checks)
       .map((id) => rules.spells.get(id))
       .filter((x): x is SpellDef => !!x)
       .sort((a, b) => a.level - b.level || byEnglishName(a, b))
@@ -110,9 +115,9 @@
   }
 </script>
 
-<WildShapeBlock />
+{#if !picking}<WildShapeBlock />{/if}
 
-{#if castLog.message}
+{#if castLog.message && !picking}
   <p class="castmsg" role="status">
     {tr(castLog.message)}
     <button
@@ -123,7 +128,7 @@
   </p>
 {/if}
 
-{#if sheet.slots.length || sheet.pact}
+{#if !picking && (sheet.slots.length || sheet.pact)}
   <section class="box">
     <h3>{tr(UI.spellSlots)}</h3>
     <div class="slots">
@@ -260,26 +265,6 @@
         label={tr({ en: 'Add a cantrip', fr: 'Ajouter un sort mineur', es: 'Añadir un truco' })}
       />
     {/if}
-    <h4>{tr(UI.prepared)} <span class="meta">{counted} / {sc.preparedMax}</span></h4>
-    <ul class="spells">
-      {#each defs(st.prepared) as s (s.id)}
-        <SpellRow {s} classId={sc.classId} {pactFirst} onremove={() => removeSpell(sc.classId, s.id)} />
-      {/each}
-    </ul>
-    {#if counted < sc.preparedMax}
-      <SpellPicker
-        options={candidates(sc.classId, false, sc.spellbook).filter((x) => x.level <= sc.maxSpellLevel)}
-        onpick={(x) => add(sc.classId, x)}
-        keepOpen={sc.preparedMax - counted > 1}
-        label={sc.spellbook
-          ? tr({
-              en: 'Prepare a spell from the spellbook',
-              fr: 'Préparer un sort du grimoire',
-              es: 'Preparar un conjuro del libro de conjuros',
-            })
-          : tr({ en: 'Prepare a spell', fr: 'Préparer un sort', es: 'Preparar un conjuro' })}
-      />
-    {/if}
     {#if sc.spellbook}
       {@const copied = defs(st.spellbook ?? []).filter((s) => !bookLevels.some((l) => l.learned.includes(s.id)))}
       {@const copyable = copyOptions(sc.spellbook, sc.maxSpellLevel)}
@@ -342,6 +327,26 @@
         {/if}
       </ul>
     {/if}
+    <h4>{tr(UI.prepared)} <span class="meta">{counted} / {sc.preparedMax}</span></h4>
+    <ul class="spells">
+      {#each defs(st.prepared) as s (s.id)}
+        <SpellRow {s} classId={sc.classId} {pactFirst} onremove={() => removeSpell(sc.classId, s.id)} />
+      {/each}
+    </ul>
+    {#if counted < sc.preparedMax}
+      <SpellPicker
+        options={candidates(sc.classId, false, sc.spellbook).filter((x) => x.level <= sc.maxSpellLevel)}
+        onpick={(x) => add(sc.classId, x)}
+        keepOpen={sc.preparedMax - counted > 1}
+        label={sc.spellbook
+          ? tr({
+              en: 'Prepare a spell from the spellbook',
+              fr: 'Préparer un sort du grimoire',
+              es: 'Preparar un conjuro del libro de conjuros',
+            })
+          : tr({ en: 'Prepare a spell', fr: 'Préparer un sort', es: 'Preparar un conjuro' })}
+      />
+    {/if}
     <WarningList areas={['spells']} />
   </section>
 {/each}
@@ -356,18 +361,19 @@
       })}
     </h3>
     {#each otherSpells as x (x.ownerId)}
-      {@const missing = view.warnings.some(
-        (w) => isSpellChoiceWarning(w, sheet) && w.id.startsWith(`choice-${x.ownerId}`),
-      )}
+      {@const mine = (w: RuleWarning) => isSpellChoiceWarning(w, sheet) && ownerOfWarning(w, sheet)?.id === x.ownerId}
+      {@const missing = view.warnings.some(mine)}
+      {@const from = x.owner ? featOrigin(x.owner, sheet) : undefined}
       <h4>
         <!-- The source is shown in the popup opened by the name (no SRD links in the main UI). -->
-        <RuleText name={x.name} source={x.source} noteKey="spells:{x.ownerId}" />{x.ability
+        <RuleText name={x.name} source={x.source} noteKey="spells:{x.ownerId}" />{#if from}{' '}
+          <small class="from">({tr(from)})</small>{/if}{x.ability
           ? ` · ${tr({ en: 'ability', fr: 'caractéristique', es: 'característica' })} ${tr(ABILITY_NAMES[x.ability])}`
           : ''}
       </h4>
       <ul class="spells">
         {#each defs(x.spells) as s (s.id)}
-          <SpellRow {s} />
+          <SpellRow {s} ownerId={x.ownerId} />
         {/each}
       </ul>
       {#if x.owner}
@@ -379,10 +385,7 @@
               : tr({ en: 'Change the spells', fr: 'Changer les sorts', es: 'Cambiar los conjuros' })}</summary
           >
           <ChoiceEditor owner={x.owner} where="spells" />
-          <WarningList
-            filter={(w) => isSpellChoiceWarning(w, sheet) && w.id.startsWith(`choice-${x.ownerId}`)}
-            compact
-          />
+          <WarningList filter={mine} compact />
         </details>
       {/if}
     {/each}
@@ -390,6 +393,10 @@
 {/if}
 
 <style>
+  .from {
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
   .box {
     margin-bottom: 1.25rem;
   }

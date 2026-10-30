@@ -29,6 +29,7 @@
   let {
     s,
     classId,
+    ownerId,
     pactFirst = false,
     castable = true,
     blocked,
@@ -40,6 +41,8 @@
     s: SpellDef
     /** The class the spell is prepared for (undefined: a feat or species spell). */
     classId?: string
+    /** A feat or species spell: the feat or trait it comes from (each copy has its own slot-free cast). */
+    ownerId?: string
     /** Pact Magic class: its slots come first. */
     pactFirst?: boolean
     castable?: boolean
@@ -56,7 +59,7 @@
 
   const c = $derived(app.character)
   const sheet = $derived(view.sheet)
-  const key = $derived(`${classId ?? 'extra'}:${s.id}`)
+  const key = $derived(`${classId ?? ownerId ?? 'extra'}:${s.id}`)
   const summary = $derived(summaryOf(`spell:${s.id}`, s.text))
   const html = $derived(
     s.upcast
@@ -78,7 +81,7 @@
 
   // ---- slot
   const slotKey = (x: SlotChoice) => (x.free ? 'free' : x.pact ? 'pact' : String(x.level))
-  const choices = $derived(slotChoices(c, sheet, s, pactFirst, classId === undefined))
+  const choices = $derived(slotChoices(c, sheet, s, pactFirst, classId === undefined, ownerId))
   let slotPick = $state('')
   const slot = $derived(choices.find((x) => slotKey(x) === slotPick) ?? choices[0])
 
@@ -141,6 +144,7 @@
     if (why) return
     const r = castSpell(c, sheet, rules, s, {
       classId,
+      ownerId,
       slot: s.level ? slot : undefined,
       metamagic: selected,
       newUid,

@@ -2,7 +2,7 @@
   // Identity block of the character sheet, editable in place (same drawing as the 3.5 playboard's card: small-caps
   // labels over underlined fields). Species, background and classes are shown, not edited here (they are build choices:
   // welcome screen and Progression); their names open the SRD text in the popup.
-  import { languageName, languageOf } from '../model/languages'
+  import { languageName } from '../model/languages'
   import { rules } from '../data/rules'
   import type { I18n, Source } from '../data/types'
   import { SIZE_NAMES } from '../i18n/ui'
@@ -26,14 +26,6 @@
 
   function open(name: I18n | undefined, text: I18n | undefined, source: Source | undefined, noteKey: string) {
     if (name) openPopup({ title: name, html: text, source, noteKey })
-  }
-  /** Languages typed as text: table languages are stored by id (shown in the reader's language), others as typed. */
-  function setLanguages(text: string) {
-    c.identity.languages = text
-      .split(',')
-      .map((s) => s.trim())
-      .filter(Boolean)
-      .map((s) => languageOf(s)?.id ?? s)
   }
   // Height and weight are stored in m and kg; English shows ft and lb with the French SRD's printed ratios
   // (5 ft = 1,5 m, 1 lb = 0,5 kg).
@@ -74,29 +66,13 @@
         >{tr(sheet.species?.name) || c.speciesId || '—'}</button
       >
     </div>
-    {#if sizes.length > 1}
-      <label
-        >{tr({ en: 'Size', fr: 'Taille', es: 'Tamaño' })}
-        <select
-          value={c.speciesChoices.size ?? ''}
-          onchange={(e) => {
-            const v = e.currentTarget.value
-            if (v) c.speciesChoices.size = v
-            else delete c.speciesChoices.size
-          }}
-        >
-          <option value="">— {tr({ en: 'choose', fr: 'choisir', es: 'elegir' })} —</option>
-          {#each sizes as s (s)}<option value={s}>{tr(SIZE_NAMES[s])}</option>{/each}
-        </select></label
-      >
-    {:else}
-      <label
-        >{tr({ en: 'Size', fr: 'Taille', es: 'Tamaño' })}<input
-          value={tr(SIZE_NAMES[sizes[0] ?? ''] ?? undefined)}
-          disabled
-        /></label
-      >
-    {/if}
+    <!-- Size and languages are chosen in the Builder's Origin step (one place for each choice). -->
+    <label
+      >{tr({ en: 'Size', fr: 'Taille', es: 'Tamaño' })}<input
+        value={tr(SIZE_NAMES[c.speciesChoices.size ?? sizes[0] ?? ''] ?? undefined)}
+        disabled
+      /></label
+    >
     <div class="field">
       <span class="lab">{tr({ en: 'Background', fr: 'Historique', es: 'Trasfondo' })}</span>
       <button
@@ -155,13 +131,10 @@
     >
     <label class="wide"
       >{tr({
-        en: 'Languages (comma-separated)',
-        fr: 'Langues (séparées par des virgules)',
-        es: 'Idiomas (separados por comas)',
-      })}<input
-        value={(c.identity.languages ?? []).map((l) => tr(languageName(l))).join(', ')}
-        onchange={(e) => setLanguages(e.currentTarget.value)}
-      /></label
+        en: 'Languages',
+        fr: 'Langues',
+        es: 'Idiomas',
+      })}<input value={(c.identity.languages ?? []).map((l) => tr(languageName(l))).join(', ')} disabled /></label
     >
   </div>
 </section>
@@ -204,7 +177,6 @@
     font-weight: 700;
   }
   input,
-  select,
   .value {
     font: inherit;
     font-family: var(--font-body);

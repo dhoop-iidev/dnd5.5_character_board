@@ -24,13 +24,12 @@ const fighter = (level: number) => {
   )
   c.background.abilities = { str: 2, con: 1 }
   c.skillProficiencies = ['perception', 'survival']
-  c.levels[0].choices = { 'fighter:fighting-style': 'defense' }
+  c.featureChoices['fighter:fighting-style'] = 'defense'
   for (let i = 1; i < level; i++)
     c.levels.push({
       classId: 'fighter',
       hpRoll: 6,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'fighter:champion' } : {}),
     })
   c.inventory = [

@@ -30,12 +30,7 @@ export function grantedSkills(
   const addChoice = (v: string | string[] | undefined) => {
     for (const x of Array.isArray(v) ? v : v ? [v] : []) if (b.rules.skills.has(x)) set.add(x as SkillId)
   }
-  for (const l of b.levels) {
-    for (const v of Object.values(l.choices ?? {})) addChoice(v)
-    for (const v of Object.values(l.feat?.choices ?? {})) addChoice(v)
-  }
-  for (const v of Object.values(char.background?.feat?.choices ?? {})) addChoice(v)
-  for (const f of Object.values(char.extraFeats ?? {})) for (const v of Object.values(f.choices ?? {})) addChoice(v)
+  // Skill choices of the character's current features, traits and feats (a stored pick of one it lost doesn't count).
   for (const o of b.owners ?? [])
     for (const c of o.eff.choices ?? []) if (c.kind === 'skill') addChoice(o.choiceValues[c.id ?? 'choice'])
   return set
@@ -47,18 +42,17 @@ export function skillsStage(b: In, _opts: ComputeOptions): SkillsResult {
   for (const g of pool.grants)
     if (g.grant.kind === 'proficiency' && g.grant.on?.startsWith('skill.'))
       proficient.add(g.grant.on.slice(6) as SkillId)
-  const expertise = new Set<string>(char.expertise ?? [])
+  const expertise = new Set<string>()
   for (const g of pool.grants)
     if (g.grant.kind === 'expertise' && g.grant.on?.startsWith('skill.')) expertise.add(g.grant.on.slice(6))
-  // Expertise picks: 'expertise' choices with a restricted list (Scholar, Deft Explorer) grant Expertise directly; open
-  // ones (Rogue, Bard, Ranger Expertise) count toward `expertiseMax`, the picks being `character.expertise`.
+  // Expertise picks: each feature's 'expertise' choice (Rogue, Bard, Ranger, Scholar, Deft Explorer), schema 5. Open
+  // ones (no list) are counted in `expertiseMax`.
   let expertiseMax = 0
   for (const o of b.owners)
     for (const c of o.eff.choices ?? []) {
       if (c.kind !== 'expertise') continue
-      const n = resolveCount(c.count, c.byLevel, b, o) ?? 1
-      if (c.from) for (const v of o.choiceValues[c.id ?? 'choice'] ?? []) expertise.add(v)
-      else expertiseMax += n
+      for (const v of o.choiceValues[c.id ?? 'choice'] ?? []) expertise.add(v)
+      if (!c.from) expertiseMax += resolveCount(c.count, c.byLevel, b, o) ?? 1
     }
   const jack = pool.flags.has('jack-of-all-trades')
   const exhaustion = -2 * (char.exhaustion ?? 0)

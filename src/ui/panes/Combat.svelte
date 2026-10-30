@@ -236,8 +236,8 @@
               fr: 'Jets d’attaque contre vous',
               es: 'Tiradas de ataque contra ti',
             })} :
-            {#each against.adv as a (a.en)}<span class="mark">▲ {tr(a)}</span>{/each}
-            {#each against.dis as d (d.en)}<span class="mark">▼ {tr(d)}</span>{/each}
+            {#each against.adv as a, i (i)}<span class="mark">▲ {tr(a)}</span>{/each}
+            {#each against.dis as d, i (i)}<span class="mark">▼ {tr(d)}</span>{/each}
           </p>
         {/if}
       </div>
@@ -359,7 +359,7 @@
                     es: `crítico ${a.critRange}–20`,
                   })}</span
                 >{/if}
-              {#each a.notes as n (n.en)}<span class="meta">· {tr(n)}</span>{/each}
+              {#each a.notes as n, i (i)}<span class="meta">· {tr(n)}</span>{/each}
             </td>
             <td class="num"
               ><StatValue
@@ -387,9 +387,8 @@
               />
               {tr(a.damage.type)}
               {#if a.range}<span class="meta">{tr(a.range.normal)} / {tr(a.range.long)}</span>{/if}
-              {#each a.extraDamage as x (x.label.en + x.dice)}<span
-                  class="meta extra"
-                  title={x.condition ? tr(x.condition) : ''}>+ {x.dice} {tr(x.label)}{x.condition ? ' *' : ''}</span
+              {#each a.extraDamage as x, i (i)}<span class="meta extra" title={x.condition ? tr(x.condition) : ''}
+                  >+ {x.dice} {tr(x.label)}{x.condition ? ' *' : ''}</span
                 >{/each}</td
             >
             <td class="props">{a.properties.map((p) => tr(p)).join(', ')}</td>
@@ -460,7 +459,7 @@
     {#if sheet.featureValues.length}
       <h4>{tr({ en: 'Feature values', fr: 'Valeurs des aptitudes', es: 'Valores de los rasgos' })}</h4>
       <ul class="res">
-        {#each sheet.featureValues as v (v.ownerId + v.id)}
+        {#each sheet.featureValues as v (`${v.ownerId}|${v.id}`)}
           <li>
             <span class="rname"
               ><RuleText
@@ -641,7 +640,7 @@
         </h4>
         {#if resistances.length}
           <ul class="list">
-            {#each resistances as r (r.owner.id + r.grant.on)}
+            {#each resistances as r, i (i)}
               <li>
                 <span
                   >{r.grant.kind === 'immunity'

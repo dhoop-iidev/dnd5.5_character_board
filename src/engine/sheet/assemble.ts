@@ -40,6 +40,14 @@ export function assembleStage(b: In, _opts: ComputeOptions): Sheet {
     if (g.grant.on.startsWith('weapon.')) weapons.push(g.grant.on.slice(7))
     if (g.grant.on.startsWith('tool.')) tools.push(g.grant.on.slice(5))
   }
+  // Tools picked in a "skills or tools" choice (Skilled).
+  for (const o of b.owners)
+    for (const c of o.eff.choices ?? [])
+      if (c.tools)
+        for (const v of o.choiceValues[c.id ?? 'choice'] ?? []) {
+          const g = b.rules.gear.get(v)
+          if (g?.kind === 'tool' && !tools.includes(g.name.en)) tools.push(g.name.en)
+        }
   if (b.background?.tool.en) tools.push(b.background.tool.en)
   tools.push(...(b.char.toolProficiencies ?? []))
   const { char, rules, ...rest } = b

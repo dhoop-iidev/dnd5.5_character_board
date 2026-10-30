@@ -19,7 +19,7 @@ const ORIGINS = [
 
 /** The warnings a fresh character may show: choices still to make. */
 const TO_CHOOSE =
-  /^(background-languages|skills-count|mastery-missing|expertise-missing|cantrips-missing-|prepared-missing-|spellbook-missing-|choice-)/
+  /^(background-languages|skills-count|mastery-missing|cantrips-missing-|prepared-missing-|spellbook-missing-|choice-)/
 
 /** +2 to the background ability with the best base score, +1 to the next (ties: the background's order). */
 function increases(base: Record<AbilityId, number>, abilities: AbilityId[]) {
@@ -83,7 +83,7 @@ describe('level-1 creation', () => {
         }
         if (cls.id === 'wizard') expect(ids).toContain('spellbook-missing-1')
         if (s.masteryMax) expect(ids).toContain('mastery-missing')
-        if (s.expertiseMax) expect(ids).toContain('expertise-missing')
+        if (s.expertiseMax) expect(ids.some((id) => /^choice-.*:expertise/.test(id))).toBe(true)
       })
     }
 

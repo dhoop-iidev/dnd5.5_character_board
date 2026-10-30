@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Borga Pierrefeu",
@@ -48,29 +48,23 @@
     {
       "classId": "cleric",
       "hpRoll": 8,
-      "hpFixed": false,
-      "choices": {
-        "cleric:divine-order": "protector"
-      }
+      "hpFixed": false
     },
     {
       "classId": "cleric",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "cleric",
       "subclassId": "cleric:life-domain",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "cleric",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -81,28 +75,22 @@
     {
       "classId": "cleric",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "cleric",
+      "hpRoll": 5,
+      "hpFixed": true
     },
     {
       "classId": "cleric",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "cleric",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {
-        "cleric:blessed-strikes": "divine-strike"
-      }
-    },
-    {
-      "classId": "cleric",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -114,20 +102,17 @@
     {
       "classId": "cleric",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "cleric",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["medicine", "insight"],
   "toolProficiencies": ["Matériel de calligraphe"],
-  "expertise": [],
   "weaponMastery": [],
   "inventory": [
     {
@@ -225,6 +210,9 @@
   "settings": {
     "lang": "fr"
   },
-  "featureChoices": {},
+  "featureChoices": {
+    "cleric:divine-order": "protector",
+    "cleric:blessed-strikes": "divine-strike"
+  },
   "extraFeats": {}
 }

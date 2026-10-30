@@ -44,6 +44,9 @@ export interface Owner {
   grants: GrantSpec[]
   /** The feat pick for a feat owner (ability increases and feat choices). */
   pick?: FeatPick
+  /** A feat owner's feat id and where the feat comes from. A repeatable feat taken again (Magic Initiate from the
+   * background and from Versatile) is a second owner `feat:<id>@<where>` reading the same effect (`effectId`). */
+  feat?: { id: string; from: BuildResult['feats'][number]['from']; level?: number; grantedBy?: string }
   /** Owner id of the feature this option was chosen for (an Eldritch Invocation's owner is 'warlock:eldritch-invocations'). */
   optionOf?: string
   /** Resolved values of the owner's choices, by choice id ('choice' when the choice has no id). */
@@ -152,7 +155,7 @@ export interface SkillLine {
 export interface SkillsResult {
   skills: SkillLine[]
   passivePerception: number
-  /** Expertise picks the features allow (Rogue, Bard, Ranger Expertise…), counted against `Character.expertise`. */
+  /** Open Expertise picks the features allow (Rogue, Bard, Ranger Expertise…). */
   expertiseMax: number
 }
 

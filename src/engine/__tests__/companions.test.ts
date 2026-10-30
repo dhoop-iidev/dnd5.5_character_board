@@ -36,7 +36,6 @@ const druid = (level: number) => {
       classId: 'druid',
       hpRoll: 5,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'druid:circle-of-the-land' } : {}),
     })
   return c

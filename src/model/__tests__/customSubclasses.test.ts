@@ -137,7 +137,7 @@ describe('custom subclass spellcasting', () => {
 
   it('adds its share to the Multiclass Spellcaster table only as entered', () => {
     const c = withSub(fighter, caster)
-    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: true, choices: {} })
+    c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: true })
     // Not entered: counts 0 (Wizard 1 alone → 2 slots) and a check asks for it.
     let s = compute(c, rules)
     expect(s.slots).toEqual([2])

@@ -357,7 +357,7 @@
           {tr(L('Equipment training and proficiencies', 'Formation et maîtrises', 'Entrenamiento y competencias'))}
         </div>
         <dl class="training">
-          {#each training as t (t.label.en)}
+          {#each training as t, i (i)}
             <dt>{tr(t.label)}</dt>
             <dd>{t.text || '—'}</dd>
           {/each}
@@ -563,7 +563,7 @@
       <div class="tag">{tr(L('Character details', 'Détails du personnage', 'Detalles del personaje'))}</div>
       <div class="details">
         {#if physical}<p><b>{tr(L('Appearance', 'Apparence', 'Apariencia'))}</b> {physical}</p>{/if}
-        {#each details as d (d.label.en)}<p><b>{tr(d.label)}</b> {d.text}</p>{/each}
+        {#each details as d, i (i)}<p><b>{tr(d.label)}</b> {d.text}</p>{/each}
         {#if id.background?.trim()}<p class="story">
             <b>{tr(L('Story', 'Histoire', 'Historia'))}</b>
             {id.background}

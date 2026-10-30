@@ -43,9 +43,10 @@ export interface FreeCast {
   resource?: string
   available: boolean
 }
-export function freeCast(char: Character, sheet: Sheet, s: SpellDef): FreeCast | undefined {
+export function freeCast(char: Character, sheet: Sheet, s: SpellDef, ownerId?: string): FreeCast | undefined {
   if (s.level === 0) return undefined
-  const x = sheet.extraSpells.find((e) => e.spells.includes(s.id))
+  // The feat or trait the spell is cast from (`ownerId`), or the first that gives it.
+  const x = sheet.extraSpells.find((e) => (!ownerId || e.ownerId === ownerId) && e.spells.includes(s.id))
   if (!x) return undefined
   const key = `${x.ownerId}:${s.id}`
   const r = sheet.resources.find((y) => y.id === x.ownerId)
@@ -61,6 +62,8 @@ export function slotChoices(
   pactFirst = false,
   /** A feat or species spell (no class): its slot-free cast comes first while it is available. */
   extra = false,
+  /** The feat or trait it is cast from. */
+  ownerId?: string,
 ): SlotChoice[] {
   if (s.level === 0) return []
   const out: SlotChoice[] = []
@@ -73,7 +76,7 @@ export function slotChoices(
     if (pactFirst) out.unshift(p)
     else out.push(p)
   }
-  if (extra && freeCast(char, sheet, s)?.available) out.unshift({ level: s.level, free: true })
+  if (extra && freeCast(char, sheet, s, ownerId)?.available) out.unshift({ level: s.level, free: true })
   return out
 }
 
@@ -234,11 +237,18 @@ export function castSpell(
   sheet: Sheet,
   rules: Rules,
   s: SpellDef,
-  opts: { classId?: string; slot?: SlotChoice; metamagic?: MetamagicOption[]; newUid: () => string },
+  opts: {
+    classId?: string
+    /** A feat or trait spell: the feat or trait it is cast from (its own slot-free cast). */
+    ownerId?: string
+    slot?: SlotChoice
+    metamagic?: MetamagicOption[]
+    newUid: () => string
+  },
 ): CastResult {
   const parts: I18n[] = []
   const cast: NonNullable<ActiveEffect['cast']> = { classId: opts.classId }
-  const free = opts.slot?.free ? freeCast(char, sheet, s) : undefined
+  const free = opts.slot?.free ? freeCast(char, sheet, s, opts.ownerId) : undefined
   if (free) {
     if (free.resource) {
       char.resources[free.resource] = (char.resources[free.resource] ?? 0) + 1

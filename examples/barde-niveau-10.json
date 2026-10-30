@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Perrine Tournebrise",
@@ -48,27 +48,23 @@
     {
       "classId": "bard",
       "hpRoll": 8,
-      "hpFixed": false,
-      "choices": {}
+      "hpFixed": false
     },
     {
       "classId": "bard",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "bard",
       "subclassId": "bard:college-of-lore",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "bard",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -79,26 +75,22 @@
     {
       "classId": "bard",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true
+    },
+    {
+      "classId": "bard",
+      "hpRoll": 5,
+      "hpFixed": true
     },
     {
       "classId": "bard",
       "hpRoll": 5,
       "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "bard",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
-    },
-    {
-      "classId": "bard",
-      "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {},
       "feat": {
         "featId": "ability-score-improvement",
         "abilities": {
@@ -110,20 +102,17 @@
     {
       "classId": "bard",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "bard",
       "hpRoll": 5,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     }
   ],
   "xp": 64000,
   "skillProficiencies": ["performance", "persuasion", "deception"],
   "toolProficiencies": ["Luth", "Flûte", "Tambour", "Matériel de calligraphe"],
-  "expertise": ["performance", "persuasion", "deception", "insight"],
   "weaponMastery": [],
   "inventory": [
     {

@@ -41,13 +41,13 @@ const druid = (
   c.skillProficiencies = ['nature', 'perception']
   c.featureChoices['human:skillful'] = 'insight'
   c.extraFeats['human:versatile'] = { featId: 'alert' }
-  c.levels[0].choices['druid:primal-order'] = opts.order ?? 'magician'
+  c.featureChoices['druid:primal-order'] = opts.order ?? 'magician'
+  if (level >= 7) c.featureChoices['druid:elemental-fury'] = opts.fury ?? 'primal-strike'
   for (let i = 2; i <= level; i++)
     c.levels.push({
       classId: 'druid',
       hpRoll: 5,
       hpFixed: true,
-      choices: i === 7 ? { 'druid:elemental-fury': opts.fury ?? 'primal-strike' } : {},
       ...(i === 3 ? { subclassId: 'druid:circle-of-the-land' } : {}),
       ...(i === 4 || i === 8 ? { feat: { featId: 'ability-score-improvement', abilities: { wis: 2 } } } : {}),
     })

@@ -21,10 +21,8 @@ describe('panes render', () => {
   it('welcome screen', () => {
     const body = render(Welcome).body
     expect(body).toContain('SRD 5.2.1')
-    // Creation: the Fighter's three starting-equipment options (C = 155 GP) and the Soldier's two.
-    expect(body).toContain('155')
-    expect(body.match(/name="class-kit"/g)).toHaveLength(3)
-    expect(body.match(/name="bg-kit"/g)).toHaveLength(2)
+    // Creation starts here and goes on in the Builder (ui/Builder.svelte).
+    expect(body.match(/<input/g)?.length).toBeGreaterThanOrEqual(2)
   })
   it('general, equipment, combat and spells panes for the example character', () => {
     app.character = example

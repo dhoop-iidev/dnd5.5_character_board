@@ -30,7 +30,6 @@ const barbarian = (level: number) => {
       classId: 'barbarian',
       hpRoll: 7,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'barbarian:path-of-the-berserker' } : {}),
     })
   c.inventory = [{ uid: 'w', kind: 'weapon', refId: 'greataxe', quantity: 1, location: 'worn', equipped: true }]

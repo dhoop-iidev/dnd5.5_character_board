@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 5,
   "edition": "srd-5.2.1",
   "identity": {
     "name": "Thorgal Brise-Roc",
@@ -10,79 +10,178 @@
     "motto": "",
     "deity": "",
     "languages": ["Common", "Giant", "Dwarvish"],
-    "height": { "m": 2.3 },
-    "weight": { "kg": 140 },
+    "height": {
+      "m": 2.3
+    },
+    "weight": {
+      "kg": 140
+    },
     "age": "34"
   },
   "speciesId": "goliath",
   "speciesChoices": {},
   "background": {
     "backgroundId": "soldier",
-    "abilities": { "str": 2, "con": 1 },
-    "feat": { "featId": "savage-attacker" }
+    "abilities": {
+      "str": 2,
+      "con": 1
+    },
+    "feat": {
+      "featId": "savage-attacker"
+    }
   },
-  "baseAbilities": { "str": 15, "dex": 14, "con": 14, "int": 8, "wis": 12, "cha": 10 },
+  "baseAbilities": {
+    "str": 15,
+    "dex": 14,
+    "con": 14,
+    "int": 8,
+    "wis": 12,
+    "cha": 10
+  },
   "levels": [
-    { "classId": "barbarian", "hpRoll": 12, "hpFixed": false, "choices": {} },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} },
+    {
+      "classId": "barbarian",
+      "hpRoll": 12,
+      "hpFixed": false
+    },
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    },
     {
       "classId": "barbarian",
       "subclassId": "barbarian:path-of-the-berserker",
       "hpRoll": 7,
-      "hpFixed": true,
-      "choices": {}
+      "hpFixed": true
     },
     {
       "classId": "barbarian",
       "hpRoll": 7,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "str": 2 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "str": 2
+        }
+      }
     },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} },
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    },
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    },
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    },
     {
       "classId": "barbarian",
       "hpRoll": 7,
       "hpFixed": true,
-      "choices": {},
-      "feat": { "featId": "ability-score-improvement", "abilities": { "str": 1, "con": 1 } }
+      "feat": {
+        "featId": "ability-score-improvement",
+        "abilities": {
+          "str": 1,
+          "con": 1
+        }
+      }
     },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} },
-    { "classId": "barbarian", "hpRoll": 7, "hpFixed": true, "choices": {} }
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    },
+    {
+      "classId": "barbarian",
+      "hpRoll": 7,
+      "hpFixed": true
+    }
   ],
   "xp": 64000,
   "skillProficiencies": ["perception", "survival"],
   "toolProficiencies": ["Gaming Set (dice)"],
-  "expertise": [],
   "weaponMastery": ["greataxe", "handaxe", "javelin", "spear"],
   "inventory": [
-    { "uid": "wpn1", "kind": "weapon", "refId": "greataxe", "quantity": 1, "location": "worn", "equipped": true },
-    { "uid": "wpn2", "kind": "weapon", "refId": "handaxe", "quantity": 4, "location": "worn" },
-    { "uid": "wpn3", "kind": "weapon", "refId": "javelin", "quantity": 4, "location": "worn" },
-    { "uid": "gear1", "kind": "gear", "refId": "explorers-pack", "quantity": 1, "location": "carried" },
-    { "uid": "gear2", "kind": "gear", "refId": "gaming-set", "quantity": 1, "location": "carried" }
+    {
+      "uid": "wpn1",
+      "kind": "weapon",
+      "refId": "greataxe",
+      "quantity": 1,
+      "location": "worn",
+      "equipped": true
+    },
+    {
+      "uid": "wpn2",
+      "kind": "weapon",
+      "refId": "handaxe",
+      "quantity": 4,
+      "location": "worn"
+    },
+    {
+      "uid": "wpn3",
+      "kind": "weapon",
+      "refId": "javelin",
+      "quantity": 4,
+      "location": "worn"
+    },
+    {
+      "uid": "gear1",
+      "kind": "gear",
+      "refId": "explorers-pack",
+      "quantity": 1,
+      "location": "carried"
+    },
+    {
+      "uid": "gear2",
+      "kind": "gear",
+      "refId": "gaming-set",
+      "quantity": 1,
+      "location": "carried"
+    }
   ],
-  "money": { "cp": 0, "sp": 0, "ep": 0, "gp": 15, "pp": 0 },
+  "money": {
+    "cp": 0,
+    "sp": 0,
+    "ep": 0,
+    "gp": 15,
+    "pp": 0
+  },
   "spellcasting": {},
   "slotsUsed": [],
   "pactUsed": 0,
   "toggles": {},
   "resources": {},
   "hitDiceSpent": {},
-  "hp": { "current": 105, "temp": 0, "deathSaves": { "successes": 0, "failures": 0 } },
+  "hp": {
+    "current": 105,
+    "temp": 0,
+    "deathSaves": {
+      "successes": 0,
+      "failures": 0
+    }
+  },
   "exhaustion": 0,
   "conditions": [],
   "activeEffects": [],
   "heroicInspiration": false,
   "companions": [],
-  "wildShape": { "known": [] },
+  "wildShape": {
+    "known": []
+  },
   "round": 0,
   "notes": [],
   "annotations": {},
   "images": {},
-  "settings": { "lang": "fr" },
+  "settings": {
+    "lang": "fr"
+  },
   "featureChoices": {
     "goliath:giant-ancestry": "stone",
     "barbarian:primal-knowledge": "nature"

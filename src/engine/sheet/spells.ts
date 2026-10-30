@@ -132,11 +132,10 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
       : (stepCount(subSc?.cantrips, cl) ?? 0)
     const cantripsMax = cantripsBase + sum(`cantrips.${cid}`)
     // Blessed Warrior (Paladin) / Druidic Warrior (Ranger): two cantrips in place of a Fighting Style feat (p. 54, p. 58).
-    const warriorStyle = b.levels.some(
-      (l) =>
-        (l.choices ?? {})[`${cid}:fighting-style`] === 'blessed-warrior' ||
-        (l.choices ?? {})[`${cid}:fighting-style`] === 'druidic-warrior',
-    )
+    const style = b.owners.some((o) => o.id === `${cid}:fighting-style`)
+      ? b.choices[`${cid}:fighting-style`]
+      : undefined
+    const warriorStyle = style === 'blessed-warrior' || style === 'druidic-warrior'
     const preparedBase = row
       ? typeof row.resources.preparedSpells === 'number'
         ? row.resources.preparedSpells
@@ -225,7 +224,7 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
       extraSpells.push({
         ownerId: o.id,
         name: o.name,
-        spells: ids,
+        spells: [...new Set(ids)], // a spell given twice (always + chosen) is listed once
         ability: o.eff.spells.ability as AbilityId | undefined,
         source: o.source,
       })

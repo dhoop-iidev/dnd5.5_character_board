@@ -39,13 +39,13 @@ const cleric = (
   c.skillProficiencies = ['medicine', 'religion']
   c.featureChoices['human:skillful'] = 'insight'
   c.extraFeats['human:versatile'] = { featId: 'alert' }
-  c.levels[0].choices['cleric:divine-order'] = opts.order ?? 'protector'
+  c.featureChoices['cleric:divine-order'] = opts.order ?? 'protector'
+  if (level >= 7) c.featureChoices['cleric:blessed-strikes'] = opts.strikes ?? 'divine-strike'
   for (let i = 2; i <= level; i++)
     c.levels.push({
       classId: 'cleric',
       hpRoll: 5,
       hpFixed: true,
-      choices: i === 7 ? { 'cleric:blessed-strikes': opts.strikes ?? 'divine-strike' } : {},
       ...(i === 3 ? { subclassId: 'cleric:life-domain' } : {}),
       ...(i === 4 || i === 8 ? { feat: { featId: 'ability-score-improvement', abilities: { wis: 2 } } } : {}),
     })
@@ -112,7 +112,7 @@ describe('Blessed Strikes (SRD p. 38) and Divine Intervention (p. 38)', () => {
   })
   it('the choice is required at level 7', () => {
     const c = cleric(7)
-    c.levels[6].choices = {}
+    delete c.featureChoices['cleric:blessed-strikes']
     expect(validate(c, rules).map((w) => w.id)).toContain('choice-cleric:blessed-strikes')
   })
   it('Divine Intervention: once per Long Rest from level 10', () => {

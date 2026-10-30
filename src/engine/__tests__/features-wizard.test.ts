@@ -33,7 +33,6 @@ const wizard = (
       classId: 'wizard',
       hpRoll: 4,
       hpFixed: true,
-      choices: {},
       ...(i === 2 ? { subclassId: 'wizard:evoker' } : {}),
     })
   c.spellcasting.wizard = {
@@ -118,9 +117,9 @@ describe('Wizard class features', () => {
     expect(inv.total.total).toBe(4 + 2 * 2)
     expect(validate(c, rules).filter((w) => w.id.startsWith('choice-wizard:scholar'))).toEqual([])
     c.featureChoices['wizard:scholar'] = 'stealth'
-    expect(validate(c, rules).map((w) => w.id)).toContain('choice-wizard:scholar-stealth')
+    expect(validate(c, rules).map((w) => w.id)).toContain('choice-wizard:scholar-stealth-option')
     c.featureChoices['wizard:scholar'] = 'medicine' // on the list, but not proficient
-    expect(validate(c, rules).find((w) => w.id === 'choice-wizard:scholar-medicine')?.message.en).toContain(
+    expect(validate(c, rules).find((w) => w.id === 'choice-wizard:scholar-medicine-proficiency')?.message.en).toContain(
       'requires proficiency',
     )
   })

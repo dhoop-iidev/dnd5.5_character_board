@@ -59,8 +59,8 @@ const BROKEN: [string, string, (c: Character) => void][] = [
       c.levels[1].hpRoll = 99
       c.levels[2].feat = { featId: 'alert' }
       c.levels[3].feat = { featId: 'nope' }
-      c.levels.push({ ...c.levels[0], classId: 'nope', feat: undefined, choices: {} })
-      while (c.levels.length < 22) c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: true, choices: {} })
+      c.levels.push({ ...c.levels[0], classId: 'nope', feat: undefined })
+      while (c.levels.length < 22) c.levels.push({ classId: 'wizard', hpRoll: 4, hpFixed: true })
     },
   ],
   [
@@ -77,10 +77,10 @@ const BROKEN: [string, string, (c: Character) => void][] = [
       c.levels[3].feat = { featId: 'ability-score-improvement', abilities: { str: 1 } }
       c.levels[5].feat = { featId: 'great-weapon-master', abilities: { int: 2 } }
       c.skillProficiencies = ['arcana', 'religion', 'athletics', 'history', 'nature']
-      c.expertise = ['stealth', 'arcana', 'history']
+      c.featureChoices['fighter:expertise'] = ['stealth', 'arcana', 'history']
       c.weaponMastery = ['longsword', 'greatsword', 'dagger', 'whip', 'net', 'blowgun', 'shortbow', 'longbow', 'club']
       c.featureChoices = { ...c.featureChoices, 'bogus:feature': 'x' }
-      for (const l of c.levels) for (const k of Object.keys(l.choices)) l.choices[k] = 'not-an-option'
+      for (const k of Object.keys(c.featureChoices)) c.featureChoices[k] = 'not-an-option'
     },
   ],
   [

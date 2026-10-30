@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -35,4 +36,17 @@ export default defineConfig({
       },
     }),
   ],
+  test: {
+    projects: [
+      // Engine, model and server-side rendering tests.
+      { extends: true, test: { name: 'node', include: ['src/**/*.test.ts'], exclude: ['src/**/*.dom.test.ts'] } },
+      // Panes mounted with Svelte's browser runtime (happy-dom): catches errors that only exist there (a keyed
+      // {#each} with a duplicate key, state written while rendering), which made the Spells tab refuse to open.
+      {
+        extends: true,
+        resolve: { conditions: ['browser'] },
+        test: { name: 'dom', include: ['src/**/*.dom.test.ts'], environment: 'happy-dom', testTimeout: 60_000 },
+      },
+    ],
+  },
 })

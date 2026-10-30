@@ -14,6 +14,7 @@ import type { CheckContext } from './common'
 import { esOf, w } from './common'
 import { FEAT_CATEGORY_NAMES } from '../../model/customFeats'
 import { languageOf, SRC_LANGUAGES, STARTING_LANGUAGES } from '../../model/languages'
+import { toolChoicesOf, toolPicks } from '../../model/toolChoices'
 
 /** Feat categories as the Spanish SRD names them ("Dote de origen", "Dote general"…). */
 const FEAT_CATEGORY_ES: Record<string, string> = {
@@ -42,6 +43,37 @@ export function checkBuild(ctx: CheckContext) {
           { source: { page: 20, frPage: 21 }, actionable: true },
         ),
       )
+  }
+  // Tools to choose (model/toolChoices.ts): Bard instruments, Monk, Soldier's Gaming Set.
+  for (const t of toolChoicesOf(char, rules)) {
+    const picks = toolPicks(char, t)
+    const id = t.place === 'origin' ? 'background-tools' : `tools-${t.key.slice(6)}`
+    const where = t.place === 'origin' ? {} : { level: t.place + 1 }
+    if (picks.length !== t.count)
+      out.push(
+        w(
+          id,
+          picks.length > t.count ? 'error' : 'warning',
+          'skills',
+          `${t.name.en}: choose ${t.count} (${picks.length} chosen).`,
+          `${t.name.fr} : choisissez-en ${t.count} (${picks.length} choisi${picks.length > 1 ? 's' : ''}).`,
+          `${esOf(t.name)}: elige ${t.count} (${picks.length} elegido${picks.length > 1 ? 's' : ''}).`,
+          { ...where, source: t.source, actionable: true },
+        ),
+      )
+    for (const v of [...new Set(picks)])
+      if (!t.options.includes(v) || picks.indexOf(v) !== picks.lastIndexOf(v))
+        out.push(
+          w(
+            `${id}-${v}`,
+            'error',
+            'skills',
+            `${t.name.en}: ${v} is not among the options, or is chosen twice.`,
+            `${t.name.fr} : ${v} ne fait pas partie des options, ou est choisi deux fois.`,
+            `${esOf(t.name)}: ${v} no está entre las opciones o se ha elegido dos veces.`,
+            { ...where, value: v, source: t.source, actionable: true },
+          ),
+        )
   }
   // Background: +2/+1 or +1/+1/+1 among its three abilities; its feat; two skills (SRD p. 20, p. 82).
   const bg = backgroundDef(char.background, rules)
@@ -863,11 +895,13 @@ export function checkBuild(ctx: CheckContext) {
         }
     }
   }
+  const toolKeys = new Set(toolChoicesOf(char, rules).map((t) => t.key))
   const stale = Object.keys(char.featureChoices ?? {}).filter(
     (k) =>
       !now.owners.some((o) => (o.eff.choices ?? []).some((c) => choiceKey(o.id, c) === k)) &&
       !(k.endsWith(':fighting-style') && now.owners.some((o) => o.id === k)) &&
-      !now.spellcasting.some((s) => s.spellChoice?.key === k),
+      !now.spellcasting.some((s) => s.spellChoice?.key === k) &&
+      !toolKeys.has(k),
   )
   for (const k of stale)
     out.push(

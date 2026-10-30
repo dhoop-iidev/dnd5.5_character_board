@@ -3,6 +3,7 @@
   // labels over underlined fields). Species, background and classes are shown, not edited here (they are build choices:
   // welcome screen and Progression); their names open the SRD text in the popup.
   import { languageName } from '../model/languages'
+  import { ALIGNMENTS, alignmentOf } from '../model/alignments'
   import { rules } from '../data/rules'
   import type { I18n, Source } from '../data/types'
   import { SIZE_NAMES } from '../i18n/ui'
@@ -107,7 +108,16 @@
       </span>
     </div>
     <label
-      >{tr({ en: 'Alignment', fr: 'Alignement', es: 'Alineamiento' })}<input bind:value={c.identity.alignment} /></label
+      >{tr({ en: 'Alignment', fr: 'Alignement', es: 'Alineamiento' })}<select
+        value={alignmentOf(c.identity.alignment)?.id ?? c.identity.alignment ?? ''}
+        onchange={(e) => (c.identity.alignment = e.currentTarget.value)}
+      >
+        <option value="">—</option>
+        {#if c.identity.alignment && !alignmentOf(c.identity.alignment)}<option value={c.identity.alignment}
+            >{c.identity.alignment}</option
+          >{/if}
+        {#each ALIGNMENTS as a (a.id)}<option value={a.id}>{tr(a.name)}</option>{/each}
+      </select></label
     >
     <label>{tr({ en: 'Deity', fr: 'Divinité', es: 'Deidad' })}<input bind:value={c.identity.deity} /></label>
     <label>{tr({ en: 'Age', fr: 'Âge', es: 'Edad' })}<input bind:value={c.identity.age} /></label>
@@ -134,7 +144,7 @@
         en: 'Languages',
         fr: 'Langues',
         es: 'Idiomas',
-      })}<input value={(c.identity.languages ?? []).map((l) => tr(languageName(l))).join(', ')} disabled /></label
+      })}<input value={sheet.proficiencies.languages.map((l) => tr(languageName(l))).join(', ')} disabled /></label
     >
   </div>
 </section>
@@ -177,6 +187,7 @@
     font-weight: 700;
   }
   input,
+  select,
   .value {
     font: inherit;
     font-family: var(--font-body);

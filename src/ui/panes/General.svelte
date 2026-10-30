@@ -18,6 +18,7 @@
   import { openPopup } from '../popupState.svelte'
   import { summaryOf } from '../summary'
   import IdentityCard from '../IdentityCard.svelte'
+  import TrainingBox from '../TrainingBox.svelte'
   import Medallion from '../Medallion.svelte'
   import Portraits from '../Portraits.svelte'
   import StatValue from '../StatValue.svelte'
@@ -280,6 +281,8 @@
     {@render fixLink(['skills'])}
   </section>
 </div>
+
+<TrainingBox />
 
 <div class="grid">
   <section class="box">

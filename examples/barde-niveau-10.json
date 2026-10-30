@@ -220,7 +220,8 @@
   "featureChoices": {
     "bard:expertise": ["performance", "persuasion", "deception", "insight"],
     "bard:college-of-lore:bonus-proficiencies": ["arcana", "history", "perception"],
-    "bard:college-of-lore:magical-discoveries": ["fireball", "spirit-guardians"]
+    "bard:college-of-lore:magical-discoveries": ["fireball", "spirit-guardians"],
+    "tools:bard": ["lute", "flute", "drum"]
   },
   "extraFeats": {}
 }

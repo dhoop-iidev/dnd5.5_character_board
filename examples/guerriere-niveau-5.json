@@ -156,7 +156,8 @@
   },
   "featureChoices": {
     "human:skillful": "insight",
-    "fighter:fighting-style": "defense"
+    "fighter:fighting-style": "defense",
+    "tools:background": "dice"
   },
   "extraFeats": {
     "human:versatile": {

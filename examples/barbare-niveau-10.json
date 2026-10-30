@@ -184,7 +184,8 @@
   },
   "featureChoices": {
     "goliath:giant-ancestry": "stone",
-    "barbarian:primal-knowledge": "nature"
+    "barbarian:primal-knowledge": "nature",
+    "tools:background": "dice"
   },
   "extraFeats": {}
 }

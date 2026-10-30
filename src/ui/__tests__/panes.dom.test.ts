@@ -150,6 +150,10 @@ describe('creation and level up in the Builder (ui/Builder.svelte)', () => {
     expect(app.loaded).toBe(true)
     expect(target!.querySelector('.builder')).not.toBeNull()
     expect(app.character.identity.name).toBe('Aelis')
+    // Alignment: the 3 × 3 square, Chaotic Good is the third square.
+    $$('.builder .grid button')[2].click()
+    flushSync()
+    expect(app.character.identity.alignment).toBe('chaotic-good')
     // Class: a Wizard; the scores follow its suggested array, its starting equipment replaces the Fighter's.
     const cls = target!.querySelector<HTMLSelectElement>('.builder .fields select')!
     cls.value = 'wizard'

@@ -224,7 +224,8 @@
     "ranger:expertise": ["stealth", "survival"],
     "ranger:hunter:hunters-prey": "colossus-slayer",
     "ranger:hunter:defensive-tactics": "escape-the-horde",
-    "ranger:fighting-style": "archery"
+    "ranger:fighting-style": "archery",
+    "tools:background": "dice"
   },
   "extraFeats": {}
 }

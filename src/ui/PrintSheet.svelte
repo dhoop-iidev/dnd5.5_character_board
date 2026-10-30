@@ -5,12 +5,13 @@
   // proficiencies); page 2 the spellcasting, equipment, Attunement, coins, character details and ruled notes. Names
   // only, no descriptions. Rendered only while printing (ui/print.svelte.ts); the browser's print dialog saves it as a
   // PDF. A sheet too long for two pages flows onto a third.
-  import { languageName } from '../model/languages'
+  import { alignmentName } from '../model/alignments'
   import { rules } from '../data/rules'
   import { ABILITIES, type AbilityId, type I18n, type SpellDef } from '../data/types'
   import { ABILITY_NAMES, ABILITY_SHORT } from '../engine/sheet/common'
   import type { AttackLine, Proficiency } from '../engine/sheet/types'
-  import { ARMOR_CATEGORY, SIZE_NAMES, UI, WEAPON_CATEGORY } from '../i18n/ui'
+  import { SIZE_NAMES, UI } from '../i18n/ui'
+  import { trainingRows } from './training'
   import type { Identity, ItemInstance, ItemLocation } from '../model/character'
   import { app, lang, tr, view } from '../state.svelte'
   import { fmtFeet, fmtWeight, isMetric, locale } from './format'
@@ -56,45 +57,10 @@
   const traits = $derived(uniq(s.traits.map((t) => tr(t.name))))
   const feats = $derived(s.feats.map((f) => tr(f.def.name)))
 
-  // --- Training and proficiencies ---
-  const WEAPON_EXTRA: Record<string, I18n> = {
-    'martial:light': L(
-      'Martial weapons with the Light property',
-      'Armes de guerre dotées de la propriété Légère',
-      'Armas marciales con la propiedad Ligera',
-    ),
-  }
-  /** Tool proficiencies are stored by their English text: find the bilingual name again. */
-  const toolNames = $derived.by(() => {
-    const m = new Map<string, I18n>()
-    for (const cl of rules.classes.values()) {
-      if (cl.toolProficiencies) m.set(cl.toolProficiencies.en, cl.toolProficiencies)
-      for (const t of cl.multiclass?.tools ?? []) m.set(t.en, t)
-    }
-    for (const b of rules.backgrounds.values()) if (b.tool?.en) m.set(b.tool.en, b.tool)
-    for (const g of rules.gear.values()) {
-      m.set(g.id, g.name)
-      m.set(g.name.en, g.name)
-    }
-    return m
-  })
-  const training = $derived([
-    {
-      label: L('Armor', 'Armures', 'Armaduras'),
-      text: s.proficiencies.armor.map((a) => tr(ARMOR_CATEGORY[a]) || a).join(', '),
-    },
-    {
-      label: L('Weapons', 'Armes', 'Armas'),
-      text: s.proficiencies.weapons
-        .map((w) => tr(WEAPON_CATEGORY[w] ?? WEAPON_EXTRA[w] ?? rules.weapons.get(w)?.name) || w)
-        .join(', '),
-    },
-    {
-      label: L('Tools', 'Outils', 'Herramientas'),
-      text: uniq(s.proficiencies.tools.map((t) => tr(toolNames.get(t)) || t)).join(', '),
-    },
-    { label: UI.languages, text: uniq(s.proficiencies.languages.map((l) => tr(languageName(l)))).join(', ') },
-  ])
+  // --- Training and proficiencies (ui/training.ts) ---
+  const training = $derived(
+    trainingRows(s, rules).map((r) => ({ label: r.label, text: r.items.map((x) => tr(x.name)).join(', ') })),
+  )
 
   // --- Weapons and damage cantrips ---
   const attacks = $derived([...s.attacks, ...(s.unarmed ? [s.unarmed] : [])])
@@ -257,7 +223,9 @@
       <div class="f w4">
         <span>{tr(L('Class and subclass', 'Classe et sous-classe', 'Clase y subclase'))}</span>{classes.join(' / ')}
       </div>
-      <div class="f"><span>{tr(L('Alignment', 'Alignement', 'Alineamiento'))}</span>{id.alignment}</div>
+      <div class="f">
+        <span>{tr(L('Alignment', 'Alignement', 'Alineamiento'))}</span>{tr(alignmentName(id.alignment))}
+      </div>
       <div class="f"><span>{tr(L('Player', 'Joueur', 'Jugador'))}</span>{id.player}</div>
     </div>
 

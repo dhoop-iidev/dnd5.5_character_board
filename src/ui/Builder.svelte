@@ -13,6 +13,7 @@
   import { UI } from '../i18n/ui'
   import { app, lang, tr, view } from '../state.svelte'
   import AbilityScores from './AbilityScores.svelte'
+  import AlignmentGrid from './AlignmentGrid.svelte'
   import { builder, closeBuilder } from './builderState.svelte'
   import { applyKits, defaultIncreases, isStandardArray, stepOfWarning, suggestedArray, type StepId } from './creation'
   import LevelRow from './LevelRow.svelte'
@@ -139,6 +140,9 @@
           >
           <label>{tr({ en: 'Player', fr: 'Joueur', es: 'Jugador' })}<input bind:value={c.identity.player} /></label>
         </div>
+        <h4>{tr({ en: 'Alignment', fr: 'Alignement', es: 'Alineamiento' })}</h4>
+        <AlignmentGrid />
+        <h4>{tr({ en: 'Class', fr: 'Classe', es: 'Clase' })}</h4>
       {/if}
       <LevelRow {i} onclass={onClass} />
       {#if cls && i === 0}
@@ -302,6 +306,11 @@
     font-size: 1.05rem;
     color: var(--ink);
     padding: 0 0.5rem;
+  }
+  h4 {
+    font-family: var(--font-title);
+    font-weight: 400;
+    margin: 0.9rem 0 0.4rem;
   }
   .facts {
     margin: 0.75rem 0 0;

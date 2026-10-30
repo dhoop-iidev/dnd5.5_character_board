@@ -29,6 +29,7 @@ function ranger(level: number, abilities: Abilities = {}, armor = 'studded-leath
   c.background.abilities = { dex: 2, con: 1 }
   c.skillProficiencies = ['perception', 'stealth', 'survival']
   c.featureChoices['human:skillful'] = 'nature'
+  c.featureChoices['tools:background'] = 'dice'
   c.extraFeats['human:versatile'] = { featId: 'alert' }
   c.weaponMastery = ['longbow', 'shortsword']
   if (level >= 2) c.featureChoices['ranger:fighting-style'] = 'archery'
@@ -76,6 +77,7 @@ describe('Deft Explorer (SRD p. 59) and Expertise (SRD p. 59)', () => {
   it('Expertise doubles the Proficiency Bonus on the chosen skill (SRD p. 181)', () => {
     const c = ranger(2)
     c.featureChoices['ranger:deft-explorer#expertise'] = ['perception']
+    c.featureChoices['ranger:deft-explorer#languages'] = ['elvish', 'sylvan']
     const s = compute(c, rules)
     const perception = s.skills.find((k) => k.id === 'perception')!
     expect(perception.proficiency).toBe('expertise')
@@ -131,6 +133,7 @@ describe("Hunter: Hunter's Prey (SRD p. 61) and Defensive Tactics (SRD p. 61)", 
   it('Escape the Horde / Multiattack Defense: Disadvantage on attack rolls against you (situational)', () => {
     const c = ranger(7)
     c.featureChoices['ranger:deft-explorer#expertise'] = ['survival']
+    c.featureChoices['ranger:deft-explorer#languages'] = ['elvish', 'sylvan']
     c.featureChoices['ranger:hunter:hunters-prey'] = 'horde-breaker'
     expect(compute(c, rules).pool.disadvantage('attacks-against')).toEqual([])
     c.featureChoices['ranger:hunter:defensive-tactics'] = 'escape-the-horde'

@@ -31,6 +31,7 @@ const bard = (level: number, abilities: Partial<Abilities> = {}) => {
   c.background.abilities = { dex: 2, con: 1 }
   c.skillProficiencies = ['performance', 'persuasion', 'deception']
   c.featureChoices['human:skillful'] = 'insight'
+  c.featureChoices['tools:bard'] = ['lute', 'flute', 'drum']
   c.extraFeats['human:versatile'] = { featId: 'skilled', choices: { choice: ['arcana', 'history', 'nature'] } }
   for (let i = 2; i <= level; i++)
     c.levels.push({

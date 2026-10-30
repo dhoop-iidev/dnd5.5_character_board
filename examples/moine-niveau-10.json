@@ -191,7 +191,8 @@
   "featureChoices": {
     "elf:elven-lineage": "wood-elf",
     "elf:elven-lineage#ability": "wis",
-    "elf:keen-senses": "perception"
+    "elf:keen-senses": "perception",
+    "tools:monk": "calligraphers-supplies"
   },
   "extraFeats": {}
 }

@@ -7,6 +7,7 @@ import { compute } from '../engine/compute'
 import { choiceKey } from '../engine/sheet/build'
 import type { Character } from './character'
 import { withCustom } from './custom'
+import { toolChoicesOf } from './toolChoices'
 
 /** Class level at which a subclass is chosen (SRD 5.2.1: level 3 for every class). */
 const SUBCLASS_LEVEL = 3
@@ -32,13 +33,14 @@ export function reconcile(c: Character, baseRules: Rules): string[] {
   })
   const sheet = compute(c, baseRules)
   // Feature, trait and option choices of owners the character has; Fighting Style features hold their feat id; a
-  // Spellcasting class's own choice (Circle of the Land's land).
+  // Spellcasting class's own choice (Circle of the Land's land); tool picks (model/toolChoices.ts).
   const keep = new Set<string>()
   for (const o of sheet.owners) {
     for (const ch of o.eff.choices ?? []) if (ch.kind !== 'feat') keep.add(choiceKey(o.id, ch))
     if (o.id.endsWith(':fighting-style')) keep.add(o.id)
   }
   for (const s of sheet.spellcasting) if (s.spellChoice?.key) keep.add(s.spellChoice.key)
+  for (const t of toolChoicesOf(c, rules)) keep.add(t.key)
   for (const k of Object.keys(c.featureChoices))
     if (!keep.has(k)) {
       removed.push(`featureChoices.${k}`)

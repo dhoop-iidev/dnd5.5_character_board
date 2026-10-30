@@ -13,6 +13,8 @@
   import { app, tr, view } from '../state.svelte'
   import type { LevelEntry } from '../model/character'
   import ChoiceEditor from './ChoiceEditor.svelte'
+  import ToolChoicePicker from './ToolChoicePicker.svelte'
+  import { toolChoicesOf } from '../model/toolChoices'
   import { progressionPlaces } from './progression'
   import WarningList from './WarningList.svelte'
 
@@ -67,8 +69,8 @@
     ),
   )
   const here = (w: RuleWarning) => !isSpellChoiceWarning(w, sheet) && places.placeOfWarning(w) === i
-  const choicesHere = (w: RuleWarning) => here(w) && !!w.choiceId
-  const othersHere = (w: RuleWarning) => here(w) && !w.choiceId
+  const choicesHere = (w: RuleWarning) => here(w) && (!!w.choiceId || !!w.actionable)
+  const othersHere = (w: RuleWarning) => here(w) && !w.choiceId && !w.actionable
   /** Paladin and Ranger options in place of a Fighting Style feat: two cantrips (SRD p. 54, p. 58). */
   const WARRIOR_STYLES: Record<string, { classId: string; name: { en: string; fr: string; es: string } }> = {
     'blessed-warrior': {
@@ -210,6 +212,10 @@
     {/each}
   </div>
 {/if}
+
+{#each toolChoicesOf(c, rules).filter((t) => t.place === i) as t (t.key)}
+  <ToolChoicePicker choice={t} />
+{/each}
 
 <WarningList filter={choicesHere} compact />
 <WarningList filter={othersHere} compact />

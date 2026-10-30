@@ -50,7 +50,7 @@
     ],
     "choices": [
       {
-        "kind": "text",
+        "kind": "language",
         "count": 1,
         "name": {
           "en": "One other language",

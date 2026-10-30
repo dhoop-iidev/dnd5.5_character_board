@@ -11,6 +11,8 @@
   import type { Owner } from '../engine/sheet/types'
   import { app, tr, view } from '../state.svelte'
   import SpellPicker from './SpellPicker.svelte'
+  import LanguagePicker from './LanguagePicker.svelte'
+  import { languageOf } from '../model/languages'
   import { choicesFor } from './spellChoices'
   import { backgroundDef, CUSTOM_BACKGROUND, toolList } from '../model/customBackground'
   import { featListOf } from '../model/newCharacter'
@@ -59,6 +61,12 @@
     return asList(ch.from)
       .flatMap((k) => cls?.options?.[k] ?? [])
       .map((o) => ({ id: o.id, name: o.name, prereq: o.prereq }))
+  }
+  /** Languages the character knows other than this choice's picks. */
+  function knownLanguages(vals: string[]): Set<string> {
+    const keyOf = (l: string) => languageOf(l)?.id ?? l.trim().toLowerCase()
+    const own = new Set(vals.map(keyOf))
+    return new Set(sheet.proficiencies.languages.map(keyOf).filter((k) => !own.has(k)))
   }
   const profOf = (id: string) => sheet.skills.find((s) => s.id === id)?.proficiency ?? 'none'
   const proficientIn = (id: string) => ['proficient', 'expertise'].includes(profOf(id))
@@ -175,7 +183,9 @@
         <!-- "Skills or tools" (Skilled): the same count covers both. -->
         <div class="chips">
           {#each toolList(rules) as t (t.id)}
-            {@const taken = !vals.includes(t.id) && sheet.proficiencies.tools.includes(t.name.en)}
+            {@const taken =
+              !vals.includes(t.id) &&
+              (sheet.proficiencies.tools.includes(t.name.en) || sheet.proficiencies.tools.includes(t.id))}
             <label
               class="chip"
               class:on={vals.includes(t.id)}
@@ -208,6 +218,14 @@
           label={tr({ en: 'Choose a spell', fr: 'Choisir un sort', es: 'Elegir un conjuro' })}
         />
       {/if}
+    {:else if ch.kind === 'language'}
+      <!-- A language of your choice from both language tables (Thieves' Cant, Deft Explorer; SRD p. 20), or any other. -->
+      <LanguagePicker
+        values={vals}
+        onchange={(v) => setValues(ch, n === 1 ? v.slice(-1) : v)}
+        known={knownLanguages(vals)}
+        rare
+      />
     {:else if ch.kind === 'damage-type'}
       <select
         value={vals[0] ?? ''}

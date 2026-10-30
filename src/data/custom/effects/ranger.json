@@ -51,7 +51,7 @@
       },
       {
         "id": "languages",
-        "kind": "text",
+        "kind": "language",
         "count": 2,
         "name": {
           "en": "Two languages",

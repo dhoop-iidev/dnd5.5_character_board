@@ -1,4 +1,6 @@
 // Stage 9: the Sheet, plus the proficiency lists.
+import { languageOf } from '../../model/languages'
+import { toolChoicesOf, toolPicks } from '../../model/toolChoices'
 import type {
   AttacksResult,
   BuildResult,
@@ -50,6 +52,30 @@ export function assembleStage(b: In, _opts: ComputeOptions): Sheet {
         }
   if (b.background?.tool.en) tools.push(b.background.tool.en)
   tools.push(...(b.char.toolProficiencies ?? []))
+  // Tools chosen by the player (Bard instruments, Monk, Soldier's Gaming Set) in place of the sentence that offers them.
+  for (const t of toolChoicesOf(b.char, b.rules)) {
+    const picks = toolPicks(b.char, t)
+    if (!picks.length) continue
+    const k = tools.indexOf(t.replaces)
+    if (k >= 0) tools.splice(k, 1)
+    for (const p of picks) if (!tools.includes(p)) tools.push(p)
+  }
+  // Languages: the player's (Origin), those granted (Thieves' Cant, Druidic), those picked in a feature's language
+  // choice (Thieves' Cant's other language, Deft Explorer); each once.
+  const languages: string[] = []
+  const seen = new Set<string>()
+  const addLanguage = (l: string) => {
+    const k = languageOf(l)?.id ?? l.trim().toLowerCase()
+    if (!k || seen.has(k)) return
+    seen.add(k)
+    languages.push(l)
+  }
+  for (const l of b.char.identity?.languages ?? []) addLanguage(l)
+  for (const g of b.pool.grants)
+    if (g.grant.kind === 'language' && (g.grant.on || g.grant.value)) addLanguage(String(g.grant.on ?? g.grant.value))
+  for (const o of b.owners)
+    for (const c of o.eff.choices ?? [])
+      if (c.kind === 'language') for (const v of o.choiceValues[c.id ?? 'choice'] ?? []) addLanguage(v)
   const { char, rules, ...rest } = b
   return {
     ...rest,
@@ -57,12 +83,7 @@ export function assembleStage(b: In, _opts: ComputeOptions): Sheet {
       armor,
       weapons,
       tools,
-      languages: [
-        ...(char.identity?.languages ?? []),
-        ...b.pool.grants
-          .filter((g) => g.grant.kind === 'language' && (g.grant.on || g.grant.value))
-          .map((g) => String(g.grant.on ?? g.grant.value)),
-      ],
+      languages,
     },
     exhaustion: char.exhaustion ?? 0,
     exhaustionPenalty: -2 * (char.exhaustion ?? 0),

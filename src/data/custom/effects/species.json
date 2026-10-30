@@ -565,6 +565,7 @@
   },
   {
     "id": "gnome:forest-gnome",
+    "withOption": { "owner": "gnome:gnomish-lineage", "option": "forest-gnome" },
     "textOnly": {
       "en": "Applied through the Gnomish Lineage choice.",
       "fr": "Appliqué par le choix de Lignée gnome.",
@@ -577,6 +578,7 @@
   },
   {
     "id": "gnome:rock-gnome",
+    "withOption": { "owner": "gnome:gnomish-lineage", "option": "rock-gnome" },
     "activation": [],
     "textOnly": {
       "en": "Applied through the Gnomish Lineage choice.",
@@ -690,6 +692,7 @@
   },
   {
     "id": "goliath:clouds-jaunt-cloud-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "cloud" },
     "activation": [
       {
         "kind": "bonus-action",
@@ -713,6 +716,7 @@
   },
   {
     "id": "goliath:fires-burn-fire-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "fire" },
     "activation": [
       {
         "kind": "free",
@@ -736,6 +740,7 @@
   },
   {
     "id": "goliath:frosts-chill-frost-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "frost" },
     "activation": [
       {
         "kind": "free",
@@ -759,6 +764,7 @@
   },
   {
     "id": "goliath:hills-tumble-hill-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "hill" },
     "activation": [
       {
         "kind": "free",
@@ -782,6 +788,7 @@
   },
   {
     "id": "goliath:stones-endurance-stone-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "stone" },
     "activation": [
       {
         "kind": "reaction",
@@ -805,6 +812,7 @@
   },
   {
     "id": "goliath:storms-thunder-storm-giant",
+    "withOption": { "owner": "goliath:giant-ancestry", "option": "storm" },
     "activation": [
       {
         "kind": "reaction",

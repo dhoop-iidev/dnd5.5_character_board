@@ -210,6 +210,9 @@ export interface EffectDef {
   mastery?: number | string
   /** Changes to another owner's resource (Font of Inspiration makes Bardic Inspiration a short-rest resource). no35-ok */
   overrides?: { resource: string; per?: RestKind; shortRestRegain?: number }[]
+  /** A species sub-trait that applies only when this option of another trait's choice is chosen (a Goliath's Giant
+   * Ancestry benefit, a Gnomish Lineage): otherwise it is neither listed nor usable. */
+  withOption?: { owner: string; option: string }
   /** Nothing is computed, and why ("an action with no sheet number", "needs the GM"). */
   textOnly?: I18n
   /** How the owner is used during a turn: one entry per use (the Combat pane's "Your turn" box, engine/turn.ts). An

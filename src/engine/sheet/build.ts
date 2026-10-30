@@ -170,8 +170,16 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
   }
   const species = rules.species.get(char.speciesId)
   // A custom species trait may start at a later character level (house rule #6).
-  const traits: SpeciesTraitDef[] = (species?.traits ?? []).filter((t) => !t.level || t.level <= level)
-  for (const t of traits) owner(t.id, 'trait', t.name, t.text, { source: t.source })
+  // A sub-trait tied to an option (Giant Ancestry, Gnomish Lineage) only when that option is chosen.
+  const traits: SpeciesTraitDef[] = []
+  for (const t of species?.traits ?? []) {
+    if (t.level && t.level > level) continue
+    const w = rules.effects.get(t.id)?.withOption
+    if (w && !Object.values(owners.find((o) => o.id === w.owner)?.choiceValues ?? {}).some((v) => v.includes(w.option)))
+      continue
+    traits.push(t)
+    owner(t.id, 'trait', t.name, t.text, { source: t.source })
+  }
   const background = backgroundDef(char.background, rules)
   levels.forEach((l, i) => {
     if (featRows.has(i)) addFeat(l.feat, 'level', i + 1)

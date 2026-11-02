@@ -84,12 +84,16 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
   /** Create an owner, merge its chosen options in, spawn option owners and extra feats. */
   function owner(id: string, kind: Owner['kind'], name: I18n, text?: I18n, extra: Partial<Owner> = {}): Owner {
     const effect = rules.effects.get(extra.effectId ?? id)
-    let eff: EffectDef = effect
-      ? { ...effect, modifiers: [...(effect.modifiers ?? [])], grants: [...(effect.grants ?? [])] }
-      : { id }
+    // Before its character level (Large Form, Draconic Flight: level 5), it is listed with its text only.
+    const early = !!effect?.minLevel && level < effect.minLevel
+    let eff: EffectDef = early
+      ? { id, textOnly: effect!.textOnly }
+      : effect
+        ? { ...effect, modifiers: [...(effect.modifiers ?? [])], grants: [...(effect.grants ?? [])] }
+        : { id }
     const o: Owner = { id, kind, name, text, effect, eff, modifiers: [], grants: [], choiceValues: {}, ...extra }
     owners.push(o)
-    for (const c of effect?.choices ?? []) {
+    for (const c of early ? [] : (effect?.choices ?? [])) {
       const values = chosen(o, c)
       o.choiceValues[c.id ?? 'choice'] = values
       if (c.kind === 'option') {

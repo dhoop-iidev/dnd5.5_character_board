@@ -200,7 +200,8 @@
   },
   {
     "id": "dragonborn:draconic-flight",
-    "activation": [{ "kind": "bonus-action", "minLevel": 5 }],
+    "minLevel": 5,
+    "activation": [{ "kind": "bonus-action" }],
     "uses": {
       "count": 1,
       "per": "long"
@@ -836,7 +837,8 @@
   },
   {
     "id": "goliath:large-form",
-    "activation": [{ "kind": "bonus-action", "minLevel": 5, "when": "!toggle:large-form", "setsToggle": "large-form" }],
+    "minLevel": 5,
+    "activation": [{ "kind": "bonus-action", "when": "!toggle:large-form", "setsToggle": "large-form" }],
     "uses": {
       "count": 1,
       "per": "long"

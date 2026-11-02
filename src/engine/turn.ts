@@ -237,9 +237,8 @@ export function turnOptions(char: Character, sheet: Sheet): TurnOption[] {
   const out: TurnOption[] = []
   for (const o of sheet.owners) {
     const acts = o.eff.activation ?? o.effect?.activation
-    if (!acts?.length) continue
+    if (!acts?.length || (o.effect?.minLevel && sheet.level < o.effect.minLevel)) continue
     acts.forEach((a, i) => {
-      if (a.minLevel && sheet.level < a.minLevel) return
       if (!holds(char, a.when)) return
       // A cost of 0 spends nothing (extending a Rage, leaving Wild Shape early, Lay On Hands' variable pool).
       const resId = a.cost?.amount === 0 ? undefined : (a.cost?.resource ?? (o.eff.uses ? o.id : undefined))

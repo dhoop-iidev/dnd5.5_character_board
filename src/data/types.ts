@@ -210,6 +210,9 @@ export interface EffectDef {
   mastery?: number | string
   /** Changes to another owner's resource (Font of Inspiration makes Bardic Inspiration a short-rest resource). no35-ok */
   overrides?: { resource: string; per?: RestKind; shortRestRegain?: number }[]
+  /** Character level from which it applies (a species trait that starts at character level 5: Large Form, Draconic
+   * Flight): before that the trait is listed but gives no uses, modifiers, switch or Combat card. */
+  minLevel?: number
   /** A species sub-trait that applies only when this option of another trait's choice is chosen (a Goliath's Giant
    * Ancestry benefit, a Gnomish Lineage): otherwise it is neither listed nor usable. */
   withOption?: { owner: string; option: string }
@@ -266,8 +269,6 @@ export interface ActivationDef {
   cost?: { resource?: string; amount?: number }
   /** Shown only while this holds: 'toggle:<key>' (a Combat-pane switch), '!toggle:<key>' (while it is off). */
   when?: string
-  /** Character level from which it can be used (a species trait that starts at level 5). */
-  minLevel?: number
   /** Turns this Combat-pane switch on when used (Rage → 'rage'). */
   setsToggle?: string
   /** Gives one more action this turn (Action Surge), except these standard actions. */

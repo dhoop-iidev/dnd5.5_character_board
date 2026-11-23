@@ -4,7 +4,7 @@
   // background (SRD 5.2.1 p. 20). Each trait: character level, name, summary, and optionally what the sheet uses
   // (Darkvision, other speeds, skill proficiencies, resistances, uses per rest, the part of the turn it takes, modifiers).
   // A species can be exported to a file and imported into another character; it then appears in the Origin's species
-  // menu.
+  // menu. With `only`, it shows that one species, open (the Builder's Origin step, ui/OriginEditor.svelte).
   import { rules } from '../data/rules'
   import type { AbilityId, DamageType, I18n, RestKind, Size, SkillId } from '../data/types'
   import { ABILITIES } from '../data/types'
@@ -15,8 +15,17 @@
   import { app, tr } from '../state.svelte'
   import ModifierEditor from './ModifierEditor.svelte'
 
+  let { only }: { only?: string } = $props()
+
   const c = $derived(app.character)
   let open = $state<string | null>(null)
+  let collapsed = $state(false)
+  const list = $derived(only ? (c.customSpecies ?? []).filter((s) => s.id === only) : (c.customSpecies ?? []))
+  const isOpen = (id: string) => (only ? !collapsed : open === id)
+  function toggleOpen(id: string) {
+    if (only) collapsed = !collapsed
+    else open = open === id ? null : id
+  }
   let message = $state('')
   let fileInput: HTMLInputElement | undefined = $state()
 
@@ -133,20 +142,22 @@
   }
 </script>
 
-<h4>{tr({ en: 'Custom species', fr: 'Espèces personnalisées', es: 'Especies personalizadas' })}</h4>
-<p class="sub">
-  {tr({
-    en: 'Species from other books (house rule #6), in your own words with the book and page. Under the 2024 rules they give no ability score increases: those come from your background. They then appear in the Origin’s species menu.',
-    fr: 'Espèces d’autres livres (règle maison n° 6), dans vos propres mots, avec le livre et la page. Selon les règles de 2024, elles ne donnent aucune augmentation de caractéristique : celles-ci viennent de l’historique. Elles apparaissent ensuite dans le menu des espèces de l’Origine.',
-    es: 'Especies de otros libros (regla de la casa n.º 6), con tus propias palabras, el libro y la página. Según las reglas de 2024 no dan aumentos de característica: vienen del trasfondo. Después aparecen en el menú de especies del Origen.',
-  })}
-</p>
+{#if !only}
+  <h4>{tr({ en: 'Custom species', fr: 'Espèces personnalisées', es: 'Especies personalizadas' })}</h4>
+  <p class="sub">
+    {tr({
+      en: 'Species from other books (house rule #6), in your own words with the book and page. Under the 2024 rules they give no ability score increases: those come from your background. They then appear in the Origin’s species menu.',
+      fr: 'Espèces d’autres livres (règle maison n° 6), dans vos propres mots, avec le livre et la page. Selon les règles de 2024, elles ne donnent aucune augmentation de caractéristique : celles-ci viennent de l’historique. Elles apparaissent ensuite dans le menu des espèces de l’Origine.',
+      es: 'Especies de otros libros (regla de la casa n.º 6), con tus propias palabras, el libro y la página. Según las reglas de 2024 no dan aumentos de característica: vienen del trasfondo. Después aparecen en el menú de especies del Origen.',
+    })}
+  </p>
+{/if}
 
-{#each c.customSpecies ?? [] as sp (sp.id)}
+{#each list as sp (sp.id)}
   <div class="item">
     <div class="head">
-      <button class="name" onclick={() => (open = open === sp.id ? null : sp.id)} aria-expanded={open === sp.id}
-        >{open === sp.id ? '▾' : '▸'}
+      <button class="name" onclick={() => toggleOpen(sp.id)} aria-expanded={isOpen(sp.id)}
+        >{isOpen(sp.id) ? '▾' : '▸'}
         {sp.name || tr({ en: '(unnamed)', fr: '(sans nom)', es: '(sin nombre)' })}</button
       >
       <span class="meta">{sp.book}</span>
@@ -173,7 +184,7 @@
         onclick={() => remove(sp)}>✕</button
       >
     </div>
-    {#if open === sp.id}
+    {#if isOpen(sp.id)}
       <div class="form">
         <label class="grow"
           >{tr({ en: 'Name', fr: 'Nom', es: 'Nombre' })}<input type="text" bind:value={sp.name} /></label
@@ -394,24 +405,26 @@
   </div>
 {/each}
 
-<div class="bar">
-  <button onclick={add}
-    >＋ {tr({
-      en: 'New custom species',
-      fr: 'Nouvelle espèce personnalisée',
-      es: 'Nueva especie personalizada',
-    })}</button
-  >
-  <button class="ghost" onclick={() => fileInput?.click()}
-    >{tr({
-      en: 'Import a species file',
-      fr: 'Importer un fichier d’espèce',
-      es: 'Importar un archivo de especie',
-    })}</button
-  >
-  <input bind:this={fileInput} type="file" accept=".json,application/json" hidden onchange={importSpecies} />
-</div>
-{#if message}<p class="msg">{message}</p>{/if}
+{#if !only}
+  <div class="bar">
+    <button onclick={add}
+      >＋ {tr({
+        en: 'New custom species',
+        fr: 'Nouvelle espèce personnalisée',
+        es: 'Nueva especie personalizada',
+      })}</button
+    >
+    <button class="ghost" onclick={() => fileInput?.click()}
+      >{tr({
+        en: 'Import a species file',
+        fr: 'Importer un fichier d’espèce',
+        es: 'Importar un archivo de especie',
+      })}</button
+    >
+    <input bind:this={fileInput} type="file" accept=".json,application/json" hidden onchange={importSpecies} />
+  </div>
+  {#if message}<p class="msg">{message}</p>{/if}
+{/if}
 
 <style>
   .sub {

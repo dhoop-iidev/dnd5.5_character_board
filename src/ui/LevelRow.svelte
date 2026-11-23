@@ -13,6 +13,8 @@
   import { app, tr, view } from '../state.svelte'
   import type { LevelEntry } from '../model/character'
   import ChoiceEditor from './ChoiceEditor.svelte'
+  import CustomFeatsEditor from './CustomFeatsEditor.svelte'
+  import { addCustomFeat, NEW_CUSTOM, UNNAMED } from './customPick'
   import ToolChoicePicker from './ToolChoicePicker.svelte'
   import { toolChoicesOf } from '../model/toolChoices'
   import { progressionPlaces } from './progression'
@@ -39,7 +41,9 @@
       .filter((f) => f.category !== 'epic-boon' || cl === 19)
       .sort((a, b) => a.category.localeCompare(b.category) || tr(a.name).localeCompare(tr(b.name))),
   )
+  const customFeatIds = $derived(new Set((c.customFeats ?? []).map((f) => f.id)))
   function setFeat(entry: LevelEntry, id: string) {
+    if (id === NEW_CUSTOM) id = addCustomFeat(c, 'general')
     if (!id) {
       delete entry.feat
       return
@@ -159,7 +163,16 @@
   <div class="feat">
     <select value={l.feat?.featId ?? ''} onchange={(e) => setFeat(l, e.currentTarget.value)}>
       <option value="">— {tr({ en: 'choose', fr: 'choisir', es: 'elegir' })} —</option>
-      {#each featChoices as f (f.id)}<option value={f.id}>{tr(f.name)}</option>{/each}
+      {#each featChoices.filter((f) => !customFeatIds.has(f.id)) as f (f.id)}<option value={f.id}>{tr(f.name)}</option
+        >{/each}
+      <optgroup label={tr({ en: 'Custom feats', fr: 'Dons personnalisés', es: 'Dotes personalizadas' })}>
+        {#each (c.customFeats ?? []).filter((f) => f.category !== 'epic-boon' || cl === 19) as f (f.id)}<option
+            value={f.id}>{f.name.trim() || tr(UNNAMED)}</option
+          >{/each}
+        <option value={NEW_CUSTOM}
+          >＋ {tr({ en: 'New custom feat…', fr: 'Nouveau don personnalisé…', es: 'Nueva dote personalizada…' })}</option
+        >
+      </optgroup>
     </select>
     {#if l.feat}
       <span class="inc">
@@ -177,6 +190,9 @@
       </span>
     {/if}
   </div>
+  {#if l.feat && customFeatIds.has(l.feat.featId)}
+    {#key l.feat.featId}<CustomFeatsEditor only={l.feat.featId} />{/key}
+  {/if}
 {/if}
 
 {#if owners.length}

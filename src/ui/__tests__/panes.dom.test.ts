@@ -11,7 +11,8 @@ import { migrate } from '../../model/migrate'
 import { newCharacter } from '../../model/newCharacter'
 import { app } from '../../state.svelte'
 import App from '../../App.svelte'
-import { builder } from '../builderState.svelte'
+import { builder, openBuilder } from '../builderState.svelte'
+import { NEW_CUSTOM } from '../customPick'
 
 const EXAMPLES = join(__dirname, '..', '..', '..', 'examples')
 const examples = readdirSync(EXAMPLES)
@@ -188,6 +189,35 @@ describe('creation and level up in the Builder (ui/Builder.svelte)', () => {
     flushSync()
     expect(app.character.levels).toHaveLength(6)
     expect(builder.open && builder.index).toBe(5)
+    visitBuilder()
+  })
+  it('creates a custom species and a custom Origin feat from the Origin step (house rules #6, #4)', () => {
+    app.character = fresh('fighter', 'human', 'soldier')
+    app.loaded = true
+    mountApp()
+    openBuilder(0, { step: 'origin' })
+    flushSync()
+    const pick = (sel: HTMLSelectElement, v: string) => {
+      sel.value = v
+      sel.dispatchEvent(new Event('change', { bubbles: true }))
+      flushSync()
+    }
+    const c = app.character
+    pick($$<HTMLSelectElement>('.origin > .fields select')[0], NEW_CUSTOM)
+    expect(c.customSpecies?.map((s) => s.id)).toEqual(['custom-species-1'])
+    expect(c.speciesId).toBe('custom-species-1')
+    const name = $$<HTMLInputElement>('.origin .item .form input')[0]
+    name.value = 'Tabaxi'
+    name.dispatchEvent(new Event('input', { bubbles: true }))
+    flushSync()
+    expect($$<HTMLOptionElement>('.origin > .fields select option').some((o) => o.textContent === 'Tabaxi')).toBe(true)
+    // A custom background whose Origin feat is a new custom feat, edited right under the menu.
+    pick($$<HTMLSelectElement>('.origin > .fields select')[1], 'custom')
+    const feat = $$<HTMLSelectElement>('.origin .custom .fields select').at(-1)!
+    pick(feat, NEW_CUSTOM)
+    expect(c.background.feat.featId).toBe('custom-feat-1')
+    expect(c.customFeats?.[0].category).toBe('origin')
+    expect(target!.querySelector('.origin .custom .feat .form')).not.toBeNull()
     visitBuilder()
   })
 })

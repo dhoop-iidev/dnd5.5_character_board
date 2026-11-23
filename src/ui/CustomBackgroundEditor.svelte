@@ -1,21 +1,31 @@
 <script lang="ts">
   // The picks of the custom background (house rule #3, `model/customBackground.ts`): an optional name, three different
   // abilities for the +2/+1 or +1/+1/+1, two different skills, one tool and one Origin feat, the parts of an SRD
-  // background (SRD 5.2.1 p. 83). Used by the welcome screen and by the Origin block of the progression.
+  // background (SRD 5.2.1 p. 83). Used by the Builder's Origin step. The Origin feat may be a custom feat (house rule #4),
+  // created from this menu ("＋ New custom Origin feat") and edited under it.
   import { rules } from '../data/rules'
   import type { AbilityId, I18n, SkillId } from '../data/types'
   import { ABILITIES } from '../data/types'
   import { ABILITY_NAMES } from '../engine/sheet/common'
   import type { CustomBackground } from '../model/character'
   import { originFeats, toolList } from '../model/customBackground'
-  import { tr, view } from '../state.svelte'
+  import { app, tr, view } from '../state.svelte'
+  import CustomFeatsEditor from './CustomFeatsEditor.svelte'
+  import { addCustomFeat, NEW_CUSTOM, UNNAMED } from './customPick'
 
   let { custom, featId, onfeat }: { custom: CustomBackground; featId: string; onfeat: (id: string) => void } = $props()
 
   const byName = <T extends { name: I18n }>(list: T[]) => [...list].sort((a, b) => tr(a.name).localeCompare(tr(b.name)))
   const skills = $derived(byName([...rules.skills.values()]))
   const tools = $derived(byName(toolList(rules)))
-  const feats = $derived(byName(originFeats(view.rules)))
+  const customFeats = $derived((app.character.customFeats ?? []).filter((f) => f.category === 'origin'))
+  const allCustom = $derived(new Set((app.character.customFeats ?? []).map((f) => f.id)))
+  const feats = $derived(byName(originFeats(view.rules).filter((f) => !allCustom.has(f.id))))
+  const isCustomFeat = $derived(allCustom.has(featId))
+
+  function onFeat(id: string) {
+    onfeat(id === NEW_CUSTOM ? addCustomFeat(app.character, 'origin') : id)
+  }
 
   /** Picking a value already used in another box swaps the two, so the picks stay different. */
   function pick<T>(list: T[], i: number, v: T) {
@@ -77,12 +87,32 @@
     </label>
     <label>
       {tr({ en: 'Origin feat', fr: 'Don d’origine', es: 'Dote de origen' })}
-      <select value={featId} onchange={(e) => onfeat(e.currentTarget.value)}>
+      <select value={featId} onchange={(e) => onFeat(e.currentTarget.value)}>
         <option value="" disabled>—</option>
         {#each feats as f (f.id)}<option value={f.id}>{tr(f.name)}</option>{/each}
+        <optgroup label={tr({ en: 'Custom feats', fr: 'Dons personnalisés', es: 'Dotes personalizadas' })}>
+          {#each customFeats as f (f.id)}<option value={f.id}>{f.name.trim() || tr(UNNAMED)}</option>{/each}
+          <option value={NEW_CUSTOM}
+            >＋ {tr({
+              en: 'New custom Origin feat…',
+              fr: 'Nouveau don d’origine personnalisé…',
+              es: 'Nueva dote de origen personalizada…',
+            })}</option
+          >
+        </optgroup>
       </select>
     </label>
   </div>
+  {#if isCustomFeat}
+    <p class="sub">
+      {tr({
+        en: 'Custom feat (house rule #4), from another book, in your own words with the book and page.',
+        fr: 'Don personnalisé (règle maison n° 4), d’un autre livre, dans vos propres mots, avec le livre et la page.',
+        es: 'Dote personalizada (regla de la casa n.º 4), de otro libro, con tus propias palabras, el libro y la página.',
+      })}
+    </p>
+    {#key featId}<CustomFeatsEditor only={featId} />{/key}
+  {/if}
 </div>
 
 <style>

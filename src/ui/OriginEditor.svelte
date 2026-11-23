@@ -3,7 +3,8 @@
   // choices of the species traits and origin feats (lineage, Skillful…; Magic Initiate's spells are in the Spells step).
   // Changing the background gives its own Origin feat and its default ability increases (ui/creation.ts); changing the
   // species clears its trait choices. The ability scores have their own step (ui/AbilityScores.svelte).
-  // The custom background (house rule #3) shows its picks under the select.
+  // The custom background (house rule #3) shows its picks under the select. A custom species (house rule #6) is created
+  // from the species menu ("＋ New custom species", or a species file) and edited under it (ui/customPick.ts).
   import { languageName, languageOf, STARTING_LANGUAGES } from '../model/languages'
   import { rules } from '../data/rules'
   import type { RuleWarning } from '../engine/checks/common'
@@ -12,6 +13,9 @@
   import { featListOf } from '../model/newCharacter'
   import { backgroundDef, CUSTOM_BACKGROUND } from '../model/customBackground'
   import CustomBackgroundEditor from './CustomBackgroundEditor.svelte'
+  import CustomSpeciesEditor from './CustomSpeciesEditor.svelte'
+  import { readSpeciesFile } from '../model/customSpecies'
+  import { addCustomSpecies, NEW_CUSTOM, UNNAMED } from './customPick'
   import { app, tr, view } from '../state.svelte'
   import ChoiceEditor from './ChoiceEditor.svelte'
   import LanguagePicker from './LanguagePicker.svelte'
@@ -31,7 +35,32 @@
   const bg = $derived(backgroundDef(c.background, rules))
   const byName = <T extends { name: { en: string } }>(list: T[]) =>
     [...list].sort((a, b) => tr(a.name as never).localeCompare(tr(b.name as never)))
-  const speciesList = $derived(byName([...view.rules.species.values()]))
+  const customSpecies = $derived(c.customSpecies ?? [])
+  const customIds = $derived(new Set(customSpecies.map((s) => s.id)))
+  const speciesList = $derived(byName([...view.rules.species.values()].filter((s) => !customIds.has(s.id))))
+  const isCustomSpecies = $derived(customIds.has(c.speciesId))
+  let fileInput: HTMLInputElement | undefined = $state()
+  let message = $state('')
+
+  function onSpecies(id: string) {
+    setSpecies(id === NEW_CUSTOM ? addCustomSpecies(c) : id)
+  }
+  async function importSpecies(e: Event) {
+    const file = (e.currentTarget as HTMLInputElement).files?.[0]
+    if (!file) return
+    try {
+      c.customSpecies ??= []
+      const sp = readSpeciesFile(JSON.parse(await file.text()), c.customSpecies)
+      c.customSpecies.push(sp)
+      setSpecies(sp.id)
+      message = ''
+    } catch (err) {
+      message =
+        tr({ en: 'Import failed: ', fr: 'Échec de l’import : ', es: 'Error al importar: ' }) + (err as Error).message
+    } finally {
+      if (fileInput) fileInput.value = ''
+    }
+  }
   const backgroundList = $derived(byName([...rules.backgrounds.values()]))
 
   function setSpecies(id: string) {
@@ -80,10 +109,28 @@
   <div class="fields">
     <label>
       {tr(UI.species)}
-      <select value={c.speciesId} onchange={(e) => setSpecies(e.currentTarget.value)}>
+      <select value={c.speciesId} onchange={(e) => onSpecies(e.currentTarget.value)}>
         {#each speciesList as s (s.id)}<option value={s.id}>{tr(s.name)}</option>{/each}
+        <optgroup label={tr({ en: 'Custom species', fr: 'Espèces personnalisées', es: 'Especies personalizadas' })}>
+          {#each customSpecies as s (s.id)}<option value={s.id}>{s.name.trim() || tr(UNNAMED)}</option>{/each}
+          <option value={NEW_CUSTOM}
+            >＋ {tr({
+              en: 'New custom species…',
+              fr: 'Nouvelle espèce personnalisée…',
+              es: 'Nueva especie personalizada…',
+            })}</option
+          >
+        </optgroup>
       </select>
     </label>
+    <button class="ghost import" onclick={() => fileInput?.click()}
+      >{tr({
+        en: 'Import a species file',
+        fr: 'Importer un fichier d’espèce',
+        es: 'Importar un archivo de especie',
+      })}</button
+    >
+    <input bind:this={fileInput} type="file" accept=".json,application/json" hidden onchange={importSpecies} />
     {#if sp && sp.size.length > 1}
       <label>
         {tr({ en: 'Size', fr: 'Taille', es: 'Tamaño' })}
@@ -105,6 +152,17 @@
       </select>
     </label>
   </div>
+  {#if message}<p class="msg">{message}</p>{/if}
+  {#if isCustomSpecies}
+    <p class="sub">
+      {tr({
+        en: 'Custom species (house rule #6), from another book, in your own words with the book and page. Under the 2024 rules it gives no ability score increases: those come from your background.',
+        fr: 'Espèce personnalisée (règle maison n° 6), d’un autre livre, dans vos propres mots, avec le livre et la page. Selon les règles de 2024, elle ne donne aucune augmentation de caractéristique : celles-ci viennent de l’historique.',
+        es: 'Especie personalizada (regla de la casa n.º 6), de otro libro, con tus propias palabras, el libro y la página. Según las reglas de 2024 no da aumentos de característica: vienen del trasfondo.',
+      })}
+    </p>
+    {#key c.speciesId}<CustomSpeciesEditor only={c.speciesId} />{/key}
+  {/if}
   {#if c.background.backgroundId === CUSTOM_BACKGROUND && c.background.custom}
     <CustomBackgroundEditor
       custom={c.background.custom}
@@ -164,6 +222,13 @@
   }
   .owner {
     margin-top: 0.5rem;
+  }
+  .import {
+    align-self: flex-end;
+    min-height: 2.4rem;
+  }
+  .msg {
+    color: var(--accent);
   }
   .fields select {
     min-height: 2.4rem;

@@ -3,6 +3,8 @@
   // words with the book and page; they then appear in the feat menus of the progression (a level's feat instead of the
   // Ability Score Improvement, an Origin feat, a Fighting Style). Prerequisites and the +1 Ability Score Increase are
   // checked like SRD feats; modifiers (same vocabulary as custom items) are applied by the engine, the rest is text.
+  // With `only`, it shows that one feat, open, right under the menu that took it (the custom background's Origin feat,
+  // a level's feat in ui/LevelRow.svelte).
   import type { AbilityId, FeatCategory } from '../data/types'
   import { ABILITIES } from '../data/types'
   import { ABILITY_NAMES, ABILITY_SHORT } from '../engine/sheet/common'
@@ -11,8 +13,17 @@
   import { app, tr } from '../state.svelte'
   import ModifierEditor from './ModifierEditor.svelte'
 
+  let { only }: { only?: string } = $props()
+
   const c = $derived(app.character)
   let open = $state<string | null>(null)
+  let collapsed = $state(false)
+  const list = $derived(only ? (c.customFeats ?? []).filter((f) => f.id === only) : (c.customFeats ?? []))
+  const isOpen = (id: string) => (only ? !collapsed : open === id)
+  function toggleOpen(id: string) {
+    if (only) collapsed = !collapsed
+    else open = open === id ? null : id
+  }
 
   /** Where the feat is taken: it can't be deleted while used. */
   function usedAt(id: string): string[] {
@@ -53,21 +64,23 @@
   }
 </script>
 
-<h4>{tr({ en: 'Custom feats', fr: 'Dons personnalisés', es: 'Dotes personalizadas' })}</h4>
-<p class="sub">
-  {tr({
-    en: 'Feats from other books (house rule #4), in your own words with the book and page. They then appear in the feat menus above, like the SRD ones.',
-    fr: 'Dons d’autres livres (règle maison n° 4), dans vos propres mots, avec le livre et la page. Ils apparaissent ensuite dans les menus de dons ci-dessus, comme ceux du SRD.',
-    es: 'Dotes de otros libros (regla de la casa n.º 4), con tus propias palabras, el libro y la página. Después aparecen en los menús de dotes de arriba, como las del SRD.',
-  })}
-</p>
+{#if !only}
+  <h4>{tr({ en: 'Custom feats', fr: 'Dons personnalisés', es: 'Dotes personalizadas' })}</h4>
+  <p class="sub">
+    {tr({
+      en: 'Feats from other books (house rule #4), in your own words with the book and page. They then appear in the feat menus above, like the SRD ones.',
+      fr: 'Dons d’autres livres (règle maison n° 4), dans vos propres mots, avec le livre et la page. Ils apparaissent ensuite dans les menus de dons ci-dessus, comme ceux du SRD.',
+      es: 'Dotes de otros libros (regla de la casa n.º 4), con tus propias palabras, el libro y la página. Después aparecen en los menús de dotes de arriba, como las del SRD.',
+    })}
+  </p>
+{/if}
 
-{#each c.customFeats ?? [] as f (f.id)}
+{#each list as f (f.id)}
   {@const used = usedAt(f.id)}
   <div class="feat">
     <div class="head">
-      <button class="name" onclick={() => (open = open === f.id ? null : f.id)} aria-expanded={open === f.id}
-        >{open === f.id ? '▾' : '▸'}
+      <button class="name" onclick={() => toggleOpen(f.id)} aria-expanded={isOpen(f.id)}
+        >{isOpen(f.id) ? '▾' : '▸'}
         {f.name || tr({ en: '(unnamed)', fr: '(sans nom)', es: '(sin nombre)' })}</button
       >
       <span class="meta">{tr(FEAT_CATEGORY_NAMES[f.category])}{f.book ? ` · ${f.book}` : ''}</span>
@@ -80,7 +93,7 @@
         onclick={() => remove(f)}>✕</button
       >
     </div>
-    {#if open === f.id}
+    {#if isOpen(f.id)}
       <div class="form">
         <label class="wide"
           >{tr({ en: 'Name', fr: 'Nom', es: 'Nombre' })}<input type="text" bind:value={f.name} /></label
@@ -192,11 +205,13 @@
   </div>
 {/each}
 
-<div class="bar">
-  <button onclick={add}
-    >＋ {tr({ en: 'New custom feat', fr: 'Nouveau don personnalisé', es: 'Nueva dote personalizada' })}</button
-  >
-</div>
+{#if !only}
+  <div class="bar">
+    <button onclick={add}
+      >＋ {tr({ en: 'New custom feat', fr: 'Nouveau don personnalisé', es: 'Nueva dote personalizada' })}</button
+    >
+  </div>
+{/if}
 
 <style>
   .sub {

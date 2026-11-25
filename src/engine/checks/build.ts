@@ -841,6 +841,19 @@ export function checkBuild(ctx: CheckContext) {
                   { ...where, value: v, source: o.source, actionable: true },
                 ),
               )
+            // A school or Ritual restriction (Fey-Touched, Ritual Caster: content packs).
+            if ((c.schools?.length && !c.schools.includes(sp.school)) || (c.ritual && !sp.ritual))
+              out.push(
+                w(
+                  `choice-${key}-${v}-kind`,
+                  'error',
+                  'feats',
+                  `${o.name.en}${label}: ${sp.name.en} is not ${c.ritual ? 'a Ritual spell' : `a ${c.schools!.join(' or ')} spell`}.`,
+                  `${o.name.fr}${labelFr} : ${sp.name.fr} n’est pas ${c.ritual ? 'un sort rituel' : `de l’école ${c.schools!.join(' ou ')}`}.`,
+                  `${esOf(o.name)}${labelEs}: ${esOf(sp.name)} no es ${c.ritual ? 'un conjuro ritual' : `de la escuela ${c.schools!.join(' o ')}`}.`,
+                  { ...where, value: v, source: o.source, actionable: true },
+                ),
+              )
             // The list: the choice's own, or the one picked by the owner's 'list' choice (Magic Initiate).
             const lists = c.list ?? (o.choiceValues.list?.length ? o.choiceValues.list : undefined)
             if (

@@ -154,6 +154,10 @@ export interface ChoiceDef {
   list?: string[]
   level?: number
   maxLevel?: number
+  /** A 'spell' choice limited to these schools (Fey-Touched: Divination or Enchantment) or to Ritual spells (Ritual
+   * Caster): content packs, house rule #7. */
+  schools?: School[]
+  ritual?: boolean
   category?: 'origin' | 'general' | 'fighting-style' | 'epic-boon'
   /** A 'skill' choice that also accepts tools (Skilled: "three skills or tools", SRD p. 87): gear ids of kind 'tool'. */
   tools?: boolean

@@ -6,6 +6,7 @@ import type { EffectDef } from '../../data/types'
 import type { Character, ItemInstance } from '../../model/character'
 import { newCharacter } from '../../model/newCharacter'
 import { compute } from '../compute'
+import { validate } from '../validate'
 
 const rules = buildRules()
 const ABIL = { str: 15, dex: 16, con: 14, int: 10, wis: 13, cha: 8 }
@@ -122,5 +123,30 @@ describe('content-pack vocabulary', () => {
     const blade = s.attacks.find((a) => a.uid === 'feature:feat:alert')!
     expect([blade.mastery.id, blade.mastery.usable]).toEqual(['vex', true])
     expect(blade.weapon.properties).toEqual(['finesse', 'thrown'])
+  })
+
+  it('a spell choice limited to schools or Rituals flags other spells', () => {
+    const r = { ...rules, effects: new Map(rules.effects) }
+    r.effects.set('feat:alert', {
+      id: 'feat:alert',
+      choices: [{ id: 'spell', kind: 'spell', count: 1, level: 1, schools: ['divination', 'enchantment'] }],
+    })
+    const c = newCharacter(
+      {
+        name: 'T',
+        speciesId: 'human',
+        backgroundId: 'criminal',
+        classId: 'fighter',
+        lang: 'en',
+        abilities: ABIL,
+        speciesChoices: { size: 'medium' },
+        backgroundKit: 'B',
+      },
+      r,
+    )
+    c.background!.feat = { featId: 'alert', choices: { spell: 'magic-missile' } }
+    expect(validate(c, r).some((w) => w.id.includes('-kind'))).toBe(true)
+    c.background!.feat = { featId: 'alert', choices: { spell: 'charm-person' } }
+    expect(validate(c, r).some((w) => w.id.includes('-kind'))).toBe(false)
   })
 })

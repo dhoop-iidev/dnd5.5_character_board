@@ -100,6 +100,8 @@
         (s) =>
           (ch.level === undefined || s.level === ch.level) &&
           (ch.maxLevel === undefined || s.level <= ch.maxLevel) &&
+          (!ch.schools?.length || ch.schools.includes(s.school)) &&
+          (!ch.ritual || s.ritual) &&
           (!allowed || allowed.has(s.id)),
       )
       .sort((a, b) => a.level - b.level || tr(a.name).localeCompare(tr(b.name)))

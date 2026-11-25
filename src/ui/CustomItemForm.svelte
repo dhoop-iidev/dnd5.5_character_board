@@ -50,7 +50,7 @@
   let damageType = $state<DamageType | ''>(c0.damageType ?? '')
   let properties = $state<WeaponProperty[] | null>(c0.properties ?? null)
   let mastery = $state<MasteryProperty | ''>(c0.mastery ?? '')
-  let extra = $state<{ dice: string; type?: DamageType }[]>(c0.extraDamage ?? [])
+  let extra = $state<{ dice: string; type?: DamageType; condition?: string }[]>(c0.extraDamage ?? [])
   // armor
   let armorId = $state(editing?.kind === 'armor' ? (editing.refId ?? 'chain-mail') : 'chain-mail')
 
@@ -134,7 +134,12 @@
         out.properties = [...properties]
       if (mastery && mastery !== weapon.mastery) out.mastery = mastery
       const ex = $state.snapshot(extra).filter((x) => x.dice.trim())
-      if (ex.length) out.extraDamage = ex.map((x) => ({ dice: x.dice.trim(), ...(x.type ? { type: x.type } : {}) }))
+      if (ex.length)
+        out.extraDamage = ex.map((x) => ({
+          dice: x.dice.trim(),
+          ...(x.type ? { type: x.type } : {}),
+          ...(x.condition?.trim() ? { condition: x.condition.trim() } : {}),
+        }))
     }
     return out
   }
@@ -333,6 +338,16 @@
               <option value={undefined}>—</option>
               {#each DAMAGE_TYPES as [id, n] (id)}<option value={id}>{tr(n)}</option>{/each}
             </select>
+            <input
+              class="cond"
+              bind:value={x.condition}
+              placeholder={tr({
+                en: 'when (e.g. against a Dragon)',
+                fr: 'quand (ex. contre un dragon)',
+                es: 'cuándo (p. ej. contra un dragón)',
+              })}
+              aria-label={tr({ en: 'Condition', fr: 'Condition', es: 'Condición' })}
+            />
             <button onclick={() => extra.splice(i, 1)} aria-label={tr({ en: 'Remove', fr: 'Retirer', es: 'Quitar' })}
               >✕</button
             >
@@ -540,6 +555,10 @@
   }
   .row input {
     width: 6rem;
+  }
+  .row input.cond {
+    flex: 1;
+    min-width: 10rem;
   }
   input,
   select,

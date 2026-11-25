@@ -250,6 +250,9 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
                 ? { en: `${wName.en} (${t.en})`, fr: `${wName.fr} (${t.fr})`, es: `${esOf(wName)} (${esOf(t)})` }
                 : wName,
               dice: x.dice.trim(),
+              ...(x.condition?.trim()
+                ? { condition: { en: x.condition.trim(), fr: x.condition.trim(), es: x.condition.trim() } }
+                : {}),
             }
           }),
         // An SRD magic weapon's extra dice ('extraDamage.item': Flame Tongue 2d6 Fire while ablaze, Vicious Weapon 2d6).

@@ -91,6 +91,13 @@ describe('Sneak Attack (SRD p. 61)', () => {
     c.inventory = [{ uid: 'b', kind: 'weapon', refId: 'shortbow', quantity: 1, location: 'worn', equipped: true }]
     expect(compute(c, rules).attacks[0].extraDamage.map((d) => d.dice)).toEqual(['2d6'])
   })
+  it('not on a weapon without Finesse, nor on the Unarmed Strike (no weapon)', () => {
+    const c = rogue(3)
+    c.inventory = [{ uid: 'c', kind: 'weapon', refId: 'club', quantity: 1, location: 'worn', equipped: true }]
+    const s = compute(c, rules)
+    expect(s.attacks[0].extraDamage).toEqual([])
+    expect(s.unarmed?.extraDamage).toEqual([])
+  })
 })
 
 describe('Weapon Mastery (SRD p. 62)', () => {

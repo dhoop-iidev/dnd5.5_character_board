@@ -27,6 +27,7 @@
       {
         "target": "extraDamage.all",
         "value": "sneakAttack",
+        "when": "finesse-or-ranged",
         "condition": {
           "en": "Finesse or Ranged weapon, Advantage or an ally adjacent, once per turn",
           "fr": "arme de finesse ou à distance, Avantage ou un allié adjacent, une fois par tour",

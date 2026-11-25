@@ -291,7 +291,8 @@ export interface CustomItem {
   properties?: WeaponProperty[]
   mastery?: MasteryProperty
   /** Weapon only: extra damage dice on a hit ("1d6" Fire). */
-  extraDamage?: { dice: string; type?: DamageType }[]
+  /** `condition`: when the dice apply, in the player's words ("against a Dragon"); shown as situational. */
+  extraDamage?: { dice: string; type?: DamageType; condition?: string }[]
   /** Numeric effects (the vocabulary of docs/effects.md) applied while the item is worn (a weapon or Shield: in hand),
    * and attuned when it requires Attunement. */
   modifiers?: ModifierSpec[]

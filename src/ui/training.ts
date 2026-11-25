@@ -36,18 +36,23 @@ const noSee = (t: I18n): I18n =>
 
 export function trainingRows(sheet: Sheet, rules: Rules): TrainingRow[] {
   // Tool proficiencies are stored by their English text or id: find the trilingual name and the catalog entry again.
+  // Keys ignore case and the apostrophe's shape: "Calligrapher's Supplies" typed by a player is the catalog's
+  // "Calligrapher’s Supplies".
+  const key = (t: string) => t.replace(/[’‘]/g, "'").trim().toLowerCase()
   const tools = new Map<string, TrainingItem>()
+  const set = (k: string, v: TrainingItem) => tools.set(key(k), v)
   for (const cl of rules.classes.values()) {
-    if (cl.toolProficiencies) tools.set(cl.toolProficiencies.en, { name: noSee(cl.toolProficiencies) })
-    for (const t of cl.multiclass?.tools ?? []) tools.set(t.en, { name: t })
+    if (cl.toolProficiencies) set(cl.toolProficiencies.en, { name: noSee(cl.toolProficiencies) })
+    for (const t of cl.multiclass?.tools ?? []) set(t.en, { name: t })
   }
-  for (const b of rules.backgrounds.values()) if (b.tool?.en) tools.set(b.tool.en, { name: noSee(b.tool) })
+  for (const b of rules.backgrounds.values()) if (b.tool?.en) set(b.tool.en, { name: noSee(b.tool) })
   for (const g of rules.gear.values())
     if (g.kind === 'tool') {
-      tools.set(g.id, { name: g.name, tool: g })
-      tools.set(g.name.en, { name: g.name, tool: g })
+      set(g.id, { name: g.name, tool: g })
+      set(g.name.en, { name: g.name, tool: g })
     }
-  const uniq = (items: TrainingItem[]) => items.filter((x, i) => items.findIndex((y) => y.name.en === x.name.en) === i)
+  const uniq = (items: TrainingItem[]) =>
+    items.filter((x, i) => items.findIndex((y) => key(y.name.en) === key(x.name.en)) === i)
   return [
     {
       id: 'armor',
@@ -68,8 +73,9 @@ export function trainingRows(sheet: Sheet, rules: Rules): TrainingRow[] {
       label: { en: 'Tools', fr: 'Outils', es: 'Herramientas' },
       items: uniq(
         sheet.proficiencies.tools.map((t) => {
-          const v = tools.get(t) ? undefined : toolOption(t, rules)
-          return tools.get(t) ?? (v ? { name: v.name, tool: rules.gear.get(v.toolId) } : { name: same(t) })
+          const hit = tools.get(key(t))
+          const v = hit ? undefined : toolOption(t, rules)
+          return hit ?? (v ? { name: v.name, tool: rules.gear.get(v.toolId) } : { name: same(t) })
         }),
       ),
     },

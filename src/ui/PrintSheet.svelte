@@ -62,9 +62,18 @@
 
   // --- Weapons and damage cantrips ---
   const attacks = $derived([...s.attacks, ...(s.unarmed ? [s.unarmed] : [])])
+  // No die (Unarmed Strike: 1 + Strength modifier, SRD p. 190): a flat number, not "+4".
   const damageOf = (a: AttackLine) =>
-    `${a.damage.dice}${a.damage.bonus.total ? sg(a.damage.bonus.total) : ''} ${tr(a.damage.type)}` +
+    `${a.damage.dice ? `${a.damage.dice}${a.damage.bonus.total ? sg(a.damage.bonus.total) : ''}` : a.damage.bonus.total} ${tr(a.damage.type)}` +
     (a.damage.versatile ? ` (${a.damage.versatile})` : '')
+  // Situational extra dice (Sneak Attack, a custom Dragon Slayer): a superscript number in the notes, the condition
+  // written once under the table, so a long condition doesn't stretch every row.
+  const SUP = ['¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹']
+  const situationalText = (x: AttackLine['extraDamage'][number]) =>
+    `${tr(x.label)}${tr(L(': ', ' : ', ': '))}${tr(x.condition!)}`
+  const situational = $derived([
+    ...new Set(attacks.flatMap((a) => a.extraDamage.filter((x) => x.condition).map(situationalText))),
+  ])
   const attackNotes = (a: AttackLine) =>
     [
       a.range ? `${tr(a.range.normal)}/${tr(a.range.long)}` : '',
@@ -72,7 +81,10 @@
         ? tr(L(`crit ${a.critRange}–20`, `critique ${a.critRange}–20`, `crítico ${a.critRange}–20`))
         : '',
       a.properties.map((p) => tr(p)).join(', '),
-      ...a.extraDamage.map((x) => `+${x.dice} ${tr(x.label)}`),
+      ...a.extraDamage.map((x) => {
+        const n = x.condition ? situational.indexOf(situationalText(x)) : -1
+        return `+${x.dice} ${tr(x.label)}${n >= 0 ? (SUP[n] ?? '*') : ''}`
+      }),
     ]
       .filter(Boolean)
       .join(' · ')
@@ -336,6 +348,13 @@
           {tr(L('Weapons and damage cantrips', 'Armes et sorts mineurs de dégâts', 'Armas y trucos de daño'))}
         </div>
         <table class="grid attacks">
+          <colgroup>
+            <col style="width: 26%" />
+            <col style="width: 9%" />
+            <col style="width: 26%" />
+            <col style="width: 17%" />
+            <col style="width: 22%" />
+          </colgroup>
           <thead>
             <tr>
               <th class="l">{tr(L('Name', 'Nom', 'Nombre'))}</th>
@@ -351,7 +370,7 @@
                 <td class="l b">{tr(a.name)}</td>
                 <td class="b">{sg(a.attack.total)}</td>
                 <td class="l">{damageOf(a)}</td>
-                <td class="l">{a.mastery.id ? `${tr(a.mastery.name)}${a.mastery.usable ? ' ✓' : ''}` : ''}</td>
+                <td class="l small">{a.mastery.id ? `${tr(a.mastery.name)}${a.mastery.usable ? ' ✓' : ''}` : ''}</td>
                 <td class="l small">{attackNotes(a)}</td>
               </tr>
             {/each}
@@ -372,6 +391,7 @@
             L('mastery property usable', 'botte d’arme utilisable', 'propiedad de maestría utilizable'),
           )}
         </p>
+        {#each situational as t, i (t)}<p class="legend">{SUP[i] ?? '*'} {t}</p>{/each}
 
         <div class="tag">{tr(UI.features)}</div>
         <ul class="names">
@@ -427,7 +447,7 @@
               <span class="l"
                 >{tr(UI.cantrips)} / {tr(UI.prepared)}{s.spellcasting.length > 1 ? ` — ${tr(sc.className)}` : ''}</span
               >
-              <span>{tr(L('Casting time', 'Temps d’incant.', 'Tiempo de lanz.'))}</span>
+              <span>{tr(L('Casting time', 'Temps d’incantation', 'Tiempo de lanzamiento'))}</span>
               <span>{tr(UI.range)}</span>
               <span>C R M</span>
             </div>
@@ -840,8 +860,17 @@
   .grid .small {
     font-size: 6.8pt;
   }
+  /* Fixed columns: the same widths on every sheet; a long name or note wraps inside its cell, never past it. */
+  .attacks {
+    table-layout: fixed;
+  }
   .attacks td {
     font-size: 7.8pt;
+    overflow-wrap: break-word;
+  }
+  .attacks thead th {
+    vertical-align: bottom;
+    line-height: 1.1;
   }
   .attacks tr.blank td {
     height: 11pt;
@@ -905,6 +934,13 @@
     font-size: 5.8pt;
     text-transform: uppercase;
     border-bottom: 0.75pt solid #000;
+    align-items: end;
+  }
+  /* Header labels wrap on two lines ("Temps / d’incantation") instead of being cut. */
+  .srowh span {
+    white-space: normal !important;
+    overflow: visible !important;
+    line-height: 1.1;
   }
   .spell {
     border-bottom: 0.5pt solid #bbb;

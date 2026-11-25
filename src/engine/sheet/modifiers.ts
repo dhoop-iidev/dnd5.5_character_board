@@ -20,7 +20,8 @@ interface Entry {
 /** Whether a weapon-conditioned part applies to an attack: 'melee-weapon' / 'ranged-weapon' (the Unarmed Strike counts
  * as melee), 'heavy-weapon' (Heavy property: Great Weapon Master), 'thrown-weapon' (Thrown property: Thrown Weapon
  * Fighting; a melee weapon with Thrown gets it as a situational part, "when thrown"), 'one-handed-melee' (a melee weapon
- * held in one hand and no other weapon: Dueling). */
+ * held in one hand and no other weapon: Dueling), 'finesse-or-ranged' (Sneak Attack: a Finesse or a Ranged weapon; not an
+ * Unarmed Strike, which is no weapon). */
 export function weaponHolds(when: string, ctx: WeaponCtx | undefined, b: BuildResult): boolean {
   if (!ctx?.weaponKind) return false
   const w = ctx.weapon
@@ -32,6 +33,8 @@ export function weaponHolds(when: string, ctx: WeaponCtx | undefined, b: BuildRe
       return !!w?.properties.includes('heavy')
     case 'thrown-weapon':
       return !!w?.properties.includes('thrown')
+    case 'finesse-or-ranged':
+      return !!w && (ctx.weaponKind === 'ranged' || w.properties.includes('finesse'))
     case 'one-handed-melee':
       return (
         ctx.weaponKind === 'melee' &&
@@ -66,6 +69,7 @@ export function holds(when: string | undefined, b: BuildResult): boolean | 'weap
     case 'melee-weapon':
     case 'heavy-weapon':
     case 'thrown-weapon':
+    case 'finesse-or-ranged':
     case 'one-handed-melee':
       return 'weapon'
   }

@@ -1,15 +1,18 @@
 <script lang="ts">
   // Move the character between PC and tablet as a JSON file (CLAUDE.md: no backend).
   import { migrate } from '../model/migrate'
-  import { app, closeCharacter, openCharacter, tr } from '../state.svelte'
+  import { app, closeCharacter, openCharacter, serialize, tr } from '../state.svelte'
   import { printSheet } from './print.svelte'
+  import PacksPanel from './PacksPanel.svelte'
+
+  let showPacks = $state(false)
 
   let fileInput: HTMLInputElement | undefined = $state()
   let message = $state('')
 
   function exportJson() {
     const c = app.character
-    const blob = new Blob([JSON.stringify(c, null, 2)], { type: 'application/json' })
+    const blob = new Blob([serialize(c, 2)], { type: 'application/json' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
     a.download = `${c.identity.name.replace(/\s+/g, '_')}_${new Date().toISOString().slice(0, 10)}.json`
@@ -71,8 +74,12 @@
       es: 'Abre el cuadro de impresión con una hoja imprimible: elige «Guardar como PDF» como impresora.',
     })}>⎙ {tr({ en: 'Generate the PDF', fr: 'Générer le PDF', es: 'Generar el PDF' })}</button
   >
+  <button onclick={() => (showPacks = !showPacks)} aria-expanded={showPacks}
+    >{tr({ en: 'Books', fr: 'Livres', es: 'Libros' })}</button
+  >
   {#if message}<span>{message}</span>{/if}
 </div>
+{#if showPacks}<div class="packs-box"><PacksPanel /></div>{/if}
 
 <style>
   .save {
@@ -92,6 +99,11 @@
     border: 1px solid var(--rule-strong);
     border-radius: 4px;
     cursor: pointer;
+  }
+  .packs-box {
+    max-width: 40rem;
+    margin: 0 auto 0.9rem;
+    text-align: left;
   }
   button:hover {
     border-color: var(--frame);

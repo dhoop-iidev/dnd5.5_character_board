@@ -9,6 +9,7 @@
   import { newCharacter } from '../model/newCharacter'
   import { app, openCharacter, tr } from '../state.svelte'
   import { openBuilder } from './builderState.svelte'
+  import PacksPanel from './PacksPanel.svelte'
   import { defaultIncreases, suggestedArray, type Kits } from './creation'
 
   let fileInput: HTMLInputElement | undefined = $state()
@@ -81,6 +82,13 @@
     >
     <input bind:this={fileInput} type="file" accept="application/json,.json" onchange={importJson} hidden />
     {#if message}<p class="msg">{message}</p>{/if}
+  </section>
+
+  <section class="box">
+    <h3>
+      {tr({ en: 'Books (content packs)', fr: 'Livres (packs de contenu)', es: 'Libros (paquetes de contenido)' })}
+    </h3>
+    <PacksPanel />
   </section>
 
   <section class="box">

@@ -43,6 +43,7 @@ stack (parts are named after the SRD item). An SRD magic weapon or armor is its 
 | `speed.min`, `speed.double` | Speed at least N feet; Speed doubled (with `when: "toggle:<key>"`) |
 | `item.attack`, `item.damage`, `extraDamage.item` | attack, damage and extra dice with that weapon only (the owner's `itemUid`) |
 | `attack.weapon.<id>`, `damage.weapon.<id>`, `attack.unarmed`, `damage.unarmed` | one weapon kind; Unarmed Strikes |
+| `dice.unarmed`, `dice.unarmed.<damage type>` (value: dice) | the Unarmed Strike's damage die instead of 1 (natural weapons: claws, horns, Tavern Brawler); the largest applies, and replaces the Martial Arts die when larger; the suffix sets the damage type (`dice.unarmed.slashing`) |
 | flags `no-armor-speed-penalty`, `no-armor-stealth-disadvantage` | armor that ignores the Strength or Stealth column (Mithral Armor, Dwarven Plate) |
 | `activeWhen` | `"attuned"` (on you, attuned, not necessarily worn) or `"on-person"` (worn or in the backpack) |
 | `spellItem` | `{ spells[{ spellId, cost? (number or "level"), level?, maxLevel?, dc?, attack?, perDay?, atWill?, note? }], charges? (number or dice), recharge?, rechargeAt?, wielderDc?, consumable?, scroll?, stores?, variantNotes?, note? }`: spells cast from the item and its charges, used from the Combat pane (`engine/spellItems.ts`; SRD p. 206 "Spells Cast from Items", p. 244 "Spell Scroll": DC and attack bonus by spell level) |

@@ -5,6 +5,7 @@
   import { pdfUrl, srdUrl } from '../data/links'
   import { lang, tr } from '../state.svelte'
   import { UI } from '../i18n/ui'
+  import { packBook } from '../model/packs'
 
   /** `name`: English name of the entry (popup title or breakdown label), to find its paragraph when the section is
    * only a chapter ("Spells", "Weapons", "Rules Glossary"). */
@@ -23,7 +24,9 @@
           ></span
         >{/if}
     {/if}
-    {#if source.book}<span>{source.book}</span>{/if}
+    {#if source.pack}<span class="book"
+        >{tr(packBook(source.pack)) || source.pack}{source.bookPage ? ` ${tr(UI.page)} ${source.bookPage}` : ''}</span
+      >{:else if source.book}<span>{source.book}</span>{/if}
     {#if source.houseRule}
       <span class="house">{tr(UI.houseRule)} #{source.houseRule}</span>
     {/if}

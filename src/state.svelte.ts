@@ -8,6 +8,8 @@ import { validate } from './engine/validate'
 import { withCustom } from './model/custom'
 import { reconcile, structureOf } from './model/reconcile'
 import { untrack } from 'svelte'
+import { installEmbedded, installPack, withPackContent, type ContentPack } from './model/packs'
+import { storedPacks } from './model/packStore'
 
 const STORAGE_KEY = 'dnd55-playboard:character'
 
@@ -34,6 +36,27 @@ export const app = $state<{ character: Character; loaded: boolean }>({
   character: stored ?? placeholder(),
   loaded: !!stored,
 })
+
+/** Content packs stored in this browser (house rule #7), for the packs panel. */
+export const packs = $state<{ ready: boolean; stored: Pick<ContentPack, 'id' | 'version' | 'book'>[] }>({
+  ready: false,
+  stored: [],
+})
+
+/** Before the app mounts (main.ts): install the stored packs, then the pack entries the stored character carries.
+ * Nothing is saved until then, so a save can't drop the entries of a pack not installed yet. */
+export async function initPacks() {
+  const list = await storedPacks()
+  for (const p of list) installPack(rules, p)
+  packs.stored = list.map((p) => ({ id: p.id, version: p.version, book: p.book }))
+  if (app.loaded) installEmbedded(rules, app.character)
+  packs.ready = true
+}
+
+/** The character as written to a file or to the browser: with a copy of the pack entries it uses. */
+export function serialize(character: Character, space?: number): string {
+  return JSON.stringify(withPackContent(character, rules), null, space)
+}
 
 /** The rules with the character's custom feats (house rule #4): use it wherever feats are listed. */
 const rulesState = $derived(withCustom(rules, app.character))
@@ -69,9 +92,9 @@ export function tr(text: I18n | undefined): string {
 }
 
 export function save() {
-  if (!app.loaded) return // welcome screen: nothing to save
+  if (!app.loaded || !packs.ready) return // welcome screen, or packs not installed yet: nothing to save
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(app.character))
+    localStorage.setItem(STORAGE_KEY, serialize(app.character))
   } catch {
     // Private mode or quota: nothing to do, the JSON export still works.
   }
@@ -79,6 +102,7 @@ export function save() {
 
 /** Open an imported character (already migrated). */
 export function openCharacter(character: Character) {
+  installEmbedded(rules, character)
   app.character = character
   app.loaded = true
 }
@@ -98,7 +122,7 @@ export function closeCharacter() {
 $effect.root(() => {
   $effect(() => {
     JSON.stringify(app.character) // track deep changes
-    save()
+    if (packs.ready) save()
   })
   // After a structural change (a level's class, subclass or feat, a level removed, species, background, a granted
   // feat), remove the choices that no longer belong to anything (model/reconcile.ts). Not on load or import: a file is

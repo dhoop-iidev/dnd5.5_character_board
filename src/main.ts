@@ -11,10 +11,15 @@ import '@fontsource/eb-garamond/700.css'
 import '@fontsource/eb-garamond/400-italic.css'
 import './app.css'
 import App from './App.svelte'
+import { initPacks } from './state.svelte'
 
-const app = mount(App, {
-  target: document.getElementById('app')!,
-})
+// Content packs (house rule #7) are installed in the rules before anything is computed.
+let app: ReturnType<typeof mount> | undefined
+initPacks()
+  .catch(() => undefined)
+  .finally(() => {
+    app = mount(App, { target: document.getElementById('app')! })
+  })
 
 // Offline app: when a new version has been deployed, the service worker installs it and the page reloads
 // once to run it (otherwise the old cached version keeps running until the next visit).

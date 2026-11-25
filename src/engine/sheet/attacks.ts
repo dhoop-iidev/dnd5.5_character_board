@@ -4,7 +4,7 @@
 // "Unarmed Strike" (Str + PB; 1 + Str Bludgeoning), p. 17 "Damage Rolls" (add the same ability modifier), p. 50 Monk
 // "Martial Arts" (Dexterous Attacks, Martial Arts die on Unarmed Strikes and Monk weapons), p. 48 Fighter "Two Extra
 // Attacks" / "Three Extra Attacks", p. 25 "Extra Attack" (features from several classes don't stack).
-import type { AbilityId, WeaponDef } from '../../data/types'
+import type { AbilityId, DamageType, WeaponDef } from '../../data/types'
 import type { ItemInstance } from '../../model/character'
 import { type Part, esOf, resolve, i18n } from '../stacking'
 import { ABILITY_SHORT, SRC } from './common'
@@ -261,6 +261,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
   const attacks = b.weapons.map((x) => line(x.item.uid, x.def, x.item))
   // Unarmed Strike (SRD p. 190): Str + PB to hit, 1 + Str Bludgeoning; Monk Martial Arts: Dex if higher, the Martial Arts
   // die as damage (p. 50).
+  const uNotesPre: AttackLine['notes'] = []
   const uAbility: AbilityId = martialArts && abilities.dex.mod > abilities.str.mod ? 'dex' : 'str'
   const uSrc = martialArts ? SRC_MARTIAL_ARTS : SRC.unarmedStrike
   const uAtk: Part[] = [
@@ -288,7 +289,27 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
   const uDmg: Part[] = [
     { sourceId: 'ability', label: abilityLabel(uAbility), value: abilities[uAbility].mod, source: uSrc },
   ]
-  if (!(martialArts && martialDie))
+  // A trait or feat that gives the Unarmed Strike a damage die (`dice.unarmed` or `dice.unarmed.<damage type>`: a
+  // Tabaxi's claws 1d6 Slashing, Tavern Brawler 1d4, content packs, house rule #7): the largest die replaces the 1, and
+  // the Martial Arts die when it is larger.
+  const avg = (d: string) => {
+    const m = d.match(/^(\d*)d(\d+)$/)
+    return m ? (+(m[1] || 1) * (+m[2] + 1)) / 2 : 0
+  }
+  const natural = pool.dice
+    .filter((d) => d.target === 'dice.unarmed' || d.target.startsWith('dice.unarmed.'))
+    .sort((x, y) => avg(y.dice) - avg(x.dice))[0]
+  const useNatural = !!natural && (!(martialArts && martialDie) || avg(natural.dice) > avg(martialDie ?? ''))
+  const naturalType = natural?.target.split('.')[2] as DamageType | undefined
+  if (useNatural)
+    uNotesPre.push(
+      i18n(
+        `${natural.label.en}: ${natural.dice}`,
+        `${natural.label.fr}: ${natural.dice}`,
+        `${natural.label.es ?? natural.label.en}: ${natural.dice}`,
+      ),
+    )
+  if (!(martialArts && martialDie) && !useNatural)
     uDmg.unshift({
       sourceId: 'base',
       label: i18n('Unarmed Strike', 'Attaque à mains nues', 'Ataque sin armas'),
@@ -301,7 +322,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
     ...pool.parts('damage.unarmed'),
   )
   if (uAbility === 'str') uDmg.push(...pool.parts('damage.melee.str'))
-  const uNotes: AttackLine['notes'] = []
+  const uNotes: AttackLine['notes'] = [...uNotesPre]
   if (martialArts && martialDie)
     uNotes.push(
       i18n(
@@ -319,7 +340,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
       category: 'simple',
       kind: 'melee',
       damage: null,
-      damageType: 'bludgeoning',
+      damageType: useNatural && naturalType ? naturalType : 'bludgeoning',
       properties: [],
       mastery: 'sap',
       weight: { lb: 0, kg: 0 },
@@ -333,8 +354,11 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
       disadvantage: [...pool.disadvantage('attack'), ...pool.disadvantage('attack.melee')],
     }),
     damage: {
-      dice: martialArts && martialDie ? martialDie : '',
-      type: i18n('Bludgeoning', 'contondants', 'contundente'),
+      dice: useNatural ? natural.dice : martialArts && martialDie ? martialDie : '',
+      type:
+        useNatural && naturalType
+          ? (rules.damageTypeNames?.[naturalType] ?? i18n(naturalType, naturalType, naturalType))
+          : i18n('Bludgeoning', 'contondants', 'contundente'),
       bonus: resolve(uDmg),
     },
     properties: [],

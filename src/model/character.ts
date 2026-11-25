@@ -1,5 +1,6 @@
 // The saved character: choices and history only; every derived value is computed by engine/compute.ts.
 // D&D 2024 rules (SRD 5.2.1). Schema versioned for model/migrate.ts.
+import type { ContentPack } from './packs'
 import type {
   AbilityId,
   DamageType,
@@ -479,6 +480,9 @@ export interface Character {
   customSubclasses?: CustomSubclass[]
   /** Species from other books entered by the player (house rule #6). */
   customSpecies?: CustomSpecies[]
+  /** The content-pack entries the character uses (house rule #7, model/packs.ts), copied in when it is saved so the
+   * file opens on a device without the pack. Rewritten on every save; never edited by hand. */
+  packContent?: ContentPack[]
   /** Ability scores before the background's increases and feats (Standard Array, Point Cost or rolled; SRD p. 20). */
   baseAbilities: Record<AbilityId, number>
   levels: LevelEntry[]

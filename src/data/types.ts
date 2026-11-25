@@ -23,6 +23,10 @@ export interface Source {
   houseRule?: number
   /** A book outside the SRD and its page, as the player typed it (custom feats, house rule #4). */
   book?: string
+  /** Content pack the entry comes from (house rule #7, model/packs.ts): its book title is shown with `bookPage`. */
+  pack?: string
+  /** Page of the pack's book. */
+  bookPage?: number
 }
 
 /** Both units as printed in the two PDFs (English: lb / ft; French: kg / m). */

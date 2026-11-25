@@ -84,7 +84,7 @@ export function resolveValue(
 }
 
 /** A dice string from a value: '1d6' itself, a class-table column holding dice ('sneakAttack' → '3d6', 'bardicDie' → 'd8'),
- * or '<column>*d6' (a numeric column as the number of dice: Frenzy's 'rageDamage*d6' → '3d6'). `byLevel` picks the dice
+ * or '<column>*d6' (a numeric column as the number of dice: Frenzy's 'rageDamage*d6' → '3d6'; 'pb*d4', 'level*d6'). `byLevel` picks the dice
  * for the owner's class level ({ "1": "1d8", "7": "2d8" }). */
 export function resolveDice(
   value: number | string | undefined,
@@ -104,6 +104,11 @@ export function resolveDice(
   const cid = owner?.classId ?? owner?.id.split(':')[0] ?? ''
   const m = value.match(/^([A-Za-z]+)\*d(\d+)$/)
   if (m) {
+    // 'pb*d4' (Healing Hands: a number of d4s equal to your Proficiency Bonus), 'level*d6' (character level).
+    if (m[1] === 'pb' || m[1] === 'level') {
+      const n = m[1] === 'level' ? b.level : b.rules.tables.proficiencyBonus[Math.max(0, b.level - 1)]
+      return n ? `${n}d${m[2]}` : undefined
+    }
     const n = tableNumber(b.tableValues[cid]?.[m[1]])
     return n ? `${n}d${m[2]}` : undefined
   }

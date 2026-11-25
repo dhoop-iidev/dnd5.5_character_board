@@ -519,6 +519,9 @@ export interface BackgroundDef {
   featText: I18n
   skills: SkillId[]
   tool: I18n
+  /** The tool is a kind the player picks (content packs: "Choose one kind of Artisan's Tools"; the SRD Soldier's Gaming
+   * Set is known by id): `model/toolChoices.ts`. */
+  toolChoice?: 'gaming-set' | 'musical-instrument' | 'artisans-tools'
   equipment: I18n
   text: I18n
   source: Source

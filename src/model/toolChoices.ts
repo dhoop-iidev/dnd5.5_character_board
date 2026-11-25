@@ -46,6 +46,13 @@ const ARTISAN_TOOLS_OR_INSTRUMENTS = [
   ...INSTRUMENTS,
 ]
 
+const ARTISAN_TOOLS = ARTISAN_OR_INSTRUMENT.filter((id) => id !== 'musical-instrument')
+const KIND_NAMES = {
+  'gaming-set': { en: 'Gaming Set', fr: 'boîte de jeux', es: 'juego' },
+  'musical-instrument': { en: 'Musical Instrument', fr: 'instrument de musique', es: 'instrumento musical' },
+  'artisans-tools': { en: 'Artisan’s Tools', fr: 'outils d’artisan', es: 'herramientas de artesano' },
+}
+
 export interface ToolChoice {
   /** Key in `featureChoices`. */
   key: string
@@ -105,17 +112,18 @@ export function toolChoicesOf(c: Character, rules: Rules): ToolChoice[] {
         source: def.source,
       })
   })
-  const bg = c.background?.backgroundId === 'soldier' ? rules.backgrounds.get('soldier') : undefined
-  if (bg?.tool)
+  const bg = c.background ? rules.backgrounds.get(c.background.backgroundId) : undefined
+  const kind = bg?.toolChoice ?? (bg?.id === 'soldier' ? 'gaming-set' : undefined)
+  if (bg?.tool && kind)
     out.push({
       key: 'tools:background',
       count: 1,
-      options: GAMING_SETS,
+      options: kind === 'gaming-set' ? GAMING_SETS : kind === 'musical-instrument' ? INSTRUMENTS : ARTISAN_TOOLS,
       replaces: bg.tool.en,
       name: {
-        en: `${bg.name.en}: Gaming Set`,
-        fr: `${bg.name.fr} : boîte de jeux`,
-        es: `${bg.name.es ?? bg.name.en}: juego`,
+        en: `${bg.name.en}: ${KIND_NAMES[kind].en}`,
+        fr: `${bg.name.fr} : ${KIND_NAMES[kind].fr}`,
+        es: `${bg.name.es ?? bg.name.en}: ${KIND_NAMES[kind].es}`,
       },
       place: 'origin',
       source: bg.source,

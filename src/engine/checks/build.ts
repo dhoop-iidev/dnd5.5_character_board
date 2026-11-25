@@ -634,7 +634,59 @@ export function checkBuild(ctx: CheckContext) {
   }
   // Expertise picks are each feature's 'expertise' choice (schema 5), checked with the other choices below: the count,
   // and proficiency in the skill (SRD p. 181).
-  const prof = grantedSkills({ ...now, rules }, char)
+  // Proficient skills as the sheet has them: picks, background, grants (Cat's Talent) and house rule #8 replacements.
+  const prof = new Set(
+    now.skills.filter((s) => s.proficiency === 'proficient' || s.proficiency === 'expertise').map((s) => s.id),
+  )
+  // House rule #8: a replacement for a skill given twice must be a skill not already proficient, and the duplicate must
+  // still exist.
+  const dups = new Map(now.duplicateSkills.map((d) => [d.skill, d]))
+  for (const [k, v] of Object.entries(char.featureChoices ?? {})) {
+    if (!k.startsWith('skills:duplicate:')) continue
+    const skill = k.slice('skills:duplicate:'.length)
+    const sk = rules.skills.get(skill)
+    const rep = typeof v === 'string' ? rules.skills.get(v) : undefined
+    if (!dups.has(skill as never))
+      out.push(
+        w(
+          `skill-swap-${skill}-stale`,
+          'warning',
+          'skills',
+          `${sk?.name.en ?? skill} is no longer given twice: its replacement (${rep?.name.en ?? v}) doesn't apply.`,
+          `${sk?.name.fr ?? skill} n’est plus accordée deux fois : son remplacement (${rep?.name.fr ?? v}) ne s’applique pas.`,
+          `${esOf(sk?.name) || skill} ya no se otorga dos veces: su sustituta (${esOf(rep?.name) || v}) no se aplica.`,
+          { actionable: true },
+        ),
+      )
+    else if (!rep)
+      out.push(
+        w(
+          `skill-swap-${skill}-unknown`,
+          'error',
+          'skills',
+          `${sk?.name.en ?? skill}: unknown replacement skill ${v}.`,
+          `${sk?.name.fr ?? skill} : compétence de remplacement inconnue ${v}.`,
+          `${esOf(sk?.name) || skill}: habilidad sustituta desconocida ${v}.`,
+          { actionable: true },
+        ),
+      )
+    else if (
+      grantedSkills({ ...now, rules }, char).has(rep.id as never) ||
+      now.duplicateSkills.some((d) => d.skill === rep.id) ||
+      now.pool.grants.some((g) => g.grant.kind === 'proficiency' && g.grant.on === `skill.${rep.id}`)
+    )
+      out.push(
+        w(
+          `skill-swap-${skill}-already`,
+          'warning',
+          'skills',
+          `${sk?.name.en ?? skill} given twice: ${rep.name.en} is already proficient, pick another skill.`,
+          `${sk?.name.fr ?? skill} accordée deux fois : ${rep.name.fr} est déjà maîtrisée, choisissez-en une autre.`,
+          `${esOf(sk?.name) || skill} otorgada dos veces: ya tienes competencia en ${esOf(rep.name)}, elige otra habilidad.`,
+          { actionable: true },
+        ),
+      )
+  }
   // Weapon Mastery: the count of the Weapon Mastery features; only weapons you're proficient with (e.g. Rogue p. 62).
   const masteries = char.weaponMastery ?? []
   if (masteries.length > now.masteryMax)
@@ -914,7 +966,8 @@ export function checkBuild(ctx: CheckContext) {
       !now.owners.some((o) => (o.eff.choices ?? []).some((c) => choiceKey(o.id, c) === k)) &&
       !(k.endsWith(':fighting-style') && now.owners.some((o) => o.id === k)) &&
       !now.spellcasting.some((s) => s.spellChoice?.key === k) &&
-      !toolKeys.has(k),
+      !toolKeys.has(k) &&
+      !k.startsWith('skills:duplicate:'), // house rule #8, checked above
   )
   for (const k of stale)
     out.push(

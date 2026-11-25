@@ -2,7 +2,7 @@
 // SRD p. 9 "Skill Proficiencies", p. 181 "Expertise" (double the Proficiency Bonus), p. 32 "Jack of All Trades" (half the
 // Proficiency Bonus, round down, on checks without proficiency), p. 186 "Passive Perception" (10 + bonus, ±5 with
 // Advantage / Disadvantage).
-import type { SkillId } from '../../data/types'
+import type { I18n, SkillId } from '../../data/types'
 import type { Character } from '../../model/character'
 import { type Part, esOf, resolve, rollState, i18n } from '../stacking'
 import { ABILITY_SHORT, SRC } from './common'
@@ -11,6 +11,7 @@ import type {
   BuildResult,
   ComputeOptions,
   CoreResult,
+  DuplicateSkill,
   ModifiersResult,
   Proficiency,
   SkillLine,
@@ -36,12 +37,41 @@ export function grantedSkills(
   return set
 }
 
+export const duplicateKey = (skill: string) => `skills:duplicate:${skill}`
+
+/** House rule #8: skill proficiencies given by two fixed sources (the background's skills, unconditional grants of
+ * traits, feats and features), with the replacement the player picked. Choices (class skills, Skilled) aren't fixed:
+ * picking a skill already granted is flagged by the rule checks instead. */
+export function duplicateSkills(b: Pick<In, 'background' | 'pool' | 'rules' | 'char'>): DuplicateSkill[] {
+  const sources = new Map<SkillId, Map<string, I18n>>()
+  const add = (skill: string, id: string, name: I18n) => {
+    if (!b.rules.skills.has(skill)) return
+    const m = sources.get(skill as SkillId) ?? new Map<string, I18n>()
+    m.set(id, name)
+    sources.set(skill as SkillId, m)
+  }
+  if (b.background) for (const s of b.background.skills ?? []) add(s, 'background', b.background.name)
+  for (const g of b.pool.grants)
+    if (g.grant.kind === 'proficiency' && g.grant.on?.startsWith('skill.') && !g.grant.when)
+      add(g.grant.on.slice(6), g.owner.id, g.owner.name)
+  const out: DuplicateSkill[] = []
+  for (const [skill, m] of sources)
+    if (m.size > 1) {
+      const v = b.char.featureChoices?.[duplicateKey(skill)]
+      const replacement = typeof v === 'string' && b.rules.skills.has(v) ? (v as SkillId) : undefined
+      out.push({ skill, sources: [...m.values()], replacement })
+    }
+  return out
+}
+
 export function skillsStage(b: In, _opts: ComputeOptions): SkillsResult {
   const { pool, abilities, pb, char } = b
   const proficient = grantedSkills(b, b.char)
   for (const g of pool.grants)
     if (g.grant.kind === 'proficiency' && g.grant.on?.startsWith('skill.'))
       proficient.add(g.grant.on.slice(6) as SkillId)
+  const duplicates = duplicateSkills(b)
+  for (const d of duplicates) if (d.replacement) proficient.add(d.replacement)
   const expertise = new Set<string>()
   for (const g of pool.grants)
     if (g.grant.kind === 'expertise' && g.grant.on?.startsWith('skill.')) expertise.add(g.grant.on.slice(6))
@@ -142,5 +172,5 @@ export function skillsStage(b: In, _opts: ComputeOptions): SkillsResult {
   }
   skills.sort((a, c) => a.name.en.localeCompare(c.name.en))
   const perception = skills.find((s) => s.id === 'perception')
-  return { skills, passivePerception: perception?.passive ?? 10, expertiseMax }
+  return { skills, passivePerception: perception?.passive ?? 10, expertiseMax, duplicateSkills: duplicates }
 }

@@ -165,6 +165,16 @@ export interface SkillsResult {
   passivePerception: number
   /** Open Expertise picks the features allow (Rogue, Bard, Ranger Expertise…). */
   expertiseMax: number
+  /** Skill proficiencies given twice by fixed sources, each with its replacement if one was picked (house rule #8). */
+  duplicateSkills: DuplicateSkill[]
+}
+
+/** House rule #8 (2026-11-25): a skill proficiency two fixed sources give (the background's skills, a trait's, feat's or
+ * feature's grant) may be swapped for another skill, stored in `featureChoices['skills:duplicate:<skill>']`. */
+export interface DuplicateSkill {
+  skill: SkillId
+  sources: I18n[]
+  replacement?: SkillId
 }
 
 export interface AttackLine {

@@ -51,7 +51,7 @@ export function progressionPlaces(c: Character, sheet: Sheet, _rules: Rules) {
 
   function placeOfWarning(w: RuleWarning): Place {
     if (!BUILD_AREAS.includes(w.area)) return undefined
-    if (/^(background|ability-)/.test(w.id)) return 'origin'
+    if (/^(background|ability-|skill-swap-)/.test(w.id)) return 'origin'
     if (SKILL_ROW.test(w.id)) return 0
     // A warning about a feature, trait, feat or option goes where that owner is (RuleWarning.ownerId).
     if (w.ownerId) {

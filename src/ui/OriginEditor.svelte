@@ -22,6 +22,7 @@
   import ToolChoicePicker from './ToolChoicePicker.svelte'
   import { toolChoicesOf } from '../model/toolChoices'
   import { defaultIncreases } from './creation'
+  import { duplicateKey } from '../engine/sheet/skills'
   import WarningList from './WarningList.svelte'
 
   let {
@@ -195,6 +196,40 @@
     <ToolChoicePicker choice={t} />
   {/each}
 
+  <!-- House rule #8: a skill the background and the species (or a feat or feature) both give may be swapped. -->
+  {#each view.sheet.duplicateSkills as d (d.skill)}
+    {@const sk = rules.skills.get(d.skill)}
+    <label class="swap">
+      <span class="meta"
+        >{tr({
+          en: `${sk?.name.en} is given twice (${d.sources.map((x) => x.en).join(', ')}): you may take another skill instead (house rule #8)`,
+          fr: `${sk?.name.fr} est accordée deux fois (${d.sources.map((x) => x.fr).join(', ')}) : vous pouvez prendre une autre compétence à la place (règle maison n° 8)`,
+          es: `${sk?.name.es} se otorga dos veces (${d.sources.map((x) => x.es ?? x.en).join(', ')}): puedes elegir otra habilidad en su lugar (regla de la casa n.º 8)`,
+        })}</span
+      >
+      <select
+        value={d.replacement ?? ''}
+        onchange={(e) => {
+          const v = e.currentTarget.value
+          if (v) c.featureChoices[duplicateKey(d.skill)] = v
+          else delete c.featureChoices[duplicateKey(d.skill)]
+        }}
+      >
+        <option value=""
+          >{tr({ en: '— No replacement —', fr: '— Pas de remplacement —', es: '— Sin sustitución —' })}</option
+        >
+        {#each [...rules.skills.values()].sort((a, b) => tr(a.name).localeCompare(tr(b.name))) as s (s.id)}
+          {@const has =
+            s.id !== d.replacement &&
+            view.sheet.skills.some(
+              (x) => x.id === s.id && (x.proficiency === 'proficient' || x.proficiency === 'expertise'),
+            )}
+          <option value={s.id} disabled={has}>{tr(s.name)}{has ? ' ✓' : ''}</option>
+        {/each}
+      </select>
+    </label>
+  {/each}
+
   {#each owners as o (o.id)}
     <div class="owner"><span class="meta">{tr(o.name)}</span><ChoiceEditor owner={o} /></div>
   {/each}
@@ -222,6 +257,17 @@
   }
   .owner {
     margin-top: 0.5rem;
+  }
+  .swap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+  }
+  .swap select {
+    align-self: flex-start;
+    min-height: 2.4rem;
+    font: inherit;
   }
   .import {
     align-self: flex-end;

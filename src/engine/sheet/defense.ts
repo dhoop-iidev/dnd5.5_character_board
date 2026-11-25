@@ -40,17 +40,20 @@ export function defenseStage(b: In, _opts: ComputeOptions): DefenseResult {
         value: dex,
         source: SRC.armorTable,
       })
-    else if (a.dex === 'max2')
+    else if (a.dex === 'max2') {
+      // 'ac.dexMax.medium' raises the cap in Medium armor (Medium Armor Master: 3, content packs).
+      const cap = Math.max(2, ...pool.parts('ac.dexMax.medium').map((p) => p.value))
       parts.push({
         sourceId: 'dex',
         label: i18n(
-          'Dexterity modifier (max 2)',
-          'Modificateur de Dextérité (max 2)',
-          'Modificador de Destreza (máx. 2)',
+          `Dexterity modifier (max ${cap})`,
+          `Modificateur de Dextérité (max ${cap})`,
+          `Modificador de Destreza (máx. ${cap})`,
         ),
-        value: Math.min(2, dex),
+        value: Math.min(cap, dex),
         source: SRC.armorTable,
       })
+    }
     // Custom armor: the base armor + its bonus (as "Armor, +1, +2, or +3", SRD p. 210 / FR p. 224).
     const bonus = b.armor.item.custom?.magicBonus
     if (bonus)

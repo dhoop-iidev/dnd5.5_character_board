@@ -80,12 +80,13 @@
       .filter((s) => s !== undefined),
   )
   /** Darkvision range: the longest granted (species traits, features). */
-  const darkvision = $derived(
-    Math.max(
-      0,
-      ...sheet.pool.grants.filter((g) => g.grant.kind === 'darkvision').map((g) => Number(g.grant.value) || 0),
-    ),
-  )
+  const darkvision = $derived(sheet.senses.darkvision)
+  const OTHER_SENSES = ['blindsight', 'tremorsense', 'truesight'] as const
+  const SENSE_NAMES: Record<(typeof OTHER_SENSES)[number], I18n> = {
+    blindsight: { en: 'Blindsight', fr: 'Vision aveugle', es: 'Visión ciega' },
+    tremorsense: { en: 'Tremorsense', fr: 'Perception des vibrations', es: 'Sentir vibraciones' },
+    truesight: { en: 'Truesight', fr: 'Vision lucide', es: 'Visión verdadera' },
+  }
 
   function rule(name: I18n, text: I18n | undefined, source: Source | undefined, noteKey: string, lines: I18n[] = []) {
     openPopup({ title: name, html: text, source, noteKey, lines })
@@ -211,6 +212,12 @@
             <dt>{tr({ en: 'Darkvision', fr: 'Vision dans le noir', es: 'Visión en la oscuridad' })}</dt>
             <dd>{dist(darkvision)}</dd>
           {/if}
+          {#each OTHER_SENSES as k (k)}
+            {#if sheet.senses[k]}
+              <dt>{tr(SENSE_NAMES[k])}</dt>
+              <dd>{dist(sheet.senses[k])}</dd>
+            {/if}
+          {/each}
           {#each sheet.otherSpeeds as s (s.kind)}
             <dt>{tr(SPEED_KIND[s.kind])}</dt>
             <dd>{dist(s.ft)}</dd>

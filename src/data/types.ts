@@ -254,6 +254,9 @@ export interface FeatureWeaponDef {
   proficient?: boolean
   /** Its mastery property can be used without picking it with Weapon Mastery. */
   mastery?: boolean
+  /** Its own mastery property and properties instead of the base weapon's (Psychic Blade: Vex; Finesse, Thrown). */
+  masteryProperty?: MasteryProperty
+  properties?: WeaponProperty[]
 }
 
 export interface ActivationDef {
@@ -330,7 +333,10 @@ export interface GrantSpec {
     | 'expertise' // on: 'skill.<id>'
     | 'resistance' // on: DamageType
     | 'immunity' // on: DamageType or condition id
-    | 'darkvision' // value: range in feet
+    | 'darkvision' // value: range in feet; on: 'extend' = adds to an existing Darkvision, else gives that range
+    | 'blindsight' // value: range in feet (content packs: Skulker, Blind Fighting)
+    | 'tremorsense' // value: range in feet
+    | 'truesight' // value: range in feet
     | 'language'
     | 'flag' // on: a free flag the engine reads (e.g. 'unarmored-defense-con', 'extra-attack-1')
   on?: string

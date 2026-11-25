@@ -19,6 +19,8 @@
   const max = $derived(sheet.hpMax.total)
   const st = $derived(hpState(hp, max, c.exhaustion))
   // A Death Saving Throw is a D20 Test: Exhaustion and bonuses to all saving throws apply (SRD p. 181, p. 18).
+  // Advantage on Death Saving Throws ('save.death': Durable, content packs): roll two d20s, enter the higher.
+  const deathAdv = $derived(sheet.pool.advantage('save.death'))
   const deathMod = $derived(sheet.exhaustionPenalty + sheet.pool.parts('save.all').reduce((s, p) => s + p.value, 0))
   const restOk = $derived(canRest(c, sheet))
   const dying = $derived(hp.current <= 0 && st.kind !== 'dead')
@@ -224,6 +226,9 @@
             >{tr({ en: 'Death save', fr: 'JS contre la mort', es: 'Salvación contra muerte' })}</button
           >
           {#if deathMod}<small>{fmt(deathMod)} {tr({ en: 'to the roll', fr: 'au jet', es: 'a la tirada' })}</small>{/if}
+          {#if deathAdv.length}<small
+              >{tr({ en: 'Advantage', fr: 'Avantage', es: 'Ventaja' })} ({deathAdv.map((n) => tr(n)).join(', ')})</small
+            >{/if}
         </div>
       {/if}
     </div>

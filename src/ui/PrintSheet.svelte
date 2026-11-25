@@ -42,9 +42,7 @@
     }),
   )
   const size = $derived(c.speciesChoices?.size ?? s.species?.size?.[0] ?? '')
-  const darkvision = $derived(
-    Math.max(0, ...s.pool.grants.filter((g) => g.grant.kind === 'darkvision').map((g) => Number(g.grant.value) || 0)),
-  )
+  const darkvision = $derived(s.senses.darkvision)
   const SPEED_KIND: Record<string, I18n> = {
     climb: L('Climb', 'Escalade', 'Trepar'),
     swim: L('Swim', 'Nage', 'Nadar'),

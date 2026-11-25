@@ -85,10 +85,18 @@ export interface BuildResult {
   tableValues: Record<string, Record<string, number | string>>
 }
 
+/** The attack a part is asked for: weapon-conditioned parts (`when`: 'melee-weapon', 'heavy-weapon', 'thrown-weapon',
+ * 'one-handed-melee') apply only to a matching attack. `weapon` is absent for an Unarmed Strike. */
+export interface WeaponCtx {
+  weaponKind?: 'melee' | 'ranged'
+  weapon?: WeaponDef
+  twoHanded?: boolean
+}
+
 export interface Pool {
   /** Parts by target ('ac', 'speed', 'ability.str', 'save.dex', 'skill.stealth', 'attack.melee'…); weapon-conditioned
    * parts ('ranged-weapon', 'melee-weapon') are returned only for a matching weapon context. */
-  parts(target: string, ctx?: { weaponKind?: 'melee' | 'ranged' }): Part[]
+  parts(target: string, ctx?: WeaponCtx): Part[]
   /** Advantage / disadvantage sources on a roll ('initiative', 'save.dex', 'skill.stealth', 'check.str'). */
   advantage(on: string): I18n[]
   disadvantage(on: string): I18n[]
@@ -275,4 +283,7 @@ export interface Sheet
   /** D20 Test penalty from Exhaustion (−2 × level, SRD p. 181). */
   exhaustionPenalty: number
   conditions: { id: string; name: I18n }[]
+  /** Special senses in feet (0 = none): Darkvision (the longest granted, plus 'extend' grants when there is one:
+   * "if you already have Darkvision, its range increases by 60 feet"), Blindsight, Tremorsense, Truesight. */
+  senses: { darkvision: number; blindsight: number; tremorsense: number; truesight: number }
 }

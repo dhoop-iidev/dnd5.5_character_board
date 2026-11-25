@@ -271,6 +271,8 @@ export function buildStage(char: Character, rules: Rules, opts: ComputeOptions):
         damage: fw.damage?.trim() || base.damage,
         damageType: fw.damageType ?? base.damageType,
         range: fw.range ?? base.range,
+        mastery: fw.masteryProperty ?? base.mastery,
+        properties: fw.properties ?? base.properties,
       },
     })
     if (fw.proficient) o.grants.push({ kind: 'proficiency', on: `weapon.${id}` })

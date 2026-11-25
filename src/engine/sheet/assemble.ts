@@ -9,6 +9,7 @@ import type {
   CoreResult,
   DefenseResult,
   ModifiersResult,
+  Pool,
   Sheet,
   SkillsResult,
   SpellsResult,
@@ -22,6 +23,24 @@ type In = BuildResult &
   AttacksResult &
   SpellsResult &
   ClassesResult
+
+/** Special senses from the active grants (see `Sheet.senses`). */
+function sensesOf(pool: Pool): Sheet['senses'] {
+  const range = (kind: string, extend?: boolean) =>
+    pool.grants
+      .filter((g) => g.grant.kind === kind && (g.grant.on === 'extend') === !!extend)
+      .map((g) => Number(g.grant.value) || 0)
+  const max = (xs: number[]) => Math.max(0, ...xs)
+  const base = max(range('darkvision'))
+  const ext = range('darkvision', true)
+  const darkvision = base ? base + ext.reduce((a, x) => a + x, 0) : max(ext)
+  return {
+    darkvision,
+    blindsight: max(range('blindsight')),
+    tremorsense: max(range('tremorsense')),
+    truesight: max(range('truesight')),
+  }
+}
 
 export function assembleStage(b: In, _opts: ComputeOptions): Sheet {
   const armor: string[] = []
@@ -85,6 +104,7 @@ export function assembleStage(b: In, _opts: ComputeOptions): Sheet {
       tools,
       languages,
     },
+    senses: sensesOf(rest.pool),
     exhaustion: char.exhaustion ?? 0,
     exhaustionPenalty: -2 * (char.exhaustion ?? 0),
     conditions: (char.conditions ?? []).map((id) => ({

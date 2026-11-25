@@ -49,6 +49,9 @@ describe.skipIf(!files.length)('content packs in PACKS_DIR', () => {
       resetPacks()
       const rules: Rules = buildRules()
       const skipped = installPack(rules, pack)
+      // The other packs of the folder after it: a pack may use another book's entries (MotM's Earth Genasi casts the
+      // PHB's Blade Ward), as when both are loaded in the app.
+      for (const g of files) if (g !== f) installPack(rules, readPack(JSON.parse(readFileSync(join(DIR!, g), 'utf8'))))
 
       it('installs without replacing an SRD entry', () => expect(skipped).toEqual([]))
 

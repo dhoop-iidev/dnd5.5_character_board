@@ -4,7 +4,7 @@ import type { AbilityId, GrantSpec, I18n, ModifierSpec } from '../../data/types'
 import { ABILITIES } from '../../data/types'
 import { type Part, esOf } from '../stacking'
 import { pbForLevel, tableNumber } from './common'
-import type { BuildResult, ComputeOptions, ModifiersResult, Owner, Pool } from './types'
+import type { BuildResult, ComputeOptions, ModifiersResult, Owner, Pool, WeaponCtx } from './types'
 
 interface Entry {
   target: string
@@ -17,6 +17,33 @@ interface Entry {
 
 /** Does an engine condition hold for this character (armor-dependent ones)? Weapon conditions are left to the attacks
  * stage; 'toggle:<key>' becomes a situational part the player switches in the Combat pane. */
+/** Whether a weapon-conditioned part applies to an attack: 'melee-weapon' / 'ranged-weapon' (the Unarmed Strike counts
+ * as melee), 'heavy-weapon' (Heavy property: Great Weapon Master), 'thrown-weapon' (Thrown property: Thrown Weapon
+ * Fighting; a melee weapon with Thrown gets it as a situational part, "when thrown"), 'one-handed-melee' (a melee weapon
+ * held in one hand and no other weapon: Dueling). */
+export function weaponHolds(when: string, ctx: WeaponCtx | undefined, b: BuildResult): boolean {
+  if (!ctx?.weaponKind) return false
+  const w = ctx.weapon
+  switch (when) {
+    case 'melee-weapon':
+    case 'ranged-weapon':
+      return when === `${ctx.weaponKind}-weapon`
+    case 'heavy-weapon':
+      return !!w?.properties.includes('heavy')
+    case 'thrown-weapon':
+      return !!w?.properties.includes('thrown')
+    case 'one-handed-melee':
+      return (
+        ctx.weaponKind === 'melee' &&
+        !!w &&
+        !w.properties.includes('two-handed') &&
+        !ctx.twoHanded &&
+        b.weapons.length === 1
+      )
+  }
+  return false
+}
+
 export function holds(when: string | undefined, b: BuildResult): boolean | 'weapon' | 'toggle' {
   if (!when) return true
   const heavy = b.armor?.def.category === 'heavy'
@@ -31,8 +58,15 @@ export function holds(when: string | undefined, b: BuildResult): boolean | 'weap
       return !!b.armor
     case 'shield':
       return !!b.shield
+    // Fighting styles and feats tied to the hands (content packs, house rule #7): Unarmed Fighting's d8 "if you aren't
+    // holding any weapons or a Shield".
+    case 'no-weapon-no-shield':
+      return !b.shield && !b.weapons.length
     case 'ranged-weapon':
     case 'melee-weapon':
+    case 'heavy-weapon':
+    case 'thrown-weapon':
+    case 'one-handed-melee':
       return 'weapon'
   }
   if (when.startsWith('toggle:')) return 'toggle'
@@ -224,12 +258,15 @@ export function modifiersStage(b: BuildResult, _opts: ComputeOptions): Modifiers
   }
   let mods: Record<AbilityId, number> | undefined
   const pool: Pool = {
-    parts: (target: string, ctx?: { weaponKind?: 'melee' | 'ranged' }) =>
+    parts: (target: string, ctx?: WeaponCtx) =>
       entries
         .filter((e) => e.target === target)
-        .filter((e) => !e.when || (ctx?.weaponKind && e.when === `${ctx.weaponKind}-weapon`))
+        .filter((e) => !e.when || weaponHolds(e.when, ctx, b))
         .map((e) => {
           const part = { ...e.part }
+          // A melee weapon with the Thrown property: the bonus only when it is thrown.
+          if (e.when === 'thrown-weapon' && ctx?.weaponKind === 'melee' && !part.condition)
+            part.condition = { en: 'when thrown', fr: 'en cas de lancer', es: 'al lanzarla' }
           if (e.pending) {
             const owner = b.owners.find((o) => o.id === e.part.sourceId)
             part.value = (mods ? resolveValue(e.pending, b, owner, mods) : undefined) ?? 0

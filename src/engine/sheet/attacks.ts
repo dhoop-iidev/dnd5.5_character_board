@@ -8,7 +8,7 @@ import type { AbilityId, DamageType, WeaponDef } from '../../data/types'
 import type { ItemInstance } from '../../model/character'
 import { type Part, esOf, resolve, i18n } from '../stacking'
 import { ABILITY_SHORT, SRC } from './common'
-import { resolveValue } from './modifiers'
+import { resolveValue, weaponHolds } from './modifiers'
 import type {
   AttackLine,
   AttacksResult,
@@ -17,6 +17,7 @@ import type {
   CoreResult,
   DefenseResult,
   ModifiersResult,
+  WeaponCtx,
 } from './types'
 
 type In = BuildResult & ModifiersResult & CoreResult & DefenseResult
@@ -83,7 +84,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
   const pactWeapon = pool.flags.has('pact-weapon')
   const critParts = pool.parts('critRange')
   const critRange = critParts.length ? Math.min(20, ...critParts.map((p) => p.value)) : 20
-  const extraFor = (kind: 'melee' | 'ranged' | 'unarmed'): AttackLine['extraDamage'] =>
+  const extraFor = (kind: 'melee' | 'ranged' | 'unarmed', ctx?: WeaponCtx): AttackLine['extraDamage'] =>
     pool.dice
       .filter(
         (d) =>
@@ -91,7 +92,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
           d.target === `extraDamage.${kind}` ||
           (kind === 'unarmed' && d.target === 'extraDamage.melee'),
       )
-      .filter((d) => !d.when || d.when === `${kind === 'unarmed' ? 'melee' : kind}-weapon`)
+      .filter((d) => !d.when || weaponHolds(d.when, ctx ?? { weaponKind: kind === 'unarmed' ? 'melee' : kind }, b))
       .map((d) => ({ label: d.label, dice: d.dice, condition: d.condition, source: d.owner.source }))
   const abilityLabel = (a: AbilityId) => ({
     en: `${ABILITY_SHORT[a].en} modifier`,
@@ -153,7 +154,8 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
     const itemOwner = item ? `item:${item.uid}` : undefined
     const own = (target: string) => (itemOwner ? pool.parts(target).filter((p) => p.sourceId === itemOwner) : [])
     atk.push(...own('item.attack'), ...pool.parts(`attack.weapon.${w.id}`))
-    atk.push(...pool.parts(`attack.${kind}`, { weaponKind: kind }), ...pool.parts('attack.all'), ...pool.parts('d20'))
+    const ctx: WeaponCtx = { weaponKind: kind, weapon: w, twoHanded: !!item?.twoHanded }
+    atk.push(...pool.parts(`attack.${kind}`, ctx), ...pool.parts('attack.all', ctx), ...pool.parts('d20'))
     if (exhaustion)
       atk.push({
         sourceId: 'exhaustion',
@@ -191,7 +193,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
     ]
     dmg.push(...customParts(cw?.damageBonus))
     dmg.push(...own('item.damage'), ...pool.parts(`damage.weapon.${w.id}`))
-    dmg.push(...pool.parts(`damage.${kind}`, { weaponKind: kind }), ...pool.parts('damage.all'))
+    dmg.push(...pool.parts(`damage.${kind}`, ctx), ...pool.parts('damage.all', ctx))
     if (melee && ability === 'str') dmg.push(...pool.parts('damage.melee.str'))
     // Martial Arts die in place of the weapon's damage when larger (p. 50 "Martial Arts Die").
     // Versatile weapon held in two hands: the bracketed damage (p. 90 "Versatile").
@@ -254,7 +256,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
         ...pool.dice
           .filter((d) => d.target === 'extraDamage.item' && d.owner.id === itemOwner)
           .map((d) => ({ label: d.label, dice: d.dice, condition: d.condition, source: d.owner.source })),
-        ...extraFor(kind),
+        ...extraFor(kind, ctx),
       ],
     }
   }
@@ -274,7 +276,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
       source: SRC.unarmedStrike,
     },
     ...pool.parts('attack.melee', { weaponKind: 'melee' }),
-    ...pool.parts('attack.all'),
+    ...pool.parts('attack.all', { weaponKind: 'melee' }),
     ...pool.parts('d20'),
     // Unarmed Strikes only (Demon Armor's clawed gauntlets, SRD p. 218).
     ...pool.parts('attack.unarmed'),
@@ -318,7 +320,7 @@ export function attacksStage(b: In, _opts: ComputeOptions): AttacksResult {
     })
   uDmg.push(
     ...pool.parts('damage.melee', { weaponKind: 'melee' }),
-    ...pool.parts('damage.all'),
+    ...pool.parts('damage.all', { weaponKind: 'melee' }),
     ...pool.parts('damage.unarmed'),
   )
   if (uAbility === 'str') uDmg.push(...pool.parts('damage.melee.str'))

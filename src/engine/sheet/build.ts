@@ -33,6 +33,11 @@ function merge(base: EffectDef, opt: OptionEffect): EffectDef {
     grants: [...(base.grants ?? []), ...(opt.grants ?? [])],
     flags: [...(base.flags ?? []), ...(opt.flags ?? [])],
     computed: [...(base.computed ?? []), ...(opt.computed ?? [])],
+    // An option's own ways to use it (Battle Master maneuvers, content packs): named after the option.
+    activation:
+      opt.activation || base.activation
+        ? [...(base.activation ?? []), ...(opt.activation ?? []).map((a) => ({ name: opt.name, ...a }))]
+        : undefined,
     uses: opt.uses ?? base.uses,
     acFormula: opt.acFormula ?? base.acFormula,
     mastery: opt.mastery ?? base.mastery,

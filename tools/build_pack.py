@@ -30,7 +30,7 @@ def main() -> None:
     summaries: dict[str, object] = {}
     errors: list[str] = []
     for f in sorted(src.rglob("*.json")):
-        if f.name == "pack.json":
+        if f.name == "pack.json" or f.name.endswith(".pack.json") or "dist" in f.relative_to(src).parts:
             continue
         try:
             part = json.loads(f.read_text(encoding="utf-8"))

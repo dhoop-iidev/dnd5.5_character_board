@@ -214,10 +214,12 @@ export function spellsStage(b: In, _opts: ComputeOptions): SpellsResult {
   }
   while (slots.length && slots[slots.length - 1] === 0) slots.pop()
   const slotsUsed = slots.map((_, i) => char.slotsUsed?.[i] ?? 0)
-  // Spells from feats and species traits (Magic Initiate, lineages…): not tied to a class's Spellcasting.
+  // Spells from feats and species traits (Magic Initiate, lineages…): not tied to a class's Spellcasting. Also a class
+  // feature's spells when that class has no Spellcasting block (Monk Shadow Arts, Psi Warrior: content packs).
   const extraSpells: ExtraSpells[] = []
+  const casting = new Set(blocks.map((bl) => bl.classId))
   for (const o of b.owners) {
-    if (o.classId || !o.eff.spells) continue
+    if (!o.eff.spells || (o.classId && casting.has(o.classId))) continue
     const ids = [...(o.eff.spells.always ?? []), ...byLevelSpells(o, b)]
     for (const c of o.eff.spells.fromChoices ?? []) ids.push(...(o.choiceValues[c] ?? []))
     if (ids.length)

@@ -73,8 +73,8 @@ describe('content-pack vocabulary', () => {
         { target: 'dice.unarmed', value: '1d8', when: 'no-weapon-no-shield' },
       ],
     }
-    expect(withEffect(eff).unarmed.damage.dice).toBe('1d8')
-    expect(withEffect(eff, [weapon('dagger')]).unarmed.damage.dice).toBe('1d6')
+    expect(withEffect(eff).unarmed?.damage.dice).toBe('1d8')
+    expect(withEffect(eff, [weapon('dagger')]).unarmed?.damage.dice).toBe('1d6')
   })
 
   it('senses: extended Darkvision adds to an existing one; blindsight', () => {
